@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Semarang/border.bin",
       "blockdata_filepath": "data/layouts/Semarang/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA",
+      "name": "Surabaya_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "border_filepath": "data/layouts/Surabaya/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya/map.bin"
     }
   ]
 }

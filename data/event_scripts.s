@@ -1164,3 +1164,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Yogyakarta/scripts.inc"
 
 	.include "data/maps/Semarang/scripts.inc"
+
+	.include "data/maps/Surabaya/scripts.inc"
