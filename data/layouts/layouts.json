@@ -4410,6 +4410,26 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA",
+      "name": "Surakarta_Layout",
+      "width": 40,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Surakarta/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta/map.bin"
+    },
+    {
+      "id": "LAYOUT_YOGYAKARTA",
+      "name": "Yogyakarta_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Yogyakarta/border.bin",
+      "blockdata_filepath": "data/layouts/Yogyakarta/map.bin"
     }
   ]
 }
