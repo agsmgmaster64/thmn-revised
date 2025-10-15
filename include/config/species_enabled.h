@@ -9,7 +9,7 @@
 // so Pikachu depends on the Gen 1 setting despite Pichu being the lowest member of the evolution tree.
 // Eg: If P_GEN_2_POKEMON is set to FALSE, all members of the Sneasel Family will be disabled
 // (Sneasel + Hisuian, Weavile and Sneasler).
-#define P_GEN_1_POKEMON                  TRUE // Generation 1 Pokémon (RGBY)
+#define P_GEN_1_POKEMON                  FALSE // Generation 1 Pokémon (RGBY)
 #define P_GEN_2_POKEMON                  FALSE // Generation 2 Pokémon (GSC)
 #define P_GEN_3_POKEMON                  FALSE // Generation 3 Pokémon (RSE, FRLG)
 #define P_GEN_4_POKEMON                  FALSE // Generation 4 Pokémon (DPPt, HGSS)
