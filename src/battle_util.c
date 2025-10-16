@@ -2441,12 +2441,14 @@ static enum MoveCanceller CancellerMultihitMoves(void)
         {
             gMultiHitCounter = 5;
         }
+        /*
         else if (ability == ABILITY_BATTLE_BOND
               && gCurrentMove == MOVE_WATER_SHURIKEN
               && gBattleMons[gBattlerAttacker].species == SPECIES_GRENINJA_ASH)
         {
             gMultiHitCounter = 3;
         }
+        */
         else
         {
             SetRandomMultiHitCounter();
@@ -8172,10 +8174,12 @@ static inline u32 CalcMoveBasePower(struct DamageContext *ctx)
     // Move-specific base power changes
     switch (move)
     {
+    /*
     case MOVE_WATER_SHURIKEN:
         if (gBattleMons[battlerAtk].species == SPECIES_GRENINJA_ASH)
             basePower = 20;
         break;
+    */
     }
 
     if (basePower == 0)
@@ -8439,6 +8443,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (IsBattleMoveSpecial(move))
             modifier = uq4_12_multiply(modifier, uq4_12_add(UQ_4_12(1.0), PercentToUQ4_12_Floored(holdEffectParamAtk)));
         break;
+    /*
     case HOLD_EFFECT_LUSTROUS_ORB:
         if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_PALKIA && (moveType == TYPE_WATER || moveType == TYPE_DRAGON))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
@@ -8457,6 +8462,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
              || (B_SOUL_DEW_BOOST < GEN_7 && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER) && IsBattleMoveSpecial(move))))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
         break;
+    */
     case HOLD_EFFECT_TYPE_POWER:
     case HOLD_EFFECT_PLATE:
         if (moveType == GetItemSecondaryId(gBattleMons[battlerAtk].item))
@@ -8466,10 +8472,12 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (IsPunchingMove(move))
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.1));
         break;
+    /*
     case HOLD_EFFECT_OGERPON_MASK:
         if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_OGERPON)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
+    */
     default:
         break;
     }
@@ -8621,10 +8629,12 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
                 modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         }
         break;
+    /*
     case ABILITY_FLOWER_GIFT:
         if (gBattleMons[battlerAtk].species == SPECIES_CHERRIM_SUNSHINE && IsBattlerWeatherAffected(battlerAtk, B_WEATHER_SUN) && IsBattleMovePhysical(move))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    */
     case ABILITY_HUSTLE:
         if (IsBattleMovePhysical(move))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
@@ -8716,10 +8726,12 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
     {
         switch (GetBattlerAbility(BATTLE_PARTNER(battlerAtk)))
         {
+        /*
         case ABILITY_FLOWER_GIFT:
             if (gBattleMons[BATTLE_PARTNER(battlerAtk)].species == SPECIES_CHERRIM_SUNSHINE && IsBattlerWeatherAffected(BATTLE_PARTNER(battlerAtk), B_WEATHER_SUN) && IsBattleMovePhysical(move))
                 modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
             break;
+        */
         }
     }
 
@@ -8733,6 +8745,7 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
     // attacker's hold effect
     switch (ctx->holdEffectAtk)
     {
+    /*
     case HOLD_EFFECT_THICK_CLUB:
         if ((atkBaseSpeciesId == SPECIES_CUBONE || atkBaseSpeciesId == SPECIES_MAROWAK) && IsBattleMovePhysical(move))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
@@ -8745,6 +8758,7 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
         if (atkBaseSpeciesId == SPECIES_PIKACHU && (B_LIGHT_BALL_ATTACK_BOOST >= GEN_4 || IsBattleMoveSpecial(move)))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
+    */
     case HOLD_EFFECT_CHOICE_BAND:
         if (IsBattleMovePhysical(move) && GetActiveGimmick(battlerAtk) != GIMMICK_DYNAMAX)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
@@ -8873,10 +8887,12 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
                 RecordAbilityBattle(battlerDef, ABILITY_GRASS_PELT);
         }
         break;
+    /*
     case ABILITY_FLOWER_GIFT:
         if (gBattleMons[battlerDef].species == SPECIES_CHERRIM_SUNSHINE && IsBattlerWeatherAffected(battlerDef, B_WEATHER_SUN) && !usesDefStat)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    */
     }
 
     // ally's abilities
@@ -8884,10 +8900,12 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
     {
         switch (GetBattlerAbility(BATTLE_PARTNER(battlerDef)))
         {
+        /*
         case ABILITY_FLOWER_GIFT:
             if (gBattleMons[BATTLE_PARTNER(battlerDef)].species == SPECIES_CHERRIM_SUNSHINE && IsBattlerWeatherAffected(BATTLE_PARTNER(battlerDef), B_WEATHER_SUN) && !usesDefStat)
                 modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
             break;
+        */
         }
     }
 
@@ -8901,6 +8919,7 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
     // target's hold effects
     switch (ctx->holdEffectDef)
     {
+    /*
     case HOLD_EFFECT_DEEP_SEA_SCALE:
         if (gBattleMons[battlerDef].species == SPECIES_CLAMPERL && !usesDefStat)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
@@ -8909,6 +8928,7 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
         if (gBattleMons[battlerDef].species == SPECIES_DITTO && usesDefStat && !(gBattleMons[battlerDef].volatiles.transformed))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
+    */
     case HOLD_EFFECT_EVIOLITE:
         if (CanEvolve(gBattleMons[battlerDef].species))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
@@ -8917,6 +8937,7 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
         if (!usesDefStat)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    /*
     case HOLD_EFFECT_SOUL_DEW:
         if (B_SOUL_DEW_BOOST < GEN_7
          && (gBattleMons[battlerDef].species == SPECIES_LATIAS || gBattleMons[battlerDef].species == SPECIES_LATIOS)
@@ -8924,6 +8945,7 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
          && !usesDefStat)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    */
     default:
         break;
     }

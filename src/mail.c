@@ -473,7 +473,7 @@ void ReadMail(struct Mail *mail, void (*exitCallback)(void), bool8 hasText)
         sMailRead->layout = &sMailLayouts_Tall[sMailRead->mailType];
         break;
     }
-    species = MailSpeciesToSpecies(mail->species, buffer);
+    species = mail->species;
     if (species > SPECIES_NONE && species < NUM_SPECIES)
     {
         switch (sMailRead->mailType)

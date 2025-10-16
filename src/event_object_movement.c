@@ -1991,9 +1991,11 @@ const struct ObjectEventGraphicsInfo *SpeciesToGraphicsInfo(u32 species, bool32 
 #if OW_POKEMON_OBJECT_EVENTS
     switch (species)
     {
+    /*
     case SPECIES_UNOWN: // Deal with Unown forms later
         graphicsInfo = &gSpeciesInfo[species].overworldData;
         break;
+    */
     default:
     #if P_GENDER_DIFFERENCES
         if (female && gSpeciesInfo[species].overworldDataFemale.paletteTag == OBJ_EVENT_PAL_TAG_DYNAMIC)
@@ -2174,9 +2176,11 @@ static bool8 GetMonInfo(struct Pokemon *mon, u32 *species, bool32 *shiny, bool32
     *female = GetMonGender(mon) == MON_FEMALE ? OBJ_EVENT_MON_FEMALE : 0;
     switch (*species)
     {
+    /*
     case SPECIES_UNOWN:
         *species = GetUnownSpecies(mon);
         break;
+    */
     default:
         *species = GetOverworldWeatherSpecies(*species);
         break;

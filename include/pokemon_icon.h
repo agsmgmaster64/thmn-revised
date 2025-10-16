@@ -9,7 +9,6 @@ u8 GetValidMonIconPalIndex(u16 species);
 const u8 *GetMonIconPtr(u16 species, u32 personality);
 const u16 *GetValidMonIconPalettePtr(u16 species);
 u16 GetIconSpecies(u16 species, u32 personality);
-u16 GetUnownLetterByPersonality(u32 personality);
 u16 GetIconSpeciesNoPersonality(u16 species);
 void LoadMonIconPalettes(void);
 void LoadMonIconPalette(u16 species);

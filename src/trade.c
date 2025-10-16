@@ -1160,6 +1160,7 @@ static bool8 BufferTradeParties(void)
 
             if (species != SPECIES_NONE)
             {
+                /*
                 if (species == SPECIES_SHEDINJA && GetMonData(mon, MON_DATA_LANGUAGE) != LANGUAGE_JAPANESE)
                 {
                     GetMonData(mon, MON_DATA_NICKNAME, name);
@@ -1167,6 +1168,7 @@ static bool8 BufferTradeParties(void)
                     if (!StringCompareWithoutExtCtrlCodes(name, sText_ShedinjaJP))
                         SetMonData(mon, MON_DATA_NICKNAME, GetSpeciesName(SPECIES_SHEDINJA));
                 }
+                */
             }
         }
         return TRUE;

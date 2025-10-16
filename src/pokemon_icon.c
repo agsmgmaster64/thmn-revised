@@ -187,25 +187,13 @@ u8 CreateMonIconNoPersonality(u16 species, void (*callback)(struct Sprite *), s1
 u16 GetIconSpecies(u16 species, u32 personality)
 {
     species = SanitizeSpeciesId(species);
-    if (species == SPECIES_UNOWN)
-        species = GetUnownSpeciesId(personality);
     return species;
-}
-
-u16 GetUnownLetterByPersonality(u32 personality)
-{
-    if (!personality)
-        return 0;
-    else
-        return GET_UNOWN_LETTER(personality);
 }
 
 u16 GetIconSpeciesNoPersonality(u16 species)
 {
     species = SanitizeSpeciesId(species);
 
-    if (MailSpeciesToSpecies(species, &species) == SPECIES_UNOWN)
-        return species += SPECIES_UNOWN_B; // TODO
     return GetIconSpecies(species, 0);
 }
 

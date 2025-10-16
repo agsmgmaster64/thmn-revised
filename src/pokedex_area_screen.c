@@ -322,6 +322,7 @@ static void FindMapsWithMon(u16 species)
     // in the regular wild encounter table) to the area map.
     // This only applies to Feebas on Route 119, but it was clearly set
     // up to allow handling others.
+    /*
     for (i = 0; sFeebasData[i][0] != NUM_SPECIES; i++)
     {
         if (species == sFeebasData[i][0])
@@ -338,6 +339,7 @@ static void FindMapsWithMon(u16 species)
             }
         }
     }
+    */
 
     // Add regular species to the area map
     for (i = 0; gWildMonHeaders[i].mapGroup != MAP_GROUP(MAP_UNDEFINED); i++)

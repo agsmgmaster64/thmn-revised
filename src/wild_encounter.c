@@ -987,6 +987,7 @@ void FishingWildEncounter(u8 rod)
     enum TimeOfDay timeOfDay;
 
     gIsFishingEncounter = TRUE;
+    /*
     if (CheckFeebas() == TRUE)
     {
         u8 level = ChooseWildMonLevel(&sWildFeebas, 0, WILD_AREA_FISHING);
@@ -996,10 +997,13 @@ void FishingWildEncounter(u8 rod)
     }
     else
     {
+    */
         headerId = GetCurrentMapWildMonHeaderId();
         timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_FISHING);
         species = GenerateFishingWildMon(gWildMonHeaders[headerId].encounterTypes[timeOfDay].fishingMonsInfo, rod);
+    /*
     }
+    */
 
     IncrementGameStat(GAME_STAT_FISHING_ENCOUNTERS);
     SetPokemonAnglerSpecies(species);

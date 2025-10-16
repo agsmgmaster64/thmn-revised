@@ -1127,8 +1127,6 @@ static bool32 isModeSymDelta(enum CompressionMode mode)
 void LoadSpecialPokePic(void *dest, s32 species, u32 personality, bool8 isFrontPic)
 {
     species = SanitizeSpeciesId(species);
-    if (species == SPECIES_UNOWN)
-        species = GetUnownSpeciesId(personality);
 
     if (isFrontPic)
     {
@@ -1155,11 +1153,13 @@ void LoadSpecialPokePic(void *dest, s32 species, u32 personality, bool8 isFrontP
             DecompressDataWithHeaderWram(gSpeciesInfo[SPECIES_NONE].backPic, dest);
     }
 
+    /*
     if (species == SPECIES_SPINDA && isFrontPic)
     {
         DrawSpindaSpots(personality, dest, FALSE);
         DrawSpindaSpots(personality, dest, TRUE);
     }
+    */
 }
 
 void Unused_DecompressDataWithHeaderWramIndirect(const void **src, void *dest)

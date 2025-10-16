@@ -2619,6 +2619,7 @@ static void TryCorrectShedinjaLanguage(struct Pokemon *mon)
     u8 nickname[POKEMON_NAME_LENGTH + 1];
     u8 language = LANGUAGE_JAPANESE;
 
+    /*
     if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_SHEDINJA
      && GetMonData(mon, MON_DATA_LANGUAGE) != language)
     {
@@ -2626,6 +2627,7 @@ static void TryCorrectShedinjaLanguage(struct Pokemon *mon)
         if (StringCompareWithoutExtCtrlCodes(nickname, sText_ShedinjaJpnName) == 0)
             SetMonData(mon, MON_DATA_LANGUAGE, &language);
     }
+    */
 }
 
 u32 GetBattleWindowTemplatePixelWidth(u32 windowsType, u32 tableId)
@@ -2709,8 +2711,6 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
         species = sprite->sSpeciesId;
 
     species = SanitizeSpeciesId(species);
-    if (species == SPECIES_UNOWN)
-        species = GetUnownSpeciesId(personality);
     yOffset = gSpeciesInfo[species].frontPicYOffset;
 
     sprite->data[3] = 8 - yOffset / 8;
@@ -4780,8 +4780,10 @@ u32 GetBattlerTotalSpeedStatArgs(u32 battler, u32 ability, enum ItemHoldEffect h
         speed /= 2;
     else if (holdEffect == HOLD_EFFECT_CHOICE_SCARF && GetActiveGimmick(battler) != GIMMICK_DYNAMAX)
         speed = (speed * 150) / 100;
+    /*
     else if (holdEffect == HOLD_EFFECT_QUICK_POWDER && gBattleMons[battler].species == SPECIES_DITTO && !(gBattleMons[battler].volatiles.transformed))
         speed *= 2;
+    */
 
     // various effects
     if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_TAILWIND)

@@ -1726,7 +1726,7 @@ void CalculateMonStats(struct Pokemon *mon)
 
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
-    if (species == SPECIES_SHEDINJA)
+    if (gSpeciesInfo[species].baseHP == 1)
     {
         newMaxHP = 1;
     }
@@ -2137,15 +2137,6 @@ u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
 bool32 IsPersonalityFemale(u16 species, u32 personality)
 {
     return GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE;
-}
-
-u32 GetUnownSpeciesId(u32 personality)
-{
-    u16 unownLetter = GetUnownLetterByPersonality(personality);
-
-    if (unownLetter == 0)
-        return SPECIES_UNOWN;
-    return unownLetter + SPECIES_UNOWN_B - 1;
 }
 
 void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition)
@@ -6341,10 +6332,12 @@ void HandleSetPokedexFlag(enum NationalDexOrder nationalNum, u8 caseId, u32 pers
     if (!GetSetPokedexFlag(nationalNum, getFlagCaseId)) // don't set if it's already set
     {
         GetSetPokedexFlag(nationalNum, caseId);
+        /*
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_UNOWN)
             gSaveBlock2Ptr->pokedex.unownPersonality = personality;
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_SPINDA)
             gSaveBlock2Ptr->pokedex.spindaPersonality = personality;
+        */
     }
 }
 
@@ -6360,7 +6353,6 @@ bool8 HasTwoFramesAnimation(u16 species)
 {
     return P_TWO_FRAME_FRONT_SPRITES
         && gSpeciesInfo[species].frontAnimFrames != sAnims_SingleFramePlaceHolder
-        && species != SPECIES_UNOWN
         && !gTestRunnerHeadless;
 }
 

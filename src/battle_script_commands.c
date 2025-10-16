@@ -1581,11 +1581,13 @@ static inline u32 GetCriticalHitOdds(u32 critChance)
 
 static inline u32 IsBattlerLeekAffected(u32 battler, enum ItemHoldEffect holdEffect)
 {
+    /*
     if (holdEffect == HOLD_EFFECT_LEEK)
     {
         return GET_BASE_SPECIES_ID(gBattleMons[battler].species) == SPECIES_FARFETCHD
             || gBattleMons[battler].species == SPECIES_SIRFETCHD;
     }
+    */
     return FALSE;
 }
 
@@ -1598,10 +1600,12 @@ static inline u32 GetHoldEffectCritChanceIncrease(u32 battler, enum ItemHoldEffe
     case HOLD_EFFECT_SCOPE_LENS:
         critStageIncrease = 1;
         break;
+    /*
     case HOLD_EFFECT_LUCKY_PUNCH:
         if (gBattleMons[battler].species == SPECIES_CHANSEY)
             critStageIncrease = 2;
         break;
+    */
     case HOLD_EFFECT_LEEK:
         if (IsBattlerLeekAffected(battler, holdEffect))
             critStageIncrease = 2;
@@ -14457,12 +14461,14 @@ static void Cmd_trainerslideout(void)
 
 static const u16 sTelekinesisBanList[] =
 {
+    /*
     SPECIES_DIGLETT,
     SPECIES_DUGTRIO,
     SPECIES_DIGLETT_ALOLA,
     SPECIES_DUGTRIO_ALOLA,
     SPECIES_SANDYGAST,
     SPECIES_PALOSSAND,
+    */
     SPECIES_GENGAR_MEGA,
 };
 
@@ -15333,10 +15339,12 @@ void BS_TryReflectType(void)
     u32 targetTypes[3];
     GetBattlerTypes(gBattlerTarget, FALSE, targetTypes);
 
+    /*
     if (targetBaseSpecies == SPECIES_ARCEUS || targetBaseSpecies == SPECIES_SILVALLY)
     {
         gBattlescriptCurrInstr = cmd->failInstr;
     }
+    */
     else if (GetActiveGimmick(gBattlerAttacker) == GIMMICK_TERA)
     {
         gBattlescriptCurrInstr = cmd->failInstr;

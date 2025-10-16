@@ -145,30 +145,6 @@ u8 GetBattlerYDelta(u8 battler, u16 species)
     u8 ret;
     species = SanitizeSpeciesId(species);
 
-    if (IsContest())
-    {
-        if (species == SPECIES_UNOWN)
-        {
-            if (gContestResources->moveAnim->hasTargetAnim)
-                personality = gContestResources->moveAnim->targetPersonality;
-            else
-                personality = gContestResources->moveAnim->personality;
-            species = GetUnownSpeciesId(personality);
-        }
-    }
-    else
-    {
-        if (species == SPECIES_UNOWN)
-        {
-            spriteInfo = gBattleSpritesDataPtr->battlerData;
-            if (!spriteInfo[battler].transformSpecies)
-                personality = GetMonData(GetBattlerMon(battler), MON_DATA_PERSONALITY);
-            else
-                personality = gTransformedPersonalities[battler];
-            species = GetUnownSpeciesId(personality);
-        }
-    }
-
     if (IsOnPlayerSide(battler) || IsContest())
         ret = gSpeciesInfo[species].backPicYOffset;
     else
@@ -1218,10 +1194,7 @@ static bool8 ShouldRotScaleSpeciesBeFlipped(void)
 {
     if (IsContest())
     {
-        if (gSprites[GetAnimBattlerSpriteId(ANIM_ATTACKER)].data[2] == SPECIES_UNOWN)
-            return FALSE;
-        else
-            return TRUE;
+        return TRUE;
     }
     else
     {
@@ -2105,8 +2078,6 @@ s16 GetBattlerSpriteCoordAttr(u8 battler, u8 attr)
             personality = gContestResources->moveAnim->personality;
         }
         species = SanitizeSpeciesId(species);
-        if (species == SPECIES_UNOWN)
-            species = GetUnownSpeciesId(personality);
         size = gSpeciesInfo[species].backPicSize;
         y_offset = gSpeciesInfo[species].backPicYOffset;
     }
@@ -2127,8 +2098,6 @@ s16 GetBattlerSpriteCoordAttr(u8 battler, u8 attr)
         }
 
         species = SanitizeSpeciesId(species);
-        if (species == SPECIES_UNOWN)
-            species = GetUnownSpeciesId(personality);
 
         if (IsOnPlayerSide(battler))
         {
