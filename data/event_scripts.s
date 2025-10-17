@@ -1160,9 +1160,8 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 
 	.include "data/maps/Surakarta/scripts.inc"
-
 	.include "data/maps/Yogyakarta/scripts.inc"
-
 	.include "data/maps/Semarang/scripts.inc"
-
 	.include "data/maps/Surabaya/scripts.inc"
+	.include "data/maps/NorthernPass/scripts.inc"
+	.include "data/maps/RiveryPass/scripts.inc"

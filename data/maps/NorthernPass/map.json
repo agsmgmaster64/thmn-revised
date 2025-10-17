@@ -1,0 +1,31 @@
+{
+  "id": "MAP_NORTHERN_PASS",
+  "name": "NorthernPass",
+  "layout": "LAYOUT_NORTHERN_PASS",
+  "music": "MUS_THPPZGSK_378A_PRIMAL_SCENE",
+  "region_map_section": "MAPSEC_MONEAN_CHAMBER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_SURAKARTA",
+      "offset": -28,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_SURABAYA",
+      "offset": 59,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

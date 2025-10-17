@@ -4450,6 +4450,26 @@
       "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/Surabaya/border.bin",
       "blockdata_filepath": "data/layouts/Surabaya/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTHERN_PASS",
+      "name": "NorthernPass_Layout",
+      "width": 110,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NorthernPass/border.bin",
+      "blockdata_filepath": "data/layouts/NorthernPass/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIVERY_PASS",
+      "name": "RiveryPass_Layout",
+      "width": 50,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/RiveryPass/border.bin",
+      "blockdata_filepath": "data/layouts/RiveryPass/map.bin"
     }
   ]
 }
