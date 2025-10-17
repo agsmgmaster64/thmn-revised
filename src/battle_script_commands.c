@@ -15345,7 +15345,7 @@ void BS_TryReflectType(void)
         gBattlescriptCurrInstr = cmd->failInstr;
     }
     */
-    else if (GetActiveGimmick(gBattlerAttacker) == GIMMICK_TERA)
+    if (GetActiveGimmick(gBattlerAttacker) == GIMMICK_TERA)
     {
         gBattlescriptCurrInstr = cmd->failInstr;
     }
