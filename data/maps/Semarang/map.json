@@ -17,6 +17,11 @@
       "map": "MAP_RIVERY_PASS",
       "offset": -8,
       "direction": "right"
+    },
+    {
+      "map": "MAP_NORTH_PLAIN",
+      "offset": 6,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -44,7 +49,7 @@
     },
     {
       "x": 25,
-      "y": 18,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SEMARANG",
       "dest_warp_id": "0"

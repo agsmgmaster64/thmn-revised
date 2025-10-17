@@ -4470,6 +4470,26 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/RiveryPass/border.bin",
       "blockdata_filepath": "data/layouts/RiveryPass/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOUNT_AURORA",
+      "name": "MountAurora_Layout",
+      "width": 36,
+      "height": 130,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/MtAurora/border.bin",
+      "blockdata_filepath": "data/layouts/MtAurora/map.bin"
+    },
+    {
+      "id": "LAYOUT_NORTH_PLAIN",
+      "name": "NorthPlain_Layout",
+      "width": 24,
+      "height": 100,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/NorthPlain/border.bin",
+      "blockdata_filepath": "data/layouts/NorthPlain/map.bin"
     }
   ]
 }
