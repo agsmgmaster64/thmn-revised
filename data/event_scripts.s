@@ -1170,3 +1170,12 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TrappyPass/scripts.inc"
 	.include "data/maps/SouthernPass/scripts.inc"
 	.include "data/maps/PojokCliff/scripts.inc"
+
+	.include "data/maps/LostAgeofJavaSemarang/scripts.inc"
+	.include "data/maps/LostAgeofJavaRiveryPass/scripts.inc"
+
+	.include "data/maps/LostAgeofJavaSurakartaNorthernPass/scripts.inc"
+
+	.include "data/maps/LostAgeofJavaSurabaya/scripts.inc"
+
+	.include "data/maps/LostAgeofJava_CaveExterior/scripts.inc"

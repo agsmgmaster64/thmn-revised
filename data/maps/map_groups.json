@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_JavaExterior"
+    "gMapGroup_JavaExterior",
+    "gMapGroup_LostAgeofJava"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -634,5 +635,12 @@
     "TrappyPass",
     "SouthernPass",
     "PojokCliff"
+  ],
+  "gMapGroup_LostAgeofJava": [
+    "LostAgeofJavaSemarang",
+    "LostAgeofJavaRiveryPass",
+    "LostAgeofJavaSurakartaNorthernPass",
+    "LostAgeofJavaSurabaya",
+    "LostAgeofJava_CaveExterior"
   ]
 }

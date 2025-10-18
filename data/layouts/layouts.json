@@ -4520,6 +4520,56 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/PojokCliff/border.bin",
       "blockdata_filepath": "data/layouts/PojokCliff/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_SEMARANG",
+      "name": "LostAgeofJavaSemarang_Layout",
+      "width": 40,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/LostAgeofJavaSemarang/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJavaSemarang/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_RIVERY_PASS_LAYOUT",
+      "name": "LostAgeofJavaRiveryPassLayout",
+      "width": 50,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/LostAgeofJavaRiveryPassLayout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJavaRiveryPassLayout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_SURAKARTA_NORTHERN_PASS_LAYOUT",
+      "name": "LostAgeofJava_SurakartaNorthernPass_Layout",
+      "width": 150,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LostAgeofJava_SurakartaNorthernPass_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_SurakartaNorthernPass_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_SURABAYA_LAYOUT",
+      "name": "LostAgeofJava_Surabaya_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "border_filepath": "data/layouts/LostAgeofJava_Surabaya_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_Surabaya_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_CAVE_EXTERIOR_LAYOUT",
+      "name": "LostAgeofJava_CaveExterior_Layout",
+      "width": 21,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/LostAgeofJava_CaveExterior_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_CaveExterior_Layout/map.bin"
     }
   ]
 }

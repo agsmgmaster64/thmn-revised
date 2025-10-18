@@ -1,0 +1,43 @@
+{
+  "id": "MAP_LOST_AGEOF_JAVA_SURABAYA",
+  "name": "LostAgeofJavaSurabaya",
+  "layout": "LAYOUT_LOST_AGEOF_JAVA_SURABAYA_LAYOUT",
+  "music": "MUS_THPPZGSK_378A_PRIMAL_SCENE",
+  "region_map_section": "MAPSEC_NAVEL_ROCK",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_LOST_AGEOF_JAVA_SURAKARTA_NORTHERN_PASS",
+      "offset": -97,
+      "direction": "down"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_SURABAYA",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 51,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LostAgeofJavaSurabaya_EventScript_AncientPyramidSign"
+    }
+  ]
+}
