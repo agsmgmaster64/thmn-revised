@@ -7,6 +7,6 @@ SouthernPass_EventScript_DirectionSign::
 	
 SouthernPass_Text_DirectionSign:
 	.string "Southern Way\n"
-	.string "{LEFT_ARROW} Yogyakarta\n"
+	.string "{LEFT_ARROW} Yogyakarta\l"
 	.string "{RIGHT_ARROW} Trappy Pass$"
 	end
