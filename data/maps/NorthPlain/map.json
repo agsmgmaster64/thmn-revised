@@ -17,6 +17,11 @@
       "map": "MAP_SEMARANG",
       "offset": -6,
       "direction": "up"
+    },
+    {
+      "map": "MAP_YOGYAKARTA",
+      "offset": -18,
+      "direction": "down"
     }
   ],
   "object_events": [

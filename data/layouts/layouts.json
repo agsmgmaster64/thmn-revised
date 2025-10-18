@@ -4490,6 +4490,36 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/NorthPlain/border.bin",
       "blockdata_filepath": "data/layouts/NorthPlain/map.bin"
+    },
+    {
+      "id": "LAYOUT_TRAPPY_PASS",
+      "name": "TrappyPass_Layout",
+      "width": 24,
+      "height": 200,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/TrappyPass/border.bin",
+      "blockdata_filepath": "data/layouts/TrappyPass/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOUTHERN_PASS",
+      "name": "SouthernPass_Layout",
+      "width": 100,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SouthernPass/border.bin",
+      "blockdata_filepath": "data/layouts/SouthernPass/map.bin"
+    },
+    {
+      "id": "LAYOUT_POJOK_CLIFF",
+      "name": "PojokCliff_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/PojokCliff/border.bin",
+      "blockdata_filepath": "data/layouts/PojokCliff/map.bin"
     }
   ]
 }

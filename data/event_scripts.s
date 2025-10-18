@@ -1167,3 +1167,6 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/RiveryPass/scripts.inc"
 	.include "data/maps/MtAurora/scripts.inc"
 	.include "data/maps/NorthPlain/scripts.inc"
+	.include "data/maps/TrappyPass/scripts.inc"
+	.include "data/maps/SouthernPass/scripts.inc"
+	.include "data/maps/PojokCliff/scripts.inc"
