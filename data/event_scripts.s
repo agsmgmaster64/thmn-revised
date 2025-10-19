@@ -1179,3 +1179,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LostAgeofJavaSurabaya/scripts.inc"
 
 	.include "data/maps/LostAgeofJava_CaveExterior/scripts.inc"
+
+	.include "data/maps/YogyakartaBonekaCenter1F/scripts.inc"
+
+	.include "data/maps/YogyakartaBonekaCenterB1F/scripts.inc"
+
+	.include "data/maps/YogyakartaLFlandreCave/scripts.inc"
+
+	.include "data/maps/YogyakartaAichiHouse/scripts.inc"
+
+	.include "data/maps/YogyakartaBaseCamp/scripts.inc"
+
+	.include "data/maps/YogyakartaEathernaAndSheffyneHouse/scripts.inc"

@@ -4570,6 +4570,66 @@
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/LostAgeofJava_CaveExterior_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LostAgeofJava_CaveExterior_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_YOGYAKARTA_BONEKA_CENTER1F_LAYOUT",
+      "name": "YogyakartaBonekaCenter1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/YogyakartaBonekaCenter1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/YogyakartaBonekaCenter1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_YOGYAKARTA_BONEKA_CENTER_B1F_LAYOUT",
+      "name": "YogyakartaBonekaCenterB1F_Layout",
+      "width": 20,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/YogyakartaBonekaCenterB1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/YogyakartaBonekaCenterB1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_YOGYAKARTA_LFLANDRE_CAVE_LAYOUT",
+      "name": "YogyakartaLFlandreCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/YogyakartaLFlandreCave_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/YogyakartaLFlandreCave_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_YOGYAKARTA_AICHI_HOUSE_LAYOUT",
+      "name": "Yogyakarta_AichiHouse_Layout",
+      "width": 17,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Yogyakarta_AichiHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Yogyakarta_AichiHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_YOGYAKARTA_BASE_CAMP_LAYOUT",
+      "name": "Yogyakarta_BaseCamp_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Yogyakarta_BaseCamp_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Yogyakarta_BaseCamp_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_YOGYAKARTA_EATHERNA_AND_SHEFFYNE_HOUSE_LAYOUT",
+      "name": "Yogyakarta_EathernaAndSheffyneHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Yogyakarta_EathernaAndSheffyneHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Yogyakarta_EathernaAndSheffyneHouse_Layout/map.bin"
     }
   ]
 }
