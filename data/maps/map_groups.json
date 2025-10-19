@@ -653,5 +653,15 @@
     "YogyakartaBaseCamp",
     "YogyakartaEathernaAndSheffyneHouse"
   ],
-  "gMapGroup_IndoorSurakarta": []
+  "gMapGroup_IndoorSurakarta": [
+    "Surakarta_BonekaCenter_1F",
+    "Surakarta_BonekaCenter_B1F",
+    "Surakarta_BonekaMart",
+    "Surakarta_TimeTravelerHouse",
+    "Surakarta_EldersHouse",
+    "Surakarta_AansHouseOpening",
+    "Surakarta_AansHouseStairs",
+    "Surakarta_AansHouseCurrents",
+    "Surakarta_AansHouseRoom"
+  ]
 }

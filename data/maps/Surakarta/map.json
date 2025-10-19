@@ -60,16 +60,16 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 48,
+      "y": 49,
       "elevation": 0,
-      "dest_map": "MAP_SURAKARTA",
+      "dest_map": "MAP_SURAKARTA_BONEKA_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
-      "y": 48,
+      "y": 49,
       "elevation": 0,
-      "dest_map": "MAP_SURAKARTA",
+      "dest_map": "MAP_SURAKARTA_BONEKA_MART",
       "dest_warp_id": "0"
     },
     {
@@ -81,23 +81,23 @@
     },
     {
       "x": 4,
-      "y": 41,
+      "y": 42,
       "elevation": 0,
-      "dest_map": "MAP_SURAKARTA",
+      "dest_map": "MAP_SURAKARTA_TIME_TRAVELER_HOUSE",
       "dest_warp_id": "0"
     },
     {
       "x": 16,
-      "y": 39,
+      "y": 40,
       "elevation": 0,
-      "dest_map": "MAP_SURAKARTA",
+      "dest_map": "MAP_SURAKARTA_AANS_HOUSE_OPENING",
       "dest_warp_id": "0"
     },
     {
       "x": 28,
-      "y": 37,
+      "y": 38,
       "elevation": 0,
-      "dest_map": "MAP_SURAKARTA",
+      "dest_map": "MAP_SURAKARTA_ELDERS_HOUSE",
       "dest_warp_id": "0"
     }
   ],

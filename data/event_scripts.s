@@ -1191,3 +1191,21 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/YogyakartaBaseCamp/scripts.inc"
 
 	.include "data/maps/YogyakartaEathernaAndSheffyneHouse/scripts.inc"
+
+	.include "data/maps/Surakarta_BonekaCenter_1F/scripts.inc"
+
+	.include "data/maps/Surakarta_BonekaMart/scripts.inc"
+
+	.include "data/maps/Surakarta_TimeTravelerHouse/scripts.inc"
+
+	.include "data/maps/Surakarta_BonekaCenter_B1F/scripts.inc"
+
+	.include "data/maps/Surakarta_EldersHouse/scripts.inc"
+
+	.include "data/maps/Surakarta_AansHouseOpening/scripts.inc"
+
+	.include "data/maps/Surakarta_AansHouseStairs/scripts.inc"
+
+	.include "data/maps/Surakarta_AansHouseCurrents/scripts.inc"
+
+	.include "data/maps/Surakarta_AansHouseRoom/scripts.inc"

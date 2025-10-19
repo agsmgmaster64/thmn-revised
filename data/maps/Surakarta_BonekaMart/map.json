@@ -1,9 +1,9 @@
 {
-  "id": "MAP_YOGYAKARTA_EATHERNA_AND_SHEFFYNE_HOUSE",
-  "name": "YogyakartaEathernaAndSheffyneHouse",
-  "layout": "LAYOUT_YOGYAKARTA_EATHERNA_AND_SHEFFYNE_HOUSE_LAYOUT",
+  "id": "MAP_SURAKARTA_BONEKA_MART",
+  "name": "Surakarta_BonekaMart",
+  "layout": "LAYOUT_SURAKARTA_BONEKA_MART_LAYOUT",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_SEVII_ISLE_6",
+  "region_map_section": "MAPSEC_SEVII_ISLE_7",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -19,15 +19,15 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_YOGYAKARTA",
-      "dest_warp_id": "4"
+      "dest_map": "MAP_SURAKARTA",
+      "dest_warp_id": "1"
     },
     {
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_YOGYAKARTA",
-      "dest_warp_id": "4"
+      "dest_map": "MAP_SURAKARTA",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

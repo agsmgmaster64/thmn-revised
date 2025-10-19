@@ -1,9 +1,9 @@
 {
-  "id": "MAP_YOGYAKARTA_EATHERNA_AND_SHEFFYNE_HOUSE",
-  "name": "YogyakartaEathernaAndSheffyneHouse",
-  "layout": "LAYOUT_YOGYAKARTA_EATHERNA_AND_SHEFFYNE_HOUSE_LAYOUT",
+  "id": "MAP_SURAKARTA_AANS_HOUSE_OPENING",
+  "name": "Surakarta_AansHouseOpening",
+  "layout": "LAYOUT_SURAKARTA_AANS_HOUSE_OPENING_LAYOUT",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_SEVII_ISLE_6",
+  "region_map_section": "MAPSEC_SEVII_ISLE_7",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -19,15 +19,22 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_YOGYAKARTA",
+      "dest_map": "MAP_SURAKARTA",
       "dest_warp_id": "4"
     },
     {
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_YOGYAKARTA",
+      "dest_map": "MAP_SURAKARTA",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SURAKARTA_AANS_HOUSE_STAIRS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

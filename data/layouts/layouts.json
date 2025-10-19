@@ -4630,6 +4630,96 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Yogyakarta_EathernaAndSheffyneHouse_Layout/border.bin",
       "blockdata_filepath": "data/layouts/Yogyakarta_EathernaAndSheffyneHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_BONEKA_CENTER1F_LAYOUT",
+      "name": "Surakarta_BonekaCenter1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Surakarta_BonekaCenter1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_BonekaCenter1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_BONEKA_MART_LAYOUT",
+      "name": "Surakarta_BonekaMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Surakarta_BonekaMart_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_BonekaMart_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_TIME_TRAVELER_HOUSE_LAYOUT",
+      "name": "Surakarta_TimeTravelerHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Surakarta_TimeTravelerHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_TimeTravelerHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_BONEKA_CENTER_B1F_LAYOUT",
+      "name": "Surakarta_BonekaCenterB1F_Layout",
+      "width": 20,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Surakarta_BonekaCenterB1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_BonekaCenterB1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_AANS_HOUSE_OPENING_LAYOUT",
+      "name": "Surakarta_AansHouseOpening_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Surakarta_AansHouseOpening_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_AansHouseOpening_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_ELDERS_HOUSE_LAYOUT",
+      "name": "Surakarta_EldersHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Surakarta_EldersHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_EldersHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_AANS_HOUSE_STAIRS_LAYOUT",
+      "name": "Surakarta_AansHouseStairs_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Surakarta_AansHouseStairs_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_AansHouseStairs_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_AANS_HOUSE_CURRENTS_LAYOUT",
+      "name": "Surakarta_AansHouseCurrents_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/Surakarta_AansHouseCurrents_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_AansHouseCurrents_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURAKARTA_AANS_HOUSE_ROOM_LAYOUT",
+      "name": "Surakarta_AansHouseRoom_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Surakarta_AansHouseRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surakarta_AansHouseRoom_Layout/map.bin"
     }
   ]
 }

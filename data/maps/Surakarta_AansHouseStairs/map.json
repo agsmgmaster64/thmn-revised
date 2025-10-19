@@ -1,0 +1,42 @@
+{
+  "id": "MAP_SURAKARTA_AANS_HOUSE_STAIRS",
+  "name": "Surakarta_AansHouseStairs",
+  "layout": "LAYOUT_SURAKARTA_AANS_HOUSE_STAIRS_LAYOUT",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_SEVII_ISLE_7",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_SURAKARTA_AANS_HOUSE_OPENING",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 2,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_SURAKARTA_AANS_HOUSE_OPENING",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 1,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SURAKARTA_AANS_HOUSE_CURRENTS",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

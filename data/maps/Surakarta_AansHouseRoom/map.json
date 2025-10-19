@@ -1,9 +1,9 @@
 {
-  "id": "MAP_YOGYAKARTA_BASE_CAMP",
-  "name": "YogyakartaBaseCamp",
-  "layout": "LAYOUT_YOGYAKARTA_BASE_CAMP_LAYOUT",
+  "id": "MAP_SURAKARTA_AANS_HOUSE_ROOM",
+  "name": "Surakarta_AansHouseRoom",
+  "layout": "LAYOUT_SURAKARTA_AANS_HOUSE_ROOM_LAYOUT",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_SEVII_ISLE_6",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -16,18 +16,11 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 4,
-      "y": 7,
+      "x": 5,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_YOGYAKARTA",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_YOGYAKARTA",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_SURAKARTA_AANS_HOUSE_CURRENTS",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
