@@ -4720,6 +4720,96 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Surakarta_AansHouseRoom_Layout/border.bin",
       "blockdata_filepath": "data/layouts/Surakarta_AansHouseRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_BONEKA_CENTER1F_LAYOUT",
+      "name": "Semarang_BonekaCenter1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Semarang_BonekaCenter1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_BonekaCenter1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_BONEKA_CENTER_B1F_LAYOUT",
+      "name": "Semarang_BonekaCenterB1F_Layout",
+      "width": 20,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Semarang_BonekaCenterB1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_BonekaCenterB1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_BONEKA_MART_LAYOUT",
+      "name": "Semarang_BonekaMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Semarang_BonekaMart_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_BonekaMart_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_LOST_WOODS_LAYOUT",
+      "name": "Semarang_LostWoods_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Semarang_LostWoods_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_LostWoods_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_KRYUZEI_HOUSE_LAYOUT",
+      "name": "Semarang_KryuzeiHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Semarang_KryuzeiHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_KryuzeiHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_RAHMAS_HOUSE_LAYOUT",
+      "name": "Semarang_RahmasHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Semarang_RahmasHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_RahmasHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_TEWI_HOUSE_LAYOUT",
+      "name": "Semarang_TewiHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Semarang_TewiHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_TewiHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOUNT_MERAPI",
+      "name": "MountMerapi_Layout",
+      "width": 50,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MtMerapi_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/MtMerapi_Exterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEMARANG_STATUE_HOUSE_LAYOUT",
+      "name": "Semarang_StatueHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Semarang_StatueHouse_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Semarang_StatueHouse_Layout/map.bin"
     }
   ]
 }

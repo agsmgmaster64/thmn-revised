@@ -37,7 +37,8 @@
     "gMapGroup_JavaExterior",
     "gMapGroup_LostAgeofJava",
     "gMapGroup_IndoorYogyakarta",
-    "gMapGroup_IndoorSurakarta"
+    "gMapGroup_IndoorSurakarta",
+    "gMapGroup_IndoorSemarang"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -636,7 +637,8 @@
     "NorthPlain",
     "TrappyPass",
     "SouthernPass",
-    "PojokCliff"
+    "PojokCliff",
+    "MtMerapi_Exterior"
   ],
   "gMapGroup_LostAgeofJava": [
     "LostAgeofJavaSemarang",
@@ -663,5 +665,15 @@
     "Surakarta_AansHouseStairs",
     "Surakarta_AansHouseCurrents",
     "Surakarta_AansHouseRoom"
+  ],
+  "gMapGroup_IndoorSemarang": [
+    "Semarang_BonekaCenter_1F",
+    "Semarang_BonekaCenter_B1F",
+    "Semarang_BonekaMart",
+    "Semarang_LostWoods",
+    "Semarang_KryuzeiHouse",
+    "Semarang_Rahmas_House",
+    "Semarang_TewiHouse",
+    "Semarang_StatueHouse"
   ]
 }

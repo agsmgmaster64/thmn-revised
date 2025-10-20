@@ -1209,3 +1209,21 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Surakarta_AansHouseCurrents/scripts.inc"
 
 	.include "data/maps/Surakarta_AansHouseRoom/scripts.inc"
+
+	.include "data/maps/Semarang_BonekaCenter_1F/scripts.inc"
+
+	.include "data/maps/Semarang_BonekaCenter_B1F/scripts.inc"
+
+	.include "data/maps/Semarang_BonekaMart/scripts.inc"
+
+	.include "data/maps/Semarang_LostWoods/scripts.inc"
+
+	.include "data/maps/Semarang_KryuzeiHouse/scripts.inc"
+
+	.include "data/maps/Semarang_Rahmas_House/scripts.inc"
+
+	.include "data/maps/Semarang_TewiHouse/scripts.inc"
+
+	.include "data/maps/MtMerapi_Exterior/scripts.inc"
+
+	.include "data/maps/Semarang_StatueHouse/scripts.inc"
