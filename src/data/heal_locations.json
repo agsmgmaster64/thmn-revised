@@ -186,6 +186,30 @@
       "y": 52,
       "respawn_map": "MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_FRONTIER_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_SEMARANG",
+      "map": "MAP_SEMARANG",
+      "x": 25,
+      "y": 14,
+      "respawn_map": "MAP_SURAKARTA_BONEKA_CENTER_1F",
+      "respawn_npc": "LOCALID_SEMARANG_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_SURAKARTA",
+      "map": "MAP_SURAKARTA",
+      "x": 5,
+      "y": 50,
+      "respawn_map": "MAP_SURAKARTA_BONEKA_CENTER_1F",
+      "respawn_npc": "LOCALID_SURAKARTA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_YOGYAKARTA",
+      "map": "MAP_YOGYAKARTA",
+      "x": 27,
+      "y": 8,
+      "respawn_map": "MAP_YOGYAKARTA_BONEKA_CENTER1F",
+      "respawn_npc": "LOCALID_YOGYAKARTA_NURSE"
     }
   ]
 }
