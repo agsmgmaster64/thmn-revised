@@ -38,7 +38,8 @@
     "gMapGroup_LostAgeofJava",
     "gMapGroup_IndoorYogyakarta",
     "gMapGroup_IndoorSurakarta",
-    "gMapGroup_IndoorSemarang"
+    "gMapGroup_IndoorSemarang",
+    "gMapGroup_IndoorSurabaya"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -675,5 +676,6 @@
     "Semarang_Rahmas_House",
     "Semarang_TewiHouse",
     "Semarang_StatueHouse"
-  ]
+  ],
+  "gMapGroup_IndoorSurabaya": []
 }

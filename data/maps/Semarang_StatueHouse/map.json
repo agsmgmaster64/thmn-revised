@@ -3,7 +3,7 @@
   "name": "Semarang_StatueHouse",
   "layout": "LAYOUT_SEMARANG_STATUE_HOUSE_LAYOUT",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_SEVII_ISLE_8",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
