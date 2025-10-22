@@ -4810,6 +4810,106 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Semarang_StatueHouse_Layout/border.bin",
       "blockdata_filepath": "data/layouts/Semarang_StatueHouse_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_BONEKA_CENTER1F_LAYOUT",
+      "name": "Surabaya_BonekaCenter1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Surabaya_BonekaCenter1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_BonekaCenter1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_BONEKA_CENTER_B1F_LAYOUT",
+      "name": "Surabaya_BonekaCenterB1F_Layout",
+      "width": 20,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Surabaya_BonekaCenterB1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_BonekaCenterB1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_MUSEUM_LAYOUT",
+      "name": "Surabaya_Museum_Layout",
+      "width": 21,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/Surabaya_Museum_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_Museum_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_BONEKA_MART_LAYOUT",
+      "name": "Surabaya_BonekaMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Surabaya_BonekaMart_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_BonekaMart_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_HOSPITAL2F_LAYOUT",
+      "name": "Surabaya_Hospital2F_Layout",
+      "width": 19,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Surabaya_Hospital2F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_Hospital2F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_HOSPITAL1F_LAYOUT",
+      "name": "Surabaya_Hospital1F_Layout",
+      "width": 19,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Surabaya_Hospital1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_Hospital1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_POWER_PLANT_LAYOUT",
+      "name": "Surabaya_PowerPlant_Layout",
+      "width": 19,
+      "height": 17,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/Surabaya_PowerPlant_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_PowerPlant_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_ANCIENT_PYRAMID_LAYOUT",
+      "name": "Surabaya_AncientPyramid_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/Surabaya_AncientPyramid_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_AncientPyramid_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_TRAINER_MEETUP_LAYOUT",
+      "name": "Surabaya_TrainerMeetup_Layout",
+      "width": 25,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/Surabaya_TrainerMeetup_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_TrainerMeetup_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURABAYA_POWER_PLANT_BACK_ROOM_LAYOUT",
+      "name": "Surabaya_PowerPlantBackRoom_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Surabaya_PowerPlantBackRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Surabaya_PowerPlantBackRoom_Layout/map.bin"
     }
   ]
 }

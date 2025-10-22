@@ -1,32 +1,32 @@
 {
-  "id": "MAP_SEMARANG_BONEKA_MART",
-  "name": "Semarang_BonekaMart",
-  "layout": "LAYOUT_SEMARANG_BONEKA_MART_LAYOUT",
-  "music": "MUS_POKE_MART",
-  "region_map_section": "MAPSEC_SEVII_ISLE_8",
+  "id": "MAP_SURABAYA_POWER_PLANT_BACK_ROOM",
+  "name": "Surabaya_PowerPlantBackRoom",
+  "layout": "LAYOUT_SURABAYA_POWER_PLANT_BACK_ROOM_LAYOUT",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
-  "allow_running": true,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
   "warp_events": [
     {
-      "x": 3,
+      "x": 5,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SEMARANG",
+      "dest_map": "MAP_SURABAYA_POWER_PLANT",
       "dest_warp_id": "1"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SEMARANG",
+      "dest_map": "MAP_SURABAYA_POWER_PLANT",
       "dest_warp_id": "1"
     }
   ],

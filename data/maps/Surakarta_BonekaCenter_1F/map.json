@@ -2,7 +2,7 @@
   "id": "MAP_SURAKARTA_BONEKA_CENTER_1F",
   "name": "Surakarta_BonekaCenter_1F",
   "layout": "LAYOUT_SURAKARTA_BONEKA_CENTER1F_LAYOUT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_THPPME_303_HISTORY_OF_THE_MOON",
   "region_map_section": "MAPSEC_SEVII_ISLE_7",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

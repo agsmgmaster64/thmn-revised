@@ -2,7 +2,7 @@
   "id": "MAP_YOGYAKARTA_LFLANDRE_CAVE",
   "name": "YogyakartaLFlandreCave",
   "layout": "LAYOUT_YOGYAKARTA_LFLANDRE_CAVE_LAYOUT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_CAVE_OF_ORIGIN",
   "region_map_section": "MAPSEC_SEVII_ISLE_6",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

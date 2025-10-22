@@ -39,7 +39,8 @@
     "gMapGroup_IndoorYogyakarta",
     "gMapGroup_IndoorSurakarta",
     "gMapGroup_IndoorSemarang",
-    "gMapGroup_IndoorSurabaya"
+    "gMapGroup_IndoorSurabaya",
+    "gMapGroup_JavaGrandLeague"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -677,5 +678,17 @@
     "Semarang_TewiHouse",
     "Semarang_StatueHouse"
   ],
-  "gMapGroup_IndoorSurabaya": []
+  "gMapGroup_IndoorSurabaya": [
+    "Surabaya_BonekaCenter_1F",
+    "Surabaya_BonekaCenter_B1F",
+    "Surabaya_Museum",
+    "Surabaya_BonekaMart",
+    "Surabaya_Hospital_1F",
+    "Surabaya_Hospital_2F",
+    "Surabaya_PowerPlant",
+    "Surabaya_TrainerMeetup",
+    "Surabaya_AncientPyramid",
+    "Surabaya_PowerPlantBackRoom"
+  ],
+  "gMapGroup_JavaGrandLeague": []
 }

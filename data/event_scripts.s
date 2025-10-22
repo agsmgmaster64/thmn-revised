@@ -1227,3 +1227,23 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MtMerapi_Exterior/scripts.inc"
 
 	.include "data/maps/Semarang_StatueHouse/scripts.inc"
+
+	.include "data/maps/Surabaya_BonekaCenter_1F/scripts.inc"
+
+	.include "data/maps/Surabaya_BonekaCenter_B1F/scripts.inc"
+
+	.include "data/maps/Surabaya_Museum/scripts.inc"
+
+	.include "data/maps/Surabaya_BonekaMart/scripts.inc"
+
+	.include "data/maps/Surabaya_Hospital_1F/scripts.inc"
+
+	.include "data/maps/Surabaya_Hospital_2F/scripts.inc"
+
+	.include "data/maps/Surabaya_PowerPlant/scripts.inc"
+
+	.include "data/maps/Surabaya_AncientPyramid/scripts.inc"
+
+	.include "data/maps/Surabaya_TrainerMeetup/scripts.inc"
+
+	.include "data/maps/Surabaya_PowerPlantBackRoom/scripts.inc"

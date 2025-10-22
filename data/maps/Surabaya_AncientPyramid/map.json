@@ -1,9 +1,9 @@
 {
-  "id": "MAP_SEMARANG_BONEKA_MART",
-  "name": "Semarang_BonekaMart",
-  "layout": "LAYOUT_SEMARANG_BONEKA_MART_LAYOUT",
-  "music": "MUS_POKE_MART",
-  "region_map_section": "MAPSEC_SEVII_ISLE_8",
+  "id": "MAP_SURABAYA_ANCIENT_PYRAMID",
+  "name": "Surabaya_AncientPyramid",
+  "layout": "LAYOUT_SURABAYA_ANCIENT_PYRAMID_LAYOUT",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_SEVII_ISLE_9",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -16,18 +16,18 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
+      "x": 10,
+      "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_SEMARANG",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_SURABAYA",
+      "dest_warp_id": "8"
     },
     {
-      "x": 4,
-      "y": 7,
+      "x": 9,
+      "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_SEMARANG",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_SURABAYA",
+      "dest_warp_id": "8"
     }
   ],
   "coord_events": [],

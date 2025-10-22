@@ -2,7 +2,7 @@
   "id": "MAP_YOGYAKARTA_BONEKA_CENTER_B1F",
   "name": "YogyakartaBonekaCenterB1F",
   "layout": "LAYOUT_YOGYAKARTA_BONEKA_CENTER_B1F_LAYOUT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_THPPME_303_HISTORY_OF_THE_MOON",
   "region_map_section": "MAPSEC_SEVII_ISLE_6",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
