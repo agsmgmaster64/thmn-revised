@@ -40,7 +40,8 @@
     "gMapGroup_IndoorSurakarta",
     "gMapGroup_IndoorSemarang",
     "gMapGroup_IndoorSurabaya",
-    "gMapGroup_JavaGrandLeague"
+    "gMapGroup_JavaGrandLeague",
+    "gMapGroup_IndoorMtMerapi"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -640,14 +641,21 @@
     "TrappyPass",
     "SouthernPass",
     "PojokCliff",
-    "MtMerapi_Exterior"
+    "MtMerapi_Exterior",
+    "SeaBreakPath"
   ],
   "gMapGroup_LostAgeofJava": [
     "LostAgeofJavaSemarang",
     "LostAgeofJavaRiveryPass",
     "LostAgeofJavaSurakartaNorthernPass",
     "LostAgeofJavaSurabaya",
-    "LostAgeofJava_CaveExterior"
+    "LostAgeofJava_CaveExterior",
+    "LostAgeofJava_Jungle",
+    "LostAgeofJavaAncientPyramid",
+    "LostAgeofJava_SplitCaveEntrance",
+    "LostAgeofJava_SplitCave_Yukai",
+    "LostAgeofJava_SplitCaveSkyPeak",
+    "LostAgeofJava_SplitCaveDeepDepths"
   ],
   "gMapGroup_IndoorYogyakarta": [
     "YogyakartaBonekaCenter1F",
@@ -690,5 +698,20 @@
     "Surabaya_AncientPyramid",
     "Surabaya_PowerPlantBackRoom"
   ],
-  "gMapGroup_JavaGrandLeague": []
+  "gMapGroup_JavaGrandLeague": [
+    "GrandLeague_Entrance",
+    "GrandLeague_FirstSteps",
+    "GrandLeague_FarizRoom",
+    "GrandLeague_MitsukoRoom",
+    "GrandLeague_AoiAzzure_Room",
+    "GrandLeague_Ichii_Room",
+    "GrandLeague_Haris_Room"
+  ],
+  "gMapGroup_IndoorMtMerapi": [
+    "MtMerapi_InteriorLEirin",
+    "MtMerapi_Interior_LKoishi",
+    "MtMerapi_Interior_LSuika",
+    "MtMerapi_Interior_LRemilia",
+    "MtMerapi_Interior_LTenshi"
+  ]
 }

@@ -32,6 +32,20 @@
       "elevation": 0,
       "dest_map": "MAP_SEMARANG",
       "dest_warp_id": "10"
+    },
+    {
+      "x": 10,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_LOST_AGEOF_JAVA_JUNGLE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_LOST_AGEOF_JAVA_JUNGLE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

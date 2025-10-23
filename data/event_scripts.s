@@ -1247,3 +1247,41 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Surabaya_TrainerMeetup/scripts.inc"
 
 	.include "data/maps/Surabaya_PowerPlantBackRoom/scripts.inc"
+
+	.include "data/maps/MtMerapi_InteriorLEirin/scripts.inc"
+
+	.include "data/maps/MtMerapi_Interior_LKoishi/scripts.inc"
+
+	.include "data/maps/MtMerapi_Interior_LSuika/scripts.inc"
+
+	.include "data/maps/MtMerapi_Interior_LTenshi/scripts.inc"
+
+	.include "data/maps/MtMerapi_Interior_LRemilia/scripts.inc"
+
+	.include "data/maps/GrandLeague_Entrance/scripts.inc"
+
+	.include "data/maps/GrandLeague_FirstSteps/scripts.inc"
+
+	.include "data/maps/GrandLeague_MitsukoRoom/scripts.inc"
+
+	.include "data/maps/GrandLeague_AoiAzzure_Room/scripts.inc"
+
+	.include "data/maps/GrandLeague_FarizRoom/scripts.inc"
+
+	.include "data/maps/GrandLeague_Ichii_Room/scripts.inc"
+
+	.include "data/maps/GrandLeague_Haris_Room/scripts.inc"
+
+	.include "data/maps/LostAgeofJava_Jungle/scripts.inc"
+
+	.include "data/maps/LostAgeofJava_SplitCaveEntrance/scripts.inc"
+
+	.include "data/maps/LostAgeofJavaAncientPyramid/scripts.inc"
+
+	.include "data/maps/LostAgeofJava_SplitCave_Yukai/scripts.inc"
+
+	.include "data/maps/LostAgeofJava_SplitCaveDeepDepths/scripts.inc"
+
+	.include "data/maps/LostAgeofJava_SplitCaveSkyPeak/scripts.inc"
+
+	.include "data/maps/SeaBreakPath/scripts.inc"

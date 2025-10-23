@@ -4910,6 +4910,196 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/Surabaya_PowerPlantBackRoom_Layout/border.bin",
       "blockdata_filepath": "data/layouts/Surabaya_PowerPlantBackRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MERAPI_INTERIOR_LEIRIN_LAYOUT",
+      "name": "MtMerapi_InteriorLEirin_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMerapi_InteriorLEirin_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/MtMerapi_InteriorLEirin_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MERAPI_INTERIOR_LKOISHI_LAYOUT",
+      "name": "MtMerapi_Interior_LKoishi_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMerapi_Interior_LKoishi_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/MtMerapi_Interior_LKoishi_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MERAPI_INTERIOR_LSUIKA_LAYOUT",
+      "name": "MtMerapi_Interior_LSuika_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMerapi_Interior_LSuika_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/MtMerapi_Interior_LSuika_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MERAPI_INTERIOR_LREMILIA_LAYOUT",
+      "name": "MtMerapi_Interior_LRemilia_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMerapi_Interior_LRemilia_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/MtMerapi_Interior_LRemilia_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MERAPI_INTERIOR_LTENSHI_LAYOUT",
+      "name": "MtMerapi_Interior_LTenshi_Layout",
+      "width": 44,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MtMerapi_Interior_LTenshi_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/MtMerapi_Interior_LTenshi_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_LEAGUE_ENTRANCE_LAYOUT",
+      "name": "GrandLeague_Entrance_Layout",
+      "width": 25,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/GrandLeague_Entrance_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/GrandLeague_Entrance_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_LEAGUE_FIRST_STEPS_LAYOUT",
+      "name": "GrandLeague_FirstSteps_Layout",
+      "width": 17,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/GrandLeague_FirstSteps_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/GrandLeague_FirstSteps_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_LEAGUE_AOI_AZZURE_ROOM_LAYOUT",
+      "name": "GrandLeague_AoiAzzure_Room_Layout",
+      "width": 21,
+      "height": 24,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/GrandLeague_AoiAzzure_Room_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/GrandLeague_AoiAzzure_Room_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_LEAGUE_MITSUKO_ROOM_LAYOUT",
+      "name": "GrandLeague_MitsukoRoom_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/GrandLeague_MitsukoRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/GrandLeague_MitsukoRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_LEAGUE_FARIZ_ROOM_LAYOUT",
+      "name": "GrandLeague_FarizRoom_Layout",
+      "width": 29,
+      "height": 26,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/GrandLeague_FarizRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/GrandLeague_FarizRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_LEAGUE_ICHII_ROOM_LAYOUT",
+      "name": "GrandLeague_IchiiRoom_Layout",
+      "width": 22,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/GrandLeague_IchiiRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/GrandLeague_IchiiRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_LEAGUE_HARIS_ROOM_LAYOUT",
+      "name": "GrandLeague_HarisRoom_Layout",
+      "width": 20,
+      "height": 50,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/GrandLeague_HarisRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/GrandLeague_HarisRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_JUNGLE_LAYOUT",
+      "name": "LostAgeofJava_Jungle_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/LostAgeofJava_Jungle_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_Jungle_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_SPLIT_CAVE_ENTRANCE_LAYOUT",
+      "name": "LostAgeofJava_SplitCave_Entrance_Layout",
+      "width": 21,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/LostAgeofJava_SplitCave_Entrance_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_SplitCave_Entrance_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_ANCIENT_PYRAMID_LAYOUT",
+      "name": "LostAgeofJava_AncientPyramid_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/LostAgeofJava_AncientPyramid_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_AncientPyramid_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_SPLIT_CAVE_YUKAI_LAYOUT",
+      "name": "LostAgeofJava_SplitCave_Yukai_Layout",
+      "width": 27,
+      "height": 86,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/LostAgeofJava_SplitCave_Yukai_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_SplitCave_Yukai_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_SPLIT_CAVE_SKY_PEAK_LAYOUT",
+      "name": "LostAgeofJava_SplitCave_SkyPeak_Layout",
+      "width": 25,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/LostAgeofJava_SplitCave_SkyPeak_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_SplitCave_SkyPeak_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_AGEOF_JAVA_SPLIT_CAVE_DEEP_DEPTHS_LAYOUT",
+      "name": "LostAgeofJava_SplitCave_DeepDepths_Layout",
+      "width": 22,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/LostAgeofJava_SplitCave_DeepDepths_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LostAgeofJava_SplitCave_DeepDepths_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEA_BREAK_PATH_LAYOUT",
+      "name": "SeaBreakPath_Layout",
+      "width": 20,
+      "height": 200,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SeaBreakPath_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/SeaBreakPath_Layout/map.bin"
     }
   ]
 }
