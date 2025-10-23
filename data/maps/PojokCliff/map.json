@@ -17,6 +17,11 @@
       "map": "MAP_SOUTHERN_PASS",
       "offset": -12,
       "direction": "up"
+    },
+    {
+      "map": "MAP_SEA_BREAK_PATH",
+      "offset": 10,
+      "direction": "down"
     }
   ],
   "object_events": [],

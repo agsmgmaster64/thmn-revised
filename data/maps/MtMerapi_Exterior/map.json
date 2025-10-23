@@ -20,7 +20,43 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 31,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MERAPI_INTERIOR_LEIRIN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MERAPI_INTERIOR_LKOISHI",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MERAPI_INTERIOR_LSUIKA",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MERAPI_INTERIOR_LREMILIA",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MERAPI_INTERIOR_LTENSHI",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

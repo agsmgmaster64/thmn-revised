@@ -1,0 +1,35 @@
+{
+  "id": "MAP_GRAND_LEAGUE_ICHII_ROOM",
+  "name": "GrandLeague_Ichii_Room",
+  "layout": "LAYOUT_GRAND_LEAGUE_ICHII_ROOM_LAYOUT",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_VIAPOIS_CHAMBER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_GRAND_LEAGUE_AOI_AZZURE_ROOM",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_GRAND_LEAGUE_HARIS_ROOM",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
