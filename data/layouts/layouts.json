@@ -5100,6 +5100,26 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/SeaBreakPath_Layout/border.bin",
       "blockdata_filepath": "data/layouts/SeaBreakPath_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAUVILLE_2ND_ROOM_LAYOUT",
+      "name": "NewMauville_2ndRoom_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/NewMauville_2ndRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/NewMauville_2ndRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAUVILLE_VIVITROOM_LAYOUT",
+      "name": "NewMauville_VIVITRoom_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/NewMauville_VIVITRoom_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/NewMauville_VIVITRoom_Layout/map.bin"
     }
   ]
 }

@@ -437,7 +437,9 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "NewMauville_2ndRoom",
+    "NewMauville_VIVITRoom"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

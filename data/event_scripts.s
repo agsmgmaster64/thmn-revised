@@ -1285,3 +1285,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LostAgeofJava_SplitCaveSkyPeak/scripts.inc"
 
 	.include "data/maps/SeaBreakPath/scripts.inc"
+
+	.include "data/maps/NewMauville_2ndRoom/scripts.inc"
+
+	.include "data/maps/NewMauville_VIVITRoom/scripts.inc"
