@@ -22,22 +22,14 @@
       "map": "MAP_LITTLEROOT_TOWN",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE101_MUSIC_HOUSE_EXTERIOR",
+      "offset": 2,
+      "direction": "right"
     }
   ],
   "object_events": [
-    {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 16,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route101_EventScript_Youngster",
-      "flag": "0"
-    },
     {
       "local_id": "LOCALID_ROUTE101_BIRCH",
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",

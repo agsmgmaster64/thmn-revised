@@ -5120,6 +5120,46 @@
       "secondary_tileset": "gTileset_BikeShop",
       "border_filepath": "data/layouts/NewMauville_VIVITRoom_Layout/border.bin",
       "blockdata_filepath": "data/layouts/NewMauville_VIVITRoom_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_SCORCHED_SLAB_B1F_LAYOUT",
+      "name": "ScorchedSlab_B1F_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ScorchedSlab_B1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/ScorchedSlab_B1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_CAVEOF_WISDOM_B1F_LAYOUT",
+      "name": "CaveofWisdom_B1F_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/CaveofWisdom_B1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/CaveofWisdom_B1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE101_MUSIC_HOUSE_EXTERIOR_LAYOUT",
+      "name": "Route101_MusicHouseExterior_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route101_MusicHouseExterior_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/Route101_MusicHouseExterior_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_BORDER_CAVE_LAYOUT",
+      "name": "BorderCave_Layout",
+      "width": 21,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/BorderCave_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/BorderCave_Layout/map.bin"
     }
   ]
 }

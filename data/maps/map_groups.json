@@ -41,7 +41,8 @@
     "gMapGroup_IndoorSemarang",
     "gMapGroup_IndoorSurabaya",
     "gMapGroup_JavaGrandLeague",
-    "gMapGroup_IndoorMtMerapi"
+    "gMapGroup_IndoorMtMerapi",
+    "gMapGroup_IndoorRoute101"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -100,7 +101,8 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "Route101_MusicHouseExterior"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -439,7 +441,10 @@
     "AlteringCave",
     "MeteorFalls_StevensCave",
     "NewMauville_2ndRoom",
-    "NewMauville_VIVITRoom"
+    "NewMauville_VIVITRoom",
+    "ScorchedSlab_B1F",
+    "CaveofWisdom_B1F",
+    "BorderCave"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -715,5 +720,6 @@
     "MtMerapi_Interior_LSuika",
     "MtMerapi_Interior_LRemilia",
     "MtMerapi_Interior_LTenshi"
-  ]
+  ],
+  "gMapGroup_IndoorRoute101": []
 }

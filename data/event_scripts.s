@@ -1289,3 +1289,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NewMauville_2ndRoom/scripts.inc"
 
 	.include "data/maps/NewMauville_VIVITRoom/scripts.inc"
+
+	.include "data/maps/ScorchedSlab_B1F/scripts.inc"
+
+	.include "data/maps/CaveofWisdom_B1F/scripts.inc"
+
+	.include "data/maps/Route101_MusicHouseExterior/scripts.inc"
+
+	.include "data/maps/BorderCave/scripts.inc"
