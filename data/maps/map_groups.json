@@ -42,7 +42,9 @@
     "gMapGroup_IndoorSurabaya",
     "gMapGroup_JavaGrandLeague",
     "gMapGroup_IndoorMtMerapi",
-    "gMapGroup_IndoorRoute101"
+    "gMapGroup_IndoorRoute101",
+    "gMapGroup_LandofGensokyo",
+    "gMapGroup_IndoorLandofGensokyo"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -721,5 +723,14 @@
     "MtMerapi_Interior_LRemilia",
     "MtMerapi_Interior_LTenshi"
   ],
-  "gMapGroup_IndoorRoute101": []
+  "gMapGroup_IndoorRoute101": [],
+  "gMapGroup_LandofGensokyo": [
+    "LandofGensokyo_HakureiShrine",
+    "LandofGensokyo_BorderIslandExterior",
+    "LandofGensokyo_BorderIslandForest",
+    "LandofGensokyo_Underwater",
+    "LandofGensokyo_YoukaiRoad",
+    "LandofGensokyo_HumanVillage"
+  ],
+  "gMapGroup_IndoorLandofGensokyo": []
 }

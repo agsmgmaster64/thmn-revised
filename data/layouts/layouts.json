@@ -5160,6 +5160,66 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/BorderCave_Layout/border.bin",
       "blockdata_filepath": "data/layouts/BorderCave_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_HAKUREI_SHRINE_LAYOUT",
+      "name": "LandofGensokyo_HakureiShrine_Layout",
+      "width": 31,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "border_filepath": "data/layouts/LandofGensokyo_HakureiShrine_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyo_HakureiShrine_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_BORDER_ISLAND_FOREST_LAYOUT",
+      "name": "LandofGensokyo_BorderIslandForest_Layout",
+      "width": 29,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/LandofGensokyo_BorderIslandForest_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyo_BorderIslandForest_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_UNDERWATER_LAYOUT",
+      "name": "LandofGensokyo_Underwater_Layout",
+      "width": 50,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/LandofGensokyo_Underwater_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyo_Underwater_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_BORDER_ISLAND_EXTERIOR_LAYOUT",
+      "name": "LandofGensokyo_BorderIslandExterior_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/LandofGensokyo_BorderIslandExterior_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyo_BorderIslandExterior_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_YOUKAI_ROAD_LAYOUT",
+      "name": "LandofGensokyo_YoukaiRoad_Layout",
+      "width": 80,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/LandofGensokyo_YoukaiRoad_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyo_YoukaiRoad_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_LAYOUT",
+      "name": "LandofGensokyo_HumanVillage_Layout",
+      "width": 50,
+      "height": 45,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/LandofGensokyo_HumanVillage_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyo_HumanVillage_Layout/map.bin"
     }
   ]
 }

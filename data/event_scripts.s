@@ -1297,3 +1297,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route101_MusicHouseExterior/scripts.inc"
 
 	.include "data/maps/BorderCave/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_HakureiShrine/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_BorderIslandExterior/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_Underwater/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_BorderIslandForest/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_YoukaiRoad/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_HumanVillage/scripts.inc"
