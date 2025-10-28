@@ -5220,6 +5220,46 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/LandofGensokyo_HumanVillage_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_HumanVillage_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_BONEKA_CENTER_LAYOUT",
+      "name": "LandofGensokyoHumanVillage_BonekaCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/LandofGensokyoHumanVillage_BonekaCenter_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyoHumanVillage_BonekaCenter_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE1F_LAYOUT",
+      "name": "LandofGensokyo_HumanVillageTrainerHouse1F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LandofGensokyo_HumanVillageTrainerHouse1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyo_HumanVillageTrainerHouse1F_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_HIEDA_MANSION_LAYOUT",
+      "name": "LandofGensokyoHumanVillage_HiedaMansion_Layout",
+      "width": 17,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LandofGensokyoHumanVillage_HiedaMansion_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyoHumanVillage_HiedaMansion_Layout/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE_B1F_LAYOUT",
+      "name": "LandofGensokyoHumanVillage_TrainerHouseB1F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LandofGensokyoHumanVillage_TrainerHouseB1F_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LandofGensokyoHumanVillage_TrainerHouseB1F_Layout/map.bin"
     }
   ]
 }

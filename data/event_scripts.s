@@ -1309,3 +1309,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LandofGensokyo_YoukaiRoad/scripts.inc"
 
 	.include "data/maps/LandofGensokyo_HumanVillage/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_HumanVillage_BonekaCenter/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_HumanVillage_TrainerHouse1F/scripts.inc"
+
+	.include "data/maps/LandofGensokyo_HumanVillage_HiedaMansion/scripts.inc"
+
+	.include "data/maps/LandofGensokyoHumanVillage_TrainerHouse_B1F/scripts.inc"

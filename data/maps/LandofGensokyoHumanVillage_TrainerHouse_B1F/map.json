@@ -1,0 +1,28 @@
+{
+  "id": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE_B1F",
+  "name": "LandofGensokyoHumanVillage_TrainerHouse_B1F",
+  "layout": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE_B1F_LAYOUT",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_FARAWAY_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE1F",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

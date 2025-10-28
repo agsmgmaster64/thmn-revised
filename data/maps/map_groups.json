@@ -732,5 +732,10 @@
     "LandofGensokyo_YoukaiRoad",
     "LandofGensokyo_HumanVillage"
   ],
-  "gMapGroup_IndoorLandofGensokyo": []
+  "gMapGroup_IndoorLandofGensokyo": [
+    "LandofGensokyo_HumanVillage_BonekaCenter",
+    "LandofGensokyo_HumanVillage_TrainerHouse1F",
+    "LandofGensokyoHumanVillage_TrainerHouse_B1F",
+    "LandofGensokyo_HumanVillage_HiedaMansion"
+  ]
 }
