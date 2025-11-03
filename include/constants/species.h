@@ -305,9 +305,9 @@
 #define SPECIES_EARTH_HECATIA                           296
 #define SPECIES_MOON_HECATIA                            297
 #define SPECIES_CHIBI_ETERNITY                          298
-#define SPECIES_CHIBI_JO'ON                             299
-#define SPECIES_NORMAL_JO'ON                            300
-#define SPECIES_EXTRA_JO'ON                             301
+#define SPECIES_CHIBI_JOON                             299
+#define SPECIES_NORMAL_JOON                            300
+#define SPECIES_EXTRA_JOON                             301
 #define SPECIES_CHIBI_SHION                             302
 #define SPECIES_NORMAL_SHION                            303
 #define SPECIES_EXTRA_SHION                             304
