@@ -7493,15 +7493,15 @@ BattleScript_FascinatePrevented::
 	copybyte sBATTLER, gBattlerTarget
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNPREVENTSSTATLOSSWITH
-	goto BattleScript_FascinateteEffect_WaitString
+	goto BattleScript_FascinateEffect_WaitString
 
 BattleScript_FascinateWontDecrease:
 	printstring STRINGID_STATSWONTDECREASE
-	goto BattleScript_FascinateteEffect_WaitString
+	goto BattleScript_FascinateEffect_WaitString
 
 BattleScript_FascinateContrary:
 	printfromtable gStatUpStringIds
-	goto BattleScript_FascinateteEffect_WaitString
+	goto BattleScript_FascinateEffect_WaitString
 
 BattleScript_FascinateInReverse::
 	copybyte sBATTLER, gBattlerTarget
