@@ -9856,7 +9856,7 @@ const struct Item gItemsInfo[] =
             "When held by a Pokémon, it will be\n"
             "used in battle to lift confusion."),
         .pocket = POCKET_BERRIES,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_CURE_STATUS,
         .effect = gItemEffect_PersimBerry,
