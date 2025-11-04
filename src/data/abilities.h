@@ -2409,4 +2409,69 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_FLAME_ABSORB] =
+    {
+        .name = _("Flame Absorb"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_FLORA_ABSORB] =
+    {
+        .name = _("Flora Absorb"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_CONSECRATE] =
+    {
+        .name = _("Consecrate"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_FASCINATE] =
+    {
+        .name = _("Fascinate"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_UNWAVERING] =
+    {
+        .name = _("Unwavering"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_AMBITION] =
+    {
+        .name = _("Ambition"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_COLD_HEART] =
+    {
+        .name = _("Cold Heart"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_INNER_POWER] =
+    {
+        .name = _("Inner Power"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_TIME_CONTROL] =
+    {
+        .name = _("Time Control"),
+        .description = COMPOUND_STRING("."),
+        .aiRating = 10,
+    },
 };

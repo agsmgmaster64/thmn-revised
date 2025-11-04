@@ -7455,6 +7455,62 @@ BattleScript_IntimidateInReverse::
 	call BattleScript_TryIntimidateHoldEffects
 	goto BattleScript_IntimidateLoopIncrement
 
+BattleScript_FascinateActivates::
+	savetarget
+	call BattleScript_AbilityPopUp
+	setbyte gBattlerTarget, 0
+BattleScript_FascinateLoop:
+	jumpiftargetally BattleScript_FascinateLoopIncrement
+	jumpifabsent BS_TARGET, BattleScript_FascinateLoopIncrement
+	jumpifvolatile BS_TARGET, VOLATILE_SUBSTITUTE, BattleScript_FascinateLoopIncrement
+	jumpiffascinateabilityprevented
+BattleScript_FascinateEffect:
+	copybyte sBATTLER, gBattlerAttacker
+	setstatchanger STAT_SPATK, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_FascinateLoopIncrement
+	jumpifability BS_TARGET, ABILITY_CONTRARY, BattleScript_FascinateContrary
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_FascinateWontDecrease
+	printstring STRINGID_PKMNCUTSATTACKWITH
+BattleScript_FascinateEffect_WaitString:
+	waitmessage B_WAIT_TIME_LONG
+	saveattacker
+	savetarget
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_TryIntimidateHoldEffects
+	restoreattacker
+	restoretarget
+BattleScript_FascinateLoopIncrement:
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_FascinateLoop
+	copybyte sBATTLER, gBattlerAttacker
+	destroyabilitypopup
+	restoretarget
+	restoreattacker
+	pause B_WAIT_TIME_MED
+	end3
+
+BattleScript_FascinatePrevented::
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNPREVENTSSTATLOSSWITH
+	goto BattleScript_FascinateteEffect_WaitString
+
+BattleScript_FascinateWontDecrease:
+	printstring STRINGID_STATSWONTDECREASE
+	goto BattleScript_FascinateteEffect_WaitString
+
+BattleScript_FascinateContrary:
+	printfromtable gStatUpStringIds
+	goto BattleScript_FascinateteEffect_WaitString
+
+BattleScript_FascinateInReverse::
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_AbilityPopUpTarget
+	pause B_WAIT_TIME_SHORT
+	modifybattlerstatstage BS_TARGET, STAT_SPATK, INCREASE, 1, BattleScript_FascinateLoopIncrement, ANIM_ON
+	call BattleScript_TryIntimidateHoldEffects
+	goto BattleScript_FascinateLoopIncrement
+
 BattleScript_SupersweetSyrupActivates::
  	savetarget
 	call BattleScript_AbilityPopUp

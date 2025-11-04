@@ -3399,6 +3399,7 @@ static inline bool32 DoesBattlerBenefitFromAllVolatileStatus(u32 battler, u32 ab
      || ability == ABILITY_QUICK_FEET
      || ability == ABILITY_MAGIC_GUARD
      || (ability == ABILITY_GUTS && HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL))
+     || (ability == ABILITY_UNWAVERING && HasMoveWithCategory(battler, DAMAGE_CATEGORY_SPECIAL))
      || HasMoveWithEffect(battler, EFFECT_FACADE)
      || HasMoveWithEffect(battler, EFFECT_PSYCHO_SHIFT))
         return TRUE;
@@ -5337,6 +5338,7 @@ bool32 IsMoxieTypeAbility(u32 ability)
     case ABILITY_AS_ONE_ICE_RIDER:
     case ABILITY_GRIM_NEIGH:
     case ABILITY_AS_ONE_SHADOW_RIDER:
+    case ABILITY_AMBITION:
         return TRUE;
     default:
         return FALSE;
@@ -5393,6 +5395,8 @@ bool32 ShouldTriggerAbility(u32 battlerAtk, u32 battlerDef, u32 ability)
             return (BattlerStatCanRise(battlerDef, ability, STAT_ATK) && HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL));
 
         case ABILITY_COMPETITIVE:
+        case ABILITY_FLASH_FIRE:
+        case ABILITY_AMBITION:
             return (BattlerStatCanRise(battlerDef, ability, STAT_SPATK) && HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_SPECIAL));
 
         // TODO: logic for when to trigger Contrary
@@ -5402,14 +5406,13 @@ bool32 ShouldTriggerAbility(u32 battlerAtk, u32 battlerDef, u32 ability)
         case ABILITY_DRY_SKIN:
         case ABILITY_VOLT_ABSORB:
         case ABILITY_WATER_ABSORB:
+        case ABILITY_FLAME_ABSORB:
+        case ABILITY_FLORA_ABSORB:
             return (gAiThinkingStruct->aiFlags[battlerDef] & AI_FLAG_HP_AWARE);
 
         case ABILITY_RATTLED:
         case ABILITY_STEAM_ENGINE:
             return BattlerStatCanRise(battlerDef, ability, STAT_SPEED);
-
-        case ABILITY_FLASH_FIRE:
-            return (HasMoveWithType(battlerDef, TYPE_FIRE) && !gDisableStructs[battlerDef].flashFireBoosted);
 
         case ABILITY_WATER_COMPACTION:
         case ABILITY_WELL_BAKED_BODY:
@@ -5676,6 +5679,10 @@ s32 BattlerBenefitsFromAbilityScore(u32 battler, u32 ability, struct AiLogicData
         if (HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL) && gBattleMons[battler].status1 & (STATUS1_CAN_MOVE))
             return GOOD_EFFECT;
         break;
+    case ABILITY_UNWAVERING:
+        if (HasMoveWithCategory(battler, DAMAGE_CATEGORY_SPECIAL) && gBattleMons[battler].status1 & (STATUS1_CAN_MOVE))
+            return GOOD_EFFECT;
+        break;
     case ABILITY_HUGE_POWER:
     case ABILITY_PURE_POWER:
         if (HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL))
@@ -5714,6 +5721,35 @@ s32 BattlerBenefitsFromAbilityScore(u32 battler, u32 ability, struct AiLogicData
                 }
             }
             return IncreaseStatDownScore(battler, FOE(battler), STAT_ATK);
+        }
+    }
+    case ABILITY_FASCINATE:
+    {
+        u32 abilityDef = aiData->abilities[FOE(battler)];
+        if (DoesIntimidateRaiseStats(abilityDef))
+        {
+            return AWFUL_EFFECT;
+        }
+        else
+        {
+            if (HasTwoOpponents(battler))
+            {
+                abilityDef = aiData->abilities[BATTLE_PARTNER(FOE(battler))];
+                if (DoesIntimidateRaiseStats(abilityDef))
+                {
+                    return AWFUL_EFFECT;
+                }
+                else
+                {
+                    s32 score1 = IncreaseStatDownScore(battler, FOE(battler), STAT_SPATK);
+                    s32 score2 = IncreaseStatDownScore(battler, BATTLE_PARTNER(FOE(battler)), STAT_SPATK);
+                    if (score1 > score2)
+                        return score1;
+                    else
+                        return score2;
+                }
+            }
+            return IncreaseStatDownScore(battler, FOE(battler), STAT_SPATK);
         }
     }
     case ABILITY_NO_GUARD:

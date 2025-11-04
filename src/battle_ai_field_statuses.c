@@ -408,7 +408,8 @@ static enum FieldEffectOutcome BenefitsFromPsychicTerrain(u32 battler)
         // harass priority
         if (HasBattlerSideAbility(FOE(battler), ABILITY_GALE_WINGS, gAiLogicData)
          || HasBattlerSideAbility(FOE(battler), ABILITY_TRIAGE, gAiLogicData)
-         || HasBattlerSideAbility(FOE(battler), ABILITY_PRANKSTER, gAiLogicData))
+         || HasBattlerSideAbility(FOE(battler), ABILITY_PRANKSTER, gAiLogicData)
+         || HasBattlerSideAbility(FOE(battler), ABILITY_TIME_CONTROL, gAiLogicData))
             return FIELD_EFFECT_POSITIVE;
     }
 
@@ -420,7 +421,8 @@ static enum FieldEffectOutcome BenefitsFromPsychicTerrain(u32 battler)
 
     if (HasBattlerSideAbility(battler, ABILITY_GALE_WINGS, gAiLogicData)
      || HasBattlerSideAbility(battler, ABILITY_TRIAGE, gAiLogicData)
-     || HasBattlerSideAbility(battler, ABILITY_PRANKSTER, gAiLogicData))
+     || HasBattlerSideAbility(battler, ABILITY_PRANKSTER, gAiLogicData)
+     || HasBattlerSideAbility(battler, ABILITY_TIME_CONTROL, gAiLogicData))
         return FIELD_EFFECT_NEGATIVE;
 
     return FIELD_EFFECT_NEUTRAL;

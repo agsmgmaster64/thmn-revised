@@ -4858,6 +4858,10 @@ s32 GetBattleMovePriority(u32 battler, u32 ability, u32 move)
     {
         priority += 3;
     }
+    else if (ability == ABILITY_TIME_CONTROL)
+    {
+        priority++;
+    }
 
     return priority;
 }
@@ -5839,6 +5843,9 @@ u32 TrySetAteType(u32 move, u32 battlerAtk, u32 attackerAbility)
         break;
     case ABILITY_GALVANIZE:
         ateType = TYPE_ELECTRIC;
+        break;
+    case ABILITY_CONSECRATE:
+        ateType = TYPE_DRAGON;
         break;
     default:
         ateType = TYPE_NONE;
