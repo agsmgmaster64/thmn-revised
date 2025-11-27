@@ -409,6 +409,9 @@ extern char gMaxLines[];
 #define NUM_MUSIC_PLAYERS ((u16)gNumMusicPlayers)
 #define MAX_LINES ((u32)gMaxLines)
 
+#define ROGUE_SOUND_TYPE_REGULAR            0
+#define ROGUE_SOUND_TYPE_CRY                1
+
 u32 umul3232H32(u32 multiplier, u32 multiplicand);
 void SoundMain(void);
 void SoundMainBTM(void);
@@ -457,6 +460,8 @@ bool32 IsPokemonCryPlaying(struct MusicPlayerInfo *mplayInfo);
 void SetPokemonCryChorus(s8 val);
 void SetPokemonCryStereo(u32 val);
 void SetPokemonCryPriority(u8 val);
+
+u8 Rogue_ModifySoundVolume(struct MusicPlayerInfo *mplayInfo, u8 volume, u16 soundType);
 
 // sound command handler functions
 void ply_fine(struct MusicPlayerInfo *, struct MusicPlayerTrack *);

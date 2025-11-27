@@ -425,6 +425,9 @@ void LinkOpponentBufferExecCompleted(u32 battler);
 void SetControllerToLinkPartner(u32 battler);
 void LinkPartnerBufferExecCompleted(u32 battler);
 
+// Battle Speed Up (Credit to Pokabbie)
+u32 Rogue_GetBattleSpeedScale(void);
+
 void TrySetBattlerShadowSpriteCallback(u32 battler);
 
 void AnimateMonAfterPokeBallFail(u32 battler);

@@ -619,6 +619,7 @@ struct BattleStruct
     u32 expValue;
     u8 expGettersOrder[PARTY_SIZE]; // First battlers which were sent out, then via exp-share
     u8 expGetterMonId;
+    u8 hasBattleInputStarted:1; // Speed up battle
     u8 expOrderId:3;
     u8 expGetterBattlerId:2;
     u8 teamGotExpMsgPrinted:1; // The 'Rest of your team got msg' has been printed.
@@ -983,6 +984,7 @@ struct BattleHealthboxInfo
 struct BattleBarInfo
 {
     u8 healthboxSpriteId;
+    u8 oddFrame; // For more speed control in moving hp bar down.
     s32 maxValue;
     s32 oldValue;
     s32 receivedValue;

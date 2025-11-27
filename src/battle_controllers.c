@@ -2863,6 +2863,42 @@ void BtlController_HandleBattleAnimation(u32 battler)
     }
 }
 
+u32 Rogue_GetBattleSpeedScale(void)
+{
+    // Hold L to slow down
+    if (JOY_HELD(L_BUTTON))
+        return 1;
+
+    // We want to speed up all anims until input selection starts
+    if (InBattleChoosingMoves())
+        gBattleStruct->hasBattleInputStarted = TRUE;
+
+    if (gBattleStruct->hasBattleInputStarted)
+    {
+        // Always run at 1x speed here
+        if (InBattleChoosingMoves())
+            return 1;
+        // When battle anims are turned off, it's a bit too hard to read text, so force running at normal speed
+        if ((gHitMarker & (HITMARKER_NO_ANIMATIONS | HITMARKER_DISABLE_ANIMATION)) && InBattleRunningActions())
+            return 1;
+    }
+
+    switch (gSaveBlock2Ptr->optionsAnimSpeed)
+    {
+    default:
+    case OPTIONS_BATTLE_SCENE_1X:
+        return 1;
+    case OPTIONS_BATTLE_SCENE_2X:
+        return 2;
+    case OPTIONS_BATTLE_SCENE_3X:
+        return 3;
+    case OPTIONS_BATTLE_SCENE_4X:
+        return 4;
+    }
+
+    return 1;
+}
+
 void AnimateMonAfterPokeBallFail(u32 battler)
 {
     if (B_ANIMATE_MON_AFTER_FAILED_POKEBALL == FALSE)

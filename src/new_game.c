@@ -95,12 +95,28 @@ static void InitPlayerTrainerId(void)
 // L=A isnt set here for some reason.
 static void SetDefaultOptions(void)
 {
-    gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_MID;
+    gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
-    gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_MONO;
+    gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_STEREO;
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
+    gSaveBlock2Ptr->optionsButtonMode = OPTIONS_BUTTON_MODE_LR;
+    gSaveBlock2Ptr->optionsUnitSystem = UNITS_METRIC;
+    gSaveBlock2Ptr->optionsHpBarSpeed = 0;
+    gSaveBlock2Ptr->optionsExpBarSpeed = 0;
+    gSaveBlock2Ptr->optionsCurrentFont = !IS_AWR ? OPTIONS_FONT_EMERALD : OPTIONS_FONT_FRLG;
+    gSaveBlock2Ptr->optionsSummaryIvView = 1;
+    gSaveBlock2Ptr->optionsMonAnimations = !IS_AWR ? OPTIONS_GENERAL_ON : OPTIONS_GENERAL_OFF;
+    gSaveBlock2Ptr->optionsShowTypes = OPTIONS_GENERAL_ON;
+    gSaveBlock2Ptr->optionsEffectiveness = OPTIONS_GENERAL_ON;
+    gSaveBlock2Ptr->optionsVolumeBGM = 10;
+    gSaveBlock2Ptr->optionsVolumeSFX = 10;
+    gSaveBlock2Ptr->optionsVolumeCries = 10;
+    gSaveBlock2Ptr->optionsRButtonMode = 0;
+    gSaveBlock2Ptr->optionsLButtonMode = 0;
+    gSaveBlock2Ptr->optionsAnimSpeed = OPTIONS_BATTLE_SCENE_1X;
+    gSaveBlock2Ptr->optionsOwSpeed = 0;
 }
 
 static void ClearPokedexFlags(void)

@@ -6238,7 +6238,7 @@ void DoMonFrontSpriteAnimation(struct Sprite *sprite, u16 species, bool8 noCry, 
         pan = 0;
         break;
     }
-    if (panModeAnimFlag & SKIP_FRONT_ANIM)
+    if ((panModeAnimFlag & SKIP_FRONT_ANIM) || gSaveBlock2Ptr->optionsMonAnimations == OPTIONS_GENERAL_OFF)
     {
         // No animation, only check if cry needs to be played
         if (!noCry)
@@ -6310,7 +6310,8 @@ void StopPokemonAnimationDelayTask(void)
 
 void BattleAnimateBackSprite(struct Sprite *sprite, u16 species)
 {
-    if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
+    if ((gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
+     || gSaveBlock2Ptr->optionsMonAnimations == OPTIONS_GENERAL_OFF)
     {
         sprite->callback = SpriteCallbackDummy;
     }
@@ -6409,6 +6410,7 @@ void HandleSetPokedexFlagFromMon(struct Pokemon *mon, u32 caseId)
 bool8 HasTwoFramesAnimation(u16 species)
 {
     return P_TWO_FRAME_FRONT_SPRITES
+        && gSaveBlock2Ptr->optionsMonAnimations != OPTIONS_GENERAL_OFF
         && gSpeciesInfo[species].frontAnimFrames != sAnims_SingleFramePlaceHolder
         && !gTestRunnerHeadless;
 }
@@ -7080,7 +7082,7 @@ void HealBoxPokemon(struct BoxPokemon *boxMon)
 enum PokemonCry GetCryIdBySpecies(u16 species)
 {
     species = SanitizeSpeciesId(species);
-    if (P_CRIES_ENABLED == FALSE || gSpeciesInfo[species].cryId >= CRY_COUNT || gTestRunnerHeadless)
+    if (P_CRIES_ENABLED == FALSE || gSpeciesInfo[species].cryId >= CRY_COUNT || gSaveBlock2Ptr->optionsVolumeCries == 0 || gTestRunnerHeadless)
         return CRY_NONE;
     return gSpeciesInfo[species].cryId;
 }

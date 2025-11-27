@@ -389,7 +389,7 @@ static const u16 sScrollBgPalette[] = INCBIN_U16("graphics/ui_options_plus/scrol
 static const u8 sText_Empty[]                   = _("");
 static const u8 sText_OptionMenuSave[]          = _("SAVE");
 static const u8 sText_Desc_Options_Save[]       = _("Save your settings.");
-static const u8 sText_Next[] =                  = _("NEXT");
+static const u8 sText_Next[]                    = _("NEXT");
 
 static const u8 sText_Description_Disabled_Randomizer[] = _("Only usable with randomizer!");
 static const u8 sText_Description_Disabled_Random_Puppets[] = _("Only usable with random starter,\nTrainer, wild or static Puppets.");
@@ -1460,19 +1460,19 @@ static void OptionsMenu_LoadOptions(u32 optionMode)
         sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_HP_BAR]        = gSaveBlock2Ptr->optionsHpBarSpeed;
         sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_EXP_BAR]       = gSaveBlock2Ptr->optionsExpBarSpeed;
         sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_ANIM_SPEED]    = gSaveBlock2Ptr->optionsAnimSpeed;
-        sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_IV_VIEW]       = gSaveBlock2Ptr->optionsSummaryIvView;
+        sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_IV_VIEW]       = gSaveBlock2Ptr->optionsSummaryIvView;//
         sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_EFFECTIVENESS] = gSaveBlock2Ptr->optionsEffectiveness;
         sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_SHOW_TYPES]    = gSaveBlock2Ptr->optionsShowTypes;
-        sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_BATTLEMENU]    = gSaveBlock2Ptr->optionsBattleMenu;
+        sOptions->selection.optionsPlus.battle[MENUITEM_BATTLE_BATTLEMENU]    = gSaveBlock2Ptr->optionsBattleMenu;//
 
         sOptions->selection.optionsPlus.misc[MENUITEM_MISC_SOUND]        = gSaveBlock2Ptr->optionsSound;
         sOptions->selection.optionsPlus.misc[MENUITEM_MISC_MUSIC_VOLUME] = gSaveBlock2Ptr->optionsVolumeBGM;
         sOptions->selection.optionsPlus.misc[MENUITEM_MISC_SFX_VOLUME]   = gSaveBlock2Ptr->optionsVolumeSFX;
         sOptions->selection.optionsPlus.misc[MENUITEM_MISC_CRIES_VOLUME] = gSaveBlock2Ptr->optionsVolumeCries;
         sOptions->selection.optionsPlus.misc[MENUITEM_MISC_UNIT_SYSTEM]  = gSaveBlock2Ptr->optionsUnitSystem;
-        sOptions->selection.optionsPlus.misc[MENUITEM_MISC_L_BUTTONMODE] = gSaveBlock2Ptr->optionsLButtonMode;
-        sOptions->selection.optionsPlus.misc[MENUITEM_MISC_R_BUTTONMODE] = gSaveBlock2Ptr->optionsRButtonMode;
-        sOptions->selection.optionsPlus.misc[MENUITEM_MISC_OVERWORLD_SPEED] = gSaveBlock2Ptr->optionsOwSpeed;
+        sOptions->selection.optionsPlus.misc[MENUITEM_MISC_L_BUTTONMODE] = gSaveBlock2Ptr->optionsLButtonMode;//
+        sOptions->selection.optionsPlus.misc[MENUITEM_MISC_R_BUTTONMODE] = gSaveBlock2Ptr->optionsRButtonMode;//
+        sOptions->selection.optionsPlus.misc[MENUITEM_MISC_OVERWORLD_SPEED] = gSaveBlock2Ptr->optionsOwSpeed;//
 
         sOptions->submenu = 0;
         break;
