@@ -421,6 +421,7 @@ static const u8 sText_None[]                                = _("NONE");
 // bg gfx
 const u32 sSummaryScreen_Gfx_BW[]                           = INCBIN_U32("graphics/summary_screen/bw/tiles.4bpp.smol");
 const u16 sSummaryScreen_Pal_BW[]                           = INCBIN_U16("graphics/summary_screen/bw/tiles.gbapal");
+const u16 sSummaryScreen_Pal_BW_AWR[]                       = INCBIN_U16("graphics/summary_screen/bw/tiles_awr.gbapal");
 const u32 sSummaryPage_ScrollBG_Tilemap_BW[]                = INCBIN_U32("graphics/summary_screen/bw/scroll_bg.bin.smolTM");
 const u32 sSummaryPage_Info_Tilemap_BW[]                    = INCBIN_U32("graphics/summary_screen/bw/page_info.bin.smolTM");
 const u32 sSummaryPage_Skills_Tilemap_BW[]                  = INCBIN_U32("graphics/summary_screen/bw/page_skills.bin.smolTM");
@@ -2061,7 +2062,10 @@ static bool8 DecompressGraphics(void)
         sMonSummaryScreen->switchCounter++;
         break;
     case 8:
-        LoadPalette(sSummaryScreen_Pal_BW, BG_PLTT_ID(0), 8 * PLTT_SIZE_4BPP);
+        if (IS_AWR)
+            LoadPalette(sSummaryScreen_Pal_BW_AWR, BG_PLTT_ID(0), 8 * PLTT_SIZE_4BPP);
+        else
+            LoadPalette(sSummaryScreen_Pal_BW, BG_PLTT_ID(0), 8 * PLTT_SIZE_4BPP);
         LoadPalette(&sSummaryScreen_PPTextPalette_BW, BG_PLTT_ID(8) + 1, PLTT_SIZEOF(16 - 1));
         sMonSummaryScreen->switchCounter++;
         break;

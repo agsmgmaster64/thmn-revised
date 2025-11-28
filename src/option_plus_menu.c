@@ -355,21 +355,15 @@ static const u16 sOptionMenuText_Pal[] = INCBIN_U16("graphics/interface/option_m
 static const u32 sOptionsPlusTiles[] = INCBIN_U32("graphics/ui_options_plus/options_plus_tiles.4bpp.smol");
 static const u32 sOptionsPlusTilemap[] = INCBIN_U32("graphics/ui_options_plus/options_plus_tiles.bin.smolTM");
 
-#if !IS_AWR
 static const u16 sOptionsPlusPalette[] = INCBIN_U16("graphics/ui_options_plus/options_plus_tiles_wlr.gbapal");
-#else
-static const u16 sOptionsPlusPalette[] = INCBIN_U16("graphics/ui_options_plus/options_plus_tiles_awr.gbapal");
-#endif
+static const u16 sOptionsPlusPalette_AWR[] = INCBIN_U16("graphics/ui_options_plus/options_plus_tiles_awr.gbapal");
 
 // Scrolling Background
 static const u32 sScrollBgTiles[] = INCBIN_U32("graphics/ui_options_plus/scroll_tiles.4bpp.smol");
 static const u32 sScrollBgTilemap[] = INCBIN_U32("graphics/ui_options_plus/scroll_tiles.bin.smolTM");
 
-#if !IS_AWR
 static const u16 sScrollBgPalette[] = INCBIN_U16("graphics/ui_options_plus/scroll_tiles_wlr.gbapal");
-#else
-static const u16 sScrollBgPalette[] = INCBIN_U16("graphics/ui_options_plus/scroll_tiles_awr.gbapal");
-#endif
+static const u16 sScrollBgPalette_AWR[] = INCBIN_U16("graphics/ui_options_plus/scroll_tiles_awr.gbapal");
 
 #define TEXT_COLOR_OPTIONS_WHITE                1
 #define TEXT_COLOR_OPTIONS_GRAY_FG              2
@@ -1434,8 +1428,16 @@ static bool8 OptionsMenu_LoadGraphics(void) // Load all the tilesets, tilemaps, 
         }
         break;
     case 4:
-        LoadPalette(sOptionsPlusPalette, BG_PLTT_ID(4), 32);
-        LoadPalette(sScrollBgPalette, BG_PLTT_ID(2), 32);
+        if (IS_AWR)
+        {
+            LoadPalette(sOptionsPlusPalette_AWR, BG_PLTT_ID(4), 32);
+            LoadPalette(sScrollBgPalette_AWR, BG_PLTT_ID(2), 32);
+        }
+        else
+        {
+            LoadPalette(sOptionsPlusPalette, BG_PLTT_ID(4), 32);
+            LoadPalette(sScrollBgPalette, BG_PLTT_ID(2), 32);
+        }
         sOptions->gfxLoadState++;
         break;
     default:
