@@ -6709,8 +6709,7 @@ BattleScript_FascinateEffect:
 	copybyte sBATTLER, gBattlerAttacker
 	setstatchanger STAT_SPATK, 1, TRUE
 	statbuffchange BS_TARGET, STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_FascinateLoopIncrement
-	jumpifability BS_TARGET, ABILITY_CONTRARY, BattleScript_FascinateContrary
-	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_FascinateWontDecrease
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_CHANGE, BattleScript_FascinateWontDecrease
 	printstring STRINGID_PKMNCUTSATTACKWITH
 BattleScript_FascinateEffect_WaitString:
 	waitmessage B_WAIT_TIME_LONG
@@ -6738,10 +6737,6 @@ BattleScript_FascinatePrevented::
 
 BattleScript_FascinateWontDecrease:
 	printstring STRINGID_STATSWONTDECREASE
-	goto BattleScript_FascinateEffect_WaitString
-
-BattleScript_FascinateContrary:
-	printfromtable gStatUpStringIds
 	goto BattleScript_FascinateEffect_WaitString
 
 BattleScript_FascinateInReverse::

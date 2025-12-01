@@ -6103,7 +6103,7 @@ s32 BattlerBenefitsFromAbilityScore(u32 battler, enum Ability ability, struct Ai
     }
     case ABILITY_FASCINATE:
     {
-        u32 abilityDef = aiData->abilities[FOE(battler)];
+        u32 abilityDef = aiData->abilities[LEFT_FOE(battler)];
         if (DoesIntimidateRaiseStats(abilityDef))
         {
             return AWFUL_EFFECT;
@@ -6112,22 +6112,22 @@ s32 BattlerBenefitsFromAbilityScore(u32 battler, enum Ability ability, struct Ai
         {
             if (HasTwoOpponents(battler))
             {
-                abilityDef = aiData->abilities[BATTLE_PARTNER(FOE(battler))];
+                abilityDef = aiData->abilities[RIGHT_FOE(battler)];
                 if (DoesIntimidateRaiseStats(abilityDef))
                 {
                     return AWFUL_EFFECT;
                 }
                 else
                 {
-                    s32 score1 = IncreaseStatDownScore(battler, FOE(battler), STAT_SPATK);
-                    s32 score2 = IncreaseStatDownScore(battler, BATTLE_PARTNER(FOE(battler)), STAT_SPATK);
+                    s32 score1 = IncreaseStatDownScore(battler, LEFT_FOE(battler), STAT_SPATK);
+                    s32 score2 = IncreaseStatDownScore(battler, RIGHT_FOE(battler), STAT_SPATK);
                     if (score1 > score2)
                         return score1;
                     else
                         return score2;
                 }
             }
-            return IncreaseStatDownScore(battler, FOE(battler), STAT_SPATK);
+            return IncreaseStatDownScore(battler, LEFT_FOE(battler), STAT_SPATK);
         }
     }
     case ABILITY_NO_GUARD:
