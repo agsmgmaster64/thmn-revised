@@ -1178,10 +1178,6 @@ void LoadConditionMonPicTemplate(struct SpriteSheet *sheet, struct SpriteTemplat
         .tileTag = TAG_CONDITION_MON,
         .paletteTag = TAG_CONDITION_MON,
         .oam = &sOam_ConditionMonPic,
-        .anims = gDummySpriteAnimTable,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy,
     };
 
     struct SpritePalette dataPal = {NULL, TAG_CONDITION_MON};
@@ -1217,9 +1213,6 @@ void LoadConditionSelectionIcons(struct SpriteSheet *sheets, struct SpriteTempla
         .paletteTag = TAG_CONDITION_BALL,
         .oam = &sOam_ConditionSelectionIcon,
         .anims = sAnims_ConditionSelectionIcon,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy,
     };
 
     for (i = 0; i < ARRAY_COUNT(dataSheets); i++)
@@ -1306,8 +1299,6 @@ static const struct SpriteTemplate sSpriteTemplate_ConditionSparkle =
     .paletteTag = TAG_CONDITION_SPARKLE,
     .oam = &sOam_ConditionSparkle,
     .anims = sAnims_ConditionSparkle,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_ConditionSparkle,
 };
 
