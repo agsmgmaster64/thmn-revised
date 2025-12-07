@@ -18,6 +18,19 @@ static const union AnimCmd *const sAnims_TwoFramePlaceHolder[] =
     },
 };
 
+static const union AnimCmd *const sAnims_GenericBlinkingAnim[] =
+{
+    sAnim_GeneralFrame0,
+    (const union AnimCmd[]) {
+        ANIMCMD_FRAME(0, 15),
+        ANIMCMD_FRAME(1, 15),
+        ANIMCMD_FRAME(0, 15),
+        ANIMCMD_FRAME(1, 15),
+        ANIMCMD_FRAME(0, 15),
+        ANIMCMD_END,
+    },
+};
+
 #if P_FAMILY_BURMY
 static const union AnimCmd *const sAnims_Burmy[] =
 {

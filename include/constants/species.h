@@ -566,6 +566,10 @@
 #define SPECIES_X_REISEN                                557
 #define SPECIES_TRANSCENDENT_RENKO                      558
 #define SPECIES_TRANSCENDENT_MARIBEL                    559
+#define SPECIES_CHIBI_TEWI                              560
+#define SPECIES_NORMAL_TEWI                             561
+#define SPECIES_EXTRA_TEWI                              562
+#define SPECIES_ADVENT_TEWI                             563
 
 //Pokemon
 #define SPECIES_BULBASAUR                               1
