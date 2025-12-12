@@ -157,6 +157,7 @@ static void (*const sPlayerBufferCommands[CONTROLLER_CMDS_COUNT])(u32 battler) =
 
 void SetControllerToPlayer(u32 battler)
 {
+    gBattlerBattleController[battler] = BATTLE_CONTROLLER_PLAYER;
     gBattlerControllerEndFuncs[battler] = PlayerBufferExecCompleted;
     gBattlerControllerFuncs[battler] = PlayerBufferRunCommand;
     gDoingBattleAnim = FALSE;
@@ -2368,7 +2369,7 @@ static bool32 ShouldShowTypeEffectiveness(u32 targetId)
 static u32 CheckTypeEffectiveness(u32 battlerAtk, u32 battlerDef)
 {
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battlerAtk][4]);
-    struct DamageContext ctx = {0};
+    struct BattleContext ctx = {0};
     ctx.battlerAtk = battlerAtk;
     ctx.battlerDef = battlerDef;
     ctx.move = moveInfo->moves[gMoveSelectionCursor[battlerAtk]];

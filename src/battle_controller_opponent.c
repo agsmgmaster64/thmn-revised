@@ -1,7 +1,7 @@
 #include "global.h"
 #include "battle.h"
 #include "battle_ai_main.h"
-#include "battle_ai_switch_items.h"
+#include "battle_ai_switch.h"
 #include "battle_ai_util.h"
 #include "constants/battle_ai.h"
 #include "battle_anim.h"
@@ -114,6 +114,7 @@ static void (*const sOpponentBufferCommands[CONTROLLER_CMDS_COUNT])(u32 battler)
 
 void SetControllerToOpponent(u32 battler)
 {
+    gBattlerBattleController[battler] = BATTLE_CONTROLLER_OPPONENT;
     gBattlerControllerEndFuncs[battler] = OpponentBufferExecCompleted;
     gBattlerControllerFuncs[battler] = OpponentBufferRunCommand;
 }
