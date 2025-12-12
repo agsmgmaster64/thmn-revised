@@ -3,6 +3,7 @@
 #include "malloc.h"
 #include "battle.h"
 #include "battle_special.h"
+#include "bw_summary_screen.h"
 #include "cable_club.h"
 #include "data.h"
 #include "daycare.h"
@@ -4519,10 +4520,20 @@ static void Task_ShowSummaryScreenToForgetBoxMonMove(u8 taskId)
     if (IsTextPrinterActive(0) != TRUE)
     {
         DestroyTask(taskId);
-        if(gSpecialVar_MonBoxId == 0xFF)
-            ShowSelectMovePokemonSummaryScreen(gPlayerParty, gSpecialVar_MonBoxPos, gPlayerPartyCount - 1, CB2_ReturnToFieldWhileLearningMove, gSpecialVar_ItemId);
+        if (BW_SUMMARY_SCREEN)
+        {
+            if (gSpecialVar_MonBoxId == 0xFF)
+                ShowSelectMovePokemonSummaryScreen_BW(gPlayerParty, gSpecialVar_MonBoxPos, gPlayerPartyCount - 1, CB2_ReturnToFieldWhileLearningMove, gSpecialVar_ItemId);
+            else
+                ShowSelectMoveBoxPokemonSummaryScreen_BW(GetBoxedMonPtr(StorageGetCurrentBox(), 0), gSpecialVar_MonBoxPos, IN_BOX_COUNT - 1, CB2_ReturnToFieldWhileLearningMove, gSpecialVar_ItemId);
+        }
         else
-            ShowSelectMoveBoxPokemonSummaryScreen(GetBoxedMonPtr(StorageGetCurrentBox(), 0), gSpecialVar_MonBoxPos, IN_BOX_COUNT - 1, CB2_ReturnToFieldWhileLearningMove, gSpecialVar_ItemId);
+        {
+            if (gSpecialVar_MonBoxId == 0xFF)
+                ShowSelectMovePokemonSummaryScreen(gPlayerParty, gSpecialVar_MonBoxPos, gPlayerPartyCount - 1, CB2_ReturnToFieldWhileLearningMove, gSpecialVar_ItemId);
+            else
+                ShowSelectMoveBoxPokemonSummaryScreen(GetBoxedMonPtr(StorageGetCurrentBox(), 0), gSpecialVar_MonBoxPos, IN_BOX_COUNT - 1, CB2_ReturnToFieldWhileLearningMove, gSpecialVar_ItemId);
+        }
     }
 }
 

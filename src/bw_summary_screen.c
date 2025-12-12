@@ -1737,6 +1737,11 @@ void ShowPokemonSummaryScreen_BW(u8 mode, void *mons, u8 monIndex, u8 maxMonInde
         sMonSummaryScreen->maxPageIndex = pageCount - 1;
         sMonSummaryScreen->lockMonFlag = TRUE;
         break;
+    case SUMMARY_MODE_BOX_SELECT_MOVE:
+        sMonSummaryScreen->minPageIndex = PSS_PAGE_BATTLE_MOVES;
+        sMonSummaryScreen->maxPageIndex = pageCount - 1;
+        sMonSummaryScreen->lockMonFlag = TRUE;
+        break;
     }
 
     if (mode == SUMMARY_MODE_RELEARNER_BATTLE)
@@ -1758,6 +1763,12 @@ void ShowPokemonSummaryScreen_BW(u8 mode, void *mons, u8 monIndex, u8 maxMonInde
 void ShowSelectMovePokemonSummaryScreen_BW(struct Pokemon *mons, u8 monIndex, u8 maxMonIndex, void (*callback)(void), u16 newMove)
 {
     ShowPokemonSummaryScreen_BW(SUMMARY_MODE_SELECT_MOVE, mons, monIndex, maxMonIndex, callback);
+    sMonSummaryScreen->newMove = newMove;
+}
+
+void ShowSelectMoveBoxPokemonSummaryScreen_BW(struct BoxPokemon *mons, u8 monIndex, u8 maxMonIndex, void (*callback)(void), u16 newMove)
+{
+    ShowPokemonSummaryScreen_BW(SUMMARY_MODE_BOX_SELECT_MOVE, mons, monIndex, maxMonIndex, callback);
     sMonSummaryScreen->newMove = newMove;
 }
 
@@ -1900,7 +1911,7 @@ static bool8 LoadGraphics(void)
         gMain.state++;
         break;
     case 13:
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
             SetSelectMoveTilemaps();
         else if (sMonSummaryScreen->mode == SUMMARY_MODE_RELEARNER_BATTLE) // load the appropriate moves page when returning from move relearner
             SetBgTilemapBuffer(2, sMonSummaryScreen->bg2TilemapBuffers[PSS_PAGE_BATTLE_MOVES]);
@@ -1918,7 +1929,7 @@ static bool8 LoadGraphics(void)
     case 15:
         ResetSpriteIds();
         CreateMoveTypeIcons();
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE && BW_SUMMARY_CATEGORY_ICONS)
+        if ((sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE) && BW_SUMMARY_CATEGORY_ICONS)
             ShowCategoryIcon(sMonSummaryScreen->summary.moves[sMonSummaryScreen->firstMoveIndex]);
         sMonSummaryScreen->switchCounter = 0;
         gMain.state++;
@@ -1964,7 +1975,7 @@ static bool8 LoadGraphics(void)
         gMain.state++;
         break;
     case 23:
-        if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE && sMonSummaryScreen->mode != SUMMARY_MODE_BOX_SELECT_MOVE)
             CreateTask(Task_HandleInput, 0);
         else
             CreateTask(Task_SetHandleReplaceMoveInput, 0);
@@ -2779,7 +2790,7 @@ static void PssScroll(u8 taskId)
         SetBgTilemapBuffer(2, sMonSummaryScreen->bg2TilemapBuffers[sMonSummaryScreen->currPageIndex]);
         ShowBg(2);
         SetGpuRegBits(REG_OFFSET_BG2CNT, BGCNT_MOSAIC);
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
             SetGpuRegBits(REG_OFFSET_BG1CNT, BGCNT_MOSAIC);
     }
     
@@ -2804,7 +2815,7 @@ static void PssScroll(u8 taskId)
 
 static void PssScrollEnd(u8 taskId)
 {
-    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
     {
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_CONTEST_MOVES)
         {
@@ -2820,7 +2831,7 @@ static void PssScrollEnd(u8 taskId)
     }
 
     ClearGpuRegBits(REG_OFFSET_BG2CNT, BGCNT_MOSAIC);
-    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
         ClearGpuRegBits(REG_OFFSET_BG1CNT, BGCNT_MOSAIC);
 
     SetGpuReg(REG_OFFSET_MOSAIC, 0);
@@ -3747,7 +3758,7 @@ static void PutPageWindowTilemaps(u8 page)
         break;
     case PSS_PAGE_BATTLE_MOVES:
         PutWindowTilemap(PSS_LABEL_WINDOW_BATTLE_MOVES_TITLE);
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
         {
             if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
                 PutWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
@@ -3761,7 +3772,7 @@ static void PutPageWindowTilemaps(u8 page)
         break;
     case PSS_PAGE_CONTEST_MOVES:
         PutWindowTilemap(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE);
-        if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE && sMonSummaryScreen->mode != SUMMARY_MODE_BOX_SELECT_MOVE)
         {
             PutWindowTilemap(PSS_LABEL_WINDOW_PROMPT_INFO);
             if (ShouldShowMoveRelearner())
@@ -3795,7 +3806,7 @@ static void ClearPageWindowTilemaps(u8 page)
         }
         break;
     case PSS_PAGE_BATTLE_MOVES:
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
         {
             if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
                 ClearWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
@@ -3808,7 +3819,7 @@ static void ClearPageWindowTilemaps(u8 page)
         }
         break;
     case PSS_PAGE_CONTEST_MOVES:
-        if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE && sMonSummaryScreen->mode != SUMMARY_MODE_BOX_SELECT_MOVE)
         {
             ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_INFO);
             if (ShouldShowMoveRelearner())
@@ -4468,7 +4479,7 @@ static void PrintBattleMoves(void)
     PrintMoveNameAndPP(2);
     PrintMoveNameAndPP(3);
 
-    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
     {
         PrintNewMoveDetailsOrCancelText();
         if (sMonSummaryScreen->firstMoveIndex == MAX_MON_MOVES)
@@ -4502,11 +4513,11 @@ static void Task_PrintBattleMoves(u8 taskId)
         PrintMoveNameAndPP(3);
         break;
     case 5:
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
             PrintNewMoveDetailsOrCancelText();
         break;
     case 6:
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
         {
             if (sMonSummaryScreen->firstMoveIndex == MAX_MON_MOVES)
                 data[1] = sMonSummaryScreen->newMove;
@@ -4515,7 +4526,7 @@ static void Task_PrintBattleMoves(u8 taskId)
         }
         break;
     case 7:
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
         {
             if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
                 PrintMoveDetails(data[1]);
@@ -4605,7 +4616,7 @@ static void PrintContestMoves(void)
     PrintMoveNameAndPP(2);
     PrintMoveNameAndPP(3);
 
-    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
     {
         PrintNewMoveDetailsOrCancelText();
         PrintContestMoveDescription(sMonSummaryScreen->firstMoveIndex);
@@ -4631,11 +4642,11 @@ static void Task_PrintContestMoves(u8 taskId)
         PrintMoveNameAndPP(3);
         break;
     case 5:
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
             PrintNewMoveDetailsOrCancelText();
         break;
     case 6:
-        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE || sMonSummaryScreen->mode == SUMMARY_MODE_BOX_SELECT_MOVE)
         {
             if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
                 PrintContestMoveDescription(sMonSummaryScreen->firstMoveIndex);
