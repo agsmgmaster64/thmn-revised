@@ -105,8 +105,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
         .iconSprite = gMonIcon_CSakuya,
         .iconPalIndex = 1,
         FOOTPRINT(CSakuya)
-        .levelUpLearnset = sNoneLevelUpLearnset,
-        .teachableLearnset = sNoneTeachableLearnset,
+        .levelUpLearnset = sCSakuyaLevelUpLearnset,
+        .teachableLearnset = sCSakuyaTeachableLearnset,
     },
 
     [SPECIES_NORMAL_SAKUYA] =
@@ -159,8 +159,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
         .iconSprite = gMonIcon_Sakuya,
         .iconPalIndex = 1,
         FOOTPRINT(Sakuya)
-        .levelUpLearnset = sNoneLevelUpLearnset,
-        .teachableLearnset = sNoneTeachableLearnset,
+        .levelUpLearnset = sSakuyaLevelUpLearnset,
+        .teachableLearnset = sSakuyaTeachableLearnset,
     },
 
     [SPECIES_CHIBI_KOAKUMA] =
@@ -212,8 +212,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
         .iconSprite = gMonIcon_CKoakuma,
         .iconPalIndex = 1,
         FOOTPRINT(CKoakuma)
-        .levelUpLearnset = sNoneLevelUpLearnset,
-        .teachableLearnset = sNoneTeachableLearnset,
+        .levelUpLearnset = sCKoakumaLevelUpLearnset,
+        .teachableLearnset = sCKoakumaTeachableLearnset,
     },
 
     [SPECIES_NORMAL_KOAKUMA] =
@@ -266,8 +266,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
         .iconSprite = gMonIcon_Koakuma,
         .iconPalIndex = 1,
         FOOTPRINT(Koakuma)
-        .levelUpLearnset = sNoneLevelUpLearnset,
-        .teachableLearnset = sNoneTeachableLearnset,
+        .levelUpLearnset = sKoakumaLevelUpLearnset,
+        .teachableLearnset = sKoakumaTeachableLearnset,
     },
 
 #ifdef __INTELLISENSE__

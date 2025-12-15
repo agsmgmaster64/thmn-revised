@@ -52,8 +52,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou7[] =
         .iconSprite = gMonIcon_CLunasa,
         .iconPalIndex = 1,
         FOOTPRINT(CLunasa)
-        .levelUpLearnset = sNoneLevelUpLearnset,
-        .teachableLearnset = sNoneTeachableLearnset,
+        .levelUpLearnset = sCLunasaLevelUpLearnset,
+        .teachableLearnset = sCLunasaTeachableLearnset,
     },
 
     [SPECIES_NORMAL_LUNASA] =
@@ -106,8 +106,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou7[] =
         .iconSprite = gMonIcon_Lunasa,
         .iconPalIndex = 1,
         FOOTPRINT(Lunasa)
-        .levelUpLearnset = sNoneLevelUpLearnset,
-        .teachableLearnset = sNoneTeachableLearnset,
+        .levelUpLearnset = sLunasaLevelUpLearnset,
+        .teachableLearnset = sLunasaTeachableLearnset,
     },
 
 #ifdef __INTELLISENSE__

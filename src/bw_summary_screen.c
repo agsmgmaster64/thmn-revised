@@ -53,7 +53,6 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
-#if BW_SUMMARY_SCREEN == TRUE
 enum BWPSSEffect
 {
     PSS_EFFECT_BATTLE,
@@ -1745,7 +1744,7 @@ void ShowPokemonSummaryScreen_BW(u8 mode, void *mons, u8 monIndex, u8 maxMonInde
     if (gInitialSummaryScreenCallback == NULL)
         gInitialSummaryScreenCallback = callback;
 
-    if (mode == SUMMARY_MODE_BOX)
+    if (mode == SUMMARY_MODE_BOX || mode == SUMMARY_MODE_BOX_SELECT_MOVE)
         sMonSummaryScreen->isBoxMon = TRUE;
     else
         sMonSummaryScreen->isBoxMon = FALSE;
@@ -2540,6 +2539,7 @@ static void Task_HandleInput(u8 taskId)
         {
             sMonSummaryScreen->callback = CB2_InitLearnMove;
             gSpecialVar_0x8004 = sMonSummaryScreen->curMonIndex;
+            gSpecialVar_MonBoxId = 0xFF;
             gRelearnMode = sMonSummaryScreen->currPageIndex;
             StopPokemonAnimations();
             PlaySE(SE_SELECT);
@@ -5649,6 +5649,7 @@ static inline bool32 ShouldShowMoveRelearner(void)
 {
     return (P_SUMMARY_SCREEN_MOVE_RELEARNER
          && !sMonSummaryScreen->lockMovesFlag
+         && !sMonSummaryScreen->isBoxMon
          && sMonSummaryScreen->mode != SUMMARY_MODE_BOX
          && sMonSummaryScreen->mode != SUMMARY_MODE_BOX_CURSOR
          && sMonSummaryScreen->hasRelearnableMoves > 0
@@ -5677,6 +5678,7 @@ static inline bool32 ShouldShowRename(void)
     return (P_SUMMARY_SCREEN_RENAME
          && !sMonSummaryScreen->lockMovesFlag
          && !sMonSummaryScreen->summary.isEgg
+         && !sMonSummaryScreen->isBoxMon
          && sMonSummaryScreen->mode != SUMMARY_MODE_BOX
          && sMonSummaryScreen->mode != SUMMARY_MODE_BOX_CURSOR
          && !InBattleFactory() 
@@ -5711,5 +5713,3 @@ static void CB2_PssChangePokemonNickname(void)
                    GetMonGender(&gPlayerParty[gSpecialVar_0x8004]), GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_PERSONALITY, NULL), 
                    CB2_ReturnToSummaryScreenFromNamingScreen);
 }
-
-#endif
