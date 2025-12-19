@@ -1,3 +1,4 @@
+/*
 [EGG_ID_MANAPHY] =
 {
     .eggIcon = gMonEggIcon_Manaphy,
@@ -7,3 +8,4 @@
     .eggHatchPal = gMonHatchPal_Manaphy,
     .eggIconPalIndex = 2,
 },
+*/

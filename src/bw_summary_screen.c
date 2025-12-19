@@ -220,7 +220,6 @@ static EWRAM_DATA struct PokemonSummaryScreenData
     u8 hasRelearnableMoves;
     u8 windowIds[8];
     u8 spriteIds[SPRITE_ARR_ID_COUNT];
-    bool8 handleDeoxys;
     s16 switchCounter; // Used for various switch statement cases that decompress/load graphics or Pokémon data
     u16 monAnimTimer; // tracks time between re-playing mon anims
     bool8 monAnimPlayed; // tracks if anim has been played at least once
@@ -1807,12 +1806,6 @@ void ShowSelectMoveBoxPokemonSummaryScreen_BW(struct BoxPokemon *mons, u8 monInd
     sMonSummaryScreen->newMove = newMove;
 }
 
-void ShowPokemonSummaryScreenHandleDeoxys_BW(u8 mode, struct BoxPokemon *mons, u8 monIndex, u8 maxMonIndex, void (*callback)(void))
-{
-    ShowPokemonSummaryScreen_BW(mode, mons, monIndex, maxMonIndex, callback);
-    sMonSummaryScreen->handleDeoxys = TRUE;
-}
-
 static void MainCB2(void)
 {
     RunTasks();
@@ -2241,30 +2234,15 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
         sum->ppBonuses = GetMonData(mon, MON_DATA_PP_BONUSES);
         break;
     case 2:
-        if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == SUMMARY_MODE_BOX || sMonSummaryScreen->handleDeoxys == TRUE)
-        {
-            sum->nature = GetNature(mon);
-            sum->mintNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
-            sum->currentHP = GetMonData(mon, MON_DATA_HP);
-            sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
-            sum->atk = GetMonData(mon, MON_DATA_ATK);
-            sum->def = GetMonData(mon, MON_DATA_DEF);
-            sum->spatk = GetMonData(mon, MON_DATA_SPATK);
-            sum->spdef = GetMonData(mon, MON_DATA_SPDEF);
-            sum->speed = GetMonData(mon, MON_DATA_SPEED);
-        }
-        else
-        {
-            sum->nature = GetNature(mon);
-            sum->mintNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
-            sum->currentHP = GetMonData(mon, MON_DATA_HP);
-            sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
-            sum->atk = GetMonData(mon, MON_DATA_ATK2);
-            sum->def = GetMonData(mon, MON_DATA_DEF2);
-            sum->spatk = GetMonData(mon, MON_DATA_SPATK2);
-            sum->spdef = GetMonData(mon, MON_DATA_SPDEF2);
-            sum->speed = GetMonData(mon, MON_DATA_SPEED2);
-        }
+        sum->nature = GetNature(mon);
+        sum->mintNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
+        sum->currentHP = GetMonData(mon, MON_DATA_HP);
+        sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
+        sum->atk = GetMonData(mon, MON_DATA_ATK);
+        sum->def = GetMonData(mon, MON_DATA_DEF);
+        sum->spatk = GetMonData(mon, MON_DATA_SPATK);
+        sum->spdef = GetMonData(mon, MON_DATA_SPDEF);
+        sum->speed = GetMonData(mon, MON_DATA_SPEED);
         break;
     case 3:
         GetMonData(mon, MON_DATA_OT_NAME, sum->OTName);
@@ -5262,32 +5240,35 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state, bool32 isShadow)
     case 0:
         if (gMain.inBattle)
         {
-            HandleLoadSpecialPokePic(TRUE,
+            HandleLoadSpecialPokePicIsEgg(TRUE,
                                      gMonSpritesGfxPtr->spritesGfx[B_POSITION_OPPONENT_LEFT],
-                                     summary->species2,
-                                     summary->pid);
+                                     summary->species,
+                                     summary->pid,
+                                     summary->isEgg);
         }
         else
         {
             if (gMonSpritesGfxPtr != NULL)
             {
-                HandleLoadSpecialPokePic(TRUE,
+                HandleLoadSpecialPokePicIsEgg(TRUE,
                                          gMonSpritesGfxPtr->spritesGfx[B_POSITION_OPPONENT_LEFT],
-                                         summary->species2,
-                                         summary->pid);
+                                         summary->species,
+                                         summary->pid,
+                                         summary->isEgg);
             }
             else
             {
-                HandleLoadSpecialPokePic(TRUE,
+                HandleLoadSpecialPokePicIsEgg(TRUE,
                                          MonSpritesGfxManager_GetSpritePtr(MON_SPR_GFX_MANAGER_A, B_POSITION_OPPONENT_LEFT),
-                                         summary->species2,
-                                         summary->pid);
+                                         summary->species,
+                                         summary->pid,
+                                         summary->isEgg);
             }
         }
         (*state)++;
         return 0xFF;
     case 1:
-        LoadSpritePaletteWithTag(GetMonSpritePalFromSpeciesAndPersonality(summary->species2, summary->isShiny, summary->pid), summary->species2);
+        LoadSpritePaletteWithTag(GetMonSpritePalFromSpeciesAndPersonalityIsEgg(summary->species, summary->isShiny, summary->pid, summary->isEgg), summary->species2);
         SetMultiuseSpriteTemplateToPokemon(summary->species2, B_POSITION_OPPONENT_LEFT);
         (*state)++;
         return 0xFF;
