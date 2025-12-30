@@ -202,7 +202,6 @@ EWRAM_DATA u8 gBattleOutcome = 0;
 EWRAM_DATA struct ProtectStruct gProtectStructs[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA struct SpecialStatus gSpecialStatuses[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u16 gBattleWeather = 0;
-EWRAM_DATA struct WishFutureKnock gWishFutureKnock = {0};
 EWRAM_DATA u16 gIntroSlideFlags = 0;
 EWRAM_DATA u8 gSentPokesToOpponent[2] = {0};
 EWRAM_DATA struct BattleEnigmaBerry gEnigmaBerries[MAX_BATTLERS_COUNT] = {0};
@@ -304,7 +303,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
 {
     [TRAINER_CLASS_PKMN_TRAINER_1] = { _("{PKMN} TRAINER") },
     [TRAINER_CLASS_PKMN_TRAINER_2] = { _("{PKMN} TRAINER") },
-    [TRAINER_CLASS_HIKER] = { _("HIKER"), 10 },
+    [TRAINER_CLASS_HIKER] = { _("HIKER"), 10, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_ULTRA : BALL_POKE },
     [TRAINER_CLASS_TEAM_AQUA] = { _("TEAM AQUA") },
     [TRAINER_CLASS_PKMN_BREEDER] = { _("{PKMN} BREEDER"), 10, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_HEAL : BALL_FRIEND },
     [TRAINER_CLASS_COOLTRAINER] = { _("COOLTRAINER"), 12, BALL_ULTRA },
@@ -323,7 +322,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_TUBER_F] = { _("TUBER"), 1 },
     [TRAINER_CLASS_TUBER_M] = { _("TUBER"), 1 },
     [TRAINER_CLASS_LADY] = { _("LADY"), 50 },
-    [TRAINER_CLASS_BEAUTY] = { _("BEAUTY"), 20 },
+    [TRAINER_CLASS_BEAUTY] = { _("BEAUTY"), 20, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_GREAT : BALL_POKE },
     [TRAINER_CLASS_RICH_BOY] = { _("RICH BOY"), 50 },
     [TRAINER_CLASS_POKEMANIAC] = { _("POKéMANIAC"), 15 },
     [TRAINER_CLASS_GUITARIST] = { _("GUITARIST"), 8 },
@@ -334,13 +333,13 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PSYCHIC] = { _("PSYCHIC"), 6 },
     [TRAINER_CLASS_GENTLEMAN] = { _("GENTLEMAN"), 20, BALL_LUXURY },
     [TRAINER_CLASS_ELITE_FOUR] = { _("ELITE FOUR"), 25, BALL_ULTRA },
-    [TRAINER_CLASS_LEADER] = { _("LEADER"), 25 },
+    [TRAINER_CLASS_LEADER] = { _("LEADER"), 25, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_ULTRA : BALL_POKE },
     [TRAINER_CLASS_SCHOOL_KID] = { _("SCHOOL KID") },
     [TRAINER_CLASS_SR_AND_JR] = { _("SR. AND JR."), 4 },
     [TRAINER_CLASS_WINSTRATE] = { _("WINSTRATE"), 10 },
     [TRAINER_CLASS_POKEFAN] = { _("POKéFAN"), 20 },
     [TRAINER_CLASS_YOUNGSTER] = { _("YOUNGSTER"), 4 },
-    [TRAINER_CLASS_CHAMPION] = { _("CHAMPION"), 50 },
+    [TRAINER_CLASS_CHAMPION] = { _("CHAMPION"), 50, BALL_ULTRA },
     [TRAINER_CLASS_FISHERMAN] = { _("FISHERMAN"), 10, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_DIVE : BALL_LURE },
     [TRAINER_CLASS_TRIATHLETE] = { _("TRIATHLETE"), 10 },
     [TRAINER_CLASS_DRAGON_TAMER] = { _("DRAGON TAMER"), 12 },
@@ -360,7 +359,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_YOUNG_COUPLE] = { _("YOUNG COUPLE"), 8 },
     [TRAINER_CLASS_OLD_COUPLE] = { _("OLD COUPLE"), 10 },
     [TRAINER_CLASS_SIS_AND_BRO] = { _("SIS AND BRO"), 3 },
-    [TRAINER_CLASS_SALON_MAIDEN] = { _("SALON MAIDEN") },
+    [TRAINER_CLASS_SALON_MAIDEN] = { _("SALON MAIDEN"), 0, BALL_ULTRA },
     [TRAINER_CLASS_DOME_ACE] = { _("DOME ACE") },
     [TRAINER_CLASS_PALACE_MAVEN] = { _("PALACE MAVEN") },
     [TRAINER_CLASS_ARENA_TYCOON] = { _("ARENA TYCOON") },
@@ -522,21 +521,6 @@ static void CB2_InitBattleInternal(void)
         gBattleEnvironment = BATTLE_ENVIRONMENT_BUILDING;
     if (TestRunner_Battle_GetForcedEnvironment())
         gBattleEnvironment = TestRunner_Battle_GetForcedEnvironment() - 1;
-
-    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER
-                                                                        | BATTLE_TYPE_EREADER_TRAINER
-                                                                        | BATTLE_TYPE_TRAINER_HILL
-                                                                        | BATTLE_TYPE_RECORDED)))
-    {
-        switch (GetTrainerBattleType(TRAINER_BATTLE_PARAM.opponentA))
-        {
-        case TRAINER_BATTLE_TYPE_SINGLES:
-            break;
-        case TRAINER_BATTLE_TYPE_DOUBLES:
-            gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
-            break;
-        }
-    }
 
     InitBattleBgsVideo();
     LoadBattleTextboxAndBackground();
@@ -1831,7 +1815,7 @@ static void FreeRestoreBattleData(void)
     FreeMonSpritesGfx();
     FreeBattleSpritesData();
     FreeBattleResources();
-    ResetDynamicAiFunc();
+    ResetDynamicAiFunctions();
 }
 
 void CB2_QuitRecordedBattle(void)
@@ -3073,7 +3057,7 @@ static void ClearSetBScriptingStruct(void)
         gBattleScripting.battleStyle = OPTIONS_BATTLE_STYLE_SET;
     else
         gBattleScripting.battleStyle = gSaveBlock2Ptr->optionsBattleStyle;
-    gBattleScripting.expOnCatch = (B_EXP_CATCH >= GEN_6);
+    gBattleScripting.expOnCatch = (GetConfig(CONFIG_EXP_CATCH) >= GEN_6);
     gBattleScripting.specialTrainerBattleType = specialBattleType;
 }
 
@@ -3087,7 +3071,6 @@ static void BattleStartClearSetData(void)
     memset(&gFieldTimers, 0, sizeof(gFieldTimers));
     memset(&gSideStatuses, 0, sizeof(gSideStatuses));
     memset(&gSideTimers, 0, sizeof(gSideTimers));
-    memset(&gWishFutureKnock, 0, sizeof(gWishFutureKnock));
     memset(&gBattleResults, 0, sizeof(gBattleResults));
     ClearSetBScriptingStruct();
 
@@ -3282,6 +3265,7 @@ void SwitchInClearSetData(u32 battler, struct Volatiles *volatilesCopy)
 
     gBattleStruct->moveResultFlags[battler] = 0;
     gBattleStruct->battlerState[battler].isFirstTurn = 2;
+    gBattleStruct->battlerState[battler].fainted = FALSE;
     gBattleMons[battler].volatiles.truantSwitchInHack = volatilesCopy->truantSwitchInHack;
     gLastMoves[battler] = MOVE_NONE;
     gLastLandedMoves[battler] = MOVE_NONE;
@@ -3323,9 +3307,7 @@ void SwitchInClearSetData(u32 battler, struct Volatiles *volatilesCopy)
     gBattleStruct->eventState.arenaTurn = 0xFF;
 
     // Reset damage to prevent things like red card activating if the switched-in mon is holding it
-    gSpecialStatuses[battler].physicalDmg = 0;
-    gSpecialStatuses[battler].specialDmg = 0;
-    gSpecialStatuses[battler].enduredDamage = FALSE;
+    gSpecialStatuses[battler].damagedByAttack = FALSE;
 
     // Reset Eject Button / Eject Pack switch detection
     gAiLogicData->ejectButtonSwitch = FALSE;
@@ -3391,6 +3373,7 @@ const u8* FaintClearSetData(u32 battler)
     gProtectStructs[battler].pranksterElevated = FALSE;
 
     gBattleStruct->battlerState[battler].isFirstTurn = 2;
+    gBattleStruct->battlerState[battler].fainted = TRUE;
 
     gLastMoves[battler] = MOVE_NONE;
     gLastLandedMoves[battler] = MOVE_NONE;
@@ -3783,7 +3766,7 @@ static void DoBattleIntro(void)
     case BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS:
         if (!gBattleControllerExecFlags)
         {
-            gBattleStruct->eventState.beforeFristTurn = 0;
+            gBattleStruct->eventState.beforeFirstTurn = 0;
             gBattleStruct->switchInBattlerCounter = 0;
             Ai_InitPartyStruct(); // Save mons party counts, and first 2/4 mons on the battlefield.
 
@@ -3817,7 +3800,7 @@ static void TryDoEventsBeforeFirstTurn(void)
     if (gBattleControllerExecFlags)
         return;
 
-    switch (gBattleStruct->eventState.beforeFristTurn)
+    switch (gBattleStruct->eventState.beforeFirstTurn)
     {
     case FIRST_TURN_EVENTS_START:
         // Set invalid mons as absent(for example when starting a double battle with only one pokemon).
@@ -3848,15 +3831,15 @@ static void TryDoEventsBeforeFirstTurn(void)
 
         gBattleStruct->speedTieBreaks = RandomUniform(RNG_SPEED_TIE, 0, Factorial(MAX_BATTLERS_COUNT) - 1);
         gBattleTurnCounter = 0;
-        gBattleStruct->eventState.beforeFristTurn++;
+        gBattleStruct->eventState.beforeFirstTurn++;
         break;
     case FIRST_TURN_EVENTS_OVERWORLD_WEATHER:
-        gBattleStruct->eventState.beforeFristTurn++;
+        gBattleStruct->eventState.beforeFirstTurn++;
         if (TryFieldEffects(FIELD_EFFECT_OVERWORLD_WEATHER))
             return;
         break;
     case FIRST_TURN_EVENTS_TERRAIN:
-        gBattleStruct->eventState.beforeFristTurn++;
+        gBattleStruct->eventState.beforeFirstTurn++;
         if (TryFieldEffects(FIELD_EFFECT_OVERWORLD_TERRAIN))
             return;
         break;
@@ -3867,7 +3850,7 @@ static void TryDoEventsBeforeFirstTurn(void)
                 return;
             break;
         }
-        gBattleStruct->eventState.beforeFristTurn++;
+        gBattleStruct->eventState.beforeFirstTurn++;
         break;
     case FIRST_TURN_EVENTS_TOTEM_BOOST:
         for (i = 0; i < gBattlersCount; i++)
@@ -3880,21 +3863,21 @@ static void TryDoEventsBeforeFirstTurn(void)
             }
         }
         memset(gQueuedStatBoosts, 0, sizeof(gQueuedStatBoosts)); // erase all totem boosts for Mirror Herb and Opportunist
-        gBattleStruct->eventState.beforeFristTurn++;
+        gBattleStruct->eventState.beforeFirstTurn++;
         break;
     case FIRST_TURN_SWITCH_IN_EVENTS:
         gBattleStruct->eventState.switchIn = 0;
         for (u32 battler = 0; battler < gBattlersCount; battler++)
             gBattleStruct->battlerState[battler].switchIn = TRUE;
         BattleScriptPushCursorAndCallback(BattleScript_FirstTurnSwitchInEvents);
-        gBattleStruct->eventState.beforeFristTurn++;
+        gBattleStruct->eventState.beforeFirstTurn++;
         break;
     case FIRST_TURN_FAINTED_BATTLERS:
         // Handle any Pokemon that fainted from starting hazards before transitioning to action selection
         if (HandleFaintedMonActions())
             return;
         gBattleStruct->eventState.faintedAction = 0;
-        gBattleStruct->eventState.beforeFristTurn++;
+        gBattleStruct->eventState.beforeFirstTurn++;
         break;
     case FIRST_TURN_EVENTS_END:
         for (i = 0; i < MAX_BATTLERS_COUNT; i++)
@@ -3931,7 +3914,7 @@ static void TryDoEventsBeforeFirstTurn(void)
 
         if ((i = ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), TRAINER_SLIDE_BEFORE_FIRST_TURN)))
             BattleScriptExecute(i == 1 ? BattleScript_TrainerASlideMsgEnd2 : BattleScript_TrainerBSlideMsgEnd2);
-        gBattleStruct->eventState.beforeFristTurn = 0;
+        gBattleStruct->eventState.beforeFirstTurn = 0;
         break;
     }
 }
@@ -5688,7 +5671,7 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
         {
             ZeroEnemyPartyMons();
         }
-        ResetDynamicAiFunc();
+        ResetDynamicAiFunctions();
         FreeMonSpritesGfx();
         FreeBattleResources();
         FreeBattleSpritesData();
