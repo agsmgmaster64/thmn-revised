@@ -5,10 +5,6 @@
 
 //TO_DO_BATTLE_TEST("Delta Stream doesn't activate if is sent-out in a rotated-out position (Rotation)")
 //TO_DO_BATTLE_TEST("Delta Stream doesn't activate if is rotated-in (Rotation)")
-<<<<<<< HEAD
-TO_DO_BATTLE_TEST("Delta Stream doesn't activate if there's already strong winds")
-TO_DO_BATTLE_TEST("Strong winds continue as long as there's a Pokémon with Delta Stream on the field") // Doesn't need to be the original mon
-=======
 DOUBLE_BATTLE_TEST("Delta Stream doesn't activate if there's already strong winds")
 {
     GIVEN {
@@ -51,4 +47,3 @@ DOUBLE_BATTLE_TEST("Strong winds continue as long as there's a Pokémon with Del
         EXPECT(gBattleWeather & B_WEATHER_STRONG_WINDS);
     }
 }
->>>>>>> RHH/upcoming

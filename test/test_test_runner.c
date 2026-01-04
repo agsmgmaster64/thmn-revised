@@ -10,8 +10,6 @@ TEST("Tests resume after CRASH")
     f();
 }
 
-<<<<<<< HEAD
-=======
 MULTI_BATTLE_TEST("Forced Abilities are set correctly in multi battle tests")
 {
     GIVEN {
@@ -31,7 +29,6 @@ MULTI_BATTLE_TEST("Forced Abilities are set correctly in multi battle tests")
     }
 }
 
->>>>>>> RHH/upcoming
 SINGLE_BATTLE_TEST("Substitute hits are detected by SUB_HIT")
 {
     GIVEN {

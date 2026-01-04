@@ -99,19 +99,6 @@ SINGLE_BATTLE_TEST("Desolate Land is removed immediately if user faints")
     }
 }
 
-<<<<<<< HEAD
-TO_DO_BATTLE_TEST("Desolate Land makes Sunny Day fail")
-TO_DO_BATTLE_TEST("Desolate Land makes Rain Dance fail")
-TO_DO_BATTLE_TEST("Desolate Land makes Sandstorm fail")
-TO_DO_BATTLE_TEST("Desolate Land makes Hail fail")
-TO_DO_BATTLE_TEST("Desolate Land makes Snowscape fail") // Extrapolation
-TO_DO_BATTLE_TEST("Desolate Land makes Drought fail to activate")
-TO_DO_BATTLE_TEST("Desolate Land makes Drizzle fail to activate")
-TO_DO_BATTLE_TEST("Desolate Land makes Sand Stream fail to activate")
-TO_DO_BATTLE_TEST("Desolate Land makes Snow Warning fail to activate")
-TO_DO_BATTLE_TEST("Desolate Land can be replaced by Delta Stream")
-TO_DO_BATTLE_TEST("Desolate Land can be replaced by Primordial Sea")
-=======
 SINGLE_BATTLE_TEST("Desolate Land blocks weather-setting moves")
 {
     u16 move;
@@ -190,4 +177,3 @@ SINGLE_BATTLE_TEST("Desolate Land can be replaced by Primordial Sea")
         EXPECT(gBattleWeather & B_WEATHER_RAIN_PRIMAL);
     }
 }
->>>>>>> RHH/upcoming

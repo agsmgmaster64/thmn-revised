@@ -100,7 +100,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_NONE] =
     {
         .speciesName = _("??????????"),
-        .cryId = CRY_PORYGON,
+        .cryId = CRY_NONE,
         .natDexNum = NATIONAL_DEX_NONE,
         .categoryName = _("Unknown"),
         .height = 0,
