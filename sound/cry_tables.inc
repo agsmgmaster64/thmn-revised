@@ -127,6 +127,7 @@ gCryTable::
 	cry Cry_Tokiko
 	cry Cry_Kosuzu
 	cry Cry_Miyoi
+	cry Cry_Mizuchi
 	cry Cry_Hakurei
 	cry Cry_Kirisame
 	cry Cry_Genji
@@ -323,6 +324,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Tokiko
 	cry_reverse Cry_Kosuzu
 	cry_reverse Cry_Miyoi
+	cry_reverse Cry_Mizuchi
 	cry_reverse Cry_Hakurei
 	cry_reverse Cry_Kirisame
 	cry_reverse Cry_Genji

@@ -305,9 +305,9 @@
 #define SPECIES_EARTH_HECATIA                           296
 #define SPECIES_MOON_HECATIA                            297
 #define SPECIES_CHIBI_ETERNITY                          298
-#define SPECIES_CHIBI_JOON                             299
-#define SPECIES_NORMAL_JOON                            300
-#define SPECIES_EXTRA_JOON                             301
+#define SPECIES_CHIBI_JOON                              299
+#define SPECIES_NORMAL_JOON                             300
+#define SPECIES_EXTRA_JOON                              301
 #define SPECIES_CHIBI_SHION                             302
 #define SPECIES_NORMAL_SHION                            303
 #define SPECIES_EXTRA_SHION                             304
@@ -496,16 +496,16 @@
 #define SPECIES_EXTRA_SHINKI                            487
 #define SPECIES_YORIHIME                                488
 #define SPECIES_TOYOHIME                                489
-#define SPECIES_REISENII                                490
-#define SPECIES_CHIBI_SUNNYMILK                         491
-#define SPECIES_NORMAL_SUNNYMILK                        492
-#define SPECIES_EXTRA_SUNNYMILK                         493
-#define SPECIES_CHIBI_LUNACHILD                         494
-#define SPECIES_NORMAL_LUNACHILD                        495
-#define SPECIES_EXTRA_LUNACHILD                         496
-#define SPECIES_CHIBI_STARSAPPHIRE                      497
-#define SPECIES_NORMAL_STARSAPPHIRE                     498
-#define SPECIES_EXTRA_STARSAPPHIRE                      499
+#define SPECIES_REISEN_II                               490
+#define SPECIES_CHIBI_SUNNY                             491
+#define SPECIES_NORMAL_SUNNY                            492
+#define SPECIES_EXTRA_SUNNY                             493
+#define SPECIES_CHIBI_LUNA                              494
+#define SPECIES_NORMAL_LUNA                             495
+#define SPECIES_EXTRA_LUNA                              496
+#define SPECIES_CHIBI_STAR                              497
+#define SPECIES_NORMAL_STAR                             498
+#define SPECIES_EXTRA_STAR                              499
 #define SPECIES_AKYUU                                   500
 #define SPECIES_RINNOSUKE                               501
 #define SPECIES_CHIBI_TOKIKO                            502
@@ -554,7 +554,7 @@
 #define SPECIES_ANGEL_VIVIT                             545
 #define SPECIES_SCARLET_WITCH                           546
 #define SPECIES_KOUMAJOU_SAKUYA                         547
-#define SPECIES_JOSHIKOSEI_SANAE                        548
+#define SPECIES_JOSHI_KOSEI_SANAE                       548
 #define SPECIES_SWORD_MASTER                            549
 #define SPECIES_TINY_GHOST                              550
 #define SPECIES_SPACE_LUNATIC                           551
@@ -571,6 +571,9 @@
 #define SPECIES_EXTRA_TEWI                              562
 #define SPECIES_ADVENT_TEWI                             563
 #define SPECIES_EXTRA_SATSUKI                           564
+#define SPECIES_EXTRA_HIMAWARI                          565
+#define SPECIES_NAMAZU                                  566
+#define SPECIES_NORMAL_HECATIA                          567
 
 //Pokemon
 #define SPECIES_BULBASAUR                               1

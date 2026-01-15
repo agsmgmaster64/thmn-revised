@@ -23154,7 +23154,7 @@ static const struct LevelUpMove sAkyuuLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sReisen_IILevelUpLearnset[] = { 
+static const struct LevelUpMove sReisenIILevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
@@ -23434,7 +23434,7 @@ static const struct LevelUpMove sERinLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sZombie_FairyLevelUpLearnset[] = { 
+static const struct LevelUpMove sZombieFairyLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };

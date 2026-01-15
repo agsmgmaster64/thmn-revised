@@ -893,6 +893,10 @@ Cry_Miyoi::
 	.incbin "sound/direct_sound_samples/cries/miyoi.bin"
 
 	.align 2
+Cry_Mizuchi::
+	.incbin "sound/direct_sound_samples/cries/mizuchi.bin"
+
+	.align 2
 Cry_Hakurei::
 	.incbin "sound/direct_sound_samples/cries/hakurei.bin"
 

@@ -130,6 +130,7 @@ enum PokemonCry
     CRY_TOKIKO,
     CRY_KOSUZU,
     CRY_MIYOI,
+    CRY_MIZUCHI,
     CRY_HAKUREI,
     CRY_KIRISAME,
     CRY_GENJI,
