@@ -105,7 +105,7 @@
 #define SPECIES_NORMAL_MYSTIA                           96
 #define SPECIES_EXTRA_MYSTIA                            97
 #define SPECIES_ADVENT_MYSTIA                           98
-#define SPECIES_ROCKER_MYSTIA                           99
+#define SPECIES_PUNK_MYSTIA                             99
 #define SPECIES_CHIBI_KEINE                             100
 #define SPECIES_NORMAL_KEINE                            101
 #define SPECIES_EXTRA_KEINE                             102
@@ -233,7 +233,7 @@
 #define SPECIES_CHIBI_KYOUKO                            224
 #define SPECIES_NORMAL_KYOUKO                           225
 #define SPECIES_EXTRA_KYOUKO                            226
-#define SPECIES_ROCKER_KYOUKO                           227
+#define SPECIES_PUNK_KYOUKO                             227
 #define SPECIES_CHIBI_YOSHIKA                           228
 #define SPECIES_NORMAL_YOSHIKA                          229
 #define SPECIES_EXTRA_YOSHIKA                           230
@@ -552,12 +552,12 @@
 #define SPECIES_ISAMI                                   543
 #define SPECIES_VIVIT                                   544
 #define SPECIES_ANGEL_VIVIT                             545
-#define SPECIES_ALTERNATE_MARISA                        546
-#define SPECIES_TOUHOUVANIA_SAKUYA                      547
+#define SPECIES_SCARLET_WITCH                           546
+#define SPECIES_KOUMAJOU_SAKUYA                         547
 #define SPECIES_JOSHIKOSEI_SANAE                        548
-#define SPECIES_ALTERNATE_YOUMU                         549
-#define SPECIES_ALTERNATE_YUYUKO                        550
-#define SPECIES_ALTERNATE_REISEN                        551
+#define SPECIES_SWORD_MASTER                            549
+#define SPECIES_TINY_GHOST                              550
+#define SPECIES_SPACE_LUNATIC                           551
 #define SPECIES_X_REIMU                                 552
 #define SPECIES_X_MARISA                                553
 #define SPECIES_X_SAKUYA                                554
@@ -570,6 +570,7 @@
 #define SPECIES_NORMAL_TEWI                             561
 #define SPECIES_EXTRA_TEWI                              562
 #define SPECIES_ADVENT_TEWI                             563
+#define SPECIES_EXTRA_SATSUKI                           564
 
 //Pokemon
 #define SPECIES_BULBASAUR                               1

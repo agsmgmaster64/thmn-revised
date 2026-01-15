@@ -22354,7 +22354,7 @@ static const struct LevelUpMove sAdMarisaLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sScarlet_WitchLevelUpLearnset[] = { 
+static const struct LevelUpMove sScarletWitchLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
@@ -22689,7 +22689,7 @@ static const struct LevelUpMove sEYoumuLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sSword_MasterLevelUpLearnset[] = { 
+static const struct LevelUpMove sSwordMasterLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
@@ -22714,7 +22714,7 @@ static const struct LevelUpMove sEYuyukoLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sTiny_GhostLevelUpLearnset[] = { 
+static const struct LevelUpMove sTinyGhostLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
@@ -22934,7 +22934,7 @@ static const struct LevelUpMove sAdReisenLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sSpace_LunaticLevelUpLearnset[] = { 
+static const struct LevelUpMove sSpaceLunaticLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };

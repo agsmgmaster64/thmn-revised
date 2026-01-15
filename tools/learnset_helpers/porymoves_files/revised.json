@@ -383,7 +383,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "KD_SAKUYA": {
+  "K_DSAKUYA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1331,7 +1331,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "PUNK_MYSTIA": {
+  "C_GMYSTIA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1379,7 +1379,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "HAKUTAKU_KEINE": {
+  "H_KEINE": {
     "LevelMoves": [
       {
         "Level": 1,
