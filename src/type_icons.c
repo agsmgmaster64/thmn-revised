@@ -237,7 +237,7 @@ void LoadTypeIcons(u32 battler)
     u32 position;
 
     struct Pokemon* mon = GetBattlerMon(battler);
-    u32 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u32 species = GetMonData(mon, MON_DATA_SPECIES);
 
     if (gSaveBlock2Ptr->optionsShowTypes == OPTIONS_GENERAL_OFF)
         return;

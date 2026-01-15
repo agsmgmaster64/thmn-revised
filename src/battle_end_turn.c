@@ -13,7 +13,7 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 
-static u32 GetBattlerSideForMessage(u32 side)
+static u32 GetBattlerSideForMessage(enum BattleSide side)
 {
     u32 battler = 0;
 
@@ -246,6 +246,7 @@ static bool32 HandleEndTurnFutureSight(u32 battler)
         gBattlerTarget = battler;
         gBattlerAttacker = gBattleStruct->futureSight[battler].battlerIndex;
         gCurrentMove = gBattleStruct->futureSight[battler].move;
+        gBattleStruct->eventState.atkCanceler = CANCELER_TARGET_FAILURE;
 
         if (!IsFutureSightAttackerInParty(gBattlerAttacker, gBattlerTarget, gCurrentMove))
             SetTypeBeforeUsingMove(gCurrentMove, gBattlerAttacker);
@@ -290,7 +291,7 @@ static bool32 HandleEndTurnWish(u32 battler)
 static bool32 HandleEndTurnFirstEventBlock(u32 battler)
 {
     bool32 effect = FALSE;
-    u32 side;
+    enum BattleSide side;
 
     if (!IsBattlerAlive(battler))
     {
@@ -522,7 +523,7 @@ static bool32 HandleEndTurnBurn(u32 battler)
      && IsBattlerAlive(battler)
      && !IsAbilityAndRecord(battler, ability, ABILITY_MAGIC_GUARD))
     {
-        s32 burnDamage = GetNonDynamaxMaxHP(battler) / (GetConfig(CONFIG_BURN_DAMAGE) >= GEN_7 ? 16 : 8);
+        s32 burnDamage = GetNonDynamaxMaxHP(battler) / ((GetConfig(CONFIG_BURN_DAMAGE) >= GEN_7 || GetConfig(CONFIG_BURN_DAMAGE) == GEN_1) ? 16 : 8);
         if (ability == ABILITY_HEATPROOF)
         {
             if (burnDamage > (burnDamage / 2) + 1) // Record ability if the burn takes less damage than it normally would.
@@ -547,7 +548,7 @@ static bool32 HandleEndTurnFrostbite(u32 battler)
      && IsBattlerAlive(battler)
      && !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
     {
-        SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / (GetConfig(CONFIG_BURN_DAMAGE) >= GEN_7 ? 16 : 8));
+        SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / ((GetConfig(CONFIG_BURN_DAMAGE) >= GEN_7 || GetConfig(CONFIG_BURN_DAMAGE) == GEN_1) ? 16 : 8));
         BattleScriptExecute(BattleScript_FrostbiteTurnDmg);
         effect = TRUE;
     }
@@ -565,7 +566,7 @@ static bool32 HandleEndTurnNightmare(u32 battler)
      && IsBattlerAlive(battler)
      && !IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
     {
-        if (gBattleMons[battler].status1 & STATUS1_SLEEP)
+        if (gBattleMons[battler].status1 & STATUS1_SLEEP || GetBattlerAbility(battler) == ABILITY_COMATOSE)
         {
             SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 4);
             BattleScriptExecute(BattleScript_NightmareTurnDmg);
@@ -899,9 +900,11 @@ static bool32 HandleEndTurnYawn(u32 battler)
             else
             {
                 if (B_SLEEP_TURNS >= GEN_5)
-                    gBattleMons[battler].status1 |= ((Random() % 3) + 2);
+                    gBattleMons[battler].status1 |= (RandomUniform(RNG_SLEEP_TURNS, 2, 4));
+                else if (B_SLEEP_TURNS >= GEN_3)
+                    gBattleMons[battler].status1 |= (RandomUniform(RNG_SLEEP_TURNS, 2, 5));
                 else
-                    gBattleMons[battler].status1 |= ((Random() % 4) + 3);
+                    gBattleMons[battler].status1 |= (RandomUniform(RNG_SLEEP_TURNS, 2, 8));
 
                 CancelMultiTurnMoves(battler, SKY_DROP_STATUS_YAWN);
                 TryActivateSleepClause(battler, gBattlerPartyIndexes[battler]);
@@ -958,7 +961,7 @@ static bool32 HandleEndTurnSecondEventBlock(u32 battler)
 {
     bool32 effect = FALSE;
 
-    u32 side = gBattleStruct->eventState.battlerSide;
+    enum BattleSide side = gBattleStruct->eventState.battlerSide;
 
     switch (gBattleStruct->eventState.endTurnBlock)
     {
@@ -1480,9 +1483,9 @@ static bool32 (*const sEndTurnEffectHandlers[])(u32 battler) =
     [ENDTURN_TRAINER_PARTNER_SLIDES] = HandleEndTurnTrainerPartnerSlides,
 };
 
-u32 DoEndTurnEffects(void)
+bool32 DoEndTurnEffects(void)
 {
-    u32 battler = MAX_BATTLERS_COUNT;
+    enum BattlerId battler = MAX_BATTLERS_COUNT;
 
     for (;;)
     {

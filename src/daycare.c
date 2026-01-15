@@ -295,10 +295,13 @@ static void StorePokemonInEmptyDaycareSlot(struct Pokemon *mon, struct DayCare *
 
 void StoreSelectedPokemonInDaycare(void)
 {
-    u8 monId = GetCursorSelectionMonId();
-    if(gSpecialVar_MonBoxId == 0xFF)
+    if (gSpecialVar_MonBoxId == 0xFF)
     {
-        StorePokemonInEmptyDaycareSlot(&gPlayerParty[monId], &gSaveBlock1Ptr->daycare);
+        StorePokemonInEmptyDaycareSlot(&gPlayerParty[GetCursorSelectionMonId()], &gSaveBlock1Ptr->daycare);
+    }
+    else if (gSpecialVar_MonBoxId == TOTAL_BOXES_COUNT) // Selected party mon from PC
+    {
+        StorePokemonInEmptyDaycareSlot(&gPlayerParty[gSpecialVar_MonBoxPos], &gSaveBlock1Ptr->daycare);
     }
     else
     {
@@ -591,7 +594,7 @@ static void _TriggerPendingDaycareEgg(struct DayCare *daycare)
     // inherit nature
     else
     {
-        u8 wantedNature = GetNatureFromPersonality(GetBoxMonData(&daycare->mons[parent].mon, MON_DATA_PERSONALITY, NULL));
+        u8 wantedNature = GetNatureFromPersonality(GetBoxMonData(&daycare->mons[parent].mon, MON_DATA_PERSONALITY));
         u32 personality;
 
         do
@@ -825,7 +828,7 @@ u8 GetEggMovesBySpecies(u16 species, u16 *eggMoves)
     return numEggMoves;
 }
 
-bool8 SpeciesCanLearnEggMove(u16 species, u16 move) //Move search PokedexPlus HGSS_Ui
+bool8 SpeciesCanLearnEggMove(u16 species, enum Move move) //Move search PokedexPlus HGSS_Ui
 {
     u32 i;
     const u16 *eggMoveLearnset = GetSpeciesEggMoves(species);
@@ -917,7 +920,7 @@ static void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, stru
             {
                 for (j = 0; j < NUM_ALL_MACHINES; j++)
                 {
-                    u16 moveId = GetTMHMMoveId(j + 1);
+                    enum Move moveId = GetTMHMMoveId(j + 1);
                     if (sHatchedEggFatherMoves[i] == moveId && CanLearnTeachableMove(GetMonData(egg, MON_DATA_SPECIES_OR_EGG), moveId))
                     {
                         if (GiveMoveToMon(egg, sHatchedEggFatherMoves[i]) == MON_HAS_MAX_MOVES)
@@ -1104,7 +1107,7 @@ void CreateEgg(struct Pokemon *mon, u16 species, bool8 setHotSpringsLocation)
     metloc_u8_t metLocation;
     u8 isEgg;
 
-    CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+    CreateRandomMonWithIVs(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS);
     metLevel = 0;
     ball = BALL_POKE;
     language = LANGUAGE_JAPANESE;
@@ -1131,7 +1134,7 @@ static void SetInitialEggData(struct Pokemon *mon, u16 species, struct DayCare *
     u8 language;
 
     personality = daycare->offspringPersonality;
-    CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, TRUE, personality, OT_ID_PLAYER_ID, 0);
+    CreateMonWithIVs(mon, species, EGG_HATCH_LEVEL, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
     metLevel = 0;
     ball = BALL_POKE;
     language = LANGUAGE_JAPANESE;
@@ -1241,12 +1244,16 @@ u16 GetSelectedMonNicknameAndSpecies(void)
         GetBoxMonNickname(&gPlayerParty[GetCursorSelectionMonId()].box, gStringVar1);
         return GetBoxMonData(&gPlayerParty[GetCursorSelectionMonId()].box, MON_DATA_SPECIES);
     }
+    else if (gSpecialVar_MonBoxId == TOTAL_BOXES_COUNT) // Selected party mon from PC
+    {
+        GetBoxMonNickname(&gPlayerParty[gSpecialVar_MonBoxPos].box, gStringVar1);
+        return GetBoxMonData(&gPlayerParty[gSpecialVar_MonBoxPos].box, MON_DATA_SPECIES);
+    }
     else
     {
         GetBoxMonNickname(&gPokemonStoragePtr->boxes[gSpecialVar_MonBoxId][gSpecialVar_MonBoxPos], gStringVar1);
         return GetBoxMonData(&gPokemonStoragePtr->boxes[gSpecialVar_MonBoxId][gSpecialVar_MonBoxPos], MON_DATA_SPECIES);
     }
-    
 }
 
 void GetDaycareMonNicknames(void)
@@ -1470,6 +1477,7 @@ static void DaycareAddTextPrinter(u8 windowId, const u8 *text, u32 x, u32 y)
     struct TextPrinterTemplate printer;
 
     printer.currentChar = text;
+    printer.type = WINDOW_TEXT_PRINTER;
     printer.windowId = windowId;
     printer.fontId = FONT_NORMAL;
     printer.x = x;

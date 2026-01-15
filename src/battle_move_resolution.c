@@ -12,9 +12,9 @@
 #include "constants/battle_move_resolution.h"
 
 static void ValidateBattlers(void);
-static u32 GetOriginallyUsedMove(u32 chosenMove);
+static enum Move GetOriginallyUsedMove(enum Move chosenMove);
 static void SetSameMoveTurnValues(u32 moveEffect);
-static void TryClearChargeVolatile(u32 moveType);
+static void TryClearChargeVolatile(enum Type moveType);
 static inline bool32 IsBattlerUsingBeakBlast(u32 battler);
 
 // Attackcanceler
@@ -101,7 +101,7 @@ static enum MoveEndResult MoveEnd_ProtectLikeEffect(void)
     // Not strictly a protect effect, but works the same way
     if (IsBattlerUsingBeakBlast(gBattlerTarget)
      && CanBeBurned(gBattlerAttacker, gBattlerAttacker, GetBattlerAbility(gBattlerAttacker))
-     && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+     && !IsBattlerUnaffectedByMove(gBattlerTarget))
     {
         gBattleMons[gBattlerAttacker].status1 = STATUS1_BURN;
         BtlController_EmitSetMonData(gBattlerAttacker, B_COMM_TO_CONTROLLER, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gBattlerAttacker].status1), &gBattleMons[gBattlerAttacker].status1);
@@ -288,7 +288,7 @@ static enum MoveEndResult MoveEnd_AttackerVisible(void)
 {
     enum MoveEndResult result = MOVEEND_STEP_CONTINUE;
 
-    if (gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT
+    if (IsBattlerUnaffectedByMove(gBattlerTarget)
         || !IsSemiInvulnerable(gBattlerAttacker, CHECK_ALL)
         || gBattleStruct->unableToUseMove)
     {
@@ -361,7 +361,6 @@ static enum MoveEndResult MoveEnd_Symbiosis(void)
             gLastUsedAbility = gBattleMons[BATTLE_PARTNER(battler)].ability;
             gEffectBattler = battler;
             gBattleScripting.battler = gBattlerAbility = BATTLE_PARTNER(battler);
-            gBattlerAttacker = battler;
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_SymbiosisActivates;
             result = MOVEEND_STEP_RUN_SCRIPT;
@@ -400,7 +399,7 @@ static enum MoveEndResult MoveEnd_FaintBlock(void)
              && IsBattlerAlive(gBattlerAttacker)
              && !gBattleStruct->unableToUseMove
              && (gBattleStruct->doneDoublesSpreadHit || !IsDoubleSpreadMove())
-             && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+             && !IsBattlerUnaffectedByMove(gBattlerTarget))
             {
                 BattleScriptCall(BattleScript_FinalGambit);
                 result = MOVEEND_STEP_RUN_SCRIPT;
@@ -471,7 +470,7 @@ static enum MoveEndResult MoveEnd_FaintBlock(void)
             {
                 if (gBattleResults.opponentFaintCounter < 255)
                     gBattleResults.opponentFaintCounter++;
-                gBattleResults.lastOpponentSpecies = GetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_SPECIES, NULL);
+                gBattleResults.lastOpponentSpecies = GetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_SPECIES);
                 gSideTimers[B_SIDE_OPPONENT].retaliateTimer = 2;
             }
             BattleScriptCall(BattleScript_FaintBattler);
@@ -620,7 +619,7 @@ static enum MoveEndResult MoveEnd_UpdateLastMoves(void)
         if (!(gHitMarker & HITMARKER_FAINTED(gBattlerTarget)))
             gLastHitBy[gBattlerTarget] = gBattlerAttacker;
 
-        if (!gBattleStruct->unableToUseMove && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+        if (!gBattleStruct->unableToUseMove && !IsBattlerUnaffectedByMove(gBattlerTarget))
         {
             if (gChosenMove == MOVE_UNAVAILABLE)
             {
@@ -655,7 +654,7 @@ static enum MoveEndResult MoveEnd_MirrorMove(void)
      && IsBattlerAlive(gBattlerAttacker)
      && IsBattlerAlive(gBattlerTarget)
      && !IsMoveMirrorMoveBanned(GetOriginallyUsedMove(gChosenMove))
-     && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+     && !IsBattlerUnaffectedByMove(gBattlerTarget))
     {
         gBattleStruct->lastTakenMove[gBattlerTarget] = gChosenMove;
         gBattleStruct->lastTakenMoveFrom[gBattlerTarget][gBattlerAttacker] = gChosenMove;
@@ -674,7 +673,7 @@ static enum MoveEndResult MoveEnd_Defrost(void)
         && IsBattlerAlive(gBattlerTarget)
         && gBattlerAttacker != gBattlerTarget
         && (GetBattleMoveType(gCurrentMove) == TYPE_FIRE || CanBurnHitThaw(gCurrentMove))
-        && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+        && !IsBattlerUnaffectedByMove(gBattlerTarget))
     {
         gBattleMons[gBattlerTarget].status1 &= ~STATUS1_FREEZE;
         BtlController_EmitSetMonData(gBattlerTarget, B_COMM_TO_CONTROLLER, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gBattlerTarget].status1), &gBattleMons[gBattlerTarget].status1);
@@ -687,7 +686,7 @@ static enum MoveEndResult MoveEnd_Defrost(void)
           && IsBattlerAlive(gBattlerTarget)
           && gBattlerAttacker != gBattlerTarget
           && MoveThawsUser(GetOriginallyUsedMove(gChosenMove))
-          && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+          && !IsBattlerUnaffectedByMove(gBattlerTarget))
     {
         gBattleMons[gBattlerTarget].status1 &= ~STATUS1_FROSTBITE;
         BtlController_EmitSetMonData(gBattlerTarget, B_COMM_TO_CONTROLLER, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gBattlerTarget].status1), &gBattleMons[gBattlerTarget].status1);
@@ -705,9 +704,25 @@ static enum MoveEndResult MoveEnd_NextTarget(void)
     enum MoveTarget moveTarget = GetBattlerMoveTargetType(gBattlerAttacker, gCurrentMove);
 
     gBattleStruct->battlerState[gBattlerAttacker].targetsDone[gBattlerTarget] = TRUE;
-    if (!gBattleStruct->unableToUseMove
-     && IsSpreadMove(moveTarget)
-     && !gProtectStructs[gBattlerAttacker].chargingTurn)
+
+    if (gBattleStruct->unableToUseMove || gProtectStructs[gBattlerAttacker].chargingTurn)
+    {
+        // unable to use move
+    }
+    else if (moveTarget == TARGET_USER_AND_ALLY)
+    {
+        u32 partner = BATTLE_PARTNER(gBattlerAttacker);
+        if (partner != gBattlerTarget && IsBattlerAlive(partner))
+        {
+            gBattleStruct->moveTarget[gBattlerAttacker] = gBattlerTarget = partner;
+            BattleScriptPush(GetMoveBattleScript(gCurrentMove));
+            gBattlescriptCurrInstr = BattleScript_FlushMessageBox;
+            gBattleScripting.moveendState = 0;
+            MoveValuesCleanUp();
+            return MOVEEND_STEP_BREAK;
+        }
+    }
+    else if (IsSpreadMove(moveTarget))
     {
         u32 nextTarget = GetNextTarget(moveTarget, FALSE);
 
@@ -720,10 +735,7 @@ static enum MoveEndResult MoveEnd_NextTarget(void)
             enum BattleMoveEffects moveEffect = GetMoveEffect(gCurrentMove);
 
             // Edge cases for moves that shouldn't repeat their own script
-            if (IsExplosionMove(gCurrentMove)
-             || moveEffect == EFFECT_MAGNITUDE
-             || moveEffect == EFFECT_SYNCHRONOISE
-             || gBattleMoveEffects[moveEffect].battleScript == BattleScript_EffectTwoTurnsAttack)
+            if (moveEffect == EFFECT_MAGNITUDE)
                 BattleScriptPush(gBattleMoveEffects[EFFECT_HIT].battleScript);
             else
                 BattleScriptPush(GetMoveBattleScript(gCurrentMove));
@@ -778,7 +790,7 @@ static enum MoveEndResult MoveEnd_MultihitMove(void)
 {
     enum MoveEndResult result = MOVEEND_STEP_CONTINUE;
 
-    if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)
+    if (!IsBattlerUnaffectedByMove(gBattlerTarget)
      && !gBattleStruct->unableToUseMove
      && gMultiHitCounter)
     {
@@ -802,7 +814,7 @@ static enum MoveEndResult MoveEnd_MultihitMove(void)
              && !IsAffectedByFollowMe(gBattlerAttacker, GetBattlerSide(gBattlerTarget), gCurrentMove)
              && !(gBattleStruct->moveResultFlags[BATTLE_PARTNER(gBattlerTarget)] & MOVE_RESULT_MISSED) // didn't miss the other target
              && CanTargetPartner(gBattlerAttacker, gBattlerTarget)
-             && !TargetFullyImmuneToCurrMove(gBattlerAttacker, BATTLE_PARTNER(gBattlerTarget)))
+             && !IsBattlerUnaffectedByMove(BATTLE_PARTNER(gBattlerTarget)))
                 gBattlerTarget = BATTLE_PARTNER(gBattlerTarget); // Target the partner in doubles for second hit.
 
             enum BattleMoveEffects chosenEffect = GetMoveEffect(gChosenMove);
@@ -855,7 +867,7 @@ static enum MoveEndResult MoveEnd_MoveBlock(void)
          && CanBattlerGetOrLoseItem(gBattlerTarget, gBattlerAttacker, gBattleMons[gBattlerTarget].item)
          && !NoAliveMonsForEitherParty())
         {
-            u32 side = GetBattlerSide(gBattlerTarget);
+            enum BattleSide side = GetBattlerSide(gBattlerTarget);
 
             if (GetBattlerAbility(gBattlerTarget) == ABILITY_STICKY_HOLD)
             {
@@ -881,7 +893,7 @@ static enum MoveEndResult MoveEnd_MoveBlock(void)
             }
             else
             {
-                GetBattlerPartyState(gBattlerTarget)->knockedOffItem = TRUE;
+                GetBattlerPartyState(gBattlerTarget)->isKnockedOff = TRUE;
             }
 
             BattleScriptCall(BattleScript_KnockedOff);
@@ -965,20 +977,33 @@ static enum MoveEndResult MoveEnd_MoveBlock(void)
         break;
     case EFFECT_RECOIL_IF_MISS:
         if (IsBattlerAlive(gBattlerAttacker)
-         && (!IsBattlerTurnDamaged(gBattlerTarget) || gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)
-         && !gBattleStruct->noTargetPresent)
+         && IsBattlerUnaffectedByMove(gBattlerTarget)
+         && !gBattleStruct->unableToUseMove)
         {
             s32 recoil = 0;
-            if (B_RECOIL_IF_MISS_DMG >= GEN_5 || (B_CRASH_IF_TARGET_IMMUNE == GEN_4 && gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_DOESNT_AFFECT_FOE))
+            if (B_CRASH_IF_TARGET_IMMUNE == GEN_4 && gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_DOESNT_AFFECT_FOE)
+            {
+                recoil = GetNonDynamaxMaxHP(gBattlerTarget) / 2;
+            }
+            if (B_RECOIL_IF_MISS_DMG >= GEN_5)
+            {
                 recoil = GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
-            else if (B_RECOIL_IF_MISS_DMG == GEN_4 && (GetNonDynamaxMaxHP(gBattlerTarget) / 2) < gBattleStruct->moveDamage[gBattlerTarget])
-                recoil = GetNonDynamaxMaxHP(gBattlerTarget) / 2;
-            else if (B_RECOIL_IF_MISS_DMG == GEN_3)
-                recoil = GetNonDynamaxMaxHP(gBattlerTarget) / 2;
+            }
+            else if (B_RECOIL_IF_MISS_DMG >= GEN_3)
+            {
+                if ((GetNonDynamaxMaxHP(gBattlerTarget) / 2) < gBattleStruct->moveDamage[gBattlerTarget])
+                    recoil = gBattleStruct->moveDamage[gBattlerTarget];
+                else
+                    recoil = GetNonDynamaxMaxHP(gBattlerTarget) / 2;
+            }
             else if (B_RECOIL_IF_MISS_DMG == GEN_2)
-                recoil = GetNonDynamaxMaxHP(gBattlerTarget) / 8;
+            {
+                recoil = gBattleStruct->moveDamage[gBattlerTarget] / 8;
+            }
             else
+            {
                 recoil = 1;
+            }
             SetPassiveDamageAmount(gBattlerAttacker, recoil);
             BattleScriptCall(BattleScript_RecoilIfMiss);
             result = MOVEEND_STEP_RUN_SCRIPT;
@@ -1140,129 +1165,92 @@ static enum MoveEndResult MoveEnd_KeeMarangaHpThresholdItemTarget(void)
     return MOVEEND_STEP_CONTINUE;
 }
 
-static enum MoveEndResult MoveEnd_RedCard(void)
+static bool32 TryRedCard(u32 battlerAtk, u32 redCardBattler, u32 move)
+{
+    if (!IsBattlerAlive(redCardBattler)
+     || !IsBattlerTurnDamaged(redCardBattler)
+     || DoesSubstituteBlockMove(battlerAtk, redCardBattler, move)
+     || !CanBattlerSwitch(battlerAtk))
+        return FALSE;
+
+    gLastUsedItem = gBattleMons[redCardBattler].item;
+    SaveBattlerTarget(redCardBattler); // save battler with red card
+    SaveBattlerAttacker(battlerAtk);
+    gBattleScripting.battler = gBattlerTarget = redCardBattler;
+    gEffectBattler = battlerAtk;
+    if (gBattleStruct->battlerState[battlerAtk].commanderSpecies != SPECIES_NONE
+     || GetBattlerAbility(battlerAtk) == ABILITY_GUARD_DOG
+     || GetActiveGimmick(battlerAtk) == GIMMICK_DYNAMAX)
+        BattleScriptCall(BattleScript_RedCardActivationNoSwitch);
+    else
+        BattleScriptCall(BattleScript_RedCardActivates);
+
+    return TRUE;
+}
+
+static bool32 TryEjectButton(u32 battlerAtk, u32 ejectButtonBattler)
+{
+    if (!IsBattlerTurnDamaged(ejectButtonBattler)
+     || !IsBattlerAlive(ejectButtonBattler)
+     || !CanBattlerSwitch(ejectButtonBattler))
+        return FALSE;
+
+    gBattleScripting.battler = ejectButtonBattler;
+    gLastUsedItem = gBattleMons[ejectButtonBattler].item;
+    gBattleStruct->battlerState[ejectButtonBattler].usedEjectItem = TRUE;
+    BattleScriptCall(BattleScript_EjectButtonActivates);
+    gAiLogicData->ejectButtonSwitch = TRUE;
+    return TRUE;
+}
+
+static enum MoveEndResult MoveEnd_CardButton(void)
 {
     enum MoveEndResult result = MOVEEND_STEP_CONTINUE;
     u32 redCardBattlers = 0;
+    u32 ejectButtonBattlers = 0;
 
-    for (u32 i = 0; i < gBattlersCount; i++)
+    // Because sorting the battlers by speed takes lots of cycles, it's better to just check if any of the battlers has the Eject items.
+    for (u32 battlerDef = 0; battlerDef < gBattlersCount; battlerDef++)
     {
-        if (i == gBattlerAttacker)
+        if (gBattlerAttacker == battlerDef)
             continue;
-        if (GetBattlerHoldEffect(i) == HOLD_EFFECT_RED_CARD)
-            redCardBattlers |= (1u << i);
+
+        if (GetBattlerHoldEffect(battlerDef) == HOLD_EFFECT_EJECT_BUTTON)
+            ejectButtonBattlers |= 1u << battlerDef;
+
+        if (GetBattlerHoldEffect(battlerDef) == HOLD_EFFECT_RED_CARD)
+            redCardBattlers |= 1u << battlerDef;
     }
 
-    if (!redCardBattlers || !IsBattlerAlive(gBattlerAttacker))
+    if (!redCardBattlers && !ejectButtonBattlers)
     {
         gBattleScripting.moveendState++;
         return MOVEEND_STEP_CONTINUE;
     }
 
-    // Since we check if battler was damaged, we don't need to check move result.
-    // In fact, doing so actually prevents multi-target moves from activating red card properly
     u8 battlers[4] = {0, 1, 2, 3};
     SortBattlersBySpeed(battlers, FALSE);
 
-    for (u32 i = 0; i < gBattlersCount; i++)
+    for (u32 battlerDef = 0; battlerDef < gBattlersCount; battlerDef++)
     {
-        u32 battler = battlers[i];
-        // Search for fastest hit pokemon with a red card
-        // Attacker is the one to be switched out, battler is one with red card
-        if (redCardBattlers & (1u << battler)
-          && IsBattlerAlive(battler)
-          && !DoesSubstituteBlockMove(gBattlerAttacker, battler, gCurrentMove)
-          && IsBattlerTurnDamaged(battler)
-          && CanBattlerSwitch(gBattlerAttacker)
-          && !(GetMoveEffect(gCurrentMove) == EFFECT_HIT_SWITCH_TARGET && CanBattlerSwitch(battler)))
-        {
-            gLastUsedItem = gBattleMons[battler].item;
-            SaveBattlerTarget(battler); // save battler with red card
-            SaveBattlerAttacker(gBattlerAttacker);
-            gBattleScripting.battler = battler;
-            gEffectBattler = gBattlerAttacker;
-            BattleScriptPushCursor();
-            if (gBattleStruct->battlerState[gBattlerAttacker].commanderSpecies != SPECIES_NONE
-             || GetBattlerAbility(gBattlerAttacker) == ABILITY_GUARD_DOG
-             || GetActiveGimmick(gBattlerAttacker) == GIMMICK_DYNAMAX)
-                gBattlescriptCurrInstr = BattleScript_RedCardActivationNoSwitch;
-            else
-                gBattlescriptCurrInstr = BattleScript_RedCardActivates;
+        u32 battler = battlers[battlerDef];
+
+        // Only fastest red card or eject button activates
+        if (redCardBattlers & 1u << battler && TryRedCard(gBattlerAttacker, battler, gCurrentMove))
             result = MOVEEND_STEP_RUN_SCRIPT;
-            break;  // Only fastest red card activates
-        }
-    }
+        else if (ejectButtonBattlers & 1u << battler && TryEjectButton(gBattlerAttacker, battler))
+            result = MOVEEND_STEP_RUN_SCRIPT;
 
-    if (result == MOVEEND_STEP_RUN_SCRIPT)
-        gBattleScripting.moveendState = MOVEEND_JUMP_TO_HIT_ESCAPE_PLUS_ONE;
-    else
-        gBattleScripting.moveendState++;
-
-    return result;
-}
-
-static inline bool32 CanEjectButtonTrigger(u32 battlerAtk, u32 battlerDef, enum BattleMoveEffects moveEffect)
-{
-    if (GetBattlerHoldEffect(battlerDef) == HOLD_EFFECT_EJECT_BUTTON
-     && battlerAtk != battlerDef
-     && IsBattlerTurnDamaged(battlerDef)
-     && IsBattlerAlive(battlerDef)
-     && CountUsablePartyMons(battlerDef) > 0
-     && !(moveEffect == EFFECT_HIT_SWITCH_TARGET && CanBattlerSwitch(battlerAtk)))
-        return TRUE;
-
-    return FALSE;
-}
-
-static enum MoveEndResult MoveEnd_EjectButton(void)
-{
-    enum MoveEndResult result = MOVEEND_STEP_CONTINUE;
-    u32 numEjectButtonBattlers = 0;
-    u32 ejectButtonBattlers = 0;
-
-    // Because sorting the battlers by speed takes lots of cycles, it's better to just check if any of the battlers has the Eject items.
-    for (u32 i = 0; i < gBattlersCount; i++)
-    {
-        if (CanEjectButtonTrigger(gBattlerAttacker, i, GetMoveEffect(gCurrentMove)))
+        if (result == MOVEEND_STEP_RUN_SCRIPT)
         {
-            ejectButtonBattlers |= 1u << i;
-            numEjectButtonBattlers++;
+            for (u32 i = 0; i < gBattlersCount; i++)
+                gBattleMons[i].volatiles.tryEjectPack = FALSE;
+            gBattleScripting.moveendState = MOVEEND_JUMP_TO_HIT_ESCAPE_PLUS_ONE;
+            return result;
         }
     }
 
-    if (numEjectButtonBattlers == 0)
-    {
-        gBattleScripting.moveendState++;
-        return result;
-    }
-
-    for (u32 i = 0; i < gBattlersCount; i++)
-        gBattleMons[i].volatiles.tryEjectPack = FALSE;
-
-    u8 battlers[4] = {0, 1, 2, 3};
-    if (numEjectButtonBattlers > 1)
-        SortBattlersBySpeed(battlers, FALSE);
-
-    for (u32 i = 0; i < gBattlersCount; i++)
-    {
-        u32 battler = battlers[i];
-
-        if (!(ejectButtonBattlers & 1u << battler))
-            continue;
-
-        gBattleScripting.battler = battler;
-        gLastUsedItem = gBattleMons[battler].item;
-        gBattleStruct->battlerState[battler].usedEjectItem = TRUE;
-        BattleScriptCall(BattleScript_EjectButtonActivates);
-        gAiLogicData->ejectButtonSwitch = TRUE;
-        result = MOVEEND_STEP_RUN_SCRIPT;
-        break; // Only the fastest Eject Button activates
-    }
-
-    if (result == MOVEEND_STEP_RUN_SCRIPT)
-        gBattleScripting.moveendState = MOVEEND_JUMP_TO_HIT_ESCAPE_PLUS_ONE;
-    else
-        gBattleScripting.moveendState++;
+    gBattleScripting.moveendState++;
     return result;
 }
 
@@ -1493,9 +1481,9 @@ static enum MoveEndResult MoveEnd_Pickpocket(void)
 
     if (IsBattlerAlive(gBattlerAttacker)
       && gBattleMons[gBattlerAttacker].item != ITEM_NONE // Attacker must be holding an item
-      && !GetBattlerPartyState(gBattlerAttacker)->knockedOffItem // But not knocked off
+      && !GetBattlerPartyState(gBattlerAttacker)->isKnockedOff // But not knocked off
       && IsMoveMakingContact(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), gCurrentMove) // Pickpocket requires contact
-      && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)) // Obviously attack needs to have worked
+      && !IsBattlerUnaffectedByMove(gBattlerTarget)) // Obviously attack needs to have worked
     {
         u8 battlers[4] = {0, 1, 2, 3};
         SortBattlersBySpeed(battlers, FALSE); // Pickpocket activates for fastest mon without item
@@ -1601,7 +1589,7 @@ static enum MoveEndResult MoveEnd_ClearBits(void)
 {
     ValidateBattlers();
 
-    u32 originallyUsedMove = GetOriginallyUsedMove(gChosenMove);
+    enum Move originallyUsedMove = GetOriginallyUsedMove(gChosenMove);
     enum Type moveType = GetBattleMoveType(gCurrentMove);
     enum BattleMoveEffects moveEffect = GetMoveEffect(gCurrentMove);
 
@@ -1616,7 +1604,7 @@ static enum MoveEndResult MoveEnd_ClearBits(void)
 
     if (B_RAMPAGE_CANCELLING >= GEN_5
       && MoveHasAdditionalEffectSelf(gCurrentMove, MOVE_EFFECT_THRASH)           // If we're rampaging
-      && gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT  // And it is unusable
+      && IsBattlerUnaffectedByMove(gBattlerTarget)  // And it is unusable
       && gBattleMons[gBattlerAttacker].volatiles.rampageTurns != 1)  // And won't end this turn
         CancelMultiTurnMoves(gBattlerAttacker, SKY_DROP_IGNORE); // Cancel it
 
@@ -1631,7 +1619,6 @@ static enum MoveEndResult MoveEnd_ClearBits(void)
     gBattleStruct->poisonPuppeteerConfusion = FALSE;
     gBattleStruct->fickleBeamBoosted = FALSE;
     gBattleStruct->battlerState[gBattlerAttacker].usedMicleBerry = FALSE;
-    gBattleStruct->noTargetPresent = FALSE;
     gBattleStruct->toxicChainPriority = FALSE;
     if (gBattleStruct->unableToUseMove)
         gBattleStruct->pledgeMove = FALSE;
@@ -1777,8 +1764,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(void) =
     [MOVEEND_SHEER_FORCE] = MoveEnd_SheerForce,
     [MOVEEND_COLOR_CHANGE] = MoveEnd_ColorChange,
     [MOVEEND_KEE_MARANGA_HP_THRESHOLD_ITEM_TARGET] = MoveEnd_KeeMarangaHpThresholdItemTarget,
-    [MOVEEND_RED_CARD] = MoveEnd_RedCard,
-    [MOVEEND_EJECT_BUTTON] = MoveEnd_EjectButton,
+    [MOVEEND_CARD_BUTTON] = MoveEnd_CardButton,
     [MOVEEND_LIFE_ORB_SHELL_BELL] = MoveEnd_LifeOrbShellBell,
     [MOVEEND_FORM_CHANGE] = MoveEnd_FormChange,
     [MOVEEND_EMERGENCY_EXIT] = MoveEnd_EmergencyExit,
@@ -1828,7 +1814,7 @@ static void ValidateBattlers(void)
     assertf(gBattleStruct->savedTargetCount == 0, "savedTargetCount is greater than 0");
 }
 
-static u32 GetOriginallyUsedMove(u32 chosenMove)
+static enum Move GetOriginallyUsedMove(enum Move chosenMove)
 {
     return (gChosenMove == MOVE_UNAVAILABLE) ? MOVE_NONE : gChosenMove;
 }
@@ -1875,7 +1861,7 @@ static void SetSameMoveTurnValues(u32 moveEffect)
         gBattleMons[gBattlerAttacker].volatiles.metronomeItemCounter = 0;
 }
 
-static void TryClearChargeVolatile(u32 moveType)
+static void TryClearChargeVolatile(enum Type moveType)
 {
     if (B_CHARGE < GEN_9) // Prior to gen9, charge is cleared during the end turn
         return;
@@ -1885,7 +1871,7 @@ static void TryClearChargeVolatile(u32 moveType)
 
     for (u32 battler = 0; battler < gBattlersCount; battler++)
     {
-        if (gBattleMons[battler].volatiles.chargeTimer == 2) // Has been set this turn by move
+        if (gBattleMons[battler].volatiles.chargeTimer == 2) // Has been set this turn by move or ability
             gBattleMons[battler].volatiles.chargeTimer--;
     }
 }
