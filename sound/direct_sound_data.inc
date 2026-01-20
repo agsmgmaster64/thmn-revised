@@ -825,6 +825,50 @@ Cry_Momoyo::
 	.incbin "sound/direct_sound_samples/cries/momoyo.bin"
 
 	.align 2
+Cry_Biten::
+	.incbin "sound/direct_sound_samples/cries/biten.bin"
+
+	.align 2
+Cry_Enoko::
+	.incbin "sound/direct_sound_samples/cries/enoko.bin"
+
+	.align 2
+Cry_Chiyari::
+	.incbin "sound/direct_sound_samples/cries/chiyari.bin"
+
+	.align 2
+Cry_Hisami::
+	.incbin "sound/direct_sound_samples/cries/hisami.bin"
+
+	.align 2
+Cry_Zanmu::
+	.incbin "sound/direct_sound_samples/cries/zanmu.bin"
+
+	.align 2
+Cry_Ubame::
+	.incbin "sound/direct_sound_samples/cries/ubame.bin"
+
+	.align 2
+Cry_Chimi::
+	.incbin "sound/direct_sound_samples/cries/chimi.bin"
+
+	.align 2
+Cry_Nareko::
+	.incbin "sound/direct_sound_samples/cries/nareko.bin"
+
+	.align 2
+Cry_Yuiman::
+	.incbin "sound/direct_sound_samples/cries/yuiman.bin"
+
+	.align 2
+Cry_Ariya::
+	.incbin "sound/direct_sound_samples/cries/ariya.bin"
+
+	.align 2
+Cry_Nina::
+	.incbin "sound/direct_sound_samples/cries/nina.bin"
+
+	.align 2
 Cry_Suika::
 	.incbin "sound/direct_sound_samples/cries/suika.bin"
 
@@ -1089,7 +1133,7 @@ Cry_Joshi_Kosei_Sanae::
 	.incbin "sound/direct_sound_samples/cries/joshi_kosei_sanae.bin"
 
 	.align 2
-Cry_Dark_Alice::
+Cry_KD_Sakuya::
 	.incbin "sound/direct_sound_samples/cries/dark_alice.bin"
 
 	.align 2
@@ -1155,6 +1199,14 @@ Cry_Advent_Yuyuko::
 	.align 2
 Cry_Advent_Eirin::
 	.incbin "sound/direct_sound_samples/cries/advent_eirin.bin"
+
+	.align 2
+Cry_Advent_Reimu::
+	.incbin "sound/direct_sound_samples/cries/advent_reimu.bin"
+
+	.align 2
+Cry_Advent_Remilia::
+	.incbin "sound/direct_sound_samples/cries/advent_remilia.bin"
 
 .endif @ P_CRIES_ENABLED
 

@@ -110,6 +110,17 @@ gCryTable::
 	cry Cry_Megumu
 	cry Cry_Chimata
 	cry Cry_Momoyo
+	cry Cry_Biten
+	cry Cry_Enoko
+	cry Cry_Chiyari
+	cry Cry_Hisami
+	cry Cry_Zanmu
+	cry Cry_Ubame
+	cry Cry_Chimi
+	cry Cry_Nareko
+	cry Cry_Yuiman
+	cry Cry_Ariya
+	cry Cry_Nina
 	cry Cry_Suika
 	cry Cry_Iku
 	cry Cry_Tenshi
@@ -176,7 +187,7 @@ gCryTable::
 	cry Cry_Mitori
 	cry Cry_Sasha
 	cry Cry_Joshi_Kosei_Sanae
-	cry Cry_Dark_Alice
+	cry Cry_KD_Sakuya
 	cry Cry_Aki_Sisters
 	cry Cry_Advent_Cirno
 	cry Cry_Advent_Reisen
@@ -307,6 +318,17 @@ gCryTable_Reverse::
 	cry_reverse Cry_Megumu
 	cry_reverse Cry_Chimata
 	cry_reverse Cry_Momoyo
+	cry_reverse Cry_Biten
+	cry_reverse Cry_Enoko
+	cry_reverse Cry_Chiyari
+	cry_reverse Cry_Hisami
+	cry_reverse Cry_Zanmu
+	cry_reverse Cry_Ubame
+	cry_reverse Cry_Chimi
+	cry_reverse Cry_Nareko
+	cry_reverse Cry_Yuiman
+	cry_reverse Cry_Ariya
+	cry_reverse Cry_Nina
 	cry_reverse Cry_Suika
 	cry_reverse Cry_Iku
 	cry_reverse Cry_Tenshi
@@ -373,7 +395,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Mitori
 	cry_reverse Cry_Sasha
 	cry_reverse Cry_Joshi_Kosei_Sanae
-	cry_reverse Cry_Dark_Alice
+	cry_reverse Cry_KD_Sakuya
 	cry_reverse Cry_Aki_Sisters
 	cry_reverse Cry_Advent_Cirno
 	cry_reverse Cry_Advent_Reisen
