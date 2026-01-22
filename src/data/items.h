@@ -165,7 +165,7 @@ static const u8 sFigyBerryLongDesc[]      = _("A hold item that restores HP but\
 static const u8 sBerryIngredientLongDesc[]      = _("Can be ground up into a powder as\n"
                                                     "an ingredient for medicine.");
 
-const struct Item gItemsInfo[] =
+const struct ItemInfo gItemsInfo[] =
 {
     [ITEM_NONE] =
     {
