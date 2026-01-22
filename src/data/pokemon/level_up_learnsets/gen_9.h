@@ -24684,7 +24684,7 @@ static const struct LevelUpMove sEMeiraLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sMagic_StonesLevelUpLearnset[] = { 
+static const struct LevelUpMove sMagicStonesLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
@@ -24789,12 +24789,12 @@ static const struct LevelUpMove sRuukotoLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sMimi_chanLevelUpLearnset[] = { 
+static const struct LevelUpMove sMimichanLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sLotus_FlowerLevelUpLearnset[] = { 
+static const struct LevelUpMove sLotusFlowerLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
@@ -25129,7 +25129,7 @@ static const struct LevelUpMove sVIVITLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sAngel_VivitLevelUpLearnset[] = { 
+static const struct LevelUpMove sAngelVivitLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };

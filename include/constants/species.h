@@ -431,7 +431,7 @@
 #define SPECIES_CHIBI_MEIRA                             422
 #define SPECIES_NORMAL_MEIRA                            423
 #define SPECIES_EXTRA_MEIRA                             424
-#define SPECIES_MAGICSTONES                             425
+#define SPECIES_MAGIC_STONES                            425
 #define SPECIES_MATENSHI                                426
 #define SPECIES_CHIBI_ELLEN                             427
 #define SPECIES_NORMAL_ELLEN                            428
@@ -532,9 +532,9 @@
 #define SPECIES_CHIBI_SASHA                             523
 #define SPECIES_NORMAL_SASHA                            524
 #define SPECIES_EXTRA_SASHA                             525
-#define SPECIES_CHIBI_SUGARSATELLITE                    526
-#define SPECIES_NORMAL_SUGARSATELLITE                   527
-#define SPECIES_EXTRA_SUGARSATELLITE                    528
+#define SPECIES_CHIBI_SUGAR                             526
+#define SPECIES_NORMAL_SUGAR                            527
+#define SPECIES_EXTRA_SUGAR                             528
 #define SPECIES_CHIBI_YUUTO                             529
 #define SPECIES_NORMAL_YUUTO                            530
 #define SPECIES_EXTRA_YUUTO                             531
@@ -574,6 +574,14 @@
 #define SPECIES_EXTRA_HIMAWARI                          565
 #define SPECIES_NAMAZU                                  566
 #define SPECIES_NORMAL_HECATIA                          567
+#define SPECIES_CHIBI_KAZAMI                            568
+#define SPECIES_NORMAL_KAZAMI                           569
+#define SPECIES_EXTRA_KAZAMI                            570
+#define SPECIES_EXTRA_HAKUREI                           571
+#define SPECIES_EXTRA_KIRISAME                          572
+#define SPECIES_EXTRA_MARGATROID                        573
+#define SPECIES_EXTRA_KAREN                             574
+#define SPECIES_EXTRA_MELON                             575
 
 //Pokemon
 #define SPECIES_BULBASAUR                               1

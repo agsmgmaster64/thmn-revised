@@ -181,6 +181,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
     #include "species_info/touhou_20_families.h"
     #include "species_info/touhou_spinoff_families.h"
     #include "species_info/touhou_print_families.h"
+    #include "species_info/touhou_fanmade_families.h"
+    #include "species_info/misc_families.h"
 
     [SPECIES_EGG] =
     {

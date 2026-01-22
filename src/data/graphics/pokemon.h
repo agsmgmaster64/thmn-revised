@@ -29764,11 +29764,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_EMeira[] = INCBIN_U16("graphics/pokemon/_add/th/meira/extra/shiny.gbapal");
     const u8 gMonIcon_EMeira[] = INCBIN_U8("graphics/pokemon/_add/th/meira/extra/icon.4bpp");
 
-    const u32 gMonFrontPic_Magic_Stones[] = INCBIN_U32("graphics/pokemon/_add/th/magic_stones/normal/front.4bpp.smol");
-    const u16 gMonPalette_Magic_Stones[] = INCBIN_U16("graphics/pokemon/_add/th/magic_stones/normal/normal.gbapal");
-    const u32 gMonBackPic_Magic_Stones[] = INCBIN_U32("graphics/pokemon/_add/th/magic_stones/normal/back.4bpp.smol");
-    const u16 gMonShinyPalette_Magic_Stones[] = INCBIN_U16("graphics/pokemon/_add/th/magic_stones/normal/shiny.gbapal");
-    const u8 gMonIcon_Magic_Stones[] = INCBIN_U8("graphics/pokemon/_add/th/magic_stones/normal/icon.4bpp");
+    const u32 gMonFrontPic_MagicStones[] = INCBIN_U32("graphics/pokemon/_add/th/magic_stones/normal/front.4bpp.smol");
+    const u16 gMonPalette_MagicStones[] = INCBIN_U16("graphics/pokemon/_add/th/magic_stones/normal/normal.gbapal");
+    const u32 gMonBackPic_MagicStones[] = INCBIN_U32("graphics/pokemon/_add/th/magic_stones/normal/back.4bpp.smol");
+    const u16 gMonShinyPalette_MagicStones[] = INCBIN_U16("graphics/pokemon/_add/th/magic_stones/normal/shiny.gbapal");
+    const u8 gMonIcon_MagicStones[] = INCBIN_U8("graphics/pokemon/_add/th/magic_stones/normal/icon.4bpp");
 
     const u32 gMonFrontPic_Matenshi[] = INCBIN_U32("graphics/pokemon/_add/th/matenshi/normal/front.4bpp.smol");
     const u16 gMonPalette_Matenshi[] = INCBIN_U16("graphics/pokemon/_add/th/matenshi/normal/normal.gbapal");
@@ -29890,17 +29890,17 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_Ruukoto[] = INCBIN_U16("graphics/pokemon/_add/th/ruukoto/normal/shiny.gbapal");
     const u8 gMonIcon_Ruukoto[] = INCBIN_U8("graphics/pokemon/_add/th/ruukoto/normal/icon.4bpp");
 
-    const u32 gMonFrontPic_Mimi_chan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/front.4bpp.smol");
-    const u16 gMonPalette_Mimi_chan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/normal.gbapal");
-    const u32 gMonBackPic_Mimi_chan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/back.4bpp.smol");
-    const u16 gMonShinyPalette_Mimi_chan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/shiny.gbapal");
-    const u8 gMonIcon_Mimi_chan[] = INCBIN_U8("graphics/pokemon/_add/th/mimi_chan/normal/icon.4bpp");
+    const u32 gMonFrontPic_Mimichan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/front.4bpp.smol");
+    const u16 gMonPalette_Mimichan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/normal.gbapal");
+    const u32 gMonBackPic_Mimichan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/back.4bpp.smol");
+    const u16 gMonShinyPalette_Mimichan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/shiny.gbapal");
+    const u8 gMonIcon_Mimichan[] = INCBIN_U8("graphics/pokemon/_add/th/mimi_chan/normal/icon.4bpp");
 
-    const u32 gMonFrontPic_Lotus_Flower[] = INCBIN_U32("graphics/pokemon/_add/th/lotus_flower/normal/front.4bpp.smol");
-    const u16 gMonPalette_Lotus_Flower[] = INCBIN_U16("graphics/pokemon/_add/th/lotus_flower/normal/normal.gbapal");
-    const u32 gMonBackPic_Lotus_Flower[] = INCBIN_U32("graphics/pokemon/_add/th/lotus_flower/normal/back.4bpp.smol");
-    const u16 gMonShinyPalette_Lotus_Flower[] = INCBIN_U16("graphics/pokemon/_add/th/lotus_flower/normal/shiny.gbapal");
-    const u8 gMonIcon_Lotus_Flower[] = INCBIN_U8("graphics/pokemon/_add/th/lotus_flower/normal/icon.4bpp");
+    const u32 gMonFrontPic_LotusFlower[] = INCBIN_U32("graphics/pokemon/_add/th/lotus_flower/normal/front.4bpp.smol");
+    const u16 gMonPalette_LotusFlower[] = INCBIN_U16("graphics/pokemon/_add/th/lotus_flower/normal/normal.gbapal");
+    const u32 gMonBackPic_LotusFlower[] = INCBIN_U32("graphics/pokemon/_add/th/lotus_flower/normal/back.4bpp.smol");
+    const u16 gMonShinyPalette_LotusFlower[] = INCBIN_U16("graphics/pokemon/_add/th/lotus_flower/normal/shiny.gbapal");
+    const u8 gMonIcon_LotusFlower[] = INCBIN_U8("graphics/pokemon/_add/th/lotus_flower/normal/icon.4bpp");
 
     const u32 gMonFrontPic_COrange[] = INCBIN_U32("graphics/pokemon/_add/th/orange/chibi/front.4bpp.smol");
     const u16 gMonPalette_COrange[] = INCBIN_U16("graphics/pokemon/_add/th/orange/chibi/normal.gbapal");
@@ -30298,11 +30298,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_VIVIT[] = INCBIN_U16("graphics/pokemon/_add/th/vivit/normal/shiny.gbapal");
     const u8 gMonIcon_VIVIT[] = INCBIN_U8("graphics/pokemon/_add/th/vivit/normal/icon.4bpp");
 
-    const u32 gMonFrontPic_Angel_Vivit[] = INCBIN_U32("graphics/pokemon/_add/th/vivit/angel/front.4bpp.smol");
-    const u16 gMonPalette_Angel_Vivit[] = INCBIN_U16("graphics/pokemon/_add/th/vivit/angel/normal.gbapal");
-    const u32 gMonBackPic_Angel_Vivit[] = INCBIN_U32("graphics/pokemon/_add/th/vivit/angel/back.4bpp.smol");
-    const u16 gMonShinyPalette_Angel_Vivit[] = INCBIN_U16("graphics/pokemon/_add/th/vivit/angel/shiny.gbapal");
-    const u8 gMonIcon_Angel_Vivit[] = INCBIN_U8("graphics/pokemon/_add/th/vivit/angel/icon.4bpp");
+    const u32 gMonFrontPic_AngelVivit[] = INCBIN_U32("graphics/pokemon/_add/th/vivit/angel/front.4bpp.smol");
+    const u16 gMonPalette_AngelVivit[] = INCBIN_U16("graphics/pokemon/_add/th/vivit/angel/normal.gbapal");
+    const u32 gMonBackPic_AngelVivit[] = INCBIN_U32("graphics/pokemon/_add/th/vivit/angel/back.4bpp.smol");
+    const u16 gMonShinyPalette_AngelVivit[] = INCBIN_U16("graphics/pokemon/_add/th/vivit/angel/shiny.gbapal");
+    const u8 gMonIcon_AngelVivit[] = INCBIN_U8("graphics/pokemon/_add/th/vivit/angel/icon.4bpp");
 
     const u32 gMonFrontPic_TrMaribel[] = INCBIN_U32("graphics/pokemon/_add/th/maribel/transcendent/front.4bpp.smol");
     const u16 gMonPalette_TrMaribel[] = INCBIN_U16("graphics/pokemon/_add/th/maribel/transcendent/normal.gbapal");
