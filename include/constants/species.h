@@ -416,7 +416,8 @@
 #define SPECIES_NORMAL_HAKUREI                          407
 #define SPECIES_CHIBI_KIRISAME                          408
 #define SPECIES_NORMAL_KIRISAME                         409
-#define SPECIES_SHINGYOKU                               410
+#define SPECIES_ORB_SHINGYOKU                           410
+#define SPECIES_SHINGYOKU                               SPECIES_ORB_SHINGYOKU
 #define SPECIES_MIMA                                    411
 #define SPECIES_KONNGARA                                412
 #define SPECIES_YUUGENMAGAN                             413
@@ -582,6 +583,8 @@
 #define SPECIES_EXTRA_MARGATROID                        573
 #define SPECIES_EXTRA_KAREN                             574
 #define SPECIES_EXTRA_MELON                             575
+#define SPECIES_MALE_SHINGYOKU                          576
+#define SPECIES_FEMALE_SHINGYOKU                        577
 
 //Pokemon
 #define SPECIES_BULBASAUR                               1
