@@ -313,6 +313,27 @@ static void WindowFunc_DrawStandardFrame(u8 bg, u8 left, u8 top, u8 width, u8 he
 
 static void WindowFunc_DrawDialogueFrame(u8 bg, u8 left, u8 top, u8 width, u8 height, u8 paletteNum)
 {
+    FillMenuTilemapBufferRect(bg,  1, left - 1,         top - 1,         1, 1);
+    FillMenuTilemapBufferRect(bg,  2, left,             top - 1, width - 1, 1);
+    FillMenuTilemapBufferRect(bg,  3, left + width - 1, top - 1,         1, 1);
+    FillMenuTilemapBufferRect(bg,  4, left + width,     top - 1,         1, 1);
+    FillMenuTilemapBufferRect(bg,  5, left - 2,         top,             1, 1);
+    FillMenuTilemapBufferRect(bg,  6, left - 1,         top,             1, 1);
+    FillMenuTilemapBufferRect(bg,  8, left + width,     top,             1, 1);
+    FillMenuTilemapBufferRect(bg,  9, left - 2,         top + 1,         1, 1);
+    FillMenuTilemapBufferRect(bg, 10, left - 1,         top + 1,         1, 1);
+    FillMenuTilemapBufferRect(bg, 12, left + width,     top + 1,         1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(9),  left - 2,         top + 2,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(10), left - 1,         top + 2,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(12), left + width,     top + 2,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(5),  left - 2,         top + 3,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(6),  left - 1,         top + 3,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(8),  left + width,     top + 3,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(1),  left - 1,         top + 4,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(2),  left,             top + 4, width, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(3),  left + width - 1, top + 4,     1, 1);
+    FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(4),  left + width,     top + 4,     1, 1);
+    /*
     FillMenuTilemapBufferRect(bg,  1, left - 2,         top - 1,         1, 1);
     FillMenuTilemapBufferRect(bg,  3, left - 1,         top - 1,         1, 1);
     FillMenuTilemapBufferRect(bg,  4, left,             top - 1, width - 1, 1);
@@ -326,6 +347,7 @@ static void WindowFunc_DrawDialogueFrame(u8 bg, u8 left, u8 top, u8 width, u8 he
     FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(4), left,             top + height, width - 1, 1);
     FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(5), left + width - 1, top + height,         1, 1);
     FillMenuTilemapBufferRect(bg, BG_TILE_V_FLIP(6), left + width,     top + height,         1, 1);
+    */
 }
 
 static void WindowFunc_ClearStdWindowAndFrame(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum)
