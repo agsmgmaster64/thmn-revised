@@ -72,10 +72,10 @@
 // Changing GEN_LATEST's value to a different Generation will change every default setting that uses it at once.
 #define GEN_LATEST GEN_9
 
-#define IS_AWR                    FALSE // Future-proofing for FRLG support
+#define IS_AWR                    IS_FRLG
 
 // General settings
-#define EXPANSION_INTRO              FALSE    // If TRUE, a custom RHH intro will play after the vanilla copyright screen.
+#define EXPANSION_INTRO              TRUE    // If TRUE, a custom RHH intro will play after the vanilla copyright screen.
 #define HQ_RANDOM                    TRUE    // If TRUE, replaces the default RNG with an implementation of SFC32 RNG. May break code that relies on RNG.
 #define PHONEMES_SHARED              TRUE   // If TRUE, bard phonemes all reference the same sound (sound/direct_sound_samples/phonemes/shared.bin) to save ROM space.
 

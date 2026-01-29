@@ -70,8 +70,7 @@ SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(14, 6));
 */
 
 void ShowPokemonSummaryScreen_BW(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, void (*callback)(void));
-void ShowSelectMovePokemonSummaryScreen_BW(struct Pokemon *mons, u8 monIndex, u8 maxMonIndex, void (*callback)(void), u16 newMove);
-void ShowSelectMoveBoxPokemonSummaryScreen_BW(struct BoxPokemon *mons, u8 monIndex, u8 maxMonIndex, void (*callback)(void), u16 newMove);
+void ShowSelectMovePokemonSummaryScreen_BW(struct Pokemon *mons, u8 monIndex, void (*callback)(void), u16 newMove);
 u8 GetMoveSlotToReplace_BW(void);
 void SummaryScreen_SetAnimDelayTaskId_BW(u8 taskId);
 void SummaryScreen_SetShadowAnimDelayTaskId_BW(u8 taskId);
