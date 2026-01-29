@@ -2,7 +2,7 @@
 
 This is a WIP decomp port of the Touhoumon Revised hacks here. As of currently, this is still in the beginning stages of basically everything here. If you want to contribute to this project here, consider joining the [server](https://discord.gg/2uDesdbatF) and asking me, AGSMGMaster64, or BluShell for anything specific there.
 
-`world-link` is specifically for World Link Revised mapping and scripting and same for `another-world` but for Another World Revised.
+`master` is the main branch where every mechanic relevant for both hacks will be implemented at. `world-link` is specifically for World Link Revised mapping and scripting and same for `another-world` but for Another World Revised.
 
 # About `pokeemerald-expansion`
 
