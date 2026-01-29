@@ -27,6 +27,7 @@ u8 GiveMailToMonByItemId(struct Pokemon *mon, enum Item itemId);
 u8 GiveMailToMon(struct Pokemon *mon, struct Mail *mail);
 void TakeMailFromMon(struct Pokemon *mon);
 void ClearMailItemId(u8 mailId);
+u8 SaveMailToPC(struct Mail *mail);
 u8 TakeMailFromMonAndSave(struct Pokemon *mon);
 bool8 ItemIsMail(enum Item itemId);
 

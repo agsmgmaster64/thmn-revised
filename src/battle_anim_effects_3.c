@@ -2371,12 +2371,12 @@ void AnimTask_HideSwapSprite(u8 taskId)
 
 void AnimTask_HideOpponentShadows(u8 taskId)
 {
-    u32 battlerLeft = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+    enum BattlerId battlerLeft = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
     gSprites[gBattleSpritesDataPtr->healthBoxesData[battlerLeft].shadowSpriteIdPrimary].callback = SpriteCB_SetInvisible;
     gSprites[gBattleSpritesDataPtr->healthBoxesData[battlerLeft].shadowSpriteIdSecondary].callback = SpriteCB_SetInvisible;
     if (IsDoubleBattle())
     {
-        u32 battlerRight = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
+        enum BattlerId battlerRight = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
         gSprites[gBattleSpritesDataPtr->healthBoxesData[battlerRight].shadowSpriteIdPrimary].callback = SpriteCB_SetInvisible;
         gSprites[gBattleSpritesDataPtr->healthBoxesData[battlerRight].shadowSpriteIdSecondary].callback = SpriteCB_SetInvisible;
     }
@@ -2385,11 +2385,11 @@ void AnimTask_HideOpponentShadows(u8 taskId)
 
 void AnimTask_SetOpponentShadowCallbacks(u8 taskId)
 {
-    u32 battlerLeft = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+    enum BattlerId battlerLeft = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
     SetBattlerShadowSpriteCallback(battlerLeft, gBattleMons[battlerLeft].species);
     if (IsDoubleBattle())
     {
-        u32 battlerRight = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
+        enum BattlerId battlerRight = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
         SetBattlerShadowSpriteCallback(battlerRight, gBattleMons[battlerRight].species);
     }
     DestroyAnimVisualTask(taskId);
@@ -2820,6 +2820,7 @@ void AnimTask_RockMonBackAndForth(u8 taskId)
 {
     u8 side;
     struct Task *task = &gTasks[taskId];
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
 
     if (!gBattleAnimArgs[1])
     {
@@ -2839,9 +2840,9 @@ void AnimTask_RockMonBackAndForth(u8 taskId)
     task->data[4] = 0x100 + (gBattleAnimArgs[2] * 128);
     task->data[5] = gBattleAnimArgs[2] + 2;
     task->data[6] = gBattleAnimArgs[1] - 1;
-    task->data[15] = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+    task->data[15] = GetAnimBattlerSpriteId(animBattler);
 
-    if (gBattleAnimArgs[0] == ANIM_ATTACKER)
+    if (animBattler == ANIM_ATTACKER)
         side = GetBattlerSide(gBattleAnimAttacker);
     else
         side = GetBattlerSide(gBattleAnimTarget);
@@ -2962,6 +2963,7 @@ static void AnimSweetScentPetal_Step(struct Sprite *sprite)
 void AnimTask_FlailMovement(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
 
     task->data[0] = 0;
     task->data[1] = 0;
@@ -2970,7 +2972,7 @@ void AnimTask_FlailMovement(u8 taskId)
     task->data[12] = 0x20;
     task->data[13] = 0x40;
     task->data[14] = 0x800;
-    task->data[15] = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+    task->data[15] = GetAnimBattlerSpriteId(animBattler);
 
     PrepareBattlerSpriteForRotScale(task->data[15], ST_OAM_OBJ_NORMAL);
     task->func = AnimTask_FlailMovement_Step;
@@ -3094,12 +3096,13 @@ void AnimTask_PainSplitMovement(u8 taskId)
 
     if (gTasks[taskId].data[0] == 0)
     {
-        if (gBattleAnimArgs[0] == ANIM_ATTACKER)
+        enum AnimBattler animBattler = gBattleAnimArgs[0];
+        if (animBattler == ANIM_ATTACKER)
             gTasks[taskId].data[11] = gBattleAnimAttacker;
         else
             gTasks[taskId].data[11] = gBattleAnimTarget;
 
-        spriteId = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+        spriteId = GetAnimBattlerSpriteId(animBattler);
         gTasks[taskId].data[10] = spriteId;
         PrepareBattlerSpriteForRotScale(spriteId, ST_OAM_OBJ_NORMAL);
 
@@ -3384,13 +3387,14 @@ static void AnimTask_RolePlaySilhouette_Step2(u8 taskId)
 // arg 0: which battler
 void AnimTask_AcidArmor(u8 taskId)
 {
-    u8 battler;
+    enum BattlerId battler;
     u16 bgX, bgY;
     s16 y, i;
     struct ScanlineEffectParams scanlineParams;
     struct Task *task = &gTasks[taskId];
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
 
-    if (gBattleAnimArgs[0] == ANIM_ATTACKER)
+    if (animBattler == ANIM_ATTACKER)
         battler = gBattleAnimAttacker;
     else
         battler = gBattleAnimTarget;
@@ -3413,7 +3417,7 @@ void AnimTask_AcidArmor(u8 taskId)
         task->data[13] = 0;
 
     task->data[14] = task->data[13] + 66;
-    task->data[15] = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+    task->data[15] = GetAnimBattlerSpriteId(animBattler);
     if (GetBattlerSpriteBGPriorityRank(battler) == 1)
     {
         scanlineParams.dmaDest = &REG_BG1HOFS;
@@ -3563,8 +3567,9 @@ static void AnimTask_AcidArmor_Step(u8 taskId)
 void AnimTask_DeepInhale(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
     task->data[0] = 0;
-    task->data[15] = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+    task->data[15] = GetAnimBattlerSpriteId(animBattler);
     PrepareAffineAnimInTaskData(&gTasks[taskId], task->data[15], gDeepInhaleAffineAnimCmds);
     task->func = AnimTask_DeepInhale_Step;
 }
@@ -3830,8 +3835,9 @@ void AnimTask_SlideMonForFocusBand(u8 taskId)
 // arg 1: num squishes
 void AnimTask_SquishAndSweatDroplets(u8 taskId)
 {
-    u8 battler;
+    enum BattlerId battler;
     struct Task *task = &gTasks[taskId];
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
 
     if (!gBattleAnimArgs[1])
         DestroyAnimVisualTask(taskId);
@@ -3840,7 +3846,7 @@ void AnimTask_SquishAndSweatDroplets(u8 taskId)
     task->tTimer = 0;
     task->tActiveSprites = 0;
     task->tNumSquishes = gBattleAnimArgs[1];
-    if (gBattleAnimArgs[0] == ANIM_ATTACKER)
+    if (animBattler == ANIM_ATTACKER)
         battler = gBattleAnimAttacker;
     else
         battler = gBattleAnimTarget;
@@ -3848,7 +3854,7 @@ void AnimTask_SquishAndSweatDroplets(u8 taskId)
     task->tBaseX = GetBattlerSpriteCoord(battler, BATTLER_COORD_X);
     task->tBaseY = GetBattlerSpriteCoord(battler, BATTLER_COORD_Y);
     task->tSubpriority = GetBattlerSpriteSubpriority(battler);
-    task->tBattlerSpriteId = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+    task->tBattlerSpriteId = GetAnimBattlerSpriteId(animBattler);
     PrepareAffineAnimInTaskData(task, task->tBattlerSpriteId, gFacadeSquishAffineAnimCmds);
     task->func = AnimTask_SquishAndSweatDroplets_Step;
 }
@@ -3964,10 +3970,11 @@ static void AnimFacadeSweatDrop(struct Sprite *sprite)
 void AnimTask_FacadeColorBlend(u8 taskId)
 {
     u8 spriteId;
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
 
     gTasks[taskId].data[0] = 0;
     gTasks[taskId].data[1] = gBattleAnimArgs[1];
-    spriteId = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+    spriteId = GetAnimBattlerSpriteId(animBattler);
     gTasks[taskId].data[2] = OBJ_PLTT_ID(gSprites[spriteId].oam.paletteNum);
     gTasks[taskId].func = AnimTask_FacadeColorBlend_Step;
 }
@@ -4320,7 +4327,7 @@ static void AnimTask_BarrageBall_Step(u8 taskId)
 // arg 2: num squishes
 static void AnimSmellingSaltsHand(struct Sprite *sprite)
 {
-    u8 battler;
+    enum BattlerId battler;
 
     if (gBattleAnimArgs[0] == ANIM_ATTACKER)
         battler = gBattleAnimAttacker;
@@ -4395,14 +4402,15 @@ static void AnimSmellingSaltsHand_Step(struct Sprite *sprite)
 // arg 1: number of squishes
 void AnimTask_SmellingSaltsSquish(u8 taskId)
 {
-    if (gBattleAnimArgs[0] == ANIM_ATTACKER)
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
+    if (animBattler == ANIM_ATTACKER)
     {
         DestroyAnimVisualTask(taskId);
     }
     else
     {
         gTasks[taskId].data[0] = gBattleAnimArgs[1];
-        gTasks[taskId].data[15] = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+        gTasks[taskId].data[15] = GetAnimBattlerSpriteId(animBattler);
         PrepareAffineAnimInTaskData(&gTasks[taskId], gTasks[taskId].data[15], gSmellingSaltsSquishAffineAnimCmds);
         gTasks[taskId].func = AnimTask_SmellingSaltsSquish_Step;
     }
@@ -4700,20 +4708,22 @@ static void AnimTask_HelpingHandAttackerMovement_Step(u8 taskId)
 // arg 0: magnifying glass target mon
 static void AnimForesightMagnifyingGlass(struct Sprite *sprite)
 {
+    enum BattlerId battler;
     if (gBattleAnimArgs[0] == ANIM_ATTACKER)
     {
         InitSpritePosToAnimAttacker(sprite, TRUE);
-        sprite->data[7] = gBattleAnimAttacker;
+        battler = gBattleAnimAttacker;
     }
     else
     {
-        sprite->data[7] = gBattleAnimTarget;
+        battler = gBattleAnimTarget;
     }
+    sprite->data[7] = battler;
 
-    if (!IsOnPlayerSide(sprite->data[7]))
+    if (!IsOnPlayerSide(battler))
         sprite->oam.matrixNum = ST_OAM_HFLIP;
 
-    sprite->oam.priority = GetBattlerSpriteBGPriority(sprite->data[7]);
+    sprite->oam.priority = GetBattlerSpriteBGPriority(battler);
     sprite->oam.objMode = ST_OAM_OBJ_BLEND;
     sprite->callback = AnimForesightMagnifyingGlass_Step;
 }
@@ -5602,8 +5612,9 @@ void AnimTask_GetWeather(u8 taskId)
 void AnimTask_SlackOffSquish(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
+    enum AnimBattler animBattler = gBattleAnimArgs[0];
     task->data[0] = 0;
-    task->data[15] = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+    task->data[15] = GetAnimBattlerSpriteId(animBattler);
     PrepareAffineAnimInTaskData(task, task->data[15], gSlackOffSquishAffineAnimCmds);
     task->func = AnimTask_SlackOffSquish_Step;
 }
