@@ -1,14 +1,14 @@
 GAME_VERSION ?= EMERALD
 TITLE        ?= POKEMON EMER
 GAME_CODE    ?= BPEE
-BUILD_NAME   ?= emerald
+BUILD_NAME   ?= wlr
 MAP_VERSION  ?= emerald
 
 ifeq (firered,$(MAKECMDGOALS))
   	GAME_VERSION 	:= FIRERED
 	TITLE       	:= POKEMON FIRE
 	GAME_CODE   	:= BPRE
-	BUILD_NAME  	:= firered
+	BUILD_NAME  	:= awr
 	MAP_VERSION 	:= firered
 else
 ifeq (leafgreen,$(MAKECMDGOALS))
@@ -26,7 +26,7 @@ REVISION    := 0
 KEEP_TEMPS  ?= 0
 
 # `File name`.gba
-FILE_NAME := poke$(BUILD_NAME)
+FILE_NAME := thmn$(BUILD_NAME)
 BUILD_DIR := build
 
 # Compares the ROM to a checksum of the original - only makes sense using when non-modern
