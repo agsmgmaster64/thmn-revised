@@ -816,4 +816,15 @@ extern const u8 BattleScript_GhostGetOutGetOut[];
 extern const u8 BattleScript_TooScaredToMove[];
 extern const u8 BattleScript_SilphScopeUnveiled[];
 
+//touhoumon scripts
+extern const u8 BattleScript_PowerLeakActivates[];
+extern const u8 BattleScript_HibernationHeals[];
+extern const u8 BattleScript_LectureBlockedByAbility[];
+extern const u8 BattleScript_SourNoteActivatesAtk[];
+extern const u8 BattleScript_SourNoteActivatesSpAtk[];
+extern const u8 BattleScript_HighNoteActivatesAtk[];
+extern const u8 BattleScript_HighNoteActivatesSpAtk[];
+extern const u8 BattleScript_PrideBoost[];
+extern const u8 BattleScript_WallMasterActivates[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H

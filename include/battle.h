@@ -707,6 +707,7 @@ struct BattleStruct
     u8 magicCoatActive:1;
     u8 magicBounceActive:1;
     u8 moveBouncer;
+    u8 wallMasterTracker;
 };
 
 struct AiBattleData

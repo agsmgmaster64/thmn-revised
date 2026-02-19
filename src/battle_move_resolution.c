@@ -2798,6 +2798,24 @@ static enum MoveEndResult MoveEndColorChange(void)
     return MOVEEND_RESULT_CONTINUE;
 }
 
+
+static enum MoveEndResult MoveEndEchoAbilities(void)
+{
+    while (gBattleStruct->eventState.moveEndBattler < gBattlersCount)
+    {
+        enum BattlerId battler = gBattleStruct->eventState.moveEndBattler++;
+
+        if (AbilityBattleEffects(ABILITYEFFECT_ECHO_ABILITIES, battler, GetBattlerAbility(battler), 0, TRUE))
+
+            return MOVEEND_RESULT_RUN_SCRIPT;
+
+    }
+
+    gBattleStruct->eventState.moveEndBattler = 0;
+    gBattleScripting.moveendState++;
+    return MOVEEND_RESULT_CONTINUE;
+}
+
 static enum MoveEndResult MoveEndKeeMarangaHpThresholdItemTarget(void)
 {
     while (gBattleStruct->eventState.moveEndBattler < gBattlersCount)
@@ -3383,6 +3401,49 @@ static enum MoveEndResult MoveEndPursuitNextAction(void)
     return result;
 }
 
+static enum MoveEndResult MoveEndWallMaster(void)
+{
+    enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_WALL_MASTER
+        && (!gBattleStruct->unableToUseMove) &&
+        (gCurrentMove == MOVE_REFLECT
+        || gCurrentMove == MOVE_LIGHT_SCREEN
+        || gCurrentMove == MOVE_MIST
+        || gCurrentMove == MOVE_SAFEGUARD))
+    {
+        u8 i;
+        // first flag the current move
+        for (i = 0; i < 4; i++)
+        {
+            if (gCurrentMove == gBattleMons[gBattlerAttacker].moves[i])
+                gBattleStruct->wallMasterTracker |= (1 << i);
+        }
+        // now look for an unflagged wall move to call
+        for (i = 0; i < 4; i++)
+        {
+            if (!(gBattleStruct->wallMasterTracker & (1 << i)) && 
+                    (gBattleMons[gBattlerAttacker].moves[i] == MOVE_REFLECT
+                || gBattleMons[gBattlerAttacker].moves[i] == MOVE_LIGHT_SCREEN
+                || gBattleMons[gBattlerAttacker].moves[i] == MOVE_SAFEGUARD
+                || gBattleMons[gBattlerAttacker].moves[i] == MOVE_MIST))
+            {
+                gCurrentMove = gBattleMons[gBattlerAttacker].moves[i];
+                gBattleScripting.moveendState = -1; // it will get incremented to 0 afterwards
+                MoveValuesCleanUp();
+                //BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
+                BattleScriptPush(GetMoveBattleScript(gCurrentMove));
+                gBattlescriptCurrInstr = BattleScript_WallMasterActivates;
+                i = 4;
+                result = MOVEEND_RESULT_RUN_SCRIPT;
+            }
+        }
+    }
+
+    gBattleScripting.moveendState++;
+    return result;
+}
+
 static enum MoveEndResult (*const sMoveEndHandlers[])(void) =
 {
     [MOVEEND_SET_VALUES] = MoveEndSetValues,
@@ -3432,6 +3493,8 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(void) =
     [MOVEEND_CLEAR_BITS] = MoveEndClearBits,
     [MOVEEND_DANCER] = MoveEndDancer,
     [MOVEEND_PURSUIT_NEXT_ACTION] = MoveEndPursuitNextAction,
+    [MOVEEND_ECHO_ABILITIES] = MoveEndEchoAbilities,
+    [MOVEEND_WALL_MASTER] = MoveEndWallMaster,
 };
 
 enum MoveEndResult DoMoveEnd(enum MoveEndState endMode, enum MoveEndState endState)

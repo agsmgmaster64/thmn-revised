@@ -898,6 +898,10 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_THREWBAIT]                            = COMPOUND_STRING("{B_PLAYER_NAME} threw some BAIT\nat the {B_OPPONENT_MON1_NAME}!"),
     [STRINGID_PKMNANGRY]                            = COMPOUND_STRING("{B_OPPONENT_MON1_NAME} is angry!"),
     [STRINGID_PKMNEATING]                           = COMPOUND_STRING("{B_OPPONENT_MON1_NAME} is eating!"),
+    //touhoumon
+    [STRINGID_POWERLEAKBOOST]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Sp. Atk fell slightly!"),
+    [STRINGID_BUZZERBLOCKED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was blocked by {B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}!"),
+    [STRINGID_WALLMASTERACTIVATES]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Wall Master lets it use another move!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

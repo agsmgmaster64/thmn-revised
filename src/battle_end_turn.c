@@ -139,7 +139,9 @@ static bool32 HandleEndTurnWeatherDamage(enum BattlerId battler)
         if (ability != ABILITY_SAND_VEIL
          && ability != ABILITY_SAND_FORCE
          && ability != ABILITY_SAND_RUSH
+         && ability != ABILITY_SAND_STREAM
          && ability != ABILITY_OVERCOAT
+         && ability != ABILITY_STORM_SHAWL
          && !IS_BATTLER_ANY_TYPE(battler, TYPE_ROCK, TYPE_GROUND, TYPE_STEEL)
          && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERGROUND
          && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERWATER
@@ -163,6 +165,9 @@ static bool32 HandleEndTurnWeatherDamage(enum BattlerId battler)
         {
             if (ability != ABILITY_SNOW_CLOAK
              && ability != ABILITY_OVERCOAT
+             && ability != ABILITY_SNOW_WARNING
+             && ability != ABILITY_WINTER_GIFT
+             && ability != ABILITY_STORM_SHAWL
              && !IS_BATTLER_OF_TYPE(battler, TYPE_ICE)
              && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERGROUND
              && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERWATER
@@ -472,8 +477,11 @@ static bool32 HandleEndTurnLeechSeed(enum BattlerId battler)
 static bool32 HandleEndTurnPoison(enum BattlerId battler)
 {
     bool32 effect = FALSE;
+    bool32 catalystProc = FALSE;
 
     enum Ability ability = GetBattlerAbility(battler);
+    u32 side;
+    s32 i;
 
     gBattleStruct->eventState.endTurnBattler++;
 
@@ -492,16 +500,50 @@ static bool32 HandleEndTurnPoison(enum BattlerId battler)
         }
         else if (gBattleMons[battler].status1 & STATUS1_TOXIC_POISON)
         {
+            side = GetBattlerSide(battler);
+
             SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 16);
             if ((gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) != STATUS1_TOXIC_TURN(15)) // not 16 turns
                 gBattleMons[battler].status1 += STATUS1_TOXIC_TURN(1);
-            gBattleStruct->passiveHpUpdate[battler] *= (gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8;
+
+            for (i = 0; i < gBattlersCount; ++i)
+            {
+                if (GetBattlerSide(i) != side && gBattleMons[i].ability == ABILITY_CATALYST)
+                {
+                    gLastUsedAbility = ABILITY_CATALYST;
+                    catalystProc = TRUE;
+                    ++effect;
+                }
+            }
+
+            if (catalystProc == TRUE) {
+                gBattleStruct->passiveHpUpdate[battler] *= (((gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8) + 2 );
+            } else {
+                gBattleStruct->passiveHpUpdate[battler] *= (gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8;
+            }
+
             BattleScriptExecute(BattleScript_PoisonTurnDmg);
             effect = TRUE;
         }
         else
         {
-            SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 8);
+            u8 multiplier = 1;
+            side = GetBattlerSide(battler);
+            for (i = 0; i < gBattlersCount; ++i)
+            {
+                if (GetBattlerSide(i) != side && gBattleMons[i].ability == ABILITY_CATALYST)
+                {
+                    gLastUsedAbility = ABILITY_CATALYST;
+                    catalystProc = TRUE;
+                    ++effect;
+                }
+            }
+            if (catalystProc == TRUE) {
+                multiplier = 2;
+            }
+            gBattleStruct->passiveHpUpdate[battler] = (GetNonDynamaxMaxHP(battler) * multiplier) / 8;
+            if (gBattleStruct->passiveHpUpdate[battler] == 0)
+                gBattleStruct->passiveHpUpdate[battler] = 1;
             BattleScriptExecute(BattleScript_PoisonTurnDmg);
             effect = TRUE;
         }
@@ -575,6 +617,30 @@ static bool32 HandleEndTurnNightmare(enum BattlerId battler)
         {
             gBattleMons[battler].volatiles.nightmare = FALSE;
         }
+    }
+
+    return effect;
+}
+
+static bool32 HandleEndTurnHibernation(enum BattlerId battler)
+{
+    bool32 effect = FALSE;
+
+    enum Ability ability = GetBattlerAbility(battler);
+
+    gBattleStruct->eventState.endTurnBattler++;
+
+    if (gBattleMons[battler].status1 & STATUS1_SLEEP
+         && IsBattlerAlive(battler)
+         && !IsBattlerAtMaxHp(battler)
+         && !gBattleMons[battler].volatiles.healBlock
+         && ability == ABILITY_HIBERNATION)
+    {
+            SetHealAmount(battler, GetNonDynamaxMaxHP(battler) / 8);
+            if (gBattleStruct->moveDamage[battler] == 0)
+                gBattleStruct->moveDamage[battler] = -1;
+            BattleScriptExecute(BattleScript_HibernationHeals);
+            effect = TRUE;
     }
 
     return effect;
@@ -1274,6 +1340,7 @@ static bool32 HandleEndTurnThirdEventBlock(enum BattlerId battler)
         case ABILITY_MOODY:
         case ABILITY_PICKUP:
         case ABILITY_SPEED_BOOST:
+        case ABILITY_POWER_LEAK:
             if (AbilityBattleEffects(ABILITYEFFECT_ENDTURN, battler, ability, MOVE_NONE, TRUE))
                 effect = TRUE;
             break;
@@ -1480,6 +1547,7 @@ static bool32 (*const sEndTurnEffectHandlers[])(enum BattlerId battler) =
     [ENDTURN_TRAINER_A_SLIDES] = HandleEndTurnTrainerASlides,
     [ENDTURN_TRAINER_B_SLIDES] = HandleEndTurnTrainerBSlides,
     [ENDTURN_TRAINER_PARTNER_SLIDES] = HandleEndTurnTrainerPartnerSlides,
+    [ENDTURN_HIBERNATION] = HandleEndTurnHibernation,
 };
 
 bool32 DoEndTurnEffects(void)

@@ -5106,6 +5106,7 @@ BattleScript_FutureAttackEnd::
 	moveendcase MOVEEND_ITEM_EFFECTS_TARGET
 	moveendfromto MOVEEND_SYMBIOSIS, MOVEEND_UPDATE_LAST_MOVES
 	moveendcase MOVEEND_COLOR_CHANGE
+	moveendcase MOVEEND_ECHO_ABILITIES
 	checkteamslost BattleScript_FutureAttackClearResults
 BattleScript_FutureAttackClearResults:
 	setmoveresultflags 0
@@ -7013,6 +7014,11 @@ BattleScript_GooeyActivates::
 	swapattackerwithtarget
 BattleScript_GooeyActivatesRet:
 	return
+BattleScript_LectureBlockedByAbility::
+	call BattleScript_AbilityPopUpScripting
+	printstring STRINGID_BUZZERBLOCKED
+	waitmessage 0x40
+	return
 
 BattleScript_AbilityStatusEffect::
 	waitstate
@@ -8364,3 +8370,51 @@ BattleScript_SilphScopeUnveiled::
 	printstring STRINGID_GHOSTWASMAROWAK
 	waitmessage B_WAIT_TIME_LONG
 	end2
+
+BattleScript_PowerLeakActivates::
+	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_PowerLeakActivatesEnd
+	printstring STRINGID_POWERLEAKBOOST
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_PowerLeakActivatesEnd:
+	end3
+
+BattleScript_HibernationHeals::
+	call BattleScript_AbilityHpHeal
+	end3
+
+BattleScript_SourNoteActivatesAtk::
+	waitstate
+	call BattleScript_AbilityPopUp
+	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_ATK_MINUS_1
+	return
+
+BattleScript_SourNoteActivatesSpAtk::
+	waitstate
+	call BattleScript_AbilityPopUp
+	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SP_ATK_MINUS_1
+	return
+
+BattleScript_HighNoteActivatesAtk::
+	waitstate
+	call BattleScript_AbilityPopUp
+	seteffectsecondary BS_ATTACKER, BS_ATTACKER, MOVE_EFFECT_ATK_PLUS_1
+	return
+
+BattleScript_HighNoteActivatesSpAtk::
+	waitstate
+	call BattleScript_AbilityPopUp
+	seteffectsecondary BS_ATTACKER, BS_ATTACKER, MOVE_EFFECT_SP_ATK_PLUS_1
+	return
+
+BattleScript_PrideBoost::
+	waitstate
+	call BattleScript_AbilityPopUp
+	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SP_ATK_PLUS_1
+	end3
+
+BattleScript_WallMasterActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_WALLMASTERACTIVATES
+	waitmessage 0x40
+	return

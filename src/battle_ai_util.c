@@ -3361,6 +3361,8 @@ static bool32 BattlerAffectedByHail(enum BattlerId battlerId, enum Ability abili
     if (!IS_BATTLER_OF_TYPE(battlerId, TYPE_ICE)
       && ability != ABILITY_SNOW_CLOAK
       && ability != ABILITY_OVERCOAT
+      && ability != ABILITY_WINTER_GIFT
+      && ability != ABILITY_SNOW_WARNING
       && ability != ABILITY_ICE_BODY)
         return TRUE;
     return FALSE;
@@ -6244,6 +6246,13 @@ enum AIScore BattlerBenefitsFromAbilityScore(enum BattlerId battler, enum Abilit
             return WEAK_EFFECT;
         if (gBattleMons[battler].status1 & (STATUS1_TOXIC_POISON))
             return BEST_EFFECT;
+        if (gBattleMons[battler].status1 & STATUS1_ANY)
+            return NO_INCREASE;
+        break;
+    // Hibernation sleep check
+    case ABILITY_HIBERNATION:
+        if (gBattleMons[battler].status1 & (STATUS1_SLEEP))
+            return WEAK_EFFECT;
         if (gBattleMons[battler].status1 & STATUS1_ANY)
             return NO_INCREASE;
         break;

@@ -4818,6 +4818,10 @@ u32 GetBattlerTotalSpeedStat(enum BattlerId battler, enum Ability ability, enum 
         speed = (GetParadoxBoostedStatId(battler) == STAT_SPEED) ? (speed * 150) / 100 : speed;
     else if (ability == ABILITY_UNBURDEN && gBattleMons[battler].volatiles.unburdenActive)
         speed *= 2;
+    else if (ability == ABILITY_PURE_ENIGMA && gBattleMons[battler].species == SPECIES_EXTRA_OKINA)
+        speed *= 2;
+    else if (ability == ABILITY_PURE_ENIGMA)
+        speed = (speed * 150) / 100;
 
     // player's badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
