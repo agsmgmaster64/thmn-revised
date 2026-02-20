@@ -3405,7 +3405,7 @@ static enum MoveEndResult MoveEndWallMaster(void)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
 
-    if (gBattleMons[gBattlerAttacker].ability == ABILITY_WALL_MASTER
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_WALL_MASTER
         && (!gBattleStruct->unableToUseMove) &&
         (gCurrentMove == MOVE_REFLECT
         || gCurrentMove == MOVE_LIGHT_SCREEN

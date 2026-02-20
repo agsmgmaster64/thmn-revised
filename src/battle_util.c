@@ -4597,12 +4597,13 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                     PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
                     BattleScriptCall(BattleScript_LectureBlockedByAbility);
                     effect++;
-                } else
+                }
+                else
                 {
-                SET_STATCHANGER(STAT_SPEED, 1, TRUE);
-                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
-                BattleScriptCall(BattleScript_GooeyActivates);
-                effect++;
+                    SET_STATCHANGER(STAT_SPEED, 1, TRUE);
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                    BattleScriptCall(BattleScript_GooeyActivates);
+                    effect++;
                 }
             }
             break;
@@ -4686,7 +4687,8 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             {
                 if (gBattleMons[gBattlerTarget].attack <= gBattleMons[gBattlerTarget].spAttack)
                 {
-                    if ((CompareStat(gBattlerTarget, STAT_SPATK, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility)) || (GetBattlerAbility(gBattlerTarget) == ABILITY_MIRROR_ARMOR))
+                    if (CompareStat(gBattlerTarget, STAT_SPATK, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility)
+                     || GetBattlerAbility(gBattlerTarget) == ABILITY_MIRROR_ARMOR)
                     {
                         SET_STATCHANGER(STAT_SPATK, 1, TRUE);
                         PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
@@ -4696,7 +4698,8 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 }
                 else
                 {
-                    if ((CompareStat(gBattlerTarget, STAT_ATK, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility)) || (GetBattlerAbility(gBattlerTarget) == ABILITY_MIRROR_ARMOR))
+                    if (CompareStat(gBattlerTarget, STAT_ATK, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility)
+                    || GetBattlerAbility(gBattlerTarget) == ABILITY_MIRROR_ARMOR)
                     {
                         SET_STATCHANGER(STAT_ATK, 1, TRUE);
                         PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
@@ -4708,11 +4711,14 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             break;
         case ABILITY_HIGH_NOTE: // raise own attacking stat
             {
-                if (IsBattlerAlive(gBattlerTarget) && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_MISSED) && IsSoundMove(gCurrentMove))
+                if (IsBattlerAlive(gBattlerTarget)
+                 && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_MISSED)
+                 && IsSoundMove(gCurrentMove))
                 {
                     if (gBattleMons[battler].attack <= gBattleMons[battler].spAttack)
                     {
-                        if (gBattleMons[battler].statStages[STAT_SPATK] < 12 && !gBattleStruct->unableToUseMove)
+                        if (CompareStat(gBattlerTarget, STAT_ATK, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility)
+                         && !gBattleStruct->unableToUseMove)
                         {
                             SET_STATCHANGER(STAT_SPATK, 1, FALSE);
                             PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
@@ -4720,9 +4726,11 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                             gBattleScripting.battler = battler;
                             effect++;
                         }
-                    } else
+                    }
+                    else
                     {
-                        if (gBattleMons[battler].statStages[STAT_ATK] < 12 && !gBattleStruct->unableToUseMove)
+                        if (CompareStat(gBattlerTarget, STAT_ATK, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility)
+                         && !gBattleStruct->unableToUseMove)
                         {
                             SET_STATCHANGER(STAT_ATK, 1, FALSE);
                             PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
@@ -7025,20 +7033,9 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx)
     case ABILITY_HARMONIZE:
         u8 i = 0;
         u8 boost = 0;
-		u8 partysize = 0;
-        struct Pokemon *party;
+        struct Pokemon *party = GetBattlerParty(battlerAtk);
 
-        if (GetBattlerSide(battlerAtk) != B_SIDE_PLAYER)
-		{
-			party = gEnemyParty;
-			partysize = gEnemyPartyCount;
-		}
-        else
-		{
-			party = gPlayerParty;
-			partysize = PARTY_SIZE;
-		}
-        for (i = 0; i < partysize; i++)
+        for (i = 0; i < PARTY_SIZE; i++)
         {
             if (i != gBattlerPartyIndexes[battlerAtk])
             {
@@ -7240,13 +7237,13 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
         {
             if (gBattleMons[battlerDef].ability == ABILITY_ABERRANT) //turn into physical Take Over
             {
-                    atkStat = gBattleMons[battlerDef].spAttack;
-                    atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
+                atkStat = gBattleMons[battlerDef].spAttack;
+                atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
             }
             else //act normally
             {
-                    atkStat = gBattleMons[battlerDef].attack;
-                    atkStage = gBattleMons[battlerDef].statStages[STAT_ATK];
+                atkStat = gBattleMons[battlerDef].attack;
+                atkStage = gBattleMons[battlerDef].statStages[STAT_ATK];
             }
         }
         else
@@ -7261,7 +7258,7 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
         {
             atkStat = gBattleMons[battlerAtk].defense;
             // Edge case: Body Press used during Wonder Room. For some reason, it still uses Defense over Sp.Def, but uses Sp.Def stat changes
-            if (gFieldStatuses & STATUS_FIELD_WONDER_ROOM)
+            if (ctx->fieldStatuses & STATUS_FIELD_WONDER_ROOM)
                 atkStage = gBattleMons[battlerAtk].statStages[STAT_SPDEF];
             else
                 atkStage = gBattleMons[battlerAtk].statStages[STAT_DEF];

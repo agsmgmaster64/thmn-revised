@@ -482,6 +482,7 @@ static bool32 HandleEndTurnPoison(enum BattlerId battler)
     enum Ability ability = GetBattlerAbility(battler);
     u32 side;
     s32 i;
+    u32 poisonMultiplier;
 
     gBattleStruct->eventState.endTurnBattler++;
 
@@ -506,42 +507,23 @@ static bool32 HandleEndTurnPoison(enum BattlerId battler)
             if ((gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) != STATUS1_TOXIC_TURN(15)) // not 16 turns
                 gBattleMons[battler].status1 += STATUS1_TOXIC_TURN(1);
 
-            for (i = 0; i < gBattlersCount; ++i)
-            {
-                if (GetBattlerSide(i) != side && gBattleMons[i].ability == ABILITY_CATALYST)
-                {
-                    gLastUsedAbility = ABILITY_CATALYST;
-                    catalystProc = TRUE;
-                    ++effect;
-                }
-            }
+            poisonMultiplier = (gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8;
 
-            if (catalystProc == TRUE) {
-                gBattleStruct->passiveHpUpdate[battler] *= (((gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8) + 2 );
-            } else {
-                gBattleStruct->passiveHpUpdate[battler] *= (gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8;
-            }
+            if (IsAbilityOnOpposingSide(battler, ABILITY_CATALYST))
+                poisonMultiplier += 2;
+
+            gBattleStruct->passiveHpUpdate[battler] *= poisonMultiplier;
 
             BattleScriptExecute(BattleScript_PoisonTurnDmg);
             effect = TRUE;
         }
         else
         {
-            u8 multiplier = 1;
-            side = GetBattlerSide(battler);
-            for (i = 0; i < gBattlersCount; ++i)
-            {
-                if (GetBattlerSide(i) != side && gBattleMons[i].ability == ABILITY_CATALYST)
-                {
-                    gLastUsedAbility = ABILITY_CATALYST;
-                    catalystProc = TRUE;
-                    ++effect;
-                }
-            }
-            if (catalystProc == TRUE) {
-                multiplier = 2;
-            }
-            gBattleStruct->passiveHpUpdate[battler] = (GetNonDynamaxMaxHP(battler) * multiplier) / 8;
+            poisonMultiplier = 1;
+            if (IsAbilityOnOpposingSide(battler, ABILITY_CATALYST))
+                poisonMultiplier++;
+
+            gBattleStruct->passiveHpUpdate[battler] = (GetNonDynamaxMaxHP(battler) * poisonMultiplier) / 8;
             if (gBattleStruct->passiveHpUpdate[battler] == 0)
                 gBattleStruct->passiveHpUpdate[battler] = 1;
             BattleScriptExecute(BattleScript_PoisonTurnDmg);
