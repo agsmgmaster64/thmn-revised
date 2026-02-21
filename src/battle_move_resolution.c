@@ -673,9 +673,16 @@ static enum CancelerResult CancelerPPDeduction(struct BattleContext *ctx)
         gBattleMons[ctx->battlerAtk].volatiles.metronomeItemCounter = 0;
 
     if (gBattleMons[ctx->battlerAtk].pp[movePosition] > ppToDeduct)
-        gBattleMons[ctx->battlerAtk].pp[movePosition] -= ppToDeduct;
+    {
+        if(gSpecialStatuses[gBattlerAttacker].wallMasterTracker == 0)
+        {
+            gBattleMons[ctx->battlerAtk].pp[movePosition] -= ppToDeduct;
+        }
+    }
     else
+    {
         gBattleMons[ctx->battlerAtk].pp[movePosition] = 0;
+    }
 
     if (MOVE_IS_PERMANENT(ctx->battlerAtk, movePosition))
     {
@@ -3417,12 +3424,12 @@ static enum MoveEndResult MoveEndWallMaster(void)
         for (i = 0; i < 4; i++)
         {
             if (gCurrentMove == gBattleMons[gBattlerAttacker].moves[i])
-                gBattleStruct->wallMasterTracker |= (1 << i);
+                gSpecialStatuses[gBattlerAttacker].wallMasterTracker |= (1 << i);
         }
         // now look for an unflagged wall move to call
         for (i = 0; i < 4; i++)
         {
-            if (!(gBattleStruct->wallMasterTracker & (1 << i)) && 
+            if (!(gSpecialStatuses[gBattlerAttacker].wallMasterTracker & (1 << i)) && 
                     (gBattleMons[gBattlerAttacker].moves[i] == MOVE_REFLECT
                 || gBattleMons[gBattlerAttacker].moves[i] == MOVE_LIGHT_SCREEN
                 || gBattleMons[gBattlerAttacker].moves[i] == MOVE_SAFEGUARD
@@ -3431,13 +3438,43 @@ static enum MoveEndResult MoveEndWallMaster(void)
                 gCurrentMove = gBattleMons[gBattlerAttacker].moves[i];
                 gBattleScripting.moveendState = -1; // it will get incremented to 0 afterwards
                 MoveValuesCleanUp();
-                //BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
                 BattleScriptPush(GetMoveBattleScript(gCurrentMove));
+                gCalledMove = gCurrentMove;
                 gBattlescriptCurrInstr = BattleScript_WallMasterActivates;
                 i = 4;
                 result = MOVEEND_RESULT_RUN_SCRIPT;
             }
         }
+    }
+
+    gBattleScripting.moveendState++;
+    return result;
+}
+
+static enum MoveEndResult MoveEndTwinSpark(void)
+{
+    enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TWIN_SPARK &&
+        (!gBattleStruct->unableToUseMove) &&
+        (GetMoveCategory(gCurrentMove) != DAMAGE_CATEGORY_STATUS) &&
+        !(gBattleMons[gBattlerAttacker].status1 & STATUS1_FREEZE) &&
+        !(gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP) &&
+        (gBattleMons[gBattlerTarget].hp > 0) && 
+        (gCurrentMove != MOVE_U_TURN) &&
+        (gCurrentMove != MOVE_VOLT_SWITCH) &&
+        (gCurrentMove != MOVE_STRUGGLE) &&
+        !(gSpecialStatuses[gBattlerAttacker].twinSparkMoveUsed))
+    {
+        // do it again!
+        gBattleScripting.moveendState = -1; // it will get incremented to 0 afterwards
+        MoveValuesCleanUp();
+        GetMoveBattleScript(gCurrentMove);
+        BattleScriptPush(GetMoveBattleScript(gCurrentMove));
+        gCalledMove = gCurrentMove;
+        gBattlescriptCurrInstr = BattleScript_TwinSparkActivates;
+        gSpecialStatuses[gBattlerAttacker].twinSparkMoveUsed = 1;
+        result = MOVEEND_RESULT_RUN_SCRIPT;
     }
 
     gBattleScripting.moveendState++;
@@ -3495,6 +3532,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(void) =
     [MOVEEND_PURSUIT_NEXT_ACTION] = MoveEndPursuitNextAction,
     [MOVEEND_ECHO_ABILITIES] = MoveEndEchoAbilities,
     [MOVEEND_WALL_MASTER] = MoveEndWallMaster,
+    [MOVEEND_TWIN_SPARK] = MoveEndTwinSpark,
 };
 
 enum MoveEndResult DoMoveEnd(enum MoveEndState endMode, enum MoveEndState endState)
@@ -3887,3 +3925,5 @@ static void CalculateMagnitudeDamage(void)
 
     PREPARE_BYTE_NUMBER_BUFFER(gBattleTextBuff1, 2, magnitude)
 }
+
+

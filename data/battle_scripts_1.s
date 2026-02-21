@@ -8416,5 +8416,18 @@ BattleScript_PrideBoost::
 BattleScript_WallMasterActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_WALLMASTERACTIVATES
+	waitmessage B_WAIT_TIME_SHORT
+	jumptocalledmove TRUE
+
+BattleScript_TwinSparkActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_TWINSPARKACTIVATES
+	waitmessage B_WAIT_TIME_SHORT
+	jumptocalledmove TRUE
+
+BattleScript_BlankCardActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_BLANKCARDACTIVATES
 	waitmessage 0x40
-	return
+	switchinabilities BS_SCRIPTING
+	end3

@@ -826,5 +826,7 @@ extern const u8 BattleScript_HighNoteActivatesAtk[];
 extern const u8 BattleScript_HighNoteActivatesSpAtk[];
 extern const u8 BattleScript_PrideBoost[];
 extern const u8 BattleScript_WallMasterActivates[];
+extern const u8 BattleScript_TwinSparkActivates[];
+extern const u8 BattleScript_BlankCardActivates[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

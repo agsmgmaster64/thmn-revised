@@ -900,8 +900,10 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNEATING]                           = COMPOUND_STRING("{B_OPPONENT_MON1_NAME} is eating!"),
     //touhoumon
     [STRINGID_POWERLEAKBOOST]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Sp. Atk fell slightly!"),
-    [STRINGID_BUZZERBLOCKED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was blocked by {B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}!"),
+    [STRINGID_BUZZERBLOCKED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was blocked by {B_ATK_NAME_WITH_PREFIX2}'s {B_ATK_ABILITY}!"),
     [STRINGID_WALLMASTERACTIVATES]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Wall Master lets it use another move!"),
+    [STRINGID_TWINSPARKACTIVATES]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Twin Spark lets it attack again!"),
+    [STRINGID_BLANKCARDACTIVATES]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Blank Card turned into {B_BUFF1}!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

@@ -126,6 +126,8 @@ struct SpecialStatus
     u8 teraShellAbilityDone:1;
     u8 dancerOriginalTarget:3;
     // End of byte
+    u8 twinSparkMoveUsed;
+    u8 wallMasterTracker;
 };
 
 struct SideTimer
@@ -707,7 +709,6 @@ struct BattleStruct
     u8 magicCoatActive:1;
     u8 magicBounceActive:1;
     u8 moveBouncer;
-    u8 wallMasterTracker;
 };
 
 struct AiBattleData

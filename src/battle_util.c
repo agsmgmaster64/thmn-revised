@@ -3795,6 +3795,40 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 effect++;
             }
             break;
+		case ABILITY_BLANK_CARD:
+            struct Pokemon *donor;
+            struct Pokemon *party = GetBattlerParty(battler);
+            u32 slot = 0;
+            s32 k = 0;
+            u32 newability;
+            // if (GetBattlerSide(battler) == B_SIDE_OPPONENT)
+            //     party = gEnemyParty;
+            // else
+            //     party = gPlayerParty;
+            
+            
+            for (k = 5; k > 0; k--)
+            {
+                if ((GetMonData(&party[k], MON_DATA_SPECIES) != SPECIES_NONE)
+                    && (!GetMonData(&party[k], MON_DATA_IS_EGG))
+                    && (gBattlerPartyIndexes[battler] != k))
+                    {
+                        slot = k;
+                        k = -1;
+                    }
+            }
+            donor = &party[slot];
+            newability = GetMonAbility(donor);
+            
+            if (newability != ABILITY_PLAY_GHOST && newability != ABILITY_BLANK_CARD && newability != ABILITY_PURE_ENIGMA && newability != ABILITY_TRACE)
+            {
+                gBattleMons[battler].ability = newability;
+                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, newability)
+                BattleScriptPushCursorAndCallback(BattleScript_BlankCardActivates);
+                gBattleScripting.battler = battler;
+                effect++;
+            }
+			break;
         default:
             break;
         }
@@ -5862,9 +5896,22 @@ bool32 HasEnoughHpToEatBerry(enum BattlerId battler, enum Ability ability, u32 h
     if (gBattleMons[battler].hp <= gBattleMons[battler].maxHP / hpFraction)
         return TRUE;
 
+    if ((itemId == ITEM_LIECHI_BERRY ||
+        itemId == ITEM_GANLON_BERRY ||
+        itemId == ITEM_SALAC_BERRY ||
+        itemId == ITEM_PETAYA_BERRY ||
+        itemId == ITEM_APICOT_BERRY ||
+        itemId == ITEM_LANSAT_BERRY ||
+        itemId == ITEM_STARF_BERRY ||
+        itemId == ITEM_MICLE_BERRY ||
+        itemId == ITEM_CUSTAP_BERRY)
+         && (gBattleStruct->battlerState[battler].isFirstTurn != 2)
+         && IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_GOURMAND))
+        return TRUE;
+
     if (hpFraction <= 4 && GetItemPocket(itemId) == POCKET_BERRIES
          && gBattleMons[battler].hp <= gBattleMons[battler].maxHP / 2
-         && IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_GLUTTONY))
+         && (IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_GLUTTONY) || IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_GOURMAND)))
         return TRUE;
 
     return FALSE;
@@ -7461,6 +7508,9 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         else
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_TWIN_SPARK:
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.6));
         break;
     default:
         break;

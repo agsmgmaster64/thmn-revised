@@ -107,6 +107,7 @@ enum MoveEndState
     MOVEEND_SHEER_FORCE, // If move is Sheer Force affected, skip to Hit Escape + One
     MOVEEND_SHELL_TRAP,
     MOVEEND_COLOR_CHANGE, // Color Change / Berserk / Anger Shell
+    MOVEEND_ECHO_ABILITIES,
     MOVEEND_KEE_MARANGA_HP_THRESHOLD_ITEM_TARGET,
     MOVEEND_CARD_BUTTON, // Red Card / Eject Button
     MOVEEND_LIFE_ORB_SHELL_BELL,
@@ -125,7 +126,7 @@ enum MoveEndState
     MOVEEND_DANCER,
     MOVEEND_PURSUIT_NEXT_ACTION,
     MOVEEND_WALL_MASTER,
-    MOVEEND_ECHO_ABILITIES,
+    MOVEEND_TWIN_SPARK,
     MOVEEND_COUNT,
 
     // This guarantees a correct jump if new moveends are added directly after MOVEEND_HIT_ESCAPE
