@@ -3795,38 +3795,40 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 effect++;
             }
             break;
-		case ABILITY_BLANK_CARD:
-            struct Pokemon *donor;
-            struct Pokemon *party = GetBattlerParty(battler);
-            u32 slot = 0;
-            s32 k = 0;
-            u32 newability;
-            // if (GetBattlerSide(battler) == B_SIDE_OPPONENT)
-            //     party = gEnemyParty;
-            // else
-            //     party = gPlayerParty;
-            
-            
-            for (k = 5; k > 0; k--)
+        case ABILITY_BLANK_CARD:
+            if (shouldAbilityTrigger)
             {
-                if ((GetMonData(&party[k], MON_DATA_SPECIES) != SPECIES_NONE)
-                    && (!GetMonData(&party[k], MON_DATA_IS_EGG))
-                    && (gBattlerPartyIndexes[battler] != k))
+                struct Pokemon *donor;
+                struct Pokemon *party = GetBattlerParty(battler);
+                u32 slot = PARTY_SIZE;
+                u32 newAbility = ABILITY_NONE;
+
+                // Gather the last party member available
+                for (i = PARTY_SIZE - 1; i > 0; i--)
+                {
+                    if (GetMonData(&party[i], MON_DATA_SPECIES) != SPECIES_NONE
+                        && !GetMonData(&party[i], MON_DATA_IS_EGG)
+                        && gBattlerPartyIndexes[battler] != i)
                     {
-                        slot = k;
-                        k = -1;
+                        slot = i;
+                        break;
                     }
-            }
-            donor = &party[slot];
-            newability = GetMonAbility(donor);
-            
-            if (newability != ABILITY_PLAY_GHOST && newability != ABILITY_BLANK_CARD && newability != ABILITY_PURE_ENIGMA && newability != ABILITY_TRACE)
-            {
-                gBattleMons[battler].ability = newability;
-                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, newability)
-                BattleScriptPushCursorAndCallback(BattleScript_BlankCardActivates);
-                gBattleScripting.battler = battler;
-                effect++;
+                }
+
+                if (slot != PARTY_SIZE)
+                {
+                    donor = &party[slot];
+                    newAbility = GetMonAbility(donor);
+                    if (!gAbilitiesInfo[newAbility].cantBeCopied)
+                        effect++;
+                }
+
+                if (effect != 0)
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_BlankCardActivates);
+                    gBattleStruct->tracedAbility[battler] = gLastUsedAbility = newAbility;
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility)
+                }
             }
 			break;
         default:

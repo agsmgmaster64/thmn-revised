@@ -8426,8 +8426,10 @@ BattleScript_TwinSparkActivates::
 	jumptocalledmove TRUE
 
 BattleScript_BlankCardActivates::
-	call BattleScript_AbilityPopUp
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUpScripting
 	printstring STRINGID_BLANKCARDACTIVATES
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
+	settracedability BS_SCRIPTING
 	switchinabilities BS_SCRIPTING
 	end3

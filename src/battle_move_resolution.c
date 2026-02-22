@@ -641,6 +641,7 @@ static enum CancelerResult CancelerPPDeduction(struct BattleContext *ctx)
 {
     if (gBattleMons[ctx->battlerAtk].volatiles.multipleTurns
      || gSpecialStatuses[ctx->battlerAtk].dancerUsedMove
+     || gSpecialStatuses[gBattlerAttacker].wallMasterTracker
      || ctx->move == MOVE_STRUGGLE)
         return CANCELER_RESULT_SUCCESS;
 
@@ -674,10 +675,7 @@ static enum CancelerResult CancelerPPDeduction(struct BattleContext *ctx)
 
     if (gBattleMons[ctx->battlerAtk].pp[movePosition] > ppToDeduct)
     {
-        if(gSpecialStatuses[gBattlerAttacker].wallMasterTracker == 0)
-        {
-            gBattleMons[ctx->battlerAtk].pp[movePosition] -= ppToDeduct;
-        }
+        gBattleMons[ctx->battlerAtk].pp[movePosition] -= ppToDeduct;
     }
     else
     {
