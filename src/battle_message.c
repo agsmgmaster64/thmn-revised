@@ -904,6 +904,9 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_WALLMASTERACTIVATES]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Wall Master lets it use another move!"),
     [STRINGID_TWINSPARKACTIVATES]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Twin Spark lets it attack again!"),
     [STRINGID_BLANKCARDACTIVATES]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Blank Card turned into {B_BUFF1}!"),
+    [STRINGID_REACTIVEDEF]                          = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s ability raised its Defense and lowered its Sp. Def!"),
+    [STRINGID_REACTIVESPDEF]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s ability raised its Sp. Def and lowered its Defense!"),
+    [STRINGID_DEVOURHEAL]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} absorbed the lifeforce of {B_DEF_NAME_WITH_PREFIX2}!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

@@ -477,7 +477,6 @@ static bool32 HandleEndTurnLeechSeed(enum BattlerId battler)
 static bool32 HandleEndTurnPoison(enum BattlerId battler)
 {
     bool32 effect = FALSE;
-    bool32 catalystProc = FALSE;
 
     enum Ability ability = GetBattlerAbility(battler);
     u32 side;

@@ -10394,34 +10394,15 @@ gBattleAnimMove_StrengthSap::
 	loadspritegfx ANIM_TAG_ORBS @absorb
 	loadspritegfx ANIM_TAG_SPARKLE_2 @stars
 	monbg ANIM_DEF_PARTNER
-	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	playsewithpan SE_M_PSYBEAM, SOUND_PAN_TARGET
 	createsprite gStrengthSapRedSmokeTemplate, ANIM_TARGET, 2, 0x8, 0x3, 0x1, 0x0
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x46, 0x0, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x28, 0x28, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xa, 0xffc4, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xffce, 0xffd8, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xffd8, 0x28, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x32, 0xffce, 0x6
 	delay 2
 	createsprite gStrengthSapRedSmokeTemplate, ANIM_TARGET, 2, 0xfff8, 0xfff8, 0x1, 0x0
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x32, 0xffe2, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x3c, 0xa, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x0, 0x3c, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x0, 0xffd8, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xffc4, 0x14, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xffc4, 0xffe2, 0x6
 	delay 2
 	createsprite gStrengthSapRedSmokeTemplate, ANIM_TARGET, 2, 0x8, 0xfff8, 0x1, 0x0
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xffce, 0x32, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xffc4, 0x14, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0xffd8, 0xffd8, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x14, 0xffc4, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x32, 0xffce, 0x6
-	createsprite gStrengthSapRedInwardTemplate, ANIM_ATTACKER, 4, 0x23, 0x28, 0x6
 	delay 2
 	createsprite gStrengthSapRedSmokeTemplate, ANIM_TARGET, 2, 0xfff8, 0x8, 0x1, 0x0
 	waitforvisualfinish
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 1, 0, 3, RGB(29, 31, 1)
 	delay 5
 	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
 	createsprite gStrengthSapAbsorbTemplate, ANIM_ATTACKER, 3, 0x0, 0x5, 0x8, 0x1a
@@ -10447,7 +10428,6 @@ gBattleAnimMove_StrengthSap::
 	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
 	createsprite gStrengthSapAbsorbTemplate, ANIM_ATTACKER, 3, 0x5, 0xffee, 0xffec, 0x23
 	waitforvisualfinish
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 1, 3, 0, RGB(29, 31, 1)
 	loopsewithpan SE_M_HEAL_BELL, SOUND_PAN_ATTACKER, 0x10, 0x3
 	call GrantingStarsEffect
 	waitforvisualfinish

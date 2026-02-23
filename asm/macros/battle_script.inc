@@ -1755,6 +1755,22 @@
 	.4byte \jumpInstr
 	.endm
 
+	.macro jumpifpresent battler:req, jumpInstr:req
+	callnative BS_JumpIfPresent
+	.byte \battler
+	.4byte \jumpInstr
+	.endm
+
+	.macro calcdevourhealamount battler:req
+	callnative BS_CalcDevourHealAmount
+	.byte \battler
+	.endm
+
+	.macro calcdevourdamageamountliquidooze battler:req
+	callnative BS_CalcDevourDamageAmountLiquidOoze
+	.byte \battler
+	.endm
+
 	.macro jumpifnoholdeffect battler:req, holdEffect:req, jumpInstr:req
 	jumpifholdeffect \battler, \holdEffect, \jumpInstr, FALSE
 	.endm

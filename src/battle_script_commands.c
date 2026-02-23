@@ -13466,6 +13466,35 @@ void BS_JumpIfAbsent(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_CalcDevourHealAmount(void)
+{
+    NATIVE_ARGS(u8 battler);
+    s32 devourAmount = 0;
+    devourAmount = GetDrainedBigRootHp(gBattlerAttacker, GetNonDynamaxMaxHP(GetBattlerForBattleScript(cmd->battler)) / 3);
+    SetHealAmount(gBattlerAttacker, devourAmount);
+
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_CalcDevourDamageAmountLiquidOoze(void)
+{
+    NATIVE_ARGS(u8 battler);
+    s32 devourAmount = 0;
+    devourAmount = GetDrainedBigRootHp(gBattlerAttacker, GetNonDynamaxMaxHP(GetBattlerForBattleScript(cmd->battler)) / 3);
+    SetPassiveDamageAmount(gBattlerAttacker, devourAmount);
+
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_JumpIfPresent(void) //used for devour
+{
+    NATIVE_ARGS(u8 battler, const u8 *jumpInstr);
+    if (IsBattlerAlive(GetBattlerForBattleScript(cmd->battler)))
+        gBattlescriptCurrInstr = cmd->jumpInstr;
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
 void BS_JumpIfHoldEffect(void)
 {
     NATIVE_ARGS(u8 battler, u8 holdEffect, const u8 *jumpInstr, u8 equal);

@@ -8433,3 +8433,102 @@ BattleScript_BlankCardActivates::
 	settracedability BS_SCRIPTING
 	switchinabilities BS_SCRIPTING
 	end3
+
+BattleScript_ReactiveDef::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_REACTIVEDEF
+	waitmessage 0x40
+	return
+
+BattleScript_ReactiveSpDef::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_REACTIVESPDEF
+	waitmessage 0x40
+	return
+
+BattleScript_DevourHeal::
+	waitstate
+	call BattleScript_AbilityPopUp
+	waitanimation
+	waitmessage B_WAIT_TIME_LONG
+	playmoveanimation MOVE_STRENGTH_SAP
+	waitanimation
+	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	datahpupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	printstring STRINGID_DEVOURHEAL
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_DevourHealBlock::
+	waitstate
+	call BattleScript_AbilityPopUp
+	waitanimation
+	waitmessage B_WAIT_TIME_LONG
+	playmoveanimation MOVE_STRENGTH_SAP
+	waitanimation
+	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	datahpupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	return
+
+BattleScript_DevourLiquidOoze::
+	waitstate
+	call BattleScript_AbilityPopUp
+	waitanimation
+	waitmessage B_WAIT_TIME_LONG
+	playmoveanimation MOVE_STRENGTH_SAP
+	waitanimation
+	call BattleScript_AbilityPopUpTarget
+	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	datahpupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	printstring STRINGID_ITSUCKEDLIQUIDOOZE
+	tryfaintmon BS_ATTACKER
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_DevourHealMultiTarget::
+	saveattacker
+	savetarget
+	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK, BattleScript_DevourHealMultiTarget_Return
+	waitstate
+	call BattleScript_AbilityPopUp
+	waitanimation
+	waitmessage B_WAIT_TIME_LONG
+	setbyte gBattlerTarget, 0
+BattleScript_DevourHealMultiTarget_Loop:
+	jumpifpresent BS_TARGET, BattleScript_DevourHealMultiTarget_LoopIncrement
+BattleScript_DevourHealMultiTarget_Effect:
+	jumpifability BS_TARGET, ABILITY_LIQUID_OOZE, BattleScript_DevourHealMultiTarget_EffectLiquidOoze
+	jumpifability BS_TARGET, ABILITY_STRANGE_MIST, BattleScript_DevourHealMultiTarget_EffectLiquidOoze
+BattleScript_DevourHealMultiTarget_EffectHeal:
+	jumpifabsent BS_ATTACKER, BattleScript_DevourHealMultiTarget_LoopIncrement
+	jumpiffullhp BS_ATTACKER, BattleScript_DevourHealMultiTarget_LoopIncrement
+	calcdevourhealamount BS_TARGET
+	playmoveanimation MOVE_STRENGTH_SAP
+	waitanimation
+	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	datahpupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	printstring STRINGID_DEVOURHEAL
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DevourHealMultiTarget_LoopIncrement
+BattleScript_DevourHealMultiTarget_EffectLiquidOoze:
+	jumpifabsent BS_ATTACKER, BattleScript_DevourHealMultiTarget_LoopIncrement
+	calcdevourdamageamountliquidooze BS_TARGET
+	playmoveanimation MOVE_STRENGTH_SAP
+	waitanimation
+	call BattleScript_AbilityPopUpTarget
+	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	datahpupdate BS_ATTACKER, PASSIVE_HP_UPDATE
+	printstring STRINGID_ITSUCKEDLIQUIDOOZE
+	tryfaintmon BS_ATTACKER
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DevourHealMultiTarget_LoopIncrement
+BattleScript_DevourHealMultiTarget_WaitString:
+BattleScript_DevourHealMultiTarget_LoopIncrement:
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_DevourHealMultiTarget_Loop
+	destroyabilitypopup
+	pause B_WAIT_TIME_MED
+BattleScript_DevourHealMultiTarget_Return:
+	restoretarget
+	restoreattacker
+	return

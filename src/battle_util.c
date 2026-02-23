@@ -4643,6 +4643,34 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 }
             }
             break;
+        case ABILITY_REACTIVE:
+            if (gBattleMons[gBattlerTarget].hp != 0
+                && IsBattlerTurnDamaged(gBattlerTarget))
+            {
+                if (IsBattleMovePhysical(gCurrentMove)
+                    && gBattleMons[gBattlerTarget].statStages[STAT_DEF] < 12)
+                {
+                    gBattleMons[gBattlerTarget].statStages[STAT_DEF]++;
+                    if (gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] > 0)
+                        gBattleMons[gBattlerTarget].statStages[STAT_SPDEF]--;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_ReactiveDef;
+                    gBattleScripting.battler = gBattlerTarget;
+                    ++effect;
+                }
+                else if (!IsBattleMovePhysical(gCurrentMove)
+                    && gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] < 12)
+                {
+                    gBattleMons[gBattlerTarget].statStages[STAT_SPDEF]++;
+                    if (gBattleMons[gBattlerTarget].statStages[STAT_DEF] > 0)
+                        gBattleMons[gBattlerTarget].statStages[STAT_DEF]--;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_ReactiveSpDef;
+                    gBattleScripting.battler = gBattlerTarget;
+                    ++effect;
+                }
+            }
+            break;
         default:
             break;
         }
@@ -4863,6 +4891,50 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                     effect = TRUE;
                     break; // found target to steal from
                 }
+            }
+            break;
+        case ABILITY_DEVOUR:
+            if (IsBattlerAlive(battler) && !IsBattlerAtMaxHp(battler))
+            {
+                s32 devourAmount;
+
+                if ((gMovesInfo[gCurrentMove].target == TARGET_DEPENDS
+                 || gMovesInfo[gCurrentMove].target == TARGET_BOTH
+                 || gMovesInfo[gCurrentMove].target == TARGET_USER_AND_ALLY
+                 || gMovesInfo[gCurrentMove].target == TARGET_FOES_AND_ALLY
+                 || gMovesInfo[gCurrentMove].target == TARGET_FIELD
+                 || gMovesInfo[gCurrentMove].target == TARGET_OPPONENTS_FIELD
+                 || gMovesInfo[gCurrentMove].target == TARGET_ALL_BATTLERS))
+                {
+                    BattleScriptCall(BattleScript_DevourHealMultiTarget);
+                }
+                else if ((gMovesInfo[gCurrentMove].target == TARGET_SELECTED
+                 || gMovesInfo[gCurrentMove].target == TARGET_OPPONENT
+                 || gMovesInfo[gCurrentMove].target == TARGET_SMART
+                 || gMovesInfo[gCurrentMove].target == TARGET_RANDOM
+                 || gMovesInfo[gCurrentMove].target == TARGET_USER
+                 || gMovesInfo[gCurrentMove].target == TARGET_ALLY
+                 || gMovesInfo[gCurrentMove].target == TARGET_USER_OR_ALLY)
+                 && !IsBattlerAlive(gBattlerTarget))
+                {
+                    devourAmount = GetDrainedBigRootHp(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerTarget) / 3);
+
+                    if (GetBattlerAbility(gBattlerTarget) == ABILITY_LIQUID_OOZE || GetBattlerAbility(gBattlerTarget) == ABILITY_STRANGE_MIST)
+                    {
+                        SetPassiveDamageAmount(gBattlerAttacker, devourAmount);
+                        BattleScriptCall(BattleScript_DevourLiquidOoze);
+                    }
+                    else if ((gBattleMons[gBattlerAttacker].volatiles.healBlock))
+                    {
+                        BattleScriptCall(BattleScript_DevourHealBlock);
+                    }
+                    else
+                    {
+                        SetHealAmount(gBattlerAttacker, devourAmount);
+                        BattleScriptCall(BattleScript_DevourHeal);
+                    }
+                }
+                effect = TRUE;
             }
             break;
         case ABILITY_MOXIE:
@@ -8706,6 +8778,14 @@ static inline void MulByTypeEffectiveness(struct BattleContext *ctx, uq4_12_t *m
     else if ((ctx->moveType == TYPE_FIGHTING || ctx->moveType == TYPE_NORMAL) && defType == TYPE_GHOST
         && (ctx->abilityAtk == ABILITY_SCRAPPY || ctx->abilityAtk == ABILITY_MINDS_EYE)
         && mod == UQ_4_12(0.0))
+    {
+        mod = UQ_4_12(1.0);
+        if (ctx->updateFlags)
+            RecordAbilityBattle(ctx->battlerAtk, ctx->abilityAtk);
+    }
+
+    if ((ctx->moveType == TYPE_GHOST) && (defType == TYPE_NORMAL)
+        && (ctx->abilityAtk == ABILITY_LOST_DREAM) && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(1.0);
         if (ctx->updateFlags)
