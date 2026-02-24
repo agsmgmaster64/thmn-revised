@@ -4644,30 +4644,30 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_REACTIVE:
-            if (gBattleMons[gBattlerTarget].hp != 0
-                && IsBattlerTurnDamaged(gBattlerTarget))
+            if (IsBattlerAlive(gBattlerTarget)
+             && IsBattlerTurnDamaged(gBattlerTarget))
             {
                 if (IsBattleMovePhysical(gCurrentMove)
-                    && gBattleMons[gBattlerTarget].statStages[STAT_DEF] < 12)
+                 && CompareStat(gBattlerTarget, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
                 {
-                    gBattleMons[gBattlerTarget].statStages[STAT_DEF]++;
-                    if (gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] > 0)
-                        gBattleMons[gBattlerTarget].statStages[STAT_SPDEF]--;
-                    BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_ReactiveDef;
-                    gBattleScripting.battler = gBattlerTarget;
-                    ++effect;
+                    SET_STATCHANGER(STAT_DEF, 1, FALSE);
+                    gBattleScripting.savedStatChanger = 0;
+                    if (CompareStat(gBattlerTarget, STAT_SPDEF, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility))
+                        SET_STATCHANGER2(gBattleScripting.savedStatChanger, STAT_SPDEF, 1, TRUE);
+                    BattleScriptCall(BattleScript_ReactiveActivates);
+                    gBattleScripting.battler = gBattlerAbility = gBattlerTarget;
+                    effect++;
                 }
-                else if (!IsBattleMovePhysical(gCurrentMove)
-                    && gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] < 12)
+                else if (IsBattleMoveSpecial(gCurrentMove)
+                 && CompareStat(gBattlerTarget, STAT_SPDEF, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
                 {
-                    gBattleMons[gBattlerTarget].statStages[STAT_SPDEF]++;
-                    if (gBattleMons[gBattlerTarget].statStages[STAT_DEF] > 0)
-                        gBattleMons[gBattlerTarget].statStages[STAT_DEF]--;
-                    BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_ReactiveSpDef;
-                    gBattleScripting.battler = gBattlerTarget;
-                    ++effect;
+                    SET_STATCHANGER(STAT_SPDEF, 1, FALSE);
+                    gBattleScripting.savedStatChanger = 0;
+                    if (CompareStat(gBattlerTarget, STAT_SPDEF, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility))
+                        SET_STATCHANGER2(gBattleScripting.savedStatChanger, STAT_DEF, 1, TRUE);
+                    BattleScriptCall(BattleScript_ReactiveActivates);
+                    gBattleScripting.battler = gBattlerAbility = gBattlerTarget;
+                    effect++;
                 }
             }
             break;

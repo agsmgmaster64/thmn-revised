@@ -8434,17 +8434,21 @@ BattleScript_BlankCardActivates::
 	switchinabilities BS_SCRIPTING
 	end3
 
-BattleScript_ReactiveDef::
+BattleScript_ReactiveActivates::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_REACTIVEDEF
-	waitmessage 0x40
-	return
-
-BattleScript_ReactiveSpDef::
-	call BattleScript_AbilityPopUp
-	printstring STRINGID_REACTIVESPDEF
-	waitmessage 0x40
-	return
+	statbuffchange BS_TARGET, STAT_CHANGE_CERTAIN | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_ReactiveLower
+	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, B_MSG_DEFENDER_STAT_CHANGED, BattleScript_ReactiveLower
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ReactiveLower:
+	jumpifbyteequal sSAVED_STAT_CHANGER, sZero, BattleScript_ReactiveRet
+	copybyte sSTATCHANGER, sSAVED_STAT_CHANGER
+	statbuffchange BS_TARGET, STAT_CHANGE_CERTAIN | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_ReactiveRet
+	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, B_MSG_DEFENDER_STAT_CHANGED, BattleScript_ReactiveRet
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ReactiveRet:
+	end2
 
 BattleScript_DevourHeal::
 	waitstate
