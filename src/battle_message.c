@@ -900,11 +900,18 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNEATING]                           = COMPOUND_STRING("{B_OPPONENT_MON1_NAME} is eating!"),
     //touhoumon
     [STRINGID_POWERLEAKBOOST]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Sp. Atk fell slightly!"),
-    [STRINGID_BUZZERBLOCKED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was blocked by {B_ATK_NAME_WITH_PREFIX2}'s {B_ATK_ABILITY}!"),
     [STRINGID_WALLMASTERACTIVATES]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Wall Master lets it use another move!"),
     [STRINGID_TWINSPARKACTIVATES]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Twin Spark lets it attack again!"),
     [STRINGID_BLANKCARDACTIVATES]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Blank Card turned into {B_BUFF1}!"),
     [STRINGID_DEVOURHEAL]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} absorbed the lifeforce of {B_DEF_NAME_WITH_PREFIX2}!"),
+    [STRINGID_LASTWISHCAMETRUE]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} received the wish!"),
+    [STRINGID_LASTWISH]                             = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} made its last wish!"),
+    [STRINGID_LASTGRUDGE]                           = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s Last Grudge reduced {B_BUFF1} to 1 PP!"),
+    [STRINGID_MYREALMSET]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s ability twisted the dimensions!"),
+    [STRINGID_MYREALMUNSET]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s ability reset the dimensions!"),
+    [STRINGID_BUZZERLOWERSSTAT]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} lowers {B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}!"),
+    [STRINGID_BUZZERRAISESSTAT]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} raises {B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}!"),
+    [STRINGID_BUZZERBLOCKED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was blocked by {B_ATK_NAME_WITH_PREFIX2}'s {B_ATK_ABILITY}!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

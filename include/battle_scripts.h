@@ -833,5 +833,13 @@ extern const u8 BattleScript_DevourHeal[];
 extern const u8 BattleScript_DevourHealBlock[];
 extern const u8 BattleScript_DevourLiquidOoze[];
 extern const u8 BattleScript_DevourHealMultiTarget[];
+extern const u8 BattleScript_MadeLastWish[];
+extern const u8 BattleScript_LastWishActivates[];
+extern const u8 BattleScript_LastGrudge[];
+extern const u8 BattleScript_MyRealmActivates[];
+extern const u8 BattleScript_MyRealmActivatesUnset[];
+extern const u8 BattleScript_Buzzer[];
+extern const u8 BattleScript_BuzzerContrary[];
+extern const u8 BattleScript_BuzzerBlocked[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

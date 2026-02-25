@@ -508,7 +508,9 @@ struct BattlerState
     u16 switchIn:1;
     u16 fainted:1;
     u16 isFirstTurn:2;
-    u16 padding:12;
+    u16 lastWishFlag:1;
+    u16 padding:11;
+    u16 lastWishAmount;
 };
 
 struct PartyState
@@ -709,6 +711,7 @@ struct BattleStruct
     u8 magicCoatActive:1;
     u8 magicBounceActive:1;
     u8 moveBouncer;
+    u8 salvageBattlerId;
 };
 
 struct AiBattleData

@@ -4054,6 +4054,7 @@ BattleScript_FaintBattler::
 	waitanimation
 	tryactivatereceiver BS_FAINTED
 	tryactivatesoulheart
+	tryactivatesalvage
 	trytrainerslidemsgfirstoff BS_FAINTED
 	return
 
@@ -8535,4 +8536,66 @@ BattleScript_DevourHealMultiTarget_LoopIncrement:
 BattleScript_DevourHealMultiTarget_Return:
 	restoretarget
 	restoreattacker
+	return
+
+BattleScript_MadeLastWish::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_LASTWISH
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_LastWishActivates::
+	printstring STRINGID_LASTWISHCAMETRUE
+	waitmessage B_WAIT_TIME_LONG
+	playanimation BS_SCRIPTING, B_ANIM_WISH_HEAL
+	waitanimation
+	healthbarupdate BS_SCRIPTING, PASSIVE_HP_UPDATE
+	datahpupdate BS_SCRIPTING, PASSIVE_HP_UPDATE
+	clearstatus BS_SCRIPTING
+	waitstate
+	updatestatusicon BS_SCRIPTING
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_LastGrudge::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_LASTGRUDGE
+	waitmessage 0x40
+	return
+
+BattleScript_MyRealmActivates::
+	call BattleScript_AbilityPopUp
+	settrickroom
+	printstring STRINGID_MYREALMSET
+	playanimation BS_BATTLER_0, B_ANIM_TRICK_ROOM
+	pause B_WAIT_TIME_SHORT
+	end3
+
+BattleScript_MyRealmActivatesUnset::
+	call BattleScript_AbilityPopUp
+	settrickroom
+	printstring STRINGID_MYREALMUNSET
+	playanimation BS_BATTLER_0, B_ANIM_TRICK_ROOM
+	pause B_WAIT_TIME_SHORT
+	end3
+
+BattleScript_Buzzer::
+	call BattleScript_AbilityPopUp
+	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_BUZZERLOWERSSTAT
+	waitmessage 0x40
+	return
+
+BattleScript_BuzzerContrary::
+	call BattleScript_AbilityPopUp
+	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_BUZZERRAISESSTAT
+	waitmessage 0x40
+	return
+
+BattleScript_BuzzerBlocked::
+	printstring STRINGID_BUZZERBLOCKED
+	waitmessage 0x40
 	return

@@ -1013,6 +1013,9 @@ extern const u8 gBattleAnimGeneral_SilphScoped[];
 extern const u8 gBattleAnimGeneral_SafariRockThrow[];
 extern const u8 gBattleAnimGeneral_SafariReaction[];
 
+//touhoumon stuff
+extern const u8 gBattleAnimGeneral_Buzzer[];
+
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];
 extern const u8 gBattleAnimSpecial_SwitchOutPlayerMon[];

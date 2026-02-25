@@ -3144,6 +3144,8 @@ static void BattleStartClearSetData(void)
         gBattleStruct->lastTakenMoveFrom[i][3] = MOVE_NONE;
         gBattleStruct->AI_monToSwitchIntoId[i] = PARTY_SIZE;
         gBattleStruct->skyDropTargets[i] = SKY_DROP_NO_TARGET;
+        gBattleStruct->battlerState[i].lastWishFlag = 0;
+        gBattleStruct->battlerState[i].lastWishAmount = 0;
     }
 
     gLastUsedMove = 0;
@@ -4822,6 +4824,8 @@ u32 GetBattlerTotalSpeedStat(enum BattlerId battler, enum Ability ability, enum 
         speed *= 2;
     else if (ability == ABILITY_PURE_ENIGMA)
         speed = (speed * 150) / 100;
+	else if (ability == ABILITY_AMBUSH && gBattleStruct->battlerState[battler].isFirstTurn)
+		speed = (speed * 150) / 100;
 
     // player's badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))

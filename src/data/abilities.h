@@ -3074,4 +3074,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("User always has same-type attack\nbonus, unless move is typeless."),
         .aiRating = 8,
     },
+
+    [ABILITY_AMBUSH] =
+    {
+        .name = _("Ambush"),
+        .description = COMPOUND_STRING("User's Speed is 50% higher, but\nonly on the first turn."),
+        .aiRating = 9,
+    },
 };

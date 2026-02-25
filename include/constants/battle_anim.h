@@ -603,7 +603,8 @@ enum AnimBattler
 #define B_ANIM_SILPH_SCOPED             58
 #define B_ANIM_ROCK_THROW               59
 #define B_ANIM_SAFARI_REACTION          60
-#define NUM_B_ANIMS_GENERAL             61
+#define B_ANIM_BUZZER                   61
+#define NUM_B_ANIMS_GENERAL             62
 
 // special animations table (sBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

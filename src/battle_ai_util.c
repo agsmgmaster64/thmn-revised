@@ -3351,6 +3351,8 @@ static bool32 BattlerAffectedBySandstorm(enum BattlerId battlerId, enum Ability 
       && ability != ABILITY_SAND_VEIL
       && ability != ABILITY_SAND_FORCE
       && ability != ABILITY_SAND_RUSH
+      && ability != ABILITY_SAND_STREAM
+      && ability != ABILITY_SAND_CASTLE
       && ability != ABILITY_OVERCOAT)
         return TRUE;
     return FALSE;

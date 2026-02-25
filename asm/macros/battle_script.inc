@@ -1988,6 +1988,14 @@
 	callnative BS_TryActivateSoulheart
 	.endm
 
+	.macro tryactivatesalvage
+	callnative BS_TryActivateSalvage
+	.endm
+
+	.macro settrickroom
+	callnative BS_settrickroom
+	.endm
+
 	.macro playmoveanimation move:req
 	callnative BS_PlayMoveAnimation
 	.2byte \move

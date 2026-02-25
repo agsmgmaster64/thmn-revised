@@ -153,6 +153,7 @@ static bool32 DoesAbilityBenefitFromWeather(enum Ability ability, u32 weather)
     case ABILITY_SAND_FORCE:
     case ABILITY_SAND_RUSH:
     case ABILITY_SAND_VEIL:
+    case ABILITY_SAND_CASTLE:
         return (weather & B_WEATHER_SANDSTORM);
     case ABILITY_ICE_BODY:
     case ABILITY_ICE_FACE:
@@ -173,6 +174,7 @@ static bool32 DoesAbilityBenefitFromWeather(enum Ability ability, u32 weather)
     case ABILITY_ORICHALCUM_PULSE:
     case ABILITY_PROTOSYNTHESIS:
     case ABILITY_SOLAR_POWER:
+    case ABILITY_SUNBATHING:
         return (weather & B_WEATHER_SUN);
     default:
         break;

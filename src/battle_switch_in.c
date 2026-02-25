@@ -179,6 +179,9 @@ static bool32 CanBattlerBeHealed(enum BattlerId battler)
     if (gBattleMons[battler].hp != gBattleMons[battler].maxHP || gBattleMons[battler].status1)
         return TRUE;
 
+    if (gBattleStruct->battlerState[battler].lastWishFlag)
+        return TRUE;
+
     if (gBattleStruct->battlerState[battler].storedLunarDance
      && (gBattleMons[battler].pp[0] < CalculatePPWithBonus(gBattleMons[battler].moves[0], gBattleMons[battler].ppBonuses, 0)
       || gBattleMons[battler].pp[1] < CalculatePPWithBonus(gBattleMons[battler].moves[1], gBattleMons[battler].ppBonuses, 1)
@@ -217,6 +220,17 @@ static bool32 FirstEventBlockEvents(struct BattleCalcValues *calcValues)
             SetHealAmount(battler, GetNonDynamaxMaxHP(battler));
             gBattleScripting.battler = battler;
             BattleScriptCall(BattleScript_LunarDanceActivates);
+            effect = TRUE;
+        }
+        else if (gBattleStruct->battlerState[battler].lastWishFlag != 0 && gBattleStruct->battlerState[battler].lastWishAmount != 0)
+        {
+            u16 amountHP = gBattleStruct->battlerState[battler].lastWishAmount;
+            
+            gBattleScripting.battler = battler;
+            SetHealAmount(battler, amountHP);
+            BattleScriptCall(BattleScript_LastWishActivates);
+            gBattleStruct->battlerState[battler].lastWishFlag = 0;
+            gBattleStruct->battlerState[battler].lastWishAmount = 0;
             effect = TRUE;
         }
         else if (gBattleStruct->zmove.healReplacement & 1u << battler)
