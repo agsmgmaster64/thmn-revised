@@ -6587,6 +6587,13 @@ BattleScript_AbilityNoStatLoss::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_AbilityNoStatGain::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNPREVENTSSTATGAINWITH
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_ItemNoStatLoss::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_CLEARAMULETWONTLOWERSTATS

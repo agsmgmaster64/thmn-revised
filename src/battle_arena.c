@@ -432,6 +432,7 @@ void BattleArena_DeductSkillPoints(enum BattlerId battler, enum StringID stringI
     case STRINGID_PKMNANCHORSITSELFWITH:
     case STRINGID_PKMNPREVENTSSTATLOSSWITH:
     case STRINGID_PKMNSTAYEDAWAKEUSING:
+    case STRINGID_PKMNPREVENTSSTATGAINWITH:
         skillPoints[battler] -= 3;
         break;
     default:

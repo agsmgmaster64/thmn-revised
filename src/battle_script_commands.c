@@ -7662,7 +7662,7 @@ static void TryPlayStatChangeAnimation(enum BattlerId battler, enum Ability abil
 
 static u32 ChangeStatBuffs(enum BattlerId battler, s8 statValue, enum Stat statId, union StatChangeFlags flags, u32 stats, const u8 *BS_ptr)
 {
-    u32 index, battlerAbility;
+    u32 index, battlerAbility, battlerCheck;
     enum HoldEffect battlerHoldEffect;
     battlerAbility = GetBattlerAbility(battler);
     battlerHoldEffect = GetBattlerHoldEffect(battler);
@@ -7829,65 +7829,90 @@ static u32 ChangeStatBuffs(enum BattlerId battler, s8 statValue, enum Stat statI
     }
     else // stat increase
     {
-        statValue = GET_STAT_BUFF_VALUE(statValue);
-        if (gBattleMons[battler].statStages[statId] == MAX_STAT_STAGE - 1)
-            statValue = 1;
-        else if (gBattleMons[battler].statStages[statId] == MAX_STAT_STAGE - 2  && statValue > 2)
-            statValue = 2;
-
-        if (statValue == 2)
+        if ((battlerCheck = IsAbilityOnOpposingSide(battler, ABILITY_STASIS_GAZE)))
         {
-            PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_STATSHARPLY);
-        }
-        else if (statValue >= 3)
-        {
-            PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_DRASTICALLY);
-        }
-        else
-        {
-            PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_EMPTYSTRING3);
-        }
-
-        gBattleCommunication[MULTISTRING_CHOOSER] = (gBattlerTarget == battler); // B_MSG_ATTACKER_STAT_CHANGED or B_MSG_DEFENDER_STAT_CHANGED
-
-        if (gBattleMons[battler].statStages[statId] == MAX_STAT_STAGE)
-        {
-            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STAT_WONT_CHANGE;
-            gBattleScripting.statChanger &= ~STAT_BUFF_NEGATIVE;
-        }
-        else if (!flags.onlyChecking)
-        {
-            u32 statIncrease;
-            if ((statValue + gBattleMons[battler].statStages[statId]) > MAX_STAT_STAGE)
-                statIncrease = MAX_STAT_STAGE - gBattleMons[battler].statStages[statId];
-            else
-                statIncrease = statValue;
-
-            gProtectStructs[battler].statRaised = TRUE;
-            gBattleScripting.statChanger &= ~STAT_BUFF_NEGATIVE;
-
-            if (statIncrease)
+            if (flags.allowPtr)
             {
-                // Check Mirror Herb / Opportunist
-                for (enum BattlerId index = 0; index < gBattlersCount; index++)
+                battlerCheck--; // IsAbilityOnOpposingSide will return 1 greater to return not false, this sets it back
+                gBattleScripting.battler = battlerCheck;
+                if (gSpecialStatuses[battler].statRaised)
                 {
-                    if (IsBattlerAlly(index, battler))
-                        continue; // Only triggers on opposing side
+                    gBattlescriptCurrInstr = BS_ptr;
+                }
+                else
+                {
+                    gBattlerAbility = battlerCheck;
+                    BattleScriptPush(BS_ptr);
+                    gBattlescriptCurrInstr = BattleScript_AbilityNoStatGain;
+                    gLastUsedAbility = ABILITY_STASIS_GAZE;
+                    RecordAbilityBattle(battlerCheck, gLastUsedAbility);
+                    gSpecialStatuses[battler].statRaised = TRUE;
+                }
+            }
+            return STAT_CHANGE_DIDNT_WORK;
+        }
+        else // try to increase
+        {
+            statValue = GET_STAT_BUFF_VALUE(statValue);
+            if (gBattleMons[battler].statStages[statId] == MAX_STAT_STAGE - 1)
+                statValue = 1;
+            else if (gBattleMons[battler].statStages[statId] == MAX_STAT_STAGE - 2  && statValue > 2)
+                statValue = 2;
 
-                    if (GetBattlerAbility(index) == ABILITY_OPPORTUNIST
-                     && gProtectStructs[battler].activateOpportunist == 0) // don't activate opportunist on other mon's opportunist raises
-                    {
-                        gProtectStructs[index].activateOpportunist = 2;      // set stats to copy
-                    }
-                    if (GetBattlerHoldEffect(index) == HOLD_EFFECT_MIRROR_HERB)
-                    {
-                        gProtectStructs[index].eatMirrorHerb = 1;
-                    }
+            if (statValue == 2)
+            {
+                PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_STATSHARPLY);
+            }
+            else if (statValue >= 3)
+            {
+                PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_DRASTICALLY);
+            }
+            else
+            {
+                PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_EMPTYSTRING3);
+            }
 
-                    if (gProtectStructs[index].activateOpportunist == 2 || gProtectStructs[index].eatMirrorHerb == 1)
+            gBattleCommunication[MULTISTRING_CHOOSER] = (gBattlerTarget == battler); // B_MSG_ATTACKER_STAT_CHANGED or B_MSG_DEFENDER_STAT_CHANGED
+
+            if (gBattleMons[battler].statStages[statId] == MAX_STAT_STAGE)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STAT_WONT_CHANGE;
+                gBattleScripting.statChanger &= ~STAT_BUFF_NEGATIVE;
+            }
+            else if (!flags.onlyChecking)
+            {
+                u32 statIncrease;
+                if ((statValue + gBattleMons[battler].statStages[statId]) > MAX_STAT_STAGE)
+                    statIncrease = MAX_STAT_STAGE - gBattleMons[battler].statStages[statId];
+                else
+                    statIncrease = statValue;
+
+                gProtectStructs[battler].statRaised = TRUE;
+                gBattleScripting.statChanger &= ~STAT_BUFF_NEGATIVE;
+
+                if (statIncrease)
+                {
+                    // Check Mirror Herb / Opportunist
+                    for (enum BattlerId index = 0; index < gBattlersCount; index++)
                     {
-                        gQueuedStatBoosts[index].stats |= (1 << (statId - 1));    // -1 to start at atk
-                        gQueuedStatBoosts[index].statChanges[statId - 1] += statIncrease;
+                        if (IsBattlerAlly(index, battler))
+                            continue; // Only triggers on opposing side
+
+                        if (GetBattlerAbility(index) == ABILITY_OPPORTUNIST
+                        && gProtectStructs[battler].activateOpportunist == 0) // don't activate opportunist on other mon's opportunist raises
+                        {
+                            gProtectStructs[index].activateOpportunist = 2;      // set stats to copy
+                        }
+                        if (GetBattlerHoldEffect(index) == HOLD_EFFECT_MIRROR_HERB)
+                        {
+                            gProtectStructs[index].eatMirrorHerb = 1;
+                        }
+
+                        if (gProtectStructs[index].activateOpportunist == 2 || gProtectStructs[index].eatMirrorHerb == 1)
+                        {
+                            gQueuedStatBoosts[index].stats |= (1 << (statId - 1));    // -1 to start at atk
+                            gQueuedStatBoosts[index].statChanges[statId - 1] += statIncrease;
+                        }
                     }
                 }
             }
