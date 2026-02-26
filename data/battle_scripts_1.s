@@ -8507,16 +8507,26 @@ BattleScript_MyRealmActivates::
 	pause B_WAIT_TIME_SHORT
 	end3
 
-BattleScript_BuzzerActivates::
+BattleScript_BuzzerActivatesAtk::
 	statbuffchange BS_ATTACKER, STAT_CHANGE_ONLY_CHECKING, BattleScript_BuzzerActivatesRet
 	waitstate
 	call BattleScript_AbilityPopUp
 	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
 	swapattackerwithtarget  @ for defiant, mirror armor
-	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SPD_MINUS_1
+	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_ATK_MINUS_1
 	swapattackerwithtarget
 BattleScript_BuzzerActivatesRet:
 	return
+
+BattleScript_BuzzerActivatesSpAtk::
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ONLY_CHECKING, BattleScript_BuzzerActivatesRet
+	waitstate
+	call BattleScript_AbilityPopUp
+	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
+	swapattackerwithtarget  @ for defiant, mirror armor
+	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SP_ATK_MINUS_1
+	swapattackerwithtarget
+	goto BattleScript_BuzzerActivatesRet
 
 BattleScript_BuzzerBlocked::
 	call BattleScript_AbilityPopUp

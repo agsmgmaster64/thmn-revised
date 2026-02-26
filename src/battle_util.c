@@ -4567,7 +4567,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                     {
                         SET_STATCHANGER(STAT_ATK, 1, TRUE);
                         PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
-                        BattleScriptCall(BattleScript_BuzzerActivates);
+                        BattleScriptCall(BattleScript_BuzzerActivatesAtk);
                         effect++;
                     }
                 }
@@ -4585,7 +4585,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                     {
                         SET_STATCHANGER(STAT_SPATK, 1, TRUE);
                         PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
-                        BattleScriptCall(BattleScript_BuzzerActivates);
+                        BattleScriptCall(BattleScript_BuzzerActivatesSpAtk);
                         effect++;
                     }
                 }

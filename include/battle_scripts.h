@@ -825,7 +825,8 @@ extern const u8 BattleScript_MadeLastWish[];
 extern const u8 BattleScript_LastWishActivates[];
 extern const u8 BattleScript_LastGrudge[];
 extern const u8 BattleScript_MyRealmActivates[];
-extern const u8 BattleScript_BuzzerActivates[];
+extern const u8 BattleScript_BuzzerActivatesAtk[];
+extern const u8 BattleScript_BuzzerActivatesSpAtk[];
 extern const u8 BattleScript_BuzzerBlocked[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
