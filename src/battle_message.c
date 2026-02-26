@@ -229,9 +229,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNWASFROZEN]                        = COMPOUND_STRING("{B_EFF_NAME_WITH_PREFIX} was frozen solid!"),
     [STRINGID_PKMNFROZENBY]                         = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_BUFF1} froze {B_EFF_NAME_WITH_PREFIX2} solid!"), //not in gen 5+, ability popup
     [STRINGID_PKMNISFROZEN]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is frozen solid!"),
-    [STRINGID_PKMNWASDEFROSTED]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} thawed out!"),
-    [STRINGID_PKMNWASDEFROSTED2]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} thawed out!"),
-    [STRINGID_PKMNWASDEFROSTEDBY]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE} melted the ice!"),
+    [STRINGID_PKMNWASDEFROSTED]                     = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} thawed out!"),
+    [STRINGID_PKMNWASDEFROSTEDBY]                   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE} melted the ice!"),
     [STRINGID_PKMNWASPARALYZED]                     = COMPOUND_STRING("{B_EFF_NAME_WITH_PREFIX} is paralyzed, so it may be unable to move!"),
     [STRINGID_PKMNWASPARALYZEDBY]                   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_BUFF1} paralyzed {B_EFF_NAME_WITH_PREFIX2}, so it may be unable to move!"), //not in gen 5+, ability popup
     [STRINGID_PKMNISPARALYZED]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} couldn't move because it's paralyzed!"),
@@ -805,9 +804,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNGOTFROSTBITE]                     = COMPOUND_STRING("{B_EFF_NAME_WITH_PREFIX} got frostbite!"),
     [STRINGID_PKMNSITEMHEALEDFROSTBITE]             = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_LAST_ITEM} cured its frostbite!"),
     [STRINGID_ATTACKERHEALEDITSFROSTBITE]           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} cured its frostbite through sheer determination so you wouldn't worry!"),
-    [STRINGID_PKMNFROSTBITEHEALED]                  = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s frostbite was cured!"),
-    [STRINGID_PKMNFROSTBITEHEALED2]                 = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s frostbite was cured!"),
-    [STRINGID_PKMNFROSTBITEHEALEDBY]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE} cured its frostbite!"),
+    [STRINGID_PKMNFROSTBITEHEALED]                  = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s frostbite was cured!"),
+    [STRINGID_PKMNFROSTBITEHEALEDBY]                = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE} cured its frostbite!"),
     [STRINGID_MIRRORHERBCOPIED]                     = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} used its Mirror Herb to mirror its opponent's stat changes!"),
     [STRINGID_STARTEDSNOW]                          = COMPOUND_STRING("It started to snow!"),
     [STRINGID_SNOWCONTINUES]                        = COMPOUND_STRING("Snow continues to fall."), //not in gen 5+ (lol)
@@ -910,6 +908,9 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_MYREALMSET]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s ability twisted the dimensions!"),
     [STRINGID_MYREALMUNSET]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s ability reset the dimensions!"),
     [STRINGID_BUZZERBLOCKED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was blocked by {B_ATK_NAME_WITH_PREFIX2}'s {B_ATK_ABILITY}!"),
+    [STRINGID_PKMNDISGUISEWASBUSTED]                = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s disguise was busted!"),
+    [STRINGID_ZENMODETRIGGERED]                     = COMPOUND_STRING("{B_SCR_ABILITY} triggered!"),
+    [STRINGID_ZENMODEENDED]                         = COMPOUND_STRING("{B_SCR_ABILITY} ended!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1223,7 +1224,7 @@ const u16 gGotFrostbiteStringIds[] =
 
 const u16 gFrostbiteHealedStringIds[] =
 {
-    [B_MSG_FROSTBITE_HEALED]         = STRINGID_PKMNFROSTBITEHEALED2,
+    [B_MSG_FROSTBITE_HEALED]         = STRINGID_PKMNFROSTBITEHEALED,
     [B_MSG_FROSTBITE_HEALED_BY_MOVE] = STRINGID_PKMNFROSTBITEHEALEDBY
 };
 
@@ -1235,7 +1236,7 @@ const u16 gGotFrozenStringIds[] =
 
 const u16 gGotDefrostedStringIds[] =
 {
-    [B_MSG_DEFROSTED]         = STRINGID_PKMNWASDEFROSTED2,
+    [B_MSG_DEFROSTED]         = STRINGID_PKMNWASDEFROSTED,
     [B_MSG_DEFROSTED_BY_MOVE] = STRINGID_PKMNWASDEFROSTEDBY
 };
 
@@ -1437,6 +1438,12 @@ const u16 gMyRealmStringIds[] =
     [B_MSG_MY_REALM_UNSET] = STRINGID_MYREALMUNSET,
 };
 
+const u16 gZenModeStringIds[] =
+{
+    [B_MSG_ZEN_MODE_TRIGGERED] = STRINGID_ZENMODETRIGGERED,
+    [B_MSG_ZEN_MODE_ENDED] = STRINGID_ZENMODEENDED
+};
+
 const u8 gText_PkmnIsEvolving[] = _("What?\n{STR_VAR_1} is evolving!");
 const u8 gText_CongratsPkmnEvolved[] = _("Congratulations! Your {STR_VAR_1}\nevolved into {STR_VAR_2}!{WAIT_SE}\p");
 const u8 gText_PkmnStoppedEvolving[] = _("Huh? {STR_VAR_1}\nstopped evolving!\p");
@@ -1549,6 +1556,279 @@ static const u8 sText_Opposing2[] = _("the opposing");
 static const u8 sText_EmptyStatus[] = _("$$$$$$$");
 
 static const struct BattleWindowText sTextOnWindowsInfo_Normal[] =
+{
+    [B_WIN_MSG] = {
+        .fillValue = PIXEL_FILL(0xF),
+        .fontId = FONT_NORMAL,
+        .x = 0,
+        .y = 1,
+        .speed = 1,
+        .color.foreground = 1,
+        .color.background = 15,
+        .color.accent = 15,
+        .color.shadow = 6,
+    },
+    [B_WIN_ACTION_PROMPT] = {
+        .fillValue = PIXEL_FILL(0xF),
+        .fontId = FONT_NORMAL,
+        .x = 1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 1,
+        .color.background = 15,
+        .color.accent = 15,
+        .color.shadow = 6,
+    },
+    [B_WIN_ACTION_MENU] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_MOVE_NAME_1] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_MOVE_NAME_2] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_MOVE_NAME_3] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_MOVE_NAME_4] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_PP] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = B_SHOW_EFFECTIVENESS != SHOW_EFFECTIVENESS_NEVER ? 13 : 12,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = B_SHOW_EFFECTIVENESS != SHOW_EFFECTIVENESS_NEVER ? 15 : 11,
+    },
+    [B_WIN_DUMMY] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_PP_REMAINING] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = 2,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 12,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 11,
+    },
+    [B_WIN_MOVE_TYPE] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_SWITCH_PROMPT] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_YESNO] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_LEVEL_UP_BOX] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = 0,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_LEVEL_UP_BANNER] = {
+        .fillValue = PIXEL_FILL(0),
+        .fontId = FONT_NORMAL,
+        .x = 32,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 1,
+        .color.shadow = 2,
+    },
+    [B_WIN_VS_PLAYER] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_VS_OPPONENT] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_VS_MULTI_PLAYER_1] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_VS_MULTI_PLAYER_2] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_VS_MULTI_PLAYER_3] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_VS_MULTI_PLAYER_4] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 13,
+        .color.background = 14,
+        .color.accent = 14,
+        .color.shadow = 15,
+    },
+    [B_WIN_VS_OUTCOME_DRAW] = {
+        .fillValue = PIXEL_FILL(0),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 1,
+        .color.shadow = 6,
+    },
+    [B_WIN_VS_OUTCOME_LEFT] = {
+        .fillValue = PIXEL_FILL(0),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 1,
+        .color.shadow = 6,
+    },
+    [B_WIN_VS_OUTCOME_RIGHT] = {
+        .fillValue = PIXEL_FILL(0x0),
+        .fontId = FONT_NORMAL,
+        .x = -1,
+        .y = 1,
+        .speed = 0,
+        .color.foreground = 1,
+        .color.shadow = 6,
+    },
+    [B_WIN_MOVE_DESCRIPTION] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .letterSpacing = 0,
+        .lineSpacing = 0,
+        .speed = 0,
+        .color.foreground = TEXT_DYNAMIC_COLOR_4,
+        .color.background = TEXT_DYNAMIC_COLOR_5,
+        .color.accent = TEXT_DYNAMIC_COLOR_5,
+        .color.shadow = TEXT_DYNAMIC_COLOR_6,
+    },
+};
+
+static const struct BattleWindowText sTextOnWindowsInfo_KantoTutorial[] =
 {
     [B_WIN_MSG] = {
         .fillValue = PIXEL_FILL(0xF),
@@ -2104,7 +2384,8 @@ static const struct BattleWindowText sTextOnWindowsInfo_Arena[] =
 static const struct BattleWindowText *const sBattleTextOnWindowsInfo[] =
 {
     [B_WIN_TYPE_NORMAL] = sTextOnWindowsInfo_Normal,
-    [B_WIN_TYPE_ARENA]  = sTextOnWindowsInfo_Arena
+    [B_WIN_TYPE_ARENA]  = sTextOnWindowsInfo_Arena,
+    [B_WIN_TYPE_KANTO_TUTORIAL] = sTextOnWindowsInfo_KantoTutorial,
 };
 
 static const u8 sRecordedBattleTextSpeeds[] = {8, 4, 1, 0};

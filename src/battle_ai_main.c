@@ -1203,13 +1203,14 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
     }
 
     // Don't use anything but super effective thawing moves if target is frozen if any other attack available
-    if (((GetMoveType(move) == TYPE_FIRE && GetMovePower(move) != 0) || CanBurnHitThaw(move)) && effectiveness < UQ_4_12(2.0) && (gBattleMons[battlerDef].status1 & STATUS1_ICY_ANY))
+    if ((CanFireMoveThawTarget(move) || CanBurnHitThaw(move) || CanMoveThawTarget(abilityAtk, move))
+     && effectiveness < UQ_4_12(2.0) && (gBattleMons[battlerDef].status1 & STATUS1_ICY_ANY))
     {
         enum Move aiMove;
         for (u32 moveIndex = 0; moveIndex < MAX_MON_MOVES; moveIndex++)
         {
             aiMove = gBattleMons[battlerAtk].moves[moveIndex];
-            if (GetMoveType(aiMove) != TYPE_FIRE && !CanBurnHitThaw(aiMove) && GetMovePower(gBattleMons[battlerAtk].moves[moveIndex]) != 0)
+            if (!CanFireMoveThawTarget(aiMove) && !CanBurnHitThaw(aiMove) && !CanMoveThawTarget(abilityAtk, aiMove))
             {
                 ADJUST_SCORE(-1);
                 break;
@@ -1361,7 +1362,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         } // def partner ability checks
 
         // gen7+ dark type mons immune to priority->elevated moves from prankster
-        if (GetConfig(CONFIG_PRANKSTER_DARK_TYPES) >= GEN_7 && IS_BATTLER_OF_TYPE(battlerDef, TYPE_DARK)
+        if (GetConfig(B_PRANKSTER_DARK_TYPES) >= GEN_7 && IS_BATTLER_OF_TYPE(battlerDef, TYPE_DARK)
           && aiData->abilities[battlerAtk] == ABILITY_PRANKSTER && IsBattleMoveStatus(move)
           && moveTarget != TARGET_OPPONENTS_FIELD
           && moveTarget != TARGET_USER)
@@ -2040,10 +2041,6 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         case EFFECT_SAFEGUARD:
             if (gSideStatuses[GetBattlerSide(battlerAtk)] & SIDE_STATUS_SAFEGUARD
               || DoesPartnerHaveSameMoveEffect(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove))
-                ADJUST_SCORE(-10);
-            break;
-        case EFFECT_MAGNITUDE:
-            if (aiData->abilities[battlerDef] == ABILITY_LEVITATE)
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_PARTING_SHOT:
@@ -2764,7 +2761,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_FLING:
-            if (!CanFling(battlerAtk, battlerDef))
+            if (!CanFling(battlerAtk))
             {
                 ADJUST_SCORE(-10);
             }
@@ -3318,10 +3315,35 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         }
         else
         {
-            ADJUST_SCORE(IncreaseStatUpScore(battlerAtkPartner, BATTLE_OPPOSITE(battlerAtk), STAT_CHANGE_ATK));
-            ADJUST_SCORE(IncreaseStatUpScore(battlerAtkPartner, BATTLE_OPPOSITE(battlerAtk), STAT_CHANGE_DEF));
-            ADJUST_SCORE(IncreaseStatUpScore(battlerAtkPartner, BATTLE_OPPOSITE(battlerAtkPartner), STAT_CHANGE_ATK));
-            ADJUST_SCORE(IncreaseStatUpScore(battlerAtkPartner, BATTLE_OPPOSITE(battlerAtkPartner), STAT_CHANGE_DEF));
+            s32 statUpScore = 0;
+            s32 tempScore = 0;
+            enum BattlerId foe = LEFT_FOE(battlerAtk);
+
+            if (IsBattlerAlive(foe))
+            {
+                tempScore += IncreaseStatUpScore(battlerAtkPartner, foe, STAT_CHANGE_ATK);
+                tempScore += IncreaseStatUpScore(battlerAtkPartner, foe, STAT_CHANGE_DEF);
+                if (tempScore == 0)
+                    break;
+                statUpScore += tempScore;
+            }
+
+            tempScore = 0;
+            foe = RIGHT_FOE(battlerAtk);
+
+            if (IsBattlerAlive(foe))
+            {
+                tempScore += IncreaseStatUpScore(battlerAtkPartner, foe, STAT_CHANGE_ATK);
+                tempScore += IncreaseStatUpScore(battlerAtkPartner, foe, STAT_CHANGE_DEF);
+                if (tempScore == 0)
+                    break;
+                statUpScore += tempScore;
+            }
+
+            if (statUpScore > BEST_EFFECT)
+                ADJUST_SCORE(BEST_EFFECT);
+            else
+                ADJUST_SCORE(statUpScore);
         }
         break;
     default:
@@ -3477,7 +3499,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
             case ABILITY_VOLT_ABSORB:
                 if (moveType == TYPE_ELECTRIC)
                 {
-                    if (GetConfig(CONFIG_REDIRECT_ABILITY_IMMUNITY) < GEN_5 && atkPartnerAbility == ABILITY_LIGHTNING_ROD)
+                    if (GetConfig(B_REDIRECT_ABILITY_IMMUNITY) < GEN_5 && atkPartnerAbility == ABILITY_LIGHTNING_ROD)
                     {
                         RETURN_SCORE_MINUS(10);
                     }
@@ -3523,7 +3545,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
             case ABILITY_STORM_DRAIN:
             if (moveType == TYPE_WATER)
                 {
-                    if (GetConfig(CONFIG_REDIRECT_ABILITY_IMMUNITY) < GEN_5 && atkPartnerAbility == ABILITY_STORM_DRAIN)
+                    if (GetConfig(B_REDIRECT_ABILITY_IMMUNITY) < GEN_5 && atkPartnerAbility == ABILITY_STORM_DRAIN)
                     {
                         RETURN_SCORE_MINUS(10);
                     }
@@ -3931,7 +3953,6 @@ static bool32 DoesAbilityBenefitFromSunOrRain(enum BattlerId battler, enum Abili
         return (weather & B_WEATHER_RAIN);
     case ABILITY_HARVEST:
         if (GetItemPocket(gAiLogicData->items[battler]) != POCKET_BERRIES
-            && GetItemPocket(gBattleStruct->changedItems[battler]) != POCKET_BERRIES
             && GetItemPocket(GetBattlerPartyState(battler)->usedHeldItem) != POCKET_BERRIES)
         {
             return FALSE;
@@ -5535,7 +5556,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
     case EFFECT_ION_DELUGE:
         if ((aiData->abilities[battlerAtk] == ABILITY_VOLT_ABSORB
           || aiData->abilities[battlerAtk] == ABILITY_MOTOR_DRIVE
-          || (GetConfig(CONFIG_REDIRECT_ABILITY_IMMUNITY) >= GEN_5 && aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD))
+          || (GetConfig(B_REDIRECT_ABILITY_IMMUNITY) >= GEN_5 && aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD))
           && predictedType == TYPE_NORMAL)
             ADJUST_SCORE(DECENT_EFFECT);
         break;
@@ -5596,7 +5617,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
         if (predictedMove != MOVE_NONE
          && (aiData->abilities[battlerAtk] == ABILITY_VOLT_ABSORB
           || aiData->abilities[battlerAtk] == ABILITY_MOTOR_DRIVE
-          || (GetConfig(CONFIG_REDIRECT_ABILITY_IMMUNITY) >= GEN_5 && aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD)))
+          || (GetConfig(B_REDIRECT_ABILITY_IMMUNITY) >= GEN_5 && aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD)))
         {
             ADJUST_SCORE(DECENT_EFFECT);
         }
@@ -5863,8 +5884,11 @@ static s32 AI_CalcAdditionalEffectScore(enum BattlerId battlerAtk, enum BattlerI
     // Set battlerDef best dmg moves
     GetBestDmgMovesFromBattler(battlerDef, battlerAtk, AI_DEFENDING, defBestMoves);
 
-    if (IsSheerForceAffected(move, aiData->abilities[battlerAtk]))
+    if (IsSheerForceAffected(move, aiData->abilities[battlerAtk])
+     && !(move == MOVE_ORDER_UP && gBattleStruct->battlerState[battlerAtk].commanderSpecies != SPECIES_NONE))
+    {
         return score;
+    }
 
     // check move additional effects that are likely to happen
     for (u32 effectId = 0; effectId < additionalEffectCount; effectId++)

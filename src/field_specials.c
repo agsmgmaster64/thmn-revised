@@ -2499,13 +2499,13 @@ void ShowScrollableMultichoice(void)
         task->tTaskId = taskId;
         break;
     case SCROLL_MULTI_SILPHCO_FLOORS:
-        task->tMaxItemsOnScreen = 7;
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 12;
         task->tLeft = 1;
         task->tTop = 1;
         task->tWidth = 8;
         task->tHeight = 12;
-        task->tKeepOpenAfterSelect = 0;
+        task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         task->tScrollOffset = sElevatorScroll;
         task->tSelectedRow = sElevatorCursorPos;
@@ -4513,8 +4513,8 @@ static void UIEndTask(u8 taskId)
 
 static void UIShowMoveList(u8 taskId)
 {
-    gSpecialVar_0x8008 = gTasks[taskId].tPartyIndex;
-    gSpecialVar_0x8009 = gTasks[taskId].tMove;
+    gSpecialVar_0x8000 = gTasks[taskId].tPartyIndex;
+    gSpecialVar_0x8001 = gTasks[taskId].tMove;
     DestroyTask(taskId);
     ShowSelectMovePokemonSummaryScreen(gPlayerParty, gTasks[taskId].tPartyIndex, CB2_ReturnToFieldWhileLearningMove, gTasks[taskId].tMove);
 }
@@ -4569,8 +4569,8 @@ static void Task_ReturnToFieldWhileLearningMove(u8 taskId)
     {
         gTasks[taskId].func = Task_LearnMove;
         gTasks[taskId].tState = GetLearnMoveResumeAfterSummaryScreenState();
-        gTasks[taskId].tPartyIndex = gSpecialVar_0x8008;
-        gTasks[taskId].tMove = gSpecialVar_0x8009;
+        gTasks[taskId].tPartyIndex = gSpecialVar_0x8000;
+        gTasks[taskId].tMove = gSpecialVar_0x8001;
     }
 }
 
