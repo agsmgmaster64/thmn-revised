@@ -302,7 +302,7 @@ static enum Type GetMonPublicType(enum BattlerId battlerId, u32 typeNum)
     u32 illusionSpecies;
 
     if (ShouldHideUncaughtType(monSpecies) || ShouldHideUnseenType(monSpecies))
-        return TYPE_MYSTERY;
+        return TYPE_NONE;
 
     monIllusion = GetIllusionMonPtr(battlerId);
     illusionSpecies = GetMonData(monIllusion,MON_DATA_SPECIES,NULL);
