@@ -348,7 +348,6 @@ static void TryUpdateRoundTurnOrder(void);
 void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBattler);
 static void RemoveAllWeather(void);
 static void RemoveAllTerrains(void);
-static bool32 CanAbilityPreventStatLoss(enum Ability abilityDef);
 static void AccuracyCheck(bool32 recalcDragonDarts, const u8 *nextInstr, const u8 *failInstr);
 static void ResetValuesForCalledMove(void);
 static bool32 CanAbilityShieldActivateForBattler(enum BattlerId battler);
@@ -7625,11 +7624,7 @@ static void TryPlayStatChangeAnimation(enum BattlerId battler, enum Ability abil
                         break;
                     }
                 }
-                else if (!((ability == ABILITY_KEEN_EYE || ability == ABILITY_MINDS_EYE) && currStat == STAT_ACC)
-                        && !(GetConfig(CONFIG_ILLUMINATE_EFFECT) >= GEN_9 && ability == ABILITY_ILLUMINATE && currStat == STAT_ACC)
-                        && !(ability == ABILITY_HYPER_CUTTER && currStat == STAT_ATK)
-                        && !(ability == ABILITY_BIG_PECKS && currStat == STAT_DEF)
-                        && !(ability == ABILITY_FIRM_DEFENSE && currStat == STAT_DEF))
+                else if (CanAbilityPreventStatLoss(ability, currStat) != STAT_ABILITY_PREVENT_SPECIFIC)
                 {
                     if (gBattleMons[battler].statStages[currStat] > MIN_STAT_STAGE)
                     {
@@ -7738,7 +7733,7 @@ static u32 ChangeStatBuffs(enum BattlerId battler, s8 statValue, enum Stat statI
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
-        else if ((battlerHoldEffect == HOLD_EFFECT_CLEAR_AMULET || CanAbilityPreventStatLoss(battlerAbility))
+        else if ((battlerHoldEffect == HOLD_EFFECT_CLEAR_AMULET || CanAbilityPreventStatLoss(battlerAbility, 0) == STAT_ABILITY_PREVENT_ANY)
               && (flags.statDropPrevention || gBattlerAttacker != gBattlerTarget || flags.mirrorArmored) && !flags.certain && effect != EFFECT_CURSE)
         {
             if (flags.allowPtr)
@@ -7791,11 +7786,7 @@ static u32 ChangeStatBuffs(enum BattlerId battler, s8 statValue, enum Stat statI
             return STAT_CHANGE_DIDNT_WORK;
         }
         else if (!flags.certain
-                && (((battlerAbility == ABILITY_KEEN_EYE || battlerAbility == ABILITY_MINDS_EYE) && statId == STAT_ACC)
-                || (GetConfig(CONFIG_ILLUMINATE_EFFECT) >= GEN_9 && battlerAbility == ABILITY_ILLUMINATE && statId == STAT_ACC)
-                || (battlerAbility == ABILITY_HYPER_CUTTER && statId == STAT_ATK)
-                || (battlerAbility == ABILITY_BIG_PECKS && statId == STAT_DEF)
-                || (battlerAbility == ABILITY_FIRM_DEFENSE && statId == STAT_DEF)))
+                && CanAbilityPreventStatLoss(battlerAbility, statId) == STAT_ABILITY_PREVENT_SPECIFIC)
         {
             if (flags.allowPtr)
             {
@@ -11622,20 +11613,6 @@ static bool32 IsFinalStrikeEffect(enum MoveEffect moveEffect)
     }
 }
 
-static bool32 CanAbilityPreventStatLoss(enum Ability abilityDef)
-{
-    switch (abilityDef)
-    {
-    case ABILITY_CLEAR_BODY:
-    case ABILITY_FULL_METAL_BODY:
-    case ABILITY_WHITE_SMOKE:
-        return TRUE;
-    default:
-        break;
-    }
-    return FALSE;
-}
-
 bool32 CanBurnHitThaw(enum Move move)
 {
     u8 i;
@@ -15095,6 +15072,11 @@ void BS_UndoDynamax(void)
 void BS_settrickroom(void)
 {
     NATIVE_ARGS();
+
+    if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM)
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_MY_REALM_SET;
+    else
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_MY_REALM_UNSET;
 
     HandleRoomMove(STATUS_FIELD_TRICK_ROOM, &gFieldTimers.trickRoomTimer, 0);
 

@@ -4824,8 +4824,8 @@ u32 GetBattlerTotalSpeedStat(enum BattlerId battler, enum Ability ability, enum 
         speed *= 2;
     else if (ability == ABILITY_PURE_ENIGMA)
         speed = (speed * 150) / 100;
-	else if (ability == ABILITY_AMBUSH && gBattleStruct->battlerState[battler].isFirstTurn)
-		speed = (speed * 150) / 100;
+    else if (ability == ABILITY_AMBUSH && gBattleStruct->battlerState[battler].isFirstTurn)
+        speed = (speed * 150) / 100;
 
     // player's badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))

@@ -909,8 +909,6 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_LASTGRUDGE]                           = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s Last Grudge reduced {B_BUFF1} to 1 PP!"),
     [STRINGID_MYREALMSET]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s ability twisted the dimensions!"),
     [STRINGID_MYREALMUNSET]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s ability reset the dimensions!"),
-    [STRINGID_BUZZERLOWERSSTAT]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} lowers {B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}!"),
-    [STRINGID_BUZZERRAISESSTAT]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} raises {B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}!"),
     [STRINGID_BUZZERBLOCKED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was blocked by {B_ATK_NAME_WITH_PREFIX2}'s {B_ATK_ABILITY}!"),
 };
 
@@ -1431,6 +1429,12 @@ const u16 gSpinHazardsStringIds[] =
     [HAZARDS_TOXIC_SPIKES] = STRINGID_PKMNBLEWAWAYTOXICSPIKES,
     [HAZARDS_STEALTH_ROCK] = STRINGID_PKMNBLEWAWAYSTEALTHROCK,
     [HAZARDS_STEELSURGE] = STRINGID_PKMNBLEWAWAYSHARPSTEEL,
+};
+
+const u16 gMyRealmStringIds[] =
+{
+    [B_MSG_MY_REALM_SET] = STRINGID_MYREALMSET,
+    [B_MSG_MY_REALM_UNSET] = STRINGID_MYREALMUNSET,
 };
 
 const u8 gText_PkmnIsEvolving[] = _("What?\n{STR_VAR_1} is evolving!");

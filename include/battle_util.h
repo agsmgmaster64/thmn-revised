@@ -173,6 +173,13 @@ enum EjectPackTiming
     OTHER,
 };
 
+enum StatAbilityPrevent
+{
+    STAT_ABILITY_NOT_PREVENT,
+    STAT_ABILITY_PREVENT_SPECIFIC,
+    STAT_ABILITY_PREVENT_ANY,
+};
+
 void HandleAction_ThrowBall(void);
 uq4_12_t CalcTypeEffectivenessMultiplierHelper(enum Move move, enum Type moveType, enum BattlerId battlerAtk, enum BattlerId battlerDef, enum Ability abilityAtk, enum Ability abilityDef, bool32 recordAbilities);
 u32 GetCurrentBattleWeather(void);
@@ -426,5 +433,6 @@ void TryUpdateEvolutionTracker(enum EvolutionConditions evolutionCondition, u32 
 bool32 CanUseMoveConsecutively(enum BattlerId battler);
 void TryResetConsecutiveUseCounter(enum BattlerId battler);
 void SetOrClearRageVolatile(void);
+bool32 CanAbilityPreventStatLoss(enum Ability ability, enum Stat statId);
 
 #endif // GUARD_BATTLE_UTIL_H

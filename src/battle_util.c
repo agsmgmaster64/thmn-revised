@@ -3832,17 +3832,11 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
 			break;
         case ABILITY_MY_REALM:
-            if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM)
-            {
-                gBattleScripting.battler = battler;
-                BattleScriptPushCursorAndCallback(BattleScript_MyRealmActivatesUnset);
-                ++effect;
-            }
-            else
+            if (shouldAbilityTrigger)
             {
                 gBattleScripting.battler = battler;
                 BattleScriptPushCursorAndCallback(BattleScript_MyRealmActivates);
-                ++effect;
+                effect++;
             }
             break;
         default:
@@ -4372,7 +4366,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
              && IsBattlerAlive(gBattlerAttacker))
             {
                 gBattleScripting.battler = gBattlerTarget;
-                    SetPassiveDamageAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker) / 2);
+                SetPassiveDamageAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker) / 2);
                 if (gBattleStruct->moveDamage[gBattlerAttacker] == 0)
                     gBattleStruct->moveDamage[gBattlerAttacker] = 1;
                 BattleScriptCall(BattleScript_AftermathDmg);
@@ -4719,20 +4713,15 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_LAST_GRUDGE:
-            if (gBattleMons[gBattlerAttacker].hp != 0
-                && gBattleMons[gBattlerTarget].hp == 0
-                && IsBattlerTurnDamaged(gBattlerTarget)
-                && IsBattlerAlive(gBattlerAttacker)
-                && gCurrentMove != MOVE_STRUGGLE)
+            if (IsBattlerAlive(gBattlerAttacker)
+             && !IsBattlerAlive(gBattlerTarget)
+             && IsBattlerTurnDamaged(gBattlerTarget)
+             && gCurrentMove != MOVE_STRUGGLE)
             {
                 u8 moveIndex = gBattleStruct->chosenMovePositions[gBattlerAttacker];
 
-                if(gBattleMons[gBattlerAttacker].pp[moveIndex] > 1)
+                if (gBattleMons[gBattlerAttacker].pp[moveIndex] > 1)
                     gBattleMons[gBattlerAttacker].pp[moveIndex] = 1;
-
-                BattleScriptPush(gBattlescriptCurrInstr);
-                gLastUsedAbility = ABILITY_LAST_GRUDGE;
-
 
                 BtlController_EmitSetMonData(gBattlerAttacker, B_COMM_TO_CONTROLLER, moveIndex + REQUEST_PPMOVE1_BATTLE, 0, sizeof(gBattleMons[gBattlerAttacker].pp[moveIndex]), &gBattleMons[gBattlerAttacker].pp[moveIndex]);
                 MarkBattlerForControllerExec(gBattlerAttacker);
@@ -4740,89 +4729,54 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 PREPARE_MOVE_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerAttacker].moves[moveIndex])
 
                 gBattleScripting.battler = gBattlerAttacker;
-                BattleScriptPush(gBattlescriptCurrInstr);
-                gBattlescriptCurrInstr = BattleScript_LastGrudge;
-                ++effect;
+                BattleScriptCall(BattleScript_LastGrudge);
+                effect++;
             }
             break;
         case ABILITY_BUZZER:
-            if (gBattleMons[gBattlerAttacker].hp != 0
-                && gBattleMons[gBattlerTarget].hp != 0
-                && ((gBattleStruct->moveResultFlags[gBattlerTarget] &  MOVE_RESULT_NOT_VERY_EFFECTIVE) || (gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
-                && !gSideTimers[GetBattlerSide(gBattlerAttacker)].mistTimer)
+            if (IsBattlerAlive(gBattlerAttacker)
+             && IsBattlerAlive(gBattlerTarget)
+             && ((gBattleStruct->moveResultFlags[gBattlerTarget] &  MOVE_RESULT_NOT_VERY_EFFECTIVE) || (gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+             && !gSideTimers[GetBattlerSide(gBattlerAttacker)].mistTimer)
+            {
+                if (IsBattleMovePhysical(gCurrentMove) && CompareStat(gBattlerAttacker, STAT_ATK, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility))
                 {
-                    if (IsBattleMovePhysical(gCurrentMove) && gBattleMons[gBattlerAttacker].statStages[STAT_ATK] > 0)
+                    if (CanAbilityPreventStatLoss(GetBattlerAbility(gBattlerAttacker), STAT_ATK) != STAT_ABILITY_NOT_PREVENT
+                     || GetBattlerAbility(gBattlerAttacker) == ABILITY_SOUNDPROOF)
                     {
-                    if (gBattleMons[gBattlerAttacker].ability == ABILITY_CONTRARY &&
-                        gBattleMons[gBattlerAttacker].statStages[STAT_ATK] < 12)
-                    {
-                        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK);
-                        gBattleMons[gBattlerAttacker].statStages[STAT_ATK]++;
-                        gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_ATK) + STAT_ANIM_PLUS1;
-                        gBattleScripting.animArg2 = 0;
-                        BattleScriptPushCursor();
-                        gBattlescriptCurrInstr = BattleScript_BuzzerContrary;
+                        gBattleScripting.battler = gBattlerAttacker;
+                        BattleScriptCall(BattleScript_BuzzerBlocked);
                         gEffectBattler = gBattlerTarget;
-                        ++effect;
-                    }
-                    else if (gBattleMons[gBattlerAttacker].ability == ABILITY_HAKUREI_MIKO ||
-                                gBattleMons[gBattlerAttacker].ability == ABILITY_MANA_BARRIER ||
-                                gBattleMons[gBattlerAttacker].ability == ABILITY_SOUNDPROOF)
-                    {
-                        BattleScriptPushCursor();
-                        gBattlescriptCurrInstr = BattleScript_BuzzerBlocked;
-                        gEffectBattler = gBattlerTarget;
-                        ++effect;
+                        effect++;
                     }
                     else
                     {
-                        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK);
-                        gBattleMons[gBattlerAttacker].statStages[STAT_ATK]--;
-                        gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_ATK) + STAT_ANIM_MINUS1;
-                        gBattleScripting.animArg2 = 0;
-                        BattleScriptPushCursor();
-                        gBattlescriptCurrInstr = BattleScript_Buzzer;
-                        gEffectBattler = gBattlerTarget;
-                        ++effect;
-                    }
-                    }
-                    else if (IsBattleMoveSpecial(gCurrentMove) && gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] > 0)
-                    {
-                    if (gBattleMons[gBattlerAttacker].ability == ABILITY_CONTRARY &&
-                        gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] < 12)
-                    {
-                        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
-                        gBattleMons[gBattlerAttacker].statStages[STAT_SPATK]++;
-                        gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_PLUS1;
-                        gBattleScripting.animArg2 = 0;
-                        BattleScriptPushCursor();
-                        gBattlescriptCurrInstr = BattleScript_BuzzerContrary;
-                        gEffectBattler = gBattlerTarget;
-                        ++effect;
-                    }
-                    else if (gBattleMons[gBattlerAttacker].ability == ABILITY_HAKUREI_MIKO ||
-                                gBattleMons[gBattlerAttacker].ability == ABILITY_MANA_BARRIER ||
-                                gBattleMons[gBattlerAttacker].ability == ABILITY_SOUNDPROOF)
-                    {
-                        BattleScriptPushCursor();
-                        gBattlescriptCurrInstr = BattleScript_BuzzerBlocked;
-                        gEffectBattler = gBattlerTarget;
-                        ++effect;
-                    }
-                    else
-                    {
-                        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
-                        gBattleMons[gBattlerAttacker].statStages[STAT_SPATK]--;
-                        gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_MINUS1;
-                        gBattleScripting.animArg2 = 0;
-                        BattleScriptPushCursor();
-                        gBattlescriptCurrInstr = BattleScript_Buzzer;
-                        gEffectBattler = gBattlerTarget;
-                        ++effect;
-                    }
+                        SET_STATCHANGER(STAT_ATK, 1, TRUE);
+                        PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                        BattleScriptCall(BattleScript_BuzzerActivates);
+                        effect++;
                     }
                 }
-                break;
+                else if (IsBattleMoveSpecial(gCurrentMove) && CompareStat(gBattlerAttacker, STAT_SPATK, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility))
+                {
+                    if (CanAbilityPreventStatLoss(GetBattlerAbility(gBattlerAttacker), STAT_SPATK) != STAT_ABILITY_NOT_PREVENT
+                     || GetBattlerAbility(gBattlerAttacker) == ABILITY_SOUNDPROOF)
+                    {
+                        gBattleScripting.battler = gBattlerAttacker;
+                        BattleScriptCall(BattleScript_BuzzerBlocked);
+                        gEffectBattler = gBattlerTarget;
+                        effect++;
+                    }
+                    else
+                    {
+                        SET_STATCHANGER(STAT_SPATK, 1, TRUE);
+                        PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                        BattleScriptCall(BattleScript_BuzzerActivates);
+                        effect++;
+                    }
+                }
+            }
+            break;
         default:
             break;
         }
@@ -11781,4 +11735,36 @@ void SetOrClearRageVolatile(void)
         gBattleMons[gBattlerAttacker].volatiles.rage = TRUE;
     else
         gBattleMons[gBattlerAttacker].volatiles.rage = FALSE;
+}
+
+bool32 CanAbilityPreventStatLoss(enum Ability ability, enum Stat statId)
+{
+    switch (ability)
+    {
+    case ABILITY_CLEAR_BODY:
+    case ABILITY_FULL_METAL_BODY:
+    case ABILITY_WHITE_SMOKE:
+        return STAT_ABILITY_PREVENT_ANY;
+    case ABILITY_ILLUMINATE:
+        if (GetConfig(CONFIG_ILLUMINATE_EFFECT) < GEN_9)
+            break;
+    case ABILITY_KEEN_EYE:
+    case ABILITY_MINDS_EYE:
+        if (statId == STAT_ACC)
+            return STAT_ABILITY_PREVENT_SPECIFIC;
+        break;
+    case ABILITY_ONI_STRENGTH:
+    case ABILITY_HYPER_CUTTER:
+        if (statId == STAT_ATK)
+            return STAT_ABILITY_PREVENT_SPECIFIC;
+        break;
+    case ABILITY_FIRM_DEFENSE:
+    case ABILITY_BIG_PECKS:
+        if (statId == STAT_DEF)
+            return STAT_ABILITY_PREVENT_SPECIFIC;
+        break;
+    default:
+        break;
+    }
+    return STAT_ABILITY_NOT_PREVENT;
 }

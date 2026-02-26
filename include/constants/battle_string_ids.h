@@ -1213,4 +1213,11 @@ enum DamageNonTypesDmgStringID
     B_MSG_HURT_BY_ROCKS_THROWN,
 };
 
+// gMyRealmStringIds
+enum MyRealmStringID
+{
+    B_MSG_MY_REALM_SET,
+    B_MSG_MY_REALM_UNSET,
+};
+
 #endif // GUARD_CONSTANTS_BATTLE_STRING_IDS_H

@@ -8560,42 +8560,31 @@ BattleScript_LastWishActivates::
 BattleScript_LastGrudge::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_LASTGRUDGE
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_MyRealmActivates::
 	call BattleScript_AbilityPopUp
 	settrickroom
-	printstring STRINGID_MYREALMSET
+	printfromtable gMyRealmStringIds
 	playanimation BS_BATTLER_0, B_ANIM_TRICK_ROOM
 	pause B_WAIT_TIME_SHORT
 	end3
 
-BattleScript_MyRealmActivatesUnset::
-	call BattleScript_AbilityPopUp
-	settrickroom
-	printstring STRINGID_MYREALMUNSET
-	playanimation BS_BATTLER_0, B_ANIM_TRICK_ROOM
-	pause B_WAIT_TIME_SHORT
-	end3
-
-BattleScript_Buzzer::
+BattleScript_BuzzerActivates::
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ONLY_CHECKING, BattleScript_BuzzerActivatesRet
+	waitstate
 	call BattleScript_AbilityPopUp
 	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
-	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
-	printstring STRINGID_BUZZERLOWERSSTAT
-	waitmessage 0x40
-	return
-
-BattleScript_BuzzerContrary::
-	call BattleScript_AbilityPopUp
-	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
-	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
-	printstring STRINGID_BUZZERRAISESSTAT
-	waitmessage 0x40
+	swapattackerwithtarget  @ for defiant, mirror armor
+	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SPD_MINUS_1
+	swapattackerwithtarget
+BattleScript_BuzzerActivatesRet:
 	return
 
 BattleScript_BuzzerBlocked::
+	call BattleScript_AbilityPopUp
+	call BattleScript_AbilityPopUpScripting
 	printstring STRINGID_BUZZERBLOCKED
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
 	return
