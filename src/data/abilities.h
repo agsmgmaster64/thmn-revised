@@ -3071,7 +3071,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_VERSATILE] =
     {
         .name = _("Versatile"),
-        .description = COMPOUND_STRING("User always has same-type attack\nbonus, unless move is typeless."),
+        .description = COMPOUND_STRING("User always has same-type attack\nbonus, unless using Struggle."),
         .aiRating = 8,
     },
 
