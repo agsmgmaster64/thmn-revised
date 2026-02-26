@@ -4100,7 +4100,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
              && !IS_BATTLER_OF_TYPE(battler, moveType)
              && move != MOVE_STRUGGLE
              && moveType != TYPE_STELLAR
-             && moveType != TYPE_MYSTERY)
+             && moveType != TYPE_NONE)
             {
                 gEffectBattler = gBattlerAbility = battler;
                 SET_BATTLER_TYPE(battler, moveType);
@@ -8068,7 +8068,7 @@ static inline uq4_12_t GetParentalBondModifier(enum BattlerId battlerAtk)
 
 static inline uq4_12_t GetSameTypeAttackBonusModifier(struct BattleContext *ctx)
 {
-    if (ctx->moveType == TYPE_MYSTERY)
+    if (ctx->moveType == TYPE_NONE)
         return UQ_4_12(1.0);
     else if ((gBattleStruct->pledgeMove && IS_BATTLER_OF_TYPE(BATTLE_PARTNER(ctx->battlerAtk), ctx->moveType)) || ctx->abilityAtk == ABILITY_VERSATILE)
         return (ctx->abilityAtk == ABILITY_ADAPTABILITY) ? UQ_4_12(2.0) : UQ_4_12(1.5);
@@ -9025,7 +9025,7 @@ static inline uq4_12_t CalcTypeEffectivenessMultiplierInternal(struct BattleCont
     MulByTypeEffectiveness(ctx, &modifier, types[0]);
     if (types[1] != types[0])
         MulByTypeEffectiveness(ctx, &modifier, types[1]);
-    if (types[2] != TYPE_MYSTERY && types[2] != types[1] && types[2] != types[0])
+    if (types[2] != TYPE_NONE && types[2] != types[1] && types[2] != types[0])
         MulByTypeEffectiveness(ctx, &modifier, types[2]);
     if (ctx->moveType == TYPE_FIRE && gBattleMons[ctx->battlerDef].volatiles.tarShot)
         modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
@@ -9102,7 +9102,7 @@ uq4_12_t CalcTypeEffectivenessMultiplier(struct BattleContext *ctx)
 {
     uq4_12_t modifier = UQ_4_12(1.0);
 
-    if (ctx->move != MOVE_STRUGGLE && ctx->moveType != TYPE_MYSTERY)
+    if (ctx->move != MOVE_STRUGGLE && ctx->moveType != TYPE_NONE)
     {
         modifier = CalcTypeEffectivenessMultiplierInternal(ctx, modifier);
         if (GetMoveEffect(ctx->move) == EFFECT_TWO_TYPED_MOVE && !ctx->isAnticipation)
@@ -9122,7 +9122,7 @@ uq4_12_t CalcPartyMonTypeEffectivenessMultiplier(enum Move move, u16 speciesDef,
     uq4_12_t modifier = UQ_4_12(1.0);
     enum Type moveType = GetBattleMoveType(move);
 
-    if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
+    if (move != MOVE_STRUGGLE && moveType != TYPE_NONE)
     {
         struct BattleContext ctx = {0};
         ctx.move = ctx.chosenMove = move;
@@ -9162,7 +9162,7 @@ uq4_12_t GetOverworldTypeEffectiveness(struct Pokemon *mon, enum Type moveType)
 {
     uq4_12_t modifier = UQ_4_12(1.0);
 
-    if (moveType == TYPE_MYSTERY)
+    if (moveType == TYPE_NONE)
         return modifier;
 
 
@@ -9630,9 +9630,9 @@ bool32 DoBattlersShareType(enum BattlerId battler1, enum BattlerId battler2)
     GetBattlerTypes(battler1, FALSE, types1);
     GetBattlerTypes(battler2, FALSE, types2);
 
-    if (types1[2] == TYPE_MYSTERY)
+    if (types1[2] == TYPE_NONE)
         types1[2] = types1[0];
-    if (types2[2] == TYPE_MYSTERY)
+    if (types2[2] == TYPE_NONE)
         types2[2] = types2[0];
 
     for (i = 0; i < 3; i++)
@@ -10329,7 +10329,7 @@ void CopyMonAbilityAndTypesToBattleMon(enum BattlerId battler, struct Pokemon *m
     gBattleMons[battler].ability = GetMonAbility(mon);
     gBattleMons[battler].types[0] = GetSpeciesType(gBattleMons[battler].species, 0);
     gBattleMons[battler].types[1] = GetSpeciesType(gBattleMons[battler].species, 1);
-    gBattleMons[battler].types[2] = TYPE_MYSTERY;
+    gBattleMons[battler].types[2] = TYPE_NONE;
 }
 
 void RecalcBattlerStats(enum BattlerId battler, struct Pokemon *mon, bool32 isDynamaxing)
@@ -10525,11 +10525,11 @@ void GetBattlerTypes(enum BattlerId battler, bool32 ignoreTera, enum Type types[
     if (!isTera && gBattleMons[battler].volatiles.roostActive)
     {
         if (types[0] == TYPE_FLYING && types[1] == TYPE_FLYING)
-            types[0] = types[1] = B_ROOST_PURE_FLYING >= GEN_5 ? TYPE_NORMAL : TYPE_MYSTERY;
+            types[0] = types[1] = B_ROOST_PURE_FLYING >= GEN_5 ? TYPE_NORMAL : TYPE_NONE;
         else if (types[0] == TYPE_FLYING)
-            types[0] = TYPE_MYSTERY;
+            types[0] = TYPE_NONE;
         else if (types[1] == TYPE_FLYING)
-            types[1] = TYPE_MYSTERY;
+            types[1] = TYPE_NONE;
     }
 }
 
@@ -10548,7 +10548,7 @@ void RemoveBattlerType(enum BattlerId battler, enum Type type)
     for (i = 0; i < 3; i++)
     {
         if (*(u8 *)(&gBattleMons[battler].types[0] + i) == type)
-            *(u8 *)(&gBattleMons[battler].types[0] + i) = TYPE_MYSTERY;
+            *(u8 *)(&gBattleMons[battler].types[0] + i) = TYPE_NONE;
     }
 }
 
@@ -10633,7 +10633,7 @@ enum Type GetBattleMoveType(enum Move move)
         enum BattleMoveEffects effect = GetMoveEffect(move);
         if (B_UPDATED_MOVE_TYPES < GEN_5
          && (effect == EFFECT_BEAT_UP || effect == EFFECT_FUTURE_SIGHT))
-          return TYPE_MYSTERY;
+          return TYPE_NONE;
     }
     return GetMoveType(move);
 }

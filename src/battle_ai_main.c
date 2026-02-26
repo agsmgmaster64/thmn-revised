@@ -2820,7 +2820,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
 
             GetBattlerTypes(battlerDef, FALSE, types);
             if (PartnerMoveIsSameAsAttacker(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove)
-              || (types[0] == typeArg && types[1] == typeArg && types[2] == TYPE_MYSTERY))
+              || (types[0] == typeArg && types[1] == typeArg && types[2] == TYPE_NONE))
                 ADJUST_SCORE(-10);    // target is already water-only
             break;
         }

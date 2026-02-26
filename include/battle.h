@@ -771,21 +771,21 @@ static inline bool32 IsBattleMoveStatus(enum Move move)
     ({                                                                                    \
         enum Type types[3];                                                               \
         GetBattlerTypes(battlerId, FALSE, types);                                         \
-        types[0] == TYPE_MYSTERY && types[1] == TYPE_MYSTERY && types[2] == TYPE_MYSTERY; \
+        types[0] == TYPE_NONE && types[1] == TYPE_NONE && types[2] == TYPE_NONE; \
     })
 
 #define SET_BATTLER_TYPE(battler, type)              \
 {                                                    \
     gBattleMons[battler].types[0] = type;            \
     gBattleMons[battler].types[1] = type;            \
-    gBattleMons[battler].types[2] = TYPE_MYSTERY;    \
+    gBattleMons[battler].types[2] = TYPE_NONE;    \
 }
 
 #define RESTORE_BATTLER_TYPE(battler)                                                \
 {                                                                                    \
     gBattleMons[battler].types[0] = GetSpeciesType(gBattleMons[battler].species, 0); \
     gBattleMons[battler].types[1] = GetSpeciesType(gBattleMons[battler].species, 1); \
-    gBattleMons[battler].types[2] = TYPE_MYSTERY;                                    \
+    gBattleMons[battler].types[2] = TYPE_NONE;                                    \
 }
 
 #define GET_STAT_BUFF_ID(n) ((n & 7))              // first three bits 0x1, 0x2, 0x4

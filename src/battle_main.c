@@ -3469,7 +3469,7 @@ const u8* FaintClearSetData(enum BattlerId battler)
 
     gBattleMons[battler].types[0] = GetSpeciesType(gBattleMons[battler].species, 0);
     gBattleMons[battler].types[1] = GetSpeciesType(gBattleMons[battler].species, 1);
-    gBattleMons[battler].types[2] = TYPE_MYSTERY;
+    gBattleMons[battler].types[2] = TYPE_NONE;
 
     Ai_UpdateFaintData(battler);
     TryBattleFormChange(battler, FORM_CHANGE_FAINT);
@@ -3566,7 +3566,7 @@ static void DoBattleIntro(void)
                 memcpy(&gBattleMons[battler], &gBattleResources->bufferB[battler][4], sizeof(struct BattlePokemon));
                 gBattleMons[battler].types[0] = GetSpeciesType(gBattleMons[battler].species, 0);
                 gBattleMons[battler].types[1] = GetSpeciesType(gBattleMons[battler].species, 1);
-                gBattleMons[battler].types[2] = TYPE_MYSTERY;
+                gBattleMons[battler].types[2] = TYPE_NONE;
                 gBattleMons[battler].ability = GetAbilityBySpecies(gBattleMons[battler].species, gBattleMons[battler].abilityNum);
                 gBattleStruct->battlerState[battler].hpOnSwitchout = gBattleMons[battler].hp;
                 memset(&gBattleMons[battler].volatiles, 0, sizeof(struct Volatiles));
@@ -5933,7 +5933,7 @@ enum Type GetDynamicMoveType(struct Pokemon *mon, enum Move move, enum BattlerId
     if (state == MON_IN_BATTLE)
     {
         if (moveEffect == EFFECT_STRUGGLE)
-            return TYPE_MYSTERY;
+            return TYPE_NONE;
 
         species = gBattleMons[battler].species;
         heldItem = gBattleMons[battler].item;
@@ -5951,7 +5951,7 @@ enum Type GetDynamicMoveType(struct Pokemon *mon, enum Move move, enum BattlerId
         ability = GetMonAbility(mon);
         type1 = GetSpeciesType(species, 0);
         type2 = GetSpeciesType(species, 1);
-        type3 = TYPE_MYSTERY;
+        type3 = TYPE_NONE;
     }
 
     switch (moveEffect)
@@ -6038,16 +6038,16 @@ enum Type GetDynamicMoveType(struct Pokemon *mon, enum Move move, enum BattlerId
             enum Type teraType;
             if (gimmick == GIMMICK_TERA && ((teraType = GetMonData(mon, MON_DATA_TERA_TYPE)) != TYPE_STELLAR))
                 return teraType;
-            else if (type1 != TYPE_MYSTERY && !(gBattleMons[battler].volatiles.roostActive && type1 == TYPE_FLYING))
+            else if (type1 != TYPE_NONE && !(gBattleMons[battler].volatiles.roostActive && type1 == TYPE_FLYING))
                 return type1;
-            else if (type2 != TYPE_MYSTERY && !(gBattleMons[battler].volatiles.roostActive && type2 == TYPE_FLYING))
+            else if (type2 != TYPE_NONE && !(gBattleMons[battler].volatiles.roostActive && type2 == TYPE_FLYING))
                 return type2;
             else if (gBattleMons[battler].volatiles.roostActive)
-                return (B_ROOST_PURE_FLYING >= GEN_5 ? TYPE_NORMAL : TYPE_MYSTERY);
-            else if (type3 != TYPE_MYSTERY)
+                return (B_ROOST_PURE_FLYING >= GEN_5 ? TYPE_NORMAL : TYPE_NONE);
+            else if (type3 != TYPE_NONE)
                 return type3;
             else
-                return TYPE_MYSTERY;
+                return TYPE_NONE;
         }
         break;
     case EFFECT_RAGING_BULL:
