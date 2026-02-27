@@ -8380,7 +8380,7 @@ BattleScript_BlankCardActivates::
 
 BattleScript_ReactiveActivates::
 	call BattleScript_AbilityPopUp
-	statbuffchange BS_TARGET, STAT_CHANGE_CERTAIN | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_ReactiveLower
+	statbuffchange BS_TARGET, STAT_CHANGE_CERTAIN | STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_ReactiveLower
 	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, B_MSG_DEFENDER_STAT_CHANGED, BattleScript_ReactiveLower
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
