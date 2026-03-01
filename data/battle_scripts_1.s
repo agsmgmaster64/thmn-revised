@@ -4891,7 +4891,7 @@ BattleScript_BerserkActivates::
 	saveattacker
 	copybyte gBattlerAttacker, gEffectBattler
 	call BattleScript_AbilityPopUp
-	statbuffchange BS_EFFECT_BATTLER, STAT_CHANGE_CERTAIN, BattleScript_BerserkActivatesTryBerry
+	statbuffchange BS_EFFECT_BATTLER, STAT_CHANGE_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_BerserkActivatesTryBerry
 	call BattleScript_StatUp
 BattleScript_BerserkActivatesTryBerry:
 	restoreattacker
@@ -6752,7 +6752,7 @@ BattleScript_TargetsStatWasMaxedOutRet:
 
 BattleScript_BattlerAbilityStatRaiseOnSwitchIn::
 	call BattleScript_AbilityPopUpScripting
-	statbuffchange BS_SCRIPTING, STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_CERTAIN, BattleScript_BattlerAbilityStatRaiseOnSwitchInRet
+	statbuffchange BS_SCRIPTING, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_CERTAIN, BattleScript_BattlerAbilityStatRaiseOnSwitchInRet
 	waitanimation
 	printstring STRINGID_SCRIPTINGABILITYSTATRAISE
 	waitmessage B_WAIT_TIME_LONG
@@ -6764,7 +6764,7 @@ BattleScript_ScriptingAbilityStatRaise::
 	call BattleScript_AbilityPopUp
 	saveattacker
 	copybyte gBattlerAttacker, sBATTLER
-	statbuffchange BS_ATTACKER, STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_CERTAIN, BattleScript_ScriptingAbilityStatRaiseRet
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_CERTAIN, BattleScript_ScriptingAbilityStatRaiseRet
 	printstring STRINGID_ATTACKERABILITYSTATRAISE
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_ScriptingAbilityStatRaiseRet:
@@ -6947,18 +6947,19 @@ BattleScript_CuteCharmActivates::
 	return
 
 BattleScript_GooeyActivates::
-	statbuffchange BS_ATTACKER, STAT_CHANGE_ONLY_CHECKING, BattleScript_GooeyActivatesRet
 	waitstate
 	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_ONLY_CHECKING, BattleScript_GooeyActivatesRet
 	swapattackerwithtarget  @ for defiant, mirror armor
 	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SPD_MINUS_1
 	swapattackerwithtarget
 BattleScript_GooeyActivatesRet:
 	return
+
 BattleScript_LectureBlockedByAbility::
 	call BattleScript_AbilityPopUpScripting
 	printstring STRINGID_BUZZERBLOCKED
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_AbilityStatusEffect::
@@ -8330,32 +8331,36 @@ BattleScript_HibernationHeals::
 BattleScript_SourNoteActivatesAtk::
 	waitstate
 	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_ONLY_CHECKING, BattleScript_SourNoteActivatesRet
+	swapattackerwithtarget  @ for defiant, mirror armor
 	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_ATK_MINUS_1
+	swapattackerwithtarget
+BattleScript_SourNoteActivatesRet:
 	return
 
 BattleScript_SourNoteActivatesSpAtk::
 	waitstate
 	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_ONLY_CHECKING, BattleScript_SourNoteActivatesRet
+	swapattackerwithtarget  @ for defiant, mirror armor
 	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SP_ATK_MINUS_1
-	return
+	swapattackerwithtarget
+	goto BattleScript_SourNoteActivatesRet
 
 BattleScript_HighNoteActivatesAtk::
 	waitstate
 	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_ONLY_CHECKING, BattleScript_HighNoteActivatesRet
 	seteffectsecondary BS_ATTACKER, BS_ATTACKER, MOVE_EFFECT_ATK_PLUS_1
+BattleScript_HighNoteActivatesRet:
 	return
 
 BattleScript_HighNoteActivatesSpAtk::
 	waitstate
 	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_ONLY_CHECKING, BattleScript_HighNoteActivatesRet
 	seteffectsecondary BS_ATTACKER, BS_ATTACKER, MOVE_EFFECT_SP_ATK_PLUS_1
-	return
-
-BattleScript_PrideBoost::
-	waitstate
-	call BattleScript_AbilityPopUp
-	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SP_ATK_PLUS_1
-	end3
+	goto BattleScript_HighNoteActivatesRet
 
 BattleScript_WallMasterActivates::
 	call BattleScript_AbilityPopUp
@@ -8515,9 +8520,9 @@ BattleScript_MyRealmActivates::
 	end3
 
 BattleScript_BuzzerActivatesAtk::
-	statbuffchange BS_ATTACKER, STAT_CHANGE_ONLY_CHECKING, BattleScript_BuzzerActivatesRet
 	waitstate
 	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_ONLY_CHECKING, BattleScript_BuzzerActivatesRet
 	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
 	swapattackerwithtarget  @ for defiant, mirror armor
 	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_ATK_MINUS_1
@@ -8526,9 +8531,9 @@ BattleScript_BuzzerActivatesRet:
 	return
 
 BattleScript_BuzzerActivatesSpAtk::
-	statbuffchange BS_ATTACKER, STAT_CHANGE_ONLY_CHECKING, BattleScript_BuzzerActivatesRet
 	waitstate
 	call BattleScript_AbilityPopUp
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_ONLY_CHECKING, BattleScript_BuzzerActivatesRet
 	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
 	swapattackerwithtarget  @ for defiant, mirror armor
 	seteffectsecondary BS_ATTACKER, BS_TARGET, MOVE_EFFECT_SP_ATK_MINUS_1
