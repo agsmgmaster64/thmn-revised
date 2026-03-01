@@ -7844,7 +7844,7 @@ BattleScript_TargetAbilityStatRaiseRet::
 	saveattacker
 	copybyte gBattlerAttacker, gEffectBattler
 	call BattleScript_AbilityPopUp
-	statbuffchange BS_ATTACKER, STAT_CHANGE_CERTAIN, BattleScript_TargetAbilityStatRaiseRet_End
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_CERTAIN, BattleScript_TargetAbilityStatRaiseRet_End
 	call BattleScript_StatUp
 BattleScript_TargetAbilityStatRaiseRet_End:
 	restoreattacker
