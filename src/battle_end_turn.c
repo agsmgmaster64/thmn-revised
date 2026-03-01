@@ -1391,7 +1391,7 @@ static bool32 HandleEndTurnFormChange(enum BattlerId battler)
             break;
         default:
             BattleScriptExecute(BattleScript_BattlerFormChangeEnd2); // Generic animation
-			break;
+            break;
         }
         effect = TRUE;
     }
