@@ -23,8 +23,8 @@
 #include "constants/region_map_sections.h"
 #include "constants/maps.h"
 
-#define MAP_WIDTH_FRLG 22
-#define MAP_HEIGHT_FRLG 15
+#define MAP_WIDTH 22
+#define MAP_HEIGHT 15
 
 #define CANCEL_BUTTON_X 21
 #define CANCEL_BUTTON_Y 13
@@ -374,40 +374,40 @@ static void Task_FlyMap(u8);
 static void InitFlyMap(void);
 static void FreeFlyMap(u8);
 
-static const u16 sTopBar_Pal[] = INCBIN_U16("graphics/region_map_frlg/top_bar.gbapal"); // Palette for the top bar and dynamic text color
-static const u16 sMapCursor_Pal[] = INCBIN_U16("graphics/region_map_frlg/cursor.gbapal");
-static const u16 sPlayerIcon_RedPal[] = INCBIN_U16("graphics/region_map_frlg/player_icon_red.gbapal");
-static const u16 sPlayerIcon_LeafPal[] = INCBIN_U16("graphics/region_map_frlg/player_icon_leaf.gbapal");
-static const u16 sMiscIcon_Pal[] = INCBIN_U16("graphics/region_map_frlg/misc_icon.gbapal"); // For dungeon and fly icons
-static const u16 sRegionMap_Pal[] = INCBIN_U16("graphics/region_map_frlg/region_map.gbapal");
-static const u16 sSwitchMapCursor_Pal[] = INCBIN_U16("graphics/region_map_frlg/switch_map_cursor.gbapal");
-static const u16 sMapEdge_Pal[] = INCBIN_U16("graphics/region_map_frlg/map_edge.gbapal");
-static const u32 sSwitchMapCursorLeft_Gfx[] = INCBIN_U32("graphics/region_map_frlg/switch_map_cursor_left.4bpp.smol");
-static const u32 sSwitchMapCursorRight_Gfx[] = INCBIN_U32("graphics/region_map_frlg/switch_map_cursor_right.4bpp.smol");
-static const u32 sMapCursor_Gfx[] = INCBIN_U32("graphics/region_map_frlg/cursor.4bpp.smol");
-static const u32 sPlayerIcon_Red[] = INCBIN_U32("graphics/region_map_frlg/player_icon_red.4bpp.smol");
-static const u32 sPlayerIcon_Leaf[] = INCBIN_U32("graphics/region_map_frlg/player_icon_leaf.4bpp.smol");
-static const u32 sRegionMap_Gfx[] = INCBIN_U32("graphics/region_map_frlg/region_map.4bpp.smol");
-static const u32 sMapEdge_Gfx[] = INCBIN_U32("graphics/region_map_frlg/map_edge.4bpp.smol");
-static const u32 sSwitchMapMenu_Gfx[] = INCBIN_U32("graphics/region_map_frlg/switch_map_menu.4bpp.smol");
-static const u32 sKanto_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/kanto.bin.smolTM");
-static const u32 sSevii123_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/sevii_123.bin.smolTM");
-static const u32 sSevii45_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/sevii_45.bin.smolTM");
-static const u32 sSevii67_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/sevii_67.bin.smolTM");
-static const u32 sMapEdge_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/map_edge.bin.smolTM");
-static const u32 sSwitchMap_KantoSeviiAll_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/switch_map_kanto_sevii_all.bin.smolTM");
-static const u32 sSwitchMap_KantoSevii123_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/switch_map_kanto_sevii_123.bin.smolTM");
-static const u32 sSwitchMap_KantoSeviiAll2_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/switch_map_kanto_sevii_all2.bin.smolTM");
-static const u32 sMapEdge_TopLeft[] = INCBIN_U32("graphics/region_map_frlg/map_edge_top_left.4bpp.smol");
-static const u32 sMapEdge_TopRight[] = INCBIN_U32("graphics/region_map_frlg/map_edge_top_right.4bpp.smol");
-static const u32 sMapEdge_MidLeft[] = INCBIN_U32("graphics/region_map_frlg/map_edge_mid_left.4bpp.smol");
-static const u32 sMapEdge_MidRight[] = INCBIN_U32("graphics/region_map_frlg/map_edge_mid_right.4bpp.smol");
-static const u32 sMapEdge_BottomLeft[] = INCBIN_U32("graphics/region_map_frlg/map_edge_bottom_left.4bpp.smol");
-static const u32 sMapEdge_BottomRight[] = INCBIN_U32("graphics/region_map_frlg/map_edge_bottom_right.4bpp.smol");
-static const u32 sDungeonIcon[] = INCBIN_U32("graphics/region_map_frlg/dungeon_icon.4bpp.smol");
-static const u32 sFlyIcon[] = INCBIN_U32("graphics/region_map_frlg/fly_icon.4bpp.smol");
-static const u32 sBackground_Gfx[] = INCBIN_U32("graphics/region_map_frlg/background.4bpp.smol");
-static const u32 sBackground_Tilemap[] = INCBIN_U32("graphics/region_map_frlg/background.bin.smolTM");
+static const u16 sTopBar_Pal[] = INCBIN_U16("graphics/region_map/top_bar.gbapal"); // Palette for the top bar and dynamic text color
+static const u16 sMapCursor_Pal[] = INCBIN_U16("graphics/region_map/cursor.gbapal");
+static const u16 sPlayerIcon_RedPal[] = INCBIN_U16("graphics/region_map/player_icon_red.gbapal");
+static const u16 sPlayerIcon_LeafPal[] = INCBIN_U16("graphics/region_map/player_icon_leaf.gbapal");
+static const u16 sMiscIcon_Pal[] = INCBIN_U16("graphics/region_map/misc_icon.gbapal"); // For dungeon and fly icons
+static const u16 sRegionMap_Pal[] = INCBIN_U16("graphics/region_map/region_map.gbapal");
+static const u16 sSwitchMapCursor_Pal[] = INCBIN_U16("graphics/region_map/switch_map_cursor.gbapal");
+static const u16 sMapEdge_Pal[] = INCBIN_U16("graphics/region_map/map_edge.gbapal");
+static const u32 sSwitchMapCursorLeft_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_cursor_left.4bpp.smol");
+static const u32 sSwitchMapCursorRight_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_cursor_right.4bpp.smol");
+static const u32 sMapCursor_Gfx[] = INCBIN_U32("graphics/region_map/cursor.4bpp.smol");
+static const u32 sPlayerIcon_Red[] = INCBIN_U32("graphics/region_map/player_icon_red.4bpp.smol");
+static const u32 sPlayerIcon_Leaf[] = INCBIN_U32("graphics/region_map/player_icon_leaf.4bpp.smol");
+static const u32 sRegionMap_Gfx[] = INCBIN_U32("graphics/region_map/region_map.4bpp.smol");
+static const u32 sMapEdge_Gfx[] = INCBIN_U32("graphics/region_map/map_edge.4bpp.smol");
+static const u32 sSwitchMapMenu_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_menu.4bpp.smol");
+static const u32 sKanto_Tilemap[] = INCBIN_U32("graphics/region_map/kanto.bin.smolTM");
+static const u32 sSevii123_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_123.bin.smolTM");
+static const u32 sSevii45_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_45.bin.smolTM");
+static const u32 sSevii67_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_67.bin.smolTM");
+static const u32 sMapEdge_Tilemap[] = INCBIN_U32("graphics/region_map/map_edge.bin.smolTM");
+static const u32 sSwitchMap_KantoSeviiAll_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_all.bin.smolTM");
+static const u32 sSwitchMap_KantoSevii123_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_123.bin.smolTM");
+static const u32 sSwitchMap_KantoSeviiAll2_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_all2.bin.smolTM");
+static const u32 sMapEdge_TopLeft[] = INCBIN_U32("graphics/region_map/map_edge_top_left.4bpp.smol");
+static const u32 sMapEdge_TopRight[] = INCBIN_U32("graphics/region_map/map_edge_top_right.4bpp.smol");
+static const u32 sMapEdge_MidLeft[] = INCBIN_U32("graphics/region_map/map_edge_mid_left.4bpp.smol");
+static const u32 sMapEdge_MidRight[] = INCBIN_U32("graphics/region_map/map_edge_mid_right.4bpp.smol");
+static const u32 sMapEdge_BottomLeft[] = INCBIN_U32("graphics/region_map/map_edge_bottom_left.4bpp.smol");
+static const u32 sMapEdge_BottomRight[] = INCBIN_U32("graphics/region_map/map_edge_bottom_right.4bpp.smol");
+static const u32 sDungeonIcon[] = INCBIN_U32("graphics/region_map/dungeon_icon.4bpp.smol");
+static const u32 sFlyIcon[] = INCBIN_U32("graphics/region_map/fly_icon.4bpp.smol");
+static const u32 sBackground_Gfx[] = INCBIN_U32("graphics/region_map/background.4bpp.smol");
+static const u32 sBackground_Tilemap[] = INCBIN_U32("graphics/region_map/background.bin.smolTM");
 
 static const struct BgTemplate sRegionMapBgTemplates[] = {
     {
@@ -796,7 +796,10 @@ static const u8 sWinRegs[][2] = {
 
 static const u8 sTextColors[] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 
-#include "data/region_map/region_map_layout_frlg.h"
+#include "data/region_map/region_map_layout_kanto.h"
+#include "data/region_map/region_map_layout_sevii_123.h"
+#include "data/region_map/region_map_layout_sevii_45.h"
+#include "data/region_map/region_map_layout_sevii_67.h"
 
 static const u8 sText_RegionMap_NoData[] = _("No data");
 static const u8 gText_RegionMap_Space[] = _(" ");
@@ -2622,7 +2625,7 @@ static u8 HandleRegionMapInput(void)
     }
     if (JOY_HELD(DPAD_DOWN))
     {
-        if (sMapCursor->y < MAP_HEIGHT_FRLG - 1)
+        if (sMapCursor->y < MAP_HEIGHT - 1)
         {
             sMapCursor->verticalMove = 2;
             input = MAP_INPUT_MOVE_START;
@@ -2630,7 +2633,7 @@ static u8 HandleRegionMapInput(void)
     }
     if (JOY_HELD(DPAD_RIGHT))
     {
-        if (sMapCursor->x < MAP_WIDTH_FRLG - 1)
+        if (sMapCursor->x < MAP_WIDTH - 1)
         {
             sMapCursor->horizontalMove = 2;
             input = MAP_INPUT_MOVE_START;
@@ -2778,9 +2781,9 @@ static u16 GetMapsecUnderCursor(void)
 {
     u8 mapsec;
     if (sMapCursor->y < 0
-     || sMapCursor->y >= MAP_HEIGHT_FRLG
+     || sMapCursor->y >= MAP_HEIGHT
      || sMapCursor->x < 0
-     || sMapCursor->x >= MAP_WIDTH_FRLG)
+     || sMapCursor->x >= MAP_WIDTH)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_MAP, sMapCursor->y, sMapCursor->x);
@@ -2793,9 +2796,9 @@ static u16 GetDungeonMapsecUnderCursor(void)
 {
     u8 mapsec;
     if (sMapCursor->y < 0
-     || sMapCursor->y >= MAP_HEIGHT_FRLG
+     || sMapCursor->y >= MAP_HEIGHT
      || sMapCursor->x < 0
-     || sMapCursor->x >= MAP_WIDTH_FRLG)
+     || sMapCursor->x >= MAP_WIDTH)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
@@ -3417,9 +3420,9 @@ static void CreateFlyIcons(void)
     {
         for (i = 0; i < REGIONMAP_COUNT; i++)
         {
-            for (y = 0; y < MAP_HEIGHT_FRLG; y++)
+            for (y = 0; y < MAP_HEIGHT; y++)
             {
-                for (x = 0; x < MAP_WIDTH_FRLG; x++)
+                for (x = 0; x < MAP_WIDTH; x++)
                 {
                     if (GetMapsecType(GetSelectedMapSection(i, LAYER_MAP, y, x)) == MAPSECTYPE_CITY_CANFLY)
                     {
@@ -3439,9 +3442,9 @@ static void CreateDungeonIcons(void)
     u8 mapsec;
     for (i = 0; i < REGIONMAP_COUNT; i++)
     {
-        for (y = 0; y < MAP_HEIGHT_FRLG; y++)
+        for (y = 0; y < MAP_HEIGHT; y++)
         {
-            for (x = 0; x < MAP_WIDTH_FRLG; x++)
+            for (x = 0; x < MAP_WIDTH; x++)
             {
                 mapsec = GetSelectedMapSection(i, LAYER_DUNGEON, y, x);
                 if (mapsec == MAPSEC_NONE)
