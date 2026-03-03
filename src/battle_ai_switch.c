@@ -397,7 +397,7 @@ static bool32 ShouldSwitchIfHasBadOdds(enum BattlerId battler)
 static bool32 ShouldSwitchIfTruant(enum BattlerId battler)
 {
     // Switch if mon with truant is bodied by Protect or invulnerability spam
-    if (gAiLogicData->abilities[battler] == ABILITY_TRUANT
+    if ((gAiLogicData->abilities[battler] == ABILITY_TRUANT || gAiLogicData->abilities[battler] == ABILITY_LAZY)
         && IsTruantMonVulnerable(battler, gBattlerTarget)
         && gBattleMons[battler].volatiles.truantCounter
         && gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2
@@ -525,6 +525,9 @@ static bool32 ShouldSwitchIfWonderGuard(enum BattlerId battler)
         return FALSE;
 
     if (gAiLogicData->abilities[opposingBattler] != ABILITY_WONDER_GUARD)
+        return FALSE;
+
+    if (gAiLogicData->abilities[opposingBattler] != ABILITY_PLAY_GHOST)
         return FALSE;
 
     // Check if Pokémon has a super effective move.
@@ -779,6 +782,7 @@ static bool32 ShouldSwitchIfBadlyStatused(enum BattlerId battler)
             // Checks to see if active Pokemon can do something against sleep
             if ((monAbility == ABILITY_NATURAL_CURE
                 || monAbility == ABILITY_SHED_SKIN
+                || monAbility == ABILITY_SELF_CARE
                 || monAbility == ABILITY_EARLY_BIRD)
                 || holdEffect == (HOLD_EFFECT_CURE_SLP | HOLD_EFFECT_CURE_STATUS)
                 || HasMoveWithEffect(battler, EFFECT_SLEEP_TALK)
@@ -2152,7 +2156,7 @@ static u32 GetBestMonIntegrated(struct Pokemon *party, int firstId, int lastId, 
         }
 
         // While not really invalid per se, not really wise to switch into this mon
-        if (gAiLogicData->abilities[battler] == ABILITY_TRUANT && IsTruantMonVulnerable(battler, opposingBattler))
+        if ((gAiLogicData->abilities[battler] == ABILITY_TRUANT || gAiLogicData->abilities[battler] == ABILITY_LAZY) && IsTruantMonVulnerable(battler, opposingBattler))
             continue;
 
         // Get max number of hits for player to KO AI mon and type matchup for defensive switching
@@ -2399,7 +2403,7 @@ static u32 GetBestMonVanilla(struct Pokemon *party, int firstId, int lastId, enu
         InitializeSwitchinCandidate(battler, &party[monIndex]);
 
         // While not really invalid per se, not really wise to switch into this mon
-        if (gAiLogicData->abilities[battler] == ABILITY_TRUANT && IsTruantMonVulnerable(battler, opposingBattler))
+        if ((gAiLogicData->abilities[battler] == ABILITY_TRUANT || gAiLogicData->abilities[battler] == ABILITY_LAZY) && IsTruantMonVulnerable(battler, opposingBattler))
             continue;
 
         typeMatchup = GetBattlerTypeMatchup(opposingBattler, battler);

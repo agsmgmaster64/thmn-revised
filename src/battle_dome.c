@@ -2414,6 +2414,9 @@ static int GetTypeEffectivenessPoints(enum Move move, int targetSpecies, int mod
 
         if (defAbility == ABILITY_WONDER_GUARD && typeEffectiveness1 != TYPE_x1 && typeEffectiveness2 != TYPE_x1)
             typePower = 0;
+
+        if (defAbility == ABILITY_PLAY_GHOST && typeEffectiveness1 != TYPE_x1 && typeEffectiveness2 != TYPE_x1)
+            typePower = 0;
     }
 
     switch (mode)

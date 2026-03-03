@@ -249,7 +249,7 @@ static enum CancelerResult CancelerPowerPoints(struct BattleContext *ctx)
 
 static enum CancelerResult CancelerTruant(struct BattleContext *ctx)
 {
-    if (GetBattlerAbility(ctx->battlerAtk) == ABILITY_TRUANT && gBattleMons[ctx->battlerAtk].volatiles.truantCounter)
+    if ((GetBattlerAbility(ctx->battlerAtk) == ABILITY_TRUANT || GetBattlerAbility(ctx->battlerAtk) == ABILITY_LAZY)  && gBattleMons[ctx->battlerAtk].volatiles.truantCounter)
     {
         CancelMultiTurnMoves(ctx->battlerAtk, SKY_DROP_ATTACKCANCELER_CHECK);
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_LOAFING;
@@ -1394,6 +1394,7 @@ bool32 IsDazzlingAbility(enum Ability ability)
     case ABILITY_DAZZLING:        return TRUE;
     case ABILITY_QUEENLY_MAJESTY: return TRUE;
     case ABILITY_ARMOR_TAIL:      return TRUE;
+    case ABILITY_INTERDICT:      return TRUE;
     default: break;
     }
     return FALSE;
@@ -2146,7 +2147,7 @@ static enum MoveEndResult MoveEndProtectLikeEffect(void)
 static void SetHealScript(s32 healAmount)
 {
     healAmount = GetDrainedBigRootHp(gBattlerAttacker, healAmount);
-    if (GetBattlerAbility(gBattlerTarget) == ABILITY_LIQUID_OOZE
+    if ((GetBattlerAbility(gBattlerTarget) == ABILITY_LIQUID_OOZE || GetBattlerAbility(gBattlerTarget) == ABILITY_STRANGE_MIST)
      && (GetMoveEffect(gCurrentMove) != EFFECT_DREAM_EATER || GetConfig(B_DREAM_EATER_LIQUID_OOZE) >= GEN_5))
     {
         SetPassiveDamageAmount(gBattlerAttacker, healAmount);
@@ -2942,7 +2943,7 @@ static enum MoveEndResult MoveEndMoveBlock(void)
         {
             enum BattleSide side = GetBattlerSide(gBattlerTarget);
 
-            if (GetBattlerAbility(gBattlerTarget) == ABILITY_STICKY_HOLD)
+            if (GetBattlerAbility(gBattlerTarget) == ABILITY_STICKY_HOLD || GetBattlerAbility(gBattlerTarget) == ABILITY_STRONG_GRIP)
             {
                 gBattlerAbility = gBattlerTarget;
                 BattleScriptCall(BattleScript_StickyHoldActivatesRet);
@@ -2982,7 +2983,7 @@ static enum MoveEndResult MoveEndMoveBlock(void)
         {
             result = MOVEEND_RESULT_CONTINUE;
         }
-        else if (GetBattlerAbility(gBattlerTarget) == ABILITY_STICKY_HOLD)
+        else if (GetBattlerAbility(gBattlerTarget) == ABILITY_STICKY_HOLD || GetBattlerAbility(gBattlerTarget) == ABILITY_STRONG_GRIP)
         {
             BattleScriptCall(BattleScript_NoItemSteal);
             gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
@@ -3013,7 +3014,7 @@ static enum MoveEndResult MoveEndMoveBlock(void)
             if (targetAbility == ABILITY_GUARD_DOG)
                 break;
 
-            if (targetAbility == ABILITY_SUCTION_CUPS)
+            if (targetAbility == ABILITY_SUCTION_CUPS || targetAbility == ABILITY_GATE_KEEPER)
             {
                 BattleScriptCall(BattleScript_AbilityPreventsPhasingOutRet);
             }
@@ -3086,7 +3087,8 @@ static enum MoveEndResult MoveEndMoveBlock(void)
         {
             enum Ability ability = GetBattlerAbility(gBattlerAttacker);
             if (IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_ROCK_HEAD)
-             || IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_MAGIC_GUARD))
+             || IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_MAGIC_GUARD)
+             || IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_FORTIFIED))
                 break;
 
             SetPassiveDamageAmount(gBattlerAttacker, gBattleScripting.savedDmg * max(1, GetMoveRecoil(gCurrentMove)) / 100);
@@ -3100,7 +3102,8 @@ static enum MoveEndResult MoveEndMoveBlock(void)
         {
             enum Ability ability = GetBattlerAbility(gBattlerAttacker);
             if (IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_ROCK_HEAD)
-             || IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_MAGIC_GUARD))
+             || IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_MAGIC_GUARD)
+             || IsAbilityAndRecord(gBattlerAttacker, ability, ABILITY_FORTIFIED))
                 break;
 
             s32 recoil = (GetNonDynamaxMaxHP(gBattlerAttacker) + 1) / 2; // Half of Max HP Rounded UP
@@ -3477,7 +3480,7 @@ static enum MoveEndResult MoveEndPickpocket(void)
             {
                 gBattlerTarget = gBattlerAbility = battlerDef;
                 // Battle scripting is super brittle so we shall do the item exchange now (if possible)
-                if (GetBattlerAbility(gBattlerAttacker) != ABILITY_STICKY_HOLD)
+                if (GetBattlerAbility(gBattlerAttacker) != ABILITY_STICKY_HOLD || GetBattlerAbility(gBattlerAttacker) != ABILITY_STRONG_GRIP)
                     StealTargetItem(battlerDef, gBattlerAttacker);  // Target takes attacker's item
 
                 gEffectBattler = gBattlerAttacker;

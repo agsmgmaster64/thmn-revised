@@ -732,6 +732,9 @@ bool32 IsAdditionalEffectBlocked(enum BattlerId battlerAtk, u32 abilityAtk, enum
     if (abilityDef == ABILITY_SHIELD_DUST && !IsMoldBreakerTypeAbility(battlerAtk, abilityAtk))
         return TRUE;
 
+    if (abilityDef == ABILITY_FLAWLESS && !IsMoldBreakerTypeAbility(battlerAtk, abilityAtk))
+        return TRUE;
+
     return FALSE;
 }
 
@@ -1024,7 +1027,7 @@ struct SimulatedDamage AI_CalcDamage(enum Move move, enum BattlerId battlerAtk, 
 bool32 AI_IsDamagedByRecoil(enum BattlerId battler)
 {
     enum Ability ability = gAiLogicData->abilities[battler];
-    if (ability == ABILITY_MAGIC_GUARD || ability == ABILITY_ROCK_HEAD)
+    if (ability == ABILITY_MAGIC_GUARD || ability == ABILITY_ROCK_HEAD || ability == ABILITY_FORTIFIED)
         return FALSE;
     return TRUE;
 }
@@ -1254,11 +1257,11 @@ static bool32 AI_IsMoveEffectInMinus(enum BattlerId battlerAtk, enum BattlerId b
         }
         break;
     case EFFECT_ABSORB:
-        if (abilityDef == ABILITY_LIQUID_OOZE)
+        if (abilityDef == ABILITY_LIQUID_OOZE || abilityDef == ABILITY_STRANGE_MIST)
             return TRUE;
         break;
     case EFFECT_DREAM_EATER:
-        if (abilityDef == ABILITY_LIQUID_OOZE && GetConfig(B_DREAM_EATER_LIQUID_OOZE) >= GEN_5)
+        if ((abilityDef == ABILITY_LIQUID_OOZE || abilityDef == ABILITY_STRANGE_MIST) && GetConfig(B_DREAM_EATER_LIQUID_OOZE) >= GEN_5)
             return TRUE;
         break;
     default:
@@ -1331,7 +1334,7 @@ enum MoveComparisonResult CompareMoveEffects(enum Move move1, enum Move move2, e
     // Check if physical moves hurt.
     if (gAiLogicData->holdEffects[battlerAtk] != HOLD_EFFECT_PROTECTIVE_PADS && atkAbility != ABILITY_LONG_REACH
         && (gAiLogicData->holdEffects[battlerDef] == HOLD_EFFECT_ROCKY_HELMET
-        || defAbility == ABILITY_IRON_BARBS || defAbility == ABILITY_ROUGH_SKIN))
+        || defAbility == ABILITY_IRON_BARBS || defAbility == ABILITY_ROUGH_SKIN || defAbility == ABILITY_DOLL_WALL || defAbility == ABILITY_DOLL_SKEWER))
     {
         bool32 moveContact1 = MoveMakesContact(move1);
         bool32 moveContact2 = MoveMakesContact(move2);
@@ -1916,7 +1919,7 @@ u32 AI_GetSwitchinWeather(enum BattlerId battler)
     // Forced weather behaviour
     if (!AI_WeatherHasEffect())
         return B_WEATHER_NONE;
-    if (ability == ABILITY_CLOUD_NINE || ability == ABILITY_AIR_LOCK)
+    if (ability == ABILITY_CLOUD_NINE || ability == ABILITY_AIR_LOCK || ability == ABILITY_UNCONSCIOUS || ability == ABILITY_HISOUTEN)
         return B_WEATHER_NONE;
     if (gBattleWeather & B_WEATHER_PRIMAL_ANY)
         return gBattleWeather;
@@ -2349,6 +2352,7 @@ bool32 CanLowerStat(enum BattlerId battlerAtk, enum BattlerId battlerDef, struct
             if (stat == STAT_SPEED)
                 return FALSE;
         case ABILITY_HYPER_CUTTER:
+        case ABILITY_ONI_STRENGTH:
             if (stat == STAT_ATK)
                 return FALSE;
         case ABILITY_BIG_PECKS:
@@ -2365,8 +2369,11 @@ bool32 CanLowerStat(enum BattlerId battlerAtk, enum BattlerId battlerDef, struct
         case ABILITY_CLEAR_BODY:
         case ABILITY_WHITE_SMOKE:
         case ABILITY_FULL_METAL_BODY:
+        case ABILITY_HAKUREI_MIKO:
+        case ABILITY_MANA_BARRIER:
             return FALSE;
         case ABILITY_SHIELD_DUST:
+        case ABILITY_FLAWLESS:
             if (!IsBattleMoveStatus(move) && GetActiveGimmick(battlerAtk) != GIMMICK_DYNAMAX)
                 return FALSE;
             break;
@@ -3539,7 +3546,7 @@ bool32 CanKnockOffItem(enum BattlerId fromBattler, enum BattlerId battler, enum 
     if (!(gBattleTypeFlags & BATTLE_TYPE_CANT_KNOCK_OFF) && IsOnPlayerSide(fromBattler))
         return FALSE;
 
-    if (gAiLogicData->abilities[fromBattler] == ABILITY_STICKY_HOLD)
+    if (gAiLogicData->abilities[fromBattler] == ABILITY_STICKY_HOLD || gAiLogicData->abilities[fromBattler] == ABILITY_STRONG_GRIP)
         return FALSE;
 
     if (!CanBattlerGetOrLoseItem(fromBattler, battler, item))
@@ -3558,7 +3565,7 @@ bool32 IsBattlerIncapacitated(enum BattlerId battler, enum Ability ability)
     if (gBattleMons[battler].status1 & STATUS1_SLEEP && !HasMoveWithEffect(battler, EFFECT_SLEEP_TALK))
         return TRUE;
 
-    if (gBattleMons[battler].volatiles.rechargeTimer > 0 || (ability == ABILITY_TRUANT && gBattleMons[battler].volatiles.truantCounter != 0))
+    if (gBattleMons[battler].volatiles.rechargeTimer > 0 || ((ability == ABILITY_TRUANT || ability == ABILITY_LAZY) && gBattleMons[battler].volatiles.truantCounter != 0))
         return TRUE;
 
     return FALSE;
@@ -3576,6 +3583,7 @@ bool32 AI_CanPutToSleep(enum BattlerId battlerAtk, enum BattlerId battlerDef, en
 static inline bool32 DoesBattlerBenefitFromAllVolatileStatus(enum BattlerId battler, enum Ability ability)
 {
     if (ability == ABILITY_MARVEL_SCALE
+     || ability == ABILITY_MARVEL_VEIL
      || ability == ABILITY_QUICK_FEET
      || ability == ABILITY_MAGIC_GUARD
      || (ability == ABILITY_GUTS && HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL))
@@ -3759,7 +3767,7 @@ bool32 AI_CanBeInfatuated(enum BattlerId battlerAtk, enum BattlerId battlerDef, 
 bool32 ShouldTryToFlinch(enum BattlerId battlerAtk, enum BattlerId battlerDef, enum Ability atkAbility, enum Ability defAbility, enum Move move)
 {
     enum Move predictedMoveSpeedCheck = GetIncomingMoveSpeedCheck(battlerAtk, battlerDef, gAiLogicData);
-    if (((!IsMoldBreakerTypeAbility(battlerAtk, gAiLogicData->abilities[battlerAtk]) && (defAbility == ABILITY_SHIELD_DUST || defAbility == ABILITY_INNER_FOCUS))
+    if (((!IsMoldBreakerTypeAbility(battlerAtk, gAiLogicData->abilities[battlerAtk]) && (defAbility == ABILITY_SHIELD_DUST || defAbility == ABILITY_INNER_FOCUS || defAbility == ABILITY_FLAWLESS))
       || gAiLogicData->holdEffects[battlerDef] == HOLD_EFFECT_COVERT_CLOAK
       || DoesSubstituteBlockMove(battlerAtk, battlerDef, move)
       || AI_IsSlower(battlerAtk, battlerDef, move, predictedMoveSpeedCheck, CONSIDER_PRIORITY))) // Opponent goes first
@@ -3821,7 +3829,7 @@ bool32 IsFlinchGuaranteed(enum BattlerId battlerAtk, enum BattlerId battlerDef, 
             if (gAiLogicData->holdEffects[battlerDef] == HOLD_EFFECT_COVERT_CLOAK
             || DoesSubstituteBlockMove(battlerAtk, battlerDef, move)
             || (!IsMoldBreakerTypeAbility(battlerAtk, gAiLogicData->abilities[battlerAtk])
-            && (gAiLogicData->abilities[battlerDef] == ABILITY_SHIELD_DUST || gAiLogicData->abilities[battlerDef] == ABILITY_INNER_FOCUS)))
+            && (gAiLogicData->abilities[battlerDef] == ABILITY_SHIELD_DUST || gAiLogicData->abilities[battlerDef] == ABILITY_INNER_FOCUS || gAiLogicData->abilities[battlerDef] == ABILITY_FLAWLESS)))
                 return FALSE;
             else
                 return TRUE;
@@ -3982,7 +3990,7 @@ bool32 ShouldAbsorb(enum BattlerId battlerAtk, enum BattlerId battlerDef, enum M
     if (gBattleMons[battlerAtk].volatiles.healBlock)
         healAmount = 0;
 
-    if (gAiLogicData->abilities[battlerDef] == ABILITY_LIQUID_OOZE)
+    if (gAiLogicData->abilities[battlerDef] == ABILITY_LIQUID_OOZE || gAiLogicData->abilities[battlerDef] == ABILITY_STRANGE_MIST)
         return FALSE;
     if (IsBattlerAtMaxHp(battlerAtk) && (aiIsFaster || GetMoveCategory(GetIncomingMove(battlerAtk, battlerDef, gAiLogicData)) == DAMAGE_CATEGORY_STATUS))
         return FALSE;
@@ -5710,6 +5718,8 @@ bool32 AI_ShouldSetUpHazards(enum BattlerId battlerAtk, enum BattlerId battlerDe
             return TRUE;
         if (aiData->abilities[battlerDef] == ABILITY_SHIELD_DUST)
             return FALSE;
+        if (aiData->abilities[battlerDef] == ABILITY_FLAWLESS)
+            return FALSE;
     }
     return TRUE;
 }
@@ -5742,6 +5752,7 @@ bool32 AI_ShouldSpicyExtract(enum BattlerId battlerAtk, enum BattlerId battlerAt
     if (gBattleMons[battlerAtkPartner].statStages[STAT_ATK] == MAX_STAT_STAGE
      || partnerAbility == ABILITY_CONTRARY
      || partnerAbility == ABILITY_GOOD_AS_GOLD
+     || partnerAbility == ABILITY_INNATE_DREAM
      || HasBattlerSideMoveWithEffect(LEFT_FOE(battlerAtk), EFFECT_FOUL_PLAY))
         return FALSE;
 
@@ -5840,6 +5851,7 @@ bool32 IsMoxieTypeAbility(enum Ability ability)
     case ABILITY_AS_ONE_ICE_RIDER:
     case ABILITY_GRIM_NEIGH:
     case ABILITY_AS_ONE_SHADOW_RIDER:
+    case ABILITY_OCCULT_BOOST:
     case ABILITY_AMBITION:
         return TRUE;
     default:
@@ -5854,6 +5866,7 @@ bool32 DoesAbilityRaiseStatsWhenLowered(enum Ability ability)
     case ABILITY_CONTRARY:
     case ABILITY_COMPETITIVE:
     case ABILITY_DEFIANT:
+    case ABILITY_INDIGNANT:
         return TRUE;
     default:
         return FALSE;
@@ -5869,6 +5882,7 @@ bool32 DoesIntimidateRaiseStats(enum Ability ability)
     case ABILITY_DEFIANT:
     case ABILITY_GUARD_DOG:
     case ABILITY_RATTLED:
+    case ABILITY_INDIGNANT:
         return TRUE;
     default:
         return FALSE;
@@ -5894,6 +5908,7 @@ bool32 ShouldTriggerAbility(enum BattlerId battlerAtk, enum BattlerId battlerDef
         case ABILITY_MOXIE:
         case ABILITY_SAP_SIPPER:
         case ABILITY_THERMAL_EXCHANGE:
+        case ABILITY_INDIGNANT:
             return (BattlerStatCanRise(battlerDef, ability, STAT_ATK) && HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL));
 
         case ABILITY_COMPETITIVE:
@@ -6120,7 +6135,7 @@ void AbilityChangeScore(enum BattlerId battlerAtk, enum BattlerId battlerDef, en
         // Trigger Plus or Minus in modern gens. This is not in the overarching function because Skill Swap is rarely beneficial here.
         if (B_PLUS_MINUS_INTERACTION >= GEN_5)
         {
-            if (((effect == EFFECT_ENTRAINMENT) && (abilityAtk == ABILITY_PLUS || abilityAtk == ABILITY_MINUS)) || ((effect == EFFECT_ROLE_PLAY) && (abilityDef == ABILITY_PLUS || abilityDef == ABILITY_MINUS)))
+            if (((effect == EFFECT_ENTRAINMENT) && (abilityAtk == ABILITY_PLUS || abilityAtk == ABILITY_MINUS)) || ((effect == EFFECT_ROLE_PLAY) && (abilityDef == ABILITY_PLUS || abilityDef == ABILITY_MINUS || abilityDef == ABILITY_MASTER || abilityDef == ABILITY_SERVANT)))
                 ADJUST_SCORE_PTR(DECENT_EFFECT);
         }
 
@@ -6153,6 +6168,9 @@ enum AIScore BattlerBenefitsFromAbilityScore(enum BattlerId battler, enum Abilit
     case ABILITY_PURIFYING_SALT:
     case ABILITY_SPEED_BOOST:
     case ABILITY_WHITE_SMOKE:
+    case ABILITY_HAKUREI_MIKO:
+    case ABILITY_MANA_BARRIER:
+    case ABILITY_INNATE_DREAM:
         return GOOD_EFFECT;
     // Conditional ability logic goes here.
     case ABILITY_COMPOUND_EYES:
@@ -6182,6 +6200,7 @@ enum AIScore BattlerBenefitsFromAbilityScore(enum BattlerId battler, enum Abilit
         break;
     case ABILITY_HUGE_POWER:
     case ABILITY_PURE_POWER:
+    case ABILITY_NYUDO:
         if (HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL))
             return BEST_EFFECT;
         break;

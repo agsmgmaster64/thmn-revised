@@ -2475,6 +2475,13 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 4,
     },
 
+    [ABILITY_DOLL_SKEWER] =
+    {
+        .name = _("Doll Wall"),
+        .description = COMPOUND_STRING("Attackers take 1/8 Max HP \nin damage on contact."),
+        .aiRating = 4,
+    },
+
     [ABILITY_PLAY_GHOST] =
     {
         .name = _("Play Ghost"),
@@ -2654,7 +2661,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_INDIGNANT] =
     {
         .name = _("Indignant"),
-        .description = COMPOUND_STRING("+2 Attack stages when user's\nstats are lowered by a foe."),
+        .description = COMPOUND_STRING("+2 Sp.Atk stages when user's\nstats are lowered by a foe."),
         .aiRating = 5,
     },
 
@@ -2811,13 +2818,6 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     //     .name = _("Contagion"),
     //     .description = COMPOUND_STRING("Contact with the user turns the\nattacker's ability into Contagion."),
     //     .aiRating = 5,
-    // },
-
-    // [ABILITY_DOLL_SKEWER] =
-    // {
-    //     .name = _("Doll Skewer"),
-    //     .description = COMPOUND_STRING("Attackers take 1/8 Max HP \nin damage on contact."),
-    //     .aiRating = 6,
     // },
 
     [ABILITY_LECTURE] =

@@ -2891,7 +2891,7 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
     case MOVE_EFFECT_INCINERATE:
         if (((gBattleMons[gEffectBattler].item >= FIRST_BERRY_INDEX && gBattleMons[gEffectBattler].item <= LAST_BERRY_INDEX)
           || (B_INCINERATE_GEMS >= GEN_6 && GetBattlerHoldEffect(gEffectBattler) == HOLD_EFFECT_GEMS))
-         && abilities[gEffectBattler] != ABILITY_STICKY_HOLD)
+         && abilities[gEffectBattler] != ABILITY_STICKY_HOLD && abilities[gEffectBattler] != ABILITY_STRONG_GRIP)
         {
             gLastUsedItem = gBattleMons[gEffectBattler].item;
             gBattleMons[gEffectBattler].item = 0;
@@ -2910,7 +2910,7 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
             gBattlescriptCurrInstr = battleScript;
         }
         else if (GetItemPocket(gBattleMons[gEffectBattler].item) == POCKET_BERRIES
-            && abilities[effectBattler] != ABILITY_STICKY_HOLD)
+            && abilities[effectBattler] != ABILITY_STICKY_HOLD && abilities[effectBattler] != ABILITY_STRONG_GRIP)
         {
             // target loses their berry
             gLastUsedItem = gBattleMons[gEffectBattler].item;
@@ -5776,7 +5776,7 @@ static void UpdateSentMonFlags(enum BattlerId battler)
 
     // There is a hack here to ensure the truant counter will be 0 when the battler's next turn starts.
     // The truant counter is not updated in the case where a mon switches in after a lost judgment in the battle arena.
-    if (GetBattlerAbility(battler) == ABILITY_TRUANT
+    if ((GetBattlerAbility(battler) == ABILITY_TRUANT || GetBattlerAbility(battler) == ABILITY_LAZY)
      && gCurrentActionFuncId != B_ACTION_USE_MOVE
      && !gBattleMons[battler].volatiles.truantSwitchInHack)
         gBattleMons[battler].volatiles.truantCounter = 1;
@@ -9737,7 +9737,7 @@ static void Cmd_tryswapitems(void)
             gBattlescriptCurrInstr = cmd->failInstr;
         }
         // check if ability prevents swapping
-        else if (GetBattlerAbility(gBattlerTarget) == ABILITY_STICKY_HOLD)
+        else if (GetBattlerAbility(gBattlerTarget) == ABILITY_STICKY_HOLD || GetBattlerAbility(gBattlerTarget) == ABILITY_STRONG_GRIP)
         {
             gBattlescriptCurrInstr = BattleScript_StickyHoldActivates;
             gBattlerAbility = gBattlerTarget;
@@ -13372,6 +13372,8 @@ void BS_JumpIfAbilityCantBeReactivated(void)
     case ABILITY_NEUTRALIZING_GAS:
     case ABILITY_AIR_LOCK:
     case ABILITY_CLOUD_NINE:
+    case ABILITY_UNCONSCIOUS:
+    case ABILITY_HISOUTEN:
         gBattlescriptCurrInstr = cmd->jumpInstr;
         break;
     default:

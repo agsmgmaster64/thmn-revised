@@ -1277,6 +1277,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
             }
             break;
         case ABILITY_WONDER_GUARD:
+        case ABILITY_PLAY_GHOST:
             if (effectiveness < UQ_4_12(2.0))
                 RETURN_SCORE_MINUS(20);
             break;
@@ -1756,6 +1757,8 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         // AI_CBM_HighRiskForDamage
         if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD && effectiveness < UQ_4_12(2.0))
             ADJUST_SCORE(-10);
+        if (aiData->abilities[battlerDef] == ABILITY_PLAY_GHOST && effectiveness < UQ_4_12(2.0))
+            ADJUST_SCORE(-10);
         if (HasDamagingMove(battlerDef) && !(gBattleMons[battlerAtk].volatiles.substitute
          || IsBattlerIncapacitated(battlerDef, abilityDef)
          || gBattleMons[battlerDef].volatiles.infatuation
@@ -1780,6 +1783,8 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         if (CountUsablePartyMons(battlerDef) == 0)
             ADJUST_SCORE(-10);
         else if (aiData->abilities[battlerDef] == ABILITY_SUCTION_CUPS)
+            ADJUST_SCORE(-10);
+        else if (aiData->abilities[battlerDef] == ABILITY_GATE_KEEPER)
             ADJUST_SCORE(-10);
         else if (GetActiveGimmick(battlerDef) == GIMMICK_DYNAMAX)
             ADJUST_SCORE(-10);
@@ -1856,6 +1861,8 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
          || DoesPartnerHaveSameMoveEffect(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove))
             ADJUST_SCORE(-10);
         else if (aiData->abilities[battlerDef] == ABILITY_LIQUID_OOZE)
+            ADJUST_SCORE(-3);
+        else if (aiData->abilities[battlerDef] == ABILITY_STRANGE_MIST)
             ADJUST_SCORE(-3);
         break;
     case EFFECT_DISABLE:
@@ -2132,6 +2139,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         if (!hasPartner
           || DoesPartnerHaveSameMoveEffect(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove)
           || aiData->abilities[BATTLE_PARTNER(battlerAtk)] == ABILITY_GOOD_AS_GOLD
+          || aiData->abilities[BATTLE_PARTNER(battlerAtk)] == ABILITY_INNATE_DREAM
           || (aiData->partnerMove != MOVE_NONE && IsBattleMoveStatus(aiData->partnerMove))
           || gBattleStruct->monToSwitchIntoId[BATTLE_PARTNER(battlerAtk)] != PARTY_SIZE) //Partner is switching out.
             ADJUST_SCORE(-20);
@@ -2146,7 +2154,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
             ADJUST_SCORE(-10);
     case EFFECT_KNOCK_OFF:
     case EFFECT_CORROSIVE_GAS:
-        if (aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
+        if (aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD || aiData->abilities[battlerDef] == ABILITY_STRONG_GRIP)
             ADJUST_SCORE(-10);
         break;
     case EFFECT_INGRAIN:
@@ -2328,7 +2336,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
     case EFFECT_LASER_FOCUS:
         if (gBattleMons[battlerDef].volatiles.laserFocus)
             ADJUST_SCORE(-10);
-        else if (aiData->abilities[battlerDef] == ABILITY_SHELL_ARMOR || aiData->abilities[battlerDef] == ABILITY_BATTLE_ARMOR)
+        else if (aiData->abilities[battlerDef] == ABILITY_SHELL_ARMOR || aiData->abilities[battlerDef] == ABILITY_BATTLE_ARMOR || aiData->abilities[battlerDef] == ABILITY_GAP || aiData->abilities[battlerDef] == ABILITY_GUARD_ARMOR)
             ADJUST_SCORE(-8);
         break;
     case EFFECT_SKETCH:
@@ -3025,6 +3033,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
          && (HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL)
           || aiData->abilities[battlerDef] == ABILITY_CLEAR_BODY
           || aiData->abilities[battlerDef] == ABILITY_GOOD_AS_GOLD
+          || aiData->abilities[battlerDef] == ABILITY_INNATE_DREAM
           || aiData->holdEffects[battlerDef] == HOLD_EFFECT_CLEAR_AMULET))
             ADJUST_SCORE(-10);
         break;
@@ -3237,6 +3246,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         if (!hasPartner
          || !HasDamagingMove(battlerAtkPartner)
          || aiData->abilities[battlerAtkPartner] == ABILITY_GOOD_AS_GOLD
+         || aiData->abilities[battlerAtkPartner] == ABILITY_INNATE_DREAM
          || (aiData->partnerMove != MOVE_NONE && IsBattleMoveStatus(aiData->partnerMove)))
         {
             ADJUST_SCORE(WORST_EFFECT);
@@ -3702,6 +3712,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
             case ABILITY_CONTRARY:
             case ABILITY_DEFIANT:
             case ABILITY_COMPETITIVE:
+            case ABILITY_INDIGNANT:
                 if (IsStatLoweringEffect(effect) && isFriendlyFireOK && ShouldTriggerAbility(battlerAtk, battlerAtkPartner, atkPartnerAbility))
                 {
                     if (moveTarget == TARGET_FOES_AND_ALLY)
@@ -3799,7 +3810,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
                 }
                 break;
             case EFFECT_SOAK:
-                if (atkPartnerAbility == ABILITY_WONDER_GUARD
+                if ((atkPartnerAbility == ABILITY_WONDER_GUARD || atkPartnerAbility == ABILITY_PLAY_GHOST)
                  && !IS_BATTLER_OF_TYPE(battlerAtkPartner, TYPE_WATER)
                  && GetActiveGimmick(battlerAtkPartner) != GIMMICK_TERA)
                 {
@@ -4595,7 +4606,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
         break;
     case EFFECT_ROAR:
         if ((IsSoundMove(move) && aiData->abilities[battlerDef] == ABILITY_SOUNDPROOF)
-          || aiData->abilities[battlerDef] == ABILITY_SUCTION_CUPS)
+          || aiData->abilities[battlerDef] == ABILITY_SUCTION_CUPS || aiData->abilities[battlerDef] == ABILITY_GATE_KEEPER)
             break;
         else if (GetActiveGimmick(battlerDef) == GIMMICK_DYNAMAX)
             break;
@@ -4674,6 +4685,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
               || aiData->holdEffects[battlerAtk] == HOLD_EFFECT_CURE_STATUS
               || HasUsableWhileAsleepMove(battlerAtk)
               || aiData->abilities[battlerAtk] == ABILITY_SHED_SKIN
+              || aiData->abilities[battlerAtk] == ABILITY_SELF_CARE
               || aiData->abilities[battlerAtk] == ABILITY_EARLY_BIRD
               || (AI_GetWeather() & B_WEATHER_RAIN && gBattleStruct->weatherDuration != 1 && aiData->abilities[battlerAtk] == ABILITY_HYDRATION && aiData->holdEffects[battlerAtk] != HOLD_EFFECT_UTILITY_UMBRELLA)
               || (AI_GetWeather() & B_WEATHER_SUN && gBattleStruct->weatherDuration != 1 && aiData->abilities[battlerAtk] == ABILITY_SUNBATHING && aiData->holdEffects[battlerAtk] != HOLD_EFFECT_UTILITY_UMBRELLA))
@@ -4718,6 +4730,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
           || gBattleMons[battlerDef].volatiles.leechSeed
           || HasMoveWithEffect(battlerDef, EFFECT_RAPID_SPIN)
           || aiData->abilities[battlerDef] == ABILITY_LIQUID_OOZE
+          || aiData->abilities[battlerDef] == ABILITY_STRANGE_MIST
           || aiData->abilities[battlerDef] == ABILITY_MAGIC_GUARD)
             break;
         ADJUST_SCORE(GOOD_EFFECT);
@@ -5609,7 +5622,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
             ADJUST_SCORE(DECENT_EFFECT); // Get some super effective moves
         break;
     case EFFECT_THIRD_TYPE:
-        if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD)
+        if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD || aiData->abilities[battlerDef] == ABILITY_PLAY_GHOST)
             ADJUST_SCORE(DECENT_EFFECT); // Give target more weaknesses
         break;
     case EFFECT_ELECTRIFY:
@@ -5825,7 +5838,8 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
              && CanBattlerGetOrLoseItem(battlerDef, battlerAtk, aiData->items[battlerDef])
              && CanBattlerGetOrLoseItem(battlerAtk, battlerDef, aiData->items[battlerDef])
              && !HasMoveWithEffect(battlerAtk, EFFECT_ACROBATICS)
-             && aiData->abilities[battlerDef] != ABILITY_STICKY_HOLD)
+             && aiData->abilities[battlerDef] != ABILITY_STICKY_HOLD
+             && aiData->abilities[battlerDef] != ABILITY_STRONG_GRIP)
             {
                 switch (aiData->holdEffects[battlerDef])
                 {
@@ -6065,13 +6079,13 @@ static s32 AI_CalcAdditionalEffectScore(enum BattlerId battlerAtk, enum BattlerI
                 break;
             }
             case MOVE_EFFECT_BUG_BITE:   // And pluck
-                if (gBattleMons[battlerDef].volatiles.substitute || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
+                if (gBattleMons[battlerDef].volatiles.substitute || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD || aiData->abilities[battlerDef] == ABILITY_STRONG_GRIP)
                     break;
                 else if (GetItemPocket(aiData->items[battlerDef]) == POCKET_BERRIES)
                     ADJUST_SCORE(DECENT_EFFECT);
                 break;
             case MOVE_EFFECT_INCINERATE:
-                if (gBattleMons[battlerDef].volatiles.substitute || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
+                if (gBattleMons[battlerDef].volatiles.substitute || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD || aiData->abilities[battlerDef] == ABILITY_STRONG_GRIP)
                     break;
                 else if (GetItemPocket(aiData->items[battlerDef]) == POCKET_BERRIES || aiData->holdEffects[battlerDef] == HOLD_EFFECT_GEMS)
                     ADJUST_SCORE(DECENT_EFFECT);
@@ -6874,6 +6888,8 @@ static s32 AI_PredictSwitch(enum BattlerId battlerAtk, enum BattlerId battlerDef
         if (gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_CHECK_BAD_MOVE)
         {
             if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD && effectiveness < UQ_4_12(2.0))
+                ADJUST_SCORE(10);
+            if (aiData->abilities[battlerDef] == ABILITY_PLAY_GHOST && effectiveness < UQ_4_12(2.0))
                 ADJUST_SCORE(10);
             if (HasDamagingMove(battlerDef) && !(gBattleMons[battlerAtk].volatiles.substitute
              || IsBattlerIncapacitated(battlerDef, aiData->abilities[battlerDef])

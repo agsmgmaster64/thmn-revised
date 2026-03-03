@@ -377,6 +377,7 @@ static bool32 HandleEndTurnFirstEventBlock(enum BattlerId battler)
         case ABILITY_HYDRATION:
         case ABILITY_SHED_SKIN:
         case ABILITY_SUNBATHING:
+        case ABILITY_SELF_CARE:
             if (AbilityBattleEffects(ABILITYEFFECT_ENDTURN, battler, ability, MOVE_NONE, TRUE))
                 effect = TRUE;
             break;
@@ -451,7 +452,7 @@ static bool32 HandleEndTurnLeechSeed(enum BattlerId battler)
         gBattleScripting.animArg2 = gBattlerAttacker;
         s32 drainAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 8;
         s32 healAmount = GetDrainedBigRootHp(gBattlerTarget, drainAmount);
-        if (GetBattlerAbility(battler) == ABILITY_LIQUID_OOZE)
+        if (GetBattlerAbility(battler) == ABILITY_LIQUID_OOZE || GetBattlerAbility(battler) == ABILITY_STRANGE_MIST)
         {
             SetPassiveDamageAmount(gBattlerAttacker, drainAmount);
             SetPassiveDamageAmount(gBattlerTarget, healAmount);
@@ -1313,6 +1314,7 @@ static bool32 HandleEndTurnThirdEventBlock(enum BattlerId battler)
         enum Ability ability = GetBattlerAbility(battler);
         switch (ability)
         {
+        case ABILITY_LAZY:
         case ABILITY_TRUANT: // Not fully accurate but it has to be handled somehow. TODO: Find a better way.
         case ABILITY_CUD_CHEW:
         case ABILITY_SLOW_START:
