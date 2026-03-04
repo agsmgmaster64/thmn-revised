@@ -15037,3 +15037,42 @@ void BS_settrickroom(void)
 
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
+
+void BS_CopyMovePermanentlyDeleteOthers(void)
+{
+    NATIVE_ARGS(const u8 *failInstr);
+
+    gChosenMove = MOVE_UNAVAILABLE;
+
+    if (!(gBattleMons[gBattlerAttacker].volatiles.transformed)
+        && gLastPrintedMoves[gBattlerTarget] != MOVE_UNAVAILABLE
+        && !IsMoveSketchBanned(gLastPrintedMoves[gBattlerTarget]))
+    {
+        s32 i;
+        struct MovePpInfo movePpData;
+
+        gBattleMons[gBattlerAttacker].moves[0] = gLastPrintedMoves[gBattlerTarget];
+        gBattleMons[gBattlerAttacker].pp[0] = GetMovePP(gLastPrintedMoves[gBattlerTarget]);
+        gBattleMons[gBattlerAttacker].moves[1] = MOVE_NONE;
+        gBattleMons[gBattlerAttacker].pp[1] = 0;
+        gBattleMons[gBattlerAttacker].moves[2] = MOVE_NONE;
+        gBattleMons[gBattlerAttacker].pp[2] = 0;
+        gBattleMons[gBattlerAttacker].moves[3] = MOVE_NONE;
+        gBattleMons[gBattlerAttacker].pp[3] = 0;
+        for (i = 0; i < MAX_MON_MOVES; ++i)
+        {
+            movePpData.moves[i] = gBattleMons[gBattlerAttacker].moves[i];
+            movePpData.pp[i] = gBattleMons[gBattlerAttacker].pp[i];
+        }
+        movePpData.ppBonuses = gBattleMons[gBattlerAttacker].ppBonuses;
+        BtlController_EmitSetMonData(gBattlerAttacker, B_COMM_TO_CONTROLLER, REQUEST_MOVES_PP_BATTLE, 0, sizeof(movePpData), &movePpData);
+        MarkBattlerForControllerExec(gBattlerAttacker);
+        PREPARE_MOVE_BUFFER(gBattleTextBuff1, gLastPrintedMoves[gBattlerTarget])
+
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+    }
+}

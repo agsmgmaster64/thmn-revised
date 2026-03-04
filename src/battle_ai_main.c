@@ -5013,7 +5013,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
         ADJUST_SCORE(IncreaseStatUpScore(battlerAtk, battlerDef, STAT_CHANGE_SPDEF));
         break;
     case EFFECT_SWAGGER:
-        if (HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_FOUL_PLAY)
+        if (HasBattlerSideMove(battlerAtk, MOVE_FOUL_PLAY)
          || HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_PSYCH_UP)
          || HasBattlerSideMoveWithAdditionalEffect(battlerAtk, MOVE_EFFECT_STEAL_STATS))
             ADJUST_SCORE(DECENT_EFFECT);
@@ -5022,7 +5022,8 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
         IncreaseConfusionScore(battlerAtk, battlerDef, move, &score);
         break;
     case EFFECT_FLATTER:
-        if (HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_PSYCH_UP)
+        if (HasBattlerSideMove(battlerAtk, MOVE_TAKE_OVER)
+         || HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_PSYCH_UP)
          || HasBattlerSideMoveWithAdditionalEffect(battlerAtk, MOVE_EFFECT_STEAL_STATS))
             ADJUST_SCORE(DECENT_EFFECT);
         if (aiData->abilities[battlerDef] == ABILITY_CONTRARY)

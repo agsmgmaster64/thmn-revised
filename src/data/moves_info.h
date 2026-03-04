@@ -21413,6 +21413,60 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
 
+    [MOVE_TAKE_OVER] =
+    {
+        .name = COMPOUND_STRING("Take Over"),
+        .description = COMPOUND_STRING(
+            "Uses the target's Sp. Atk\n"
+            "when dealing damage."),
+        .effect = EFFECT_FOUL_PLAY,
+        .power = 95,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_TakeOver,
+    },
+
+    [MOVE_THIRD_EYE] =
+    {
+        .name = COMPOUND_STRING("Third Eye"),
+        .description = COMPOUND_STRING(
+            "Copies the foe's last move,\n"
+            "but forgets all others."),
+        .effect = EFFECT_THIRD_EYE,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_ALL_STATS_UP_1 },
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = B_UPDATED_MOVE_FLAGS >= GEN_5,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_ThirdEye,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

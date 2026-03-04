@@ -8548,3 +8548,12 @@ BattleScript_BuzzerBlocked::
 	printstring STRINGID_BUZZERBLOCKED
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_EffectThirdEye::
+	attackcanceler
+	copymovepermanentlydeleteothers BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_THIRDEYE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

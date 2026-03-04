@@ -8385,3 +8385,14 @@ void AnimTask_GetCommanderType(u8 taskId)
 
     DestroyAnimVisualTask(taskId);
 }
+
+const struct SpriteTemplate gTakeOverSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .paletteTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimRockFragment,
+};

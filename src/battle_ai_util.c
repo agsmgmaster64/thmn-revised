@@ -2786,6 +2786,15 @@ bool32 HasMove(enum BattlerId battlerId, enum Move move)
     return FALSE;
 }
 
+bool32 HasBattlerSideMove(enum BattlerId battlerId, enum Move move)
+{
+    if (HasMove(battlerId, move))
+        return TRUE;
+    if (HasPartnerIgnoreFlags(battlerId) && HasMove(BATTLE_PARTNER(battlerId), move))
+        return TRUE;
+    return FALSE;
+}
+
 bool32 HasAnyKnownMove(enum BattlerId battlerId)
 {
     enum Move *moves = GetMovesArray(battlerId);

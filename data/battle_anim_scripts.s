@@ -37991,3 +37991,67 @@ gBattleAnimGeneral_Buzzer::
 	createsprite gRedXSpriteTemplate, ANIM_ATTACKER, 5, 1, 50
 	waitforvisualfinish
 	end
+
+gBattleAnimMove_TakeOver::
+	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	monbg ANIM_DEF_PARTNER
+	
+	fadetobg 2
+	waitbgfadein
+	
+	playsewithpan SE_M_PSYBEAM, 192
+	createsprite gTakeOverSpriteTemplate, ANIM_ATTACKER, 2, 40, 10, -40, -10, 32, 0
+	waitforvisualfinish
+	
+	loopsewithpan SE_M_SUPERSONIC, 63, 10, 3
+	createvisualtask AnimTask_ShakeMon, 2, 1, 5, 0, 15, 1
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -6, -6, 15, 1, 1
+	waitforvisualfinish
+	restorebg
+	waitbgfadein
+	clearmonbg ANIM_DEF_PARTNER
+	end
+	
+	
+	monbg ANIM_DEF_PARTNER
+	playsewithpan SE_M_NIGHTMARE, 63
+	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2, 
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 2, 0, 14, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end	
+
+
+	delay 15
+	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_MIST, -64, 63, 5, 5, 0, 5
+	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
+	waitforvisualfinish
+	playsewithpan SE_M_SAND_ATTACK, 63
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 8, 1
+	waitforvisualfinish
+
+gBattleAnimMove_ThirdEye::
+	loadspritegfx ANIM_TAG_TEAL_ALERT
+	loadspritegfx ANIM_TAG_ORBS
+	setalpha 11, 5
+	monbg_static ANIM_DEF_PARTNER
+	splitbgprio_all
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 12, RGB(21, 0, 21)
+	waitforvisualfinish
+	playsewithpan SE_M_LEER, SOUND_PAN_TARGET
+	call MindReaderEyeSpikeEffect
+	panse SE_M_MINIMIZE, SOUND_PAN_TARGET, SOUND_PAN_ATTACKER, -3, 0
+	createvisualtask AnimTask_ShrinkTargetCopy, 5, 128, 24
+	delay 15
+	createsprite gMimicOrbSpriteTemplate, ANIM_TARGET, 2, -12, 24
+	delay 10
+	setarg 7, 0xFFFF
+	waitforvisualfinish
+	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_BlendColorCycle, 2, 2, 0, 2, 0, 11, RGB_WHITE
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 12, 0, RGB(21, 0, 21)
+	waitforvisualfinish
+	clearmonbg_static ANIM_DEF_PARTNER
+	blendoff
+	end

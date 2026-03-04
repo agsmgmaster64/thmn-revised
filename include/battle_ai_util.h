@@ -186,6 +186,7 @@ uq4_12_t AI_GetMoveEffectiveness(enum Move move, enum BattlerId battlerAtk, enum
 enum Move *GetMovesArray(enum BattlerId battler);
 bool32 IsConfusionMoveEffect(enum BattleMoveEffects moveEffect);
 bool32 HasMove(enum BattlerId battlerId, enum Move move);
+bool32 HasBattlerSideMove(enum BattlerId battlerId, enum Move move);
 u32 GetBattlerMoveIndexWithEffect(enum BattlerId battler, enum BattleMoveEffects effect);
 bool32 HasPhysicalBestMove(enum BattlerId battlerAtk, enum BattlerId battlerDef, enum DamageCalcContext calcContext);
 bool32 HasOnlyMovesWithCategory(enum BattlerId battlerId, enum DamageCategory category, bool32 onlyOffensive);

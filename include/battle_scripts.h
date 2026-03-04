@@ -829,5 +829,6 @@ extern const u8 BattleScript_MyRealmActivates[];
 extern const u8 BattleScript_BuzzerActivatesAtk[];
 extern const u8 BattleScript_BuzzerActivatesSpAtk[];
 extern const u8 BattleScript_BuzzerBlocked[];
+extern const u8 BattleScript_EffectThirdEye[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

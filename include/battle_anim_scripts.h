@@ -1017,6 +1017,8 @@ extern const u8 gBattleAnimGeneral_SafariReaction[];
 
 //touhoumon stuff
 extern const u8 gBattleAnimGeneral_Buzzer[];
+extern const u8 gBattleAnimMove_TakeOver[];
+extern const u8 gBattleAnimMove_ThirdEye[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

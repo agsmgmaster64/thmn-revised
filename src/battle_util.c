@@ -7364,14 +7364,14 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
     u8 atkStage;
     u32 atkStat;
     uq4_12_t modifier;
-    u16 atkBaseSpeciesId;
+    //u16 atkBaseSpeciesId;
     enum BattlerId battlerAtk = ctx->battlerAtk;
     enum BattlerId battlerDef = ctx->battlerDef;
     enum Move move = ctx->move;
     enum Type moveType = ctx->moveType;
     enum BattleMoveEffects moveEffect = GetMoveEffect(move);
 
-    atkBaseSpeciesId = GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species);
+    //atkBaseSpeciesId = GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species);
 
     if (moveEffect == EFFECT_FOUL_PLAY)
     {
@@ -7390,8 +7390,16 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
         }
         else
         {
-            atkStat = gBattleMons[battlerDef].spAttack;
-            atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
+            if (gBattleMons[battlerDef].ability == ABILITY_ABERRANT) //turn into special Foul Play
+            {
+                atkStat = gBattleMons[battlerDef].attack;
+                atkStage = gBattleMons[battlerDef].statStages[STAT_ATK];
+            }
+            else //act normally
+            {
+                atkStat = gBattleMons[battlerDef].spAttack;
+                atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
+            }
         }
     }
     else if (moveEffect == EFFECT_BODY_PRESS)

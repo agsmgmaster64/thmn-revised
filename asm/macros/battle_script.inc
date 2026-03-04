@@ -1745,6 +1745,11 @@
 	.byte \battler
 	.endm
 
+	.macro copymovepermanentlydeleteothers failInstr:req
+	callnative BS_CopyMovePermanentlyDeleteOthers
+	.4byte \failInstr
+	.endm
+
 	.macro jumpifnoholdeffect battler:req, holdEffect:req, jumpInstr:req
 	jumpifholdeffect \battler, \holdEffect, \jumpInstr, FALSE
 	.endm
