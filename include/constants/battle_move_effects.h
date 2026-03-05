@@ -338,6 +338,7 @@ enum __attribute__((packed)) BattleMoveEffects
 
     //touhoumon customs
     EFFECT_THIRD_EYE,
+    EFFECT_FOCUS_STANCE,
     NUM_BATTLE_MOVE_EFFECTS,
 };
 

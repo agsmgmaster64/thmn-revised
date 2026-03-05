@@ -1019,6 +1019,7 @@ extern const u8 gBattleAnimGeneral_SafariReaction[];
 extern const u8 gBattleAnimGeneral_Buzzer[];
 extern const u8 gBattleAnimMove_TakeOver[];
 extern const u8 gBattleAnimMove_ThirdEye[];
+extern const u8 gBattleAnimMove_FocusStance[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

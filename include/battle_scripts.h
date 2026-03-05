@@ -830,5 +830,6 @@ extern const u8 BattleScript_BuzzerActivatesAtk[];
 extern const u8 BattleScript_BuzzerActivatesSpAtk[];
 extern const u8 BattleScript_BuzzerBlocked[];
 extern const u8 BattleScript_EffectThirdEye[];
+extern const u8 BattleScript_EffectFocusStance[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

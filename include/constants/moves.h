@@ -905,6 +905,7 @@ enum __attribute__((packed)) Move
     MOVE_MALIGNANT_CHAIN = 847,
     MOVE_TAKE_OVER = 848,
     MOVE_THIRD_EYE = 849,
+    MOVE_FOCUS_STANCE = 850,
     MOVES_COUNT_GEN9,
 
     // Add any custom moves here, not further down!

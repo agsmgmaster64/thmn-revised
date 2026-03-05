@@ -28360,7 +28360,7 @@ CurseGhost:
 	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
 	waitforvisualfinish
-	simple_palette_blend selector=F_PAL_BG, delay=1, initial_blend_y=16, target_blend_y=0, color=RGB_BLACK
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 1, 16, 0, RGB_BLACK
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	end
@@ -28376,6 +28376,19 @@ CurseStats:
 	waitforvisualfinish
 	end
 CurseStats1:
+	playsewithpan SE_M_DRAGON_RAGE, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_DrawFallingWhiteLinesOnAttacker, 5
+	createvisualtask AnimTask_BlendColorCycle, 5, F_PAL_ATTACKER, 4, 2, 0, 10, RGB_RED
+	return
+	
+gBattleAnimMove_FocusStance::
+	createvisualtask AnimTask_SwayMon, 5, 0, 10, 1536, 3, ANIM_ATTACKER
+	waitforvisualfinish
+	delay 10
+	call FocusStats1
+	waitforvisualfinish
+	end
+FocusStats1:
 	playsewithpan SE_M_DRAGON_RAGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_DrawFallingWhiteLinesOnAttacker, 5
 	blend_color_cycle priority=5, selector=F_PAL_ATTACKER, delay=4, num_blends=2, initial_blend_y=0, target_blend_y=10, color=RGB_RED
