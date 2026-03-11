@@ -27527,6 +27527,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_AdReimu[] = INCBIN_U16("graphics/pokemon/_add/th/reimu/advent/shiny.gbapal");
     const u8 gMonIcon_AdReimu[] = INCBIN_U8("graphics/pokemon/_add/th/reimu/advent/icon.4bpp");
 
+    const u32 gMonFrontPic_KDReimu[] = INCBIN_U32("graphics/pokemon/_add/th/reimu/koumajou/front.4bpp.smol");
+    const u16 gMonPalette_KDReimu[] = INCBIN_U16("graphics/pokemon/_add/th/reimu/koumajou/normal.gbapal");
+    const u32 gMonBackPic_KDReimu[] = INCBIN_U32("graphics/pokemon/_add/th/reimu/koumajou/back.4bpp.smol");
+    const u16 gMonShinyPalette_KDReimu[] = INCBIN_U16("graphics/pokemon/_add/th/reimu/koumajou/shiny.gbapal");
+    const u8 gMonIcon_KDReimu[] = INCBIN_U8("graphics/pokemon/_add/th/reimu/koumajou/icon.4bpp");
+
     const u32 gMonFrontPic_CMarisa[] = INCBIN_U32("graphics/pokemon/_add/th/marisa/chibi/anim_front.4bpp.smol");
     const u16 gMonPalette_CMarisa[] = INCBIN_U16("graphics/pokemon/_add/th/marisa/chibi/normal.gbapal");
     const u32 gMonBackPic_CMarisa[] = INCBIN_U32("graphics/pokemon/_add/th/marisa/chibi/back.4bpp.smol");
@@ -27730,6 +27736,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonBackPic_ERemilia[] = INCBIN_U32("graphics/pokemon/_add/th/remilia/extra/back.4bpp.smol");
     const u16 gMonShinyPalette_ERemilia[] = INCBIN_U16("graphics/pokemon/_add/th/remilia/extra/shiny.gbapal");
     const u8 gMonIcon_ERemilia[] = INCBIN_U8("graphics/pokemon/_add/th/remilia/extra/icon.4bpp");
+
+    const u32 gMonFrontPic_KDRemilia[] = INCBIN_U32("graphics/pokemon/_add/th/remilia/koumajou/front.4bpp.smol");
+    const u16 gMonPalette_KDRemilia[] = INCBIN_U16("graphics/pokemon/_add/th/remilia/koumajou/normal.gbapal");
+    const u32 gMonBackPic_KDRemilia[] = INCBIN_U32("graphics/pokemon/_add/th/remilia/koumajou/back.4bpp.smol");
+    const u16 gMonShinyPalette_KDRemilia[] = INCBIN_U16("graphics/pokemon/_add/th/remilia/koumajou/shiny.gbapal");
+    const u8 gMonIcon_KDRemilia[] = INCBIN_U8("graphics/pokemon/_add/th/remilia/koumajou/icon.4bpp");
 
     const u32 gMonFrontPic_LRemilia[] = INCBIN_U32("graphics/pokemon/_add/th/remilia/last/front.4bpp.smol");
     const u16 gMonPalette_LRemilia[] = INCBIN_U16("graphics/pokemon/_add/th/remilia/last/normal.gbapal");
@@ -30679,6 +30691,24 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonBackPic_Hikariko[] = INCBIN_U32("graphics/pokemon/_add/th/hikariko/normal/back.4bpp.smol");
     const u16 gMonShinyPalette_Hikariko[] = INCBIN_U16("graphics/pokemon/_add/th/hikariko/normal/shiny.gbapal");
     const u8 gMonIcon_Hikariko[] = INCBIN_U8("graphics/pokemon/_add/th/hikariko/normal/icon.4bpp");
+
+    const u32 gMonFrontPic_CKazami[] = INCBIN_U32("graphics/pokemon/_add/th/kazami/chibi/front.4bpp.smol");
+    const u16 gMonPalette_CKazami[] = INCBIN_U16("graphics/pokemon/_add/th/kazami/chibi/normal.gbapal");
+    const u32 gMonBackPic_CKazami[] = INCBIN_U32("graphics/pokemon/_add/th/kazami/chibi/back.4bpp.smol");
+    const u16 gMonShinyPalette_CKazami[] = INCBIN_U16("graphics/pokemon/_add/th/kazami/chibi/shiny.gbapal");
+    const u8 gMonIcon_CKazami[] = INCBIN_U8("graphics/pokemon/_add/th/kazami/chibi/icon.4bpp");
+
+    const u32 gMonFrontPic_Kazami[] = INCBIN_U32("graphics/pokemon/_add/th/kazami/normal/front.4bpp.smol");
+    const u16 gMonPalette_Kazami[] = INCBIN_U16("graphics/pokemon/_add/th/kazami/normal/normal.gbapal");
+    const u32 gMonBackPic_Kazami[] = INCBIN_U32("graphics/pokemon/_add/th/kazami/normal/back.4bpp.smol");
+    const u16 gMonShinyPalette_Kazami[] = INCBIN_U16("graphics/pokemon/_add/th/kazami/normal/shiny.gbapal");
+    const u8 gMonIcon_Kazami[] = INCBIN_U8("graphics/pokemon/_add/th/kazami/normal/icon.4bpp");
+
+    const u32 gMonFrontPic_EKazami[] = INCBIN_U32("graphics/pokemon/_add/th/kazami/extra/front.4bpp.smol");
+    const u16 gMonPalette_EKazami[] = INCBIN_U16("graphics/pokemon/_add/th/kazami/extra/normal.gbapal");
+    const u32 gMonBackPic_EKazami[] = INCBIN_U32("graphics/pokemon/_add/th/kazami/extra/back.4bpp.smol");
+    const u16 gMonShinyPalette_EKazami[] = INCBIN_U16("graphics/pokemon/_add/th/kazami/extra/shiny.gbapal");
+    const u8 gMonIcon_EKazami[] = INCBIN_U8("graphics/pokemon/_add/th/kazami/extra/icon.4bpp");
 
     const u32 gMonFrontPic_CMugetsu[] = INCBIN_U32("graphics/pokemon/_add/th/mugetsu/chibi/front.4bpp.smol");
     const u16 gMonPalette_CMugetsu[] = INCBIN_U16("graphics/pokemon/_add/th/mugetsu/chibi/normal.gbapal");

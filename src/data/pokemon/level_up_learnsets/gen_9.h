@@ -22334,6 +22334,11 @@ static const struct LevelUpMove sAdReimuLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
+static const struct LevelUpMove sKDReimuLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
 static const struct LevelUpMove sCMarisaLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
@@ -22490,6 +22495,11 @@ static const struct LevelUpMove sRemiliaLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sERemiliaLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
+static const struct LevelUpMove sKDRemiliaLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };
@@ -24850,6 +24860,21 @@ static const struct LevelUpMove sEEllyLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sHikarikoLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
+static const struct LevelUpMove sCKazamiLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
+static const struct LevelUpMove sKazamiLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
+static const struct LevelUpMove sEKazamiLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };

@@ -73308,6 +73308,12 @@
   "K_DSAKUYA": [
     "MOVE_POUND"
   ],
+  "K_DREIMU": [
+    "MOVE_POUND"
+  ],
+  "K_DREMILIA": [
+    "MOVE_POUND"
+  ],
   "KYUREM_WHITE": [
     "MOVE_AERIAL_ACE",
     "MOVE_ANCIENT_POWER",
@@ -92320,6 +92326,15 @@
     "MOVE_WEATHER_BALL"
   ],
   "C_YOSHIKA": [
+    "MOVE_POUND"
+  ],
+  "C_KAZAMI": [
+    "MOVE_POUND"
+  ],
+  "KAZAMI": [
+    "MOVE_POUND"
+  ],
+  "E_KAZAMI": [
     "MOVE_POUND"
   ],
   "WORMADAM_TRASH": [
