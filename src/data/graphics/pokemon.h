@@ -30404,6 +30404,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_Shingyoku[] = INCBIN_U16("graphics/pokemon/_add/th/shingyoku/normal/shiny.gbapal");
     const u8 gMonIcon_Shingyoku[] = INCBIN_U8("graphics/pokemon/_add/th/shingyoku/normal/icon.4bpp");
 
+    const u32 gMonFrontPic_ShingyokuMale[] = INCBIN_U32("graphics/pokemon/_add/th/shingyoku/male/front.4bpp.smol");
+    const u16 gMonPalette_ShingyokuMale[] = INCBIN_U16("graphics/pokemon/_add/th/shingyoku/male/normal.gbapal");
+    const u32 gMonBackPic_ShingyokuMale[] = INCBIN_U32("graphics/pokemon/_add/th/shingyoku/male/back.4bpp.smol");
+    const u16 gMonShinyPalette_ShingyokuMale[] = INCBIN_U16("graphics/pokemon/_add/th/shingyoku/male/shiny.gbapal");
+    const u8 gMonIcon_ShingyokuMale[] = INCBIN_U8("graphics/pokemon/_add/th/shingyoku/male/icon.4bpp");
+
+    const u32 gMonFrontPic_ShingyokuFemale[] = INCBIN_U32("graphics/pokemon/_add/th/shingyoku/female/front.4bpp.smol");
+    const u16 gMonPalette_ShingyokuFemale[] = INCBIN_U16("graphics/pokemon/_add/th/shingyoku/female/normal.gbapal");
+    const u32 gMonBackPic_ShingyokuFemale[] = INCBIN_U32("graphics/pokemon/_add/th/shingyoku/female/back.4bpp.smol");
+    const u16 gMonShinyPalette_ShingyokuFemale[] = INCBIN_U16("graphics/pokemon/_add/th/shingyoku/female/shiny.gbapal");
+    const u8 gMonIcon_ShingyokuFemale[] = INCBIN_U8("graphics/pokemon/_add/th/shingyoku/female/icon.4bpp");
+
     const u32 gMonFrontPic_Mima[] = INCBIN_U32("graphics/pokemon/_add/th/mima/normal/front.4bpp.smol");
     const u16 gMonPalette_Mima[] = INCBIN_U16("graphics/pokemon/_add/th/mima/normal/normal.gbapal");
     const u32 gMonBackPic_Mima[] = INCBIN_U32("graphics/pokemon/_add/th/mima/normal/back.4bpp.smol");

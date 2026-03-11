@@ -210,7 +210,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou2[] =
         .palette = gMonPalette_ERika,
         .shinyPalette = gMonShinyPalette_ERika,
         .iconSprite = gMonIcon_ERika,
-        .iconPalIndex = 1,
+        .iconPalIndex = 0,
         .levelUpLearnset = sERikaLevelUpLearnset,
         .teachableLearnset = sERikaTeachableLearnset,
     },
