@@ -3208,3 +3208,13 @@ static s32 CompareItemsByIndex(enum Pocket pocketId, struct ItemSlot item1, stru
 
     return 0; // Cannot have multiple stacks of indexed items
 }
+
+#undef tListTaskId
+#undef tListPosition
+#undef tQuantity
+#undef tNeverRead
+#undef tItemCount
+#undef tMsgWindowId
+#undef tPocketSwitchDir
+#undef tPocketSwitchTimer
+#undef tPocketSwitchState

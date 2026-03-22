@@ -625,6 +625,16 @@ static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
 
 static const u8 sBlit_SelectButton[] = INCBIN_U8("graphics/item_menu_frlg/select_button.4bpp");
 
+#define tListTaskId        data[0]
+#define tListPosition      data[1]
+#define tQuantity          data[2]
+#define tNeverRead         data[3]
+#define tItemCount         data[8]
+#define tMsgWindowId       data[10]
+#define tPocketSwitchDir   data[11]
+#define tPocketSwitchTimer data[12]
+#define tPocketSwitchState data[13]
+
 #define tSwitchDir     data[11]
 #define tSwitchCounter data[12]
 #define tSwitchState   data[13]
@@ -790,9 +800,9 @@ static bool8 LoadBagMenuGraphics(void)
         break;
     case 14:
         taskId = CreateBagInputHandlerTask(gBagMenuState.location);
-        gTasks[taskId].data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
-        gTasks[taskId].data[3] = 0;
-        gTasks[taskId].data[8] = 0;
+        gTasks[taskId].tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        gTasks[taskId].tNeverRead = 0;
+        gTasks[taskId].tItemCount = 0;
         gMain.state++;
         break;
     case 15:
@@ -1208,7 +1218,7 @@ static void Task_ItemMenu_WaitFadeAndSwitchToExitCallback(u8 taskId)
     s16 *data = gTasks[taskId].data;
     if (!gPaletteFade.active && !FuncIsActiveTask(Task_AnimateWin0v))
     {
-        DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         if (sBagMenuDisplay->exitCB != NULL)
             SetMainCallback2(sBagMenuDisplay->exitCB);
         else
@@ -1299,9 +1309,9 @@ static void UpdatePocketItemListsFrlg(void)
 void DisplayItemMessageFrlg(u8 taskId, u8 fontId, const u8 * string, TaskFunc followUpFunc)
 {
     s16 *data = gTasks[taskId].data;
-    data[10] = OpenBagWindow(FRLG_BAG_SUBWINDOW_MESSAGE);
-    FillWindowPixelBuffer(data[10], PIXEL_FILL(1));
-    DisplayMessageAndContinueTask(taskId, data[10], 0x06D, 0x0D, fontId, GetPlayerTextSpeedDelay(), string, followUpFunc);
+    tMsgWindowId = OpenBagWindow(FRLG_BAG_SUBWINDOW_MESSAGE);
+    FillWindowPixelBuffer(tMsgWindowId, PIXEL_FILL(1));
+    DisplayMessageAndContinueTask(taskId, tMsgWindowId, 0x06D, 0x0D, fontId, GetPlayerTextSpeedDelay(), string, followUpFunc);
     ScheduleBgCopyTilemapToVram(0);
 }
 
@@ -1334,7 +1344,7 @@ static void Task_BagMenu_HandleInput(u8 taskId)
     default:
         if (JOY_NEW(SELECT_BUTTON) && gBagMenuState.location == ITEMMENULOCATION_FIELD)
         {
-            ListMenuGetScrollAndRow(data[0], &scrollPosition, &cursorPos);
+            ListMenuGetScrollAndRow(tListTaskId, &scrollPosition, &cursorPos);
             if (scrollPosition + cursorPos != sBagMenuDisplay->numItemStacks[gBagMenuState.bagTab])
             {
                 PlaySE(SE_SELECT);
@@ -1344,8 +1354,8 @@ static void Task_BagMenu_HandleInput(u8 taskId)
         }
         break;
     }
-    input = ListMenu_ProcessInput(data[0]);
-    ListMenuGetScrollAndRow(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    input = ListMenu_ProcessInput(tListTaskId);
+    ListMenuGetScrollAndRow(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     switch (input)
     {
     case LIST_NOTHING_CHOSEN:
@@ -1367,9 +1377,9 @@ static void Task_BagMenu_HandleInput(u8 taskId)
         else
         {
             BagDestroyPocketScrollArrowPair();
-            bag_menu_print_cursor_(data[0], 2);
-            data[1] = input;
-            data[2] = GetBagItemQuantity(gBagMenuState.pocket, input);
+            bag_menu_print_cursor_(tListTaskId, 2);
+            tListPosition = input;
+            tQuantity = GetBagItemQuantity(gBagMenuState.pocket, input);
             gSpecialVar_ItemId = GetBagItemId(gBagMenuState.pocket, input);
             gTasks[taskId].func = Task_ItemContextMenuByLocation;
         }
@@ -1431,7 +1441,7 @@ static void SwitchPockets(u8 taskId, s16 direction, bool16 a2)
         ClearWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
         ClearWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
         ClearWindowTilemap(FRLG_BAG_WINDOW_POCKET_NAME);
-        DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         ScheduleBgCopyTilemapToVram(0);
         ItemRG_EraseItemIcon(sBagMenuDisplay->itemMenuIcon ^ 1);
         BagDestroyPocketScrollArrowPair();
@@ -1482,7 +1492,7 @@ static void Task_AnimateSwitchPockets(u8 taskId)
         gBagMenuState.pocket = sBagTabToPocket[gBagMenuState.bagTab];
         PrintBagPocketName();
         Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
-        data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
         PutWindowTilemap(FRLG_BAG_WINDOW_POCKET_NAME);
         ScheduleBgCopyTilemapToVram(0);
@@ -1498,18 +1508,18 @@ static void BeginMovingItemInPocket(u8 taskId, s16 itemIndex)
     u16 cursorPos;
     u16 scrollPosition;
     s16 *data = gTasks[taskId].data;
-    ListMenuGetScrollAndRow(data[0], &scrollPosition, &cursorPos);
-    ListMenuSetTemplateField(data[0], LISTFIELD_CURSORKIND, 1);
-    data[1] = itemIndex;
+    ListMenuGetScrollAndRow(tListTaskId, &scrollPosition, &cursorPos);
+    ListMenuSetTemplateField(tListTaskId, LISTFIELD_CURSORKIND, 1);
+    tListPosition = itemIndex;
     sBagMenuDisplay->itemOriginalLocation = itemIndex;
-    StringCopy(gStringVar1, GetItemName(GetBagItemId(gBagMenuState.pocket, data[1])));
+    StringCopy(gStringVar1, GetItemName(GetBagItemId(gBagMenuState.pocket, tListPosition)));
     StringExpandPlaceholders(gStringVar4, sText_WhereShouldTheStrVar1BePlaced);
     FillWindowPixelBuffer(FRLG_BAG_WINDOW_DESCRIPTION, PIXEL_FILL(0));
     BagPrintTextOnWindow(FRLG_BAG_WINDOW_DESCRIPTION, FONT_SHORT, gStringVar4, 0, 3, 2, 0, 0, 0);
-    ItemRG_UpdateSwapLinePos(0, ListMenuGetYCoordForPrintingArrowCursor(data[0]));
+    ItemRG_UpdateSwapLinePos(0, ListMenuGetYCoordForPrintingArrowCursor(tListTaskId));
     ItemRG_SetSwapLineInvisibility(FALSE);
     BagDestroyPocketSwitchArrowPair();
-    bag_menu_print_cursor_(data[0], 2);
+    bag_menu_print_cursor_(tListTaskId, 2);
     gTasks[taskId].func = Task_MoveItemInPocket_HandleInput;
 }
 
@@ -1521,14 +1531,14 @@ static void Task_MoveItemInPocket_HandleInput(u8 taskId)
     u16 scrollPosition;
     if (MenuHelpers_ShouldWaitForLinkRecv() == TRUE)
         return;
-    input = ListMenu_ProcessInput(data[0]);
-    ListMenuGetScrollAndRow(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
-    ItemRG_UpdateSwapLinePos(0, ListMenuGetYCoordForPrintingArrowCursor(data[0]));
+    input = ListMenu_ProcessInput(tListTaskId);
+    ListMenuGetScrollAndRow(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    ItemRG_UpdateSwapLinePos(0, ListMenuGetYCoordForPrintingArrowCursor(tListTaskId));
     if (JOY_NEW(SELECT_BUTTON))
     {
         PlaySE(SE_SELECT);
         sBagMenuDisplay->itemOriginalLocation = 0xFF;
-        ListMenuGetScrollAndRow(data[0], &scrollPosition, &cursorPos);
+        ListMenuGetScrollAndRow(tListTaskId, &scrollPosition, &cursorPos);
         ExecuteMoveItemInPocket(taskId, scrollPosition + cursorPos);
         return;
     }
@@ -1539,7 +1549,7 @@ static void Task_MoveItemInPocket_HandleInput(u8 taskId)
     case LIST_CANCEL:
         PlaySE(SE_SELECT);
         sBagMenuDisplay->itemOriginalLocation = 0xFF;
-        ListMenuGetScrollAndRow(data[0], &scrollPosition, &cursorPos);
+        ListMenuGetScrollAndRow(tListTaskId, &scrollPosition, &cursorPos);
         AbortMovingItemInPocket(taskId, scrollPosition + cursorPos);
         break;
     default:
@@ -1553,18 +1563,18 @@ static void Task_MoveItemInPocket_HandleInput(u8 taskId)
 static void ExecuteMoveItemInPocket(u8 taskId, u32 itemIndex)
 {
     s16 *data = gTasks[taskId].data;
-    if (data[1] == itemIndex || data[1] == itemIndex - 1)
+    if (tListPosition == itemIndex || tListPosition == itemIndex - 1)
     {
         AbortMovingItemInPocket(taskId, itemIndex);
     }
     else
     {
-        MoveItemSlotInPocket(gBagMenuState.pocket, data[1], gBagMenuState.scrollPosition[gBagMenuState.bagTab]);
-        DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
-        if (data[1] < itemIndex)
+        MoveItemSlotInPocket(gBagMenuState.pocket, tListPosition, gBagMenuState.scrollPosition[gBagMenuState.bagTab]);
+        DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        if (tListPosition < itemIndex)
             gBagMenuState.cursorPos[gBagMenuState.bagTab]--;
         Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
-        data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         ItemRG_SetSwapLineInvisibility(TRUE);
         CreatePocketSwitchArrowPair();
         gTasks[taskId].func = Task_BagMenu_HandleInput;
@@ -1574,11 +1584,11 @@ static void ExecuteMoveItemInPocket(u8 taskId, u32 itemIndex)
 static void AbortMovingItemInPocket(u8 taskId, u32 itemIndex)
 {
     s16 *data = gTasks[taskId].data;
-    DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
-    if (data[1] < itemIndex)
+    DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    if (tListPosition < itemIndex)
         gBagMenuState.cursorPos[gBagMenuState.bagTab]--;
     Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
-    data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     ItemRG_SetSwapLineInvisibility(TRUE);
     CreatePocketSwitchArrowPair();
     gTasks[taskId].func = Task_BagMenu_HandleInput;
@@ -1765,14 +1775,14 @@ static void Task_ItemMenuAction_Toss(u8 taskId)
     HideBagWindow(FRLG_BAG_SUBWINDOW_11);
     HideBagWindow(FRLG_BAG_SUBWINDOW_7);
     PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
-    data[8] = 1;
-    if (data[2] == 1)
+    tItemCount = 1;
+    if (tQuantity == 1)
     {
         Task_ConfirmTossItems(taskId);
     }
     else
     {
-        InitQuantityToTossOrDeposit(data[1], sText_TossOutHowManyStrVar1s);
+        InitQuantityToTossOrDeposit(tListPosition, sText_TossOutHowManyStrVar1s);
         gTasks[taskId].func = Task_SelectQuantityToToss;
     }
 }
@@ -1780,7 +1790,7 @@ static void Task_ItemMenuAction_Toss(u8 taskId)
 static void Task_ConfirmTossItems(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    ConvertIntToDecimalStringN(gStringVar2, data[8], STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, 3);
     StringExpandPlaceholders(gStringVar4, sText_ThrowAwayStrVar2OfThisItemQM);
     BagPrintTextOnWindow(ShowBagWindow(FRLG_BAG_SUBWINDOW_7, 1), FONT_SHORT, gStringVar4, 0, 2, 1, 0, 0, 1);
     BagCreateYesNoMenuBottomRight(taskId, &sYesNoMenu_Toss);
@@ -1792,16 +1802,16 @@ static void Task_TossItem_No(u8 taskId)
     HideBagWindow(FRLG_BAG_SUBWINDOW_7);
     PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
     ScheduleBgCopyTilemapToVram(0);
-    bag_menu_print_cursor_(data[0], 1);
+    bag_menu_print_cursor_(tListTaskId, 1);
     Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
 }
 
 static void Task_SelectQuantityToToss(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (AdjustQuantityAccordingToDPadInput(&data[8], data[2]) == TRUE)
+    if (AdjustQuantityAccordingToDPadInput(&tItemCount, tQuantity) == TRUE)
     {
-        UpdateQuantityToTossOrDeposit(data[8], 3);
+        UpdateQuantityToTossOrDeposit(tItemCount, 3);
     }
     else if (JOY_NEW(A_BUTTON))
     {
@@ -1821,7 +1831,7 @@ static void Task_SelectQuantityToToss(u8 taskId)
         PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
         PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
         ScheduleBgCopyTilemapToVram(0);
-        bag_menu_print_cursor_(data[0], 1);
+        bag_menu_print_cursor_(tListTaskId, 1);
         BagDestroyPocketScrollArrowPair();
         Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
     }
@@ -1831,8 +1841,8 @@ static void Task_TossItem_Yes(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     HideBagWindow(FRLG_BAG_SUBWINDOW_7);
-    CopyItemName(GetBagItemId(gBagMenuState.pocket, data[1]), gStringVar1);
-    ConvertIntToDecimalStringN(gStringVar2, data[8], STR_CONV_MODE_LEFT_ALIGN, 3);
+    CopyItemName(GetBagItemId(gBagMenuState.pocket, tListPosition), gStringVar1);
+    ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, 3);
     StringExpandPlaceholders(gStringVar4, gText_ThrewAwayVar2Var1s);
     BagPrintTextOnWindow(ShowBagWindow(FRLG_BAG_SUBWINDOW_7, 3), FONT_SHORT, gStringVar4, 0, 2, 1, 0, 0, 1);
     gTasks[taskId].func = Task_WaitAB_RedrawAndReturnToBag;
@@ -1844,16 +1854,16 @@ static void Task_WaitAB_RedrawAndReturnToBag(u8 taskId)
     if (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
     {
         PlaySE(SE_SELECT);
-        RemoveBagItem(gSpecialVar_ItemId, data[8]);
+        RemoveBagItem(gSpecialVar_ItemId, tItemCount);
         HideBagWindow(FRLG_BAG_SUBWINDOW_7);
-        DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         UpdatePocketItemListFrlg(gBagMenuState.pocket);
         UpdatePocketListPositionFrlg(gBagMenuState.pocket);
         Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
-        data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+        tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
         ScheduleBgCopyTilemapToVram(0);
-        bag_menu_print_cursor_(data[0], 1);
+        bag_menu_print_cursor_(tListTaskId, 1);
         Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
     }
 }
@@ -1862,15 +1872,15 @@ static void Task_ItemMenuAction_ToggleSelect(u8 taskId)
 {
     u16 itemId;
     s16 *data = gTasks[taskId].data;
-    itemId = GetBagItemId(gBagMenuState.pocket, data[1]);
+    itemId = GetBagItemId(gBagMenuState.pocket, tListPosition);
     if (gSaveBlock1Ptr->registeredItem == itemId)
         gSaveBlock1Ptr->registeredItem = ITEM_NONE;
     else
         gSaveBlock1Ptr->registeredItem = itemId;
 
-    DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
-    data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     CopyWindowToVram(FRLG_BAG_WINDOW_ITEM_LIST, COPYWIN_MAP);
     Task_ItemMenuAction_Cancel(taskId);
 }
@@ -1878,7 +1888,7 @@ static void Task_ItemMenuAction_ToggleSelect(u8 taskId)
 static void Task_ItemMenuAction_Give(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    u16 itemId = GetBagItemId(gBagMenuState.pocket, data[1]);
+    u16 itemId = GetBagItemId(gBagMenuState.pocket, tListPosition);
     HideBagWindow(FRLG_BAG_SUBWINDOW_11);
     HideBagWindow(FRLG_BAG_SUBWINDOW_7);
     PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
@@ -1927,13 +1937,13 @@ void Task_ReturnToBagFromContextMenu(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     CloseBagWindow(FRLG_BAG_SUBWINDOW_MESSAGE);
-    DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     UpdatePocketItemListFrlg(gBagMenuState.pocket);
     UpdatePocketListPositionFrlg(gBagMenuState.pocket);
     Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
-    data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     ScheduleBgCopyTilemapToVram(0);
-    bag_menu_print_cursor_(data[0], 1);
+    bag_menu_print_cursor_(tListTaskId, 1);
     Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
 }
 
@@ -1944,7 +1954,7 @@ static void Task_ItemMenuAction_Cancel(u8 taskId)
     PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
     PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
     ScheduleBgCopyTilemapToVram(0);
-    bag_menu_print_cursor_(gTasks[taskId].data[0], 1);
+    bag_menu_print_cursor_(gTasks[taskId].tListTaskId, 1);
     Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
 }
 
@@ -1987,7 +1997,7 @@ static void Task_ItemMenuAction_BattleUse(u8 taskId)
 static void Task_ItemContext_FieldGive(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    u16 itemId = GetBagItemId(gBagMenuState.pocket, data[1]);
+    u16 itemId = GetBagItemId(gBagMenuState.pocket, tListPosition);
     if (!IsWritingMailAllowed(itemId))
     {
         DisplayItemMessageFrlg(taskId, FONT_SHORT, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
@@ -2031,7 +2041,7 @@ static void ReturnToBagMenuFromSubmenu_Give(void)
 static void Task_ItemContext_PcBoxGive(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    u16 itemId = GetBagItemId(gBagMenuState.pocket, data[1]);
+    u16 itemId = GetBagItemId(gBagMenuState.pocket, tListPosition);
     if (ItemIsMail(itemId))
     {
         DisplayItemMessageFrlg(taskId, FONT_SHORT, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
@@ -2093,16 +2103,16 @@ static void Task_ItemContext_Sell(u8 taskId)
     }
     else
     {
-        data[8] = 1;
-        if (data[2] == 1)
+        tItemCount = 1;
+        if (tQuantity == 1)
         {
             BagPrintMoneyAmount();
             Task_PrintSaleConfirmationText(taskId);
         }
         else
         {
-            if (data[2] > MAX_BAG_ITEM_CAPACITY)
-                data[2] = MAX_BAG_ITEM_CAPACITY;
+            if (tQuantity > MAX_BAG_ITEM_CAPACITY)
+                tQuantity = MAX_BAG_ITEM_CAPACITY;
             CopyItemName(gSpecialVar_ItemId, gStringVar1);
             StringExpandPlaceholders(gStringVar4, gText_HowManyToSell);
             DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_InitSaleQuantitySelectInterface);
@@ -2128,7 +2138,7 @@ static void ReturnToBagMenuFromSubmenu_Sell(void)
 static void Task_PrintSaleConfirmationText(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    ConvertIntToDecimalStringN(gStringVar3, GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, data[1])) * data[8], STR_CONV_MODE_LEFT_ALIGN, 6);
+    ConvertIntToDecimalStringN(gStringVar3, GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, 6);
     StringExpandPlaceholders(gStringVar4, gText_ICanPayVar1);
     DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_ShowSellYesNoMenu);
 }
@@ -2147,7 +2157,7 @@ static void Task_SellItem_No(u8 taskId)
     PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
     PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
     ScheduleBgCopyTilemapToVram(0);
-    bag_menu_print_cursor_(data[0], 1);
+    bag_menu_print_cursor_(tListTaskId, 1);
     Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
 }
 
@@ -2158,7 +2168,7 @@ static void Task_InitSaleQuantitySelectInterface(u8 taskId)
     ConvertIntToDecimalStringN(gStringVar1, 1, STR_CONV_MODE_LEADING_ZEROS, MAX_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_xVar1);
     BagPrintTextOnWindow(r4, FONT_SMALL, gStringVar4, 4, 10, 1, 0, TEXT_SKIP_DRAW, 1);
-    UpdateSalePriceDisplay(GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, data[1])) * data[8]);
+    UpdateSalePriceDisplay(GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, tListPosition)) * tItemCount);
     BagPrintMoneyAmount();
     CreatePocketScrollArrowPair_SellQuantity();
     gTasks[taskId].func = Task_SelectQuantityToSell;
@@ -2172,10 +2182,10 @@ static void UpdateSalePriceDisplay(s32 amount)
 static void Task_SelectQuantityToSell(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (AdjustQuantityAccordingToDPadInput(&data[8], data[2]) == TRUE)
+    if (AdjustQuantityAccordingToDPadInput(&tItemCount, tQuantity) == TRUE)
     {
-        UpdateQuantityToTossOrDeposit(data[8], 2);
-        UpdateSalePriceDisplay(GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, data[1])) * data[8]);
+        UpdateQuantityToTossOrDeposit(tItemCount, 2);
+        UpdateSalePriceDisplay(GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, tListPosition)) * tItemCount);
     }
     else if (JOY_NEW(A_BUTTON))
     {
@@ -2197,7 +2207,7 @@ static void Task_SelectQuantityToSell(u8 taskId)
         PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
         ScheduleBgCopyTilemapToVram(0);
         BagDestroyPocketScrollArrowPair();
-        bag_menu_print_cursor_(data[0], 1);
+        bag_menu_print_cursor_(tListTaskId, 1);
         Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
     }
 }
@@ -2208,7 +2218,7 @@ static void Task_SellItem_Yes(u8 taskId)
     PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
     ScheduleBgCopyTilemapToVram(0);
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
-    ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, data[1])) * data[8], STR_CONV_MODE_LEFT_ALIGN, 6);
+    ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, 6);
     StringExpandPlaceholders(gStringVar4, gText_TurnedOverVar1ForVar2);
     DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_FinalizeSaleToShop);
 }
@@ -2217,15 +2227,15 @@ static void Task_FinalizeSaleToShop(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     PlaySE(SE_SHOP);
-    RemoveBagItem(gSpecialVar_ItemId, data[8]);
-    AddMoney(&gSaveBlock1Ptr->money, GetItemSellPrice(gSpecialVar_ItemId) * data[8]);
-    DestroyListMenuTask(data[0], &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    RemoveBagItem(gSpecialVar_ItemId, tItemCount);
+    AddMoney(&gSaveBlock1Ptr->money, GetItemSellPrice(gSpecialVar_ItemId) * tItemCount);
+    DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     UpdatePocketItemListFrlg(gBagMenuState.pocket);
     UpdatePocketListPositionFrlg(gBagMenuState.pocket);
     sBagMenuDisplay->inhibitItemDescriptionPrint = TRUE;
     Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
-    data[0] = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
-    bag_menu_print_cursor_(data[0], 2);
+    tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
+    bag_menu_print_cursor_(tListTaskId, 2);
     BagDrawTextBoxOnWindow(GetBagWindow(FRLG_BAG_SUBWINDOW_MONEY));
     PrintMoneyAmountInMoneyBox(GetBagWindow(FRLG_BAG_SUBWINDOW_MONEY), GetMoney(&gSaveBlock1Ptr->money), 0);
     gTasks[taskId].func = Task_WaitPressAB_AfterSell;
@@ -2246,14 +2256,14 @@ static void Task_WaitPressAB_AfterSell(u8 taskId)
 static void Task_ItemContext_Deposit(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    data[8] = 1;
-    if (data[2] == 1)
+    tItemCount = 1;
+    if (tQuantity == 1)
     {
         Task_TryDoItemDeposit(taskId);
     }
     else
     {
-        InitQuantityToTossOrDeposit(data[1], sText_DepositHowManyVar1);
+        InitQuantityToTossOrDeposit(tListPosition, sText_DepositHowManyVar1);
         gTasks[taskId].func = Task_SelectQuantityToDeposit;
     }
 }
@@ -2261,9 +2271,9 @@ static void Task_ItemContext_Deposit(u8 taskId)
 static void Task_SelectQuantityToDeposit(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (AdjustQuantityAccordingToDPadInput(&data[8], data[2]) == TRUE)
+    if (AdjustQuantityAccordingToDPadInput(&tItemCount, tQuantity) == TRUE)
     {
-        UpdateQuantityToTossOrDeposit(data[8], 3);
+        UpdateQuantityToTossOrDeposit(tItemCount, 3);
     }
     else if (JOY_NEW(A_BUTTON))
     {
@@ -2282,7 +2292,7 @@ static void Task_SelectQuantityToDeposit(u8 taskId)
         HideBagWindow(FRLG_BAG_SUBWINDOW_1);
         PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
         ScheduleBgCopyTilemapToVram(0);
-        bag_menu_print_cursor_(data[0], 1);
+        bag_menu_print_cursor_(tListTaskId, 1);
         BagDestroyPocketScrollArrowPair();
         Task_RedrawArrowsAndReturnToBagMenuSelect(taskId);
     }
@@ -2291,10 +2301,10 @@ static void Task_SelectQuantityToDeposit(u8 taskId)
 static void Task_TryDoItemDeposit(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (AddPCItem(gSpecialVar_ItemId, data[8]) == TRUE)
+    if (AddPCItem(gSpecialVar_ItemId, tItemCount) == TRUE)
     {
-        CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, data[8]);
-        ConvertIntToDecimalStringN(gStringVar2, data[8], STR_CONV_MODE_LEFT_ALIGN, 3);
+        CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, tItemCount);
+        ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, 3);
         StringExpandPlaceholders(gStringVar4, sText_DepositedVar2Var1s);
         BagPrintTextOnWindow(ShowBagWindow(FRLG_BAG_SUBWINDOW_7, 3), FONT_SHORT, gStringVar4, 0, 2, 1, 0, 0, 1);
         gTasks[taskId].func = Task_WaitAB_RedrawAndReturnToBag;
@@ -2372,7 +2382,7 @@ static void Task_Bag_OldManTutorial(u8 taskId)
             break;
         case 306:
             PlaySE(SE_SELECT);
-            bag_menu_print_cursor_(data[0], 2);
+            bag_menu_print_cursor_(tListTaskId, 2);
             Bag_FillMessageBoxWithPalette(1);
             gSpecialVar_ItemId = ITEM_POKE_BALL;
             OpenContextMenu(taskId);
@@ -2384,7 +2394,7 @@ static void Task_Bag_OldManTutorial(u8 taskId)
             PutWindowTilemap(0);
             PutWindowTilemap(1);
             CopyWindowToVram(0, COPYWIN_MAP);
-            DestroyListMenuTask(data[0], NULL, NULL);
+            DestroyListMenuTask(tListTaskId, NULL, NULL);
             RestorePlayerBag();
             Bag_BeginCloseWin0Animation();
             gTasks[taskId].func = Task_Pokedude_FadeFromBag;
@@ -2524,3 +2534,13 @@ static void BagDrawTextBoxOnWindow(u8 windowId)
 {
     DrawTextBorderOuter(windowId, 0x064, 14);
 }
+
+#undef tListTaskId
+#undef tListPosition
+#undef tQuantity
+#undef tNeverRead
+#undef tItemCount
+#undef tMsgWindowId
+#undef tPocketSwitchDir
+#undef tPocketSwitchTimer
+#undef tPocketSwitchState
