@@ -1186,6 +1186,7 @@ static void AccuracyCheck(bool32 recalcDragonDarts, const u8 *nextInstr, const u
                 AccuracyCheck(TRUE, nextInstr, failInstr);
                 return;
             }
+
         }
     }
 
