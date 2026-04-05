@@ -171,7 +171,7 @@ gCryTable::
 	cry Cry_Youki
 	cry Cry_Tori
 	cry Cry_Namazu
-	cry Cry_Tensoku
+	cry Cry_Hisoutensoku
 	cry Cry_Konngara
 	cry Cry_Kikuri
 	cry Cry_Yuugenmagan
@@ -186,7 +186,7 @@ gCryTable::
 	cry Cry_Isami
 	cry Cry_Mitori
 	cry Cry_Sasha
-	cry Cry_Joshi_Kosei_Sanae
+	cry Cry_School_Girl_Sanae
 	cry Cry_KD_Sakuya
 	cry Cry_Aki_Sisters
 	cry Cry_Advent_Cirno
@@ -379,7 +379,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Youki
 	cry_reverse Cry_Tori
 	cry_reverse Cry_Namazu
-	cry_reverse Cry_Tensoku
+	cry_reverse Cry_Hisoutensoku
 	cry_reverse Cry_Konngara
 	cry_reverse Cry_Kikuri
 	cry_reverse Cry_Yuugenmagan
@@ -394,7 +394,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Isami
 	cry_reverse Cry_Mitori
 	cry_reverse Cry_Sasha
-	cry_reverse Cry_Joshi_Kosei_Sanae
+	cry_reverse Cry_School_Girl_Sanae
 	cry_reverse Cry_KD_Sakuya
 	cry_reverse Cry_Aki_Sisters
 	cry_reverse Cry_Advent_Cirno

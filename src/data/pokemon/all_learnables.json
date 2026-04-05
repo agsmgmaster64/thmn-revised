@@ -3080,7 +3080,7 @@
     "MOVE_WORK_UP",
     "MOVE_ZEN_HEADBUTT"
   ],
-  "TENSOKU": [
+  "HISOUTENSOKU": [
     "MOVE_POUND"
   ],
   "YUKARI": [
@@ -25012,7 +25012,7 @@
   "C_YUUMA": [
     "MOVE_POUND"
   ],
-  "J_KSANAE": [
+  "S_GSANAE": [
     "MOVE_POUND"
   ],
   "KONNGARA": [
@@ -27674,7 +27674,7 @@
   "JUNKO": [
     "MOVE_POUND"
   ],
-  "UNGAIKYO_A": [
+  "SPIRIT_MIRROR": [
     "MOVE_POUND"
   ],
   "QWILFISH_HISUI": [
@@ -29750,7 +29750,7 @@
   "NAZRIN": [
     "MOVE_POUND"
   ],
-  "UNGAIKYO_D": [
+  "DARK_MIRROR": [
     "MOVE_POUND"
   ],
   "MORPEKO": [

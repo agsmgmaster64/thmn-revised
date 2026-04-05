@@ -1069,8 +1069,8 @@ Cry_Namazu::
 	.incbin "sound/direct_sound_samples/cries/namazu.bin"
 
 	.align 2
-Cry_Tensoku::
-	.incbin "sound/direct_sound_samples/cries/tensoku.bin"
+Cry_Hisoutensoku::
+	.incbin "sound/direct_sound_samples/cries/hisoutensoku.bin"
 
 	.align 2
 Cry_Konngara::
@@ -1129,8 +1129,8 @@ Cry_Sasha::
 	.incbin "sound/direct_sound_samples/cries/sasha.bin"
 
 	.align 2
-Cry_Joshi_Kosei_Sanae::
-	.incbin "sound/direct_sound_samples/cries/joshi_kosei_sanae.bin"
+Cry_School_Girl_Sanae::
+	.incbin "sound/direct_sound_samples/cries/school_girl_sanae.bin"
 
 	.align 2
 Cry_KD_Sakuya::

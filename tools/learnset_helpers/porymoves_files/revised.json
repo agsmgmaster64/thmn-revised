@@ -2303,7 +2303,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "J_KSANAE": {
+  "S_GSANAE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -3071,7 +3071,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "TENSOKU": {
+  "HISOUTENSOKU": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -6059,7 +6059,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "UNGAIKYO_D": {
+  "DARK_MIRROR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -6275,7 +6275,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "UNGAIKYO_A": {
+  "SPIRIT_MIRROR": {
     "LevelMoves": [
       {
         "Level": 1,

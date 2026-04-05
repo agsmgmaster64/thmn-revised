@@ -169,7 +169,7 @@
 #define SPECIES_CHIBI_SANAE                             160
 #define SPECIES_NORMAL_SANAE                            161
 #define SPECIES_EXTRA_SANAE                             162
-#define SPECIES_JOSHI_KOSEI_SANAE                       163
+#define SPECIES_SCHOOL_GIRL_SANAE                       163
 #define SPECIES_CHIBI_KANAKO                            164
 #define SPECIES_NORMAL_KANAKO                           165
 #define SPECIES_EXTRA_KANAKO                            166
@@ -238,7 +238,7 @@
 #define SPECIES_EXTRA_HATATE                            229
 #define SPECIES_DOLLS                                   230
 #define SPECIES_GOLIATH                                 231
-#define SPECIES_TENSOKU                                 232
+#define SPECIES_HISOUTENSOKU                                 232
 #define SPECIES_NAMAZU                                  233
 #define SPECIES_CHIBI_KYOUKO                            234
 #define SPECIES_NORMAL_KYOUKO                           235
@@ -476,7 +476,7 @@
 #define SPECIES_CHIBI_KURUMI                            466
 #define SPECIES_NORMAL_KURUMI                           467
 #define SPECIES_EXTRA_KURUMI                            468
-#define SPECIES_UNGAIKYO_D                              469
+#define SPECIES_DARK_MIRROR                              469
 #define SPECIES_CHIBI_ELLY                              470
 #define SPECIES_NORMAL_ELLY                             471
 #define SPECIES_EXTRA_ELLY                              472
@@ -494,7 +494,7 @@
 #define SPECIES_CHIBI_SARA                              484
 #define SPECIES_NORMAL_SARA                             485
 #define SPECIES_EXTRA_SARA                              486
-#define SPECIES_UNGAIKYO_A                              487
+#define SPECIES_SPIRIT_MIRROR                              487
 #define SPECIES_CHIBI_LOUISE                            488
 #define SPECIES_NORMAL_LOUISE                           489
 #define SPECIES_EXTRA_LOUISE                            490

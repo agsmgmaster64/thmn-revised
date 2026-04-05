@@ -374,7 +374,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou4[] =
         .teachableLearnset = sEKurumiTeachableLearnset,
     },
 
-    [SPECIES_UNGAIKYO_D] =
+    [SPECIES_DARK_MIRROR] =
     {
         .baseHP        = 100,
         .baseAttack    = 100,
@@ -397,7 +397,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_ILLUMINATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("UngaikyoD"),
+        .speciesName = _("Dark Mirror"),
         .cryId = CRY_NONE,
         .natDexNum = NATIONAL_DEX_PATRAT,
         .categoryName = _("Dummy"),
@@ -409,22 +409,22 @@ const struct SpeciesInfo gSpeciesInfoTouhou4[] =
         .pokemonOffset = 1,
         .trainerScale = 302,
         .trainerOffset = 3,
-        .frontPic = gMonFrontPic_UngaikyoD,
+        .frontPic = gMonFrontPic_DarkMirror,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_GenericBlinkingAnim,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 0,
-        .backPic = gMonBackPic_UngaikyoD,
+        .backPic = gMonBackPic_DarkMirror,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_UngaikyoD,
-        .shinyPalette = gMonShinyPalette_UngaikyoD,
-        .iconSprite = gMonIcon_UngaikyoD,
+        .palette = gMonPalette_DarkMirror,
+        .shinyPalette = gMonShinyPalette_DarkMirror,
+        .iconSprite = gMonIcon_DarkMirror,
         .iconPalIndex = 0,
-        .levelUpLearnset = sUngaikyoDLevelUpLearnset,
-        .teachableLearnset = sUngaikyoDTeachableLearnset,
+        .levelUpLearnset = sDarkMirrorLevelUpLearnset,
+        .teachableLearnset = sDarkMirrorTeachableLearnset,
     },
 
     [SPECIES_CHIBI_ELLY] =
