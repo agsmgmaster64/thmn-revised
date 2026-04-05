@@ -39,7 +39,7 @@ SINGLE_BATTLE_TEST("Tera Blast has correct effectiveness for every Tera Type")
     PARAMETRIZE { species = SPECIES_GASTLY;    type = TYPE_PSYCHIC;  }
     PARAMETRIZE { species = SPECIES_TOTODILE;  type = TYPE_GRASS;    }
     PARAMETRIZE { species = SPECIES_TOTODILE;  type = TYPE_ELECTRIC; }
-    PARAMETRIZE { species = SPECIES_DRATINI;   type = TYPE_DRAGON;   }
+    PARAMETRIZE { species = SPECIES_DRATINI;   type = TYPE_FAITH;   }
     PARAMETRIZE { species = SPECIES_DRATINI;   type = TYPE_FAIRY;    }
     PARAMETRIZE { species = SPECIES_SNEASEL;   type = TYPE_FIGHTING; }
     PARAMETRIZE { species = SPECIES_SNEASEL;   type = TYPE_STEEL;    }
@@ -54,8 +54,8 @@ SINGLE_BATTLE_TEST("Tera Blast has correct effectiveness for every Tera Type")
         ASSUME(GetSpeciesType(SPECIES_GASTLY, 1) == TYPE_POISON);
         ASSUME(GetSpeciesType(SPECIES_TOTODILE, 0) == TYPE_WATER);
         ASSUME(GetSpeciesType(SPECIES_TOTODILE, 1) == TYPE_WATER);
-        ASSUME(GetSpeciesType(SPECIES_DRATINI, 0) == TYPE_DRAGON);
-        ASSUME(GetSpeciesType(SPECIES_DRATINI, 1) == TYPE_DRAGON);
+        ASSUME(GetSpeciesType(SPECIES_DRATINI, 0) == TYPE_FAITH);
+        ASSUME(GetSpeciesType(SPECIES_DRATINI, 1) == TYPE_FAITH);
         ASSUME(GetSpeciesType(SPECIES_SNEASEL, 0) == TYPE_DARK);
         ASSUME(GetSpeciesType(SPECIES_SNEASEL, 1) == TYPE_ICE);
         ASSUME(GetSpeciesType(SPECIES_ABRA, 0) == TYPE_PSYCHIC);

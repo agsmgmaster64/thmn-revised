@@ -19504,7 +19504,7 @@ gBattleAnimMove_TeraBlast::
 	jumpifmovetypeequal TYPE_ELECTRIC, TeraBlastElectric
 	jumpifmovetypeequal TYPE_PSYCHIC, TeraBlastPsychic
 	jumpifmovetypeequal TYPE_ICE, TeraBlastIce
-	jumpifmovetypeequal TYPE_DRAGON, TeraBlastDragon
+	jumpifmovetypeequal TYPE_FAITH, TeraBlastDragon
 	jumpifmovetypeequal TYPE_DARK, TeraBlastDark
 	jumpifmovetypeequal TYPE_FAIRY, TeraBlastFairy
 	jumpifmovetypeequal TYPE_STELLAR, TeraBlastStellar

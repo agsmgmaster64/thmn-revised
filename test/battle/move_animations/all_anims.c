@@ -1994,7 +1994,7 @@ DOUBLE_BATTLE_TEST("Z-Moves don't leak when used - Doubles (opponentRight to pla
     PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_ELECTRIC; } \
     PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_PSYCHIC; } \
     PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_ICE; } \
-    PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_DRAGON; } \
+    PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_FAITH; } \
     PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_DARK; } \
     PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_FAIRY; } \
     PARAMETRIZE { species = SPECIES_WOBBUFFET; move = MOVE_TERA_BLAST; type = TYPE_STELLAR; }

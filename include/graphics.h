@@ -1523,7 +1523,7 @@ extern const u16 gItemIconPalette_PsychicTMHM[];
 extern const u16 gItemIconPalette_BugTMHM[];
 extern const u16 gItemIconPalette_RockTMHM[];
 extern const u16 gItemIconPalette_GhostTMHM[];
-extern const u16 gItemIconPalette_DragonTMHM[];
+extern const u16 gItemIconPalette_FaithTMHM[];
 extern const u16 gItemIconPalette_DarkTMHM[];
 extern const u16 gItemIconPalette_SteelTMHM[];
 extern const u16 gItemIconPalette_FairyTMHM[];

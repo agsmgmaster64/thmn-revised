@@ -158,7 +158,7 @@ SINGLE_BATTLE_TEST("Pixilate overrides Ion Deluge")
 {
     GIVEN {
         ASSUME(GetMoveEffect(MOVE_ION_DELUGE) == EFFECT_ION_DELUGE);
-        ASSUME(GetSpeciesType(SPECIES_BAGON, 0) == TYPE_DRAGON || GetSpeciesType(SPECIES_BAGON, 1) == TYPE_DRAGON);
+        ASSUME(GetSpeciesType(SPECIES_BAGON, 0) == TYPE_FAITH || GetSpeciesType(SPECIES_BAGON, 1) == TYPE_FAITH);
         PLAYER(SPECIES_SYLVEON) { Ability(ABILITY_PIXILATE); }
         OPPONENT(SPECIES_BAGON);
     } WHEN {
@@ -224,7 +224,7 @@ SINGLE_BATTLE_TEST("Pixilate doesn't affect damaging Z-Move types")
 {
     GIVEN {
         ASSUME(GetMoveType(MOVE_SCRATCH) == TYPE_NORMAL);
-        ASSUME(GetSpeciesType(SPECIES_BAGON, 0) == TYPE_DRAGON || GetSpeciesType(SPECIES_BAGON, 1) == TYPE_DRAGON);
+        ASSUME(GetSpeciesType(SPECIES_BAGON, 0) == TYPE_FAITH || GetSpeciesType(SPECIES_BAGON, 1) == TYPE_FAITH);
         PLAYER(SPECIES_SYLVEON) { Ability(ABILITY_PIXILATE); Item(ITEM_NORMALIUM_Z); }
         OPPONENT(SPECIES_BAGON);
     } WHEN {

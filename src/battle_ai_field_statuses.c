@@ -396,7 +396,7 @@ static enum FieldEffectOutcome BenefitsFromMistyTerrain(enum BattlerId battler)
 
     // harass dragons
     if ((grounded || allyGrounded)
-     && (HasDamagingMoveOfType(LEFT_FOE(battler), TYPE_DRAGON) || HasDamagingMoveOfType(RIGHT_FOE(battler), TYPE_DRAGON)))
+     && (HasDamagingMoveOfType(LEFT_FOE(battler), TYPE_FAITH) || HasDamagingMoveOfType(RIGHT_FOE(battler), TYPE_FAITH)))
         return FIELD_EFFECT_POSITIVE;
 
     if ((grounded || allyGrounded)

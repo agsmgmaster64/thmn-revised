@@ -138,9 +138,9 @@ const union AnimCmd sSpriteAnim_TypeIcon_Ice[] =
     ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_ICE), 0),
     ANIMCMD_END
 };
-const union AnimCmd sSpriteAnim_TypeIcon_Dragon[] =
+const union AnimCmd sSpriteAnim_TypeIcon_Faith[] =
 {
-    ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_DRAGON), 0),
+    ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_FAITH), 0),
     ANIMCMD_END
 };
 const union AnimCmd sSpriteAnim_TypeIcon_Dark[] =
@@ -173,7 +173,7 @@ const union AnimCmd *const sSpriteAnimTable_TypeIcons[] =
     [TYPE_ELECTRIC] =   sSpriteAnim_TypeIcon_Electric,
     [TYPE_PSYCHIC] =    sSpriteAnim_TypeIcon_Psychic,
     [TYPE_ICE] =        sSpriteAnim_TypeIcon_Ice,
-    [TYPE_DRAGON] =     sSpriteAnim_TypeIcon_Dragon,
+    [TYPE_FAITH] =      sSpriteAnim_TypeIcon_Faith,
     [TYPE_DARK] =       sSpriteAnim_TypeIcon_Dark,
     [TYPE_FAIRY] =      sSpriteAnim_TypeIcon_Fairy,
     [TYPE_STELLAR] =    sSpriteAnim_TypeIcon_Mystery,

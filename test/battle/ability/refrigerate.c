@@ -223,7 +223,7 @@ SINGLE_BATTLE_TEST("Refrigerate doesn't affect damaging Z-Move types")
 {
     GIVEN {
         ASSUME(GetMoveType(MOVE_SCRATCH) == TYPE_NORMAL);
-        ASSUME(GetSpeciesType(SPECIES_BAGON, 0) == TYPE_DRAGON || GetSpeciesType(SPECIES_BAGON, 1) == TYPE_DRAGON);
+        ASSUME(GetSpeciesType(SPECIES_BAGON, 0) == TYPE_FAITH || GetSpeciesType(SPECIES_BAGON, 1) == TYPE_FAITH);
         PLAYER(SPECIES_AMAURA) { Ability(ABILITY_REFRIGERATE); Item(ITEM_NORMALIUM_Z); }
         OPPONENT(SPECIES_BAGON);
     } WHEN {

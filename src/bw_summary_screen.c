@@ -1219,8 +1219,8 @@ static const union AnimCmd sSpriteAnim_TypeIce[] = {
     ANIMCMD_FRAME(TYPE_ICE * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
-static const union AnimCmd sSpriteAnim_TypeDragon[] = {
-    ANIMCMD_FRAME(TYPE_DRAGON * 8, 0, FALSE, FALSE),
+static const union AnimCmd sSpriteAnim_TypeFaith[] = {
+    ANIMCMD_FRAME(TYPE_FAITH * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
 static const union AnimCmd sSpriteAnim_TypeDark[] = {
@@ -1274,7 +1274,7 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     [TYPE_ELECTRIC] = sSpriteAnim_TypeElectric,
     [TYPE_PSYCHIC] = sSpriteAnim_TypePsychic,
     [TYPE_ICE] = sSpriteAnim_TypeIce,
-    [TYPE_DRAGON] = sSpriteAnim_TypeDragon,
+    [TYPE_FAITH] = sSpriteAnim_TypeFaith,
     [TYPE_DARK] = sSpriteAnim_TypeDark,
     [TYPE_FAIRY] = sSpriteAnim_TypeFairy,
     [TYPE_STELLAR] = sSpriteAnim_TypeStellar,
@@ -1384,8 +1384,8 @@ static const union AnimCmd sSpriteAnim_TeraTypeIce[] = {
     ANIMCMD_FRAME(TYPE_ICE * 4, 0, FALSE, FALSE),
     ANIMCMD_END
 };
-static const union AnimCmd sSpriteAnim_TeraTypeDragon[] = {
-    ANIMCMD_FRAME(TYPE_DRAGON * 4, 0, FALSE, FALSE),
+static const union AnimCmd sSpriteAnim_TeraTypeFaith[] = {
+    ANIMCMD_FRAME(TYPE_FAITH * 4, 0, FALSE, FALSE),
     ANIMCMD_END
 };
 static const union AnimCmd sSpriteAnim_TeraTypeDark[] = {
@@ -1419,7 +1419,7 @@ static const union AnimCmd *const sSpriteAnimTable_TeraType[NUMBER_OF_MON_TYPES]
     [TYPE_ELECTRIC] = sSpriteAnim_TeraTypeElectric,
     [TYPE_PSYCHIC] = sSpriteAnim_TeraTypePsychic,
     [TYPE_ICE] = sSpriteAnim_TeraTypeIce,
-    [TYPE_DRAGON] = sSpriteAnim_TeraTypeDragon,
+    [TYPE_FAITH] = sSpriteAnim_TeraTypeFaith,
     [TYPE_DARK] = sSpriteAnim_TeraTypeDark,
     [TYPE_FAIRY] = sSpriteAnim_TeraTypeFairy,
     [TYPE_STELLAR] = sSpriteAnim_TeraTypeStellar

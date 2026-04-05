@@ -515,7 +515,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .naturePower = MOVE_DRACO_METEOR,
         .secretPowerAnimation = gBattleAnimMove_Swift,
         .secretPowerEffect = MOVE_EFFECT_FLINCH,
-        .camouflageType = TYPE_DRAGON,
+        .camouflageType = TYPE_FAITH,
         .camouflageBlend = DEFAULT_CAMOUFLAGE_BLEND,
     },
 

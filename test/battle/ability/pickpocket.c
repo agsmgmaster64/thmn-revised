@@ -11,7 +11,7 @@ DOUBLE_BATTLE_TEST("Pickpocket checks contact/effect per target for spread moves
 {
     GIVEN {
         ASSUME(GetSpeciesType(SPECIES_CLEFAIRY, 0) == TYPE_FAIRY);
-        ASSUME(GetMoveType(MOVE_BREAKING_SWIPE) == TYPE_DRAGON);
+        ASSUME(GetMoveType(MOVE_BREAKING_SWIPE) == TYPE_FAITH);
         ASSUME(GetMoveTarget(MOVE_BREAKING_SWIPE) == TARGET_BOTH);
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_MAGOST_BERRY); }
         PLAYER(SPECIES_WYNAUT);

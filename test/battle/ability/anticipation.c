@@ -290,7 +290,7 @@ SINGLE_BATTLE_TEST("Anticipation treats dynamic move types as their base type (N
 SINGLE_BATTLE_TEST("Anticipation does not consider Strong Winds on type matchups")
 {
     GIVEN {
-        ASSUME(GetSpeciesType(SPECIES_RAYQUAZA_MEGA, 0) == TYPE_DRAGON);
+        ASSUME(GetSpeciesType(SPECIES_RAYQUAZA_MEGA, 0) == TYPE_FAITH);
         ASSUME(GetSpeciesType(SPECIES_RAYQUAZA_MEGA, 1) == TYPE_FLYING);
         PLAYER(SPECIES_RAYQUAZA) { Moves(MOVE_DRAGON_ASCENT, MOVE_CELEBRATE); }
         OPPONENT(SPECIES_EEVEE) { Ability(ABILITY_ANTICIPATION); Moves(MOVE_ROCK_SLIDE, MOVE_SKILL_SWAP, MOVE_POUND, MOVE_CELEBRATE); }

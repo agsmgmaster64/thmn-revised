@@ -542,7 +542,7 @@ AI_SINGLE_BATTLE_TEST("AI will choose Superpower over Outrage with Contrary")
         ASSUME(GetMovePower(MOVE_SUPERPOWER) == 120);
         ASSUME(GetMoveType(MOVE_SUPERPOWER) == TYPE_FIGHTING);
         ASSUME(GetMovePower(MOVE_OUTRAGE) == 120);
-        ASSUME(GetMoveType(MOVE_OUTRAGE) == TYPE_DRAGON);
+        ASSUME(GetMoveType(MOVE_OUTRAGE) == TYPE_FAITH);
         ASSUME(GetSpeciesType(SPECIES_SQUIRTLE, 0) == TYPE_WATER);
         ASSUME(GetSpeciesType(SPECIES_SQUIRTLE, 1) == TYPE_WATER);
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT);

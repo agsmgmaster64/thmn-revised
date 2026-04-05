@@ -797,7 +797,7 @@ SINGLE_BATTLE_TEST("(TERA) All type indicators function correctly")
     PARAMETRIZE { type = TYPE_ELECTRIC; }
     PARAMETRIZE { type = TYPE_PSYCHIC; }
     PARAMETRIZE { type = TYPE_ICE; }
-    PARAMETRIZE { type = TYPE_DRAGON; }
+    PARAMETRIZE { type = TYPE_FAITH; }
     PARAMETRIZE { type = TYPE_DARK; }
     PARAMETRIZE { type = TYPE_FAIRY; }
     PARAMETRIZE { type = TYPE_STELLAR; }
@@ -829,7 +829,7 @@ SINGLE_BATTLE_TEST("(TERA) All type indicators function correctly - Opponent")
     PARAMETRIZE { type = TYPE_ELECTRIC; }
     PARAMETRIZE { type = TYPE_PSYCHIC; }
     PARAMETRIZE { type = TYPE_ICE; }
-    PARAMETRIZE { type = TYPE_DRAGON; }
+    PARAMETRIZE { type = TYPE_FAITH; }
     PARAMETRIZE { type = TYPE_DARK; }
     PARAMETRIZE { type = TYPE_FAIRY; }
     PARAMETRIZE { type = TYPE_STELLAR; }

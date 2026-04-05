@@ -6601,7 +6601,7 @@ const struct TypePower gNaturalGiftTable[] =
     [ITEM_TO_BERRY(ITEM_FIGY_BERRY)] = {TYPE_BUG, 80},
     [ITEM_TO_BERRY(ITEM_WIKI_BERRY)] = {TYPE_ROCK, 80},
     [ITEM_TO_BERRY(ITEM_MAGO_BERRY)] = {TYPE_GHOST, 80},
-    [ITEM_TO_BERRY(ITEM_AGUAV_BERRY)] = {TYPE_DRAGON, 80},
+    [ITEM_TO_BERRY(ITEM_AGUAV_BERRY)] = {TYPE_FAITH, 80},
     [ITEM_TO_BERRY(ITEM_IAPAPA_BERRY)] = {TYPE_DARK, 80},
     [ITEM_TO_BERRY(ITEM_RAZZ_BERRY)] = {TYPE_STEEL, 80},
     [ITEM_TO_BERRY(ITEM_OCCA_BERRY)] = {TYPE_FIRE, 80},
@@ -6617,7 +6617,7 @@ const struct TypePower gNaturalGiftTable[] =
     [ITEM_TO_BERRY(ITEM_TANGA_BERRY)] = {TYPE_BUG, 80},
     [ITEM_TO_BERRY(ITEM_CHARTI_BERRY)] = {TYPE_ROCK, 80},
     [ITEM_TO_BERRY(ITEM_KASIB_BERRY)] = {TYPE_GHOST, 80},
-    [ITEM_TO_BERRY(ITEM_HABAN_BERRY)] = {TYPE_DRAGON, 80},
+    [ITEM_TO_BERRY(ITEM_HABAN_BERRY)] = {TYPE_FAITH, 80},
     [ITEM_TO_BERRY(ITEM_COLBUR_BERRY)] = {TYPE_DARK, 80},
     [ITEM_TO_BERRY(ITEM_BABIRI_BERRY)] = {TYPE_STEEL, 80},
     [ITEM_TO_BERRY(ITEM_CHILAN_BERRY)] = {TYPE_NORMAL, 80},
@@ -6635,7 +6635,7 @@ const struct TypePower gNaturalGiftTable[] =
     [ITEM_TO_BERRY(ITEM_CORNN_BERRY)] = {TYPE_BUG, 90},
     [ITEM_TO_BERRY(ITEM_MAGOST_BERRY)] = {TYPE_ROCK, 90},
     [ITEM_TO_BERRY(ITEM_RABUTA_BERRY)] = {TYPE_GHOST, 90},
-    [ITEM_TO_BERRY(ITEM_NOMEL_BERRY)] = {TYPE_DRAGON, 90},
+    [ITEM_TO_BERRY(ITEM_NOMEL_BERRY)] = {TYPE_FAITH, 90},
     [ITEM_TO_BERRY(ITEM_SPELON_BERRY)] = {TYPE_DARK, 90},
     [ITEM_TO_BERRY(ITEM_PAMTRE_BERRY)] = {TYPE_STEEL, 90},
     [ITEM_TO_BERRY(ITEM_WATMEL_BERRY)] = {TYPE_FIRE, 100},
@@ -6651,7 +6651,7 @@ const struct TypePower gNaturalGiftTable[] =
     [ITEM_TO_BERRY(ITEM_ENIGMA_BERRY)] = {TYPE_BUG, 100},
     [ITEM_TO_BERRY(ITEM_MICLE_BERRY)] = {TYPE_ROCK, 100},
     [ITEM_TO_BERRY(ITEM_CUSTAP_BERRY)] = {TYPE_GHOST, 100},
-    [ITEM_TO_BERRY(ITEM_JABOCA_BERRY)] = {TYPE_DRAGON, 100},
+    [ITEM_TO_BERRY(ITEM_JABOCA_BERRY)] = {TYPE_FAITH, 100},
     [ITEM_TO_BERRY(ITEM_ROWAP_BERRY)] = {TYPE_DARK, 100},
     [ITEM_TO_BERRY(ITEM_KEE_BERRY)] = {TYPE_FAIRY, 100},
     [ITEM_TO_BERRY(ITEM_MARANGA_BERRY)] = {TYPE_DARK, 100},
@@ -7048,7 +7048,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx)
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
     if (IsGrassyTerrainAffected(battlerAtk, ctx->abilityAtk, ctx->holdEffectAtk, ctx->fieldStatuses) && moveType == TYPE_GRASS)
         modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.3) : UQ_4_12(1.5)));
-    if (IsMistyTerrainAffected(battlerDef, ctx->abilityDef, ctx->holdEffectDef, ctx->fieldStatuses) && moveType == TYPE_DRAGON)
+    if (IsMistyTerrainAffected(battlerDef, ctx->abilityDef, ctx->holdEffectDef, ctx->fieldStatuses) && moveType == TYPE_FAITH)
         modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
     if (IsElectricTerrainAffected(battlerAtk, ctx->abilityAtk, ctx->holdEffectAtk, ctx->fieldStatuses) && moveType == TYPE_ELECTRIC)
         modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.3) : UQ_4_12(1.5)));
@@ -7138,7 +7138,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx)
             modifier = uq4_12_multiply(modifier, UQ_4_12(GetConfig(B_ATE_MULTIPLIER) >= GEN_7 ? 1.2 : 1.3));
         break;
     case ABILITY_CONSECRATE:
-        if (moveType == TYPE_DRAGON && gBattleStruct->battlerState[battlerAtk].ateBoost)
+        if (moveType == TYPE_FAITH && gBattleStruct->battlerState[battlerAtk].ateBoost)
             modifier = uq4_12_multiply(modifier, UQ_4_12(GetConfig(B_ATE_MULTIPLIER) >= GEN_7 ? 1.2 : 1.3));
         break;
     case ABILITY_NORMALIZE:
@@ -7266,20 +7266,20 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx)
         break;
     /*
     case HOLD_EFFECT_LUSTROUS_ORB:
-        if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_PALKIA && (moveType == TYPE_WATER || moveType == TYPE_DRAGON))
+        if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_PALKIA && (moveType == TYPE_WATER || moveType == TYPE_FAITH))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
         break;
     case HOLD_EFFECT_ADAMANT_ORB:
-        if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_DIALGA && (moveType == TYPE_STEEL || moveType == TYPE_DRAGON))
+        if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_DIALGA && (moveType == TYPE_STEEL || moveType == TYPE_FAITH))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
         break;
     case HOLD_EFFECT_GRISEOUS_ORB:
-        if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_GIRATINA && (moveType == TYPE_GHOST || moveType == TYPE_DRAGON))
+        if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_GIRATINA && (moveType == TYPE_GHOST || moveType == TYPE_FAITH))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
         break;
     case HOLD_EFFECT_SOUL_DEW:
         if ((gBattleMons[battlerAtk].species == SPECIES_LATIAS || gBattleMons[battlerAtk].species == SPECIES_LATIOS)
-            && ((B_SOUL_DEW_BOOST >= GEN_7 && (moveType == TYPE_PSYCHIC || moveType == TYPE_DRAGON))
+            && ((B_SOUL_DEW_BOOST >= GEN_7 && (moveType == TYPE_PSYCHIC || moveType == TYPE_FAITH))
              || (B_SOUL_DEW_BOOST < GEN_7 && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER) && IsBattleMoveSpecial(move))))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
         break;
@@ -7567,7 +7567,7 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
         }
         break;
     case ABILITY_DRAGONS_MAW:
-        if (moveType == TYPE_DRAGON)
+        if (moveType == TYPE_FAITH)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_GORILLA_TACTICS:
@@ -7662,7 +7662,7 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
         }
         break;
     case ABILITY_ATHEISM:
-        if (moveType == TYPE_DRAGON)
+        if (moveType == TYPE_FAITH)
         {
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.25));
             if (ctx->updateFlags)

@@ -8539,7 +8539,7 @@ static void Cmd_setfocusenergy(void)
         gBattleStruct->moveResultFlags[gBattlerTarget] |= MOVE_RESULT_FAILED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FOCUS_ENERGY_FAILED;
     }
-    else if (effect == EFFECT_DRAGON_CHEER && !IS_BATTLER_OF_TYPE(battler, TYPE_DRAGON))
+    else if (effect == EFFECT_DRAGON_CHEER && !IS_BATTLER_OF_TYPE(battler, TYPE_FAITH))
     {
         gBattleMons[battler].volatiles.dragonCheer = TRUE;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_GETTING_PUMPED;

@@ -3311,7 +3311,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
          || !HasDamagingMove(battlerAtkPartner))
             ADJUST_SCORE(-5);
         else if (atkPartnerHoldEffect == HOLD_EFFECT_SCOPE_LENS
-              || IS_BATTLER_OF_TYPE(battlerAtkPartner, TYPE_DRAGON)
+              || IS_BATTLER_OF_TYPE(battlerAtkPartner, TYPE_FAITH)
               || GetMoveCriticalHitStage(aiData->partnerMove) > 0
               || HasMoveWithCriticalHitChance(battlerAtkPartner))
             ADJUST_SCORE(GOOD_EFFECT);

@@ -21,7 +21,7 @@ enum __attribute__((packed)) Type
     TYPE_ELECTRIC = 14,
     TYPE_PSYCHIC = 15,
     TYPE_ICE = 16,
-    TYPE_DRAGON = 17,
+    TYPE_FAITH = 17,
     TYPE_DARK = 18,
     TYPE_FAIRY = 19,
     TYPE_STELLAR = 20,

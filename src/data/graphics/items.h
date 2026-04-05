@@ -1750,7 +1750,7 @@ const u16 gItemIconPalette_RockTMHM[] = INCBIN_U16("graphics/items/icon_palettes
 
 const u16 gItemIconPalette_GhostTMHM[] = INCBIN_U16("graphics/items/icon_palettes/ghost_tm_hm.gbapal");
 
-const u16 gItemIconPalette_DragonTMHM[] = INCBIN_U16("graphics/items/icon_palettes/dragon_tm_hm.gbapal");
+const u16 gItemIconPalette_FaithTMHM[] = INCBIN_U16("graphics/items/icon_palettes/faith_tm_hm.gbapal");
 
 const u16 gItemIconPalette_DarkTMHM[] = INCBIN_U16("graphics/items/icon_palettes/dark_tm_hm.gbapal");
 

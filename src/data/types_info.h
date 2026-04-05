@@ -13,7 +13,7 @@
 
 const uq4_12_t gTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
 {//                   Defender -->
- //  Attacker           None   Normal Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice   Dragon   Dark   Fairy   Stellar
+ //  Attacker           None   Normal Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice    Faith   Dark   Fairy   Stellar
     [TYPE_NONE]     = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
     [TYPE_NORMAL]   = {______, ______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
     [TYPE_FIGHTING] = {______, X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), X(0.5), ______},
@@ -31,7 +31,7 @@ const uq4_12_t gTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES]
     [TYPE_ELECTRIC] = {______, ______, ______, X(2.0), ______, X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______, ______},
     [TYPE_PSYCHIC]  = {______, ______, X(2.0), ______, X(2.0), ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), ______, ______},
     [TYPE_ICE]      = {______, ______, ______, X(2.0), ______, X(2.0), ______, ______, ______, X(0.5), ______, FIR_RS, X(0.5), X(2.0), ______, ______, X(0.5), X(2.0), ______, ______, ______},
-    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, ______, ______, X(2.0), ______, X(0.0), ______},
+    [TYPE_FAITH]   = {______, ______, ______, ______, ______, ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, ______, ______, X(2.0), ______, X(0.0), ______},
     [TYPE_DARK]     = {______, ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), STL_RS, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(0.5), ______},
     [TYPE_FAIRY]    = {______, ______, X(2.0), ______, X(0.5), ______, ______, ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(2.0), ______, ______},
     [TYPE_STELLAR]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
@@ -399,16 +399,16 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.teraShard = ITEM_ICE_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_ICE,
     },
-    [TYPE_DRAGON] =
+    [TYPE_FAITH] =
     {
-        .name = _("Dragon"),
-        .generic = _("a DRAGON move"),
+        .name = _("Faith"),
+        .generic = _("a FAITH move"),
         .palette = 15,
         .zMove = MOVE_DEVASTATING_DRAKE,
         .maxMove = MOVE_MAX_WYRMWIND,
         .teraTypeRGBValue = RGB(10, 18, 27),
         .damageCategory = DAMAGE_CATEGORY_SPECIAL,
-        .paletteTMHM = gItemIconPalette_DragonTMHM,
+        .paletteTMHM = gItemIconPalette_FaithTMHM,
         .useSecondTypeIconPalette = TRUE,
         .isSpecialCaseType = FALSE,
         .isHiddenPowerType = TRUE,

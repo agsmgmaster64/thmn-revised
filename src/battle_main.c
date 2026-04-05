@@ -5932,7 +5932,7 @@ enum Type TrySetAteType(enum Move move, enum BattlerId battlerAtk, enum Ability 
         ateType = TYPE_ELECTRIC;
         break;
     case ABILITY_CONSECRATE:
-        ateType = TYPE_DRAGON;
+        ateType = TYPE_FAITH;
         break;
     default:
         ateType = TYPE_NONE;
