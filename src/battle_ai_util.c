@@ -3507,7 +3507,7 @@ bool32 BattlerHasMaxHPProtection(enum BattlerId battler)
         return TRUE;
     if (B_STURDY >= GEN_5 && ability == ABILITY_STURDY)
         return TRUE;
-    if (ability == ABILITY_MULTISCALE || ability == ABILITY_SHADOW_SHIELD)
+    if (ability == ABILITY_MULTISCALE || ability == ABILITY_MULTIGRAZE || ability == ABILITY_SHADOW_SHIELD)
         return TRUE;
     return FALSE;
 }

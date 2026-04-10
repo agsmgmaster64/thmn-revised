@@ -16001,6 +16001,28 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    //New Items
+
+    [ITEM_ICY_BALL] =
+    {
+        .name = ITEM_NAME("Icy Ball"),
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_ICY_BALL,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "doubles the offense\n"
+            "stats of normal Cirno."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_LightBall,
+        .iconPalette = gItemIconPalette_LightBall,
+    },
+
+
 };
 
 #undef ITEM_NAME

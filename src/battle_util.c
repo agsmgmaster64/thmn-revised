@@ -7480,6 +7480,7 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_DEFEATIST:
+    case ABILITY_CHARISMATIC:
         if (gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.5));
         break;
@@ -7720,6 +7721,10 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
     case HOLD_EFFECT_CHOICE_SPECS:
         if (IsBattleMoveSpecial(move) && GetActiveGimmick(battlerAtk) != GIMMICK_DYNAMAX)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
+        break;
+    case HOLD_EFFECT_ICY_BALL:
+        if (gBattleMons[battlerAtk].species == SPECIES_NORMAL_CIRNO)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
     default:
         break;
@@ -8170,6 +8175,7 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct BattleContext *ctx)
     {
     case ABILITY_MULTISCALE:
     case ABILITY_SHADOW_SHIELD:
+    case ABILITY_MULTIGRAZE:
         if (IsBattlerAtMaxHp(ctx->battlerDef))
         {
             modifier = UQ_4_12(0.5);

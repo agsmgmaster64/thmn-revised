@@ -2961,12 +2961,12 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 5,
     },
 
-    // [ABILITY_CHARISMATIC] =
-    // {
-    //     .name = _("Charismatic"),
-    //     .description = COMPOUND_STRING("Loses charisma at half or less\nMax HP, halving offense stats."),
-    //     .aiRating = -1,
-    // },
+    [ABILITY_CHARISMATIC] =
+    {
+        .name = _("Charismatic"),
+        .description = COMPOUND_STRING("Loses charisma at half or less\nMax HP, halving offense stats."),
+        .aiRating = -1,
+    },
 
     [ABILITY_YIN_AND_YANG] =
     {
@@ -3081,5 +3081,13 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Ambush"),
         .description = COMPOUND_STRING("User's Speed is 50% higher, but\nonly on the first turn."),
         .aiRating = 9,
+    },
+
+    [ABILITY_MULTIGRAZE] =
+    {
+        .name = _("Multigraze"),
+        .description = COMPOUND_STRING("Halves damage at full HP."),
+        .aiRating = 8,
+        .breakable = TRUE,
     },
 };
