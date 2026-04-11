@@ -3090,4 +3090,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 8,
         .breakable = TRUE,
     },
+
+    [ABILITY_FOCUS] =
+    {
+        .name = _("Focus"),
+        .description = COMPOUND_STRING("User's accuracy boosted by 1.3x."),
+        .aiRating = 7,
+    },
 };

@@ -6183,6 +6183,7 @@ enum AIScore BattlerBenefitsFromAbilityScore(enum BattlerId battler, enum Abilit
         return GOOD_EFFECT;
     // Conditional ability logic goes here.
     case ABILITY_COMPOUND_EYES:
+    case ABILITY_FOCUS:
         if (HasMoveWithLowAccuracy(battler, LEFT_FOE(battler), 90, FALSE)
          || HasMoveWithLowAccuracy(battler, RIGHT_FOE(battler), 90, FALSE))
             return GOOD_EFFECT;

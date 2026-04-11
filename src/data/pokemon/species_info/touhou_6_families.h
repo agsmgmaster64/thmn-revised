@@ -3,7 +3,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 {
 #endif
 
-#if P_FAMILY_REIMU
 	[SPECIES_CHIBI_REIMU] =
 	{
 		.baseHP        = 45,
@@ -76,7 +75,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.friendship = 70,
 		.growthRate = GROWTH_MEDIUM_FAST,
 		.eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-		.abilities = { ABILITY_HAKUREI_MIKO, ABILITY_INFLITRATOR, ABILITY_ANGER_POINT },
+		.abilities = { ABILITY_HAKUREI_MIKO, ABILITY_INFILTRATOR, ABILITY_ANGER_POINT },
 		.bodyColor = BODY_COLOR_RED,
 		.speciesName = _("Reimu"),
 		.cryId = CRY_REIMU,
@@ -106,7 +105,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sReimuLevelUpLearnset,
 		.teachableLearnset = sReimuTeachableLearnset,
-		.eggMoveLearnset = sReimuEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_EXTRA_REIMU},
 								{EVO_ITEM, ITEM_SUN_STONE, SPECIES_ADVENT_REIMU},
 								{EVO_ITEM, ITEM_MOON_STONE, SPECIES_KOUMAJOU_REIMU}),
@@ -131,7 +129,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.friendship = 70,
 		.growthRate = GROWTH_MEDIUM_FAST,
 		.eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-		.abilities = { ABILITY_HAKUREI_MIKO, ABILITY_INFLITRATOR, ABILITY_MULTIGRAZE },
+		.abilities = { ABILITY_HAKUREI_MIKO, ABILITY_INFILTRATOR, ABILITY_MULTIGRAZE },
 		.bodyColor = BODY_COLOR_RED,
 		.speciesName = _("EReimu"),
 		.cryId = CRY_REIMU,
@@ -161,7 +159,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sEReimuLevelUpLearnset,
 		.teachableLearnset = sEReimuTeachableLearnset,
-		.eggMoveLearnset = sEReimuEggMoveLearnset,
 	},
 
 	[SPECIES_ADVENT_REIMU] =
@@ -213,7 +210,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sAdReimuLevelUpLearnset,
 		.teachableLearnset = sAdReimuTeachableLearnset,
-		.eggMoveLearnset = sAdReimuEggMoveLearnset,
 	},
 
 	[SPECIES_KOUMAJOU_REIMU] =
@@ -265,9 +261,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sKDReimuLevelUpLearnset,
 		.teachableLearnset = sKDReimuTeachableLearnset,
-		.eggMoveLearnset = sKDReimuEggMoveLearnset,
 	},
-#endif //P_FAMILY_REIMU
 
 	[SPECIES_X_REIMU] =
 	{
@@ -323,11 +317,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sXReimuLevelUpLearnset,
 		.teachableLearnset = sXReimuTeachableLearnset,
-		.eggMoveLearnset = sNoneEggMoveLearnset,
 	},
 
-
-#if P_FAMILY_MARISA
 	[SPECIES_CHIBI_MARISA] =
 	{
 		.baseHP        = 60,
@@ -430,7 +421,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sMarisaLevelUpLearnset,
 		.teachableLearnset = sMarisaTeachableLearnset,
-		.eggMoveLearnset = sMarisaEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_EXTRA_MARISA},
 								{EVO_ITEM, ITEM_SUN_STONE, SPECIES_ADVENT_MARISA},
 								{EVO_ITEM, ITEM_MOON_STONE, SPECIES_SCARLET_WITCH}),
@@ -485,7 +475,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sEMarisaLevelUpLearnset,
 		.teachableLearnset = sEMarisaTeachableLearnset,
-		.eggMoveLearnset = sEMarisaEggMoveLearnset,
 	},
 
 	[SPECIES_ADVENT_MARISA] =
@@ -537,7 +526,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sAdMarisaLevelUpLearnset,
 		.teachableLearnset = sAdMarisaTeachableLearnset,
-		.eggMoveLearnset = sAdMarisaEggMoveLearnset,
 	},
 
 	[SPECIES_SCARLET_WITCH] =
@@ -589,9 +577,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 2,
 		.levelUpLearnset = sScarletWitchLevelUpLearnset,
 		.teachableLearnset = sScarletWitchTeachableLearnset,
-		.eggMoveLearnset = sScarletWitchEggMoveLearnset,
 	},
-#endif //P_FAMILY_MARISA
 
 	[SPECIES_X_MARISA] =
 	{
@@ -647,10 +633,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sXMarisaLevelUpLearnset,
 		.teachableLearnset = sXMarisaTeachableLearnset,
-		.eggMoveLearnset = sNoneEggMoveLearnset,
 	},
 
-#if P_FAMILY_RUMIA
 	[SPECIES_CHIBI_RUMIA] =
 	{
 		.baseHP        = 30,
@@ -753,7 +737,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sRumiaLevelUpLearnset,
 		.teachableLearnset = sRumiaTeachableLearnset,
-		.eggMoveLearnset = sRumiaEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_EXTRA_RUMIA}),
 	},
 
@@ -806,11 +789,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sERumiaLevelUpLearnset,
 		.teachableLearnset = sERumiaTeachableLearnset,
-		.eggMoveLearnset = sERumiaEggMoveLearnset,
 	},
-#endif //P_FAMILY_RUMIA
 
-#if P_FAMILY_DAIYOUSEI
 	[SPECIES_CHIBI_DAIYOUSEI] =
 	{
 		.baseHP        = 30,
@@ -913,7 +893,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sDaiyouseiLevelUpLearnset,
 		.teachableLearnset = sDaiyouseiTeachableLearnset,
-		.eggMoveLearnset = sDaiyouseiEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_EXTRA_DAIYOUSEI}),
 	},
 
@@ -966,11 +945,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sEDaiyouseiLevelUpLearnset,
 		.teachableLearnset = sEDaiyouseiTeachableLearnset,
-		.eggMoveLearnset = sEDaiyouseiEggMoveLearnset,
 	},
-#endif //P_FAMILY_DAIYOUSEI
 
-#if P_FAMILY_CIRNO
 	[SPECIES_CHIBI_CIRNO] =
 	{
 		.baseHP        = 30,
@@ -1073,7 +1049,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sCirnoLevelUpLearnset,
 		.teachableLearnset = sCirnoTeachableLearnset,
-		.eggMoveLearnset = sCirnoEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_EXTRA_CIRNO},
 								{EVO_ITEM, ITEM_SUN_STONE, SPECIES_ADVENT_CIRNO}),
 	},
@@ -1127,7 +1102,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sECirnoLevelUpLearnset,
 		.teachableLearnset = sECirnoTeachableLearnset,
-		.eggMoveLearnset = sECirnoEggMoveLearnset,
 	},
 
 	[SPECIES_ADVENT_CIRNO] =
@@ -1179,11 +1153,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sAdCirnoLevelUpLearnset,
 		.teachableLearnset = sAdCirnoTeachableLearnset,
-		.eggMoveLearnset = sAdCirnoEggMoveLearnset,
 	},
-#endif //P_FAMILY_CIRNO
 
-#if P_FAMILY_MEILING
 	[SPECIES_CHIBI_MEILING] =
 	{
 		.baseHP        = 55,
@@ -1286,7 +1257,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sMeilingLevelUpLearnset,
 		.teachableLearnset = sMeilingTeachableLearnset,
-		.eggMoveLearnset = sMeilingEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_EXTRA_MEILING},
 								{EVO_ITEM, ITEM_SUN_STONE, SPECIES_ADVENT_MEILING}),
 	},
@@ -1340,7 +1310,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sEMeilingLevelUpLearnset,
 		.teachableLearnset = sEMeilingTeachableLearnset,
-		.eggMoveLearnset = sEMeilingEggMoveLearnset,
 	},
 
 	[SPECIES_ADVENT_MEILING] =
@@ -1392,11 +1361,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sAdMeilingLevelUpLearnset,
 		.teachableLearnset = sAdMeilingTeachableLearnset,
-		.eggMoveLearnset = sAdMeilingEggMoveLearnset,
 	},
-#endif //P_FAMILY_MEILING
 
-#if P_FAMILY_KOAKUMA
 	[SPECIES_CHIBI_KOAKUMA] =
 	{
 		.baseHP        = 50,
@@ -1499,7 +1465,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sKoakumaLevelUpLearnset,
 		.teachableLearnset = sKoakumaTeachableLearnset,
-		.eggMoveLearnset = sKoakumaEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_EXTRA_KOAKUMA}),
 	},
 
@@ -1552,11 +1517,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sEKoakumaLevelUpLearnset,
 		.teachableLearnset = sEKoakumaTeachableLearnset,
-		.eggMoveLearnset = sEKoakumaEggMoveLearnset,
 	},
-#endif //P_FAMILY_KOAKUMA
 
-#if P_FAMILY_PATCHOULI
 	[SPECIES_CHIBI_PATCHOULI] =
 	{
 		.baseHP        = 50,
@@ -1633,7 +1595,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.bodyColor = BODY_COLOR_RED,
 		.speciesName = _("Patchouli"),
 		.cryId = CRY_PATCHOULI,
-		.natDexNum = NATIONAL_DEX_NIDORAN♀,
+		.natDexNum = NATIONAL_DEX_NIDORAN_F,
 		.categoryName = _("Knowledge"),
 		.height = 1,
 		.weight = 100,
@@ -1659,7 +1621,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sPatchouliLevelUpLearnset,
 		.teachableLearnset = sPatchouliTeachableLearnset,
-		.eggMoveLearnset = sPatchouliEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_EXTRA_PATCHOULI}),
 	},
 
@@ -1712,11 +1673,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sEPatchouliLevelUpLearnset,
 		.teachableLearnset = sEPatchouliTeachableLearnset,
-		.eggMoveLearnset = sEPatchouliEggMoveLearnset,
 	},
-#endif //P_FAMILY_PATCHOULI
 
-#if P_FAMILY_SAKUYA
 	[SPECIES_CHIBI_SAKUYA] =
 	{
 		.baseHP        = 60,
@@ -1793,7 +1751,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.bodyColor = BODY_COLOR_RED,
 		.speciesName = _("Sakuya"),
 		.cryId = CRY_SAKUYA,
-		.natDexNum = NATIONAL_DEX_NIDORAN♂,
+		.natDexNum = NATIONAL_DEX_NIDORAN_M,
 		.categoryName = _("Elegant Maid"),
 		.height = 1,
 		.weight = 100,
@@ -1819,7 +1777,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sSakuyaLevelUpLearnset,
 		.teachableLearnset = sSakuyaTeachableLearnset,
-		.eggMoveLearnset = sSakuyaEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_EXTRA_SAKUYA},
 								{EVO_ITEM, ITEM_MOON_STONE, SPECIES_KOUMAJOU_SAKUYA}),
 	},
@@ -1873,7 +1830,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sESakuyaLevelUpLearnset,
 		.teachableLearnset = sESakuyaTeachableLearnset,
-		.eggMoveLearnset = sESakuyaEggMoveLearnset,
 	},
 
 	[SPECIES_KOUMAJOU_SAKUYA] =
@@ -1925,9 +1881,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sKDSakuyaLevelUpLearnset,
 		.teachableLearnset = sKDSakuyaTeachableLearnset,
-		.eggMoveLearnset = sKDSakuyaEggMoveLearnset,
 	},
-#endif //P_FAMILY_SAKUYA
 
 	[SPECIES_X_SAKUYA] =
 	{
@@ -1983,10 +1937,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sXSakuyaLevelUpLearnset,
 		.teachableLearnset = sXSakuyaTeachableLearnset,
-		.eggMoveLearnset = sNoneEggMoveLearnset,
 	},
 
-#if P_FAMILY_REMILIA
 	[SPECIES_CHIBI_REMILIA] =
 	{
 		.baseHP        = 30,
@@ -2089,7 +2041,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sRemiliaLevelUpLearnset,
 		.teachableLearnset = sRemiliaTeachableLearnset,
-		.eggMoveLearnset = sRemiliaEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_EXTRA_REMILIA},
 								{EVO_ITEM, ITEM_SUN_STONE, SPECIES_ADVENT_REMILIA},
 								{EVO_ITEM, ITEM_MOON_STONE, SPECIES_KOUMAJOU_REMILIA}),
@@ -2144,7 +2095,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sERemiliaLevelUpLearnset,
 		.teachableLearnset = sERemiliaTeachableLearnset,
-		.eggMoveLearnset = sERemiliaEggMoveLearnset,
 	},
 
 	[SPECIES_ADVENT_REMILIA] =
@@ -2197,7 +2147,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sAdRemiliaLevelUpLearnset,
 		.teachableLearnset = sAdRemiliaTeachableLearnset,
-		.eggMoveLearnset = sAdRemiliaEggMoveLearnset,
 	},
 
 	[SPECIES_KOUMAJOU_REMILIA] =
@@ -2249,9 +2198,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sKDRemiliaLevelUpLearnset,
 		.teachableLearnset = sKDRemiliaTeachableLearnset,
-		.eggMoveLearnset = sKDRemiliaEggMoveLearnset,
 	},
-#endif //P_FAMILY_REMILIA
 
 	[SPECIES_LAST_WORD_REMILIA] =
 	{
@@ -2303,10 +2250,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 0,
 		.levelUpLearnset = sLRemiliaLevelUpLearnset,
 		.teachableLearnset = sLRemiliaTeachableLearnset,
-		.eggMoveLearnset = sNoneEggMoveLearnset,
 	},
 
-#if P_FAMILY_FLANDRE
 	[SPECIES_CHIBI_FLANDRE] =
 	{
 		.baseHP        = 25,
@@ -2409,7 +2354,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sFlandreLevelUpLearnset,
 		.teachableLearnset = sFlandreTeachableLearnset,
-		.eggMoveLearnset = sFlandreEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_EXTRA_FLANDRE}),
 	},
 
@@ -2463,9 +2407,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sEFlandreLevelUpLearnset,
 		.teachableLearnset = sEFlandreTeachableLearnset,
-		.eggMoveLearnset = sEFlandreEggMoveLearnset,
 	},
-#endif //P_FAMILY_FLANDRE
 
 	[SPECIES_LAST_WORD_FLANDRE] =
 	{
@@ -2517,10 +2459,8 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sLFlandreLevelUpLearnset,
 		.teachableLearnset = sLFlandreTeachableLearnset,
-		.eggMoveLearnset = sNoneEggMoveLearnset,
 	},
 
-#if P_FAMILY_SATSUKI
 	[SPECIES_CHIBI_SATSUKI] =
 	{
 		.baseHP        = 45,
@@ -2623,7 +2563,6 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 2,
 		.levelUpLearnset = sSatsukiLevelUpLearnset,
 		.teachableLearnset = sSatsukiTeachableLearnset,
-		.eggMoveLearnset = sSatsukiEggMoveLearnset,
 		.evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_EXTRA_SATSUKI}),
 	},
 
@@ -2676,9 +2615,7 @@ const struct SpeciesInfo gSpeciesInfoTouhou6[] =
 		.iconPalIndex = 2,
 		.levelUpLearnset = sESatsukiLevelUpLearnset,
 		.teachableLearnset = sESatsukiTeachableLearnset,
-		.eggMoveLearnset = sESatsukiEggMoveLearnset,
 	},
-#endif //P_FAMILY_SATSUKI
 
 #ifdef __INTELLISENSE__
 };

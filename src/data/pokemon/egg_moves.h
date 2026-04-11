@@ -6360,74 +6360,51 @@ static const u16 sFrigibaxEggMoveLearnset[] = {
 };
 #endif //P_FAMILY_FRIGIBAX
 
-#if P_FAMILY_REIMU
 static const u16 sCReimuEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_REIMU
 
-#if P_FAMILY_MARISA
 static const u16 sCMarisaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_MARISA
 
-#if P_FAMILY_RUMIA
 static const u16 sCRumiaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_RUMIA
 
-#if P_FAMILY_DAIYOUSEI
 static const u16 sCDaiyouseiEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_DAIYOUSEI
 
-#if P_FAMILY_CIRNO
 static const u16 sCCirnoEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_CIRNO
 
-#if P_FAMILY_MEILING
 static const u16 sCMeilingEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_MEILING
 
-#if P_FAMILY_KOAKUMA
 static const u16 sCKoakumaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_KOAKUMA
 
-#if P_FAMILY_PATCHOULI
 static const u16 sCPatchouliEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_PATCHOULI
 
-#if P_FAMILY_SAKUYA
 static const u16 sCSakuyaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_SAKUYA
 
-#if P_FAMILY_REMILIA
 static const u16 sCRemiliaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_REMILIA
 
-#if P_FAMILY_FLANDRE
 static const u16 sCFlandreEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_FLANDRE
 
-#if P_FAMILY_SATSUKI
 static const u16 sCSatsukiEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_SATSUKI
+
