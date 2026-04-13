@@ -2605,7 +2605,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 5,
     },
 
-    [ABILITY_MANA_BARRIER] =
+    [ABILITY_MYSTIC_BARRIER] =
     {
         .name = _("Mana Barrier"),
         .description = COMPOUND_STRING("Prevents others from lowering\nuser's stats."),
@@ -3096,5 +3096,13 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Focus"),
         .description = COMPOUND_STRING("User's accuracy boosted by 1.3x."),
         .aiRating = 7,
+    },
+
+    [ABILITY_GAP_BLOCK] =
+    {
+        .name = _("Gap Block"),
+        .description = COMPOUND_STRING("Avoids status moves."),
+        .aiRating = 8,
+        .breakable = TRUE,
     },
 };

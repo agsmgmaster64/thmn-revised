@@ -2479,6 +2479,7 @@ bool32 CanAbilityAbsorbMove(struct BattleContext *ctx)
         break;
     case ABILITY_GOOD_AS_GOLD:
     case ABILITY_INNATE_DREAM:
+    case ABILITY_GAP_BLOCK:
         if (IsBattleMoveStatus(ctx->move))
         {
             enum MoveTarget target = GetBattlerMoveTargetType(ctx->battlerAtk, ctx->move);
@@ -11633,7 +11634,7 @@ bool32 CanAbilityPreventStatLoss(enum Ability ability, enum Stat statId)
     case ABILITY_FULL_METAL_BODY:
     case ABILITY_WHITE_SMOKE:
     case ABILITY_HAKUREI_MIKO:
-    case ABILITY_MANA_BARRIER:
+    case ABILITY_MYSTIC_BARRIER:
         return STAT_ABILITY_PREVENT_ANY;
     case ABILITY_ILLUMINATE:
         if (GetConfig(B_ILLUMINATE_EFFECT) < GEN_9)

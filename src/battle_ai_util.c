@@ -2370,7 +2370,7 @@ bool32 CanLowerStat(enum BattlerId battlerAtk, enum BattlerId battlerDef, struct
         case ABILITY_WHITE_SMOKE:
         case ABILITY_FULL_METAL_BODY:
         case ABILITY_HAKUREI_MIKO:
-        case ABILITY_MANA_BARRIER:
+        case ABILITY_MYSTIC_BARRIER:
             return FALSE;
         case ABILITY_SHIELD_DUST:
         case ABILITY_FLAWLESS:
@@ -5762,6 +5762,7 @@ bool32 AI_ShouldSpicyExtract(enum BattlerId battlerAtk, enum BattlerId battlerAt
      || partnerAbility == ABILITY_CONTRARY
      || partnerAbility == ABILITY_GOOD_AS_GOLD
      || partnerAbility == ABILITY_INNATE_DREAM
+     || partnerAbility == ABILITY_GAP_BLOCK
      || HasBattlerSideMoveWithEffect(LEFT_FOE(battlerAtk), EFFECT_FOUL_PLAY))
         return FALSE;
 
@@ -6178,8 +6179,9 @@ enum AIScore BattlerBenefitsFromAbilityScore(enum BattlerId battler, enum Abilit
     case ABILITY_SPEED_BOOST:
     case ABILITY_WHITE_SMOKE:
     case ABILITY_HAKUREI_MIKO:
-    case ABILITY_MANA_BARRIER:
+    case ABILITY_MYSTIC_BARRIER:
     case ABILITY_INNATE_DREAM:
+    case ABILITY_GAP_BLOCK:
         return GOOD_EFFECT;
     // Conditional ability logic goes here.
     case ABILITY_COMPOUND_EYES:

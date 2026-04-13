@@ -2140,6 +2140,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
           || DoesPartnerHaveSameMoveEffect(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove)
           || aiData->abilities[BATTLE_PARTNER(battlerAtk)] == ABILITY_GOOD_AS_GOLD
           || aiData->abilities[BATTLE_PARTNER(battlerAtk)] == ABILITY_INNATE_DREAM
+          || aiData->abilities[BATTLE_PARTNER(battlerAtk)] == ABILITY_GAP_BLOCK
           || (aiData->partnerMove != MOVE_NONE && IsBattleMoveStatus(aiData->partnerMove))
           || gBattleStruct->monToSwitchIntoId[BATTLE_PARTNER(battlerAtk)] != PARTY_SIZE) //Partner is switching out.
             ADJUST_SCORE(-20);
@@ -3034,6 +3035,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
           || aiData->abilities[battlerDef] == ABILITY_CLEAR_BODY
           || aiData->abilities[battlerDef] == ABILITY_GOOD_AS_GOLD
           || aiData->abilities[battlerDef] == ABILITY_INNATE_DREAM
+          || aiData->abilities[battlerDef] == ABILITY_GAP_BLOCK
           || aiData->holdEffects[battlerDef] == HOLD_EFFECT_CLEAR_AMULET))
             ADJUST_SCORE(-10);
         break;
@@ -3247,6 +3249,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
          || !HasDamagingMove(battlerAtkPartner)
          || aiData->abilities[battlerAtkPartner] == ABILITY_GOOD_AS_GOLD
          || aiData->abilities[battlerAtkPartner] == ABILITY_INNATE_DREAM
+         || aiData->abilities[battlerAtkPartner] == ABILITY_GAP_BLOCK
          || (aiData->partnerMove != MOVE_NONE && IsBattleMoveStatus(aiData->partnerMove)))
         {
             ADJUST_SCORE(WORST_EFFECT);
