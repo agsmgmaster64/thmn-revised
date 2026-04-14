@@ -16065,6 +16065,30 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Charcoal,
         .iconPalette = gItemIconPalette_Charcoal,
     },
+
+    [ITEM_CURSED_TAG] =
+    {
+        .name = ITEM_NAME("Cursed Tag"),
+    #if I_PRICE >= GEN_9
+        .price = 10000,
+    #elif I_PRICE >= GEN_7
+        .price = 4000,
+    #else
+        .price = 200,
+    #endif
+        .holdEffect = HOLD_EFFECT_BLACK_SLUDGE,
+        .description = COMPOUND_STRING(
+            "Restores HP for\n"
+            "Poison-types.\n"
+            "Damages all others."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BlackSludge,
+        .iconPalette = gItemIconPalette_BlackSludge,
+    },
 };
 
 #undef ITEM_NAME

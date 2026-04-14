@@ -1055,6 +1055,7 @@ enum __attribute__((packed)) Item
     ITEM_ICY_BALL = 874,
     ITEM_PARASOL = 875,
     ITEM_GOHEI = 876,
+    ITEM_CURSED_TAG = 877,
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

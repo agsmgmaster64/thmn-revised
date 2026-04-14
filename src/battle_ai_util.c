@@ -5943,6 +5943,7 @@ bool32 ShouldTriggerAbility(enum BattlerId battlerAtk, enum BattlerId battlerDef
 
         case ABILITY_WATER_COMPACTION:
         case ABILITY_WELL_BAKED_BODY:
+        case ABILITY_BAKED_POTATO:
             return (BattlerStatCanRise(battlerDef, ability, STAT_DEF));
 
         default:

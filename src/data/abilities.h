@@ -3112,4 +3112,19 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("When hit under 1/2 HP, Defenses down, offenses up."),
         .aiRating = 3,
     },
+
+    [ABILITY_KAGURA] =
+    {
+        .name = _("Kagura"),
+        .description = COMPOUND_STRING("User's Faith-type move power increases by 1.5x."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_BAKED_POTATO] =
+    {
+        .name = _("Baked Potato"),
+        .description = COMPOUND_STRING("Nullifies Fire attacks on user,\nand gains +2 Defense instead."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
 };

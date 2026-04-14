@@ -2458,6 +2458,7 @@ bool32 CanAbilityAbsorbMove(struct BattleContext *ctx)
             battleScript = AbsorbedByStatIncreaseAbility(ctx->battlerDef, ctx->abilityDef, STAT_ATK, 1);
         break;
     case ABILITY_WELL_BAKED_BODY:
+    case ABILITY_BAKED_POTATO:
         if (ctx->moveType == TYPE_FIRE)
             battleScript = AbsorbedByStatIncreaseAbility(ctx->battlerDef, ctx->abilityDef, STAT_DEF, 2);
         break;
@@ -7570,6 +7571,7 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
         }
         break;
     case ABILITY_DRAGONS_MAW:
+    case ABILITY_KAGURA:
         if (moveType == TYPE_FAITH)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;

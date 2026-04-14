@@ -3639,6 +3639,7 @@ static s32 AI_DoubleBattle(enum BattlerId battlerAtk, enum BattlerId battlerDef,
             case ABILITY_FLASH_FIRE:
             case ABILITY_FLAME_ABSORB:
             case ABILITY_WELL_BAKED_BODY:
+            case ABILITY_BAKED_POTATO:
                 if (moveType == TYPE_FIRE)
                 {
                     if (moveTarget == TARGET_FOES_AND_ALLY)
