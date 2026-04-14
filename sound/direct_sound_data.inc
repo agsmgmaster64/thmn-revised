@@ -601,7 +601,7 @@ Cry_Rin::
 	.incbin "sound/direct_sound_samples/cries/rin.bin"
 
 	.align 2
-Cry_ZFairy::
+Cry_Zombie_Fairy::
 	.incbin "sound/direct_sound_samples/cries/zombie_fairy.bin"
 
 	.align 2

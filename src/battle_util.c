@@ -4101,12 +4101,14 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             break;
         case ABILITY_LINGERING_AROMA:
         case ABILITY_MUMMY:
+        case ABILITY_CONTAGION:
             if (IsBattlerAlive(gBattlerAttacker)
              && IsBattlerTurnDamaged(gBattlerTarget)
              && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), move)
              && gBattleMons[gBattlerAttacker].volatiles.overwrittenAbility != GetBattlerAbility(gBattlerTarget)
              && gBattleMons[gBattlerAttacker].ability != ABILITY_MUMMY
              && gBattleMons[gBattlerAttacker].ability != ABILITY_LINGERING_AROMA
+             && gBattleMons[gBattlerAttacker].ability != ABILITY_CONTAGION
              && !gAbilitiesInfo[gBattleMons[gBattlerAttacker].ability].cantBeSuppressed)
             {
                 if (GetBattlerHoldEffectIgnoreAbility(gBattlerAttacker) == HOLD_EFFECT_ABILITY_SHIELD)

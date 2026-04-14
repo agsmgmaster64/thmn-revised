@@ -2813,12 +2813,12 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .breakable = TRUE,
     },
 
-    // [ABILITY_CONTAGION] =
-    // {
-    //     .name = _("Contagion"),
-    //     .description = COMPOUND_STRING("Contact with the user turns the\nattacker's ability into Contagion."),
-    //     .aiRating = 5,
-    // },
+    [ABILITY_CONTAGION] =
+    {
+        .name = _("Contagion"),
+        .description = COMPOUND_STRING("Contact with the user turns the\nattacker's ability into Contagion."),
+        .aiRating = 5,
+    },
 
     [ABILITY_LECTURE] =
     {

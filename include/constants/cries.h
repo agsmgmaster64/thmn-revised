@@ -57,7 +57,7 @@ enum PokemonCry
     CRY_PARSEE,
     CRY_YUUGI,
     CRY_RIN,
-    CRY_ZFAIRY,
+    CRY_ZOMBIE_FAIRY,
     CRY_UTSUHO,
     CRY_SATORI,
     CRY_KOISHI,

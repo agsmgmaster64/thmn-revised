@@ -54,7 +54,7 @@ gCryTable::
 	cry Cry_Parsee
 	cry Cry_Yuugi
 	cry Cry_Rin
-	cry Cry_ZFairy
+	cry Cry_Zombie_Fairy
 	cry Cry_Utsuho
 	cry Cry_Satori
 	cry Cry_Koishi
@@ -262,7 +262,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Parsee
 	cry_reverse Cry_Yuugi
 	cry_reverse Cry_Rin
-	cry_reverse Cry_ZFairy
+	cry_reverse Cry_Zombie_Fairy
 	cry_reverse Cry_Utsuho
 	cry_reverse Cry_Satori
 	cry_reverse Cry_Koishi
