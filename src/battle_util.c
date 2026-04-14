@@ -3968,6 +3968,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_ANGER_SHELL:
+        case ABILITY_ANGER_BREAK:
             if (IsBattlerTurnDamaged(battler)
              && IsBattlerAlive(battler)
              && HadMoreThanHalfHpNowDoesnt(battler))

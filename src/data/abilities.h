@@ -3105,4 +3105,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 8,
         .breakable = TRUE,
     },
+
+    [ABILITY_ANGER_BREAK] =
+    {
+        .name = _("Anger Break"),
+        .description = COMPOUND_STRING("When hit under 1/2 HP, Defenses down, offenses up."),
+        .aiRating = 3,
+    },
 };
