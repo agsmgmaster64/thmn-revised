@@ -7967,6 +7967,12 @@ static inline u32 CalcDefenseStat(struct BattleContext *ctx)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     */
+    case HOLD_EFFECT_PARASOL:
+        if ((gBattleMons[battlerDef].species == SPECIES_CHIBI_YUUKA && usesDefStat) ||
+        (gBattleMons[battlerDef].species == SPECIES_NORMAL_YUUKA && usesDefStat) ||
+        (gBattleMons[battlerDef].species == SPECIES_EXTRA_YUUKA && usesDefStat))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        break;
     default:
         break;
     }

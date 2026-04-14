@@ -1053,6 +1053,8 @@ enum __attribute__((packed)) Item
 
     // New Items
     ITEM_ICY_BALL = 874,
+    ITEM_PARASOL = 875,
+    ITEM_GOHEI = 876,
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

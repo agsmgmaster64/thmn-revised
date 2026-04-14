@@ -142,6 +142,7 @@ enum __attribute__((packed)) HoldEffect
     HOLD_EFFECT_BERSERK_GENE,
     // New hold effects
     HOLD_EFFECT_ICY_BALL,
+    HOLD_EFFECT_PARASOL,
     HOLD_EFFECT_COUNT
 };
 

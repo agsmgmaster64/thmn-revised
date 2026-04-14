@@ -16022,7 +16022,49 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_LightBall,
     },
 
+    [ITEM_PARASOL] =
+    {
+        .name = ITEM_NAME("Parasol"),
+        .price = (I_PRICE >= GEN_7) ? 2000 : 200,
+        .holdEffect = HOLD_EFFECT_PARASOL,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "doubles the Def of\n"
+            "all Yuuka puppets."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_DeepSeaScale,
+        .iconPalette = gItemIconPalette_DeepSeaScale,
+    },
 
+    [ITEM_GOHEI] =
+    {
+        .name = ITEM_NAME("Gohei"),
+    #if I_PRICE >= GEN_9
+        .price = 3000,
+    #elif I_PRICE >= GEN_7
+        .price = 1000,
+    #else
+        .price = 9800,
+    #endif
+        .holdEffect = HOLD_EFFECT_TYPE_POWER,
+        .holdEffectParam = TYPE_BOOST_PARAM,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "raises the power of\n"
+            "Faith-type moves."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_FAITH,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Charcoal,
+        .iconPalette = gItemIconPalette_Charcoal,
+    },
 };
 
 #undef ITEM_NAME
