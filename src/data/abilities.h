@@ -3127,4 +3127,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 5,
         .breakable = TRUE,
     },
+
+    [ABILITY_ORB_FETCH] =
+    {
+        .name = _("Orb Fetch"),
+        .description = COMPOUND_STRING("Saves a failed capture orb, once."),
+        .aiRating = 0,
+    },
 };

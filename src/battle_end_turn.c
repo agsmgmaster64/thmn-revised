@@ -1325,6 +1325,7 @@ static bool32 HandleEndTurnThirdEventBlock(enum BattlerId battler)
         case ABILITY_PICKUP:
         case ABILITY_SPEED_BOOST:
         case ABILITY_POWER_LEAK:
+        case ABILITY_ORB_FETCH:
             if (AbilityBattleEffects(ABILITYEFFECT_ENDTURN, battler, ability, MOVE_NONE, TRUE))
                 effect = TRUE;
             break;
