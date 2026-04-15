@@ -6635,3 +6635,35 @@ static const u16 sCMikoEggMoveLearnset[] = {
 static const u16 sCMamizouEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sCWakasagihimeEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCSekibankiEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCKagerouEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCBenbenEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCYatsuhashiEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCSeijaEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCShinmyoumaruEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCRaikoEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
