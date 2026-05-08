@@ -3142,4 +3142,15 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 4,
         .breakable = TRUE,
     },
+
+    [ABILITY_SOOTHING_SMOKE] =
+    {
+        .name = _("Soothing Smoke"),
+        .description = COMPOUND_STRING("All Abilities are nullified."),
+        .aiRating = 5,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .failsOnImposter = TRUE,
+    },
 };

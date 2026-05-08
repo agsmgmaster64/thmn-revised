@@ -13375,6 +13375,7 @@ void BS_JumpIfAbilityCantBeReactivated(void)
     case ABILITY_CLOUD_NINE:
     case ABILITY_UNCONSCIOUS:
     case ABILITY_HISOUTEN:
+    case ABILITY_SOOTHING_SMOKE:
         gBattlescriptCurrInstr = cmd->jumpInstr;
         break;
     default:

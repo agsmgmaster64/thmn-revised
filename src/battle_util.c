@@ -5155,7 +5155,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         }
         break;
     case ABILITYEFFECT_NEUTRALIZINGGAS:
-        if (ability == ABILITY_NEUTRALIZING_GAS && !gBattleMons[battler].volatiles.neutralizingGas)
+        if ((ability == ABILITY_NEUTRALIZING_GAS && !gBattleMons[battler].volatiles.neutralizingGas) ||  (ability == ABILITY_SOOTHING_SMOKE && !gBattleMons[battler].volatiles.neutralizingGas))
         {
             gBattleMons[battler].volatiles.neutralizingGas = TRUE;
             gBattlerAbility = battler;
@@ -5431,7 +5431,8 @@ enum Ability GetBattlerAbilityInternal(enum BattlerId battler, bool32 ignoreMold
 
     if (!hasAbilityShield
      && IsNeutralizingGasOnField()
-     && (gBattleMons[battler].ability != ABILITY_NEUTRALIZING_GAS || gBattleMons[battler].volatiles.gastroAcid))
+     && (gBattleMons[battler].ability != ABILITY_NEUTRALIZING_GAS || gBattleMons[battler].volatiles.gastroAcid)
+     && (gBattleMons[battler].ability != ABILITY_SOOTHING_SMOKE || gBattleMons[battler].volatiles.gastroAcid))
         return ABILITY_NONE;
 
     if (CanBreakThroughAbility(gBattlerAttacker, battler, hasAbilityShield, ignoreMoldBreaker))
@@ -7345,7 +7346,8 @@ static bool32 IsRuinStatusActive(u32 fieldEffect)
             continue;
         if (GetBattlerHoldEffectIgnoreAbility(battler) != HOLD_EFFECT_ABILITY_SHIELD
          && isNeutralizingGasOnField
-         && gBattleMons[battler].ability != ABILITY_NEUTRALIZING_GAS)
+         && gBattleMons[battler].ability != ABILITY_NEUTRALIZING_GAS
+         && gBattleMons[battler].ability != ABILITY_SOOTHING_SMOKE)
             continue;
 
         if (GetBattlerVolatile(battler, fieldEffect))
