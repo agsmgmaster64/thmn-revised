@@ -3201,6 +3201,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_PASTEL_VEIL:
+        case ABILITY_SACRED_VEIL:
             if (shouldAbilityTrigger)
             {
                 SaveBattlerTarget(gBattlerTarget);
@@ -5821,6 +5822,13 @@ bool32 CanSetNonVolatileStatus(enum BattlerId battlerAtk, enum BattlerId battler
             abilityAffected = TRUE;
             battlerDef = sideBattler - 1;
             abilityDef = ABILITY_PASTEL_VEIL;
+            battleScript = BattleScript_ImmunityProtected;
+        }
+        else if ((sideBattler = IsAbilityOnSide(battlerDef, ABILITY_SACRED_VEIL)))
+        {
+            abilityAffected = TRUE;
+            battlerDef = sideBattler - 1;
+            abilityDef = ABILITY_SACRED_VEIL;
             battleScript = BattleScript_ImmunityProtected;
         }
         else if (abilityDef == ABILITY_IMMUNITY)
@@ -9651,6 +9659,7 @@ enum ImmunityHealStatusOutcome TryImmunityAbilityHealStatus(enum BattlerId battl
     {
     case ABILITY_IMMUNITY:
     case ABILITY_PASTEL_VEIL:
+    case ABILITY_SACRED_VEIL:
         if (gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON | STATUS1_TOXIC_COUNTER))
         {
             StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);

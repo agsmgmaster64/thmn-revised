@@ -3134,4 +3134,12 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Saves a failed capture orb, once."),
         .aiRating = 0,
     },
+
+    [ABILITY_SACRED_VEIL] =
+    {
+        .name = _("Sacred Veil"),
+        .description = COMPOUND_STRING("Protects user and allies from\nbeing poisoned."),
+        .aiRating = 4,
+        .breakable = TRUE,
+    },
 };

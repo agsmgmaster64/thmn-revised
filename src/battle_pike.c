@@ -837,7 +837,7 @@ static bool8 DoesAbilityPreventStatus(struct Pokemon *mon, u32 status)
             ret = TRUE;
         break;
     case STATUS1_TOXIC_POISON:
-        if (ability == ABILITY_IMMUNITY || ability == ABILITY_PASTEL_VEIL)
+        if (ability == ABILITY_IMMUNITY || ability == ABILITY_PASTEL_VEIL || ability == ABILITY_SACRED_VEIL)
             ret = TRUE;
         break;
     }
