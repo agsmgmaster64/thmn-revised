@@ -2541,7 +2541,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ONI_STRENGTH] =
     {
         .name = _("Oni Strength"),
-        .description = COMPOUND_STRING("Prevents Attack reduction from\nattacker effects."),
+        .description = COMPOUND_STRING("Prevents Attack reduction from\nother's effects."),
         .aiRating = 3,
         .breakable = TRUE,
     },
