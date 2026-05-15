@@ -6827,3 +6827,27 @@ static const u16 sCAriyaEggMoveLearnset[] = {
 static const u16 sCNinaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sCMitoriEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCSashaEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCSugarEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCYuutoEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCKarenEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCMelonEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
