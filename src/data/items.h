@@ -16089,6 +16089,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_BlackSludge,
         .iconPalette = gItemIconPalette_BlackSludge,
     },
+
+    [ITEM_LUNAR_VEST] =
+    {
+        .name = ITEM_NAME("Lunar Vest"),
+        .price = (I_PRICE >= GEN_7) ? 1000 : 10,
+        .holdEffect = HOLD_EFFECT_LUNAR_VEST,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "doubles Reisen II's\n"
+            "Defense."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_DittoPowder,
+        .iconPalette = gItemIconPalette_MetalPowder,
+    },
 };
 
 #undef ITEM_NAME

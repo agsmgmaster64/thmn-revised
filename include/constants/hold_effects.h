@@ -143,6 +143,7 @@ enum __attribute__((packed)) HoldEffect
     // New hold effects
     HOLD_EFFECT_ICY_BALL,
     HOLD_EFFECT_PARASOL,
+    HOLD_EFFECT_LUNAR_VEST,
     HOLD_EFFECT_COUNT
 };
 

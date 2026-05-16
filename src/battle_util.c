@@ -7988,6 +7988,10 @@ static inline u32 CalcDefenseStat(struct BattleContext *ctx)
         (gBattleMons[battlerDef].species == SPECIES_EXTRA_YUUKA && usesDefStat))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
+    case HOLD_EFFECT_LUNAR_VEST:
+        if ((gBattleMons[battlerDef].species == SPECIES_REISEN_II && usesDefStat))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        break;
     default:
         break;
     }
