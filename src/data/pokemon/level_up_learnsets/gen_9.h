@@ -24629,7 +24629,17 @@ static const struct LevelUpMove sEKirisameLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sShingyokuLevelUpLearnset[] = { 
+static const struct LevelUpMove sShingyokuOrbLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
+static const struct LevelUpMove sShingyokuMaleLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
+static const struct LevelUpMove sShingyokuFemaleLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };

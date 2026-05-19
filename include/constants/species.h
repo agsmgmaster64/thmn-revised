@@ -429,10 +429,10 @@
 #define SPECIES_CHIBI_KIRISAME                          420
 #define SPECIES_NORMAL_KIRISAME                         421
 #define SPECIES_EXTRA_KIRISAME                          422
-#define SPECIES_SHINGYOKU                               SPECIES_ORB_SHINGYOKU
-#define SPECIES_ORB_SHINGYOKU                           423
-#define SPECIES_MALE_SHINGYOKU                          424
-#define SPECIES_FEMALE_SHINGYOKU                        425
+#define SPECIES_SHINGYOKU                               SPECIES_SHINGYOKU_ORB
+#define SPECIES_SHINGYOKU_ORB                           423
+#define SPECIES_SHINGYOKU_MALE                          424
+#define SPECIES_SHINGYOKU_FEMALE                        425
 #define SPECIES_MIMA                                    426
 #define SPECIES_KONNGARA                                427
 #define SPECIES_YUUGENMAGAN                             428

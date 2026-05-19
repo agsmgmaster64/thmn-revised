@@ -58397,7 +58397,13 @@
     "MOVE_WONDER_ROOM",
     "MOVE_ZEN_HEADBUTT"
   ],
-  "SHINGYOKU": [
+  "SHINGYOKU_ORB": [
+    "MOVE_POUND"
+  ],
+  "SHINGYOKU_MALE": [
+    "MOVE_POUND"
+  ],
+  "SHINGYOKU_FEMALE": [
     "MOVE_POUND"
   ],
   "MANAPHY": [

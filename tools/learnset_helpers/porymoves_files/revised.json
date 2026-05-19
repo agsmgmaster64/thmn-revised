@@ -5555,7 +5555,31 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "SHINGYOKU": {
+  "SHINGYOKU_ORB": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "SHINGYOKU_MALE": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "SHINGYOKU_FEMALE": {
     "LevelMoves": [
       {
         "Level": 1,
