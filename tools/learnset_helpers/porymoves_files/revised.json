@@ -3167,6 +3167,30 @@
     "EggMoves": [],
     "TutorMoves": []
   },
+  "ORIGINAL_KASEN": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "IBARAKI_ARM": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
   "C_KYOUKO": {
     "LevelMoves": [
       {

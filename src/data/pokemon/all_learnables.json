@@ -92337,6 +92337,12 @@
   "E_KAZAMI": [
     "MOVE_POUND"
   ],
+  "ORIGINAL_KASEN": [
+    "MOVE_POUND"
+  ],
+  "IBARAKI_ARM": [
+    "MOVE_POUND"
+  ],
   "WORMADAM_TRASH": [
     "MOVE_ALLY_SWITCH",
     "MOVE_ATTRACT",

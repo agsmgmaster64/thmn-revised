@@ -529,6 +529,8 @@ s32 CalcWeatherScore(enum BattlerId battlerAtk, enum BattlerId battlerDef, enum 
                 score += WEAK_EFFECT;
             if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_DAMP_ROCK)
                 score += WEAK_EFFECT;
+            if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_SCARLET_ROCK)
+                score += WEAK_EFFECT;
             if (HasBattlerSideMoveWithEffect(battlerDef, EFFECT_MORNING_SUN)
              || HasBattlerSideMoveWithEffect(battlerDef, EFFECT_SYNTHESIS)
              || HasBattlerSideMoveWithEffect(battlerDef, EFFECT_SOLAR_BEAM)

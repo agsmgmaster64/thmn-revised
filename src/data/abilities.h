@@ -3153,4 +3153,19 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .failsOnImposter = TRUE,
     },
+
+    [ABILITY_BEER_BREW] =
+    {
+        .name = _("Beer Brew"),
+        .description = COMPOUND_STRING("May create Beer after battle."),
+        .aiRating = 0,
+    },
+
+    [ABILITY_MISERY] =
+    {
+        .name = _("Misery"),
+        .description = COMPOUND_STRING("-25% Defense for all other\nbattlers on the field."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
 };

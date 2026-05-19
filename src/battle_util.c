@@ -2121,7 +2121,7 @@ bool32 TryChangeBattleWeather(enum BattlerId battler, u32 battleWeatherId, enum 
 
         if (gBattleWeather & B_WEATHER_PRIMAL_ANY)
             gBattleStruct->weatherDuration = 0;
-        else if (rock != 0 && GetBattlerHoldEffect(battler) == rock)
+        else if ((rock != 0 && GetBattlerHoldEffect(battler) == rock) || (rock != 0 && GetBattlerHoldEffect(battler) == HOLD_EFFECT_SCARLET_ROCK))
             gBattleStruct->weatherDuration = 8;
         else
             gBattleStruct->weatherDuration = 5;
@@ -3592,6 +3592,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_SWORD_OF_RUIN:
+        case ABILITY_MISERY:
             if (shouldAbilityTrigger)
             {
                 gBattleMons[battler].volatiles.swordOfRuin = TRUE;
@@ -11370,6 +11371,7 @@ void RemoveAbilityFlags(enum BattlerId battler)
         gBattleMons[battler].volatiles.tabletsOfRuin = FALSE;
         break;
     case ABILITY_SWORD_OF_RUIN:
+    case ABILITY_MISERY:
         gBattleMons[battler].volatiles.swordOfRuin = FALSE;
         break;
     case ABILITY_BEADS_OF_RUIN:

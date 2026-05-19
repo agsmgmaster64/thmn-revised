@@ -23634,6 +23634,16 @@ static const struct LevelUpMove sEKasenLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
+static const struct LevelUpMove sOriginalKasenLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
+static const struct LevelUpMove sIbarakiArmLevelUpLearnset[] = { 
+    LEVEL_UP_MOVE(1, MOVE_POUND),
+    LEVEL_UP_END 
+};
+
 static const struct LevelUpMove sCKyoukoLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 

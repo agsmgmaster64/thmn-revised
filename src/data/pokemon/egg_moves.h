@@ -6887,3 +6887,63 @@ static const u16 sCMiyoiEggMoveLearnset[] = {
 static const u16 sCSendaiEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sCSuikaEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCSunnyEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCLunaEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCStarEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sTenmaEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCIkuEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCTenshiEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sNamazuEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCHatateEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCKasenEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCKokoroEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCSumirekoEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCJoonEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCShionEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sCYuumaEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};

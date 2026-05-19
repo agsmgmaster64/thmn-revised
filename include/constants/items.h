@@ -1057,6 +1057,8 @@ enum __attribute__((packed)) Item
     ITEM_GOHEI = 876,
     ITEM_CURSED_TAG = 877,
     ITEM_LUNAR_VEST = 878,
+    ITEM_BEER = 879,
+    ITEM_SCARLET_ROCK = 880,
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

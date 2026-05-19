@@ -16107,6 +16107,50 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_DittoPowder,
         .iconPalette = gItemIconPalette_MetalPowder,
     },
+
+    [ITEM_BEER] =
+    {
+        .name = ITEM_NAME("Beer"),
+        .price = (I_PRICE >= GEN_7) ? 600 : 500,
+        .holdEffectParam = 100,
+        .description = COMPOUND_STRING(
+            "A nice, cold beer\n"
+            "that restores HP\n"
+            "by 100 points."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HEALTH_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_RESTORE_HP,
+        .effect = gItemEffect_MoomooMilk,
+        .flingPower = 30,
+        .iconPic = gItemIcon_MoomooMilk,
+        .iconPalette = gItemIconPalette_MoomooMilk,
+    },
+
+    [ITEM_SCARLET_ROCK] =
+    {
+        .name = ITEM_NAME("Scarlet Rock"),
+    #if I_PRICE >= GEN_9
+        .price = 8000,
+    #elif I_PRICE >= GEN_7
+        .price = 4000,
+    #else
+        .price = 200,
+    #endif
+        .holdEffect = HOLD_EFFECT_SCARLET_ROCK,
+        .description = COMPOUND_STRING(
+            "Extends the length\n"
+            "of set weather\n"
+            "from 5 turns to 8."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 60,
+        .iconPic = gItemIcon_DampRock,
+        .iconPalette = gItemIconPalette_DampRock,
+    },
 };
 
 #undef ITEM_NAME

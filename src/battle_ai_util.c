@@ -4558,6 +4558,7 @@ void SetBattlerFieldStatusForSwitchin(enum BattlerId battler)
         gBattleMons[battler].volatiles.vesselOfRuin = TRUE;
         break;
     case ABILITY_SWORD_OF_RUIN:
+    case ABILITY_MISERY:
         gBattleMons[battler].volatiles.swordOfRuin = TRUE;
         break;
     case ABILITY_TABLETS_OF_RUIN:
@@ -6312,6 +6313,7 @@ enum AIScore BattlerBenefitsFromAbilityScore(enum BattlerId battler, enum Abilit
     case ABILITY_SWORD_OF_RUIN:
     case ABILITY_TABLETS_OF_RUIN:
     case ABILITY_VESSEL_OF_RUIN:
+    case ABILITY_MISERY:
         if (HasPartner(battler))
         {
             if (aiData->abilities[BATTLE_PARTNER(battler)] != ability)

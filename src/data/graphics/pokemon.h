@@ -29216,6 +29216,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_EKasen[] = INCBIN_U16("graphics/pokemon/_add/th/kasen/extra/shiny.gbapal");
     const u8 gMonIcon_EKasen[] = INCBIN_U8("graphics/pokemon/_add/th/kasen/extra/icon.4bpp");
 
+    const u32 gMonFrontPic_OriginalKasen[] = INCBIN_U32("graphics/pokemon/_add/th/kasen/extra/front.4bpp.smol");
+    const u16 gMonPalette_OriginalKasen[] = INCBIN_U16("graphics/pokemon/_add/th/kasen/extra/normal.gbapal");
+    const u32 gMonBackPic_OriginalKasen[] = INCBIN_U32("graphics/pokemon/_add/th/kasen/extra/back.4bpp.smol");
+    const u16 gMonShinyPalette_OriginalKasen[] = INCBIN_U16("graphics/pokemon/_add/th/kasen/extra/shiny.gbapal");
+    const u8 gMonIcon_OriginalKasen[] = INCBIN_U8("graphics/pokemon/_add/th/kasen/extra/icon.4bpp");
+
+    const u32 gMonFrontPic_IbarakiArm[] = INCBIN_U32("graphics/pokemon/_add/th/kasen/extra/front.4bpp.smol");
+    const u16 gMonPalette_IbarakiArm[] = INCBIN_U16("graphics/pokemon/_add/th/kasen/extra/normal.gbapal");
+    const u32 gMonBackPic_IbarakiArm[] = INCBIN_U32("graphics/pokemon/_add/th/kasen/extra/back.4bpp.smol");
+    const u16 gMonShinyPalette_IbarakiArm[] = INCBIN_U16("graphics/pokemon/_add/th/kasen/extra/shiny.gbapal");
+    const u8 gMonIcon_IbarakiArm[] = INCBIN_U8("graphics/pokemon/_add/th/kasen/extra/icon.4bpp");
+
     const u32 gMonFrontPic_CKyouko[] = INCBIN_U32("graphics/pokemon/_add/th/kyouko/chibi/front.4bpp.smol");
     const u16 gMonPalette_CKyouko[] = INCBIN_U16("graphics/pokemon/_add/th/kyouko/chibi/normal.gbapal");
     const u32 gMonBackPic_CKyouko[] = INCBIN_U32("graphics/pokemon/_add/th/kyouko/chibi/back.4bpp.smol");
