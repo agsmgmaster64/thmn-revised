@@ -24819,7 +24819,7 @@ static const struct LevelUpMove sRuukotoLevelUpLearnset[] = {
     LEVEL_UP_END 
 };
 
-static const struct LevelUpMove sMimichanLevelUpLearnset[] = { 
+static const struct LevelUpMove sMimiChanLevelUpLearnset[] = { 
     LEVEL_UP_MOVE(1, MOVE_POUND),
     LEVEL_UP_END 
 };

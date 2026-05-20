@@ -1059,6 +1059,7 @@ enum __attribute__((packed)) Item
     ITEM_LUNAR_VEST = 878,
     ITEM_BEER = 879,
     ITEM_SCARLET_ROCK = 880,
+    ITEM_ICEBURN_GEM = 881,
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

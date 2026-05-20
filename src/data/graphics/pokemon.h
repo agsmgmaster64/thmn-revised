@@ -30638,11 +30638,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_Ruukoto[] = INCBIN_U16("graphics/pokemon/_add/th/ruukoto/normal/shiny.gbapal");
     const u8 gMonIcon_Ruukoto[] = INCBIN_U8("graphics/pokemon/_add/th/ruukoto/normal/icon.4bpp");
 
-    const u32 gMonFrontPic_Mimichan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/front.4bpp.smol");
-    const u16 gMonPalette_Mimichan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/normal.gbapal");
-    const u32 gMonBackPic_Mimichan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/back.4bpp.smol");
-    const u16 gMonShinyPalette_Mimichan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/shiny.gbapal");
-    const u8 gMonIcon_Mimichan[] = INCBIN_U8("graphics/pokemon/_add/th/mimi_chan/normal/icon.4bpp");
+    const u32 gMonFrontPic_MimiChan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/front.4bpp.smol");
+    const u16 gMonPalette_MimiChan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/normal.gbapal");
+    const u32 gMonBackPic_MimiChan[] = INCBIN_U32("graphics/pokemon/_add/th/mimi_chan/normal/back.4bpp.smol");
+    const u16 gMonShinyPalette_MimiChan[] = INCBIN_U16("graphics/pokemon/_add/th/mimi_chan/normal/shiny.gbapal");
+    const u8 gMonIcon_MimiChan[] = INCBIN_U8("graphics/pokemon/_add/th/mimi_chan/normal/icon.4bpp");
 
     const u32 gMonFrontPic_LotusFlower[] = INCBIN_U32("graphics/pokemon/_add/th/lotus_flower/normal/front.4bpp.smol");
     const u16 gMonPalette_LotusFlower[] = INCBIN_U16("graphics/pokemon/_add/th/lotus_flower/normal/normal.gbapal");

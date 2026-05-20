@@ -16151,6 +16151,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_DampRock,
         .iconPalette = gItemIconPalette_DampRock,
     },
+
+    [ITEM_ICEBURN_GEM] =
+    {
+        .name = ITEM_NAME("Iceburn Gem"),
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_ICEBURN_GEM,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "doubles the Sp. Atk\n"
+            "of normal Yuki/Mai."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_LightBall,
+        .iconPalette = gItemIconPalette_LightBall,
+    },
 };
 
 #undef ITEM_NAME

@@ -145,6 +145,7 @@ enum __attribute__((packed)) HoldEffect
     HOLD_EFFECT_PARASOL,
     HOLD_EFFECT_LUNAR_VEST,
     HOLD_EFFECT_SCARLET_ROCK,
+    HOLD_EFFECT_ICEBURN_GEM,
     HOLD_EFFECT_COUNT
 };
 
