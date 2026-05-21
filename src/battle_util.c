@@ -7744,6 +7744,10 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
         if (gBattleMons[battlerAtk].species == SPECIES_NORMAL_CIRNO)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
+    case HOLD_EFFECT_ICEBURN_GEM:
+        if (IsBattleMoveSpecial(move) && ((gBattleMons[battlerAtk].species == SPECIES_NORMAL_YUKI) || (gBattleMons[battlerAtk].species == SPECIES_NORMAL_MAI))) 
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        break;
     default:
         break;
     }
