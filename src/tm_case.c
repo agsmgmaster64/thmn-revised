@@ -250,15 +250,15 @@ static const u8 sText_FontShort[] = _("{FONT_SHORT}");
 static const u8 sText_TMCase[] = _("TM CASE");
 static const u8 sText_TMCaseWillBePutAway[] = _("The TM Case will be\nput away.");
 
-static const u32 sTMCase_Gfx[] = INCBIN_U32("graphics/tm_case/tm_case.4bpp.smol");
+static const u32 sTMCase_Gfx[] = INCGFX_U32("graphics/tm_case/tm_case.png", ".4bpp.smol");
 static const u32 sTMCaseMenu_Tilemap[] = INCBIN_U32("graphics/tm_case/menu.bin.smolTM");
 static const u32 sTMCase_Tilemap[] = INCBIN_U32("graphics/tm_case/tm_case.bin.smolTM");
-static const u16 gTMCaseMenu_Male_Pal[] = INCBIN_U16("graphics/tm_case/menu_male.gbapal");
-static const u16 gTMCaseMenu_Female_Pal[] = INCBIN_U16("graphics/tm_case/menu_female.gbapal");
-static const u32 sTMCaseDisc_Gfx[] = INCBIN_U32("graphics/tm_case/disc.4bpp.smol");
-static const u16 gTMCaseDiscTypes1_Pal[] = INCBIN_U16("graphics/tm_case/disc_types_1.gbapal");
-static const u16 gTMCaseDiscTypes2_Pal[] = INCBIN_U16("graphics/tm_case/disc_types_2.gbapal");
-static const u8 sTMCaseHM_Gfx[] = INCBIN_U8("graphics/tm_case/hm.4bpp");
+static const u16 gTMCaseMenu_Male_Pal[] = INCGFX_U16("graphics/tm_case/menu_male.pal", ".gbapal");
+static const u16 gTMCaseMenu_Female_Pal[] = INCGFX_U16("graphics/tm_case/menu_female.pal", ".gbapal");
+static const u32 sTMCaseDisc_Gfx[] = INCGFX_U32("graphics/tm_case/disc.png", ".4bpp.smol");
+static const u16 gTMCaseDiscTypes1_Pal[] = INCGFX_U16("graphics/tm_case/disc_types_1.pal", ".gbapal");
+static const u16 gTMCaseDiscTypes2_Pal[] = INCGFX_U16("graphics/tm_case/disc_types_2.pal", ".gbapal");
+static const u8 sTMCaseHM_Gfx[] = INCGFX_U8("graphics/tm_case/hm.png", ".4bpp");
 
 
 static ALIGNED(4) const u16 sPal3Override[] = {RGB(8, 8, 8), RGB(30, 16, 6)};

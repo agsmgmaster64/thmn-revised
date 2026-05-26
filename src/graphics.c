@@ -2064,7 +2064,7 @@ const u16 gTradeMenu_Tilemap[] = INCBIN_U16("graphics/trade/menu.bin");
 const u16 gTradeMenuMonBox_Tilemap[] = INCBIN_U16("graphics/trade/menu_mon_box.bin");
 
 const u16 gMessageBox_Pal[] = INCGFX_U16("graphics/text_window/message_box.png", ".gbapal");
-const u16 gMessageBox_PalAWR[] = INCBIN_U16("graphics/text_window/msgbox_awr.pal", ".gbapal");
+const u16 gMessageBox_PalAWR[] = INCGFX_U16("graphics/text_window/msgbox_awr.pal", ".gbapal");
 const u8 gMessageBox_Gfx[] = INCGFX_U8("graphics/text_window/message_box.png", ".4bpp");
 const u8 gSignpostWindow_Gfx[] = INCGFX_U8("graphics/text_window/signpost.png", ".4bpp");
 

@@ -4201,7 +4201,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         case ABILITY_DOLL_SKEWER:
             if (IsBattlerAlive(gBattlerAttacker)
              && !gBattleStruct->unableToUseMove
-             && IsBattlerTurnDamaged(gBattlerTarget)
+             && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
              && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), move))
             {
                 SetPassiveDamageAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker) / 8);
@@ -4264,48 +4264,6 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_INFECTIOUS:
-        {
-            enum Ability abilityAtk = GetBattlerAbility(gBattlerAttacker);
-            enum HoldEffect holdEffectAtk = GetBattlerHoldEffect(gBattlerAttacker);
-
-            u32 poison, paralysis, sleep;
-
-            if (GetConfig(B_ABILITY_TRIGGER_CHANCE) >= GEN_5)
-            {
-                poison = 9;
-                paralysis = 19;
-            }
-            else
-            {
-                poison = 10;
-                paralysis = 20;
-            }
-            sleep = 30;
-
-            i = RandomUniform(RNG_EFFECT_SPORE, 0, GetConfig(B_ABILITY_TRIGGER_CHANCE) >= GEN_4 ? 99 : 299);
-            if (i < poison)
-                goto POISON_POINT;
-            if (i < paralysis)
-                goto STATIC;
-            // Sleep
-            if (i < sleep
-                && IsBattlerAlive(gBattlerAttacker)
-                && !gBattleStruct->unableToUseMove
-                && IsBattlerTurnDamaged(gBattlerTarget)
-                && CanBeSlept(gBattlerTarget, gBattlerAttacker, abilityAtk, NOT_BLOCKED_BY_SLEEP_CLAUSE)
-                && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, abilityAtk, holdEffectAtk, move))
-            {
-                if (IsSleepClauseEnabled())
-                    gBattleStruct->battlerState[gBattlerAttacker].sleepClauseEffectExempt = TRUE;
-                gEffectBattler = gBattlerAttacker;
-                gBattleScripting.battler = gBattlerTarget;
-                gBattleScripting.moveEffect = MOVE_EFFECT_SLEEP;
-                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
-                BattleScriptCall(BattleScript_AbilityStatusEffect);
-                effect++;
-            }
-        }
-            break;
         case ABILITY_EFFECT_SPORE:
         {
             enum Ability abilityAtk = GetBattlerAbility(gBattlerAttacker);
@@ -4545,7 +4503,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             if (IsBattlerAlive(gBattlerAttacker)
              && (CompareStat(gBattlerAttacker, STAT_SPEED, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility) || GetBattlerAbility(gBattlerAttacker) == ABILITY_MIRROR_ARMOR)
              && !gBattleStruct->unableToUseMove
-             && IsBattlerTurnDamaged(gBattlerTarget))
+             && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES))
             {
                 if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SOUNDPROOF) //add extra blocking for abils/items that stop stat drops?
                 {
@@ -4564,7 +4522,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             break;
         case ABILITY_REACTIVE:
             if (IsBattlerAlive(gBattlerTarget)
-             && IsBattlerTurnDamaged(gBattlerTarget))
+             && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES))
             {
                 if (IsBattleMovePhysical(gCurrentMove)
                  && CompareStat(gBattlerTarget, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
@@ -4606,7 +4564,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         case ABILITY_LAST_GRUDGE:
             if (IsBattlerAlive(gBattlerAttacker)
              && !IsBattlerAlive(gBattlerTarget)
-             && IsBattlerTurnDamaged(gBattlerTarget)
+             && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
              && gCurrentMove != MOVE_STRUGGLE)
             {
                 u8 moveIndex = gBattleStruct->chosenMovePositions[gBattlerAttacker];

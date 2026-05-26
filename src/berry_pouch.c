@@ -308,11 +308,11 @@ static const u8 sText_SortItemsHow[] = _("Sort items how?");
 static const u8 sText_ItemsSorted[] = _("Items sorted by {STR_VAR_1}!");
 static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
 
-static const u32 sBerryPouchSpriteTiles[] = INCBIN_U32("graphics/berry_pouch/berry_pouch.4bpp.smol");
-static const u8 sBerryPouchBgGfx[] = INCBIN_U8("graphics/berry_pouch/background.4bpp.smol");
-static const u16 sBerryPouchBgPals[] = INCBIN_U16("graphics/berry_pouch/background.gbapal");
-static const u16 sBerryPouchBgPal0FemaleOverride[] = INCBIN_U16("graphics/berry_pouch/background_female.gbapal");
-static const u16 sBerryPouchSpritePalette[] = INCBIN_U16("graphics/berry_pouch/berry_pouch.gbapal");
+static const u32 sBerryPouchSpriteTiles[] = INCGFX_U32("graphics/berry_pouch/berry_pouch.png", ".4bpp.smol");
+static const u8 sBerryPouchBgGfx[] = INCGFX_U8("graphics/berry_pouch/background.png", ".4bpp.smol");
+static const u16 sBerryPouchBgPals[] = INCGFX_U16("graphics/berry_pouch/background.png", ".gbapal");
+static const u16 sBerryPouchBgPal0FemaleOverride[] = INCGFX_U16("graphics/berry_pouch/background_female.pal", ".gbapal");
+static const u16 sBerryPouchSpritePalette[] = INCGFX_U16("graphics/berry_pouch/berry_pouch.png", ".gbapal");
 static const u32 sBerryPouchBg1Tilemap[] = INCBIN_U32("graphics/berry_pouch/background.bin.smolTM");
 
 

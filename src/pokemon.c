@@ -626,6 +626,7 @@ static const enum NationalDexOrder sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(DEOXYS),
 };
 
+/*
 const struct SpindaSpot gSpindaSpotGraphics[] =
 {
     {.x = 16, .y =  7, .image = INCGFX_U16("graphics/pokemon/spinda/spots/spot_0.png", ".1bpp", "-plain -data_width 2")},
@@ -633,6 +634,7 @@ const struct SpindaSpot gSpindaSpotGraphics[] =
     {.x = 22, .y = 25, .image = INCGFX_U16("graphics/pokemon/spinda/spots/spot_2.png", ".1bpp", "-plain -data_width 2")},
     {.x = 34, .y = 26, .image = INCGFX_U16("graphics/pokemon/spinda/spots/spot_3.png", ".1bpp", "-plain -data_width 2")}
 };
+*/
 
 // In Battle Palace, moves are chosen based on the pokemons nature rather than by the player
 // Moves are grouped into "Attack", "Defense", or "Support" (see PALACE_MOVE_GROUP_*)
@@ -5095,6 +5097,7 @@ enum NationalDexOrder HoennToNationalOrder(enum HoennDexOrder hoennNum)
     }
 
 
+/*
 void DrawSpindaSpots(u32 personality, u8 *dest, bool32 isSecondFrame)
 {
     s32 i;
@@ -5122,25 +5125,25 @@ void DrawSpindaSpots(u32 personality, u8 *dest, bool32 isSecondFrame)
 
             for (column = x; column < x + SPINDA_SPOT_WIDTH; column++)
             {
-                /* Get target pixels on Spinda's sprite */
+                // Get target pixels on Spinda's sprite
                 u8 *destPixels = dest + ((column / 8) * TILE_SIZE_4BPP) +
                     ((column % 8) / 2) +
                     ((y / 8) * TILE_SIZE_4BPP * 8) +
                     ((y % 8) * 4);
 
-                /* Is this pixel in the 16x16 spot image part of the spot? */
+                // Is this pixel in the 16x16 spot image part of the spot?
                 if (spotPixelRow & 1)
                 {
-                    /* destPixels addressess two pixels, alternate which */
-                    /* of the two pixels is being considered for drawing */
+                    // destPixels addressess two pixels, alternate which
+                    // of the two pixels is being considered for drawing
                     if (column & 1)
                     {
-                        /* Draw spot pixel if this is Spinda's body color */
+                        // Draw spot pixel if this is Spinda's body color
                         TRY_DRAW_SPOT_PIXEL(destPixels, 4);
                     }
                     else
                     {
-                        /* Draw spot pixel if this is Spinda's body color */
+                        // Draw spot pixel if this is Spinda's body color
                         TRY_DRAW_SPOT_PIXEL(destPixels, 0);
                     }
                 }
@@ -5154,6 +5157,7 @@ void DrawSpindaSpots(u32 personality, u8 *dest, bool32 isSecondFrame)
         personality >>= 8;
     }
 }
+*/
 
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies)
 {

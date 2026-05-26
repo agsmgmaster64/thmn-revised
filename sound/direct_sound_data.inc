@@ -1213,7 +1213,7 @@ Cry_Advent_Remilia::
 .if TESTING == TRUE
 @ Tests use a single shared cry for all mons, and Fletchling is the standard measurement
 	.align 2
-	.incbin "sound/direct_sound_samples/cries/fletchling.bin"
+	.incbin "sound/direct_sound_samples/cries/reimu.bin"
 .endif
 
 	.align 2

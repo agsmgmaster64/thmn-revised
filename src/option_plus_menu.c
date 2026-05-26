@@ -350,20 +350,20 @@ static EWRAM_DATA u8 *sBg3TilemapBuffer = NULL;
 
 // const data
 static const u16 sOptionMenuBg_Pal[] = {RGB(17, 18, 31)};
-static const u16 sOptionMenuText_Pal[] = INCBIN_U16("graphics/interface/option_menu_text_custom.gbapal");
+static const u16 sOptionMenuText_Pal[] = INCGFX_U16("graphics/interface/option_menu_text_custom.pal", ".gbapal");
 
-static const u32 sOptionsPlusTiles[] = INCBIN_U32("graphics/ui_options_plus/options_plus_tiles.4bpp.smol");
+static const u32 sOptionsPlusTiles[] = INCGFX_U32("graphics/ui_options_plus/options_plus_tiles.png", ".4bpp.smol");
 static const u32 sOptionsPlusTilemap[] = INCBIN_U32("graphics/ui_options_plus/options_plus_tiles.bin.smolTM");
 
-static const u16 sOptionsPlusPalette[] = INCBIN_U16("graphics/ui_options_plus/options_plus_tiles_wlr.gbapal");
-static const u16 sOptionsPlusPalette_AWR[] = INCBIN_U16("graphics/ui_options_plus/options_plus_tiles_awr.gbapal");
+static const u16 sOptionsPlusPalette[] = INCGFX_U16("graphics/ui_options_plus/options_plus_tiles_wlr.pal", ".gbapal");
+static const u16 sOptionsPlusPalette_AWR[] = INCGFX_U16("graphics/ui_options_plus/options_plus_tiles_awr.pal", ".gbapal");
 
 // Scrolling Background
-static const u32 sScrollBgTiles[] = INCBIN_U32("graphics/ui_options_plus/scroll_tiles.4bpp.smol");
+static const u32 sScrollBgTiles[] = INCGFX_U32("graphics/ui_options_plus/scroll_tiles.png", ".4bpp.smol");
 static const u32 sScrollBgTilemap[] = INCBIN_U32("graphics/ui_options_plus/scroll_tiles.bin.smolTM");
 
-static const u16 sScrollBgPalette[] = INCBIN_U16("graphics/ui_options_plus/scroll_tiles_wlr.gbapal");
-static const u16 sScrollBgPalette_AWR[] = INCBIN_U16("graphics/ui_options_plus/scroll_tiles_awr.gbapal");
+static const u16 sScrollBgPalette[] = INCGFX_U16("graphics/ui_options_plus/scroll_tiles_wlr.pal", ".gbapal");
+static const u16 sScrollBgPalette_AWR[] = INCGFX_U16("graphics/ui_options_plus/scroll_tiles_awr.pal", ".gbapal");
 
 #define TEXT_COLOR_OPTIONS_WHITE                1
 #define TEXT_COLOR_OPTIONS_GRAY_FG              2
