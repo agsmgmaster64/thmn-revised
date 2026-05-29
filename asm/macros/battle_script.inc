@@ -1839,6 +1839,11 @@
 	.byte \battler
 	.endm
 
+	.macro abilityonformchange battler:req
+	callnative BS_AbilityOnFormChange
+	.byte \battler
+	.endm
+
 	.macro instanthpdrop
 	callnative BS_InstantHpDrop
 	.endm
@@ -2091,7 +2096,9 @@
 	.endm
 
 	.macro jumpifsafeguard jumpInstr:req
+	jumpiftargetally 2f
 	jumpifability BS_ATTACKER, ABILITY_INFILTRATOR, 1f
+	2:
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, \jumpInstr
 	1:
 	.endm

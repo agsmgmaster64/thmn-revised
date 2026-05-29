@@ -69,6 +69,7 @@ BattleScript_TeraFormChange::
 	printstring STRINGID_PKMNTERASTALLIZEDINTO
 	waitmessage B_WAIT_TIME_LONG
 	switchinabilities BS_ATTACKER
+	abilityonformchange BS_ATTACKER
 	end3
 
 BattleScript_EffectStatChange::
@@ -205,7 +206,7 @@ BattleScript_ConsumableBerryStatRaiseRipen::
 
 BattleScript_ConsumableItemStatRaise::
 	playanimation BS_SCRIPTING, B_ANIM_HELD_ITEM_EFFECT
-	trybattlerstatchange BS_SCRIPTING, STAT_CHANGE_ITEM
+	trybattlerstatchange BS_SCRIPTING, STAT_CHANGE_ITEM | STAT_CHANGE_CERTAIN
 	removeitem BS_SCRIPTING
 	return
 
@@ -216,7 +217,7 @@ BattleScript_MirrorArmorReflect::
 	return
 
 BattleScript_EndTurnStatChange::
-	trybattlerstatchange BS_ATTACKER, STAT_CHANGE_IGNORE_MIRROR_ARMOR
+	trystatchanges BS_ATTACKER, STAT_CHANGE_IGNORE_MIRROR_ARMOR
 	return
 
 BattleScript_IncreaseStatChangeMessage::
@@ -230,6 +231,11 @@ BattleScript_DecreaseStatChangeMessage::
 	waitmessage B_WAIT_TIME_LONG
 	trydefiantrattled
 	tryadrenalineorb
+	return
+
+BattleScript_DecreaseStatChangeMessageMinStat::
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_StatDidntChangeMessagePause::
@@ -301,8 +307,8 @@ BattleScript_SyrupBombActivates::
 
 BattleScript_SyrupBombEndTurn::
 	flushtextbox
-	playanimation BS_ATTACKER, B_ANIM_SYRUP_BOMB_SPEED_DROP
-	trybattlerstatchange BS_ATTACKER, STAT_CHANGE_IGNORE_MIRROR_ARMOR
+	playanimation BS_TARGET, B_ANIM_SYRUP_BOMB_SPEED_DROP
+	trystatchanges BS_ATTACKER, STAT_CHANGE_IGNORE_MIRROR_ARMOR
 	return
 
 BattleScript_MoveSwitchPursuitEnd:
