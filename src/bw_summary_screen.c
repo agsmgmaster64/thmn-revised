@@ -2639,9 +2639,6 @@ static void TryUpdateRelearnType(enum IncrDecrUpdateValues delta)
             break;
         }
 
-        if (!CheckRelearnerStateFlag(state))
-            continue;
-
         hasRelearnableMoves = HasAnyRelearnableMoves(state);
         if (hasRelearnableMoves != 0)
         {

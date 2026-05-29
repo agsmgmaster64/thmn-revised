@@ -4360,41 +4360,40 @@ static enum MoveEndResult MoveEndPursuitNextAction(struct BattleCalcValues *cv)
     return result;
 }
 
-static enum MoveEndResult MoveEndWallMaster(void)
+static enum MoveEndResult MoveEndWallMaster(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
 
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_WALL_MASTER
+    if (GetBattlerAbility(cv->battlerAtk) == ABILITY_WALL_MASTER
         && (!gBattleStruct->unableToUseMove) &&
-        (gCurrentMove == MOVE_REFLECT
-        || gCurrentMove == MOVE_LIGHT_SCREEN
-        || gCurrentMove == MOVE_MIST
-        || gCurrentMove == MOVE_SAFEGUARD))
+        (cv->move == MOVE_REFLECT
+        || cv->move == MOVE_LIGHT_SCREEN
+        || cv->move == MOVE_MIST
+        || cv->move == MOVE_SAFEGUARD))
     {
         u8 i;
         // first flag the current move
         for (i = 0; i < 4; i++)
         {
-            if (gCurrentMove == gBattleMons[gBattlerAttacker].moves[i])
-                gSpecialStatuses[gBattlerAttacker].wallMasterTracker |= (1 << i);
+            if (cv->move == gBattleMons[cv->battlerAtk].moves[i])
+                gSpecialStatuses[cv->battlerAtk].wallMasterTracker |= (1 << i);
         }
         // now look for an unflagged wall move to call
         for (i = 0; i < 4; i++)
         {
-            if (!(gSpecialStatuses[gBattlerAttacker].wallMasterTracker & (1 << i)) && 
-                    (gBattleMons[gBattlerAttacker].moves[i] == MOVE_REFLECT
-                || gBattleMons[gBattlerAttacker].moves[i] == MOVE_LIGHT_SCREEN
-                || gBattleMons[gBattlerAttacker].moves[i] == MOVE_SAFEGUARD
-                || gBattleMons[gBattlerAttacker].moves[i] == MOVE_MIST))
+            if (!(gSpecialStatuses[cv->battlerAtk].wallMasterTracker & (1 << i)) && 
+                    (gBattleMons[cv->battlerAtk].moves[i] == MOVE_REFLECT
+                || gBattleMons[cv->battlerAtk].moves[i] == MOVE_LIGHT_SCREEN
+                || gBattleMons[cv->battlerAtk].moves[i] == MOVE_SAFEGUARD
+                || gBattleMons[cv->battlerAtk].moves[i] == MOVE_MIST))
             {
-                gCurrentMove = gBattleMons[gBattlerAttacker].moves[i];
-                gBattleScripting.moveendState = -1; // it will get incremented to 0 afterwards
-                MoveValuesCleanUp();
-                BattleScriptPush(GetMoveBattleScript(gCurrentMove));
-                gCalledMove = gCurrentMove;
+                cv->move = gBattleMons[cv->battlerAtk].moves[i];
+                gBattleScripting.moveendState = 0; // it will get incremented to 0 afterwards
+                BattleScriptPush(GetMoveBattleScript(cv->move));
+                gCalledMove = cv->move;
                 gBattlescriptCurrInstr = BattleScript_WallMasterActivates;
                 i = 4;
-                result = MOVEEND_RESULT_RUN_SCRIPT;
+                return MOVEEND_RESULT_RUN_SCRIPT;
             }
         }
     }
@@ -4403,30 +4402,27 @@ static enum MoveEndResult MoveEndWallMaster(void)
     return result;
 }
 
-static enum MoveEndResult MoveEndTwinSpark(void)
+static enum MoveEndResult MoveEndTwinSpark(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
 
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TWIN_SPARK &&
+    if (cv->abilities[cv->battlerAtk] == ABILITY_TWIN_SPARK &&
         (!gBattleStruct->unableToUseMove) &&
-        (GetMoveCategory(gCurrentMove) != DAMAGE_CATEGORY_STATUS) &&
-        !(gBattleMons[gBattlerAttacker].status1 & STATUS1_FREEZE) &&
-        !(gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP) &&
-        (gBattleMons[gBattlerTarget].hp > 0) && 
-        (gCurrentMove != MOVE_U_TURN) &&
-        (gCurrentMove != MOVE_VOLT_SWITCH) &&
-        (gCurrentMove != MOVE_STRUGGLE) &&
-        !(gSpecialStatuses[gBattlerAttacker].twinSparkMoveUsed))
+        (GetMoveCategory(cv->move) != DAMAGE_CATEGORY_STATUS) &&
+        !(gBattleMons[cv->battlerAtk].status1 & STATUS1_INCAPACITATED) &&
+        (IsBattlerAlive(cv->battlerAtk)) && 
+        (GetMoveEffect(cv->move) != EFFECT_HIT_ESCAPE) &&
+        (cv->move != MOVE_STRUGGLE) &&
+        !(gSpecialStatuses[cv->battlerAtk].twinSparkMoveUsed))
     {
         // do it again!
-        gBattleScripting.moveendState = -1; // it will get incremented to 0 afterwards
-        MoveValuesCleanUp();
-        GetMoveBattleScript(gCurrentMove);
-        BattleScriptPush(GetMoveBattleScript(gCurrentMove));
-        gCalledMove = gCurrentMove;
+        gBattleScripting.moveendState = 0;
+        GetMoveBattleScript(cv->move);
+        BattleScriptPush(GetMoveBattleScript(cv->move));
+        gCalledMove = cv->move;
         gBattlescriptCurrInstr = BattleScript_TwinSparkActivates;
-        gSpecialStatuses[gBattlerAttacker].twinSparkMoveUsed = 1;
-        result = MOVEEND_RESULT_RUN_SCRIPT;
+        gSpecialStatuses[cv->battlerAtk].twinSparkMoveUsed = TRUE;
+        return MOVEEND_RESULT_RUN_SCRIPT;
     }
 
     gBattleScripting.moveendState++;

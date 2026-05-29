@@ -455,8 +455,8 @@ static void PrintBerrySize(void)
         }
         else
         {
-            ConvertIntToDecimalStringN(gStringVar1, berry->size / 10, STR_CONV_MODE_LEFT_ALIGN, 2);
-            ConvertIntToDecimalStringN(gStringVar2, berry->size % 10, STR_CONV_MODE_LEFT_ALIGN, 2);
+            ConvertIntToDecimalStringN(gStringVar1, berryInfo->size / 10, STR_CONV_MODE_LEFT_ALIGN, 2);
+            ConvertIntToDecimalStringN(gStringVar2, berryInfo->size % 10, STR_CONV_MODE_LEFT_ALIGN, 2);
             StringExpandPlaceholders(gStringVar4, sText_Var1DotVar2_Metric);
         }
 
@@ -489,7 +489,7 @@ static void PrintBerryDescription1(void)
     }
     else
     {
-        const struct Berry *berryInfo = GetBerryInfo(sBerryTag->berryId);
+        const struct BerryInfo *berryInfo = GetBerryInfo(sBerryTag->berryId);
         AddTextPrinterParameterized(WIN_DESC, FONT_NORMAL, berryInfo->description1, 0, 1, 0, NULL);
     }
 }
@@ -505,7 +505,7 @@ static void PrintBerryDescription2(void)
     }
     else
     {
-        const struct Berry *berryInfo = GetBerryInfo(sBerryTag->berryId);
+        const struct BerryInfo *berryInfo = GetBerryInfo(sBerryTag->berryId);
         AddTextPrinterParameterized(WIN_DESC, FONT_NORMAL, berryInfo->description2, 0, 0x11, 0, NULL);
     }
 }

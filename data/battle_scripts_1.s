@@ -165,6 +165,12 @@ BattleScript_AbilityStatChange::
 	trystatchanges BS_EFFECT_BATTLER, STAT_CHANGE_IGNORE_SELF
 	return
 
+BattleScript_BuzzerActivate::
+	call BattleScript_AbilityPopUp
+	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
+	trystatchanges BS_EFFECT_BATTLER, STAT_CHANGE_IGNORE_SELF
+	return
+
 BattleScript_DefiantActivates::
 	call BattleScript_AbilityPopUp
 	trybattlerstatchange BS_SCRIPTING, STAT_CHANGE_SECOND_QUEUE
@@ -4633,12 +4639,6 @@ BattleScript_IntimidateWontDecrease:
 	printstring STRINGID_STATSWONTDECREASE
     return
 
-BattleScript_FascinateActivates::
-	call BattleScript_AbilityPopUp
-	trystatchanges BS_EFFECT_BATTLER, STAT_CHANGE_INTIMIDATE
-	destroyabilitypopup
-	return
-
 BattleScript_SupersweetSyrupActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_SUPERSWEETAROMAWAFTS
@@ -6464,6 +6464,12 @@ BattleScript_MyRealmActivates::
 	playanimation BS_BATTLER_0, B_ANIM_TRICK_ROOM
 	pause B_WAIT_TIME_SHORT
 	end3
+
+BattleScript_LectureBlockedByAbility::
+	call BattleScript_AbilityPopUpScripting
+	printstring STRINGID_BUZZERBLOCKED
+	waitmessage B_WAIT_TIME_LONG
+	return
 
 BattleScript_BuzzerBlocked::
 	call BattleScript_AbilityPopUp

@@ -6,605 +6,590 @@
 // Discussion: https://github.com/rh-hideout/pokeemerald-expansion/pull/5075#issuecomment-2384088602
 // Showdown: https://github.com/smogon/Pokemon-Showdown/blob/master/data/pokedex.ts
 
-#define SPECIES_NONE                                     0  
-#define SPECIES_CHIBI_REIMU                              1  
-#define SPECIES_NORMAL_REIMU                             2  
-#define SPECIES_EXTRA_REIMU                              3  
-#define SPECIES_ADVENT_REIMU                             4  
-#define SPECIES_KOUMAJOU_REIMU                           5  
-#define SPECIES_CHIBI_MARISA                             6  
-#define SPECIES_NORMAL_MARISA                            7  
-#define SPECIES_EXTRA_MARISA                             8  
-#define SPECIES_ADVENT_MARISA                            9  
-#define SPECIES_SCARLET_WITCH                            10 
-#define SPECIES_CHIBI_RUMIA                              11 
-#define SPECIES_NORMAL_RUMIA                             12 
-#define SPECIES_EXTRA_RUMIA                              13 
-#define SPECIES_CHIBI_DAIYOUSEI                          14 
-#define SPECIES_NORMAL_DAIYOUSEI                         15 
-#define SPECIES_EXTRA_DAIYOUSEI                          16 
-#define SPECIES_CHIBI_CIRNO                              17 
-#define SPECIES_NORMAL_CIRNO                             18 
-#define SPECIES_EXTRA_CIRNO                              19 
-#define SPECIES_ADVENT_CIRNO                             20 
-#define SPECIES_CHIBI_MEILING                            21 
-#define SPECIES_NORMAL_MEILING                           22 
-#define SPECIES_EXTRA_MEILING                            23 
-#define SPECIES_ADVENT_MEILING                           24 
-#define SPECIES_CHIBI_KOAKUMA                            25 
-#define SPECIES_NORMAL_KOAKUMA                           26 
-#define SPECIES_EXTRA_KOAKUMA                            27 
-#define SPECIES_CHIBI_PATCHOULI                          28 
-#define SPECIES_NORMAL_PATCHOULI                         29 
-#define SPECIES_EXTRA_PATCHOULI                          30 
-#define SPECIES_CHIBI_SAKUYA                             31 
-#define SPECIES_NORMAL_SAKUYA                            32 
-#define SPECIES_EXTRA_SAKUYA                             33 
-#define SPECIES_KOUMAJOU_SAKUYA                          34 
-#define SPECIES_CHIBI_REMILIA                            35 
-#define SPECIES_NORMAL_REMILIA                           36 
-#define SPECIES_EXTRA_REMILIA                            37 
-#define SPECIES_LAST_WORD_REMILIA                        38 
-#define SPECIES_ADVENT_REMILIA                           39 
-#define SPECIES_KOUMAJOU_REMILIA                         40 
-#define SPECIES_CHIBI_FLANDRE                            41 
-#define SPECIES_NORMAL_FLANDRE                           42 
-#define SPECIES_EXTRA_FLANDRE                            43 
-#define SPECIES_LAST_WORD_FLANDRE                        44 
-#define SPECIES_CHIBI_SATSUKI                            45 
-#define SPECIES_NORMAL_SATSUKI                           46 
-#define SPECIES_EXTRA_SATSUKI                            47 
-#define SPECIES_KEDAMA                                   48 
-#define SPECIES_CHIBI_LETTY                              49 
-#define SPECIES_NORMAL_LETTY                             50 
-#define SPECIES_EXTRA_LETTY                              51 
-#define SPECIES_ADVENT_LETTY                             52 
-#define SPECIES_CHIBI_CHEN                               53 
-#define SPECIES_NORMAL_CHEN                              54 
-#define SPECIES_EXTRA_CHEN                               55 
-#define SPECIES_ADVENT_CHEN                              56 
-#define SPECIES_DOLLS                                    57 
-#define SPECIES_GOLIATH                                  58 
-#define SPECIES_CHIBI_ALICE                              59 
-#define SPECIES_NORMAL_ALICE                             60 
-#define SPECIES_EXTRA_ALICE                              61 
-#define SPECIES_ADVENT_ALICE                             62 
-#define SPECIES_CHIBI_LILY_WHITE                         63 
-#define SPECIES_NORMAL_LILY_WHITE                        64 
-#define SPECIES_EXTRA_LILY_WHITE                         65 
-#define SPECIES_CHIBI_LILY_BLACK                         66 
-#define SPECIES_NORMAL_LILY_BLACK                        67 
-#define SPECIES_EXTRA_LILY_BLACK                         68 
-#define SPECIES_CHIBI_LUNASA                             69 
-#define SPECIES_NORMAL_LUNASA                            70 
-#define SPECIES_EXTRA_LUNASA                             71 
-#define SPECIES_CHIBI_MERLIN                             72 
-#define SPECIES_NORMAL_MERLIN                            73 
-#define SPECIES_EXTRA_MERLIN                             74 
-#define SPECIES_CHIBI_LYRICA                             75 
-#define SPECIES_NORMAL_LYRICA                            76 
-#define SPECIES_EXTRA_LYRICA                             77 
-#define SPECIES_LAYLA                                    78 
-#define SPECIES_CHIBI_YOUMU                              79 
-#define SPECIES_NORMAL_YOUMU                             80 
-#define SPECIES_EXTRA_YOUMU                              81 
-#define SPECIES_SWORD_MASTER                             82 
-#define SPECIES_YOUKI                                    83 
-#define SPECIES_CHIBI_YUYUKO                             84 
-#define SPECIES_NORMAL_YUYUKO                            85 
-#define SPECIES_EXTRA_YUYUKO                             86 
-#define SPECIES_LAST_WORD_YUYUKO                         87 
-#define SPECIES_TINY_GHOST                               88 
-#define SPECIES_CHIBI_RAN                                89 
-#define SPECIES_NORMAL_RAN                               90 
-#define SPECIES_EXTRA_RAN                                91 
-#define SPECIES_LAST_WORD_RAN                            92 
-#define SPECIES_ADVENT_RAN                               93 
-#define SPECIES_CHIBI_YUKARI                             94 
-#define SPECIES_NORMAL_YUKARI                            95 
-#define SPECIES_EXTRA_YUKARI                             96 
-#define SPECIES_LAST_WORD_YUKARI                         97 
-#define SPECIES_ADVENT_YUKARI                            98 
-#define SPECIES_RINNOSUKE                                99 
-#define SPECIES_CHIBI_TOKIKO                             100
-#define SPECIES_NORMAL_TOKIKO                            101
-#define SPECIES_EXTRA_TOKIKO                             102
-#define SPECIES_CHIBI_SUIKA                              103
-#define SPECIES_NORMAL_SUIKA                             104
-#define SPECIES_EXTRA_SUIKA                              105
-#define SPECIES_LAST_WORD_SUIKA                          106
-#define SPECIES_CHIBI_WRIGGLE                            107
-#define SPECIES_NORMAL_WRIGGLE                           108
-#define SPECIES_EXTRA_WRIGGLE                            109
-#define SPECIES_CHIBI_MYSTIA                             110
-#define SPECIES_NORMAL_MYSTIA                            111
-#define SPECIES_EXTRA_MYSTIA                             112
-#define SPECIES_ADVENT_MYSTIA                            113
-#define SPECIES_PUNK_MYSTIA                              114
-#define SPECIES_CHIBI_KEINE                              115
-#define SPECIES_NORMAL_KEINE                             116
-#define SPECIES_EXTRA_KEINE                              117
-#define SPECIES_HAKUTAKU_KEINE                           118
-#define SPECIES_CHIBI_TEWI                               119
-#define SPECIES_NORMAL_TEWI                              120
-#define SPECIES_EXTRA_TEWI                               121
-#define SPECIES_ADVENT_TEWI                              122
-#define SPECIES_CHIBI_REISEN                             123
-#define SPECIES_NORMAL_REISEN                            124
-#define SPECIES_EXTRA_REISEN                             125
-#define SPECIES_ADVENT_REISEN                            126
-#define SPECIES_SPACE_LUNATIC                            127
-#define SPECIES_CHIBI_EIRIN                              128
-#define SPECIES_NORMAL_EIRIN                             129
-#define SPECIES_EXTRA_EIRIN                              130
-#define SPECIES_LAST_WORD_EIRIN                          131
-#define SPECIES_ADVENT_EIRIN                             132
-#define SPECIES_CHIBI_KAGUYA                             133
-#define SPECIES_NORMAL_KAGUYA                            134
-#define SPECIES_EXTRA_KAGUYA                             135
-#define SPECIES_LAST_WORD_KAGUYA                         136
-#define SPECIES_CHIBI_MOKOU                              137
-#define SPECIES_NORMAL_MOKOU                             138
-#define SPECIES_EXTRA_MOKOU                              139
-#define SPECIES_LAST_WORD_MOKOU                          140
-#define SPECIES_ADVENT_MOKOU                             141
-#define SPECIES_CHIBI_SUNNY                              142
-#define SPECIES_NORMAL_SUNNY                             143
-#define SPECIES_EXTRA_SUNNY                              144
-#define SPECIES_CHIBI_LUNA                               145
-#define SPECIES_NORMAL_LUNA                              146
-#define SPECIES_EXTRA_LUNA                               147
-#define SPECIES_CHIBI_STAR                               148
-#define SPECIES_NORMAL_STAR                              149
-#define SPECIES_EXTRA_STAR                               150
-#define SPECIES_CHIBI_AYA                                151
-#define SPECIES_NORMAL_AYA                               152
-#define SPECIES_EXTRA_AYA                                153
-#define SPECIES_CHIBI_HIMAWARI                           154
-#define SPECIES_NORMAL_HIMAWARI                          155
-#define SPECIES_EXTRA_HIMAWARI                           156
-#define SPECIES_CHIBI_MEDICINE                           157
-#define SPECIES_NORMAL_MEDICINE                          158
-#define SPECIES_EXTRA_MEDICINE                           159
-#define SPECIES_CHIBI_YUUKA                              160
-#define SPECIES_NORMAL_YUUKA                             161
-#define SPECIES_EXTRA_YUUKA                              162
-#define SPECIES_CHIBI_KOMACHI                            163
-#define SPECIES_NORMAL_KOMACHI                           164
-#define SPECIES_EXTRA_KOMACHI                            165
-#define SPECIES_CHIBI_EIKI                               166
-#define SPECIES_NORMAL_EIKI                              167
-#define SPECIES_EXTRA_EIKI                               168
-#define SPECIES_LAST_WORD_EIKI                           169
-#define SPECIES_AKYUU                                    170
-#define SPECIES_REISEN_II                                171
-#define SPECIES_TOYOHIME                                 172
-#define SPECIES_YORIHIME                                 173
-#define SPECIES_CHIBI_SHIZUHA                            174
-#define SPECIES_NORMAL_SHIZUHA                           175
-#define SPECIES_EXTRA_SHIZUHA                            176
-#define SPECIES_CHIBI_MINORIKO                           177
-#define SPECIES_NORMAL_MINORIKO                          178
-#define SPECIES_EXTRA_MINORIKO                           179
-#define SPECIES_CHIBI_HINA                               180
-#define SPECIES_NORMAL_HINA                              181
-#define SPECIES_EXTRA_HINA                               182
-#define SPECIES_CHIBI_NITORI                             183
-#define SPECIES_NORMAL_NITORI                            184
-#define SPECIES_EXTRA_NITORI                             185
-#define SPECIES_CHIBI_MOMIJI                             186
-#define SPECIES_NORMAL_MOMIJI                            187
-#define SPECIES_EXTRA_MOMIJI                             188
-#define SPECIES_TENMA                                    189
-#define SPECIES_CHIBI_SANAE                              190
-#define SPECIES_NORMAL_SANAE                             191
-#define SPECIES_EXTRA_SANAE                              192
-#define SPECIES_SCHOOL_GIRL_SANAE                        193
-#define SPECIES_CHIBI_KANAKO                             194
-#define SPECIES_NORMAL_KANAKO                            195
-#define SPECIES_EXTRA_KANAKO                             196
-#define SPECIES_LAST_WORD_KANAKO                         197
-#define SPECIES_CHIBI_SUWAKO                             198
-#define SPECIES_NORMAL_SUWAKO                            199
-#define SPECIES_EXTRA_SUWAKO                             200
-#define SPECIES_LAST_WORD_SUWAKO                         201
-#define SPECIES_CHIBI_IKU                                202
-#define SPECIES_NORMAL_IKU                               203
-#define SPECIES_EXTRA_IKU                                204
-#define SPECIES_CHIBI_TENSHI                             205
-#define SPECIES_NORMAL_TENSHI                            206
-#define SPECIES_EXTRA_TENSHI                             207
-#define SPECIES_LAST_WORD_TENSHI                         208
-#define SPECIES_CHIBI_KISUME                             209
-#define SPECIES_NORMAL_KISUME                            210
-#define SPECIES_EXTRA_KISUME                             211
-#define SPECIES_CHIBI_YAMAME                             212
-#define SPECIES_NORMAL_YAMAME                            213
-#define SPECIES_EXTRA_YAMAME                             214
-#define SPECIES_CHIBI_PARSEE                             215
-#define SPECIES_NORMAL_PARSEE                            216
-#define SPECIES_EXTRA_PARSEE                             217
-#define SPECIES_CHIBI_YUUGI                              218
-#define SPECIES_NORMAL_YUUGI                             219
-#define SPECIES_EXTRA_YUUGI                              220
-#define SPECIES_CHIBI_SATORI                             221
-#define SPECIES_NORMAL_SATORI                            222
-#define SPECIES_EXTRA_SATORI                             223
-#define SPECIES_CHIBI_RIN                                224
-#define SPECIES_NORMAL_RIN                               225
-#define SPECIES_EXTRA_RIN                                226
-#define SPECIES_ZOMBIE_FAIRY                             227
-#define SPECIES_CHIBI_UTSUHO                             228
-#define SPECIES_NORMAL_UTSUHO                            229
-#define SPECIES_EXTRA_UTSUHO                             230
-#define SPECIES_LAST_WORD_UTSUHO                         231
-#define SPECIES_CHIBI_KOISHI                             232
-#define SPECIES_NORMAL_KOISHI                            233
-#define SPECIES_EXTRA_KOISHI                             234
-#define SPECIES_LAST_WORD_KOISHI                         235
-#define SPECIES_CHIBI_NAZRIN                             236
-#define SPECIES_NORMAL_NAZRIN                            237
-#define SPECIES_EXTRA_NAZRIN                             238
-#define SPECIES_CHIBI_KOGASA                             239
-#define SPECIES_NORMAL_KOGASA                            240
-#define SPECIES_EXTRA_KOGASA                             241
-#define SPECIES_CHIBI_ICHIRIN                            242
-#define SPECIES_NORMAL_ICHIRIN                           243
-#define SPECIES_EXTRA_ICHIRIN                            244
-#define SPECIES_CHIBI_MURASA                             245
-#define SPECIES_NORMAL_MURASA                            246
-#define SPECIES_EXTRA_MURASA                             247
-#define SPECIES_CHIBI_SHOU                               248
-#define SPECIES_NORMAL_SHOU                              249
-#define SPECIES_EXTRA_SHOU                               250
-#define SPECIES_CHIBI_BYAKUREN                           251
-#define SPECIES_NORMAL_BYAKUREN                          252
-#define SPECIES_EXTRA_BYAKUREN                           253
-#define SPECIES_CHIBI_NUE                                254
-#define SPECIES_NORMAL_NUE                               255
-#define SPECIES_EXTRA_NUE                                256
-#define SPECIES_HISOUTENSOKU                             257
-#define SPECIES_NAMAZU                                   258
-#define SPECIES_CHIBI_HATATE                             259
-#define SPECIES_NORMAL_HATATE                            260
-#define SPECIES_EXTRA_HATATE                             261
-#define SPECIES_CHIBI_KASEN                              262
-#define SPECIES_NORMAL_KASEN                             263
-#define SPECIES_EXTRA_KASEN                              264
-#define SPECIES_ORIGINAL_KASEN                           265
-#define SPECIES_IBARAKI_ARM                              266
-#define SPECIES_CHIBI_KYOUKO                             267
-#define SPECIES_NORMAL_KYOUKO                            268
-#define SPECIES_EXTRA_KYOUKO                             269
-#define SPECIES_PUNK_KYOUKO                              270
-#define SPECIES_CHIBI_YOSHIKA                            271
-#define SPECIES_NORMAL_YOSHIKA                           272
-#define SPECIES_EXTRA_YOSHIKA                            273
-#define SPECIES_CHIBI_SEIGA                              274
-#define SPECIES_NORMAL_SEIGA                             275
-#define SPECIES_EXTRA_SEIGA                              276
-#define SPECIES_CHIBI_TOJIKO                             277
-#define SPECIES_NORMAL_TOJIKO                            278
-#define SPECIES_EXTRA_TOJIKO                             279
-#define SPECIES_CHIBI_FUTO                               280
-#define SPECIES_NORMAL_FUTO                              281
-#define SPECIES_EXTRA_FUTO                               282
-#define SPECIES_CHIBI_MIKO                               283
-#define SPECIES_NORMAL_MIKO                              284
-#define SPECIES_EXTRA_MIKO                               285
-#define SPECIES_CHIBI_MAMIZOU                            286
-#define SPECIES_NORMAL_MAMIZOU                           287
-#define SPECIES_EXTRA_MAMIZOU                            288
-#define SPECIES_KOSUZU                                   289
-#define SPECIES_JINYOU                                   290
-#define SPECIES_CHIBI_KOKORO                             291
-#define SPECIES_NORMAL_KOKORO                            292
-#define SPECIES_EXTRA_KOKORO                             293
-#define SPECIES_CHIBI_WAKASAGIHIME                       294
-#define SPECIES_NORMAL_WAKASAGIHIME                      295
-#define SPECIES_EXTRA_WAKASAGIHIME                       296
-#define SPECIES_CHIBI_SEKIBANKI                          297
-#define SPECIES_NORMAL_SEKIBANKI                         298
-#define SPECIES_EXTRA_SEKIBANKI                          299
-#define SPECIES_CHIBI_KAGEROU                            300
-#define SPECIES_NORMAL_KAGEROU                           301
-#define SPECIES_EXTRA_KAGEROU                            302
-#define SPECIES_CHIBI_BENBEN                             303
-#define SPECIES_NORMAL_BENBEN                            304
-#define SPECIES_EXTRA_BENBEN                             305
-#define SPECIES_CHIBI_YATSUHASHI                         306
-#define SPECIES_NORMAL_YATSUHASHI                        307
-#define SPECIES_EXTRA_YATSUHASHI                         308
-#define SPECIES_CHIBI_SEIJA                              309
-#define SPECIES_NORMAL_SEIJA                             310
-#define SPECIES_EXTRA_SEIJA                              311
-#define SPECIES_CHIBI_SHINMYOUMARU                       312
-#define SPECIES_NORMAL_SHINMYOUMARU                      313
-#define SPECIES_EXTRA_SHINMYOUMARU                       314
-#define SPECIES_CHIBI_RAIKO                              315
-#define SPECIES_NORMAL_RAIKO                             316
-#define SPECIES_EXTRA_RAIKO                              317
-#define SPECIES_CHIBI_SUMIREKO                           318
-#define SPECIES_NORMAL_SUMIREKO                          319
-#define SPECIES_EXTRA_SUMIREKO                           320
-#define SPECIES_CHIBI_SEIRAN                             321
-#define SPECIES_NORMAL_SEIRAN                            322
-#define SPECIES_EXTRA_SEIRAN                             323
-#define SPECIES_CHIBI_RINGO                              324
-#define SPECIES_NORMAL_RINGO                             325
-#define SPECIES_EXTRA_RINGO                              326
-#define SPECIES_CHIBI_DOREMY                             327
-#define SPECIES_NORMAL_DOREMY                            328
-#define SPECIES_EXTRA_DOREMY                             329
-#define SPECIES_CHIBI_SAGUME                             330
-#define SPECIES_NORMAL_SAGUME                            331
-#define SPECIES_EXTRA_SAGUME                             332
-#define SPECIES_CHIBI_CLOWNPIECE                         333
-#define SPECIES_NORMAL_CLOWNPIECE                        334
-#define SPECIES_EXTRA_CLOWNPIECE                         335
-#define SPECIES_CHIBI_JUNKO                              336
-#define SPECIES_NORMAL_JUNKO                             337
-#define SPECIES_EXTRA_JUNKO                              338
-#define SPECIES_CHIBI_HECATIA                            339
-#define SPECIES_NORMAL_HECATIA                           340
-#define SPECIES_OTHERWORLD_HECATIA                       341
-#define SPECIES_EARTH_HECATIA                            342
-#define SPECIES_MOON_HECATIA                             343
-#define SPECIES_CHIBI_JOON                               344
-#define SPECIES_NORMAL_JOON                              345
-#define SPECIES_EXTRA_JOON                               346
-#define SPECIES_CHIBI_SHION                              347
-#define SPECIES_NORMAL_SHION                             348
-#define SPECIES_EXTRA_SHION                              349
-#define SPECIES_CHIBI_ETERNITY                           350
-#define SPECIES_NORMAL_ETERNITY                          351
-#define SPECIES_EXTRA_ETERNITY                           352
-#define SPECIES_CHIBI_NEMUNO                             353
-#define SPECIES_NORMAL_NEMUNO                            354
-#define SPECIES_EXTRA_NEMUNO                             355
-#define SPECIES_CHIBI_AUNN                               356
-#define SPECIES_NORMAL_AUNN                              357
-#define SPECIES_EXTRA_AUNN                               358
-#define SPECIES_CHIBI_NARUMI                             359
-#define SPECIES_NORMAL_NARUMI                            360
-#define SPECIES_EXTRA_NARUMI                             361
-#define SPECIES_CHIBI_TEIREIDA                           362
-#define SPECIES_NORMAL_TEIREIDA                          363
-#define SPECIES_EXTRA_TEIREIDA                           364
-#define SPECIES_CHIBI_SATONO                             365
-#define SPECIES_NORMAL_SATONO                            366
-#define SPECIES_EXTRA_SATONO                             367
-#define SPECIES_CHIBI_OKINA                              368
-#define SPECIES_NORMAL_OKINA                             369
-#define SPECIES_EXTRA_OKINA                              370
-#define SPECIES_CHIBI_EIKA                               371
-#define SPECIES_NORMAL_EIKA                              372
-#define SPECIES_EXTRA_EIKA                               373
-#define SPECIES_CHIBI_URUMI                              374
-#define SPECIES_NORMAL_URUMI                             375
-#define SPECIES_EXTRA_URUMI                              376
-#define SPECIES_CHIBI_KUTAKA                             377
-#define SPECIES_NORMAL_KUTAKA                            378
-#define SPECIES_EXTRA_KUTAKA                             379
-#define SPECIES_CHIBI_YACHIE                             380
-#define SPECIES_NORMAL_YACHIE                            381
-#define SPECIES_EXTRA_YACHIE                             382
-#define SPECIES_CHIBI_MAYUMI                             383
-#define SPECIES_NORMAL_MAYUMI                            384
-#define SPECIES_EXTRA_MAYUMI                             385
-#define SPECIES_CHIBI_KEIKI                              386
-#define SPECIES_NORMAL_KEIKI                             387
-#define SPECIES_EXTRA_KEIKI                              388
-#define SPECIES_CHIBI_SAKI                               389
-#define SPECIES_NORMAL_SAKI                              390
-#define SPECIES_EXTRA_SAKI                               391
-#define SPECIES_CHIBI_YUUMA                              392
-#define SPECIES_NORMAL_YUUMA                             393
-#define SPECIES_EXTRA_YUUMA                              394
-#define SPECIES_CHIBI_MIZUCHI                            395
-#define SPECIES_NORMAL_MIZUCHI                           396
-#define SPECIES_EXTRA_MIZUCHI                            397
-#define SPECIES_CHIBI_MIYOI                              398
-#define SPECIES_NORMAL_MIYOI                             399
-#define SPECIES_EXTRA_MIYOI                              400
-#define SPECIES_CHIBI_MIKE                               401
-#define SPECIES_NORMAL_MIKE                              402
-#define SPECIES_EXTRA_MIKE                               403
-#define SPECIES_CHIBI_TAKANE                             404
-#define SPECIES_NORMAL_TAKANE                            405
-#define SPECIES_EXTRA_TAKANE                             406
-#define SPECIES_CHIBI_SANNYO                             407
-#define SPECIES_NORMAL_SANNYO                            408
-#define SPECIES_EXTRA_SANNYO                             409
-#define SPECIES_CHIBI_MISUMARU                           410
-#define SPECIES_NORMAL_MISUMARU                          411
-#define SPECIES_EXTRA_MISUMARU                           412
-#define SPECIES_CHIBI_TSUKASA                            413
-#define SPECIES_NORMAL_TSUKASA                           414
-#define SPECIES_EXTRA_TSUKASA                            415
-#define SPECIES_CHIBI_MEGUMU                             416
-#define SPECIES_NORMAL_MEGUMU                            417
-#define SPECIES_EXTRA_MEGUMU                             418
-#define SPECIES_CHIBI_CHIMATA                            419
-#define SPECIES_NORMAL_CHIMATA                           420
-#define SPECIES_EXTRA_CHIMATA                            421
-#define SPECIES_CHIBI_MOMOYO                             422
-#define SPECIES_NORMAL_MOMOYO                            423
-#define SPECIES_EXTRA_MOMOYO                             424
-#define SPECIES_CHIBI_BITEN                              425
-#define SPECIES_NORMAL_BITEN                             426
-#define SPECIES_EXTRA_BITEN                              427
-#define SPECIES_CHIBI_ENOKO                              428
-#define SPECIES_NORMAL_ENOKO                             429
-#define SPECIES_EXTRA_ENOKO                              430
-#define SPECIES_CHIBI_CHIYARI                            431
-#define SPECIES_NORMAL_CHIYARI                           432
-#define SPECIES_EXTRA_CHIYARI                            433
-#define SPECIES_CHIBI_HISAMI                             434
-#define SPECIES_NORMAL_HISAMI                            435
-#define SPECIES_EXTRA_HISAMI                             436
-#define SPECIES_CHIBI_ZANMU                              437
-#define SPECIES_NORMAL_ZANMU                             438
-#define SPECIES_EXTRA_ZANMU                              439
-#define SPECIES_CHIBI_UBAME                              440
-#define SPECIES_NORMAL_UBAME                             441
-#define SPECIES_EXTRA_UBAME                              442
-#define SPECIES_CHIBI_CHIMI                              443
-#define SPECIES_NORMAL_CHIMI                             444
-#define SPECIES_EXTRA_CHIMI                              445
-#define SPECIES_CHIBI_NAREKO                             446
-#define SPECIES_NORMAL_NAREKO                            447
-#define SPECIES_EXTRA_NAREKO                             448
-#define SPECIES_CHIBI_YUIMAN                             449
-#define SPECIES_NORMAL_YUIMAN                            450
-#define SPECIES_EXTRA_YUIMAN                             451
-#define SPECIES_CHIBI_ARIYA                              452
-#define SPECIES_NORMAL_ARIYA                             453
-#define SPECIES_EXTRA_ARIYA                              454
-#define SPECIES_CHIBI_NINA                               455
-#define SPECIES_NORMAL_NINA                              456
-#define SPECIES_EXTRA_NINA                               457
-#define SPECIES_CHIBI_HAKUREI                            458
-#define SPECIES_NORMAL_HAKUREI                           459
-#define SPECIES_EXTRA_HAKUREI                            460
-#define SPECIES_CHIBI_KIRISAME                           461
-#define SPECIES_NORMAL_KIRISAME                          462
-#define SPECIES_EXTRA_KIRISAME                           463
-#define	SPECIES_SHINGYOKU	                             SPECIES_SHINGYOKU_ORB
-#define SPECIES_SHINGYOKU_ORB                            464
-#define SPECIES_SHINGYOKU_MALE                           465
-#define SPECIES_SHINGYOKU_FEMALE                         466
-#define SPECIES_MIMA                                     467
-#define SPECIES_KONNGARA                                 468
-#define SPECIES_YUUGENMAGAN                              469
-#define SPECIES_KIKURI                                   470
-#define SPECIES_ELIS                                     471
-#define SPECIES_SARIEL                                   472
-#define SPECIES_GENJI                                    473
-#define SPECIES_CHIBI_RIKA                               474
-#define SPECIES_NORMAL_RIKA                              475
-#define SPECIES_EXTRA_RIKA                               476
-#define SPECIES_NOROIKO                                  477
-#define SPECIES_CHIBI_MEIRA                              478
-#define SPECIES_NORMAL_MEIRA                             479
-#define SPECIES_EXTRA_MEIRA                              480
-#define SPECIES_MAGIC_STONES                             481
-#define SPECIES_MATENSHI                                 482
-#define SPECIES_CHIBI_ELLEN                              483
-#define SPECIES_NORMAL_ELLEN                             484
-#define SPECIES_EXTRA_ELLEN                              485
-#define SPECIES_CHIBI_KOTOHIME                           486
-#define SPECIES_NORMAL_KOTOHIME                          487
-#define SPECIES_EXTRA_KOTOHIME                           488
-#define SPECIES_CHIBI_KANA                               489
-#define SPECIES_NORMAL_KANA                              490
-#define SPECIES_EXTRA_KANA                               491
-#define SPECIES_CHIBI_RIKAKO                             492
-#define SPECIES_NORMAL_RIKAKO                            493
-#define SPECIES_EXTRA_RIKAKO                             494
-#define SPECIES_CHIBI_CHIYURI                            495
-#define SPECIES_NORMAL_CHIYURI                           496
-#define SPECIES_EXTRA_CHIYURI                            497
-#define SPECIES_CHIBI_YUMEMI                             498
-#define SPECIES_NORMAL_YUMEMI                            499
-#define SPECIES_EXTRA_YUMEMI                             500
-#define SPECIES_RUUKOTO                                  501
-#define SPECIES_MIMI_CHAN                                502
-#define SPECIES_LOTUS_FLOWER                             503
-#define SPECIES_CHIBI_ORANGE                             504
-#define SPECIES_NORMAL_ORANGE                            505
-#define SPECIES_EXTRA_ORANGE                             506
-#define SPECIES_CHIBI_KURUMI                             507
-#define SPECIES_NORMAL_KURUMI                            508
-#define SPECIES_EXTRA_KURUMI                             509
-#define SPECIES_DARK_MIRROR                              510
-#define SPECIES_CHIBI_ELLY                               511
-#define SPECIES_NORMAL_ELLY                              512
-#define SPECIES_EXTRA_ELLY                               513
-#define SPECIES_HIKARIKO                                 514
-#define SPECIES_CHIBI_KAZAMI                             515
-#define SPECIES_NORMAL_KAZAMI                            516
-#define SPECIES_EXTRA_KAZAMI                             517
-#define SPECIES_CHIBI_MUGETSU                            518
-#define SPECIES_NORMAL_MUGETSU                           519
-#define SPECIES_EXTRA_MUGETSU                            520
-#define SPECIES_CHIBI_GENGETSU                           521
-#define SPECIES_NORMAL_GENGETSU                          522
-#define SPECIES_EXTRA_GENGETSU                           523
-#define SPECIES_WAYOUSEI                                 524
-#define SPECIES_CHIBI_SARA                               525
-#define SPECIES_NORMAL_SARA                              526
-#define SPECIES_EXTRA_SARA                               527
-#define SPECIES_SPIRIT_MIRROR                            528
-#define SPECIES_CHIBI_LOUISE                             529
-#define SPECIES_NORMAL_LOUISE                            530
-#define SPECIES_EXTRA_LOUISE                             531
-#define SPECIES_CHIBI_MARGATROID                         532
-#define SPECIES_NORMAL_MARGATROID                        533
-#define SPECIES_EXTRA_MARGATROID                         534
-#define SPECIES_CHIBI_YUKI                               535
-#define SPECIES_NORMAL_YUKI                              536
-#define SPECIES_EXTRA_YUKI                               537
-#define SPECIES_CHIBI_MAI                                538
-#define SPECIES_NORMAL_MAI                               539
-#define SPECIES_EXTRA_MAI                                540
-#define SPECIES_AYANA                                    541
-#define SPECIES_CHIBI_YUMEKO                             542
-#define SPECIES_NORMAL_YUMEKO                            543
-#define SPECIES_EXTRA_YUMEKO                             544
-#define SPECIES_CHIBI_SHINKI                             545
-#define SPECIES_NORMAL_SHINKI                            546
-#define SPECIES_EXTRA_SHINKI                             547
-#define SPECIES_CHIBI_SENDAI                             548
-#define SPECIES_NORMAL_SENDAI                            549
-#define SPECIES_EXTRA_SENDAI                             550
-#define SPECIES_CHIBI_MITORI                             551
-#define SPECIES_NORMAL_MITORI                            552
-#define SPECIES_EXTRA_MITORI                             553
-#define SPECIES_CHIBI_SASHA                              554
-#define SPECIES_NORMAL_SASHA                             555
-#define SPECIES_EXTRA_SASHA                              556
-#define SPECIES_CHIBI_SUGAR                              557
-#define SPECIES_NORMAL_SUGAR                             558
-#define SPECIES_EXTRA_SUGAR                              559
-#define SPECIES_CHIBI_YUUTO                              560
-#define SPECIES_NORMAL_YUUTO                             561
-#define SPECIES_EXTRA_YUUTO                              562
-#define SPECIES_CHIBI_KAREN                              563
-#define SPECIES_NORMAL_KAREN                             564
-#define SPECIES_EXTRA_KAREN                              565
-#define SPECIES_CHIBI_MELON                              566
-#define SPECIES_NORMAL_MELON                             567
-#define SPECIES_EXTRA_MELON                              568
-#define SPECIES_GATENSOKU                                569
-#define SPECIES_TORI                                     570
-#define SPECIES_ISAMI                                    571
-#define SPECIES_VIVIT                                    572
-#define SPECIES_ANGEL_VIVIT                              573
-#define SPECIES_X_REIMU                                  574
-#define SPECIES_X_MARISA                                 575
-#define SPECIES_X_SAKUYA                                 576
-#define SPECIES_X_SANAE                                  577
-#define SPECIES_X_YOUMU                                  578
-#define SPECIES_X_REISEN                                 579
-#define SPECIES_TRANSCENDENT_RENKO                       580
-#define SPECIES_TRANSCENDENT_MARIBEL                     581
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
 enum __attribute__((packed)) Species
 {
+    SPECIES_CHIBI_REIMU =         1,
+    SPECIES_NORMAL_REIMU =        2,
+    SPECIES_EXTRA_REIMU =         3,
+    SPECIES_ADVENT_REIMU =        4,
+    SPECIES_KOUMAJOU_REIMU =      5,
+    SPECIES_CHIBI_MARISA =        6,
+    SPECIES_NORMAL_MARISA =       7,
+    SPECIES_EXTRA_MARISA =        8,
+    SPECIES_ADVENT_MARISA =       9,
+    SPECIES_SCARLET_WITCH =       10,
+    SPECIES_CHIBI_RUMIA =         11,
+    SPECIES_NORMAL_RUMIA =        12,
+    SPECIES_EXTRA_RUMIA =         13,
+    SPECIES_CHIBI_DAIYOUSEI =     14,
+    SPECIES_NORMAL_DAIYOUSEI =    15,
+    SPECIES_EXTRA_DAIYOUSEI =     16,
+    SPECIES_CHIBI_CIRNO =         17,
+    SPECIES_NORMAL_CIRNO =        18,
+    SPECIES_EXTRA_CIRNO =         19,
+    SPECIES_ADVENT_CIRNO =        20,
+    SPECIES_CHIBI_MEILING =       21,
+    SPECIES_NORMAL_MEILING =      22,
+    SPECIES_EXTRA_MEILING =       23,
+    SPECIES_ADVENT_MEILING =      24,
+    SPECIES_CHIBI_KOAKUMA =       25,
+    SPECIES_NORMAL_KOAKUMA =      26,
+    SPECIES_EXTRA_KOAKUMA =       27,
+    SPECIES_CHIBI_PATCHOULI =     28,
+    SPECIES_NORMAL_PATCHOULI =    29,
+    SPECIES_EXTRA_PATCHOULI =     30,
+    SPECIES_CHIBI_SAKUYA =        31,
+    SPECIES_NORMAL_SAKUYA =       32,
+    SPECIES_EXTRA_SAKUYA =        33,
+    SPECIES_KOUMAJOU_SAKUYA =     34,
+    SPECIES_CHIBI_REMILIA =       35,
+    SPECIES_NORMAL_REMILIA =      36,
+    SPECIES_EXTRA_REMILIA =       37,
+    SPECIES_LAST_WORD_REMILIA =   38,
+    SPECIES_ADVENT_REMILIA =      39,
+    SPECIES_KOUMAJOU_REMILIA =    40,
+    SPECIES_CHIBI_FLANDRE =       41,
+    SPECIES_NORMAL_FLANDRE =      42,
+    SPECIES_EXTRA_FLANDRE =       43,
+    SPECIES_LAST_WORD_FLANDRE =   44,
+    SPECIES_CHIBI_SATSUKI =       45,
+    SPECIES_NORMAL_SATSUKI =      46,
+    SPECIES_EXTRA_SATSUKI =       47,
+    SPECIES_KEDAMA =              48,
+    SPECIES_CHIBI_LETTY =         49,
+    SPECIES_NORMAL_LETTY =        50,
+    SPECIES_EXTRA_LETTY =         51,
+    SPECIES_ADVENT_LETTY =        52,
+    SPECIES_CHIBI_CHEN =          53,
+    SPECIES_NORMAL_CHEN =         54,
+    SPECIES_EXTRA_CHEN =          55,
+    SPECIES_ADVENT_CHEN =         56,
+    SPECIES_DOLLS =               57,
+    SPECIES_GOLIATH =             58,
+    SPECIES_CHIBI_ALICE =         59,
+    SPECIES_NORMAL_ALICE =        60,
+    SPECIES_EXTRA_ALICE =         61,
+    SPECIES_ADVENT_ALICE =        62,
+    SPECIES_CHIBI_LILY_WHITE =    63,
+    SPECIES_NORMAL_LILY_WHITE =   64,
+    SPECIES_EXTRA_LILY_WHITE =    65,
+    SPECIES_CHIBI_LILY_BLACK =    66,
+    SPECIES_NORMAL_LILY_BLACK =   67,
+    SPECIES_EXTRA_LILY_BLACK =    68,
+    SPECIES_CHIBI_LUNASA =        69,
+    SPECIES_NORMAL_LUNASA =       70,
+    SPECIES_EXTRA_LUNASA =        71,
+    SPECIES_CHIBI_MERLIN =        72,
+    SPECIES_NORMAL_MERLIN =       73,
+    SPECIES_EXTRA_MERLIN =        74,
+    SPECIES_CHIBI_LYRICA =        75,
+    SPECIES_NORMAL_LYRICA =       76,
+    SPECIES_EXTRA_LYRICA =        77,
+    SPECIES_LAYLA =               78,
+    SPECIES_CHIBI_YOUMU =         79,
+    SPECIES_NORMAL_YOUMU =        80,
+    SPECIES_EXTRA_YOUMU =         81,
+    SPECIES_SWORD_MASTER =        82,
+    SPECIES_YOUKI =               83,
+    SPECIES_CHIBI_YUYUKO =        84,
+    SPECIES_NORMAL_YUYUKO =       85,
+    SPECIES_EXTRA_YUYUKO =        86,
+    SPECIES_LAST_WORD_YUYUKO =    87,
+    SPECIES_TINY_GHOST =          88,
+    SPECIES_CHIBI_RAN =           89,
+    SPECIES_NORMAL_RAN =          90,
+    SPECIES_EXTRA_RAN =           91,
+    SPECIES_LAST_WORD_RAN =       92,
+    SPECIES_ADVENT_RAN =          93,
+    SPECIES_CHIBI_YUKARI =        94,
+    SPECIES_NORMAL_YUKARI =       95,
+    SPECIES_EXTRA_YUKARI =        96,
+    SPECIES_LAST_WORD_YUKARI =    97,
+    SPECIES_ADVENT_YUKARI =       98,
+    SPECIES_RINNOSUKE =           99,
+    SPECIES_CHIBI_TOKIKO =        100,
+    SPECIES_NORMAL_TOKIKO =       101,
+    SPECIES_EXTRA_TOKIKO =        102,
+    SPECIES_CHIBI_SUIKA =         103,
+    SPECIES_NORMAL_SUIKA =        104,
+    SPECIES_EXTRA_SUIKA =         105,
+    SPECIES_LAST_WORD_SUIKA =     106,
+    SPECIES_CHIBI_WRIGGLE =       107,
+    SPECIES_NORMAL_WRIGGLE =      108,
+    SPECIES_EXTRA_WRIGGLE =       109,
+    SPECIES_CHIBI_MYSTIA =        110,
+    SPECIES_NORMAL_MYSTIA =       111,
+    SPECIES_EXTRA_MYSTIA =        112,
+    SPECIES_ADVENT_MYSTIA =       113,
+    SPECIES_PUNK_MYSTIA =         114,
+    SPECIES_CHIBI_KEINE =         115,
+    SPECIES_NORMAL_KEINE =        116,
+    SPECIES_EXTRA_KEINE =         117,
+    SPECIES_HAKUTAKU_KEINE =      118,
+    SPECIES_CHIBI_TEWI =          119,
+    SPECIES_NORMAL_TEWI =         120,
+    SPECIES_EXTRA_TEWI =          121,
+    SPECIES_ADVENT_TEWI =         122,
+    SPECIES_CHIBI_REISEN =        123,
+    SPECIES_NORMAL_REISEN =       124,
+    SPECIES_EXTRA_REISEN =        125,
+    SPECIES_ADVENT_REISEN =       126,
+    SPECIES_SPACE_LUNATIC =       127,
+    SPECIES_CHIBI_EIRIN =         128,
+    SPECIES_NORMAL_EIRIN =        129,
+    SPECIES_EXTRA_EIRIN =         130,
+    SPECIES_LAST_WORD_EIRIN =     131,
+    SPECIES_ADVENT_EIRIN =        132,
+    SPECIES_CHIBI_KAGUYA =        133,
+    SPECIES_NORMAL_KAGUYA =       134,
+    SPECIES_EXTRA_KAGUYA =        135,
+    SPECIES_LAST_WORD_KAGUYA =    136,
+    SPECIES_CHIBI_MOKOU =         137,
+    SPECIES_NORMAL_MOKOU =        138,
+    SPECIES_EXTRA_MOKOU =         139,
+    SPECIES_LAST_WORD_MOKOU =     140,
+    SPECIES_ADVENT_MOKOU =        141,
+    SPECIES_CHIBI_SUNNY =         142,
+    SPECIES_NORMAL_SUNNY =        143,
+    SPECIES_EXTRA_SUNNY =         144,
+    SPECIES_CHIBI_LUNA =          145,
+    SPECIES_NORMAL_LUNA =         146,
+    SPECIES_EXTRA_LUNA =          147,
+    SPECIES_CHIBI_STAR =          148,
+    SPECIES_NORMAL_STAR =         149,
+    SPECIES_EXTRA_STAR =          150,
+    SPECIES_CHIBI_AYA =           151,
+    SPECIES_NORMAL_AYA =          152,
+    SPECIES_EXTRA_AYA =           153,
+    SPECIES_CHIBI_HIMAWARI =      154,
+    SPECIES_NORMAL_HIMAWARI =     155,
+    SPECIES_EXTRA_HIMAWARI =      156,
+    SPECIES_CHIBI_MEDICINE =      157,
+    SPECIES_NORMAL_MEDICINE =     158,
+    SPECIES_EXTRA_MEDICINE =      159,
+    SPECIES_CHIBI_YUUKA =         160,
+    SPECIES_NORMAL_YUUKA =        161,
+    SPECIES_EXTRA_YUUKA =         162,
+    SPECIES_CHIBI_KOMACHI =       163,
+    SPECIES_NORMAL_KOMACHI =      164,
+    SPECIES_EXTRA_KOMACHI =       165,
+    SPECIES_CHIBI_EIKI =          166,
+    SPECIES_NORMAL_EIKI =         167,
+    SPECIES_EXTRA_EIKI =          168,
+    SPECIES_LAST_WORD_EIKI =      169,
+    SPECIES_AKYUU =               170,
+    SPECIES_REISEN_II =           171,
+    SPECIES_TOYOHIME =            172,
+    SPECIES_YORIHIME =            173,
+    SPECIES_CHIBI_SHIZUHA =       174,
+    SPECIES_NORMAL_SHIZUHA =      175,
+    SPECIES_EXTRA_SHIZUHA =       176,
+    SPECIES_CHIBI_MINORIKO =      177,
+    SPECIES_NORMAL_MINORIKO =     178,
+    SPECIES_EXTRA_MINORIKO =      179,
+    SPECIES_CHIBI_HINA =          180,
+    SPECIES_NORMAL_HINA =         181,
+    SPECIES_EXTRA_HINA =          182,
+    SPECIES_CHIBI_NITORI =        183,
+    SPECIES_NORMAL_NITORI =       184,
+    SPECIES_EXTRA_NITORI =        185,
+    SPECIES_CHIBI_MOMIJI =        186,
+    SPECIES_NORMAL_MOMIJI =       187,
+    SPECIES_EXTRA_MOMIJI =        188,
+    SPECIES_TENMA =               189,
+    SPECIES_CHIBI_SANAE =         190,
+    SPECIES_NORMAL_SANAE =        191,
+    SPECIES_EXTRA_SANAE =         192,
+    SPECIES_SCHOOL_GIRL_SANAE =   193,
+    SPECIES_CHIBI_KANAKO =        194,
+    SPECIES_NORMAL_KANAKO =       195,
+    SPECIES_EXTRA_KANAKO =        196,
+    SPECIES_LAST_WORD_KANAKO =    197,
+    SPECIES_CHIBI_SUWAKO =        198,
+    SPECIES_NORMAL_SUWAKO =       199,
+    SPECIES_EXTRA_SUWAKO =        200,
+    SPECIES_LAST_WORD_SUWAKO =    201,
+    SPECIES_CHIBI_IKU =           202,
+    SPECIES_NORMAL_IKU =          203,
+    SPECIES_EXTRA_IKU =           204,
+    SPECIES_CHIBI_TENSHI =        205,
+    SPECIES_NORMAL_TENSHI =       206,
+    SPECIES_EXTRA_TENSHI =        207,
+    SPECIES_LAST_WORD_TENSHI =    208,
+    SPECIES_CHIBI_KISUME =        209,
+    SPECIES_NORMAL_KISUME =       210,
+    SPECIES_EXTRA_KISUME =        211,
+    SPECIES_CHIBI_YAMAME =        212,
+    SPECIES_NORMAL_YAMAME =       213,
+    SPECIES_EXTRA_YAMAME =        214,
+    SPECIES_CHIBI_PARSEE =        215,
+    SPECIES_NORMAL_PARSEE =       216,
+    SPECIES_EXTRA_PARSEE =        217,
+    SPECIES_CHIBI_YUUGI =         218,
+    SPECIES_NORMAL_YUUGI =        219,
+    SPECIES_EXTRA_YUUGI =         220,
+    SPECIES_CHIBI_SATORI =        221,
+    SPECIES_NORMAL_SATORI =       222,
+    SPECIES_EXTRA_SATORI =        223,
+    SPECIES_CHIBI_RIN =           224,
+    SPECIES_NORMAL_RIN =          225,
+    SPECIES_EXTRA_RIN =           226,
+    SPECIES_ZOMBIE_FAIRY =        227,
+    SPECIES_CHIBI_UTSUHO =        228,
+    SPECIES_NORMAL_UTSUHO =       229,
+    SPECIES_EXTRA_UTSUHO =        230,
+    SPECIES_LAST_WORD_UTSUHO =    231,
+    SPECIES_CHIBI_KOISHI =        232,
+    SPECIES_NORMAL_KOISHI =       233,
+    SPECIES_EXTRA_KOISHI =        234,
+    SPECIES_LAST_WORD_KOISHI =    235,
+    SPECIES_CHIBI_NAZRIN =        236,
+    SPECIES_NORMAL_NAZRIN =       237,
+    SPECIES_EXTRA_NAZRIN =        238,
+    SPECIES_CHIBI_KOGASA =        239,
+    SPECIES_NORMAL_KOGASA =       240,
+    SPECIES_EXTRA_KOGASA =        241,
+    SPECIES_CHIBI_ICHIRIN =       242,
+    SPECIES_NORMAL_ICHIRIN =      243,
+    SPECIES_EXTRA_ICHIRIN =       244,
+    SPECIES_CHIBI_MURASA =        245,
+    SPECIES_NORMAL_MURASA =       246,
+    SPECIES_EXTRA_MURASA =        247,
+    SPECIES_CHIBI_SHOU =          248,
+    SPECIES_NORMAL_SHOU =         249,
+    SPECIES_EXTRA_SHOU =          250,
+    SPECIES_CHIBI_BYAKUREN =      251,
+    SPECIES_NORMAL_BYAKUREN =     252,
+    SPECIES_EXTRA_BYAKUREN =      253,
+    SPECIES_CHIBI_NUE =           254,
+    SPECIES_NORMAL_NUE =          255,
+    SPECIES_EXTRA_NUE =           256,
+    SPECIES_HISOUTENSOKU =        257,
+    SPECIES_NAMAZU =              258,
+    SPECIES_CHIBI_HATATE =        259,
+    SPECIES_NORMAL_HATATE =       260,
+    SPECIES_EXTRA_HATATE =        261,
+    SPECIES_CHIBI_KASEN =         262,
+    SPECIES_NORMAL_KASEN =        263,
+    SPECIES_EXTRA_KASEN =         264,
+    SPECIES_ORIGINAL_KASEN =      265,
+    SPECIES_IBARAKI_ARM =         266,
+    SPECIES_CHIBI_KYOUKO =        267,
+    SPECIES_NORMAL_KYOUKO =       268,
+    SPECIES_EXTRA_KYOUKO =        269,
+    SPECIES_PUNK_KYOUKO =         270,
+    SPECIES_CHIBI_YOSHIKA =       271,
+    SPECIES_NORMAL_YOSHIKA =      272,
+    SPECIES_EXTRA_YOSHIKA =       273,
+    SPECIES_CHIBI_SEIGA =         274,
+    SPECIES_NORMAL_SEIGA =        275,
+    SPECIES_EXTRA_SEIGA =         276,
+    SPECIES_CHIBI_TOJIKO =        277,
+    SPECIES_NORMAL_TOJIKO =       278,
+    SPECIES_EXTRA_TOJIKO =        279,
+    SPECIES_CHIBI_FUTO =          280,
+    SPECIES_NORMAL_FUTO =         281,
+    SPECIES_EXTRA_FUTO =          282,
+    SPECIES_CHIBI_MIKO =          283,
+    SPECIES_NORMAL_MIKO =         284,
+    SPECIES_EXTRA_MIKO =          285,
+    SPECIES_CHIBI_MAMIZOU =       286,
+    SPECIES_NORMAL_MAMIZOU =      287,
+    SPECIES_EXTRA_MAMIZOU =       288,
+    SPECIES_KOSUZU =              289,
+    SPECIES_JINYOU =              290,
+    SPECIES_CHIBI_KOKORO =        291,
+    SPECIES_NORMAL_KOKORO =       292,
+    SPECIES_EXTRA_KOKORO =        293,
+    SPECIES_CHIBI_WAKASAGIHIME =  294,
+    SPECIES_NORMAL_WAKASAGIHIME = 295,
+    SPECIES_EXTRA_WAKASAGIHIME =  296,
+    SPECIES_CHIBI_SEKIBANKI =     297,
+    SPECIES_NORMAL_SEKIBANKI =    298,
+    SPECIES_EXTRA_SEKIBANKI =     299,
+    SPECIES_CHIBI_KAGEROU =       300,
+    SPECIES_NORMAL_KAGEROU =      301,
+    SPECIES_EXTRA_KAGEROU =       302,
+    SPECIES_CHIBI_BENBEN =        303,
+    SPECIES_NORMAL_BENBEN =       304,
+    SPECIES_EXTRA_BENBEN =        305,
+    SPECIES_CHIBI_YATSUHASHI =    306,
+    SPECIES_NORMAL_YATSUHASHI =   307,
+    SPECIES_EXTRA_YATSUHASHI =    308,
+    SPECIES_CHIBI_SEIJA =         309,
+    SPECIES_NORMAL_SEIJA =        310,
+    SPECIES_EXTRA_SEIJA =         311,
+    SPECIES_CHIBI_SHINMYOUMARU =  312,
+    SPECIES_NORMAL_SHINMYOUMARU = 313,
+    SPECIES_EXTRA_SHINMYOUMARU =  314,
+    SPECIES_CHIBI_RAIKO =         315,
+    SPECIES_NORMAL_RAIKO =        316,
+    SPECIES_EXTRA_RAIKO =         317,
+    SPECIES_CHIBI_SUMIREKO =      318,
+    SPECIES_NORMAL_SUMIREKO =     319,
+    SPECIES_EXTRA_SUMIREKO =      320,
+    SPECIES_CHIBI_SEIRAN =        321,
+    SPECIES_NORMAL_SEIRAN =       322,
+    SPECIES_EXTRA_SEIRAN =        323,
+    SPECIES_CHIBI_RINGO =         324,
+    SPECIES_NORMAL_RINGO =        325,
+    SPECIES_EXTRA_RINGO =         326,
+    SPECIES_CHIBI_DOREMY =        327,
+    SPECIES_NORMAL_DOREMY =       328,
+    SPECIES_EXTRA_DOREMY =        329,
+    SPECIES_CHIBI_SAGUME =        330,
+    SPECIES_NORMAL_SAGUME =       331,
+    SPECIES_EXTRA_SAGUME =        332,
+    SPECIES_CHIBI_CLOWNPIECE =    333,
+    SPECIES_NORMAL_CLOWNPIECE =   334,
+    SPECIES_EXTRA_CLOWNPIECE =    335,
+    SPECIES_CHIBI_JUNKO =         336,
+    SPECIES_NORMAL_JUNKO =        337,
+    SPECIES_EXTRA_JUNKO =         338,
+    SPECIES_CHIBI_HECATIA =       339,
+    SPECIES_NORMAL_HECATIA =      340,
+    SPECIES_OTHERWORLD_HECATIA =  341,
+    SPECIES_EARTH_HECATIA =       342,
+    SPECIES_MOON_HECATIA =        343,
+    SPECIES_CHIBI_JOON =          344,
+    SPECIES_NORMAL_JOON =         345,
+    SPECIES_EXTRA_JOON =          346,
+    SPECIES_CHIBI_SHION =         347,
+    SPECIES_NORMAL_SHION =        348,
+    SPECIES_EXTRA_SHION =         349,
+    SPECIES_CHIBI_ETERNITY =      350,
+    SPECIES_NORMAL_ETERNITY =     351,
+    SPECIES_EXTRA_ETERNITY =      352,
+    SPECIES_CHIBI_NEMUNO =        353,
+    SPECIES_NORMAL_NEMUNO =       354,
+    SPECIES_EXTRA_NEMUNO =        355,
+    SPECIES_CHIBI_AUNN =          356,
+    SPECIES_NORMAL_AUNN =         357,
+    SPECIES_EXTRA_AUNN =          358,
+    SPECIES_CHIBI_NARUMI =        359,
+    SPECIES_NORMAL_NARUMI =       360,
+    SPECIES_EXTRA_NARUMI =        361,
+    SPECIES_CHIBI_TEIREIDA =      362,
+    SPECIES_NORMAL_TEIREIDA =     363,
+    SPECIES_EXTRA_TEIREIDA =      364,
+    SPECIES_CHIBI_SATONO =        365,
+    SPECIES_NORMAL_SATONO =       366,
+    SPECIES_EXTRA_SATONO =        367,
+    SPECIES_CHIBI_OKINA =         368,
+    SPECIES_NORMAL_OKINA =        369,
+    SPECIES_EXTRA_OKINA =         370,
+    SPECIES_CHIBI_EIKA =          371,
+    SPECIES_NORMAL_EIKA =         372,
+    SPECIES_EXTRA_EIKA =          373,
+    SPECIES_CHIBI_URUMI =         374,
+    SPECIES_NORMAL_URUMI =        375,
+    SPECIES_EXTRA_URUMI =         376,
+    SPECIES_CHIBI_KUTAKA =        377,
+    SPECIES_NORMAL_KUTAKA =       378,
+    SPECIES_EXTRA_KUTAKA =        379,
+    SPECIES_CHIBI_YACHIE =        380,
+    SPECIES_NORMAL_YACHIE =       381,
+    SPECIES_EXTRA_YACHIE =        382,
+    SPECIES_CHIBI_MAYUMI =        383,
+    SPECIES_NORMAL_MAYUMI =       384,
+    SPECIES_EXTRA_MAYUMI =        385,
+    SPECIES_CHIBI_KEIKI =         386,
+    SPECIES_NORMAL_KEIKI =        387,
+    SPECIES_EXTRA_KEIKI =         388,
+    SPECIES_CHIBI_SAKI =          389,
+    SPECIES_NORMAL_SAKI =         390,
+    SPECIES_EXTRA_SAKI =          391,
+    SPECIES_CHIBI_YUUMA =         392,
+    SPECIES_NORMAL_YUUMA =        393,
+    SPECIES_EXTRA_YUUMA =         394,
+    SPECIES_CHIBI_MIZUCHI =       395,
+    SPECIES_NORMAL_MIZUCHI =      396,
+    SPECIES_EXTRA_MIZUCHI =       397,
+    SPECIES_CHIBI_MIYOI =         398,
+    SPECIES_NORMAL_MIYOI =        399,
+    SPECIES_EXTRA_MIYOI =         400,
+    SPECIES_CHIBI_MIKE =          401,
+    SPECIES_NORMAL_MIKE =         402,
+    SPECIES_EXTRA_MIKE =          403,
+    SPECIES_CHIBI_TAKANE =        404,
+    SPECIES_NORMAL_TAKANE =       405,
+    SPECIES_EXTRA_TAKANE =        406,
+    SPECIES_CHIBI_SANNYO =        407,
+    SPECIES_NORMAL_SANNYO =       408,
+    SPECIES_EXTRA_SANNYO =        409,
+    SPECIES_CHIBI_MISUMARU =      410,
+    SPECIES_NORMAL_MISUMARU =     411,
+    SPECIES_EXTRA_MISUMARU =      412,
+    SPECIES_CHIBI_TSUKASA =       413,
+    SPECIES_NORMAL_TSUKASA =      414,
+    SPECIES_EXTRA_TSUKASA =       415,
+    SPECIES_CHIBI_MEGUMU =        416,
+    SPECIES_NORMAL_MEGUMU =       417,
+    SPECIES_EXTRA_MEGUMU =        418,
+    SPECIES_CHIBI_CHIMATA =       419,
+    SPECIES_NORMAL_CHIMATA =      420,
+    SPECIES_EXTRA_CHIMATA =       421,
+    SPECIES_CHIBI_MOMOYO =        422,
+    SPECIES_NORMAL_MOMOYO =       423,
+    SPECIES_EXTRA_MOMOYO =        424,
+    SPECIES_CHIBI_BITEN =         425,
+    SPECIES_NORMAL_BITEN =        426,
+    SPECIES_EXTRA_BITEN =         427,
+    SPECIES_CHIBI_ENOKO =         428,
+    SPECIES_NORMAL_ENOKO =        429,
+    SPECIES_EXTRA_ENOKO =         430,
+    SPECIES_CHIBI_CHIYARI =       431,
+    SPECIES_NORMAL_CHIYARI =      432,
+    SPECIES_EXTRA_CHIYARI =       433,
+    SPECIES_CHIBI_HISAMI =        434,
+    SPECIES_NORMAL_HISAMI =       435,
+    SPECIES_EXTRA_HISAMI =        436,
+    SPECIES_CHIBI_ZANMU =         437,
+    SPECIES_NORMAL_ZANMU =        438,
+    SPECIES_EXTRA_ZANMU =         439,
+    SPECIES_CHIBI_UBAME =         440,
+    SPECIES_NORMAL_UBAME =        441,
+    SPECIES_EXTRA_UBAME =         442,
+    SPECIES_CHIBI_CHIMI =         443,
+    SPECIES_NORMAL_CHIMI =        444,
+    SPECIES_EXTRA_CHIMI =         445,
+    SPECIES_CHIBI_NAREKO =        446,
+    SPECIES_NORMAL_NAREKO =       447,
+    SPECIES_EXTRA_NAREKO =        448,
+    SPECIES_CHIBI_YUIMAN =        449,
+    SPECIES_NORMAL_YUIMAN =       450,
+    SPECIES_EXTRA_YUIMAN =        451,
+    SPECIES_CHIBI_ARIYA =         452,
+    SPECIES_NORMAL_ARIYA =        453,
+    SPECIES_EXTRA_ARIYA =         454,
+    SPECIES_CHIBI_NINA =          455,
+    SPECIES_NORMAL_NINA =         456,
+    SPECIES_EXTRA_NINA =          457,
+    SPECIES_CHIBI_HAKUREI =       458,
+    SPECIES_NORMAL_HAKUREI =      459,
+    SPECIES_EXTRA_HAKUREI =       460,
+    SPECIES_CHIBI_KIRISAME =      461,
+    SPECIES_NORMAL_KIRISAME =     462,
+    SPECIES_EXTRA_KIRISAME =      463,
+    SPECIES_SHINGYOKU_ORB =       464,
+    SPECIES_SHINGYOKU = SPECIES_SHINGYOKU_ORB,
+    SPECIES_SHINGYOKU_MALE =      465,
+    SPECIES_SHINGYOKU_FEMALE =    466,
+    SPECIES_MIMA =                467,
+    SPECIES_KONNGARA =            468,
+    SPECIES_YUUGENMAGAN =         469,
+    SPECIES_KIKURI =              470,
+    SPECIES_ELIS =                471,
+    SPECIES_SARIEL =              472,
+    SPECIES_GENJI =               473,
+    SPECIES_CHIBI_RIKA =          474,
+    SPECIES_NORMAL_RIKA =         475,
+    SPECIES_EXTRA_RIKA =          476,
+    SPECIES_NOROIKO =             477,
+    SPECIES_CHIBI_MEIRA =         478,
+    SPECIES_NORMAL_MEIRA =        479,
+    SPECIES_EXTRA_MEIRA =         480,
+    SPECIES_MAGIC_STONES =        481,
+    SPECIES_MATENSHI =            482,
+    SPECIES_CHIBI_ELLEN =         483,
+    SPECIES_NORMAL_ELLEN =        484,
+    SPECIES_EXTRA_ELLEN =         485,
+    SPECIES_CHIBI_KOTOHIME =      486,
+    SPECIES_NORMAL_KOTOHIME =     487,
+    SPECIES_EXTRA_KOTOHIME =      488,
+    SPECIES_CHIBI_KANA =          489,
+    SPECIES_NORMAL_KANA =         490,
+    SPECIES_EXTRA_KANA =          491,
+    SPECIES_CHIBI_RIKAKO =        492,
+    SPECIES_NORMAL_RIKAKO =       493,
+    SPECIES_EXTRA_RIKAKO =        494,
+    SPECIES_CHIBI_CHIYURI =       495,
+    SPECIES_NORMAL_CHIYURI =      496,
+    SPECIES_EXTRA_CHIYURI =       497,
+    SPECIES_CHIBI_YUMEMI =        498,
+    SPECIES_NORMAL_YUMEMI =       499,
+    SPECIES_EXTRA_YUMEMI =        500,
+    SPECIES_RUUKOTO =             501,
+    SPECIES_MIMI_CHAN =           502,
+    SPECIES_LOTUS_FLOWER =        503,
+    SPECIES_CHIBI_ORANGE =        504,
+    SPECIES_NORMAL_ORANGE =       505,
+    SPECIES_EXTRA_ORANGE =        506,
+    SPECIES_CHIBI_KURUMI =        507,
+    SPECIES_NORMAL_KURUMI =       508,
+    SPECIES_EXTRA_KURUMI =        509,
+    SPECIES_DARK_MIRROR =         510,
+    SPECIES_CHIBI_ELLY =          511,
+    SPECIES_NORMAL_ELLY =         512,
+    SPECIES_EXTRA_ELLY =          513,
+    SPECIES_HIKARIKO =            514,
+    SPECIES_CHIBI_KAZAMI =        515,
+    SPECIES_NORMAL_KAZAMI =       516,
+    SPECIES_EXTRA_KAZAMI =        517,
+    SPECIES_CHIBI_MUGETSU =       518,
+    SPECIES_NORMAL_MUGETSU =      519,
+    SPECIES_EXTRA_MUGETSU =       520,
+    SPECIES_CHIBI_GENGETSU =      521,
+    SPECIES_NORMAL_GENGETSU =     522,
+    SPECIES_EXTRA_GENGETSU =      523,
+    SPECIES_WAYOUSEI =            524,
+    SPECIES_CHIBI_SARA =          525,
+    SPECIES_NORMAL_SARA =         526,
+    SPECIES_EXTRA_SARA =          527,
+    SPECIES_SPIRIT_MIRROR =       528,
+    SPECIES_CHIBI_LOUISE =        529,
+    SPECIES_NORMAL_LOUISE =       530,
+    SPECIES_EXTRA_LOUISE =        531,
+    SPECIES_CHIBI_MARGATROID =    532,
+    SPECIES_NORMAL_MARGATROID =   533,
+    SPECIES_EXTRA_MARGATROID =    534,
+    SPECIES_CHIBI_YUKI =          535,
+    SPECIES_NORMAL_YUKI =         536,
+    SPECIES_EXTRA_YUKI =          537,
+    SPECIES_CHIBI_MAI =           538,
+    SPECIES_NORMAL_MAI =          539,
+    SPECIES_EXTRA_MAI =           540,
+    SPECIES_AYANA =               541,
+    SPECIES_CHIBI_YUMEKO =        542,
+    SPECIES_NORMAL_YUMEKO =       543,
+    SPECIES_EXTRA_YUMEKO =        544,
+    SPECIES_CHIBI_SHINKI =        545,
+    SPECIES_NORMAL_SHINKI =       546,
+    SPECIES_EXTRA_SHINKI =        547,
+    SPECIES_CHIBI_SENDAI =        548,
+    SPECIES_NORMAL_SENDAI =       549,
+    SPECIES_EXTRA_SENDAI =        550,
+    SPECIES_CHIBI_MITORI =        551,
+    SPECIES_NORMAL_MITORI =       552,
+    SPECIES_EXTRA_MITORI =        553,
+    SPECIES_CHIBI_SASHA =         554,
+    SPECIES_NORMAL_SASHA =        555,
+    SPECIES_EXTRA_SASHA =         556,
+    SPECIES_CHIBI_SUGAR =         557,
+    SPECIES_NORMAL_SUGAR =        558,
+    SPECIES_EXTRA_SUGAR =         559,
+    SPECIES_CHIBI_YUUTO =         560,
+    SPECIES_NORMAL_YUUTO =        561,
+    SPECIES_EXTRA_YUUTO =         562,
+    SPECIES_CHIBI_KAREN =         563,
+    SPECIES_NORMAL_KAREN =        564,
+    SPECIES_EXTRA_KAREN =         565,
+    SPECIES_CHIBI_MELON =         566,
+    SPECIES_NORMAL_MELON =        567,
+    SPECIES_EXTRA_MELON =         568,
+    SPECIES_GATENSOKU =           569,
+    SPECIES_TORI =                570,
+    SPECIES_ISAMI =               571,
+    SPECIES_VIVIT =               572,
+    SPECIES_ANGEL_VIVIT =         573,
+    SPECIES_X_REIMU =             574,
+    SPECIES_X_MARISA =            575,
+    SPECIES_X_SAKUYA =            576,
+    SPECIES_X_SANAE =             577,
+    SPECIES_X_YOUMU =             578,
+    SPECIES_X_REISEN =            579,
+    SPECIES_TRANSCENDENT_RENKO =  580,
+    SPECIES_TRANSCENDENT_MARIBEL =  581,
     SPECIES_NONE = 0,
     SPECIES_BULBASAUR = 1,
     SPECIES_IVYSAUR = 2,

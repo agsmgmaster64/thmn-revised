@@ -1238,9 +1238,6 @@ static void SetSpeciesInfoForOWE(struct InfoOWE *info, u32 x, u32 y)
     info->level = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_LEVEL);
     personality = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_PERSONALITY);
 
-    if (info->speciesId == SPECIES_UNOWN)
-        info->speciesId = GetUnownSpeciesId(personality);
-
     info->isShiny = ComputePlayerShinyOdds(personality, READ_OTID_FROM_SAVE);
     if (GetGenderFromSpeciesAndPersonality(info->speciesId, personality) == MON_FEMALE)
         info->isFemale = TRUE;

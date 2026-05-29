@@ -828,6 +828,8 @@ static bool32 CanAbilityPreventStatLoss(enum Ability ability)
     case ABILITY_CLEAR_BODY:
     case ABILITY_FULL_METAL_BODY:
     case ABILITY_WHITE_SMOKE:
+    case ABILITY_HAKUREI_MIKO:
+    case ABILITY_MYSTIC_BARRIER:
         return TRUE;
     default:
         return FALSE;
@@ -845,8 +847,10 @@ static bool32 AbilityPreventsSpecificStatDrop(u32 ability, u32 stat)
     case ABILITY_MINDS_EYE:
         return stat == STAT_ACC;
     case ABILITY_HYPER_CUTTER:
+    case ABILITY_ONI_STRENGTH:
         return stat == STAT_ATK;
     case ABILITY_BIG_PECKS:
+    case ABILITY_FIRM_DEFENSE:
         return stat == STAT_DEF;
     default:
         return FALSE;

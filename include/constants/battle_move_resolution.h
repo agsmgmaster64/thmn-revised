@@ -144,9 +144,9 @@ enum MoveEndState
     MOVEEND_SEND_OUT_REPLACEMENTS, // For all non-forced switching effects
     MOVEEND_CLEAR_BITS,
     MOVEEND_DANCER,
-    MOVEEND_PURSUIT_NEXT_ACTION,
     MOVEEND_WALL_MASTER,
     MOVEEND_TWIN_SPARK,
+    MOVEEND_PURSUIT_NEXT_ACTION,
     MOVEEND_COUNT,
 
     // This guarantees a correct jump if new moveends are added directly after MOVEEND_HIT_ESCAPE

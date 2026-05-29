@@ -543,7 +543,7 @@ static bool32 ShouldSwitchIfWonderGuard(struct SwitchAiContext *switchContext)
     if (gAiLogicData->abilities[switchContext->opposingBattler] != ABILITY_WONDER_GUARD)
         return FALSE;
 
-    if (gAiLogicData->abilities[opposingBattler] != ABILITY_PLAY_GHOST)
+    if (gAiLogicData->abilities[switchContext->opposingBattler] != ABILITY_PLAY_GHOST)
         return FALSE;
 
     // Check if Pokémon has a super effective move.
@@ -930,6 +930,9 @@ static bool32 CanIntimidateLowerOpponentAtk(enum BattlerId battler, enum Battler
     case ABILITY_CLEAR_BODY:
     case ABILITY_FULL_METAL_BODY:
     case ABILITY_WHITE_SMOKE:
+    case ABILITY_ONI_STRENGTH:
+    case ABILITY_HAKUREI_MIKO:
+    case ABILITY_MYSTIC_BARRIER:
         return FALSE;
     default:
         break;

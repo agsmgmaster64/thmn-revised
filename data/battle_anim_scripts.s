@@ -35617,14 +35617,12 @@ gBattleAnimGeneral_DynamaxGrowth:: @ PORTED FROM CFRU
 	end
 
 gBattleAnimGeneral_Buzzer::
-	loadspritegfx ANIM_TAG_X_SIGN
 	playsewithpan SE_FAILURE, 63
 	createsprite gRedXSpriteTemplate, ANIM_ATTACKER, 5, 1, 50
 	waitforvisualfinish
 	end
 
 gBattleAnimMove_TakeOver::
-	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
 	monbg ANIM_DEF_PARTNER
 	
 	fadetobg 2
@@ -35662,8 +35660,6 @@ gBattleAnimMove_TakeOver::
 	waitforvisualfinish
 
 gBattleAnimMove_ThirdEye::
-	loadspritegfx ANIM_TAG_TEAL_ALERT
-	loadspritegfx ANIM_TAG_ORBS
 	setalpha 11, 5
 	monbg_static ANIM_DEF_PARTNER
 	splitbgprio_all

@@ -13028,16 +13028,15 @@ void BS_TryActivateSalvage(void)
     NATIVE_ARGS();
     while (gBattleStruct->salvageBattlerId < gBattlersCount)
     {
-        gBattleScripting.battler = gBattleStruct->salvageBattlerId++;
-        u32 ability = GetBattlerAbility(gBattleScripting.battler);
+        gEffectBattler = gBattlerAbility = gBattleStruct->salvageBattlerId++;
+        u32 ability = GetBattlerAbility(gBattlerAbility);
         if (ability == ABILITY_SALVAGE
-            && IsBattlerAlive(gBattleScripting.battler)
+            && IsBattlerAlive(gBattlerAbility)
             && !NoAliveMonsForEitherParty()
-            && CompareStat(gBattleScripting.battler, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN, ability))
+            && CompareStat(gBattlerAbility, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN, ability))
         {
-            SET_STATCHANGER(STAT_DEF, 1, FALSE);
-            PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_DEF);
-            BattleScriptCall(BattleScript_ScriptingAbilityStatRaise);
+            SetStatChange(gBattlerAbility, STAT_DEF, 1);
+            BattleScriptCall(BattleScript_AbilityStatChange);
             return;
         }
     }
@@ -13948,6 +13947,7 @@ void BS_TryDefiantRattled(void)
     {
     case ABILITY_DEFIANT:
     case ABILITY_COMPETITIVE:
+    case ABILITY_INDIGNANT:
         if (ShouldDefiantCompetitiveActivate(battler, ability))
         {
             if (ability == ABILITY_DEFIANT)
