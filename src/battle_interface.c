@@ -2895,7 +2895,8 @@ bool32 CanThrowLastUsedBall(void)
         return FALSE;
     if (!CheckBagHasItem(gBallToDisplay, 1))
         return FALSE;
-
+    if (IsVictoryCatch())
+        return FALSE;
     return TRUE;
 }
 
