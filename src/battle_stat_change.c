@@ -12,6 +12,7 @@
 
 // Stat change
 static enum StatChangeResult CanDecreaseStat(struct BattleCalcValues *cv, struct StatChange *st);
+static enum StatChangeResult CanIncreaseStat(struct BattleCalcValues *cv, struct StatChange *st);
 static enum StatChangeResult DecreaseStat(struct BattleCalcValues *cv, struct StatChange *st);
 static enum StatChangeResult IncreaseStat(struct BattleCalcValues *cv, struct StatChange *st);
 static void StatChanged(struct BattleCalcValues *cv, struct StatChange *st, bool32 isMaxStage);
@@ -25,6 +26,7 @@ static bool32 IsClearAmuletBlocked(struct BattleCalcValues *cv, struct StatChang
 static bool32 IsIntimidateBlocked(struct BattleCalcValues *cv, struct StatChange *st);
 static bool32 IsAbilityBlocked(struct BattleCalcValues *cv, struct StatChange *st);
 static bool32 IsMirrorArmorReflected(struct BattleCalcValues *cv, struct StatChange *st);
+static bool32 IsStasisGazeBlocked(struct BattleCalcValues *cv, struct StatChange *st);
 
 // Utitily
 static void AdjustStatStage(struct BattleCalcValues *cv, struct StatChange *st);
@@ -232,6 +234,9 @@ bool32 CanAnyStatChange(struct BattleCalcValues *cv, struct StatChange *st)
             if (st->stage < 0 && CanDecreaseStat(cv, st) == STAT_CHANGE_DIDNT_WORK)
                 continue;
 
+            if (st->stage > 0 && CanIncreaseStat(cv, st) == STAT_CHANGE_DIDNT_WORK)
+                continue;
+
             canAnyStatChange = TRUE;
         }
     }
@@ -279,10 +284,21 @@ enum StatChangeResult TryStatChange(struct BattleCalcValues *cv, struct StatChan
                 break;
             }
         }
-        else if (IncreaseStat(cv, st) == STAT_CHANGE_WORKED)
+        else
         {
-            result = STAT_CHANGE_WORKED;
-            break;
+            if (CanIncreaseStat(cv, st) == STAT_CHANGE_DIDNT_WORK)
+            {
+                if (st->silentFailure)
+                    continue;
+                result = STAT_CHANGE_BLOCKED_BY_TARGET;
+                break;
+            }
+
+            if (IncreaseStat(cv, st) == STAT_CHANGE_WORKED)
+            {
+                result = STAT_CHANGE_WORKED;
+                break;
+            }
         }
     }
 
@@ -304,9 +320,13 @@ enum StatChangeResult TrySingleStatChange(struct BattleCalcValues *cv, struct St
         if (DecreaseStat(cv, st) == STAT_CHANGE_WORKED)
             return STAT_CHANGE_WORKED;
     }
-    else if (IncreaseStat(cv, st) == STAT_CHANGE_WORKED)
+    else
     {
-        return STAT_CHANGE_WORKED;
+        if (CanIncreaseStat(cv, st) == STAT_CHANGE_DIDNT_WORK)
+            return STAT_CHANGE_DIDNT_WORK;
+
+        if (IncreaseStat(cv, st) == STAT_CHANGE_WORKED)
+            return STAT_CHANGE_WORKED;
     }
 
     return STAT_CHANGE_DIDNT_WORK;
@@ -320,6 +340,13 @@ static enum StatChangeResult CanDecreaseStat(struct BattleCalcValues *cv, struct
      || IsClearAmuletBlocked(cv, st)
      || IsAbilityBlocked(cv, st)
      || IsMirrorArmorReflected(cv, st))
+        return STAT_CHANGE_DIDNT_WORK;
+    return STAT_CHANGE_WORKED;
+}
+
+static enum StatChangeResult CanIncreaseStat(struct BattleCalcValues *cv, struct StatChange *st)
+{
+    if (IsStasisGazeBlocked(cv, st))
         return STAT_CHANGE_DIDNT_WORK;
     return STAT_CHANGE_WORKED;
 }
@@ -795,6 +822,39 @@ static bool32 IsMirrorArmorReflected(struct BattleCalcValues *cv, struct StatCha
     return FALSE;
 }
 
+static enum BattlerId StatChange_IsStasisGazeBlocked(struct BattleCalcValues *cv)
+{
+    for (enum BattlerId battler = B_BATTLER_0; battler < gBattlersCount; battler++)
+    {
+        if (IsBattlerAlly(cv->battlerDef, battler))
+            continue;
+        if (cv->abilities[battler] == ABILITY_STASIS_GAZE)
+            return battler;
+    }
+
+    return MAX_BATTLERS_COUNT;
+}
+
+static bool32 IsStasisGazeBlocked(struct BattleCalcValues *cv, struct StatChange *st)
+{
+    u32 stasisGazeBattler = StatChange_IsStasisGazeBlocked(cv);
+
+    if (stasisGazeBattler == MAX_BATTLERS_COUNT)
+        return FALSE;
+
+    if (!st->onlyChecking)
+    {
+        st->script = BattleScript_AbilityNoStatGain;
+        gBattleScripting.battler = cv->battlerDef;
+        gBattlerAbility = stasisGazeBattler;
+        gLastUsedAbility = ABILITY_STASIS_GAZE;
+        MarkStatsAsDone(st, NUM_BATTLE_STATS);
+        RecordAbilityBattle(gBattlerAbility, ABILITY_STASIS_GAZE);
+    }
+
+    return TRUE;
+}
+
 // There is a similar function AI_GetAdjustedStatStage that needs to be updated if things are changed here
 static void AdjustStatStage(struct BattleCalcValues *cv, struct StatChange *st)
 {
@@ -1050,6 +1110,9 @@ bool32 CanStatChange(struct BattleCalcValues *cv, struct StatChange *st)
     else
     {
         if (CompareStat(cv->battlerDef, st->stat, MAX_STAT_STAGE, CMP_EQUAL, ABILITY_NONE))
+            return FALSE;
+
+        if (st->stage > 0 && CanIncreaseStat(cv, st) == STAT_CHANGE_DIDNT_WORK)
             return FALSE;
     }
 
