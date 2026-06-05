@@ -408,17 +408,17 @@ static void BagCreateYesNoMenuTopRight(u8 taskId, const struct YesNoFuncTable * 
 static void BagPrintMoneyAmount(void);
 static void BagDrawTextBoxOnWindow(u8 windowId);
 
-const u32 gBagBg_Gfx[] = INCBIN_U32("graphics/item_menu_frlg/bg.4bpp.lz");
-const u32 gBagBg_Tilemap[] = INCBIN_U32("graphics/item_menu_frlg/bg.bin.lz");
-const u32 gBagBg_ItemPC_Tilemap[] = INCBIN_U32("graphics/item_menu_frlg/bg_item_pc.bin.lz");
-const u16 gBagBgPalette[] = INCBIN_U16("graphics/item_menu_frlg/bg.gbapal"); // palette 1 (Boy + misc Pal)
-const u16 gBagBgPalette_FemaleOverride[] = INCBIN_U16("graphics/item_menu_frlg/bg_female.gbapal"); // palette 2 (Girl)
+const u32 gBagBg_Gfx[] = INCGFX_U32("graphics/item_menu_frlg/bg.png", ".4bpp.smol");
+const u32 gBagBg_Tilemap[] = INCBIN_U32("graphics/item_menu_frlg/bg.bin.smolTM");
+const u32 gBagBg_ItemPC_Tilemap[] = INCBIN_U32("graphics/item_menu_frlg/bg_item_pc.bin.smolTM");
+const u16 gBagBgPalette[] = INCGFX_U16("graphics/item_menu_frlg/bg.png", ".gbapal"); // palette 1 (Boy + misc Pal)
+const u16 gBagBgPalette_FemaleOverride[] = INCGFX_U16("graphics/item_menu_frlg/bg_female.pal", ".gbapal"); // palette 2 (Girl)
 
-const u32 gBagMale_Gfx[] = INCBIN_U32("graphics/item_menu_frlg/bag_male.4bpp.lz");
-const u32 gBagFemale_Gfx[] = INCBIN_U32("graphics/item_menu_frlg/bag_female.4bpp.lz");
-const u16 gBag_Pal[] = INCBIN_U16("graphics/item_menu_frlg/bag.gbapal");
+const u32 gBagMale_Gfx[] = INCGFX_U32("graphics/item_menu_frlg/bag_male.png", ".4bpp.smol");
+const u32 gBagFemale_Gfx[] = INCGFX_U32("graphics/item_menu_frlg/bag_female.png", ".4bpp.smol");
+const u16 gBag_Pal[] = INCGFX_U16("graphics/item_menu_frlg/bag.pal", ".gbapal");
 
-static const u16 sBagWindowPalF[] = INCBIN_U16("graphics/item_menu_frlg/bag_window_pal.gbapal");
+static const u16 sBagWindowPalF[] = INCGFX_U16("graphics/item_menu_frlg/bag_window_pal.pal", ".gbapal");
 
 static const struct CompressedSpriteSheet gSpriteSheet_BagMale = {
     .data = gBagMale_Gfx,
@@ -623,7 +623,7 @@ static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
     .palNum = 0,
 };
 
-static const u8 sBlit_SelectButton[] = INCBIN_U8("graphics/item_menu_frlg/select_button.4bpp");
+static const u8 sBlit_SelectButton[] = INCGFX_U8("graphics/item_menu_frlg/select_button.png", ".4bpp");
 
 #define tListTaskId        data[0]
 #define tListPosition      data[1]

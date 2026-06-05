@@ -274,8 +274,8 @@ static const struct WindowTemplate sSubwindowTemplates[] =
     }
 };
 
-static const u8 sItemPcTiles[] = INCBIN_U8("graphics/item_pc_rg/bg.4bpp.smol");
-static const u16 sItemPcBgPals[] = INCBIN_U16("graphics/item_pc_rg/bg.gbapal");
+static const u8 sItemPcTiles[] = INCGFX_U8("graphics/item_pc_rg/bg.png", ".4bpp.smol");
+static const u16 sItemPcBgPals[] = INCGFX_U16("graphics/item_pc_rg/bg.png", ".gbapal");
 static const u32 sItemPcTilemap[] = INCBIN_U32("graphics/item_pc_rg/bg.bin.smolTM");
 
 #define tListTaskId     data[0]
