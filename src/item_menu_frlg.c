@@ -506,7 +506,11 @@ static const struct MenuAction sItemMenuContextActions[] = {
     [ITEMMENUACTION_OPEN_BERRIES] = {sText_Open, {.void_u8 = Task_ItemMenuAction_BattleUse}},
     [ITEMMENUACTION_WALK] = {sText_Walk, {.void_u8 = Task_ItemMenuAction_Use}},
     [ITEMMENUACTION_DESELECT] = {gText_Deselect, {.void_u8 = Task_ItemMenuAction_ToggleSelect}},
-    [ITEMMENUACTION_DUMMY] = {gText_Blank, {.void_u8 = NULL}}
+    [ITEMMENUACTION_DUMMY] =
+    {
+        COMPOUND_STRING(""),
+        {.void_u8 = NULL}
+    }
 };
 
 static const u8 sBagTabToPocket[FRLG_POCKET_COUNT] =
