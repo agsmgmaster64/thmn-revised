@@ -366,8 +366,8 @@ static const struct WindowTemplate sWindowTemplates[] =
         .bg = 1,
         .tilemapLeft = 1,
         .tilemapTop = 1,
-        .width = 10,
-        .height = 2,
+        .width = 8,
+        .height = 3,
         .paletteNum = 15,
         .baseBlock = 0x31d
     },
@@ -1292,7 +1292,7 @@ static void SellTM_PrintQuantityAndSalePrice(s16 quantity, s32 amount)
     ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_LEADING_ZEROS, MAX_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_xVar1);
     TMCase_Print(WIN_SELL_QUANTITY, FONT_SMALL, gStringVar4, 4, 10, 1, 0, 0, COLOR_MESSAGE);
-    PrintMoneyAmount(WIN_SELL_QUANTITY, 40, 10, amount, 0);
+    PrintMoneyAmountFrlg(WIN_SELL_QUANTITY, 40, 10, amount, 0);
 }
 
 static void Task_QuantitySelect_HandleInput(u8 taskId)
@@ -1355,7 +1355,7 @@ static void Task_DoSaleOfTMs(u8 taskId)
     InitTMCaseListMenuItems();
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, sTMCaseStaticResources.scrollOffset, sTMCaseStaticResources.selectedRow);
     PrintListCursor(tListTaskId, COLOR_CURSOR_SELECTED);
-    PrintMoneyAmountInMoneyBox(WIN_MONEY, GetMoney(&gSaveBlock1Ptr->money), 0);
+    PrintMoneyAmountInMoneyBoxFrlg(WIN_MONEY, GetMoney(&gSaveBlock1Ptr->money), 0);
     gTasks[taskId].func = Task_AfterSale_ReturnToList;
 }
 
@@ -1489,8 +1489,8 @@ static void PlaceHMTileInWindow(u8 windowId, u8 x, u8 y)
 
 static void PrintPlayersMoney(void)
 {
-    PrintMoneyAmountInMoneyBoxWithBorder(WIN_MONEY, 120, 14, GetMoney(&gSaveBlock1Ptr->money));
-    AddMoneyLabelObject(19, 11);
+    PrintMoneyAmountInMoneyBoxWithBorderFrlg(WIN_MONEY, 120, 14, GetMoney(&gSaveBlock1Ptr->money));
+    AddMoneyLabelObject(21, 14);
 }
 
 static void HandleCreateYesNoMenu(u8 taskId, const struct YesNoFuncTable *ptrs)

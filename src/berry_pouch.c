@@ -378,8 +378,8 @@ static const struct WindowTemplate sWindowTemplates_Variable[] =
         .bg = 2,
         .tilemapLeft = 1,
         .tilemapTop = 1,
-        .width = 10,
-        .height = 2,
+        .width = 8,
+        .height = 3,
         .paletteNum = 15,
         .baseBlock = 0x201
     },
@@ -1697,7 +1697,7 @@ static void Task_Sell_PrintSelectMultipleUI(u8 taskId)
 
 static void SellMultiple_UpdateSellPriceDisplay(s32 price)
 {
-    PrintMoneyAmount(GetVariableWindowId(BP_VAR_WINDOW_SELL_AMOUNT), 40, 10, price, 0);
+    PrintMoneyAmountFrlg(GetVariableWindowId(BP_VAR_WINDOW_SELL_AMOUNT), 40, 10, price, 0);
 }
 
 static void Task_Sell_SelectMultiple(u8 taskId)
@@ -1757,7 +1757,7 @@ static void Task_SellBerries_PlaySfxAndRemoveBerries(u8 taskId)
     SetUpListMenuTemplate();
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, sBerryPouchStaticResources.listMenuScrollOffset, sBerryPouchStaticResources.listMenuSelectedRow);
     BerryPouchSetArrowCursorFromListMenu(tListTaskId, BP_COLORID_LIGHT_GRAY);
-    PrintMoneyAmountInMoneyBox(GetVariableWindowId(BP_VAR_WINDOW_MONEY), GetMoney(&gSaveBlock1Ptr->money), 0);
+    PrintMoneyAmountInMoneyBoxFrlg(GetVariableWindowId(BP_VAR_WINDOW_MONEY), GetMoney(&gSaveBlock1Ptr->money), 0);
     gTasks[taskId].func = Task_SellBerries_WaitButton;
 }
 
@@ -1858,8 +1858,8 @@ static void CreateSellYesNoMenu(u8 taskId, const struct YesNoFuncTable *ptrs)
 
 static void PrintMoneyInWin2(void)
 {
-    PrintMoneyAmountInMoneyBoxWithBorder(GetOrCreateVariableWindow(BP_VAR_WINDOW_MONEY), 0x001, 14, GetMoney(&gSaveBlock1Ptr->money));
-    AddMoneyLabelObject(19, 11);
+    PrintMoneyAmountInMoneyBoxWithBorderFrlg(GetOrCreateVariableWindow(BP_VAR_WINDOW_MONEY), 0x001, 14, GetMoney(&gSaveBlock1Ptr->money));
+    AddMoneyLabelObject(21, 14);
 }
 
 static void CreateBerryPouchSprite(void)

@@ -1901,7 +1901,7 @@ static void Task_ItemMenuAction_Give(u8 taskId)
     PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
     CopyWindowToVram(FRLG_BAG_WINDOW_ITEM_LIST, COPYWIN_MAP);
     if (!IsWritingMailAllowed(itemId))
-        DisplayItemMessageFrlg(taskId, FONT_SHORT, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
+        DisplayItemMessageFrlg(taskId, FONT_NORMAL, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
     else if (!GetItemImportance(itemId))
     {
         if (!CalculatePlayerPartyCount())
@@ -1920,14 +1920,14 @@ static void Task_ItemMenuAction_Give(u8 taskId)
 
 static void Task_PrintThereIsNoPokemon(u8 taskId)
 {
-    DisplayItemMessageFrlg(taskId, FONT_SHORT, gText_NoPokemon, Task_WaitAButtonAndCloseContextMenu);
+    DisplayItemMessageFrlg(taskId, FONT_NORMAL, gText_NoPokemon, Task_WaitAButtonAndCloseContextMenu);
 }
 
 static void Task_PrintItemCantBeHeld(u8 taskId)
 {
     CopyItemName(gSpecialVar_ItemId, gStringVar1);
     StringExpandPlaceholders(gStringVar4, gText_Var1CantBeHeld);
-    DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_WaitAButtonAndCloseContextMenu);
+    DisplayItemMessageFrlg(taskId, FONT_NORMAL, gStringVar4, Task_WaitAButtonAndCloseContextMenu);
 }
 
 static void Task_WaitAButtonAndCloseContextMenu(u8 taskId)
@@ -2006,7 +2006,7 @@ static void Task_ItemContext_FieldGive(u8 taskId)
     u16 itemId = GetBagItemId(gBagMenuState.pocket, tListPosition);
     if (!IsWritingMailAllowed(itemId))
     {
-        DisplayItemMessageFrlg(taskId, FONT_SHORT, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
+        DisplayItemMessageFrlg(taskId, FONT_NORMAL, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
     }
     else if (itemId == ITEM_TM_CASE)
     {
@@ -2050,7 +2050,7 @@ static void Task_ItemContext_PcBoxGive(u8 taskId)
     u16 itemId = GetBagItemId(gBagMenuState.pocket, tListPosition);
     if (ItemIsMail(itemId))
     {
-        DisplayItemMessageFrlg(taskId, FONT_SHORT, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
+        DisplayItemMessageFrlg(taskId, FONT_NORMAL, gText_CantWriteMail, Task_WaitAButtonAndCloseContextMenu);
     }
     else if (itemId == ITEM_TM_CASE)
     {
@@ -2105,7 +2105,7 @@ static void Task_ItemContext_Sell(u8 taskId)
     {
         CopyItemName(gSpecialVar_ItemId, gStringVar1);
         StringExpandPlaceholders(gStringVar4, gText_CantBuyKeyItem);
-        DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_ReturnToBagFromContextMenu);
+        DisplayItemMessageFrlg(taskId, FONT_NORMAL, gStringVar4, Task_ReturnToBagFromContextMenu);
     }
     else
     {
@@ -2121,7 +2121,7 @@ static void Task_ItemContext_Sell(u8 taskId)
                 tQuantity = MAX_BAG_ITEM_CAPACITY;
             CopyItemName(gSpecialVar_ItemId, gStringVar1);
             StringExpandPlaceholders(gStringVar4, gText_HowManyToSell);
-            DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_InitSaleQuantitySelectInterface);
+            DisplayItemMessageFrlg(taskId, FONT_NORMAL, gStringVar4, Task_InitSaleQuantitySelectInterface);
         }
     }
 }
@@ -2138,15 +2138,15 @@ static void GoToBerryPouch_Sell(void)
 
 static void ReturnToBagMenuFromSubmenu_Sell(void)
 {
-    GoToBagMenuFrlg(ITEMMENULOCATION_SHOP, OPEN_BAG_LAST, CB2_ReturnToField);
+    GoToBagMenuFrlg(ITEMMENULOCATION_SHOP, OPEN_BAG_LAST, CB2_ExitSellMenu);
 }
 
 static void Task_PrintSaleConfirmationText(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    ConvertIntToDecimalStringN(gStringVar3, GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, 6);
+    ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, 6);
     StringExpandPlaceholders(gStringVar4, gText_ICanPayVar1);
-    DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_ShowSellYesNoMenu);
+    DisplayItemMessageFrlg(taskId, FONT_NORMAL, gStringVar4, Task_ShowSellYesNoMenu);
 }
 
 static void Task_ShowSellYesNoMenu(u8 taskId)
@@ -2158,6 +2158,7 @@ static void Task_SellItem_No(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     HideBagWindow(FRLG_BAG_SUBWINDOW_MONEY);
+    RemoveMoneyLabelObject();
     CloseBagWindow(FRLG_BAG_SUBWINDOW_MESSAGE);
     PutWindowTilemap(FRLG_BAG_WINDOW_POCKET_NAME);
     PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
@@ -2182,7 +2183,7 @@ static void Task_InitSaleQuantitySelectInterface(u8 taskId)
 
 static void UpdateSalePriceDisplay(s32 amount)
 {
-    PrintMoneyAmount(GetBagWindow(FRLG_BAG_SUBWINDOW_1), 56, 10, amount, 0);
+    PrintMoneyAmountFrlg(GetBagWindow(FRLG_BAG_SUBWINDOW_1), 56, 10, amount, 0);
 }
 
 static void Task_SelectQuantityToSell(u8 taskId)
@@ -2207,6 +2208,7 @@ static void Task_SelectQuantityToSell(u8 taskId)
         PlaySE(SE_SELECT);
         HideBagWindow(FRLG_BAG_SUBWINDOW_1);
         HideBagWindow(FRLG_BAG_SUBWINDOW_MONEY);
+        RemoveMoneyLabelObject();
         CloseBagWindow(FRLG_BAG_SUBWINDOW_MESSAGE);
         PutWindowTilemap(FRLG_BAG_WINDOW_POCKET_NAME);
         PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
@@ -2226,7 +2228,7 @@ static void Task_SellItem_Yes(u8 taskId)
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
     ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBagItemId(gBagMenuState.pocket, tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, 6);
     StringExpandPlaceholders(gStringVar4, gText_TurnedOverVar1ForVar2);
-    DisplayItemMessageFrlg(taskId, FONT_SHORT, gStringVar4, Task_FinalizeSaleToShop);
+    DisplayItemMessageFrlg(taskId, FONT_NORMAL, gStringVar4, Task_FinalizeSaleToShop);
 }
 
 static void Task_FinalizeSaleToShop(u8 taskId)
@@ -2243,7 +2245,7 @@ static void Task_FinalizeSaleToShop(u8 taskId)
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
     bag_menu_print_cursor_(tListTaskId, 2);
     BagDrawTextBoxOnWindow(GetBagWindow(FRLG_BAG_SUBWINDOW_MONEY));
-    PrintMoneyAmountInMoneyBox(GetBagWindow(FRLG_BAG_SUBWINDOW_MONEY), GetMoney(&gSaveBlock1Ptr->money), 0);
+    PrintMoneyAmountInMoneyBoxFrlg(GetBagWindow(FRLG_BAG_SUBWINDOW_MONEY), GetMoney(&gSaveBlock1Ptr->money), 0);
     gTasks[taskId].func = Task_WaitPressAB_AfterSell;
 }
 
@@ -2253,6 +2255,7 @@ static void Task_WaitPressAB_AfterSell(u8 taskId)
     {
         PlaySE(SE_SELECT);
         HideBagWindow(FRLG_BAG_SUBWINDOW_MONEY);
+        RemoveMoneyLabelObject();
         PutWindowTilemap(FRLG_BAG_WINDOW_POCKET_NAME);
         sBagMenuDisplay->inhibitItemDescriptionPrint = FALSE;
         Task_ReturnToBagFromContextMenu(taskId);
@@ -2317,7 +2320,7 @@ static void Task_TryDoItemDeposit(u8 taskId)
     }
     else
     {
-        DisplayItemMessageFrlg(taskId, FONT_SHORT, sText_NoRoomForItems, Task_WaitAButtonAndCloseContextMenu);
+        DisplayItemMessageFrlg(taskId, FONT_NORMAL, sText_NoRoomForItems, Task_WaitAButtonAndCloseContextMenu);
     }
 }
 
@@ -2468,7 +2471,7 @@ static void BagPrintTextOnWin1CenteredColor0(const u8 * str)
 static void BagDrawDepositItemTextBox(void)
 {
     u32 x;
-    DrawStdFrameWithCustomTileAndPalette(FRLG_BAG_WINDOW_POCKET_NAME, FALSE, 0x081, 14);
+    DrawStdFrameWithCustomTileAndPalette(FRLG_BAG_WINDOW_POCKET_NAME, FALSE, 0x064, 14);
     x = 0x40 - GetStringWidth(FONT_SMALL, sText_DepositItem, 0);
     AddTextPrinterParameterized(FRLG_BAG_WINDOW_POCKET_NAME, FONT_SMALL, sText_DepositItem, x / 2, 1, 0, NULL);
 }
@@ -2532,8 +2535,8 @@ static void BagCreateYesNoMenuTopRight(u8 taskId, const struct YesNoFuncTable * 
 
 static void BagPrintMoneyAmount(void)
 {
-    PrintMoneyAmountInMoneyBoxWithBorder(ShowBagWindow(FRLG_BAG_SUBWINDOW_MONEY, 0), 0x081, 0x0C, GetMoney(&gSaveBlock1Ptr->money));
-    AddMoneyLabelObject(19, 11);
+    PrintMoneyAmountInMoneyBoxWithBorderFrlg(ShowBagWindow(FRLG_BAG_SUBWINDOW_MONEY, 0), 0x064, 14, GetMoney(&gSaveBlock1Ptr->money));
+    AddMoneyLabelObject(21, 14);
 }
 
 static void BagDrawTextBoxOnWindow(u8 windowId)

@@ -661,7 +661,10 @@ void CB2_GoToSellMenu(void)
 
 void CB2_GoToItemDepositMenu(void)
 {
-    GoToBagMenu(ITEMMENULOCATION_ITEMPC, POCKETS_COUNT, CB2_PlayerPCExitBagMenu);
+    if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_ITEMPC, OPEN_BAG_LAST, CB2_PlayerPCExitBagMenu);
+    else
+        GoToBagMenu(ITEMMENULOCATION_ITEMPC, POCKETS_COUNT, CB2_PlayerPCExitBagMenu);
 }
 
 void ApprenticeOpenBagMenu(void)
@@ -2203,7 +2206,10 @@ static void ItemMenu_UseInBattle(u8 taskId)
 
 void CB2_ReturnToBagMenuPocket(void)
 {
-    GoToBagMenu(ITEMMENULOCATION_LAST, POCKETS_COUNT, NULL);
+    if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_LAST, OPEN_BAG_LAST, NULL);
+    else
+        GoToBagMenu(ITEMMENULOCATION_LAST, POCKETS_COUNT, NULL);
 }
 
 static void GoToTMCase_Give(void)
@@ -2611,6 +2617,11 @@ void DoWallyTutorialBagMenu(void)
 
 void InitOldManBag(void)
 {
+    if (FRLG_I_USE_FRLG_BAG)
+    {
+        InitOldManBagFrlg();
+        return;
+    }
     PrepareBagForWallyTutorial();
     AddBagItem(ITEM_POTION, 1);
     AddBagItem(ITEM_POKE_BALL, 1);
