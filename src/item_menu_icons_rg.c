@@ -243,7 +243,6 @@ void ItemRG_DrawItemIcon(u16 itemId, u8 idx)
         if (spriteId != MAX_SPRITES)
         {
             spriteIds[idx] = spriteId;
-            gSprites[spriteId].oam.priority = 0;
             gSprites[spriteId].x2 = 24;
             gSprites[spriteId].y2 = 140;
         }

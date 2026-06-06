@@ -1228,6 +1228,8 @@ static void Task_ItemMenu_WaitFadeAndSwitchToExitCallback(u8 taskId)
         else
             SetMainCallback2(gBagMenuState.bagCallback);
         BagDestroyPocketScrollArrowPair();
+        ResetSpriteData();
+        FreeAllSpritePalettes();
         DestroyBagMenuResources();
         DestroyTask(taskId);
     }
@@ -1573,7 +1575,7 @@ static void ExecuteMoveItemInPocket(u8 taskId, u32 itemIndex)
     }
     else
     {
-        MoveItemSlotInPocket(gBagMenuState.pocket, tListPosition, gBagMenuState.scrollPosition[gBagMenuState.bagTab]);
+        MoveItemSlotInPocket(gBagMenuState.pocket, tListPosition, itemIndex);
         DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         if (tListPosition < itemIndex)
             gBagMenuState.cursorPos[gBagMenuState.bagTab]--;
