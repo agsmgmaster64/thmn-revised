@@ -20,7 +20,6 @@
 #include "text_window.h"
 #include "international_string_util.h"
 #include "strings.h"
-#include "battle_ai_main.h"
 #include "battle_ai_util.h"
 #include "list_menu.h"
 #include "decompress.h"
@@ -670,7 +669,7 @@ void CB2_BattleDebugMenu(void)
         ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
         ResetAllBgsCoordinates();
-        FreeAllWindowBuffers();
+        CloseMainBattleScreen();
         DeactivateAllTextPrinters();
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
         ShowBg(0);
@@ -774,7 +773,7 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
     if (gAiLogicData->shouldSwitch & (1u << data->aiBattlerId))
     {
         struct Pokemon *party = GetBattlerParty(data->aiBattlerId);
-        u32 switchMon = GetMonData(&party[gAiLogicData->mostSuitableMonId[data->aiBattlerId]], MON_DATA_SPECIES);
+        enum Species switchMon = GetMonData(&party[gAiLogicData->mostSuitableMonId[data->aiBattlerId]], MON_DATA_SPECIES);
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("Switching to "));
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74 + 68, 79, sTextColorTable[COLORID_RED], 0, gSpeciesInfo[switchMon].speciesName);
     }
@@ -1069,7 +1068,7 @@ static void Task_ShowAiParty(u8 taskId)
         aiMons = gAiPartyData->mons[GetBattlerSide(data->aiBattlerId)];
         for (i = 0; i < gAiPartyData->count[GetBattlerSide(data->aiBattlerId)]; i++)
         {
-            u16 species = SPECIES_NONE; // Question mark
+            enum Species species = SPECIES_NONE; // Question mark
             if (aiMons[i].wasSentInBattle && aiMons[i].species)
                 species = aiMons[i].species;
             data->spriteIds.aiPartyIcons[i] = CreateMonIcon(species, SpriteCallbackDummy, (i * 41) + 15, 7, 1, 0);

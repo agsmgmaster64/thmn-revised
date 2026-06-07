@@ -9,7 +9,7 @@ ASSUMPTIONS
 SINGLE_BATTLE_TEST("Ice Spinner and Steel Roller remove a terrain from field")
 {
     u32 j;
-    static const u16 terrainMoves[] =
+    static const enum Move terrainMoves[] =
     {
         MOVE_ELECTRIC_TERRAIN,
         MOVE_PSYCHIC_TERRAIN,
@@ -123,5 +123,22 @@ AI_SINGLE_BATTLE_TEST("Ice Spinner can be chosen by AI regardless if there is a 
         } else {
             TURN { EXPECT_MOVE(opponent, MOVE_ICE_SPINNER); }
         }
+    }
+}
+
+SINGLE_BATTLE_TEST("Ice Spinner will remove terrain if target is behind a Substitute")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_GRASSY_TERRAIN); }
+        TURN { MOVE(player, MOVE_SUBSTITUTE); MOVE(opponent, MOVE_ICE_SPINNER); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_GRASSY_TERRAIN, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SUBSTITUTE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_ICE_SPINNER, opponent);
+        SUB_HIT(player);
+        NOT HP_BAR(player);
     }
 }
