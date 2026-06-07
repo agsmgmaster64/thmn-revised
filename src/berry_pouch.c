@@ -1126,7 +1126,7 @@ static void Task_BerryPouchMain(u8 taskId)
                 if ((sBerryPouchDynamicResources->listMenuNumItems - 1) <= 1) //can't sort with 0 or 1 item in bag
                 {
                     PlaySE(SE_FAILURE);
-                    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, sText_NothingToSort, Task_WaitButtonBeforeDialogueWindowDestruction);
+                    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, sText_NothingToSort, Task_WaitButtonBeforeDialogueWindowDestruction);
                 }
                 else
                 {
@@ -1314,7 +1314,7 @@ static void BerryPouch_BattleUse_BagMenu(u8 taskId)
 {
     if (CannotUseItemsInBattle(gSpecialVar_ItemId, NULL))
     {
-        DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
+        DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
     }
     else
     {
@@ -1505,7 +1505,7 @@ static void Task_BerryPouch_Give(u8 taskId)
 
 static void Task_Give_PrintThereIsNoPokemon(u8 taskId)
 {
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gText_NoPokemon, Task_WaitButtonBeforeDialogueWindowDestruction);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gText_NoPokemon, Task_WaitButtonBeforeDialogueWindowDestruction);
 }
 
 static void Task_WaitButtonBeforeDialogueWindowDestruction(u8 taskId)
@@ -1581,7 +1581,7 @@ static void Task_BerryPouchSortItems(u8 taskId)
 
     StringCopy(gStringVar1, sSortTypeStrings[tSortType]);
     StringExpandPlaceholders(gStringVar4, sText_ItemsSorted);
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_WaitButtonBeforeDialogueWindowDestruction);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_WaitButtonBeforeDialogueWindowDestruction);
 }
 
 #undef tSortType
@@ -1631,7 +1631,7 @@ static void Task_ContextMenu_Sell(u8 taskId)
     {
         CopyItemName(gSpecialVar_ItemId, gStringVar2);
         StringExpandPlaceholders(gStringVar4, gText_CantBuyKeyItem);
-        DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
+        DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
     }
     else
     {
@@ -1650,7 +1650,7 @@ static void Task_ContextMenu_Sell(u8 taskId)
 
             CopyItemName(gSpecialVar_ItemId, gStringVar2);
             StringExpandPlaceholders(gStringVar4, gText_HowManyToSell);
-            DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_Sell_PrintSelectMultipleUI);
+            DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_Sell_PrintSelectMultipleUI);
         }
     }
 }
@@ -1660,7 +1660,7 @@ static void Task_AskSellMultiple(u8 taskId)
     s16 * data = gTasks[taskId].data;
     ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBerryPouchItemIdByPosition(tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_ICanPayVar1);
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_SellMultiple_CreateYesNoMenu);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_SellMultiple_CreateYesNoMenu);
 }
 
 static void Task_SellMultiple_CreateYesNoMenu(u8 taskId)
@@ -1742,7 +1742,7 @@ static void Task_SellYes(u8 taskId)
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
     ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBerryPouchItemIdByPosition(tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_TurnedOverVar1ForVar2);
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_SellBerries_PlaySfxAndRemoveBerries);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_SellBerries_PlaySfxAndRemoveBerries);
 }
 
 static void Task_SellBerries_PlaySfxAndRemoveBerries(u8 taskId)

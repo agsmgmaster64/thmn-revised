@@ -1175,7 +1175,7 @@ static void ItemPc_DestroySubwindow(u8 idx)
 
 static void ItemPc_PrintOnMessageWithContinueTask(u8 taskId, const u8 * str, TaskFunc taskFunc)
 {
-    DisplayMessageAndContinueTask(taskId, ITEM_PC_WINDOW_MESSAGE, 0x3A3, 13, FONT_SHORT, GetPlayerTextSpeedDelay(), str, taskFunc);
+    DisplayMessageAndContinueTask(taskId, ITEM_PC_WINDOW_MESSAGE, 0x3A3, 13, FONT_NORMAL, GetPlayerTextSpeedDelay(), str, taskFunc);
     ScheduleBgCopyTilemapToVram(0);
 }
 

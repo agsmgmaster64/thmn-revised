@@ -195,7 +195,7 @@ static void DisplayCannotUseItemMessage(u8 taskId, bool8 isUsingRegisteredKeyIte
     if (!isUsingRegisteredKeyItemOnField)
     {
         if (CheckIfInBerryPouch())
-            DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, str, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
+            DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, str, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
         else if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
             DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
         else

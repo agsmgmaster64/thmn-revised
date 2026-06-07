@@ -642,13 +642,19 @@ void CB2_ChooseBerry(void)
 // Choosing mulch to use
 void CB2_ChooseMulch(void)
 {
-    GoToBagMenu(ITEMMENULOCATION_BERRY_TREE_MULCH, POCKET_ITEMS, CB2_ReturnToFieldContinueScript);
+    if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_BERRY_TREE_MULCH, FRLG_POCKET_ITEMS, CB2_ReturnToFieldContinueScript);
+    else
+        GoToBagMenu(ITEMMENULOCATION_BERRY_TREE_MULCH, POCKET_ITEMS, CB2_ReturnToFieldContinueScript);
 }
 
 // Choosing berry for Berry Blender or Berry Crush
 void ChooseBerryForMachine(MainCallback exitCallback)
 {
-    GoToBagMenu(ITEMMENULOCATION_BERRY_BLENDER_CRUSH, POCKET_BERRIES, exitCallback);
+    if (FRLG_I_ADD_BERRY_POUCH_WITH_BERRIES)
+        InitBerryPouch(BERRYPOUCH_BERRY_BLENDER_CRUSH, exitCallback, FALSE);
+    else
+        GoToBagMenu(ITEMMENULOCATION_BERRY_BLENDER_CRUSH, POCKET_BERRIES, exitCallback);
 }
 
 void CB2_GoToSellMenu(void)
@@ -662,7 +668,7 @@ void CB2_GoToSellMenu(void)
 void CB2_GoToItemDepositMenu(void)
 {
     if (FRLG_I_USE_FRLG_BAG)
-        GoToBagMenuFrlg(ITEMMENULOCATION_ITEMPC, OPEN_BAG_LAST, CB2_PlayerPCExitBagMenu);
+        GoToBagMenuFrlg(ITEMMENULOCATION_ITEMPC, FRLG_POCKET_ITEMS, CB2_PlayerPCExitBagMenu);
     else
         GoToBagMenu(ITEMMENULOCATION_ITEMPC, POCKETS_COUNT, CB2_PlayerPCExitBagMenu);
 }
