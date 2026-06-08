@@ -1543,7 +1543,7 @@ static void Task_BerryPouch_Exit(u8 taskId)
     Task_CleanUpAndReturnToMain(taskId);
 }
 
-#define tSortType data[3]
+#define tSortType data[2]
 static void Task_BerryPouch_Name(u8 taskId)
 {
     gTasks[taskId].tSortType = SORT_ALPHABETICALLY;
