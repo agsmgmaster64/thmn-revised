@@ -1673,8 +1673,8 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     {
         if (!gTasks[taskId].tUsingRegisteredKeyItem)
         {
-            gBagMenu->newScreenCallback = UseTownMapFromBag;
-            Task_FadeAndCloseBagMenu(taskId);
+            SetItemMenuCallback(UseTownMapFromBag);
+            CloseItemMenu(taskId);
         }
         else
         {
