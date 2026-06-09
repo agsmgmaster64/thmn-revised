@@ -133,7 +133,7 @@ static const u16 sRegionMapPlayerIcon_LeafPal[] = INCGFX_U16("graphics/pokenav/r
 static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCGFX_U8("graphics/pokenav/region_map/leaf_icon.png", ".4bpp");
 
 #include "data/region_map/region_map_layout.h"
-#include "data/region_map/region_map_layout_kanto.h"
+#include "data/region_map/region_map_layout_kanto_alt.h"
 #include "data/region_map/region_map_layout_sevii123.h"
 #include "data/region_map/region_map_layout_sevii45.h"
 #include "data/region_map/region_map_layout_sevii67.h"
@@ -2527,4 +2527,26 @@ void SetFlyDestination(struct RegionMap* regionMap)
         SetWarpDestinationToHealLocation(flyDestination);
     else
         SetWarpDestinationToMapWarp(sMapHealLocations[regionMap->mapSecId][0], sMapHealLocations[regionMap->mapSecId][1], WARP_ID_NONE);
+}
+
+u32 FilterFlyDestinationMapSec(u32 mapSecId)
+{
+    switch (mapSecId)
+    {
+    default:
+        if (sMapHealLocations[mapSecId][2] != HEAL_LOCATION_NONE)
+            return sMapHealLocations[mapSecId][2];
+        else
+            return WARP_ID_NONE;
+    }
+}
+
+void SetFlyDestinationMapSec(u32 mapSecId)
+{
+    u32 flyDestination = FilterFlyDestinationMapSec(mapSecId);
+
+    if (flyDestination != WARP_ID_NONE)
+        SetWarpDestinationToHealLocation(flyDestination);
+    else
+        SetWarpDestinationToMapWarp(sMapHealLocations[mapSecId][0], sMapHealLocations[mapSecId][1], WARP_ID_NONE);
 }

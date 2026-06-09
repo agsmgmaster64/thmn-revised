@@ -59,6 +59,7 @@
 #include "pokemon_summary_screen.h"
 #include "pokerus.h"
 #include "region_map.h"
+#include "region_map_frlg.h"
 #include "reshow_battle_screen.h"
 #include "scanline_effect.h"
 #include "script.h"
@@ -4143,7 +4144,10 @@ static void CursorCb_FieldMove(u8 taskId)
                 sPartyMenuInternal->data[0] = fieldMove;
                 break;
             case FIELD_MOVE_FLY:
-                gPartyMenu.exitCallback = CB2_OpenFlyMap;
+                if (IS_FRLG)
+                    gPartyMenu.exitCallback = CB2_OpenFlyMap_Frlg;
+                else
+                    gPartyMenu.exitCallback = CB2_OpenFlyMap;
                 Task_ClosePartyMenu(taskId);
                 break;
             default:

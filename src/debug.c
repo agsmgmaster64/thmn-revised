@@ -43,6 +43,7 @@
 #include "pokemon_storage_system.h"
 #include "random.h"
 #include "region_map.h"
+#include "region_map_frlg.h"
 #include "rtc.h"
 #include "script.h"
 #include "script_pokemon_util.h"
@@ -1551,7 +1552,10 @@ static void DebugAction_OpenSubMenuCreateFollowerNPC(u8 taskId, const struct Deb
 static void DebugAction_Util_Fly(u8 taskId)
 {
     Debug_DestroyMenu_Full(taskId);
-    SetMainCallback2(CB2_OpenFlyMap);
+    if (IS_FRLG)
+        SetMainCallback2(CB2_OpenFlyMap_Frlg);
+    else
+        SetMainCallback2(CB2_OpenFlyMap);
 }
 
 #define tMapGroup  data[6]
