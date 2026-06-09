@@ -214,12 +214,12 @@ static const struct BgTemplate sBgTemplates[] =
 
 static const TaskFunc sBerryPouchContextMenuTasks[] =
 {
-    [BERRYPOUCH_FROMFIELD] = Task_NormalContextMenu,
-    [BERRYPOUCH_FROMPARTYGIVE] = Task_ContextMenu_FromPartyGiveMenu,
-    [BERRYPOUCH_FROMMARTSELL] = Task_ContextMenu_Sell,
-    [BERRYPOUCH_FROMPOKEMONSTORAGEPC] = Task_ContextMenu_FromPokemonPC,
-    [BERRYPOUCH_FROMBATTLE] = Task_NormalContextMenu,
-    [BERRYPOUCH_FROMBERRYCRUSH] = Task_NormalContextMenu,
+    [BERRYPOUCH_FIELD] = Task_NormalContextMenu,
+    [BERRYPOUCH_GIVE_PARTY] = Task_ContextMenu_FromPartyGiveMenu,
+    [BERRYPOUCH_SELL] = Task_ContextMenu_Sell,
+    [BERRYPOUCH_GIVE_PC] = Task_ContextMenu_FromPokemonPC,
+    [BERRYPOUCH_BATTLE] = Task_NormalContextMenu,
+    [BERRYPOUCH_BERRY_BLENDER_CRUSH] = Task_NormalContextMenu,
 };
 
 static const struct YesNoFuncTable sYesNoFuncs_Toss =
@@ -378,8 +378,8 @@ static const struct WindowTemplate sWindowTemplates_Variable[] =
         .bg = 2,
         .tilemapLeft = 1,
         .tilemapTop = 1,
-        .width = 10,
-        .height = 2,
+        .width = 8,
+        .height = 3,
         .paletteNum = 15,
         .baseBlock = 0x201
     },
@@ -829,7 +829,7 @@ static void SetUpListMenuTemplate(void)
     sListMenuItems[i].name = sText_Close;
     sListMenuItems[i].id = i;
     gMultiuseListMenuTemplate.items = sListMenuItems;
-    if (sBerryPouchStaticResources.type != BERRYPOUCH_FROMBERRYCRUSH)
+    if (sBerryPouchStaticResources.type != BERRYPOUCH_BERRY_BLENDER_CRUSH)
         gMultiuseListMenuTemplate.totalItems = sBerryPouchDynamicResources->listMenuNumItems + 1;
     else
         gMultiuseListMenuTemplate.totalItems = sBerryPouchDynamicResources->listMenuNumItems;
@@ -942,7 +942,7 @@ static void SetDescriptionWindowBorderPalette(s32 pal)
 
 static void CreateScrollIndicatorArrows_BerryPouchList(void)
 {
-    if (sBerryPouchStaticResources.type != BERRYPOUCH_FROMBERRYCRUSH)
+    if (sBerryPouchStaticResources.type != BERRYPOUCH_BERRY_BLENDER_CRUSH)
         sBerryPouchDynamicResources->indicatorTaskId = AddScrollIndicatorArrowPairParameterized(2, 160, 8, 120, sBerryPouchDynamicResources->listMenuNumItems - sBerryPouchDynamicResources->listMenuMaxShowed + 1, 110, 110, &sBerryPouchStaticResources.listMenuScrollOffset);
     else
         sBerryPouchDynamicResources->indicatorTaskId = AddScrollIndicatorArrowPairParameterized(2, 160, 8, 120, sBerryPouchDynamicResources->listMenuNumItems - sBerryPouchDynamicResources->listMenuMaxShowed, 110, 110, &sBerryPouchStaticResources.listMenuScrollOffset);
@@ -984,7 +984,7 @@ void BerryPouch_CursorResetToTop(void)
 static void SanitizeListMenuSelectionParams(void)
 {
     s32 itemCount;
-    if (sBerryPouchStaticResources.type != BERRYPOUCH_FROMBERRYCRUSH)
+    if (sBerryPouchStaticResources.type != BERRYPOUCH_BERRY_BLENDER_CRUSH)
         itemCount = sBerryPouchDynamicResources->listMenuNumItems + 1;
     else
         itemCount = sBerryPouchDynamicResources->listMenuNumItems;
@@ -1003,7 +1003,7 @@ static void UpdateListMenuScrollOffset(void)
 {
     u8 lim;
     u8 i;
-    if (sBerryPouchStaticResources.type != BERRYPOUCH_FROMBERRYCRUSH)
+    if (sBerryPouchStaticResources.type != BERRYPOUCH_BERRY_BLENDER_CRUSH)
         lim = sBerryPouchDynamicResources->listMenuNumItems + 1;
     else
         lim = sBerryPouchDynamicResources->listMenuNumItems;
@@ -1063,7 +1063,7 @@ static void SortAndCountBerries(void)
     for (u32 i = 0; i < pocket->capacity && GetBerryPouchItemIdByPosition(i); i++)
         sBerryPouchDynamicResources->listMenuNumItems++;
 
-    if (sBerryPouchStaticResources.type != BERRYPOUCH_FROMBERRYCRUSH)
+    if (sBerryPouchStaticResources.type != BERRYPOUCH_BERRY_BLENDER_CRUSH)
         itemCount = sBerryPouchDynamicResources->listMenuNumItems + 1;
     else
         itemCount = sBerryPouchDynamicResources->listMenuNumItems;
@@ -1105,8 +1105,8 @@ static void PrintxQuantityOnWindow(u8 whichWindow, s16 quantity, u8 ndigits)
 static inline bool32 CanMoveItemsBerryPouch(void)
 {
     // Swaps can only be done from the field or in battle (as opposed to while selling items, for example)
-    if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMFIELD
-     || sBerryPouchStaticResources.type == BERRYPOUCH_FROMBATTLE)
+    if (sBerryPouchStaticResources.type == BERRYPOUCH_FIELD
+     || sBerryPouchStaticResources.type == BERRYPOUCH_BATTLE)
     {
         return TRUE;
     }
@@ -1126,7 +1126,7 @@ static void Task_BerryPouchMain(u8 taskId)
                 if ((sBerryPouchDynamicResources->listMenuNumItems - 1) <= 1) //can't sort with 0 or 1 item in bag
                 {
                     PlaySE(SE_FAILURE);
-                    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, sText_NothingToSort, Task_WaitButtonBeforeDialogueWindowDestruction);
+                    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, sText_NothingToSort, Task_WaitButtonBeforeDialogueWindowDestruction);
                 }
                 else
                 {
@@ -1164,7 +1164,7 @@ static void Task_BerryPouchMain(u8 taskId)
             case LIST_NOTHING_CHOSEN:
                 return;
             case LIST_CANCEL:
-                if (sBerryPouchStaticResources.type != BERRYPOUCH_FROMBERRYCRUSH)
+                if (sBerryPouchStaticResources.type != BERRYPOUCH_BERRY_BLENDER_CRUSH)
                 {
                     PlaySE(SE_SELECT);
                     gSpecialVar_ItemId = 0;
@@ -1174,7 +1174,7 @@ static void Task_BerryPouchMain(u8 taskId)
                 break;
             default:
                 PlaySE(SE_SELECT);
-                if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMBERRYTREE)
+                if (sBerryPouchStaticResources.type == BERRYPOUCH_BERRY_TREE)
                 {
                     gSpecialVar_ItemId = GetBerryPouchItemIdByPosition(menuInput);
                     sIsInBerryPouch = FALSE;
@@ -1215,7 +1215,7 @@ static void CreateNormalContextMenu(u8 taskId)
     u8 windowId;
     u8 windowId2;
 
-    if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMBATTLE)
+    if (sBerryPouchStaticResources.type == BERRYPOUCH_BATTLE)
     {
         if (GetItemBattleUsage(gSpecialVar_ItemId))
         {
@@ -1228,7 +1228,7 @@ static void CreateNormalContextMenu(u8 taskId)
             sContextMenuNumOptions = ARRAY_COUNT(sOptions_Exit);
         }
     }
-    else if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMBERRYCRUSH)
+    else if (sBerryPouchStaticResources.type == BERRYPOUCH_BERRY_BLENDER_CRUSH)
     {
         sContextMenuOptions = sOptions_ConfirmCheckExit;
         sContextMenuNumOptions = ARRAY_COUNT(sOptions_ConfirmCheckExit);
@@ -1314,7 +1314,7 @@ static void BerryPouch_BattleUse_BagMenu(u8 taskId)
 {
     if (CannotUseItemsInBattle(gSpecialVar_ItemId, NULL))
     {
-        DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
+        DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
     }
     else
     {
@@ -1354,7 +1354,7 @@ static void Task_BerryPouch_Use(u8 taskId)
     PutWindowTilemap(BP_WINDOW_DESCRIPTION);
     ScheduleBgCopyTilemapToVram(0);
     ScheduleBgCopyTilemapToVram(2);
-    if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMBATTLE)
+    if (sBerryPouchStaticResources.type == BERRYPOUCH_BATTLE)
     {
         // Safety check
         u16 type = GetItemType(gSpecialVar_ItemId);
@@ -1505,7 +1505,7 @@ static void Task_BerryPouch_Give(u8 taskId)
 
 static void Task_Give_PrintThereIsNoPokemon(u8 taskId)
 {
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gText_NoPokemon, Task_WaitButtonBeforeDialogueWindowDestruction);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gText_NoPokemon, Task_WaitButtonBeforeDialogueWindowDestruction);
 }
 
 static void Task_WaitButtonBeforeDialogueWindowDestruction(u8 taskId)
@@ -1543,7 +1543,7 @@ static void Task_BerryPouch_Exit(u8 taskId)
     Task_CleanUpAndReturnToMain(taskId);
 }
 
-#define tSortType data[3]
+#define tSortType data[2]
 static void Task_BerryPouch_Name(u8 taskId)
 {
     gTasks[taskId].tSortType = SORT_ALPHABETICALLY;
@@ -1581,7 +1581,7 @@ static void Task_BerryPouchSortItems(u8 taskId)
 
     StringCopy(gStringVar1, sSortTypeStrings[tSortType]);
     StringExpandPlaceholders(gStringVar4, sText_ItemsSorted);
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_WaitButtonBeforeDialogueWindowDestruction);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_WaitButtonBeforeDialogueWindowDestruction);
 }
 
 #undef tSortType
@@ -1631,7 +1631,7 @@ static void Task_ContextMenu_Sell(u8 taskId)
     {
         CopyItemName(gSpecialVar_ItemId, gStringVar2);
         StringExpandPlaceholders(gStringVar4, gText_CantBuyKeyItem);
-        DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
+        DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
     }
     else
     {
@@ -1650,7 +1650,7 @@ static void Task_ContextMenu_Sell(u8 taskId)
 
             CopyItemName(gSpecialVar_ItemId, gStringVar2);
             StringExpandPlaceholders(gStringVar4, gText_HowManyToSell);
-            DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_Sell_PrintSelectMultipleUI);
+            DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_Sell_PrintSelectMultipleUI);
         }
     }
 }
@@ -1660,7 +1660,7 @@ static void Task_AskSellMultiple(u8 taskId)
     s16 * data = gTasks[taskId].data;
     ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBerryPouchItemIdByPosition(tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_ICanPayVar1);
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_SellMultiple_CreateYesNoMenu);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_SellMultiple_CreateYesNoMenu);
 }
 
 static void Task_SellMultiple_CreateYesNoMenu(u8 taskId)
@@ -1697,7 +1697,7 @@ static void Task_Sell_PrintSelectMultipleUI(u8 taskId)
 
 static void SellMultiple_UpdateSellPriceDisplay(s32 price)
 {
-    PrintMoneyAmount(GetVariableWindowId(BP_VAR_WINDOW_SELL_AMOUNT), 40, 10, price, 0);
+    PrintMoneyAmountFrlg(GetVariableWindowId(BP_VAR_WINDOW_SELL_AMOUNT), 40, 10, price, 0);
 }
 
 static void Task_Sell_SelectMultiple(u8 taskId)
@@ -1742,7 +1742,7 @@ static void Task_SellYes(u8 taskId)
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
     ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetBerryPouchItemIdByPosition(tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_TurnedOverVar1ForVar2);
-    DisplayItemMessageInBerryPouch(taskId, FONT_SHORT, gStringVar4, Task_SellBerries_PlaySfxAndRemoveBerries);
+    DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_SellBerries_PlaySfxAndRemoveBerries);
 }
 
 static void Task_SellBerries_PlaySfxAndRemoveBerries(u8 taskId)
@@ -1757,7 +1757,7 @@ static void Task_SellBerries_PlaySfxAndRemoveBerries(u8 taskId)
     SetUpListMenuTemplate();
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, sBerryPouchStaticResources.listMenuScrollOffset, sBerryPouchStaticResources.listMenuSelectedRow);
     BerryPouchSetArrowCursorFromListMenu(tListTaskId, BP_COLORID_LIGHT_GRAY);
-    PrintMoneyAmountInMoneyBox(GetVariableWindowId(BP_VAR_WINDOW_MONEY), GetMoney(&gSaveBlock1Ptr->money), 0);
+    PrintMoneyAmountInMoneyBoxFrlg(GetVariableWindowId(BP_VAR_WINDOW_MONEY), GetMoney(&gSaveBlock1Ptr->money), 0);
     gTasks[taskId].func = Task_SellBerries_WaitButton;
 }
 
@@ -1858,8 +1858,8 @@ static void CreateSellYesNoMenu(u8 taskId, const struct YesNoFuncTable *ptrs)
 
 static void PrintMoneyInWin2(void)
 {
-    PrintMoneyAmountInMoneyBoxWithBorder(GetOrCreateVariableWindow(BP_VAR_WINDOW_MONEY), 0x001, 14, GetMoney(&gSaveBlock1Ptr->money));
-    AddMoneyLabelObject(19, 11);
+    PrintMoneyAmountInMoneyBoxWithBorderFrlg(GetOrCreateVariableWindow(BP_VAR_WINDOW_MONEY), 0x001, 14, GetMoney(&gSaveBlock1Ptr->money));
+    AddMoneyLabelObject(21, 14);
 }
 
 static void CreateBerryPouchSprite(void)

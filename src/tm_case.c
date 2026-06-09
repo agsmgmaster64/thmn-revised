@@ -366,8 +366,8 @@ static const struct WindowTemplate sWindowTemplates[] =
         .bg = 1,
         .tilemapLeft = 1,
         .tilemapTop = 1,
-        .width = 10,
-        .height = 2,
+        .width = 8,
+        .height = 3,
         .paletteNum = 15,
         .baseBlock = 0x31d
     },
@@ -1118,14 +1118,14 @@ static void Action_Give(u8 taskId)
 
 static void PrintError_ThereIsNoPokemon(u8 taskId)
 {
-    PrintMessageWithFollowupTask(taskId, FONT_SHORT, gText_NoPokemon, Task_WaitButtonAfterErrorPrint);
+    PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gText_NoPokemon, Task_WaitButtonAfterErrorPrint);
 }
 
 static void PrintError_ItemCantBeHeld(u8 taskId)
 {
     CopyItemName(gSpecialVar_ItemId, gStringVar1);
     StringExpandPlaceholders(gStringVar4, gText_Var1CantBeHeld);
-    PrintMessageWithFollowupTask(taskId, FONT_SHORT, gStringVar4, Task_WaitButtonAfterErrorPrint);
+    PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gStringVar4, Task_WaitButtonAfterErrorPrint);
 }
 
 static void Task_WaitButtonAfterErrorPrint(u8 taskId)
@@ -1214,7 +1214,7 @@ static void Task_SelectedTMHM_Sell(u8 taskId)
         // Can't sell TM/HMs with no price (by default this is just the HMs)
         CopyItemName(gSpecialVar_ItemId, gStringVar2);
         StringExpandPlaceholders(gStringVar4, gText_CantBuyKeyItem);
-        PrintMessageWithFollowupTask(taskId, FONT_SHORT, gStringVar4, CloseMessageAndReturnToList);
+        PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gStringVar4, CloseMessageAndReturnToList);
     }
     else
     {
@@ -1233,7 +1233,7 @@ static void Task_SelectedTMHM_Sell(u8 taskId)
 
             CopyItemName(gSpecialVar_ItemId, gStringVar2);
             StringExpandPlaceholders(gStringVar4, gText_HowManyToSell);
-            PrintMessageWithFollowupTask(taskId, FONT_SHORT, gStringVar4, Task_InitQuantitySelectUI);
+            PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gStringVar4, Task_InitQuantitySelectUI);
         }
     }
 }
@@ -1244,7 +1244,7 @@ static void Task_AskConfirmSaleWithAmount(u8 taskId)
 
     ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetTMCaseItemIdByPosition(tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_ICanPayVar1);
-    PrintMessageWithFollowupTask(taskId, FONT_SHORT, gStringVar4, Task_PlaceYesNoBox);
+    PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gStringVar4, Task_PlaceYesNoBox);
 }
 
 static void Task_PlaceYesNoBox(u8 taskId)
@@ -1292,7 +1292,7 @@ static void SellTM_PrintQuantityAndSalePrice(s16 quantity, s32 amount)
     ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_LEADING_ZEROS, MAX_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_xVar1);
     TMCase_Print(WIN_SELL_QUANTITY, FONT_SMALL, gStringVar4, 4, 10, 1, 0, 0, COLOR_MESSAGE);
-    PrintMoneyAmount(WIN_SELL_QUANTITY, 40, 10, amount, 0);
+    PrintMoneyAmountFrlg(WIN_SELL_QUANTITY, 40, 10, amount, 0);
 }
 
 static void Task_QuantitySelect_HandleInput(u8 taskId)
@@ -1339,7 +1339,7 @@ static void Task_PrintSaleConfirmedText(u8 taskId)
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
     ConvertIntToDecimalStringN(gStringVar1, GetItemSellPrice(GetTMCaseItemIdByPosition(tListPosition)) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_TurnedOverVar1ForVar2);
-    PrintMessageWithFollowupTask(taskId, FONT_SHORT, gStringVar4, Task_DoSaleOfTMs);
+    PrintMessageWithFollowupTask(taskId, FONT_NORMAL, gStringVar4, Task_DoSaleOfTMs);
 }
 
 static void Task_DoSaleOfTMs(u8 taskId)
@@ -1355,7 +1355,7 @@ static void Task_DoSaleOfTMs(u8 taskId)
     InitTMCaseListMenuItems();
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, sTMCaseStaticResources.scrollOffset, sTMCaseStaticResources.selectedRow);
     PrintListCursor(tListTaskId, COLOR_CURSOR_SELECTED);
-    PrintMoneyAmountInMoneyBox(WIN_MONEY, GetMoney(&gSaveBlock1Ptr->money), 0);
+    PrintMoneyAmountInMoneyBoxFrlg(WIN_MONEY, GetMoney(&gSaveBlock1Ptr->money), 0);
     gTasks[taskId].func = Task_AfterSale_ReturnToList;
 }
 
@@ -1489,8 +1489,8 @@ static void PlaceHMTileInWindow(u8 windowId, u8 x, u8 y)
 
 static void PrintPlayersMoney(void)
 {
-    PrintMoneyAmountInMoneyBoxWithBorder(WIN_MONEY, 120, 14, GetMoney(&gSaveBlock1Ptr->money));
-    AddMoneyLabelObject(19, 11);
+    PrintMoneyAmountInMoneyBoxWithBorderFrlg(WIN_MONEY, 120, 14, GetMoney(&gSaveBlock1Ptr->money));
+    AddMoneyLabelObject(21, 14);
 }
 
 static void HandleCreateYesNoMenu(u8 taskId, const struct YesNoFuncTable *ptrs)

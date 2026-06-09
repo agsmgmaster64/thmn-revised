@@ -17,6 +17,7 @@
 #include "item.h"
 #include "item_icon.h"
 #include "item_menu.h"
+#include "item_menu_frlg.h"
 #include "mail.h"
 #include "main.h"
 #include "menu.h"
@@ -3789,7 +3790,10 @@ static void Task_ChangeScreen(u8 taskId)
         break;
     case SCREEN_CHANGE_ITEM_FROM_BAG:
         FreePokeStorageData();
-        GoToBagMenu(ITEMMENULOCATION_PCBOX, 0, CB2_ReturnToPokeStorage);
+        if (FRLG_I_USE_FRLG_BAG)
+            GoToBagMenuFrlg(ITEMMENULOCATION_PCBOX, 0, CB2_ReturnToPokeStorage);
+        else
+            GoToBagMenu(ITEMMENULOCATION_PCBOX, 0, CB2_ReturnToPokeStorage);
         break;
     }
 
