@@ -36,5 +36,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "TrappyPass_EventScript_WarningSign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

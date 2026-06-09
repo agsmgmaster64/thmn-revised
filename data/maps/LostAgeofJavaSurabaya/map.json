@@ -46,5 +46,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LostAgeofJavaSurabaya_EventScript_AncientPyramidSign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }
