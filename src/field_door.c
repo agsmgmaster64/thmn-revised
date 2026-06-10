@@ -387,9 +387,9 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_TrainerHill_Door_Elevator_Lobby,              &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
 #else
-    {METATILE_GeneralFrlg_Door,                             &gTileset_General_Frlg, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_GeneralFrlg, sDoorAnimPalettes_GeneralFrlg},
-    {METATILE_GeneralFrlg_SlidingSingleDoor,                &gTileset_General_Frlg, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SlidingSingle, sDoorAnimPalettes_SlidingSingle},
-    {METATILE_GeneralFrlg_SlidingDoubleDoor,                &gTileset_General_Frlg, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SlidingDouble, sDoorAnimPalettes_SlidingDouble},
+    {METATILE_GeneralFrlg_Door,                             &gTileset_GeneralFrlg, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_GeneralFrlg, sDoorAnimPalettes_GeneralFrlg},
+    {METATILE_GeneralFrlg_SlidingSingleDoor,                &gTileset_GeneralFrlg, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SlidingSingle, sDoorAnimPalettes_SlidingSingle},
+    {METATILE_GeneralFrlg_SlidingDoubleDoor,                &gTileset_GeneralFrlg, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SlidingDouble, sDoorAnimPalettes_SlidingDouble},
     {METATILE_PalletTown_Door,                              &gTileset_PalletTown, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Pallet, sDoorAnimPalettes_Pallet},
     {METATILE_PalletTown_OaksLabDoor,                       &gTileset_PalletTown, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_OaksLab, sDoorAnimPalettes_OaksLab},
     {METATILE_ViridianCity_Door,                            &gTileset_ViridianCity, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Viridian, sDoorAnimPalettes_Viridian},
