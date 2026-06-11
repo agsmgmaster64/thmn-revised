@@ -6720,7 +6720,7 @@
       "secondary_tileset": "gTileset_PalletTown",
       "border_filepath": "data/layouts/LandofGensokyo_HakureiShrine_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_HakureiShrine_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_BORDER_ISLAND_FOREST_LAYOUT",
@@ -6733,7 +6733,7 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/LandofGensokyo_BorderIslandForest_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_BorderIslandForest_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_UNDERWATER_LAYOUT",
@@ -6746,7 +6746,7 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/LandofGensokyo_Underwater_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_Underwater_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_BORDER_ISLAND_EXTERIOR_LAYOUT",
@@ -6759,7 +6759,7 @@
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/LandofGensokyo_BorderIslandExterior_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_BorderIslandExterior_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_YOUKAI_ROAD_LAYOUT",
@@ -6772,7 +6772,7 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/LandofGensokyo_YoukaiRoad_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_YoukaiRoad_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_LAYOUT",
@@ -6785,7 +6785,7 @@
       "secondary_tileset": "gTileset_SeviiIslands123",
       "border_filepath": "data/layouts/LandofGensokyo_HumanVillage_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_HumanVillage_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_BONEKA_CENTER_LAYOUT",
@@ -6798,7 +6798,7 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/LandofGensokyoHumanVillage_BonekaCenter_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyoHumanVillage_BonekaCenter_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE1F_LAYOUT",
@@ -6811,7 +6811,7 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LandofGensokyo_HumanVillageTrainerHouse1F_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyo_HumanVillageTrainerHouse1F_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_HIEDA_MANSION_LAYOUT",
@@ -6824,7 +6824,7 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LandofGensokyoHumanVillage_HiedaMansion_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyoHumanVillage_HiedaMansion_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE_B1F_LAYOUT",
@@ -6837,7 +6837,7 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LandofGensokyoHumanVillage_TrainerHouseB1F_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LandofGensokyoHumanVillage_TrainerHouseB1F_Layout/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_1F_FRLG",
