@@ -2972,7 +2972,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Screech"),
         .description = COMPOUND_STRING(
             "Emits a screech to sharply\n"
-            "reduce the foe's Defense."),
+            "reduce target's Def. (-2)"),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -2997,7 +2997,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_DOUBLE_TEAM] =
+    [MOVE_DOUBLE_TEAM] = //unused
     {
         .name = COMPOUND_STRING("Double Team"),
         .description = COMPOUND_STRING(
@@ -3014,6 +3014,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .zMove = { .effect = Z_EFFECT_RESET_STATS },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .snatchAffected = TRUE,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS : CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -3033,13 +3041,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Recovers up to half the\n"
             "user's maximum HP."),
-        #if B_UPDATED_MOVE_DATA >= GEN_9
-            .pp = 5,
-        #elif B_UPDATED_MOVE_DATA >= GEN_4
-            .pp = 10,
-        #else
-            .pp = 20,
-        #endif
+        .pp = 10,
         .effect = EFFECT_RESTORE_HP,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -3066,7 +3068,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Harden"),
         .description = COMPOUND_STRING(
             "Stiffens the body's \n"
-            "muscles to raise Defense."),
+            "muscles to raise Def. (+1)"),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -3096,16 +3098,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Minimize"),
         .description = COMPOUND_STRING(
             "Minimizes the user's size to\n"
-        #if B_MINIMIZE_EVASION >= GEN_5
-            "sharply raise evasiveness."),
-        #else
-            "raise evasiveness."),
-        #endif
+            "raise evasiveness. (+1)"),
         .effect = EFFECT_MINIMIZE,
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 10 : 20,
+        .pp = 20,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3115,7 +3113,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .snatchAffected = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = STAT_CHANGE_EFFECT_PLUS,
-            .evasion = (B_MINIMIZE_EVASION >= GEN_5) ? 2 : 1,
+            .evasion = 1,
         }),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_AVOID_STARTLE : CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -3129,11 +3127,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Smokescreen"),
         .description = COMPOUND_STRING(
-            "Lowers the foe's accuracy\n"
-            "using smoke, ink, etc."),
+            "Lowers accuracy using\n"
+            "smoke, ink, etc. (-1)"),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 20,
         .target = TARGET_SELECTED,
@@ -3177,7 +3175,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_WITHDRAW] =
+    [MOVE_WITHDRAW] = //unused
     {
         .name = COMPOUND_STRING("Withdraw"),
         .description = COMPOUND_STRING(
@@ -3194,6 +3192,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .zMove = { .effect = Z_EFFECT_DEF_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .snatchAffected = TRUE,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_AVOID_STARTLE_ONCE : CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -3207,7 +3213,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_DEFENSE_CURL] =
+    [MOVE_DEFENSE_CURL] = //unused
     {
         .name = COMPOUND_STRING("Defense Curl"),
         .description = COMPOUND_STRING(
@@ -3224,6 +3230,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .zMove = { .effect = Z_EFFECT_ACC_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .snatchAffected = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = STAT_CHANGE_EFFECT_PLUS,
@@ -3242,12 +3256,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Barrier"),
         .description = COMPOUND_STRING(
             "Creates a barrier that\n"
-            "sharply raises Defense."),
+            "sharply raises Def. (+2)"),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 20 : 30,
+        .pp = 30,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3277,7 +3291,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 20,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3301,7 +3315,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "eliminates all stat changes."),
         .effect = EFFECT_HAZE,
         .power = 0,
-        .type = TYPE_ICE,
+        .type = TYPE_DARK,
         .accuracy = 0,
         .pp = 30,
         .target = TARGET_FIELD,
@@ -3349,11 +3363,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Focus Energy"),
         .description = COMPOUND_STRING(
-            "Focuses power to raise the\n"
-            "critical-hit ratio."),
+            "Focuses power to raise\n"
+            "critical-hit ratio. (+1)"),
         .effect = EFFECT_FOCUS_ENERGY,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FIGHTING,
         .accuracy = 0,
         .pp = 30,
         .target = TARGET_USER,
@@ -3372,7 +3386,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_BIDE] =
+    [MOVE_BIDE] = //unused
     {
         .name = COMPOUND_STRING("Bide"),
         .description = COMPOUND_STRING(
@@ -3395,9 +3409,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = TARGET_USER,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
-        .mirrorMoveBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_NEXT_APPEAL_LATER : CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -3436,7 +3456,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_MIRROR_MOVE] =
+    [MOVE_MIRROR_MOVE] = //unused
     {
         .name = COMPOUND_STRING("Mirror Move"),
         .description = COMPOUND_STRING(
@@ -3454,12 +3474,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
         .mimicBanned = TRUE,
-        .metronomeBanned = B_UPDATED_MOVE_FLAGS >= GEN_4,
+        .metronomeBanned = TRUE,
         .copycatBanned = TRUE,
-        .sleepTalkBanned = B_UPDATED_MOVE_FLAGS >= GEN_3,
+        .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
         .encoreBanned = TRUE,
         .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_APPEAL_AS_GOOD_AS_PREV_ONE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -3475,7 +3496,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Inflicts severe damage but\n"
             "makes the user faint."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_2 ? 200 : 130,
+        .power = 250,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 5,
@@ -3493,7 +3514,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_EGG_BOMB] =
+    [MOVE_EGG_BOMB] = //unused
     {
         .name = COMPOUND_STRING("Egg Bomb"),
         .description = COMPOUND_STRING(
@@ -3508,6 +3529,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .ballisticMove = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_CUTE : CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -3521,9 +3551,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Lick"),
         .description = COMPOUND_STRING(
             "Licks with a long tongue to\n"
-            "injure. May also paralyze."),
+            "injure. May paralyze. (30%)"),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 30 : 20,
+        .power = 30,
         .type = TYPE_GHOST,
         .accuracy = 100,
         .pp = 30,
@@ -3548,18 +3578,18 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Smog"),
         .description = COMPOUND_STRING(
             "An exhaust-gas attack\n"
-            "that may also poison."),
+            "that may poison. (30%)"),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 30 : 20,
+        .power = 30,
         .type = TYPE_POISON,
-        .accuracy = 70,
-        .pp = 20,
+        .accuracy = 100,
+        .pp = 30,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_POISON,
-            .chance = 40,
+            .chance = 30,
         }),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_HIGHLY_APPEALING : CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -3568,7 +3598,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Smog,
     },
 
-    [MOVE_SLUDGE] =
+    [MOVE_SLUDGE] = //unused
     {
         .name = COMPOUND_STRING("Sludge"),
         .description = COMPOUND_STRING(
@@ -3581,6 +3611,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_POISON,
@@ -3593,7 +3632,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Sludge,
     },
 
-    [MOVE_BONE_CLUB] =
+    [MOVE_BONE_CLUB] = //unused
     {
         .name = COMPOUND_STRING("Bone Club"),
         .description = COMPOUND_STRING(
@@ -3606,6 +3645,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FLINCH,
@@ -3623,9 +3671,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Fire Blast"),
         .description = COMPOUND_STRING(
             "Incinerates everything it\n"
-            "strikes. May cause a burn."),
+            "strikes. May burn. (20%)"),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 110 : 120,
+        .power = 120,
         .type = TYPE_FIRE,
         .accuracy = 85,
         .pp = 5,
@@ -3634,7 +3682,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_BURN,
-            .chance = B_UPDATED_MOVE_DATA >= GEN_2 ? 10 : 30,
+            .chance = 20,
         }),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED : CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -3649,7 +3697,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Waterfall"),
         .description = COMPOUND_STRING(
             "Charges with speed to climb\n"
-            "waterfalls. May flinch."),
+            "waterfalls. May flinch. (20%)"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_WATER,
@@ -3673,7 +3721,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_CLAMP] =
+    [MOVE_CLAMP] = //unused
     {
         .name = COMPOUND_STRING("Clamp"),
         .description = COMPOUND_STRING(
@@ -3688,6 +3736,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .ignoresKingsRock = B_UPDATED_MOVE_FLAGS < GEN_3,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_WRAP,
@@ -3727,24 +3784,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Skull Bash"),
         .description = COMPOUND_STRING(
-            "Tucks in the head, then\n"
-            "attacks on the next turn."),
+            "Two-turn attack with high\n"
+            "critical hit ratio. Also\n"
+            "raises Atk by 1 stage."),
         .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 100,
-        .type = TYPE_NORMAL,
+        .power = 130,
+        .type = TYPE_ROCK,
         .accuracy = 100,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 10 : 15,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
+        .criticalHitStage = 1,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
         .argument.twoTurnAttack = { .stringId = STRINGID_PKMNLOWEREDHEAD },
         #if B_UPDATED_MOVE_DATA >= GEN_2
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_STAT_PLUS,
-            .defense = 1,
+            .attack = 1,
             .self = TRUE,
             .onChargeTurnOnly = TRUE,
         }),
@@ -3757,7 +3816,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_SPIKE_CANNON] =
+    [MOVE_SPIKE_CANNON] = //unused
     {
         .name = COMPOUND_STRING("Spike Cannon"),
         .description = COMPOUND_STRING(
@@ -3772,6 +3831,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .multiHit = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING : CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -3784,12 +3852,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Constrict"),
         .description = COMPOUND_STRING(
             "Constricts to inflict pain.\n"
-            "May lower Speed."),
+            "Lowers Speed by 1 stage."),
         .effect = EFFECT_HIT,
-        .power = 10,
-        .type = TYPE_NORMAL,
-        .accuracy = 100,
-        .pp = 35,
+        .power = 55,
+        .type = TYPE_GRASS,
+        .accuracy = 95,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -3797,7 +3865,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_STAT_MINUS,
             .speed = 1,
-            .chance = B_UPDATED_MOVE_DATA >= GEN_2 ? 10 : 33,
+            .chance = 100,
         }),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS : CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -3811,7 +3879,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Amnesia"),
         .description = COMPOUND_STRING(
             "Forgets about something\n"
-            "and sharply raises Sp. Def."),
+            "and sharply raises Sp. Def.\n"
+            "(+2)"),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -3836,7 +3905,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_KINESIS] =
+    [MOVE_KINESIS] = //unused
     {
         .name = COMPOUND_STRING("Kinesis"),
         .description = COMPOUND_STRING(
@@ -3849,6 +3918,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_EVSN_UP_1 },
         .magicCoatAffected = B_UPDATED_MOVE_FLAGS >= GEN_4,
@@ -3874,7 +3952,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_9 ? 5 : 10,
+        .pp = 10,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3898,17 +3976,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "A jumping knee kick. If it\n"
             "misses, the user is hurt."),
-        #if B_UPDATED_MOVE_DATA >= GEN_5
-            .power = 130,
-        #elif B_UPDATED_MOVE_DATA == GEN_4
-            .power = 100,
-        #else
-            .power = 85,
-        #endif
+        .power = 130,
         .effect = EFFECT_RECOIL_IF_MISS,
         .type = TYPE_FIGHTING,
         .accuracy = 90,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_5 ? 10 : 20,
+        .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -3928,16 +4000,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Intimidates and frightens\n"
             "the foe into paralysis."),
-        #if B_UPDATED_MOVE_DATA >= GEN_6
-            .accuracy = 100,
-        #elif B_UPDATED_MOVE_DATA == GEN_5
-            .accuracy = 90,
-        #else
-            .accuracy = 75,
-        #endif
+        .accuracy = 90,
         .effect = EFFECT_NON_VOLATILE_STATUS,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_DARK,
         .pp = 30,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -3957,13 +4023,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Dream Eater"),
         .description = COMPOUND_STRING(
-            "Takes one half the damage\n"
-            "inflicted on a sleeping foe."),
-        .effect = EFFECT_DREAM_EATER,
-        .power = 100,
+            "Heals one half the damage\n"
+            "inflicted as HP."),
+        .effect = EFFECT_ABSORB,
+        .power = 80,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
-        .pp = 15,
+        .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
@@ -3981,29 +4047,22 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Poison Gas"),
         .description = COMPOUND_STRING(
-        #if B_UPDATED_MOVE_DATA >= GEN_5
-            "Envelops the foes in a toxic\n"
-        #else
             "Envelops the foe in a toxic\n"
-        #endif
-            "gas that may poison."),
-        #if B_UPDATED_MOVE_DATA >= GEN_6
-            .accuracy = 90,
-        #elif B_UPDATED_MOVE_DATA == GEN_5
-            .accuracy = 80,
-        #else
-            .accuracy = 55,
-        #endif
-        .effect = EFFECT_NON_VOLATILE_STATUS,
-        .power = 0,
+            "gas that may poison. (40%)"),
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .power = 65,
         .type = TYPE_POISON,
-        .pp = 40,
-        .target = B_UPDATED_MOVE_DATA >= GEN_5 ? TARGET_BOTH : TARGET_SELECTED,
+        .pp = 20,
+        .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_STATUS,
-        .argument = { .nonVolatileStatus = MOVE_EFFECT_POISON },
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .zMove = { .effect = Z_EFFECT_DEF_UP_1 },
         .magicCoatAffected = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_POISON,
+            .chance = 40,
+        }),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_SHIFT_JUDGE_ATTENTION : CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = COMBO_STARTER_POISON_GAS,
@@ -4011,7 +4070,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_PoisonGas,
     },
 
-    [MOVE_BARRAGE] =
+    [MOVE_BARRAGE] = //unused
     {
         .name = COMPOUND_STRING("Barrage"),
         .description = COMPOUND_STRING(
@@ -4027,6 +4086,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .multiHit = TRUE,
         .ballisticMove = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING : CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_CUTE : CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -4041,10 +4109,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "An attack that steals half\n"
             "the damage inflicted."),
         .effect = EFFECT_ABSORB,
-        .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 80 : 20,
+        .power = 80,
         .type = TYPE_BUG,
         .accuracy = 100,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_7 ? 10 : 15,
+        .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -4089,12 +4157,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Sky Attack"),
         .description = COMPOUND_STRING(
             "2-turn attack. High critical\n"
-            "hit ratio, and may flinch."),
+            "hit ratio, and grants +1 to\n."
+            "user's Speed."),
         .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 140,
+        .power = 130,
         .type = TYPE_FLYING,
-        .accuracy = 90,
-        .pp = 5,
+        .accuracy = 100,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -4104,8 +4173,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .argument.twoTurnAttack = { .stringId = STRINGID_CLOAKEDINAHARSHLIGHT },
     #if B_UPDATED_MOVE_DATA >= GEN_3
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_FLINCH,
-            .chance = 30,
+            .moveEffect = MOVE_EFFECT_STAT_PLUS,
+            .speed = 1,
+            .self = TRUE,
+            .onChargeTurnOnly = TRUE,
         }),
     #endif
         .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
@@ -4124,9 +4195,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "become a copy of the foe."),
         .effect = EFFECT_TRANSFORM,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -4152,20 +4223,20 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Bubble"),
         .description = COMPOUND_STRING(
-            "An attack using bubbles.\n"
-            "May lower the foe's Speed."),
+            "Spread bubble attack.\n"
+            "May lower Speed. (10%)"),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 40 : 20,
+        .power = 40,
         .type = TYPE_WATER,
         .accuracy = 100,
-        .pp = 30,
+        .pp = 25,
         .target = TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_STAT_MINUS,
             .speed = 1,
-            .chance = B_UPDATED_MOVE_DATA >= GEN_2 ? 10 : 33,
+            .chance = 10,
         }),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_HIGHLY_APPEALING : CONTEST_EFFECT_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -4174,7 +4245,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Bubble,
     },
 
-    [MOVE_DIZZY_PUNCH] =
+    [MOVE_DIZZY_PUNCH] = //unused
     {
         .name = COMPOUND_STRING("Dizzy Punch"),
         #if B_UPDATED_MOVE_DATA >= GEN_2
@@ -4196,6 +4267,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .punchingMove = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         #if B_UPDATED_MOVE_DATA >= GEN_2
             .additionalEffects = ADDITIONAL_EFFECTS({
                 .moveEffect = MOVE_EFFECT_CONFUSION,
@@ -4241,15 +4321,16 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Flash"),
         .description = COMPOUND_STRING(
             "Looses a powerful blast of\n"
-            "light that cuts accuracy."),
-        .effect = EFFECT_STAT_CHANGE,
-        .power = 0,
-        .type = TYPE_NORMAL,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_4 ? 100 : 70,
-        .pp = 20,
+            "light that cuts accuracy.\n"
+            "(30%/-1)"),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_FAITH,
+        .accuracy = 95,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_STATUS,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .zMove = { .effect = Z_EFFECT_EVSN_UP_1 },
         .magicCoatAffected = TRUE,
         .contestEffect = CONTEST_EFFECT_SHIFT_JUDGE_ATTENTION,
@@ -4259,12 +4340,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = STAT_CHANGE_EFFECT_MINUS,
             .accuracy = 1,
+            .chance = 30,
         }),
         .battleAnimScript = gBattleAnimMove_Flash,
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_PSYWAVE] =
+    [MOVE_PSYWAVE] = //unused
     {
         .name = COMPOUND_STRING("Psywave"),
         .description = COMPOUND_STRING(
@@ -4277,6 +4359,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING : CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -4286,7 +4377,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    [MOVE_SPLASH] =
+    [MOVE_SPLASH] = //unused
     {
         .name = COMPOUND_STRING("Splash"),
         .description = COMPOUND_STRING(
@@ -4299,6 +4390,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 40,
         .target = TARGET_USER,
         .priority = 0,
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .encoreBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_ATK_UP_3 },
         .ignoresProtect = TRUE,
