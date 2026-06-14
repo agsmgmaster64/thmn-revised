@@ -198,6 +198,7 @@ static void Task_NewGameBirchSpeech_WaitToShowBirch(u8);
 static void NewGameBirchSpeech_StartFadeInTarget1OutTarget2(u8, u8);
 static void NewGameBirchSpeech_StartFadePlatformOut(u8, u8);
 static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8);
+static void Task_NewGameBirchSpeech_Welcome(u8);
 static void NewGameBirchSpeech_ClearWindow(u8);
 static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8);
 static void Task_NewGameBirchSpeech_MainSpeech(u8);
@@ -1367,11 +1368,22 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
             PutWindowTilemap(0);
             CopyWindowToVram(0, COPYWIN_GFX);
             NewGameBirchSpeech_ClearWindow(0);
-            StringExpandPlaceholders(gStringVar4, gText_Birch_Welcome);
+            StringExpandPlaceholders(gStringVar4, gText_Birch_Disclaimer);
             AddTextPrinterForMessage(TRUE);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_ThisIsAPokemon;
+            gTasks[taskId].func = Task_NewGameBirchSpeech_Welcome;
         }
     }
+}
+
+static void Task_NewGameBirchSpeech_Welcome(u8 taskId)
+{
+	if (!RunTextPrintersAndIsPrinter0Active())
+	{
+		StringExpandPlaceholders (gStringVar4, gText_Birch_Welcome);
+		AddTextPrinterForMessage(TRUE);
+		gTasks[taskId].func = Task_NewGameBirchSpeech_ThisIsAPokemon;
+	}
+	
 }
 
 static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8 taskId)
