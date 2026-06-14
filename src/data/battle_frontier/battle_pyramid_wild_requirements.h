@@ -218,7 +218,7 @@ static const struct BattlePyramidRequirement sBattlePyramidRequirementsByRound[]
     },
     [17] = /* flying/dragon types */
     {
-        .type = TYPE_DRAGON,
+        .type = TYPE_FAITH,
     },
     [18] = /* evolve via water/thunder/fire stone */
     {

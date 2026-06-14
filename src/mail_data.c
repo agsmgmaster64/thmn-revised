@@ -35,7 +35,7 @@ void ClearMail(struct Mail *mail)
 
 bool8 MonHasMail(struct Pokemon *mon)
 {
-    u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
+    enum Item heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
     if (ItemIsMail(heldItem) && GetMonData(mon, MON_DATA_MAIL) != MAIL_NONE)
         return TRUE;
     else
@@ -46,7 +46,7 @@ u8 GiveMailToMonByItemId(struct Pokemon *mon, enum Item itemId)
 {
     u8 heldItem[2];
     u8 id, i;
-    u16 species;
+    enum Species species;
     u32 personality;
 
     heldItem[0] = itemId;
@@ -82,7 +82,6 @@ u8 GiveMailToMonByItemId(struct Pokemon *mon, enum Item itemId)
 
 u8 GiveMailToMon(struct Pokemon *mon, struct Mail *mail)
 {
-    u8 heldItem[2];
     enum Item itemId = mail->itemId;
     u8 mailId = GiveMailToMonByItemId(mon, itemId);
 
@@ -90,20 +89,7 @@ u8 GiveMailToMon(struct Pokemon *mon, struct Mail *mail)
         return MAIL_NONE;
 
     gSaveBlock1Ptr->mail[mailId] = *mail;
-
-    SetMonData(mon, MON_DATA_MAIL, &mailId);
-
-    heldItem[0] = itemId;
-    heldItem[1] = itemId >> 8;
-
-    SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);
-
     return mailId;
-}
-
-static bool32 UNUSED DummyMailFunc(void)
-{
-    return FALSE;
 }
 
 void TakeMailFromMon(struct Pokemon *mon)

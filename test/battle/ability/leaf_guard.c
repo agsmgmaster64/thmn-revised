@@ -34,7 +34,7 @@ SINGLE_BATTLE_TEST("Leaf Guard prevents non-volatile status conditions in sun")
 SINGLE_BATTLE_TEST("Leaf Guard doesn't prevent non-volatile status conditions if Cloud Nine/Air Lock is on the field")
 {
     enum Move move;
-    u32 species;
+    enum Species species;
     enum Ability ability;
     u16 status;
     PARAMETRIZE { move = MOVE_WILL_O_WISP;  status = STATUS1_BURN;         species = SPECIES_GOLDUCK;  ability = ABILITY_CLOUD_NINE; }
@@ -94,7 +94,7 @@ SINGLE_BATTLE_TEST("Leaf Guard prevents status conditions from Flame Orb and Tox
 SINGLE_BATTLE_TEST("Leaf Guard doesn't prevent status conditions from Flame Orb and Toxic Orb if Cloud Nine/Air Lock is on the field")
 {
     enum Item item;
-    u32 species;
+    enum Species species;
     enum Ability ability;
     PARAMETRIZE { item = ITEM_FLAME_ORB; species = SPECIES_GOLDUCK;  ability = ABILITY_CLOUD_NINE; }
     PARAMETRIZE { item = ITEM_TOXIC_ORB; species = SPECIES_GOLDUCK;  ability = ABILITY_CLOUD_NINE; }
@@ -125,7 +125,7 @@ SINGLE_BATTLE_TEST("Leaf Guard prevents Rest during sun (Gen 5+)")
     PARAMETRIZE { gen = GEN_4; }
     PARAMETRIZE { gen = GEN_5; }
     GIVEN {
-        WITH_CONFIG(CONFIG_LEAF_GUARD_PREVENTS_REST, gen);
+        WITH_CONFIG(B_LEAF_GUARD_PREVENTS_REST, gen);
         ASSUME(GetMoveEffect(MOVE_REST) == EFFECT_REST);
         PLAYER(SPECIES_LEAFEON) { Ability(ABILITY_LEAF_GUARD); HP(100); MaxHP(200); }
         OPPONENT(SPECIES_WOBBUFFET);
@@ -149,13 +149,14 @@ SINGLE_BATTLE_TEST("Leaf Guard prevents Rest during sun (Gen 5+)")
 
 SINGLE_BATTLE_TEST("Leaf Guard doesn't prevent Rest if Cloud Nine/Air Lock is on the field")
 {
-    u32 species, ability;
+    enum Species species;
+    enum Ability ability;
     PARAMETRIZE { species = SPECIES_GOLDUCK;  ability = ABILITY_CLOUD_NINE; }
     PARAMETRIZE { species = SPECIES_GOLDUCK;  ability = ABILITY_CLOUD_NINE; }
     PARAMETRIZE { species = SPECIES_RAYQUAZA; ability = ABILITY_AIR_LOCK; }
     PARAMETRIZE { species = SPECIES_RAYQUAZA; ability = ABILITY_AIR_LOCK; }
     GIVEN {
-        WITH_CONFIG(CONFIG_LEAF_GUARD_PREVENTS_REST, GEN_5);
+        WITH_CONFIG(B_LEAF_GUARD_PREVENTS_REST, GEN_5);
         ASSUME(GetMoveEffect(MOVE_REST) == EFFECT_REST);
         PLAYER(SPECIES_LEAFEON) { Ability(ABILITY_LEAF_GUARD); HP(100); MaxHP(200); }
         OPPONENT(species) { Ability(ability); }

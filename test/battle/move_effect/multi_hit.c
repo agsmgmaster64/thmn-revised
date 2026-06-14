@@ -33,7 +33,7 @@ SINGLE_BATTLE_TEST("Multi hit Moves hit twice 37.5/35% of the time")
     PASSES_RANDOMLY(passes, trials, RNG_HITS);
 
     GIVEN {
-        WITH_CONFIG(CONFIG_MULTI_HIT_CHANCE, genConfig);
+        WITH_CONFIG(B_MULTI_HIT_CHANCE, genConfig);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -53,7 +53,7 @@ SINGLE_BATTLE_TEST("Multi hit Moves hit thrice 37.5/35% of the time")
     PASSES_RANDOMLY(passes, trials, RNG_HITS);
 
     GIVEN {
-        WITH_CONFIG(CONFIG_MULTI_HIT_CHANCE, genConfig);
+        WITH_CONFIG(B_MULTI_HIT_CHANCE, genConfig);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -74,7 +74,7 @@ SINGLE_BATTLE_TEST("Multi hit Moves hit four times 12.5/15% of the time")
     PASSES_RANDOMLY(passes, trials, RNG_HITS);
 
     GIVEN {
-        WITH_CONFIG(CONFIG_MULTI_HIT_CHANCE, genConfig);
+        WITH_CONFIG(B_MULTI_HIT_CHANCE, genConfig);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -96,7 +96,7 @@ SINGLE_BATTLE_TEST("Multi hit Moves hit five times 12.5/15% of the time")
     PASSES_RANDOMLY(passes, trials, RNG_HITS);
 
     GIVEN {
-        WITH_CONFIG(CONFIG_MULTI_HIT_CHANCE, genConfig);
+        WITH_CONFIG(B_MULTI_HIT_CHANCE, genConfig);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -176,7 +176,7 @@ SINGLE_BATTLE_TEST("Scale Shot is immune to Fairy types and will end the move co
 {
     GIVEN {
         ASSUME(IsMultiHitMove(MOVE_SCALE_SHOT));
-        ASSUME(GetMoveType(MOVE_SCALE_SHOT) == TYPE_DRAGON);
+        ASSUME(GetMoveType(MOVE_SCALE_SHOT) == TYPE_FAITH);
         ASSUME(GetSpeciesType(SPECIES_FIDOUGH, 0) == TYPE_FAIRY || GetSpeciesType(SPECIES_FIDOUGH, 1) == TYPE_FAIRY);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_FIDOUGH) { HP(1); }

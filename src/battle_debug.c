@@ -20,7 +20,6 @@
 #include "text_window.h"
 #include "international_string_util.h"
 #include "strings.h"
-#include "battle_ai_main.h"
 #include "battle_ai_util.h"
 #include "list_menu.h"
 #include "decompress.h"
@@ -670,7 +669,7 @@ void CB2_BattleDebugMenu(void)
         ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
         ResetAllBgsCoordinates();
-        FreeAllWindowBuffers();
+        CloseMainBattleScreen();
         DeactivateAllTextPrinters();
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
         ShowBg(0);
@@ -774,7 +773,7 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
     if (gAiLogicData->shouldSwitch & (1u << data->aiBattlerId))
     {
         struct Pokemon *party = GetBattlerParty(data->aiBattlerId);
-        u32 switchMon = GetMonData(&party[gAiLogicData->mostSuitableMonId[data->aiBattlerId]], MON_DATA_SPECIES);
+        enum Species switchMon = GetMonData(&party[gAiLogicData->mostSuitableMonId[data->aiBattlerId]], MON_DATA_SPECIES);
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("Switching to "));
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74 + 68, 79, sTextColorTable[COLORID_RED], 0, gSpeciesInfo[switchMon].speciesName);
     }
@@ -1069,7 +1068,7 @@ static void Task_ShowAiParty(u8 taskId)
         aiMons = gAiPartyData->mons[GetBattlerSide(data->aiBattlerId)];
         for (i = 0; i < gAiPartyData->count[GetBattlerSide(data->aiBattlerId)]; i++)
         {
-            u16 species = SPECIES_NONE; // Question mark
+            enum Species species = SPECIES_NONE; // Question mark
             if (aiMons[i].wasSentInBattle && aiMons[i].species)
                 species = aiMons[i].species;
             data->spriteIds.aiPartyIcons[i] = CreateMonIcon(species, SpriteCallbackDummy, (i * 41) + 15, 7, 1, 0);
@@ -2013,18 +2012,18 @@ static void SetUpModifyArrows(struct BattleDebugMenu *data)
 #define UNPACK_VOLATILE_MAX_SIZE(_enum, _fieldName, _typeMaxValue, ...) case _enum: data->modifyArrows.maxValue = min(MAX_u16, GET_VOLATILE_MAXIMUM(_typeMaxValue)); break;
         switch (data->currentSecondaryListItemId)
         {
-            VOLATILE_DEFINITIONS(UNPACK_VOLATILE_MAX_SIZE)
-            /* Expands to the following:
-             * case VOLATILE_CONFUSION:
-                  data->modifyArrows.maxValue = MAX_BITS(3); // Max value 7
-                  break;
-             * case VOLATILE_FLINCHED:
-                  data->modifyArrows.maxValue = MAX_BITS(1); // Max value 1
-                  break;
-             * ...etc.
-             */
-            default:
-                data->modifyArrows.maxValue = 0;
+        VOLATILE_DEFINITIONS(UNPACK_VOLATILE_MAX_SIZE)
+        /* Expands to the following:
+            * case VOLATILE_CONFUSION:
+                data->modifyArrows.maxValue = MAX_BITS(3); // Max value 7
+                break;
+            * case VOLATILE_FLINCHED:
+                data->modifyArrows.maxValue = MAX_BITS(1); // Max value 1
+                break;
+            * ...etc.
+            */
+        default:
+            data->modifyArrows.maxValue = 0;
         }
         data->modifyArrows.maxDigits = MAX_DIGITS(data->modifyArrows.maxValue);
         break;
@@ -2171,11 +2170,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_RESTORE_PP]       = COMPOUND_STRING("Restore Pp"),
     [HOLD_EFFECT_CURE_CONFUSION]   = COMPOUND_STRING("Cure Confusion"),
     [HOLD_EFFECT_CURE_STATUS]      = COMPOUND_STRING("Cure Status"),
-    [HOLD_EFFECT_CONFUSE_SPICY]    = COMPOUND_STRING("Confuse Spicy"),
-    [HOLD_EFFECT_CONFUSE_DRY]      = COMPOUND_STRING("Confuse Dry"),
-    [HOLD_EFFECT_CONFUSE_SWEET]    = COMPOUND_STRING("Confuse Sweet"),
-    [HOLD_EFFECT_CONFUSE_BITTER]   = COMPOUND_STRING("Confuse Bitter"),
-    [HOLD_EFFECT_CONFUSE_SOUR]     = COMPOUND_STRING("Confuse Sour"),
+    [HOLD_EFFECT_CONFUSE_FLAVOR]   = COMPOUND_STRING("Confuse Flavor"),
     [HOLD_EFFECT_ATTACK_UP]        = COMPOUND_STRING("Attack Up"),
     [HOLD_EFFECT_DEFENSE_UP]       = COMPOUND_STRING("Defense Up"),
     [HOLD_EFFECT_SPEED_UP]         = COMPOUND_STRING("Speed Up"),
@@ -2291,6 +2286,9 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_BOOSTER_ENERGY]   = COMPOUND_STRING("Booster Energy"),
     [HOLD_EFFECT_OGERPON_MASK]     = COMPOUND_STRING("Ogerpon Mask"),
     [HOLD_EFFECT_BERSERK_GENE]     = COMPOUND_STRING("Berserk Gene"),
+    [HOLD_EFFECT_ICY_BALL]         = COMPOUND_STRING("Icy Ball"),
+    [HOLD_EFFECT_SCARLET_ROCK]     = COMPOUND_STRING("Scarlet Rock"),
+    [HOLD_EFFECT_ICEBURN_GEM]      = COMPOUND_STRING("Iceburn Gem"),    
 };
 
 static const u8 *GetHoldEffectName(enum HoldEffect holdEffect)

@@ -29,5 +29,8 @@ void HideMoneyBox(void);
 void AddMoneyLabelObject(u16 x, u16 y);
 void RemoveMoneyLabelObject(void);
 u32 CalculateMoneyTextHorizontalPosition(u32 amount);
+void PrintMoneyAmountInMoneyBoxFrlg(u8 windowId, int amount, u8 speed);
+void PrintMoneyAmountFrlg(u8 windowId, u8 x, u8 y, int amount, u8 speed);
+void PrintMoneyAmountInMoneyBoxWithBorderFrlg(u8 windowId, u16 tileStart, u8 pallete, int amount);
 
 #endif // GUARD_MONEY_H

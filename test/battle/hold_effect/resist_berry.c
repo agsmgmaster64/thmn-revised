@@ -18,7 +18,7 @@ static const u16 sMoveItemTable[][4] =
     { TYPE_ELECTRIC, MOVE_THUNDER_SHOCK,   ITEM_WACAN_BERRY,  SPECIES_CORVISQUIRE },
     { TYPE_PSYCHIC,  MOVE_CONFUSION,       ITEM_PAYAPA_BERRY, SPECIES_HARIYAMA },
     { TYPE_ICE,      MOVE_AURORA_BEAM,     ITEM_YACHE_BERRY,  SPECIES_DRAGONAIR },
-    { TYPE_DRAGON,   MOVE_DRAGON_BREATH,   ITEM_HABAN_BERRY,  SPECIES_DRAGONAIR },
+    { TYPE_FAITH,   MOVE_DRAGON_BREATH,   ITEM_HABAN_BERRY,  SPECIES_DRAGONAIR },
     { TYPE_DARK,     MOVE_BITE,            ITEM_COLBUR_BERRY, SPECIES_WOBBUFFET },
     { TYPE_FAIRY,    MOVE_DISARMING_VOICE, ITEM_ROSELI_BERRY, SPECIES_DRAGONAIR },
 };
@@ -53,7 +53,7 @@ SINGLE_BATTLE_TEST("Weakness berries decrease the base power of moves by half", 
         TURN { MOVE(player, move); }
     } SCENE {
         if (1 == i % 2) {
-            ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, opponent);
+            ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_BERRY, opponent);
         }
         HP_BAR(opponent, captureDamage: &results[i].damage);
     } FINALLY {

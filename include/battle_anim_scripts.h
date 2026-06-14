@@ -976,6 +976,8 @@ extern const u8 gBattleAnimGeneral_WishHeal[];
 extern const u8 gBattleAnimGeneral_MegaEvolution[];
 extern const u8 gBattleAnimGeneral_IllusionOff[];
 extern const u8 gBattleAnimGeneral_FormChange[];
+extern const u8 gBattleAnimGeneral_FormChangeInstant[];
+extern const u8 gBattleAnimGeneral_FormChangeDisguise[];
 extern const u8 gBattleAnimGeneral_SlideOffScreen[];
 extern const u8 gBattleAnimGeneral_RestoreBg[];
 extern const u8 gBattleAnimGeneral_TotemFlare[];
@@ -1012,6 +1014,13 @@ extern const u8 gBattleAnimGeneral_GhostGetOut[];
 extern const u8 gBattleAnimGeneral_SilphScoped[];
 extern const u8 gBattleAnimGeneral_SafariRockThrow[];
 extern const u8 gBattleAnimGeneral_SafariReaction[];
+extern const u8 gBattleAnimGeneral_HeldItemBerry[];
+
+//touhoumon stuff
+extern const u8 gBattleAnimGeneral_Buzzer[];
+extern const u8 gBattleAnimMove_TakeOver[];
+extern const u8 gBattleAnimMove_ThirdEye[];
+extern const u8 gBattleAnimMove_FocusStance[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

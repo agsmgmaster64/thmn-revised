@@ -80,7 +80,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_VOLT_ABSORB] =
     {
         .name = _("Volt Absorb"),
-        .description = COMPOUND_STRING("Turns electricity into HP."),
+        .description = COMPOUND_STRING("When hit by an Electric-type move,\nrecover 25% Max HP instead."),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -88,7 +88,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_WATER_ABSORB] =
     {
         .name = _("Water Absorb"),
-        .description = COMPOUND_STRING("Changes water into HP."),
+        .description = COMPOUND_STRING("When hit by a Water-type move,\nrecover 25% Max HP instead."),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -173,7 +173,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_INTIMIDATE] =
     {
         .name = _("Intimidate"),
-        .description = COMPOUND_STRING("Lowers the foe's Attack."),
+        .description = COMPOUND_STRING("Lowers the Attack of all foes by\n1 stage."),
         .aiRating = 7,
     },
 
@@ -281,7 +281,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Copies special ability."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
-        .cantBeTraced = TRUE,
+        .cantBeTraced = TRUE, //B_UPDATED_ABILITY_DATA >= GEN_4
     },
 
     [ABILITY_HUGE_POWER] =
@@ -452,7 +452,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Changes with the weather."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
-        .cantBeTraced = TRUE,
+        .cantBeTraced = B_UPDATED_ABILITY_DATA >= GEN_4,
+        .failsOnImposter = B_UPDATED_ABILITY_DATA >= GEN_5,
     },
 
     [ABILITY_STICKY_HOLD] =
@@ -912,6 +913,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+        .failsOnImposter = B_UPDATED_ABILITY_DATA >= GEN_5,
     },
 
     [ABILITY_FLOWER_GIFT] =
@@ -920,7 +922,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Allies power up in sunshine."),
         .aiRating = 4,
         .cantBeCopied = TRUE,
-        .cantBeTraced = TRUE,
+        .cantBeTraced = B_UPDATED_ABILITY_DATA >= GEN_5,
         .breakable = TRUE,
     },
 
@@ -1212,9 +1214,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Transforms at half HP."),
         .aiRating = -1,
         .cantBeCopied = TRUE,
-        .cantBeSwapped = TRUE,
+        .cantBeSwapped = B_UPDATED_ABILITY_DATA >= GEN_7,
         .cantBeTraced = TRUE,
         .cantBeSuppressed = B_UPDATED_ABILITY_DATA >= GEN_7,
+        .cantBeOverwritten = B_UPDATED_ABILITY_DATA >= GEN_7,
+        .failsOnImposter = TRUE,
     },
 
     [ABILITY_VICTORY_STAR] =
@@ -1330,6 +1334,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
     },
 
     [ABILITY_GALE_WINGS] =
@@ -1401,6 +1406,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Dark Aura"),
         .description = COMPOUND_STRING("Boosts Dark moves."),
         .aiRating = 6,
+        .breakable = B_UPDATED_ABILITY_DATA < GEN_8,
     },
 
     [ABILITY_FAIRY_AURA] =
@@ -1408,6 +1414,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Fairy Aura"),
         .description = COMPOUND_STRING("Boosts Fairy moves."),
         .aiRating = 6,
+        .breakable = B_UPDATED_ABILITY_DATA < GEN_8,
     },
 
     [ABILITY_AURA_BREAK] =
@@ -1484,6 +1491,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
     },
 
     [ABILITY_STAKEOUT] =
@@ -1567,6 +1575,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
     },
 
     [ABILITY_DISGUISE] =
@@ -1593,6 +1602,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
     },
 
     [ABILITY_POWER_CONSTRUCT] =
@@ -1605,6 +1615,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
     },
 
     [ABILITY_CORROSION] =
@@ -1720,6 +1731,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
     },
 
     [ABILITY_ELECTRIC_SURGE] =
@@ -1832,7 +1844,9 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Gulp Missile"),
         .description = COMPOUND_STRING("If hit, spits prey from sea."),
         .aiRating = 3,
-        .cantBeCopied = TRUE,
+        .cantBeSwapped = B_UPDATED_ABILITY_DATA < GEN_9,
+        .cantBeCopied = B_UPDATED_ABILITY_DATA < GEN_9,
+        .cantBeTraced = B_UPDATED_ABILITY_DATA < GEN_9,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
         .failsOnImposter = TRUE,
@@ -2222,6 +2236,9 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Orichalcum Pulse"),
         .description = COMPOUND_STRING("Summons sunlight in battle."),
         .aiRating = 8,
+        .cantBeSwapped = TRUE,
+        .cantBeCopied = TRUE,
+        .cantBeOverwritten = TRUE,
     },
 
     [ABILITY_HADRON_ENGINE] =
@@ -2229,6 +2246,9 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Hadron Engine"),
         .description = COMPOUND_STRING("Field becomes Electric."),
         .aiRating = 8,
+        .cantBeSwapped = TRUE,
+        .cantBeCopied = TRUE,
+        .cantBeOverwritten = TRUE,
     },
 
     [ABILITY_OPPORTUNIST] =
@@ -2413,10 +2433,277 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
     },
 
+    [ABILITY_HAKUREI_MIKO] =
+    {
+        .name = _("Hakurei Miko"),
+        .description = COMPOUND_STRING("Prevents others from lowering\nuser's stats."),
+        .aiRating = 4,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_INNATE_DREAM] =
+    {
+        .name = _("Innate Dream"),
+        .description = COMPOUND_STRING("Immune to status moves."),
+        .aiRating = 8,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_GAP] =
+    {
+        .name = _("Gap"),
+        .description = COMPOUND_STRING("Prevents critical hits."),
+        .aiRating = 2,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_HISOUTEN] =
+    {
+        .name = _("Hisouten"),
+        .description = COMPOUND_STRING("Negates weather effects."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_MYSTERIOUS] =
+    {
+        .name = _("Mysterious"),
+        .description = COMPOUND_STRING("Matches the type of the last move\nuser was damaged by."),
+        .aiRating = 2,
+    },
+
+    [ABILITY_FLAWLESS] =
+    {
+        .name = _("Flawless"),
+        .description = COMPOUND_STRING("Prevents extra effects from \ndamaging moves."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_GATE_KEEPER] =
+    {
+        .name = _("Gate Keeper"),
+        .description = COMPOUND_STRING("Can't be forced out by other \neffects."),
+        .aiRating = 2,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_DOLL_WALL] =
+    {
+        .name = _("Doll Wall"),
+        .description = COMPOUND_STRING("Attackers take 1/16 Max HP \nin damage on contact."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_DOLL_SKEWER] =
+    {
+        .name = _("Doll Wall"),
+        .description = COMPOUND_STRING("Attackers take 1/8 Max HP \nin damage on contact."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_PLAY_GHOST] =
+    {
+        .name = _("Play Ghost"),
+        .description = COMPOUND_STRING("Only super-effective and \nindirect damage harm the user."),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_INFECTIOUS] =
+    {
+        .name = _("Infectious"),
+        .description = COMPOUND_STRING("30% chance to Paralyze,\n Sleep, or Poison on contact."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_GUARD_ARMOR] =
+    {
+        .name = _("Guard Armor"),
+        .description = COMPOUND_STRING("Prevents critical hits."),
+        .aiRating = 2,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_MELODY] =
+    {
+        .name = _("Melody"),
+        .description = COMPOUND_STRING("Doubles wild encounter rate when\nassigned as the party leader."),
+        .aiRating = 0,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_POISON_BODY] =
+    {
+        .name = _("Poison Body"),
+        .description = COMPOUND_STRING("30% chance to poison attacker\non contact."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_FIRE_VEIL] =
+    {
+        .name = _("Fire Veil"),
+        .description = COMPOUND_STRING("Prevents freezing."),
+        .aiRating = 1,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_WALL_OF_ICE] =
+    {
+        .name = _("Wall of Ice"),
+        .description = COMPOUND_STRING("Halves damage from Fire and\nIce attacks."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_ONI_STRENGTH] =
+    {
+        .name = _("Oni Strength"),
+        .description = COMPOUND_STRING("Prevents Attack reduction from\nother's effects."),
+        .aiRating = 3,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_LAZY] =
+    {
+        .name = _("Lazy"),
+        .description = COMPOUND_STRING("Moves only every two turns."),
+        .aiRating = -2,
+        .cantBeOverwritten = TRUE,
+    },
+
+    [ABILITY_SERVANT] =
+    {
+        .name = _("Servant"),
+        .description = COMPOUND_STRING("Sp. Atk +50% if with other\nServants or Masters."),
+        .aiRating = 0,
+    },
+
+    [ABILITY_MASTER] =
+    {
+        .name = _("Master"),
+        .description = COMPOUND_STRING("Sp. Atk +50% if with other\nMasters or Servants."),
+        .aiRating = 0,
+    },
+
+    [ABILITY_STRONG_GRIP] =
+    {
+        .name = _("Strong Grip"),
+        .description = COMPOUND_STRING("Prevents item loss/theft."),
+        .aiRating = 3,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_SELF_CARE] =
+    {
+        .name = _("Self-Care"),
+        .description = COMPOUND_STRING("1/3 chance to recover from a\nstatus at the end of turn."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_MARVEL_VEIL] =
+    {
+        .name = _("Marvel Veil"),
+        .description = COMPOUND_STRING("+50% Defense if suffering\nfrom a non-volatile status."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_STRANGE_MIST] =
+    {
+        .name = _("Strange Mist"),
+        .description = COMPOUND_STRING("Attackers lose HP when trying\nto drain HP from the user."),
+        .aiRating = 3,
+    },
+
+    [ABILITY_FORTIFIED] =
+    {
+        .name = _("Fortified"),
+        .description = COMPOUND_STRING("Prevents recoil damage."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_MYSTIC_BARRIER] =
+    {
+        .name = _("Mana Barrier"),
+        .description = COMPOUND_STRING("Prevents others from lowering\nuser's stats."),
+        .aiRating = 4,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_NYUDO] =
+    {
+        .name = _("Nyudo"),
+        .description = COMPOUND_STRING("Doubles Attack stat."),
+        .aiRating = 10,
+    },
+
+    [ABILITY_UNCONSCIOUS] =
+    {
+        .name = _("Unconscious"),
+        .description = COMPOUND_STRING("Negates weather effects."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_SOLID_BODY] =
+    {
+        .name = _("Solid Body"),
+        .description = COMPOUND_STRING("Reduces super-effective damage\ntaken by 25%."),
+        .aiRating = 6,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_OCCULT_BOOST] =
+    {
+        .name = _("Occult Boost"),
+        .description = COMPOUND_STRING("User's highest stat +1 stage\nwhen they KO a target."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_RELENTLESS] =
+    {
+        .name = _("Relentless"),
+        .description = COMPOUND_STRING("Doubles the damage of user's\nnot-effective hits."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_MAGIC_ARMOR] =
+    {
+        .name = _("Magic Armor"),
+        .description = COMPOUND_STRING("Reduces super-effective damage\ntaken by 25%."),
+        .aiRating = 6,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_INDIGNANT] =
+    {
+        .name = _("Indignant"),
+        .description = COMPOUND_STRING("+2 Sp.Atk stages when user's\nstats are lowered by a foe."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_INTERDICT] =
+    {
+        .name = _("Interdict"),
+        .description = COMPOUND_STRING("Protects user's side from\nfoes' priority moves."),
+        .aiRating = 6,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_WONDER_VEIL] =
+    {
+        .name = _("Wonder Veil"),
+        .description = COMPOUND_STRING("Status moves against user cap\nat 50% Accuracy."),
+        .aiRating = 4,
+        .breakable = TRUE,
+    },
+
     [ABILITY_FLAME_ABSORB] =
     {
         .name = _("Flame Absorb"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("When hit by a Fire-type move,\nrecover 25% Max HP instead."),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -2424,7 +2711,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FLORA_ABSORB] =
     {
         .name = _("Flora Absorb"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("When hit by a Grass-type move,\nrecover 25% Max HP instead."),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -2432,49 +2719,520 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_CONSECRATE] =
     {
         .name = _("Consecrate"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("Normal moves become Faith-type,\nand are 30% stronger."),
         .aiRating = 8,
     },
 
     [ABILITY_FASCINATE] =
     {
         .name = _("Fascinate"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("Lowers the Sp.Atk of all foes by\n1 stage."),
         .aiRating = 7,
     },
 
     [ABILITY_UNWAVERING] =
     {
         .name = _("Unwavering"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("+50% SpA if the user has a status.\nIgnores frostbite penalty."),
         .aiRating = 6,
     },
 
     [ABILITY_AMBITION] =
     {
         .name = _("Ambition"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("User's Sp.Atk rises 1 stage upon\nKOing a foe."),
         .aiRating = 7,
     },
 
     [ABILITY_COLD_HEART] =
     {
         .name = _("Cold Heart"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("When below 1/3 HP, +50% power to\nIce-type moves."),
         .aiRating = 5,
     },
 
     [ABILITY_INNER_POWER] =
     {
         .name = _("Inner Power"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("When below 1/3 HP, +50% power to\nFighting-type moves."),
         .aiRating = 5,
+    },
+
+    [ABILITY_LUNACY] =
+    {
+        .name = _("Lunacy"),
+        .description = COMPOUND_STRING("Gain +1 to a random stat when\nentering battle."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_POWER_LEAK] =
+    {
+        .name = _("Power Leak"),
+        .description = COMPOUND_STRING("+1 Sp. Atk on entry, but it\nlowers by 1 stage every turn."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_HIBERNATION] =
+    {
+        .name = _("Hibernation"),
+        .description = COMPOUND_STRING("Recovers 1/8 HP at the end of\nevery turn when asleep."),
+        .aiRating = 6,
+    },
+
+    // [ABILITY_CHEERFUL] =
+    // {
+    //     .name = _("Cheerful"),
+    //     .description = COMPOUND_STRING("Halves damage at full HP."),
+    //     .aiRating = 8,
+    //     .breakable = TRUE,
+    // },
+
+    // [ABILITY_STONEWORKER] =
+    // {
+    //     .name = _("Stoneworker"),
+    //     .description = COMPOUND_STRING("User deals 50% more damage with\nEarth moves."),
+    //     .aiRating = 6,
+    // },
+
+    [ABILITY_WINTER_GIFT] =
+    {
+        .name = _("Winter Gift"),
+        .description = COMPOUND_STRING("User's Sp.Atk/Sp.Def +50% in\nhail."),
+        .aiRating = 6,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_PURE_ENIGMA] =
+    {
+        .name = _("Pure Enigma"),
+        .description = COMPOUND_STRING("Doubles all non-HP stats.\nEffect halved if user isn't Okina."),
+        .aiRating = 10,
+    },
+
+    [ABILITY_ABERRANT] =
+    {
+        .name = _("Aberrant"),
+        .description = COMPOUND_STRING("Swaps Atk and Sp. Atk stats."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_STORM_SHAWL] =
+    {
+        .name = _("Storm Shawl"),
+        .description = COMPOUND_STRING("Sp. Def +50% in non-clear weather.\nAlso nullifies weather damage."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_HARMONIZE] =
+    {
+        .name = _("Harmonize"),
+        .description = COMPOUND_STRING("+10% power to moves, for every\nother party member that has it."),
+        .aiRating = 6,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_CONTAGION] =
+    {
+        .name = _("Contagion"),
+        .description = COMPOUND_STRING("Contact with the user turns the\nattacker's ability into Contagion."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_LECTURE] =
+    {
+        .name = _("Lecture"),
+        .description = COMPOUND_STRING("When hit, lowers attacker's Speed.\nCan be prevented by Soundproof."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_SOUR_NOTE] =
+    {
+        .name = _("Sour Note"),
+        .description = COMPOUND_STRING("User's sound moves drop higher\noffense stat on other targets."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_HIGH_NOTE] =
+    {
+        .name = _("High Note"),
+        .description = COMPOUND_STRING("User's sound moves raise their\nhigher offense stat. (SpA if equal)."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_JEALOUSY] =
+    {
+        .name = _("Jealousy"),
+        .description = COMPOUND_STRING("If user has no item and attacker\ndoes, Def/SpDef increases by 50%."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_PRIDE] =
+    {
+        .name = _("Pride"),
+        .description = COMPOUND_STRING("If a foe uses an HP-recovering\nstatus move, Sp.Atk rises by +1."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_WALL_MASTER] =
+    {
+        .name = _("Wall Master"),
+        .description = COMPOUND_STRING("Uses Reflect/Light Screen/\nSafeguard/Mist all at once if known."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_CATALYST] =
+    {
+        .name = _("Catalyst"),
+        .description = COMPOUND_STRING("Foes take 1/8 Max HP extra damage\nfrom Poison/Toxic status per turn."),
+        .aiRating = 6,
+    },
+
+    // [ABILITY_WIDE_HAT] =
+    // {
+    //     .name = _("Wide Hat"),
+    //     .description = COMPOUND_STRING("Blocks weather damage and powder\nmoves."),
+    //     .aiRating = 5,
+    //     .breakable = TRUE,
+    // },
+
+    [ABILITY_TWIN_SPARK] =
+    {
+        .name = _("Twin Spark"),
+        .description = COMPOUND_STRING("Will use most damaging moves twice,\nbut at 60% of their power."),
+        .aiRating = 9,
+    },
+
+    [ABILITY_GOURMAND] =
+    {
+        .name = _("Gourmand"),
+        .description = COMPOUND_STRING("Eats healing food under 50% HP,\nand stat-up berries instantly."),
+        .aiRating = 5,
+    },
+
+    // [ABILITY_BELLIGERENT] =
+    // {
+    //     .name = _("Belligerent"),
+    //     .description = COMPOUND_STRING("Not-very-effective attacks from\nthe user deal double damage."),
+    //     .aiRating = 7,
+    // },
+
+    [ABILITY_BLANK_CARD] =
+    {
+        .name = _("Blank Card"),
+        .description = COMPOUND_STRING("Copies last party member's ability.\nWon't copy certain abilities."),
+        .aiRating = 9,
+    },
+
+    [ABILITY_REACTIVE] =
+    {
+        .name = _("Reactive"),
+        .description = COMPOUND_STRING("Raises Def when hit by Physical, but\nlower SpDef. Reversed on Special."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_DEVOUR] =
+    {
+        .name = _("Devour"),
+        .description = COMPOUND_STRING("When KO'ing a target, recover equal\nto 1/3rd of their Max HP."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_LOST_DREAM] =
+    {
+        .name = _("Lost Dream"),
+        .description = COMPOUND_STRING("User's moves ignore Normal-type\nimmunities."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_LAST_WISH] =
+    {
+        .name = _("Last Wish"),
+        .description = COMPOUND_STRING("Heals next partymate for 50% of\nuser's Max HP when fainting."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_LAST_GRUDGE] =
+    {
+        .name = _("Last Grudge"),
+        .description = COMPOUND_STRING("Reduce the PP of the move that\nknocks the user out to 1."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_SALVAGE] =
+    {
+        .name = _("Salvage"),
+        .description = COMPOUND_STRING("Defense rises by 1 stage when\nany battler faints."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_TOXICOLOGIST] =
+    {
+        .name = _("Toxicologist"),
+        .description = COMPOUND_STRING("Poison-type moves deal 50% more\ndamage."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_GRAND_THEORY] =
+    {
+        .name = _("Grand Theory"),
+        .description = COMPOUND_STRING("If another battler uses a move\nthe user has, Sp.Atk +1."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_CHARISMATIC] =
+    {
+        .name = _("Charismatic"),
+        .description = COMPOUND_STRING("Loses charisma at half or less\nMax HP, halving offense stats."),
+        .aiRating = -1,
+    },
+
+    [ABILITY_YIN_AND_YANG] =
+    {
+        .name = _("Yin and Yang"),
+        .description = COMPOUND_STRING("Increase lower offense stat by\n30%. Both +30% if equal."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_ARSONIST] =
+    {
+        .name = _("Arsonist"),
+        .description = COMPOUND_STRING("Fire-type moves deal 50% more\ndamage."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_LOGICIAN] =
+    {
+        .name = _("Logician"),
+        .description = COMPOUND_STRING("Psychic-type moves deal 50% more\ndamage."),
+        .aiRating = 7,
     },
 
     [ABILITY_TIME_CONTROL] =
     {
         .name = _("Time Control"),
-        .description = COMPOUND_STRING("."),
+        .description = COMPOUND_STRING("All moves have +1 priority."),
         .aiRating = 10,
+    },
+
+    [ABILITY_MY_REALM] =
+    {
+        .name = _("My Realm"),
+        .description = COMPOUND_STRING("Sets/unsets Trick Room on entry\nfor 5 turns."),
+        .aiRating = 10,
+    },
+
+    [ABILITY_SWORDMASTER] =
+    {
+        .name = _("Swordmaster"),
+        .description = COMPOUND_STRING("User's priority moves deal 50% more\ndamage."),
+        .aiRating = 9,
+    },
+
+    [ABILITY_ATHEISM] =
+    {
+        .name = _("Atheism"),
+        .description = COMPOUND_STRING("Reduces damage taken by Faith-type\nmoves by 75%."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_FIRM_DEFENSE] =
+    {
+        .name = _("Firm Defense"),
+        .description = COMPOUND_STRING("Prevents others from lowering\nuser's Defense stat."),
+        .aiRating = 1,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_SUNBATHING] =
+    {
+        .name = _("Sunbathing"),
+        .description = COMPOUND_STRING("Cures status in sun at the end\nof every turn."),
+        .aiRating = 4,
+    },
+
+
+    [ABILITY_LAST_PRANK] =
+    {
+        .name = _("Last Prank"),
+        .description = COMPOUND_STRING("Halves health of an attacker if\nthey deal a fatal blow."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_BUZZER] =
+    {
+        .name = _("Buzzer"),
+        .description = COMPOUND_STRING("Resisted hits lower enemy stat.\nAtk for Phys, SpAtk for Special."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_SAND_CASTLE] =
+    {
+        .name = _("Sand Castle"),
+        .description = COMPOUND_STRING("Doubles Defense in a sandstorm.\nAlso immune to sand damage."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_STASIS_GAZE] =
+    {
+        .name = _("Stasis Gaze"),
+        .description = COMPOUND_STRING("Foes cannot raise their stats\nwhile the user is in battle."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_PURE_SCALES] =
+    {
+        .name = _("Pure Scales"),
+        .description = COMPOUND_STRING("Doubles Special Defense."),
+        .aiRating = 9,
+    },
+
+    [ABILITY_VERSATILE] =
+    {
+        .name = _("Versatile"),
+        .description = COMPOUND_STRING("User always has same-type attack\nbonus, unless using Struggle."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_AMBUSH] =
+    {
+        .name = _("Ambush"),
+        .description = COMPOUND_STRING("User's Speed is 50% higher, but\nonly on the first turn."),
+        .aiRating = 9,
+    },
+
+    [ABILITY_MULTIGRAZE] =
+    {
+        .name = _("Multigraze"),
+        .description = COMPOUND_STRING("Halves damage at full HP."),
+        .aiRating = 8,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_FOCUS] =
+    {
+        .name = _("Focus"),
+        .description = COMPOUND_STRING("User's accuracy boosted by 1.3x."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_GAP_BLOCK] =
+    {
+        .name = _("Gap Block"),
+        .description = COMPOUND_STRING("Avoids status moves."),
+        .aiRating = 8,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_ANGER_BREAK] =
+    {
+        .name = _("Anger Break"),
+        .description = COMPOUND_STRING("When hit under 1/2 HP, Defenses down, offenses up."),
+        .aiRating = 3,
+    },
+
+    [ABILITY_KAGURA] =
+    {
+        .name = _("Kagura"),
+        .description = COMPOUND_STRING("User's Faith-type move power increases by 1.5x."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_BAKED_POTATO] =
+    {
+        .name = _("Baked Potato"),
+        .description = COMPOUND_STRING("Nullifies Fire attacks on user,\nand gains +2 Defense instead."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_ORB_FETCH] =
+    {
+        .name = _("Orb Fetch"),
+        .description = COMPOUND_STRING("Saves a failed capture orb, once."),
+        .aiRating = 0,
+    },
+
+    [ABILITY_SACRED_VEIL] =
+    {
+        .name = _("Sacred Veil"),
+        .description = COMPOUND_STRING("Protects user and allies from\nbeing poisoned."),
+        .aiRating = 4,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_SOOTHING_SMOKE] =
+    {
+        .name = _("Soothing Smoke"),
+        .description = COMPOUND_STRING("All Abilities are nullified."),
+        .aiRating = 5,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_BEER_BREW] =
+    {
+        .name = _("Beer Brew"),
+        .description = COMPOUND_STRING("May create Beer after battle."),
+        .aiRating = 0,
+    },
+
+    [ABILITY_MISERY] =
+    {
+        .name = _("Misery"),
+        .description = COMPOUND_STRING("-25% Defense for all other\nbattlers on the field."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_PIERCING_DRILL] =
+    {
+        .name = _("Piercing Drill"),
+        .description = COMPOUND_STRING("Contact evades protection."),
+    },
+
+    [ABILITY_DRAGONIZE] =
+    {
+        .name = _("Dragonize"),
+        .description = COMPOUND_STRING("Normal moves turn Dragon."),
+    },
+
+    [ABILITY_313] =
+    {
+        .name = _("-------"),
+        .description = COMPOUND_STRING("No special ability."),
+    },
+
+    [ABILITY_314] =
+    {
+        .name = _("-------"),
+        .description = COMPOUND_STRING("No special ability."),
+    },
+
+    [ABILITY_MEGA_SOL] =
+    {
+        .name = _("Mega Sol"),
+        .description = COMPOUND_STRING("Acts like under sun."),
+    },
+
+    [ABILITY_316] =
+    {
+        .name = _("-------"),
+        .description = COMPOUND_STRING("No special ability."),
+    },
+
+    [ABILITY_317] =
+    {
+        .name = _("-------"),
+        .description = COMPOUND_STRING("No special ability."),
+    },
+
+    [ABILITY_SPICY_SPRAY] =
+    {
+        .name = _("Spicy Spray"),
+        .description = COMPOUND_STRING("Burns the foe when damaged."),
     },
 };

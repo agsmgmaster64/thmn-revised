@@ -1,11 +1,12 @@
 #include "global.h"
 #include "battle.h"
 #include "battle_hold_effects.h"
+#include "battle_stat_change.h"
 #include "battle_util.h"
 #include "battle_scripts.h"
 #include "battle_switch_in.h"
 #include "battle_controllers.h"
-#include "generational_changes.h"
+#include "config_changes.h"
 #include "constants/battle.h"
 #include "constants/moves.h"
 
@@ -32,15 +33,16 @@ bool32 DoSwitchInEvents(void)
         for (enum BattlerId i = 0; i < gBattlersCount; i++)
             gBattlersBySpeed[i] = i;
         SortBattlersBySpeed(gBattlersBySpeed, FALSE);
+        SortBattlersByRawSpeed(gBattlersByRawSpeed);
         gBattleStruct->battlersSorted = TRUE;
         gBattleStruct->switchInBattlerCounter = 0;
         gBattleStruct->eventState.battlerSwitchIn = 0;
         gBattleStruct->eventState.switchIn++;
-        break;
+        // fallthrough
     case SWITCH_IN_EVENTS_TERA_SHIFT:
         while (gBattleStruct->switchInBattlerCounter < gBattlersCount)
         {
-            battler = gBattlersBySpeed[gBattleStruct->switchInBattlerCounter++];
+            battler = gBattlersByRawSpeed[gBattleStruct->switchInBattlerCounter++];
             if (AbilityBattleEffects(ABILITYEFFECT_TERA_SHIFT, battler, calcValues.abilities[battler], 0, gBattleStruct->battlerState[battler].switchIn))
                 return TRUE;
         }
@@ -92,10 +94,20 @@ bool32 DoSwitchInEvents(void)
         gBattleStruct->switchInBattlerCounter = 0;
         gBattleStruct->eventState.switchIn++;
         break;
+    case SWITCH_IN_EVENTS_FORM_CHANGE:
+        while (gBattleStruct->switchInBattlerCounter < gBattlersCount)
+        {
+            battler = gBattlersBySpeed[gBattleStruct->switchInBattlerCounter++];
+            if (AbilityBattleEffects(ABILITYEFFECT_SWITCH_IN_FORM_CHANGE, battler, calcValues.abilities[battler], 0, gBattleStruct->battlerState[battler].switchIn))
+                return TRUE;
+        }
+        gBattleStruct->switchInBattlerCounter = 0;
+        gBattleStruct->eventState.switchIn++;
+        break;
     case SWITCH_IN_EVENTS_SECOND_BLOCK:
         while (gBattleStruct->switchInBattlerCounter < gBattlersCount)
         {
-            battler = gBattlersBySpeed[gBattleStruct->switchInBattlerCounter];
+            battler = gBattlersByRawSpeed[gBattleStruct->switchInBattlerCounter];
 
             if (!IsBattlerAlive(battler))
             {
@@ -120,7 +132,7 @@ bool32 DoSwitchInEvents(void)
     case SWITCH_IN_EVENTS_WHITE_HERB:
         while (gBattleStruct->switchInBattlerCounter < gBattlersCount)
         {
-            enum BattlerId battler = gBattlersBySpeed[gBattleStruct->switchInBattlerCounter++];
+            enum BattlerId battler = gBattlersByRawSpeed[gBattleStruct->switchInBattlerCounter++];
             if (ItemBattleEffects(battler, 0, calcValues.holdEffects[battler], IsWhiteHerbActivation))
                 return TRUE;
         }
@@ -130,7 +142,7 @@ bool32 DoSwitchInEvents(void)
     case SWITCH_IN_EVENTS_OPPORTUNIST:
         while (gBattleStruct->switchInBattlerCounter < gBattlersCount)
         {
-            enum BattlerId battler = gBattlersBySpeed[gBattleStruct->switchInBattlerCounter++];
+            enum BattlerId battler = gBattlersByRawSpeed[gBattleStruct->switchInBattlerCounter++];
             if (AbilityBattleEffects(ABILITYEFFECT_OPPORTUNIST, battler, calcValues.abilities[battler], 0, TRUE))
                 return TRUE;
         }
@@ -140,8 +152,8 @@ bool32 DoSwitchInEvents(void)
     case SWITCH_IN_EVENTS_MIRROR_HERB:
         while (gBattleStruct->switchInBattlerCounter < gBattlersCount)
         {
-            enum BattlerId battler = gBattlersBySpeed[gBattleStruct->switchInBattlerCounter++];
-            if (ItemBattleEffects(battler, 0, GetBattlerHoldEffect(battler), IsMirrorHerbActivation))
+            enum BattlerId battler = gBattlersByRawSpeed[gBattleStruct->switchInBattlerCounter++];
+            if (ItemBattleEffects(battler, 0, calcValues.holdEffects[battler], IsMirrorHerbActivation))
                 return TRUE;
         }
         gBattleStruct->switchInBattlerCounter = 0;
@@ -156,6 +168,9 @@ bool32 DoSwitchInEvents(void)
                 gBattleStruct->battlerState[battler].switchIn = FALSE;
             }
         }
+
+        gBattleStruct->intimidateActivated = FALSE;
+        gBattleStruct->adrenalineOrbActivated = FALSE;
         gBattleStruct->battlersSorted = FALSE;
         gBattleStruct->hazardsCounter = 0;
         gBattleStruct->eventState.switchIn++;
@@ -173,10 +188,13 @@ bool32 DoSwitchInEvents(void)
 
 static bool32 CanBattlerBeHealed(enum BattlerId battler)
 {
-    if (GetConfig(CONFIG_HEALING_WISH_SWITCH) < GEN_8)
+    if (GetConfig(B_HEALING_WISH_SWITCH) < GEN_8)
         return TRUE;
 
     if (gBattleMons[battler].hp != gBattleMons[battler].maxHP || gBattleMons[battler].status1)
+        return TRUE;
+
+    if (gBattleStruct->battlerState[battler].lastWishFlag)
         return TRUE;
 
     if (gBattleStruct->battlerState[battler].storedLunarDance
@@ -219,6 +237,17 @@ static bool32 FirstEventBlockEvents(struct BattleCalcValues *calcValues)
             BattleScriptCall(BattleScript_LunarDanceActivates);
             effect = TRUE;
         }
+        else if (gBattleStruct->battlerState[battler].lastWishFlag != 0 && gBattleStruct->battlerState[battler].lastWishAmount != 0)
+        {
+            u16 amountHP = gBattleStruct->battlerState[battler].lastWishAmount;
+            
+            gBattleScripting.battler = battler;
+            SetHealAmount(battler, amountHP);
+            BattleScriptCall(BattleScript_LastWishActivates);
+            gBattleStruct->battlerState[battler].lastWishFlag = 0;
+            gBattleStruct->battlerState[battler].lastWishAmount = 0;
+            effect = TRUE;
+        }
         else if (gBattleStruct->zmove.healReplacement & 1u << battler)
         {
             gBattleStruct->zmove.healReplacement &= ~(1u << battler);
@@ -240,7 +269,7 @@ static bool32 FirstEventBlockEvents(struct BattleCalcValues *calcValues)
             gBattleScripting.battler = gBattlerAbility = battler;
             gBattleStruct->battlerState[battler].forcedSwitch = FALSE;
             gBattleStruct->eventState.switchIn = 0;
-            BattleScriptCall(BattleScript_EmergencyExit);
+            BattleScriptCall(BattleScript_EmergencyExitSendReplacement);
             effect = TRUE;
         }
         else
@@ -313,8 +342,8 @@ static bool32 TryHazardsOnSwitchIn(enum BattlerId battler, enum Ability ability,
     case HAZARDS_STICKY_WEB:
         if (IsBattlerAffectedByHazards(battler, holdEffect, FALSE) && IsBattlerGrounded(battler, ability, holdEffect))
         {
-            gBattleScripting.battler = battler;
-            SET_STATCHANGER(STAT_SPEED, 1, TRUE);
+            gEffectBattler = battler;
+            SetStatChange(battler, STAT_SPEED, -1);
             BattleScriptCall(BattleScript_StickyWebOnSwitchIn);
             effect = TRUE;
         }
@@ -334,7 +363,7 @@ static bool32 TryHazardsOnSwitchIn(enum BattlerId battler, enum Ability ability,
             effect = TRUE;
         }
         else if (IsBattlerAffectedByHazards(battler, holdEffect, TRUE)
-              && CanBePoisoned(battler, battler, ability, ability))
+              && CanBePoisoned(battler, battler, ABILITY_NONE, ability))
         {
             gBattleScripting.battler = battler;
             BattleScriptPushCursor();
@@ -396,7 +425,7 @@ static bool32 SecondEventBlockEvents(struct BattleCalcValues *calcValues)
     case SECOND_EVENT_ABILITIES:
         if (AbilityBattleEffects(ABILITYEFFECT_ON_WEATHER, battler, calcValues->abilities[battler], MOVE_NONE, TRUE)
          || AbilityBattleEffects(ABILITYEFFECT_ON_TERRAIN, battler, calcValues->abilities[battler], MOVE_NONE, TRUE)
-         || AbilityBattleEffects(ABILITYEFFECT_COMMANDER, battler, calcValues->abilities[battler], MOVE_NONE, gBattleStruct->battlerState[battler].switchIn))
+         || AbilityBattleEffects(ABILITYEFFECT_DEPENDS_ON_ALLY, battler, calcValues->abilities[battler], MOVE_NONE, gBattleStruct->battlerState[battler].switchIn))
             effect = TRUE;
         gBattleStruct->eventState.battlerSwitchIn++;
         break;

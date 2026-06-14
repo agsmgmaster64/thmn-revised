@@ -24,7 +24,7 @@ SINGLE_BATTLE_TEST("Protosynthesis boosts the highest stat")
 
 SINGLE_BATTLE_TEST("Protosynthesis boosts either Attack or Special Attack, not both")
 {
-    u16 species;
+    enum Species species;
     enum Move move;
     s16 damage[2];
 
@@ -59,7 +59,7 @@ SINGLE_BATTLE_TEST("Protosynthesis ability pop up activates only once during the
     u16 turns;
 
     GIVEN {
-        WITH_CONFIG(CONFIG_ABILITY_WEATHER, GEN_6);
+        WITH_CONFIG(B_ABILITY_WEATHER, GEN_6);
         PLAYER(SPECIES_WALKING_WAKE) { Ability(ABILITY_PROTOSYNTHESIS); }
         OPPONENT(SPECIES_NINETALES) { Ability(ABILITY_DROUGHT); }
     } WHEN {
@@ -134,6 +134,23 @@ SINGLE_BATTLE_TEST("Protosynthesis prioritizes stats in the case of a tie in the
     }
 }
 
+SINGLE_BATTLE_TEST("Protosynthesis uses Wonder Room swapped defenses when choosing boosted stat")
+{
+    GIVEN {
+        ASSUME(GetMoveEffect(MOVE_WONDER_ROOM) == EFFECT_WONDER_ROOM);
+        PLAYER(SPECIES_ROARING_MOON) { Ability(ABILITY_PROTOSYNTHESIS); Attack(50); Defense(200); SpAttack(40); SpDefense(60); Speed(70); Moves(MOVE_WONDER_ROOM); }
+        OPPONENT(SPECIES_WOBBUFFET) { Moves(MOVE_SUNNY_DAY); Speed(60); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_WONDER_ROOM); MOVE(opponent, MOVE_SUNNY_DAY); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_WONDER_ROOM, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SUNNY_DAY, opponent);
+        ABILITY_POPUP(player, ABILITY_PROTOSYNTHESIS);
+        MESSAGE("The harsh sunlight activated Roaring Moon's Protosynthesis!");
+        MESSAGE("Roaring Moon's Sp. Def was heightened!");
+    }
+}
+
 SINGLE_BATTLE_TEST("Protosynthesis activates in Sun before Booster Energy")
 {
     GIVEN {
@@ -186,7 +203,7 @@ SINGLE_BATTLE_TEST("Protosynthesis activates even if the Pokémon is holding an 
 
 SINGLE_BATTLE_TEST("Protosynthesis doesn't activate if Cloud Nine/Air Lock is on the field")
 {
-    u32 species;
+    enum Species species;
     enum Ability ability;
     PARAMETRIZE { species = SPECIES_RAYQUAZA; ability = ABILITY_AIR_LOCK; }
     PARAMETRIZE { species = SPECIES_GOLDUCK; ability = ABILITY_CLOUD_NINE; }

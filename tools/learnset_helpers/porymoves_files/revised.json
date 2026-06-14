@@ -47,6 +47,18 @@
     "EggMoves": [],
     "TutorMoves": []
   },
+  "K_DREIMU": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
   "C_MARISA": {
     "LevelMoves": [
       {
@@ -420,6 +432,18 @@
     "TutorMoves": []
   },
   "E_REMILIA": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "K_DREMILIA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -2279,7 +2303,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "J_KSANAE": {
+  "S_GSANAE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -3047,7 +3071,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "TENSOKU": {
+  "HISOUTENSOKU": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -3132,6 +3156,30 @@
     "TutorMoves": []
   },
   "E_KASEN": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "ORIGINAL_KASEN": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "IBARAKI_ARM": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -5507,7 +5555,31 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "SHINGYOKU": {
+  "SHINGYOKU_ORB": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "SHINGYOKU_MALE": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "SHINGYOKU_FEMALE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -5939,7 +6011,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "MIMICHAN": {
+  "MIMI_CHAN": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -6035,7 +6107,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "UNGAIKYO_D": {
+  "DARK_MIRROR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -6084,6 +6156,42 @@
     "TutorMoves": []
   },
   "HIKARIKO": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "C_KAZAMI": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "KAZAMI": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_POUND"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
+  "E_KAZAMI": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -6215,7 +6323,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "UNGAIKYO_A": {
+  "SPIRIT_MIRROR": {
     "LevelMoves": [
       {
         "Level": 1,

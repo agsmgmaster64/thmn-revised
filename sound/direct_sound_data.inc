@@ -601,7 +601,7 @@ Cry_Rin::
 	.incbin "sound/direct_sound_samples/cries/rin.bin"
 
 	.align 2
-Cry_ZFairy::
+Cry_Zombie_Fairy::
 	.incbin "sound/direct_sound_samples/cries/zombie_fairy.bin"
 
 	.align 2
@@ -1069,8 +1069,8 @@ Cry_Namazu::
 	.incbin "sound/direct_sound_samples/cries/namazu.bin"
 
 	.align 2
-Cry_Tensoku::
-	.incbin "sound/direct_sound_samples/cries/tensoku.bin"
+Cry_Hisoutensoku::
+	.incbin "sound/direct_sound_samples/cries/hisoutensoku.bin"
 
 	.align 2
 Cry_Konngara::
@@ -1129,8 +1129,8 @@ Cry_Sasha::
 	.incbin "sound/direct_sound_samples/cries/sasha.bin"
 
 	.align 2
-Cry_Joshi_Kosei_Sanae::
-	.incbin "sound/direct_sound_samples/cries/joshi_kosei_sanae.bin"
+Cry_School_Girl_Sanae::
+	.incbin "sound/direct_sound_samples/cries/school_girl_sanae.bin"
 
 	.align 2
 Cry_KD_Sakuya::
@@ -1209,6 +1209,12 @@ Cry_Advent_Remilia::
 	.incbin "sound/direct_sound_samples/cries/advent_remilia.bin"
 
 .endif @ P_CRIES_ENABLED
+
+.if TESTING == TRUE
+@ Tests use a single shared cry for all mons, and Fletchling is the standard measurement
+	.align 2
+	.incbin "sound/direct_sound_samples/cries/reimu.bin"
+.endif
 
 	.align 2
 DirectSoundWaveData_register_noise::

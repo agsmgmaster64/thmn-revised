@@ -3080,7 +3080,7 @@
     "MOVE_WORK_UP",
     "MOVE_ZEN_HEADBUTT"
   ],
-  "TENSOKU": [
+  "HISOUTENSOKU": [
     "MOVE_POUND"
   ],
   "YUKARI": [
@@ -13815,7 +13815,7 @@
   "E_MEDICINE": [
     "MOVE_POUND"
   ],
-  "MIMICHAN": [
+  "MIMI_CHAN": [
     "MOVE_POUND"
   ],
   "BLISSEY": [
@@ -25012,7 +25012,7 @@
   "C_YUUMA": [
     "MOVE_POUND"
   ],
-  "J_KSANAE": [
+  "S_GSANAE": [
     "MOVE_POUND"
   ],
   "KONNGARA": [
@@ -27674,7 +27674,7 @@
   "JUNKO": [
     "MOVE_POUND"
   ],
-  "UNGAIKYO_A": [
+  "SPIRIT_MIRROR": [
     "MOVE_POUND"
   ],
   "QWILFISH_HISUI": [
@@ -29750,7 +29750,7 @@
   "NAZRIN": [
     "MOVE_POUND"
   ],
-  "UNGAIKYO_D": [
+  "DARK_MIRROR": [
     "MOVE_POUND"
   ],
   "MORPEKO": [
@@ -58397,7 +58397,13 @@
     "MOVE_WONDER_ROOM",
     "MOVE_ZEN_HEADBUTT"
   ],
-  "SHINGYOKU": [
+  "SHINGYOKU_ORB": [
+    "MOVE_POUND"
+  ],
+  "SHINGYOKU_MALE": [
+    "MOVE_POUND"
+  ],
+  "SHINGYOKU_FEMALE": [
     "MOVE_POUND"
   ],
   "MANAPHY": [
@@ -73306,6 +73312,12 @@
     "MOVE_ZEN_HEADBUTT"
   ],
   "K_DSAKUYA": [
+    "MOVE_POUND"
+  ],
+  "K_DREIMU": [
+    "MOVE_POUND"
+  ],
+  "K_DREMILIA": [
     "MOVE_POUND"
   ],
   "KYUREM_WHITE": [
@@ -92320,6 +92332,21 @@
     "MOVE_WEATHER_BALL"
   ],
   "C_YOSHIKA": [
+    "MOVE_POUND"
+  ],
+  "C_KAZAMI": [
+    "MOVE_POUND"
+  ],
+  "KAZAMI": [
+    "MOVE_POUND"
+  ],
+  "E_KAZAMI": [
+    "MOVE_POUND"
+  ],
+  "ORIGINAL_KASEN": [
+    "MOVE_POUND"
+  ],
+  "IBARAKI_ARM": [
     "MOVE_POUND"
   ],
   "WORMADAM_TRASH": [

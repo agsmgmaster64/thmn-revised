@@ -7666,6 +7666,9 @@ void CoreEnforcerLoadBeamTarget(struct Sprite *sprite)
 
 void AnimTask_CreateBestowItem(u8 taskId)
 {
+    StoreGfxTag(ANIM_TAG_ITEM_BAG);
+    StorePalTag(ANIM_TAG_ITEM_BAG);
+
     u8 iconSpriteId = AddItemIconSprite(ANIM_TAG_ITEM_BAG, ANIM_TAG_ITEM_BAG, gLastUsedItem);
 
     if (iconSpriteId != MAX_SPRITES)
@@ -7681,6 +7684,12 @@ void AnimTask_CreateBestowItem(u8 taskId)
 //No args.
 void AnimTask_PurpleFlamesOnTarget(u8 taskId)
 {
+    if (!TryLoadSpriteAssets(&gGrudgeFlameSpriteTemplate))
+    {
+        DestroyTask(taskId);
+        return;
+    }
+
     struct Task *task = &gTasks[taskId];
 
     task->data[0] = 0;
@@ -8385,3 +8394,14 @@ void AnimTask_GetCommanderType(u8 taskId)
 
     DestroyAnimVisualTask(taskId);
 }
+
+const struct SpriteTemplate gTakeOverSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .paletteTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimRockFragment,
+};

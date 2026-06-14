@@ -120,5 +120,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Yogyakarta_EventScript_House2"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

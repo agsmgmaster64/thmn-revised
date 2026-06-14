@@ -903,6 +903,9 @@ enum __attribute__((packed)) Move
     MOVE_PSYCHIC_NOISE = 845,
     MOVE_UPPER_HAND = 846,
     MOVE_MALIGNANT_CHAIN = 847,
+    MOVE_TAKE_OVER = 848,
+    MOVE_THIRD_EYE = 849,
+    MOVE_FOCUS_STANCE = 850,
     MOVES_COUNT_GEN9,
 
     // Add any custom moves here, not further down!
@@ -1012,6 +1015,7 @@ enum __attribute__((packed)) Move
 };
 
 #define MOVE_DEFAULT     0x3FFF // Used when creating a mon to be replaced by a level-up move (needs to be less than that 0x4000 because of VarGet)
+#define MOVE_RANDOM_TEACHABLE      (MOVES_COUNT_ALL + 1)
 #define MOVE_UNAVAILABLE 0xFFFF // Used for checks for moves affected by Disable, Mimic, etc.
 
 #endif  // GUARD_CONSTANTS_MOVES_H

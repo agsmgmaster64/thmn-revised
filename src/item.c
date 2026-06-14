@@ -15,6 +15,7 @@
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
 #include "graphics.h"
+#include "shop_criteria.h"
 #include "constants/battle.h"
 #include "constants/items.h"
 #include "constants/moves.h"
@@ -33,6 +34,8 @@ static bool32 CheckPyramidBagHasSpace(enum Item itemId, u16 count);
 static const u8 *GetItemPluralName(enum Item);
 static bool32 DoesItemHavePluralName(enum Item);
 static void NONNULL BagPocket_CompactItems(struct BagPocket *pocket);
+static u16 SanitizeItemId(enum Item itemId);
+static u16 SanitizeBagItemId(enum Item itemId);
 
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
 
@@ -134,7 +137,7 @@ void ApplyNewEncryptionKeyToBagItems(u32 newKey)
     enum Item item;
     for (pocketId = 0; pocketId < POCKETS_COUNT; pocketId++)
     {
-        for (item = 0; item < gBagPockets[pocketId].capacity; item++)
+        for (item = ITEM_NONE; item < gBagPockets[pocketId].capacity; item++)
             ApplyNewEncryptionKeyToHword(&(gBagPockets[pocketId].itemSlots[item].quantity), newKey);
     }
 }
@@ -225,12 +228,13 @@ bool32 CheckBagHasItem(enum Item itemId, u16 count)
 
 bool32 HasAtLeastOneBerry(void)
 {
-    gSpecialVar_Result = FALSE;
+    for (enum BerryId berryId = 1; berryId <= NUM_BERRIES; berryId++)
+    {
+        if (CheckBagHasItem(BerryTypeToItemId(berryId), 1) == TRUE)
+            return (gSpecialVar_Result = TRUE);
+    }
 
-    for (u32 i = FIRST_BERRY_INDEX; i <= LAST_BERRY_INDEX && gSpecialVar_Result == FALSE; i++)
-        gSpecialVar_Result = CheckBagHasItem(i, 1);
-
-    return gSpecialVar_Result;
+    return (gSpecialVar_Result = FALSE);
 }
 
 bool32 HasAtLeastOnePokeBall(void)
@@ -310,22 +314,22 @@ static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, enum Item item
 
     switch (pocket->id)
     {
-        case POCKET_TM_HM:
-        case POCKET_BERRIES:
-            for (itemLookupIndex = 0; itemLookupIndex < pocket->capacity && count > 0; itemLookupIndex++)
+    case POCKET_TM_HM:
+    case POCKET_BERRIES:
+        for (itemLookupIndex = 0; itemLookupIndex < pocket->capacity && count > 0; itemLookupIndex++)
+        {
+            // Check if we found a slot to store the item but weren't able to reduce count to 0
+            // This means that we have more than one stack's worth, which isn't allowed in these pockets
+            if (CheckSlotAndUpdateCount(pocket, itemId, itemLookupIndex, &itemAddIndex, &count, tempPocketSlotQuantities) && count > 0)
             {
-                // Check if we found a slot to store the item but weren't able to reduce count to 0
-                // This means that we have more than one stack's worth, which isn't allowed in these pockets
-                if (CheckSlotAndUpdateCount(pocket, itemId, itemLookupIndex, &itemAddIndex, &count, tempPocketSlotQuantities) && count > 0)
-                {
-                    Free(tempPocketSlotQuantities);
-                    return FALSE;
-                }
+                Free(tempPocketSlotQuantities);
+                return FALSE;
             }
-            break;
-        default:
-            for (itemLookupIndex = 0; itemLookupIndex < pocket->capacity && count > 0; itemLookupIndex++)
-                CheckSlotAndUpdateCount(pocket, itemId, itemLookupIndex, &itemAddIndex, &count, tempPocketSlotQuantities);
+        }
+        break;
+    default:
+        for (itemLookupIndex = 0; itemLookupIndex < pocket->capacity && count > 0; itemLookupIndex++)
+            CheckSlotAndUpdateCount(pocket, itemId, itemLookupIndex, &itemAddIndex, &count, tempPocketSlotQuantities);
     }
 
     // If the count is still greater than zero, clearly we have not found enough slots for this...
@@ -363,7 +367,8 @@ static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, enum Item item
 
 bool32 AddBagItem(enum Item itemId, u16 count)
 {
-    if (GetItemPocket(itemId) >= POCKETS_COUNT)
+    itemId = SanitizeBagItemId(itemId);
+    if (itemId == ITEM_NONE)
         return FALSE;
 
     // check Battle Pyramid Bag
@@ -419,7 +424,8 @@ static bool32 NONNULL BagPocket_RemoveItem(struct BagPocket *pocket, enum Item i
 
 bool32 RemoveBagItem(enum Item itemId, u16 count)
 {
-    if (GetItemPocket(itemId) >= POCKETS_COUNT || itemId == ITEM_NONE)
+    itemId = SanitizeBagItemId(itemId);
+    if (itemId == ITEM_NONE)
         return FALSE;
 
     // check Battle Pyramid Bag
@@ -812,6 +818,23 @@ static u16 SanitizeItemId(enum Item itemId)
     return itemId;
 }
 
+static u16 SanitizeBagItemId(enum Item itemId)
+{
+    itemId = SanitizeItemId(itemId);
+
+    assertf(itemId != ITEM_NONE, "invalid bag item: ITEM_NONE")
+    {
+        return ITEM_NONE;
+    }
+
+    assertf(GetItemPocket(itemId) < POCKETS_COUNT, "invalid bag item pocket: %S", gItemsInfo[itemId].name)
+    {
+        return ITEM_NONE;
+    }
+
+    return itemId;
+}
+
 const u8 *GetItemName(enum Item itemId)
 {
     const u8 *name = gItemsInfo[SanitizeItemId(itemId)].name;
@@ -902,23 +925,23 @@ enum EffectItem GetItemBattleUsage(enum Item itemId)
     {
         switch (GetItemEffectType(gSpecialVar_ItemId))
         {
-            case ITEM_EFFECT_X_ITEM:
-                return EFFECT_ITEM_INCREASE_STAT;
-            case ITEM_EFFECT_HEAL_HP:
-                return EFFECT_ITEM_RESTORE_HP;
-            case ITEM_EFFECT_CURE_POISON:
-            case ITEM_EFFECT_CURE_SLEEP:
-            case ITEM_EFFECT_CURE_BURN:
-            case ITEM_EFFECT_CURE_FREEZE_FROSTBITE:
-            case ITEM_EFFECT_CURE_PARALYSIS:
-            case ITEM_EFFECT_CURE_ALL_STATUS:
-            case ITEM_EFFECT_CURE_CONFUSION:
-            case ITEM_EFFECT_CURE_INFATUATION:
-                return EFFECT_ITEM_CURE_STATUS;
-            case ITEM_EFFECT_HEAL_PP:
-                return EFFECT_ITEM_RESTORE_PP;
-            default:
-                return 0;
+        case ITEM_EFFECT_X_ITEM:
+            return EFFECT_ITEM_INCREASE_STAT;
+        case ITEM_EFFECT_HEAL_HP:
+            return EFFECT_ITEM_RESTORE_HP;
+        case ITEM_EFFECT_CURE_POISON:
+        case ITEM_EFFECT_CURE_SLEEP:
+        case ITEM_EFFECT_CURE_BURN:
+        case ITEM_EFFECT_CURE_FREEZE_FROSTBITE:
+        case ITEM_EFFECT_CURE_PARALYSIS:
+        case ITEM_EFFECT_CURE_ALL_STATUS:
+        case ITEM_EFFECT_CURE_CONFUSION:
+        case ITEM_EFFECT_CURE_INFATUATION:
+            return EFFECT_ITEM_CURE_STATUS;
+        case ITEM_EFFECT_HEAL_PP:
+            return EFFECT_ITEM_RESTORE_PP;
+        default:
+            return 0;
         }
     }
     else
@@ -941,18 +964,18 @@ u32 GetItemStatus1Mask(enum Item itemId)
     const u8 *effect = GetItemEffect(itemId);
     switch (effect[3])
     {
-        case ITEM3_PARALYSIS:
-            return STATUS1_PARALYSIS;
-        case ITEM3_FREEZE:
-            return STATUS1_ICY_ANY;
-        case ITEM3_BURN:
-            return STATUS1_BURN;
-        case ITEM3_POISON:
-            return STATUS1_PSN_ANY | STATUS1_TOXIC_COUNTER;
-        case ITEM3_SLEEP:
-            return STATUS1_SLEEP;
-        case ITEM3_STATUS_ALL:
-            return STATUS1_ANY | STATUS1_TOXIC_COUNTER;
+    case ITEM3_PARALYSIS:
+        return STATUS1_PARALYSIS;
+    case ITEM3_FREEZE:
+        return STATUS1_ICY_ANY;
+    case ITEM3_BURN:
+        return STATUS1_BURN;
+    case ITEM3_POISON:
+        return STATUS1_PSN_ANY | STATUS1_TOXIC_COUNTER;
+    case ITEM3_SLEEP:
+        return STATUS1_SLEEP;
+    case ITEM3_STATUS_ALL:
+        return STATUS1_ANY | STATUS1_TOXIC_COUNTER;
     }
     return 0;
 }
@@ -981,4 +1004,19 @@ bool32 IsHoldEffectChoice(enum HoldEffect holdEffect)
     return holdEffect == HOLD_EFFECT_CHOICE_BAND
         || holdEffect == HOLD_EFFECT_CHOICE_SCARF
         || holdEffect == HOLD_EFFECT_CHOICE_SPECS;
+}
+
+ShopCriteriaFunc GetItemShopCriteriaFunc(u32 itemId)
+{
+    return gItemsInfo[SanitizeItemId(itemId)].shopCriteriaFunc;
+}
+
+bool32 IsItemShopCriteriaFulfilled(u32 itemId)
+{
+    ShopCriteriaFunc func = GetItemShopCriteriaFunc(itemId);
+
+    if (!func)
+        return TRUE;
+
+    return func(SanitizeItemId(itemId));
 }
