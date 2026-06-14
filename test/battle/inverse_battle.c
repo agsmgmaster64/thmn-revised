@@ -1,7 +1,7 @@
 #include "global.h"
 #include "test/battle.h"
 
-static bool32 IsSpeciesMonotypeOf(u32 species, enum Type type)
+static bool32 IsSpeciesMonotypeOf(enum Species species, enum Type type)
 {
     return GetSpeciesType(species, 0) == type && GetSpeciesType(species, 1) == type;
 }
@@ -24,7 +24,7 @@ ASSUMPTIONS
     ASSUME(IsSpeciesMonotypeOf(SPECIES_JOLTEON,  TYPE_ELECTRIC));
     ASSUME(IsSpeciesMonotypeOf(SPECIES_ESPEON,   TYPE_PSYCHIC));
     ASSUME(IsSpeciesMonotypeOf(SPECIES_GLACEON,  TYPE_ICE));
-    ASSUME(IsSpeciesMonotypeOf(SPECIES_DRUDDIGON,TYPE_DRAGON));
+    ASSUME(IsSpeciesMonotypeOf(SPECIES_DRUDDIGON,TYPE_FAITH));
     ASSUME(IsSpeciesMonotypeOf(SPECIES_UMBREON,  TYPE_DARK));
     ASSUME(IsSpeciesMonotypeOf(SPECIES_SYLVEON,  TYPE_FAIRY));
 
@@ -44,14 +44,15 @@ ASSUMPTIONS
     ASSUME(GetMoveType(MOVE_THUNDER_SHOCK) == TYPE_ELECTRIC);
     ASSUME(GetMoveType(MOVE_CONFUSION)     == TYPE_PSYCHIC);
     ASSUME(GetMoveType(MOVE_ICE_BEAM)      == TYPE_ICE);
-    ASSUME(GetMoveType(MOVE_DRAGON_BREATH) == TYPE_DRAGON);
+    ASSUME(GetMoveType(MOVE_DRAGON_BREATH) == TYPE_FAITH);
     ASSUME(GetMoveType(MOVE_BITE)          == TYPE_DARK);
     ASSUME(GetMoveType(MOVE_FAIRY_WIND)    == TYPE_FAIRY);
 }
 
 SINGLE_BATTLE_TEST("Inverse battle reverses type matchups")
 {
-    u32 species = SPECIES_NONE, move = MOVE_NONE;
+    enum Species species = SPECIES_NONE;
+    enum Move move = MOVE_NONE;
 
     static const u16 monotypeMons[] = {
         SPECIES_EEVEE,
@@ -121,4 +122,3 @@ SINGLE_BATTLE_TEST("Inverse battle reverses type matchups")
             MESSAGE("It's super effective!");
     }
 }
-

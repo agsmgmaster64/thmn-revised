@@ -20,7 +20,7 @@ ASSUMPTIONS
     ASSUME(gTypesInfo[TYPE_ELECTRIC].isHiddenPowerType == TRUE);
     ASSUME(gTypesInfo[TYPE_PSYCHIC].isHiddenPowerType == TRUE);
     ASSUME(gTypesInfo[TYPE_ICE].isHiddenPowerType == TRUE);
-    ASSUME(gTypesInfo[TYPE_DRAGON].isHiddenPowerType == TRUE);
+    ASSUME(gTypesInfo[TYPE_FAITH].isHiddenPowerType == TRUE);
     ASSUME(gTypesInfo[TYPE_DARK].isHiddenPowerType == TRUE);
     // Any type after Dark shouldn't be part of Hidden Power officially.
     for (u32 j = TYPE_DARK + 1; j < NUMBER_OF_MON_TYPES; j++) {
@@ -95,10 +95,10 @@ SINGLE_BATTLE_TEST("Hidden Power's type is determined by IVs")
     PARAMETRIZE { type = TYPE_ICE;      hidden = TRUE;  foeType = TYPE_GRASS;   foeSpecies = SPECIES_TANGELA;   foeItem = ITEM_YACHE_BERRY;  hp = 30; atk = 22; def = 30; spAtk = 31; spDef = 31; speed = 31; }
     PARAMETRIZE { type = TYPE_ICE;      hidden = TRUE;  foeType = TYPE_GRASS;   foeSpecies = SPECIES_TANGELA;   foeItem = ITEM_YACHE_BERRY;  hp = 30; atk = 31; def = 30; spAtk = 31; spDef = 31; speed = 31; }
     PARAMETRIZE { type = TYPE_MYSTERY;  hidden = FALSE; }
-    PARAMETRIZE { type = TYPE_DRAGON;   hidden = TRUE;  foeType = TYPE_DRAGON;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk =  2; def = 31; spAtk = 31; spDef = 31; speed = 31; }
-    PARAMETRIZE { type = TYPE_DRAGON;   hidden = TRUE;  foeType = TYPE_DRAGON;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk = 15; def = 31; spAtk = 31; spDef = 31; speed = 31; }
-    PARAMETRIZE { type = TYPE_DRAGON;   hidden = TRUE;  foeType = TYPE_DRAGON;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk = 22; def = 31; spAtk = 31; spDef = 31; speed = 31; }
-    PARAMETRIZE { type = TYPE_DRAGON;   hidden = TRUE;  foeType = TYPE_DRAGON;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk = 31; def = 31; spAtk = 31; spDef = 31; speed = 31; }
+    PARAMETRIZE { type = TYPE_FAITH;   hidden = TRUE;  foeType = TYPE_FAITH;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk =  2; def = 31; spAtk = 31; spDef = 31; speed = 31; }
+    PARAMETRIZE { type = TYPE_FAITH;   hidden = TRUE;  foeType = TYPE_FAITH;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk = 15; def = 31; spAtk = 31; spDef = 31; speed = 31; }
+    PARAMETRIZE { type = TYPE_FAITH;   hidden = TRUE;  foeType = TYPE_FAITH;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk = 22; def = 31; spAtk = 31; spDef = 31; speed = 31; }
+    PARAMETRIZE { type = TYPE_FAITH;   hidden = TRUE;  foeType = TYPE_FAITH;  foeSpecies = SPECIES_DRATINI;   foeItem = ITEM_HABAN_BERRY;  hp = 30; atk = 31; def = 31; spAtk = 31; spDef = 31; speed = 31; }
     PARAMETRIZE { type = TYPE_DARK;     hidden = TRUE;  foeType = TYPE_PSYCHIC; foeSpecies = SPECIES_WOBBUFFET; foeItem = ITEM_COLBUR_BERRY; hp = 31; atk =  3; def = 31; spAtk = 31; spDef = 31; speed = 31; }
     PARAMETRIZE { type = TYPE_DARK;     hidden = TRUE;  foeType = TYPE_PSYCHIC; foeSpecies = SPECIES_WOBBUFFET; foeItem = ITEM_COLBUR_BERRY; hp = 31; atk = 15; def = 31; spAtk = 31; spDef = 31; speed = 31; }
     PARAMETRIZE { type = TYPE_DARK;     hidden = TRUE;  foeType = TYPE_PSYCHIC; foeSpecies = SPECIES_WOBBUFFET; foeItem = ITEM_COLBUR_BERRY; hp = 31; atk = 23; def = 31; spAtk = 31; spDef = 31; speed = 31; }
@@ -126,7 +126,7 @@ SINGLE_BATTLE_TEST("Hidden Power's type is determined by IVs")
     } SCENE {
         // Only test valid Hidden Power types
         if (hidden) {
-            ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, opponent); // Check that the item is triggered
+            ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_BERRY, opponent); // Check that the item is triggered
             ANIMATION(ANIM_TYPE_MOVE, MOVE_HIDDEN_POWER, player);
             HP_BAR(opponent);
             MESSAGE("It's super effective!");
@@ -154,11 +154,11 @@ SINGLE_BATTLE_TEST("Hidden Power always triggers Counter instead of Mirror Coat 
     PARAMETRIZE { hp = 31; atk = 31; def = 31; spa = 30; spd = 31; spe = 31; } // TYPE_ELECTRIC
     PARAMETRIZE { hp = 31; atk = 31; def = 30; spa = 31; spd = 31; spe = 30; } // TYPE_PSYCHIC
     PARAMETRIZE { hp = 31; atk = 31; def = 31; spa = 31; spd = 31; spe = 30; } // TYPE_ICE
-    PARAMETRIZE { hp = 31; atk = 31; def = 30; spa = 31; spd = 31; spe = 31; } // TYPE_DRAGON
+    PARAMETRIZE { hp = 31; atk = 31; def = 30; spa = 31; spd = 31; spe = 31; } // TYPE_FAITH
     PARAMETRIZE { hp = 31; atk = 31; def = 31; spa = 31; spd = 31; spe = 31; } // TYPE_DARK
  
     GIVEN {
-        WITH_CONFIG(CONFIG_HIDDEN_POWER_COUNTER, GEN_3);
+        WITH_CONFIG(B_HIDDEN_POWER_COUNTER, GEN_3);
         ASSUME(GetMoveEffect(MOVE_COUNTER) == EFFECT_REFLECT_DAMAGE );
         ASSUME(GetMoveEffect(MOVE_MIRROR_COAT) == EFFECT_REFLECT_DAMAGE);
         ASSUME(GetMoveReflectDamage_DamageCategories(MOVE_COUNTER) == 1u << DAMAGE_CATEGORY_PHYSICAL );

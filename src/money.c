@@ -169,6 +169,54 @@ void ChangeAmountInMoneyBox(int amount)
     PrintMoneyAmountInMoneyBox(sMoneyBoxWindowId, amount, 0);
 }
 
+void PrintMoneyAmountInMoneyBoxWithBorderFrlg(u8 windowId, u16 tileStart, u8 pallete, int amount)
+{
+    DrawStdFrameWithCustomTileAndPalette(windowId, FALSE, tileStart, pallete);
+    PrintMoneyAmountInMoneyBoxFrlg(windowId, amount, 0);
+}
+
+void PrintMoneyAmountInMoneyBoxFrlg(u8 windowId, int amount, u8 speed)
+{
+    u8 *txtPtr;
+    s32 strLength;
+    u32 numDigits = CountDigits(amount);
+    u32 maxDigits = (numDigits > 6) ? MAX_MONEY_DIGITS: 6;
+    u32 x;
+
+    ConvertIntToDecimalStringN(gStringVar1, amount, STR_CONV_MODE_LEFT_ALIGN, maxDigits);
+
+    strLength = maxDigits - StringLength(gStringVar1);
+    txtPtr = gStringVar4;
+
+    while (strLength-- != 0)
+        *(txtPtr++) = 0;
+
+    StringExpandPlaceholders(txtPtr, gText_PokedollarVar1);
+
+    x = 64 - GetStringWidth(FONT_SMALL, gStringVar4, 0);
+    AddTextPrinterParameterized(windowId, FONT_SMALL, gStringVar4, x, 12, speed, NULL);
+}
+
+void PrintMoneyAmountFrlg(u8 windowId, u8 x, u8 y, int amount, u8 speed)
+{
+    u8 *txtPtr;
+    s32 strLength;
+    u32 numDigits = CountDigits(amount);
+    u32 maxDigits = (numDigits > 6) ? MAX_MONEY_DIGITS: 6;
+
+    ConvertIntToDecimalStringN(gStringVar1, amount, STR_CONV_MODE_LEFT_ALIGN, maxDigits);
+
+    strLength = maxDigits - StringLength(gStringVar1);
+    txtPtr = gStringVar4;
+
+    while (strLength-- != 0)
+        *(txtPtr++) = 0;
+
+    StringExpandPlaceholders(txtPtr, gText_PokedollarVar1);
+
+    AddTextPrinterParameterized(windowId, FONT_SMALL, gStringVar4, x, y, speed, NULL);
+}
+
 u32 CalculateMoneyTextHorizontalPosition(u32 amount)
 {
     return (CountDigits(amount) > 8) ? 34 : 26;

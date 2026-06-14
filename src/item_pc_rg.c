@@ -7,6 +7,7 @@
 #include "graphics.h"
 #include "item.h"
 #include "item_menu.h"
+#include "item_menu_frlg.h"
 #include "item_icon.h"
 #include "list_menu.h"
 #include "item_pc_rg.h"
@@ -85,9 +86,6 @@ static EWRAM_DATA u8 * sBg1TilemapBuffer = NULL;
 static EWRAM_DATA struct ListMenuItem * sListMenuItems = NULL;
 static EWRAM_DATA struct ItemPcStaticResources sItemPcRGStaticResources = {};
 static EWRAM_DATA u8 sSubmenuWindowIds[ITEM_PC_SUBWINDOW_COUNT] = {};
-
-extern const struct CompressedSpriteSheet sBagSwapSpriteSheet;
-extern const struct SpritePalette sBagSwapSpritePalette;
 
 static void ItemPc_RunSetup(void);
 static bool8 ItemPc_DoGfxSetup(void);
@@ -276,8 +274,8 @@ static const struct WindowTemplate sSubwindowTemplates[] =
     }
 };
 
-static const u8 sItemPcTiles[] = INCBIN_U8("graphics/item_pc_rg/bg.4bpp.smol");
-static const u16 sItemPcBgPals[] = INCBIN_U16("graphics/item_pc_rg/bg.gbapal");
+static const u8 sItemPcTiles[] = INCGFX_U8("graphics/item_pc_rg/bg.png", ".4bpp.smol");
+static const u16 sItemPcBgPals[] = INCGFX_U16("graphics/item_pc_rg/bg.png", ".gbapal");
 static const u32 sItemPcTilemap[] = INCBIN_U32("graphics/item_pc_rg/bg.bin.smolTM");
 
 #define tListTaskId     data[0]
@@ -520,11 +518,11 @@ static bool8 ItemPc_LoadGraphics(void)
         sItemPcRGResources->data[0]++;
         break;
     case 3:
-        LoadCompressedSpriteSheet(&sBagSwapSpriteSheet);
+        LoadCompressedSpriteSheet(&gBagSwapSpriteSheet);
         sItemPcRGResources->data[0]++;
         break;
     default:
-        LoadSpritePalette(&sBagSwapSpritePalette);
+        LoadSpritePalette(&gBagSwapSpritePalette);
         sItemPcRGResources->data[0] = 0;
         return TRUE;
     }
@@ -1177,7 +1175,7 @@ static void ItemPc_DestroySubwindow(u8 idx)
 
 static void ItemPc_PrintOnMessageWithContinueTask(u8 taskId, const u8 * str, TaskFunc taskFunc)
 {
-    DisplayMessageAndContinueTask(taskId, ITEM_PC_WINDOW_MESSAGE, 0x3A3, 13, FONT_SHORT, GetPlayerTextSpeedDelay(), str, taskFunc);
+    DisplayMessageAndContinueTask(taskId, ITEM_PC_WINDOW_MESSAGE, 0x3A3, 13, FONT_NORMAL, GetPlayerTextSpeedDelay(), str, taskFunc);
     ScheduleBgCopyTilemapToVram(0);
 }
 

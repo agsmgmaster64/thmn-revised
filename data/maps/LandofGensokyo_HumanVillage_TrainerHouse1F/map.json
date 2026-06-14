@@ -113,5 +113,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LandofGensokyoHumanVillageTrainerHouse1F_EventScript_Receptionist"
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

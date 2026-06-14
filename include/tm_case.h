@@ -2,7 +2,8 @@
 #define GUARD_TM_CASE_H
 
 // Values for 'type' argument to InitTMCase
-enum {
+enum
+{
     TMCASE_FIELD,
     TMCASE_GIVE_PARTY,
     TMCASE_SELL,

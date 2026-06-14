@@ -4,15 +4,9 @@
 #include "graphics.h"
 #include "item_icon.h"
 #include "item_menu_icons_rg.h"
+#include "item_menu_frlg.h"
 
 #define NUM_SWAP_LINE_SPRITES 9
-
-enum {
-    TAG_SWAP_LINE = 100,
-    TAG_ITEM_ICON,
-    TAG_ITEM_ICON_ALT,
-    TAG_ARROWS = 110,
-};
 
 enum {
     ANIM_SWAP_LINE_START,
@@ -21,13 +15,82 @@ enum {
 };
 
 enum {
+    SPR_BAG,
     SPR_SWAP_LINE_START,
     SPR_ITEM_ICON = SPR_SWAP_LINE_START + NUM_SWAP_LINE_SPRITES,
     SPR_ITEM_ICON_ALT,
     SPR_COUNT
 };
 
+enum {
+    AFFINEANIM_BAG_IDLE,
+    AFFINEANIM_BAG_SHAKE,
+};
+
 static EWRAM_DATA u8 sItemMenuIconSpriteIds[SPR_COUNT] = {};
+
+static void SpriteCB_BagVisualSwitchingPockets(struct Sprite *sprite);
+static void SpriteCB_ShakeBagSprite(struct Sprite *sprite);
+
+static const struct OamData sOamData_Bag = {
+    .affineMode = ST_OAM_AFFINE_NORMAL,
+    .shape = SPRITE_SHAPE(64x64),
+    .size = SPRITE_SIZE(64x64),
+    .priority = 1,
+    .paletteNum = 0
+};
+
+static const union AnimCmd sAnim_Bag_OpenPokeBallsPocket[] = {
+    ANIMCMD_FRAME(   0, 5),
+    ANIMCMD_FRAME(0x40, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Bag_OpenItemsPocket[] = {
+    ANIMCMD_FRAME(   0, 5),
+    ANIMCMD_FRAME(0x80, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Bag_OpenKeyItemsPocket[] = {
+    ANIMCMD_FRAME(   0, 5),
+    ANIMCMD_FRAME(0xc0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd *const sAnims_Bag[] = {
+    [FRLG_POCKET_ITEMS]      = sAnim_Bag_OpenItemsPocket,
+    [FRLG_POCKET_KEYITEMS]   = sAnim_Bag_OpenKeyItemsPocket,
+    [FRLG_POCKET_POKEBALLS]  = sAnim_Bag_OpenPokeBallsPocket,
+};
+
+static const union AffineAnimCmd sAffineAnim_BagIdle[] = {
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+    AFFINEANIMCMD_END
+};
+
+static const union AffineAnimCmd sAffineAnim_BagShake[] = {
+    AFFINEANIMCMD_FRAME(0, 0, -2, 2),
+    AFFINEANIMCMD_FRAME(0, 0,  2, 4),
+    AFFINEANIMCMD_FRAME(0, 0, -2, 4),
+    AFFINEANIMCMD_FRAME(0, 0,  2, 2),
+    AFFINEANIMCMD_END
+};
+
+static const union AffineAnimCmd *const sAffineAnimTable_Bag[] = {
+    [AFFINEANIM_BAG_IDLE]  = sAffineAnim_BagIdle,
+    [AFFINEANIM_BAG_SHAKE] = sAffineAnim_BagShake
+};
+
+static const struct SpriteTemplate sSpriteTemplate_Bag = {
+    .tileTag = RG_TAG_BAG,
+    .paletteTag = RG_TAG_BAG,
+    .oam = &sOamData_Bag,
+    .anims = sAnims_Bag,
+    .images = NULL,
+    .affineAnims = sAffineAnimTable_Bag,
+    .callback = SpriteCallbackDummy
+};
 
 static const struct OamData sOamData_SwapLine = 
 {
@@ -62,23 +125,10 @@ static const union AnimCmd *const sAnims_SwapLine[] = {
     [ANIM_SWAP_LINE_END]   = sAnim_SwapLine_End
 };
 
-const struct CompressedSpriteSheet sBagSwapSpriteSheet =
-{
-    .data = gSwapLineGfx,
-    .size = 0x100,
-    .tag = TAG_SWAP_LINE
-};
-
-const struct SpritePalette sBagSwapSpritePalette =
-{
-    .data = gSwapLinePal,
-    .tag = TAG_SWAP_LINE
-};
-
 static const struct SpriteTemplate sSpriteTemplate_SwapLine =
 {
-    .tileTag = TAG_SWAP_LINE,
-    .paletteTag = TAG_SWAP_LINE,
+    .tileTag = RG_TAG_SWAP_LINE,
+    .paletteTag = RG_TAG_SWAP_LINE,
     .oam = &sOamData_SwapLine,
     .anims = sAnims_SwapLine,
     .images = NULL,
@@ -92,6 +142,47 @@ void ItemRG_ResetItemMenuIconState(void)
 
     for (i = 0; i < SPR_COUNT; i++)
         sItemMenuIconSpriteIds[i] = SPRITE_NONE;
+}
+
+void ItemRG_CreateBagSprite(u8 animNum)
+{
+    sItemMenuIconSpriteIds[SPR_BAG] = CreateSprite(&sSpriteTemplate_Bag, 40, 68, 0);
+    ItemRG_SetBagVisualPocketId(animNum);
+}
+
+void ItemRG_SetBagVisualPocketId(u8 animNum)
+{
+    struct Sprite *sprite = &gSprites[sItemMenuIconSpriteIds[SPR_BAG]];
+    sprite->y2 = -5;
+    sprite->callback = SpriteCB_BagVisualSwitchingPockets;
+    StartSpriteAnim(sprite, animNum);
+}
+
+static void SpriteCB_BagVisualSwitchingPockets(struct Sprite *sprite)
+{
+    if (sprite->y2 != 0)
+        sprite->y2++;
+    else
+        sprite->callback = SpriteCallbackDummy;
+}
+
+void ItemRG_ShakeBagSprite(void)
+{
+    struct Sprite *sprite = &gSprites[sItemMenuIconSpriteIds[SPR_BAG]];
+    if (sprite->affineAnimEnded)
+    {
+        StartSpriteAffineAnim(sprite, AFFINEANIM_BAG_SHAKE);
+        sprite->callback = SpriteCB_ShakeBagSprite;
+    }
+}
+
+static void SpriteCB_ShakeBagSprite(struct Sprite *sprite)
+{
+    if (sprite->affineAnimEnded)
+    {
+        StartSpriteAffineAnim(sprite, AFFINEANIM_BAG_IDLE);
+        sprite->callback = SpriteCallbackDummy;
+    }
 }
 
 void ItemRG_CreateSwapLine(void)
@@ -146,13 +237,12 @@ void ItemRG_DrawItemIcon(u16 itemId, u8 idx)
 
     if (spriteIds[idx] == SPRITE_NONE)
     {
-        FreeSpriteTilesByTag(TAG_ITEM_ICON + idx);
-        FreeSpritePaletteByTag(TAG_ITEM_ICON + idx);
-        spriteId = AddItemIconSprite(TAG_ITEM_ICON + idx, TAG_ITEM_ICON + idx, itemId);
+        FreeSpriteTilesByTag(RG_TAG_ITEM_ICON + idx);
+        FreeSpritePaletteByTag(RG_TAG_ITEM_ICON + idx);
+        spriteId = AddItemIconSprite(RG_TAG_ITEM_ICON + idx, RG_TAG_ITEM_ICON + idx, itemId);
         if (spriteId != MAX_SPRITES)
         {
             spriteIds[idx] = spriteId;
-            gSprites[spriteId].oam.priority = 0;
             gSprites[spriteId].x2 = 24;
             gSprites[spriteId].y2 = 140;
         }
@@ -166,10 +256,10 @@ void CreateBerryPouchItemIcon(u16 itemId, u8 idx)
 
     if (spriteIds[idx] == SPRITE_NONE)
     {
-        // Either TAG_ITEM_ICON or TAG_ITEM_ICON_ALT
-        FreeSpriteTilesByTag(TAG_ITEM_ICON + idx);
-        FreeSpritePaletteByTag(TAG_ITEM_ICON + idx);
-        spriteId = AddItemIconSprite(TAG_ITEM_ICON + idx, TAG_ITEM_ICON + idx, itemId);
+        // Either RG_TAG_ITEM_ICON or RG_TAG_ITEM_ICON_ALT
+        FreeSpriteTilesByTag(RG_TAG_ITEM_ICON + idx);
+        FreeSpritePaletteByTag(RG_TAG_ITEM_ICON + idx);
+        spriteId = AddItemIconSprite(RG_TAG_ITEM_ICON + idx, RG_TAG_ITEM_ICON + idx, itemId);
         if (spriteId != MAX_SPRITES)
         {
             spriteIds[idx] = spriteId;

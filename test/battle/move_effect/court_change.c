@@ -81,7 +81,7 @@ DOUBLE_BATTLE_TEST("Court Change swaps entry hazards used by the player")
 DOUBLE_BATTLE_TEST("Court Change used by the player swaps Mist, Safeguard, Aurora Veil, Reflect, Light Screen, Tailwind")
 {
     GIVEN {
-        WITH_CONFIG(CONFIG_TAILWIND_TURNS, GEN_5);
+        WITH_CONFIG(B_TAILWIND_TURNS, GEN_5);
         PLAYER(SPECIES_WYNAUT);
         PLAYER(SPECIES_WYNAUT);
         PLAYER(SPECIES_WYNAUT);
@@ -120,7 +120,7 @@ DOUBLE_BATTLE_TEST("Court Change used by the player swaps Mist, Safeguard, Auror
 DOUBLE_BATTLE_TEST("Court Change used by the opponent swaps Mist, Safeguard, Aurora Veil, Reflect, Light Screen, Tailwind")
 {
     GIVEN {
-        WITH_CONFIG(CONFIG_TAILWIND_TURNS, GEN_5);
+        WITH_CONFIG(B_TAILWIND_TURNS, GEN_5);
         PLAYER(SPECIES_WOBBUFFET);
         PLAYER(SPECIES_WOBBUFFET);
         PLAYER(SPECIES_WOBBUFFET);
@@ -179,7 +179,8 @@ DOUBLE_BATTLE_TEST("Court Change used by the player swaps G-Max Steelsurge")
 
 DOUBLE_BATTLE_TEST("Court Change used by the player swaps G-Max Vine Lash, G-Max Wildfire, G-Max Cannonade")
 {
-    u32 species, move;
+    enum Species species;
+    enum Move move;
     PARAMETRIZE { species = SPECIES_VENUSAUR;  move = MOVE_VINE_WHIP; }
     PARAMETRIZE { species = SPECIES_CHARIZARD; move = MOVE_EMBER; }
     PARAMETRIZE { species = SPECIES_BLASTOISE; move = MOVE_WATER_GUN; }
@@ -208,6 +209,8 @@ DOUBLE_BATTLE_TEST("Court Change used by the player swaps G-Max Vine Lash, G-Max
             case SPECIES_BLASTOISE:
                 MESSAGE("Blastoise used G-Max Cannonade!");
                 MESSAGE("Wobbuffet is hurt by G-Max Cannonade's vortex!");
+                break;
+            default:
                 break;
         }
         NONE_OF {

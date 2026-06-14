@@ -847,7 +847,7 @@ const struct Tileset gTileset_BuildingFrlg =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_General_Frlg =
+const struct Tileset gTileset_GeneralFrlg =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
