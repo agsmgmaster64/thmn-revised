@@ -332,7 +332,7 @@ RivalsHouse_1F_Text_LikeChildLikeFather:
 	.string "Like child, like father.\p"
 	.string "My husband is as wild about Bonéka\n"
 	.string "as our child.\p"
-	.string "If he's not at his LAB, he's likely\n"
+	.string "If he's not at his Lab, he's likely\n"
 	.string "scrabbling about in grassy places.$"
 
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
@@ -349,7 +349,7 @@ RivalsHouse_1F_Text_WentOutToRoute103:
 
 RivalsHouse_1F_Text_ShouldGoHomeEverySoOften:
 	.string "I think it's wonderful for people to\n"
-	.string "travel with POKéMON.\p"
+	.string "travel with Bonéka.\p"
 	.string "But you should go home every so often\n"
 	.string "to let your mother know you're okay.\p"
 	.string "She might not say it, but I'm sure she\n"
