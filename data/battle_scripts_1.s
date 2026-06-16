@@ -74,6 +74,7 @@ BattleScript_TeraFormChange::
 	waitmessage B_WAIT_TIME_LONG
 	switchinabilities BS_ATTACKER
 	abilityonformchange BS_ATTACKER
+	effectsafterformchange
 	end3
 
 BattleScript_EffectStatChange::
@@ -440,6 +441,7 @@ BattleScript_EffectCorrosiveGas::
 	attackanimation
 	waitanimation
 	jumpifability BS_TARGET, ABILITY_STICKY_HOLD, BattleScript_StickyHoldActivates
+	jumpifability BS_TARGET, ABILITY_STRONG_GRIP, BattleScript_StickyHoldActivates
 	setlastuseditem BS_TARGET
 	removeitem BS_TARGET
 	printstring STRINGID_PKMNITEMMELTED
@@ -2134,7 +2136,6 @@ BattleScript_NightmareWorked::
 BattleScript_EffectCurse::
 	attackcanceler
 	cursetarget BattleScript_CurseStatChange
-	setbyte sB_ANIM_TURN, 0
 	attackanimation
 	waitanimation
 	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
@@ -3215,6 +3216,13 @@ BattleScript_OverworldWeatherStarts::
 	call BattleScript_ActivateWeatherAbilities
 	end3
 
+BattleScript_OverworldSSWeatherStarts::
+	printfromtable gMoveWeatherChangeStringIds
+	waitmessage B_WAIT_TIME_LONG
+	playanimation_var BS_BATTLER_0, sB_ANIM_ARG1
+	call BattleScript_ActivateWeatherAbilities
+	end3
+
 BattleScript_OverworldTerrain::
 	printfromtable gTerrainStartsStringIds
 	waitmessage B_WAIT_TIME_LONG
@@ -3639,13 +3647,8 @@ BattleScript_DoFutureAttackResult:
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_FutureAttackEnd::
-	moveendcase MOVEEND_SET_VALUES
-	moveendcase MOVEEND_RAGE
-	moveendcase MOVEEND_ABILITIES
-	moveendcase MOVEEND_ITEM_EFFECTS_TARGET
-	moveendfromto MOVEEND_SYMBIOSIS, MOVEEND_UPDATE_LAST_MOVES
-	moveendcase MOVEEND_COLOR_CHANGE
-	moveendcase MOVEEND_ECHO_ABILITIES
+	setadditionaleffects
+	moveendall
 	checkteamslost BattleScript_FutureAttackClearResults
 BattleScript_FutureAttackClearResults:
 	setmoveresultflags 0
@@ -3917,6 +3920,7 @@ BattleScript_MegaEvolutionAfterString:
 	printstring STRINGID_MEGAEVOEVOLVED
 	waitmessage B_WAIT_TIME_LONG
 	switchinabilities BS_SCRIPTING
+	effectsafterformchange
 	end3
 
 BattleScript_WishMegaEvolution::
@@ -3961,6 +3965,7 @@ BattleScript_UltraBurst::
 	printstring STRINGID_ULTRABURSTCOMPLETED
 	waitmessage B_WAIT_TIME_LONG
 	switchinabilities BS_SCRIPTING
+	effectsafterformchange
 	end3
 
 BattleScript_BattlerFormChange::
@@ -4818,6 +4823,7 @@ BattleScript_BadDreamsIncrement:
 	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_BadDreamsLoop
 	jumpifbyteequal sFIXED_ABILITY_POPUP, sZero, BattleScript_BadDreamsEnd
 	destroyabilitypopup
+	setbyte sFIXED_ABILITY_POPUP, FALSE
 	pause 15
 BattleScript_BadDreamsEnd:
 	return
@@ -5733,7 +5739,6 @@ BattleScript_RemoveTerrain::
 
 BattleScript_Pickpocket::
 	call BattleScript_AbilityPopUp
-	jumpifability BS_ATTACKER, ABILITY_STICKY_HOLD, BattleScript_PickpocketPrevented
 	swapattackerwithtarget
 	copybyte gEffectBattler, gBattlerTarget
 	call BattleScript_ItemSteal
@@ -5741,7 +5746,8 @@ BattleScript_Pickpocket::
 	activateitemeffects
 	return
 
-BattleScript_PickpocketPrevented:
+BattleScript_PickpocketPrevented::
+	call BattleScript_AbilityPopUp
 	pause B_WAIT_TIME_SHORT
 	copybyte gBattlerAbility, gBattlerAttacker
 	call BattleScript_AbilityPopUp
