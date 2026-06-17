@@ -9513,15 +9513,15 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Chibi Sara
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Basic Trainer
@@ -9539,10 +9539,10 @@ Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Basic Trainer
@@ -9560,23 +9560,23 @@ Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_BRENDAN_ROUTE_103_TREECKO ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Torchic
+Chibi Kurumi
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Basic Trainer
@@ -9594,10 +9594,10 @@ Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BRENDAN_ROUTE_119_TREECKO ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Basic Trainer
@@ -9615,23 +9615,23 @@ Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Chibi Ellen
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Basic Trainer
@@ -9649,10 +9649,10 @@ Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
-Gender: Male
+Gender: Female
 Music: Male
 Double Battle: No
 AI: Basic Trainer
@@ -9670,7 +9670,7 @@ Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9678,16 +9678,12 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Treecko
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Treecko
-Level: 30
+Chibi Sara
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9708,7 +9704,7 @@ Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_MUDKIP ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9729,7 +9725,7 @@ Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAY_ROUTE_103_TREECKO ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9737,16 +9733,12 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Torchic
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Torchic
-Level: 30
+Chibi Kurumi
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_TREECKO ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9767,7 +9759,7 @@ Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9788,7 +9780,7 @@ Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAY_ROUTE_103_TORCHIC ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9796,16 +9788,12 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Mudkip
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Mudkip
-Level: 30
+Chibi Ellen
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -9826,7 +9814,7 @@ Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_TORCHIC ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
