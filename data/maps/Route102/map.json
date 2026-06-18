@@ -3,7 +3,6 @@
   "name": "Route102",
   "layout": "LAYOUT_ROUTE102",
   "music": "MUS_ROUTE101",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_102",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -142,10 +141,61 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route102_EventScript_Allen",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE102_ICHII",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "x": 9,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_ICHII_VISIBILITY_ROUTE_102"
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_ICHII_ROUTE_102",
+      "var_value": "0",
+      "script": "Route102_EventScript_IchiiTrigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_ICHII_ROUTE_102",
+      "var_value": "0",
+      "script": "Route102_EventScript_IchiiTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ICHII_ROUTE_102",
+      "var_value": "0",
+      "script": "Route102_EventScript_IchiiTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_ICHII_ROUTE_102",
+      "var_value": "0",
+      "script": "Route102_EventScript_IchiiTrigger4"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -163,5 +213,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route102_EventScript_RouteSignOldale"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }
