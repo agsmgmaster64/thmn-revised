@@ -184,6 +184,7 @@ Route102_EventScript_IchiiGoodbye::
 	call_if_eq VAR_0x8008, 3, Route102_EventScript_IchiiLeaves3
 	call_if_eq VAR_0x8008, 4, Route102_EventScript_IchiiLeaves4
 	removeobject LOCALID_ROUTE102_ICHII
+	setflag FLAG_ICHII_VISIBILITY_ROUTE_102
 	setvar VAR_ICHII_ROUTE_102, 1
 	releaseall
 	end
