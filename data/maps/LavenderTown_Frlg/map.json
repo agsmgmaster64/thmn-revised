@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -31,6 +32,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 19,
       "y": 10,
@@ -44,6 +46,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
       "x": 12,
       "y": 12,
@@ -57,6 +60,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 10,
       "y": 7,
@@ -149,6 +153,5 @@
       "script": "LavenderTown_EventScript_VolunteerHouseSign"
     }
   ],
-  "floor_number": 0,
   "region": "REGION_KANTO"
 }

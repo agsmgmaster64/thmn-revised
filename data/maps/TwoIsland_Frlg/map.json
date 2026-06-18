@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -21,6 +22,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLERK",
       "x": 28,
       "y": 4,
@@ -34,6 +36,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
       "x": 31,
       "y": 6,
@@ -47,6 +50,7 @@
       "flag": "FLAG_HIDE_TWO_ISLAND_WOMAN"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY_FRLG",
       "x": 30,
       "y": 11,
@@ -60,6 +64,7 @@
       "flag": "FLAG_HIDE_TWO_ISLAND_BEAUTY"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 26,
       "y": 5,
@@ -73,6 +78,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC_FRLG",
       "x": 27,
       "y": 6,
@@ -86,6 +92,7 @@
       "flag": "FLAG_HIDE_TWO_ISLAND_SUPER_NERD"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 30,
       "y": 16,
@@ -99,6 +106,7 @@
       "flag": "FLAG_TEMP_12"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 39,
       "y": 16,
@@ -112,6 +120,7 @@
       "flag": "FLAG_HIDE_TWO_ISLAND_REVIVE"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
       "x": 37,
       "y": 12,
@@ -125,6 +134,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 24,
       "y": 12,
@@ -195,6 +205,5 @@
       "script": "TwoIsland_EventScript_FastCurrentSign"
     }
   ],
-  "floor_number": 0,
   "region": "REGION_KANTO"
 }
