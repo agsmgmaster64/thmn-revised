@@ -53,42 +53,38 @@ PetalburgCity_PokemonCenter_1F_EventScript_SayMudkipType::
 	return
 
 PetalburgCity_PokemonCenter_1F_Text_PCStorageSystem:
-	.string "That PC-based POKéMON Storage\n"
+	.string "That PC-based Bonéka Storage\n"
 	.string "System…\p"
 	.string "Whoever made it must be some kind\n"
 	.string "of a scientific wizard!$"
 
 PetalburgCity_PokemonCenter_1F_Text_OranBerryRegainedHP:
-	.string "When my POKéMON ate an\n"
-	.string "ORAN BERRY, it regained HP!$"
+	.string "When my Bonéka ate an\n"
+	.string "Oran Berry, it regained HP!$"
 
 PetalburgCity_PokemonCenter_1F_Text_ManyTypesOfPokemon:
-	.string "There are many types of POKéMON.\p"
+	.string "There are many types of Bonéka.\p"
 	.string "All types have their strengths and\n"
 	.string "weaknesses against other types.\p"
-	.string "Depending on the types of POKéMON,\n"
+	.string "Depending on the types of Bonéka,\n"
 	.string "a battle could be easy or hard.$"
 
 PetalburgCity_PokemonCenter_1F_Text_TreeckoIsGrassType:
-	.string "For example, your TREECKO\n"
-	.string "is a GRASS type.\p"
-	.string "It's strong against the WATER and\n"
-	.string "GROUND types.\p"
-	.string "But, it's weak against FIRE-type\n"
-	.string "POKéMON.$"
+	.string "For example, Psychic-types beat\n"
+	.string "Fighting-types, but are weak against.\l"
+	.string "Dark-types$"
 
 PetalburgCity_PokemonCenter_1F_Text_TorchicIsFireType:
-	.string "For example, your TORCHIC\n"
-	.string "is a FIRE type.\p"
-	.string "It's strong against the GRASS and\n"
-	.string "BUG types.\p"
-	.string "But, it's weak against WATER-type\n"
-	.string "POKéMON.$"
+	.string "For example, your CSara\n"
+	.string "is a Fighting type.\p"
+	.string "It's strong against Normal and\n"
+	.string "Dark types.\p"
+	.string "But, it loses to Psychic-types.$"
 
 PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType:
-	.string "For example, your MUDKIP\n"
-	.string "is a WATER type.\p"
-	.string "It's strong against the FIRE type.\p"
-	.string "But, it's weak against GRASS-type\n"
-	.string "and ELECTRIC-type POKéMON.$"
+	.string "For example, your CKurumi\n"
+	.string "is a Dark type.\p"
+	.string "It's strong against the Psychic type.\p"
+	.string "But, it's weak against Bug-type\n"
+	.string "and Fighting-type Bonéka.$"
 
