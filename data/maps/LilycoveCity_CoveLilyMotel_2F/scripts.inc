@@ -77,8 +77,8 @@ LilycoveCity_CoveLilyMotel_2F_Text_ShowMeCompletedDex:
 LilycoveCity_CoveLilyMotel_2F_Text_FilledPokedexGiveYouThis:
 	.string "Wow! That's awesome!\n"
 	.string "Yep, it's totally awesome!\p"
-	.string "This POKéDEX is completely filled!\n"
-	.string "You really must love POKéMON!\p"
+	.string "This TohoDex is completely filled!\n"
+	.string "You really must love Puppets!\p"
 	.string "I'm so impressed!\p"
 	.string "Let me give you something in\n"
 	.string "recognition of your feat!$"
@@ -91,7 +91,7 @@ LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer:
 
 LilycoveCity_CoveLilyMotel_2F_Text_ImTheGraphicArtist:
 	.string "I'm the GRAPHIC ARTIST! Aren't the\n"
-	.string "POKéMON of HOENN interesting?$"
+	.string "Puppets of HOENN interesting?$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_GirlsAreCute:
 	.string "The girl TUBERS, they're cute, hey?\n"
@@ -116,8 +116,8 @@ LilycoveCity_CoveLilyMotel_2F_Text_SnoozingPreferBattles:
 	.string "… … … … … Zzz…\p"
 	.string "… … … … … Huh?!\n"
 	.string "Oh, sorry, sorry! I was snoozing!\p"
-	.string "I came to check out this POKéMON\n"
-	.string "CONTEST thing.\p"
+	.string "I came to check out this Puppet\n"
+	.string "Contest thing.\p"
 	.string "I have to admit, it does look quite\n"
 	.string "entertaining, but…\p"
 	.string "Consider me a purist--I prefer\n"
@@ -132,4 +132,3 @@ LilycoveCity_CoveLilyMotel_2F_Text_ContestsDoTakeStrategy:
 	.string "to win a CONTEST.\p"
 	.string "Devising CONTEST strategies is one way\n"
 	.string "of becoming a better TRAINER, I'd say.$"
-

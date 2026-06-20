@@ -366,7 +366,7 @@ RivalsHouse_1F_Text_MayWhoAreYou:
 	.string "Glad to meet you!\p"
 	.string "I…\n"
 	.string "I have this dream of becoming friends\l"
-	.string "with POKéMON all over the world.\p"
+	.string "with Puppets all over the world.\p"
 	.string "I… I heard about you, {PLAYER}{KUN}, from\n"
 	.string "my dad, Prof. Birch.\p"
 	.string "I was hoping that you would be nice,\n"
@@ -376,7 +376,7 @@ RivalsHouse_1F_Text_MayWhoAreYou:
 	.string "Eheheh…\p"
 	.string "Oh, no! I forgot!\p"
 	.string "I was supposed to go help Dad catch\n"
-	.string "some wild POKéMON!\p"
+	.string "some wild Puppets!\p"
 	.string "{PLAYER}{KUN}, I'll catch you later!$"
 
 RivalsHouse_1F_Text_BrendanWhoAreYou:

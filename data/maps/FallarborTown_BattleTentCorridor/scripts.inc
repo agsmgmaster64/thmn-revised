@@ -50,8 +50,8 @@ FallarborTown_ContestHall_Text_DoAllRightInPreliminary:
 @ Unused
 FallarborTown_ContestHall_Text_MonAllTheseRibbons:
 	.string "See!\n"
-	.string "My POKéMON won all these RIBBONS!\p"
-	.string "Have your POKéMON earned any RIBBONS?\n"
+	.string "My Puppets won all these RIBBONS!\p"
+	.string "Have your Puppets earned any RIBBONS?\n"
 	.string "You can check them on your POKéNAV.$"
 
 @ Unused
@@ -63,6 +63,5 @@ FallarborTown_ContestHall_Text_CantWinEverywhere:
 
 @ Unused
 FallarborTown_ContestHall_Text_SuperRankStage:
-	.string "POKéMON CONTESTS\n"
-	.string "SUPER RANK STAGE!$"
-
+	.string "Puppet Contests\n"
+	.string "Super Rank Stage!$"

@@ -45,7 +45,7 @@ DewfordTown_House2_Text_ExplainSilkScarf:
 	.string "The SILK SCARF raises the power of\n"
 	.string "NORMAL-type moves.\p"
 	.string "It's a marvelous SCARF that will go\n"
-	.string "with almost all POKéMON!$"
+	.string "with almost all Puppets!$"
 
 DewfordTown_House2_Text_BrawlySoCool:
 	.string "Wow, you bothered to cross the sea\n"
@@ -54,4 +54,3 @@ DewfordTown_House2_Text_BrawlySoCool:
 	.string "heard about BRAWLY?\p"
 	.string "He's so cool…\n"
 	.string "Everyone idolizes him.$"
-

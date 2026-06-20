@@ -158,7 +158,7 @@ JaggedPass_Text_EricDefeat:
 	.string "Losing left me bitter!$"
 
 JaggedPass_Text_EricPostBattle:
-	.string "Yes, I did lose at POKéMON…\p"
+	.string "Yes, I did lose at battling…\p"
 	.string "But, when it comes to the love of\n"
 	.string "the mountains, I have you beat!$"
 
@@ -181,7 +181,7 @@ JaggedPass_Text_DianaRegister:
 
 JaggedPass_Text_DianaRematchIntro:
 	.string "Picnics are fun wherever you go.\n"
-	.string "Just like POKéMON!$"
+	.string "Just like Puppets!$"
 
 JaggedPass_Text_DianaRematchDefeat:
 	.string "I only lost because the ground is\n"
@@ -263,4 +263,3 @@ JaggedPass_Text_AutumnDefeat:
 JaggedPass_Text_AutumnPostBattle:
 	.string "What is that odd rock protrusion\n"
 	.string "a little up the hill from here?$"
-
