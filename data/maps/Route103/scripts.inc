@@ -287,13 +287,13 @@ Route103_EventScript_Isabelle::
 	end
 
 Route103_Text_MayRoute103Pokemon:
-	.string "Maribel: Let's see… The Bonéka found\n"
+	.string "Maribel: Let's see… The Puppets found\n"
 	.string "on Route 103 include…$"
 
 Route103_Text_MayLetsBattle:
 	.string "Oh, hi, {PLAYER}{KUN}!\p"
 	.string "…Oh, I see, my dad gave you\n"
-	.string "a Bonéka as a gift.\p"
+	.string "a Puppet as a gift.\p"
 	.string "Since we're here, let's have a quick\n"
 	.string "battle!\p"
 	.string "I'll give you a taste of what being\n"
@@ -306,10 +306,10 @@ Route103_Text_MayDefeated:
 Route103_Text_MayTimeToHeadBack:
 	.string "Maribel: I think I know why my dad has\n"
 	.string "an eye out for you now.\p"
-	.string "I mean, you just got that Bonéka,\n"
+	.string "I mean, you just got that Puppet,\n"
 	.string "but it already likes you.\p"
 	.string "You might be able to befriend any\n"
-	.string "kind of Bonéka easily.\p"
+	.string "kind of Puppet easily.\p"
 	.string "Well, it's time to head back to\n"
 	.string "the Lab.$"
 
@@ -319,7 +319,7 @@ Route103_Text_BrendanRoute103Pokemon:
 
 Route103_Text_BrendanLetsBattle:
 	.string "Hey, it's {PLAYER}!\p"
-	.string "…Oh, yeah, Dad gave you a Bonéka.\p"
+	.string "…Oh, yeah, Dad gave you a Puppet.\p"
 	.string "Since we're here, how about a little\n"
 	.string "battle?\p"
 	.string "I'll teach you what being a Trainer's\n"
@@ -332,14 +332,14 @@ Route103_Text_BrendanTimeToHeadBack:
 	.string "Renko: I think I get it.\n"
 	.string "I think I know why my dad has his eye\l"
 	.string "out for you now.\p"
-	.string "Look, your Bonéka already likes you,\n"
+	.string "Look, your Puppet already likes you,\n"
 	.string "even though you just got it.\p"
 	.string "{PLAYER}, I get the feeling that you\n"
-	.string "could befriend any Bonéka with ease.\p"
+	.string "could befriend any Puppet with ease.\p"
 	.string "We should head back to the Lab.$"
 
 Route103_Text_ShouldHaveBroughtPotion:
-	.string "My Bonéka is staggeringly tired…\n"
+	.string "My Puppet is staggeringly tired…\n"
 	.string "I should have brought a Potion…$"
 
 Route103_Text_ShortcutToOldale:

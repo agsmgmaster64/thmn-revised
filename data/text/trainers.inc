@@ -1,6 +1,6 @@
 Route102_Text_CalvinIntro:
-	.string "If you have Bonéka with you, then\n"
-	.string "you're an official Bonéka Trainer!\l"
+	.string "If you have Puppets with you, then\n"
+	.string "you're an official Puppet Trainer!\l"
 	.string "You can't say no to my challenge!$"
 
 Route102_Text_CalvinDefeated:
@@ -15,15 +15,15 @@ Route102_Text_CalvinRegister:
 	.string "I've been working hard at this since\n"
 	.string "I saw you before.\p"
 	.string "I'd like to battle you again, so can\n"
-	.string "you register me in your iDollNav?$"
+	.string "you register me in your TohoNav?$"
 
 Route102_Text_CalvinRegisterShort:
 	.string "I'd like to battle you again, so can\n"
-	.string "you register me in your iDollNav?$"
+	.string "you register me in your TohoNav?$"
 
 Route102_Text_CalvinRematchIntro:
 	.string "Ever since I lost to you, I desperately\n"
-	.string "trained my Bonéka.\l"
+	.string "trained my Puppets.\l"
 	.string "You can't say no to my challenge!$"
 
 Route102_Text_CalvinRematchDefeated:
@@ -48,7 +48,7 @@ Route102_Text_AllenPostBattle:
 
 Route102_Text_RickIntro:
 	.string "Hahah! Our eyes met!\n"
-	.string "I'll take you on with my Bug Bonéka!$"
+	.string "I'll take you on with my Bug Puppets!$"
 
 Route102_Text_RickDefeated:
 	.string "Ow! Down and out!$"
@@ -67,7 +67,7 @@ Route102_Text_TianaDefeated:
 
 Route102_Text_TianaPostBattle:
 	.string "To keep winning my way up, I see that\n"
-	.string "I have to catch more Bonéka.$"
+	.string "I have to catch more Puppets.$"
 
 Route103_Text_DaisyIntro:
 	.string "Did you feel the tug of our\n"
@@ -95,7 +95,7 @@ Route103_Text_AmyPostBattle:
 
 Route103_Text_AmyNotEnoughPokemon:
 	.string "Amy: Uh-oh, you have only one\n"
-	.string "Bonéka with you.\l"
+	.string "Puppet with you.\l"
 	.string "You can't battle us like that.$"
 
 Route103_Text_LivIntro:
@@ -116,7 +116,7 @@ Route103_Text_AmyLivRegister:
 
 Route103_Text_LivNotEnoughPokemon:
 	.string "Liv: If you want to battle us,\n"
-	.string "you have to have two Bonéka!\l"
+	.string "you have to have two Puppets!\l"
 	.string "It's not fair if you don't!$"
 
 Route103_Text_AmyRematchIntro:
@@ -135,7 +135,7 @@ Route103_Text_AmyRematchPostBattle:
 
 Route103_Text_AmyRematchNotEnoughPokemon:
 	.string "Amy: Uh-oh, you have only one\n"
-	.string "Bonéka with you.\l"
+	.string "Puppet with you.\l"
 	.string "You can't battle us like that.$"
 
 Route103_Text_LivRematchIntro:
@@ -153,7 +153,7 @@ Route103_Text_LivRematchPostBattle:
 
 Route103_Text_LivRematchNotEnoughPokemon:
 	.string "Liv: If you want to battle us, you\n"
-	.string "have to have two Bonéka!\l"
+	.string "have to have two Puppets!\l"
 	.string "It's not fair if you don't!$"
 
 Route103_Text_AndrewIntro:
@@ -170,32 +170,32 @@ Route103_Text_AndrewPostBattle:
 	.string "Grrrrr…$"
 
 Route103_Text_MiguelIntro:
-	.string "My Bonéka is delightfully adorable!\n"
+	.string "My Puppet is delightfully adorable!\n"
 	.string "Don't be shy--I'll show you!$"
 
 Route103_Text_MiguelDefeated:
 	.string "Oh, my gosh!\n"
-	.string "My darling Bonéka!$"
+	.string "My darling Puppet!$"
 
 Route103_Text_MiguelPostBattle:
-	.string "My delightful Bonéka looks darling\n"
+	.string "My delightful Puppet looks darling\n"
 	.string "even when it's fainted!$"
 
 Route103_Text_MiguelRegister:
 	.string "I'll get you to come out and look in\n"
-	.string "on my delightful Bonéka again!$"
+	.string "on my delightful Puppet again!$"
 
 Route103_Text_MiguelRematchIntro:
 	.string "Hi, you! My delightfully adorable\n"
-	.string "Bonéka has become more darling!$"
+	.string "Puppet has become more darling!$"
 
 Route103_Text_MiguelRematchDefeated:
 	.string "Oh!\n"
-	.string "My darling Bonéka!$"
+	.string "My darling Puppet!$"
 
 Route103_Text_MiguelRematchPostBattle:
 	.string "The more I spend time with it,\n"
-	.string "the more adorable my Bonéka becomes.$"
+	.string "the more adorable my Puppet becomes.$"
 
 Route103_Text_PeteIntro:
 	.string "This sort of distance…\n"
@@ -207,7 +207,7 @@ Route103_Text_PeteDefeated:
 Route103_Text_PetePostBattle:
 	.string "Oh, I understand where you're coming\n"
 	.string "from now.\p"
-	.string "If I had a Bonéka that trusty,\n"
+	.string "If I had a Puppet that trusty,\n"
 	.string "I'd want to Surf on it, too!$"
 
 Route103_Text_IsabelleIntro:
@@ -247,7 +247,7 @@ Route103_Text_MarcosPostBattle:
 
 Route104_Text_GinaIntro:
 	.string "Gina: Okay, let's battle with our\n"
-	.string "Bonéka!$"
+	.string "Puppets!$"
 
 Route104_Text_GinaDefeat:
 	.string "Gina: Losing upsets me!$"
@@ -257,32 +257,32 @@ Route104_Text_GinaPostBattle:
 	.string "We have to train lots more!$"
 
 Route104_Text_GinaNotEnoughMons:
-	.string "Gina: Oh? Only one Bonéka?\n"
+	.string "Gina: Oh? Only one Puppet?\n"
 	.string "Then, we don't battle with you.\p"
-	.string "If there's only one Bonéka, it will\n"
+	.string "If there's only one Puppet, it will\n"
 	.string "be lonesome. That's not nice.$"
 
 Route104_Text_MiaIntro:
 	.string "Mia: We are twins, so we battle\n"
-	.string "Bonéka together.$"
+	.string "Puppets together.$"
 
 Route104_Text_MiaDefeat:
 	.string "Mia: We battled together, but we\n"
 	.string "both lost…$"
 
 Route104_Text_MiaPostBattle:
-	.string "Mia: We will train our Bonéka more\n"
+	.string "Mia: We will train our Puppets more\n"
 	.string "and be strong like you.$"
 
 Route104_Text_MiaNotEnoughMons:
 	.string "Mia: You want to battle with us?\p"
 	.string "It's a big no-no if you don't have two\n"
-	.string "Bonéka with you.\l"
+	.string "Puppets with you.\l"
 	.string "We're too strong for you!$"
 
 Route104_Text_IvanIntro:
 	.string "Why keep it a secret?\n"
-	.string "I'm the Water Bonéka expert!\p"
+	.string "I'm the Water Puppet expert!\p"
 	.string "Huh?\n"
 	.string "You don't know me?$"
 
@@ -292,7 +292,7 @@ Route104_Text_IvanDefeat:
 
 Route104_Text_IvanPostBattle:
 	.string "I got too into fishing.\n"
-	.string "I forgot I had to raise my Bonéka…$"
+	.string "I forgot I had to raise my Puppets…$"
 
 Route104_Text_BillyIntro:
 	.string "Leaving footprints in the sand is\n"
@@ -323,13 +323,13 @@ Route104_Text_HaleyPostBattle:
 
 Route104_Text_HaleyRegister1:
 	.string "You're strong, but should I register\n"
-	.string "you in my iDollNav?\l"
+	.string "you in my TohoNav?\l"
 	.string "Maybe I shouldn't…\p"
 	.string "Okay, sure, I will register you!$"
 
 Route104_Text_HaleyRegister2:
 	.string "You're strong, but should I register\n"
-	.string "you in my iDollNav?\l"
+	.string "you in my TohoNav?\l"
 	.string "Maybe I shouldn't…\p"
 	.string "Okay, sure, I will register you!$"
 
@@ -354,23 +354,23 @@ Route104_Text_WinstonDefeat:
 
 Route104_Text_WinstonPostBattle:
 	.string "There are some things money can't buy.\n"
-	.string "That's Bonéka…$"
+	.string "That's Puppets…$"
 
 Route104_Text_WinstonRegister1:
 	.string "Hm?\n"
-	.string "Ah, you've obtained a iDollNav.\p"
+	.string "Ah, you've obtained a TohoNav.\p"
 	.string "I will gladly register you.\n"
 	.string "After all, I have plenty of money.$"
 
 Route104_Text_WinstonRegister2:
 	.string "Hm?\n"
-	.string "Ah, you've obtained a iDollNav.\p"
+	.string "Ah, you've obtained a TohoNav.\p"
 	.string "I will gladly register you.\n"
 	.string "After all, I have plenty of money.$"
 
 Route104_Text_WinstonRematchIntro:
 	.string "After I lost to you, I learned a bunch\n"
-	.string "of things about Bonéka.$"
+	.string "of things about Puppets.$"
 
 Route104_Text_WinstonRematchDefeat:
 	.string "I lost again?\n"
@@ -378,8 +378,8 @@ Route104_Text_WinstonRematchDefeat:
 
 Route104_Text_WinstonPostRematch:
 	.string "I'm fabulously wealthy, but I can't\n"
-	.string "seem to win at Bonéka…\p"
-	.string "It's so deep, the world of Bonéka…$"
+	.string "seem to win at Puppets…\p"
+	.string "It's so deep, the world of Puppets…$"
 
 Route104_Text_CindyIntro:
 	.string "We must have been fated to meet.\n"
@@ -395,13 +395,13 @@ Route104_Text_CindyPostBattle:
 Route104_Text_CindyRegister1:
 	.string "Hello, we meet again.\p"
 	.string "We seem to be drawn together. Let's\n"
-	.string "register each other in our iDollNavs.$"
+	.string "register each other in our TohoNavs.$"
 
 Route104_Text_CindyRegister2:
 	.string "We should commemorate how we seem\n"
 	.string "to be drawn to each other.\p"
 	.string "Let's register each other in our\n"
-	.string "iDollNavs.$"
+	.string "TohoNavs.$"
 
 Route104_Text_CindyRematchIntro:
 	.string "Hello, we meet again.\n"
@@ -416,7 +416,7 @@ Route104_Text_CindyPostRematch:
 	.string "I hope we meet again.$"
 
 Route104_Text_DarianIntro:
-	.string "I fished up a tough-looking Bonéka!\p"
+	.string "I fished up a tough-looking Puppet!\p"
 	.string "It has this magical quality to it!\n"
 	.string "It surely looks tough, yes it does!$"
 
@@ -434,7 +434,7 @@ Route105_Text_FosterIntro:
 
 Route105_Text_FosterDefeated:
 	.string "I was thinking too much about that\n"
-	.string "rock, while my Bonéka remained weak…$"
+	.string "rock, while my Puppets remained weak…$"
 
 Route105_Text_FosterPostBattle:
 	.string "I can spend hours and hours staring\n"
@@ -506,7 +506,7 @@ Route105_Text_AndresPostBattle:
 
 Route105_Text_AndresRegister:
 	.string "Huh? I'm so weak, but you're willing\n"
-	.string "to register me in your iDollNav?$"
+	.string "to register me in your TohoNav?$"
 
 Route105_Text_AndresRematchIntro:
 	.string "I've told you that I'm weak…\n"
@@ -552,14 +552,14 @@ Route106_Text_ElliotRegister:
 	.string "If you don't mind, can we meet again?$"
 
 Route106_Text_ElliotRematchIntro:
-	.string "I caught a bunch of Bonéka fishing.\n"
+	.string "I caught a bunch of Puppets fishing.\n"
 	.string "I'll show you an impressive battle!$"
 
 Route106_Text_ElliotRematchDefeated:
 	.string "I lost again spectacularly!$"
 
 Route106_Text_ElliotRematchPostBattle:
-	.string "Win or lose, Bonéka are the greatest!\n"
+	.string "Win or lose, Puppets are the greatest!\n"
 	.string "You agree with me, right?$"
 
 Route106_Text_NedIntro:
@@ -632,11 +632,11 @@ Route107_Text_TonyRegister:
 
 Route107_Text_TonyRematchIntro:
 	.string "Swimming in the big, wide sea,\n"
-	.string "my Bonéka has grown stronger!$"
+	.string "my Puppet has grown stronger!$"
 
 Route107_Text_TonyRematchDefeated:
 	.string "What a shock!\p"
-	.string "My Bonéka has gotten stronger, but\n"
+	.string "My Puppet has gotten stronger, but\n"
 	.string "I stayed weak as a Trainer!$"
 
 Route107_Text_TonyRematchPostBattle:
@@ -680,10 +680,10 @@ Route107_Text_LisaPostBattle:
 
 Route107_Text_LisaNotEnoughPokemon:
 	.string "Lisa: If you want to battle with us,\n"
-	.string "bring more Bonéka.$"
+	.string "bring more Puppets.$"
 
 Route107_Text_RayIntro:
-	.string "Ray: We always battle Bonéka,\n"
+	.string "Ray: We always battle Puppets,\n"
 	.string "me and my sister.\p"
 	.string "I always lose, but we can beat you\n"
 	.string "2-on-2!$"
@@ -693,13 +693,13 @@ Route107_Text_RayDefeated:
 	.string "than us!$"
 
 Route107_Text_RayPostBattle:
-	.string "Ray: My sister gave me my Bonéka.\n"
+	.string "Ray: My sister gave me my Puppet.\n"
 	.string "I raised it, and now it's my important\l"
 	.string "partner!$"
 
 Route107_Text_RayNotEnoughPokemon:
 	.string "Ray: If you want to battle us,\n"
-	.string "go bring some more Bonéka!$"
+	.string "go bring some more Puppets!$"
 
 Route107_Text_CamronIntro:
 	.string "I'm in the middle of a triathlon,\n"
@@ -722,7 +722,7 @@ Route108_Text_JeromeDefeated:
 	.string "like this…$"
 
 Route108_Text_JeromePostBattle:
-	.string "Playing with marine Bonéka is one of\n"
+	.string "Playing with marine Puppets is one of\n"
 	.string "the pleasures of swimming!$"
 
 Route108_Text_MatthewIntro:
@@ -762,8 +762,8 @@ Route108_Text_MissyPostBattle:
 	.string "It's so healthy!$"
 
 Route108_Text_CoryIntro:
-	.string "I love Water-type Bonéka.\n"
-	.string "I love other Bonéka, too!$"
+	.string "I love Water-type Puppets.\n"
+	.string "I love other Puppets, too!$"
 
 Route108_Text_CoryDefeated:
 	.string "Waaah! I lost!\n"
@@ -775,7 +775,7 @@ Route108_Text_CoryPostBattle:
 
 Route108_Text_CoryRegister:
 	.string "I love tough Trainers, too!\n"
-	.string "Register me in your iDollNav!$"
+	.string "Register me in your TohoNav!$"
 
 Route108_Text_CoryRematchIntro:
 	.string "Win or lose, I love battling at sea!$"
@@ -789,7 +789,7 @@ Route108_Text_CoryRematchPostBattle:
 	.string "try shouting at the sea!$"
 
 Route108_Text_CarolinaIntro:
-	.string "I take huge pride in my Bonéka.\n"
+	.string "I take huge pride in my Puppets.\n"
 	.string "We'll show you one speedy battle!$"
 
 Route108_Text_CarolinaDefeated:
@@ -810,7 +810,7 @@ Route109_Text_DavidDefeated:
 Route109_Text_DavidPostBattle:
 	.string "Hiyah!\p"
 	.string "My sculpted abs have nothing to do\n"
-	.string "with Bonéka battles!$"
+	.string "with Puppet battles!$"
 
 Route109_Text_AliceIntro:
 	.string "Are you properly protected against\n"
@@ -897,11 +897,11 @@ Route109_Text_LolaRematchDefeated:
 
 Route109_Text_LolaRematchPostBattle:
 	.string "If I have an inner tube, me and my\n"
-	.string "Bonéka's cuteness goes way up!$"
+	.string "Puppet's cuteness goes way up!$"
 
 Route109_Text_AustinaIntro:
 	.string "I can't swim without my inner tube,\n"
-	.string "but I won't lose at Bonéka!$"
+	.string "but I won't lose at Puppets!$"
 
 Route109_Text_AustinaDefeated:
 	.string "Did I lose because I have an inner\n"
@@ -947,12 +947,12 @@ Route109_Text_PaulPostBattle:
 
 Route109_Text_PaulNotEnoughPokemon:
 	.string "Paul: We're totally, deeply in love.\n"
-	.string "That's why we make our Bonéka battle\l"
+	.string "That's why we make our Puppets battle\l"
 	.string "together.$"
 
 Route109_Text_MelIntro:
 	.string "Mel: We're, like, totally in love.\n"
-	.string "Our romance is heating up all of HOENN!$"
+	.string "Our romance is heating up all of Hoenn!$"
 
 Route109_Text_MelDefeated:
 	.string "Mel: We lost, and it's my fault!\n"
@@ -964,7 +964,7 @@ Route109_Text_MelPostBattle:
 
 Route109_Text_MelNotEnoughPokemon:
 	.string "Mel: We're, like, deeply and truly in love.\n"
-	.string "That's why we make our Bonéka\l"
+	.string "That's why we make our Puppets\l"
 	.string "battle together.$"
 
 Route109_Text_ChandlerIntro:
@@ -989,11 +989,11 @@ Route109_Text_HaileyDefeated:
 
 Route109_Text_HaileyPostBattle:
 	.string "When I learn how to swim, I think\n"
-	.string "my Bonéka will become tougher.$"
+	.string "my Puppets will become tougher.$"
 
 Route109_Text_ElijahIntro:
 	.string "For a guy as macho as me, this kind\n"
-	.string "of Bonéka is the perfect match!$"
+	.string "of Puppet is the perfect match!$"
 
 Route109_Text_ElijahDefeated:
 	.string "I'm cool even in defeat, hey?$"
@@ -1024,14 +1024,14 @@ Route110_Text_AnthonyDefeated:
 	.string "Crash and burn!$"
 
 Route110_Text_AnthonyPostBattle:
-	.string "Speed alone won't let me win at Bonéka.\n"
+	.string "Speed alone won't let me win a battle.\n"
 	.string "I need to reconsider this…$"
 
 Route110_Text_BenjaminIntro:
 	.string "Don't panic if your Bike's going fast!$"
 
 Route110_Text_BenjaminDefeated:
-	.string "I shouldn't panic during Bonéka\n"
+	.string "I shouldn't panic during Puppet\n"
 	.string "battles…$"
 
 Route110_Text_BenjaminPostBattle:
@@ -1059,7 +1059,7 @@ Route110_Text_AbigailIntro:
 	.string "of swimming, cycling, and running.$"
 
 Route110_Text_AbigailDefeated:
-	.string "Bonéka battles are hard, too!$"
+	.string "Puppet battles are hard, too!$"
 
 Route110_Text_AbigailPostBattle:
 	.string "I'm exhausted, so I need a break.\n"
@@ -1117,7 +1117,7 @@ Route110_Text_JaclynPostBattle:
 	.string "Don't think you can win all the time!$"
 
 Route110_Text_EdwinIntro:
-	.string "Could I see your Bonéka?\n"
+	.string "Could I see your Puppets?\n"
 	.string "Just one look, please?$"
 
 Route110_Text_EdwinDefeated:
@@ -1125,7 +1125,7 @@ Route110_Text_EdwinDefeated:
 	.string "my collection…$"
 
 Route110_Text_EdwinPostBattle:
-	.string "When I see a Bonéka that I don't know,\n"
+	.string "When I see a Puppet that I don't know,\n"
 	.string "my passion as a collector is ignited!$"
 
 Route110_Text_EdwinRegister:
@@ -1133,16 +1133,16 @@ Route110_Text_EdwinRegister:
 	.string "registrations, too…$"
 
 Route110_Text_EdwinRematchIntro:
-	.string "Hi, have you caught any new Bonéka?\p"
-	.string "Could I see your Bonéka?\n"
+	.string "Hi, have you caught any new Puppets?\p"
+	.string "Could I see your Puppets?\n"
 	.string "Just one look, please?$"
 
 Route110_Text_EdwinRematchDefeated:
-	.string "Your Bonéka…\n"
+	.string "Your Puppets…\n"
 	.string "I envy you.$"
 
 Route110_Text_EdwinRematchPostBattle:
-	.string "Oh, I long to make all rare Bonéka\n"
+	.string "Oh, I long to make all rare Puppets\n"
 	.string "mine!$"
 
 Route110_Text_DaleIntro:
@@ -1159,42 +1159,42 @@ Route110_Text_DalePostBattle:
 
 Route110_Text_IsabelIntro:
 	.string "Ahahaha! I would go anywhere to show\n"
-	.string "off my delightful Bonéka.$"
+	.string "off my delightful Puppets.$"
 
 Route110_Text_IsabelDefeated:
 	.string "Oh, dear, this won't do.$"
 
 Route110_Text_IsabelPostBattle:
 	.string "Rather than battling, perhaps I should\n"
-	.string "show off my Bonéka at the Fan Club.$"
+	.string "show off my Puppets at the Fan Club.$"
 
 Route110_Text_IsabelRegister:
 	.string "That wasn't close to what I could\n"
-	.string "do to show off my Bonéka.\p"
+	.string "do to show off my Puppets.\p"
 	.string "I'll have you as my captive audience\n"
 	.string "as often as possible!$"
 
 Route110_Text_IsabelRematchIntro:
 	.string "Ahahahaha! I would be happy to show\n"
-	.string "off my Bonéka as often as you like!$"
+	.string "off my Puppets as often as you like!$"
 
 Route110_Text_IsabelRematchDefeated:
 	.string "Oh, dear, this won't do.$"
 
 Route110_Text_IsabelRematchPostBattle:
 	.string "I don't think that I could ever stop\n"
-	.string "from showing off my Bonéka.\p"
+	.string "from showing off my Puppets.\p"
 	.string "But I like to battle, too!$"
 
 Route110_Text_TimmyIntro:
-	.string "I found some cool Bonéka in the grass\n"
+	.string "I found some cool Puppets in the grass\n"
 	.string "around here!$"
 
 Route110_Text_TimmyDefeated:
 	.string "Being cool isn't enough to win…$"
 
 Route110_Text_TimmyPostBattle:
-	.string "It's hard to battle with Bonéka you\n"
+	.string "It's hard to battle with Puppets you\n"
 	.string "just caught.$"
 
 Route110_Text_AlyssaIntro:
@@ -1222,7 +1222,7 @@ Route110_Text_JosephPostBattle:
 	.string "Losing has made me a better man!$"
 
 Route110_Text_KalebIntro:
-	.string "When cute Bonéka help each other…\n"
+	.string "When cute Puppets help each other…\n"
 	.string "You won't see a more adorable sight!$"
 
 Route110_Text_KalebDefeated:
@@ -1257,7 +1257,7 @@ Route111_Text_HeidiDefeat:
 
 Route111_Text_HeidiPostBattle:
 	.string "When you're battling in a sandstorm,\n"
-	.string "watch out for your Bonéka's HP.\p"
+	.string "watch out for your Puppet's HP.\p"
 	.string "It can faint if you don't keep\n"
 	.string "an eye on it!$"
 
@@ -1272,7 +1272,7 @@ Route111_Text_BeauDefeat:
 Route111_Text_BeauPostBattle:
 	.string "I'm going to be a real hero one day.\n"
 	.string "I'm going to work harder to make me\l"
-	.string "and my Bonéka stronger.$"
+	.string "and my Puppets stronger.$"
 
 Route111_Text_BeckyIntro:
 	.string "I heard there are fossils to be found\n"
@@ -1292,7 +1292,7 @@ Route111_Text_DustyIntro:
 
 Route111_Text_DustyDefeat:
 	.string "While I have searched for ruins,\n"
-	.string "I've not searched for strong Bonéka.$"
+	.string "I've not searched for strong Puppets.$"
 
 Route111_Text_DustyPostBattle:
 	.string "For thirty years I have searched for\n"
@@ -1302,9 +1302,9 @@ Route111_Text_DustyPostBattle:
 
 Route111_Text_DustyRegister:
 	.string "I haven't been searching for any\n"
-	.string "tough Bonéka.\p"
+	.string "tough Puppets.\p"
 	.string "But, for some reason, I sure do like\n"
-	.string "iDollNavs.$"
+	.string "TohoNavs.$"
 
 Route111_Text_DustyRematchIntro:
 	.string "For thirty years I have searched for\n"
@@ -1314,7 +1314,7 @@ Route111_Text_DustyRematchIntro:
 
 Route111_Text_DustyRematchDefeat:
 	.string "I've found no ruins, nor have I found\n"
-	.string "any strong Bonéka…$"
+	.string "any strong Puppets…$"
 
 Route111_Text_DustyPostRematch:
 	.string "For thirty years I have searched for\n"
@@ -1326,10 +1326,10 @@ Route111_Text_DustyPostRematch:
 
 Route111_Text_TravisIntro:
 	.string "I'm full of pep!\n"
-	.string "And my Bonéka is peppy, too!$"
+	.string "And my Puppet is peppy, too!$"
 
 Route111_Text_TravisDefeat:
-	.string "My Bonéka lost its pep…$"
+	.string "My Puppet lost its pep…$"
 
 Route111_Text_TravisPostBattle:
 	.string "When I see a Trainer with a lot of pep,\n"
@@ -1361,14 +1361,14 @@ Route111_Text_DaisukePostBattle:
 
 Route111_Text_WiltonIntro:
 	.string "Show me how much you've toughened\n"
-	.string "your Bonéka.$"
+	.string "your Puppets.$"
 
 Route111_Text_WiltonDefeat:
 	.string "I see, you've toughened them\n"
 	.string "considerably.$"
 
 Route111_Text_WiltonPostBattle:
-	.string "Bonéka and Trainers learn much\n"
+	.string "Puppets and Trainers learn much\n"
 	.string "through battling.\p"
 	.string "What's important is to never give up\n"
 	.string "even if you lose.$"
@@ -1389,10 +1389,10 @@ Route111_Text_WiltonRematchDefeat:
 
 Route111_Text_WiltonPostRematch:
 	.string "Since you're that strong, you should\n"
-	.string "aim for the Bonéka League.$"
+	.string "aim for the Hoenn League.$"
 
 Route111_Text_BrookeIntro:
-	.string "Oh, your Bonéka look like serious\n"
+	.string "Oh, your Puppets look like serious\n"
 	.string "actors.\l"
 	.string "I have to ask you for an engagement.$"
 
@@ -1401,7 +1401,7 @@ Route111_Text_BrookeDefeat:
 	.string "they are strong!$"
 
 Route111_Text_BrookePostBattle:
-	.string "I thought I was raising my Bonéka\n"
+	.string "I thought I was raising my Puppets\n"
 	.string "diligently, but, oh no, there is still\l"
 	.string "much to be done.$"
 
@@ -1410,10 +1410,10 @@ Route111_Text_BrookeRegister:
 	.string "more strong people like you!$"
 
 Route111_Text_BrookeRematchIntro:
-	.string "You can make Bonéka stronger or\n"
+	.string "You can make Puppets stronger or\n"
 	.string "weaker depending on the moves you\l"
 	.string "teach them.\p"
-	.string "What kinds of moves do your Bonéka\n"
+	.string "What kinds of moves do your Puppets\n"
 	.string "know?$"
 
 Route111_Text_BrookeRematchDefeat:
@@ -1421,7 +1421,7 @@ Route111_Text_BrookeRematchDefeat:
 
 Route111_Text_BrookePostRematch:
 	.string "Maybe I should have stopped my\n"
-	.string "Bonéka from evolving until they\l"
+	.string "Puppets from evolving until they\l"
 	.string "learned better moves…$"
 
 Route111_Text_CeliaIntro:
@@ -1458,19 +1458,19 @@ Route111_Text_BrandenDefeat:
 	.string "enough of a bribe…$"
 
 Route111_Text_BrandenPostBattle:
-	.string "My Bonéka loves eating\n"
+	.string "My Puppets loves eating\n"
 	.string "my sandwiches.$"
 
 Route111_Text_TyronIntro:
-	.string "This is my favorite kind of Bonéka!$"
+	.string "This is my favorite kind of Puppet!$"
 
 Route111_Text_TyronDefeat:
 	.string "Wait!\n"
-	.string "Did you get a good look at my Bonéka?$"
+	.string "Did you get a good look at my Puppet?$"
 
 Route111_Text_TyronPostBattle:
 	.string "When having a battle, I get a kick out\n"
-	.string "of showing off my Bonéka.\p"
+	.string "of showing off my Puppet.\p"
 	.string "I bet everyone feels that way when\n"
 	.string "they enter a battle!$"
 
@@ -1544,7 +1544,7 @@ Route112_Text_TrentRegister:
 	.string "Ow, my legs have cramped up.\n"
 	.string "Can you grab me some bandages from\l"
 	.string "my backpack?\p"
-	.string "No, that's my iDollNav!\n"
+	.string "No, that's my TohoNav!\n"
 	.string "Oh, fine, I'll register you.$"
 
 Route112_Text_TrentRematchIntro:
@@ -1581,11 +1581,11 @@ Route112_Text_CarolDefeat:
 
 Route112_Text_CarolPostBattle:
 	.string "It doesn't matter if you're good or bad\n"
-	.string "at singing or Bonéka.\p"
+	.string "at singing or Puppets.\p"
 	.string "If you have the most fun, you win!$"
 
 Route112_Text_BryantIntro:
-	.string "I caught hot Bonéka in Fiery Path!\n"
+	.string "I caught blazing Puppets in Fiery Path!\n"
 	.string "Take a look!$"
 
 Route112_Text_BryantDefeat:
@@ -1639,7 +1639,7 @@ Route113_Text_DillonPostBattle:
 Route113_Text_MadelineIntro:
 	.string "I use this parasol to ward off this\n"
 	.string "filthy, yucky volcanic ash from\l"
-	.string "my dear Bonéka.$"
+	.string "my dear Puppet.$"
 
 Route113_Text_MadelineDefeat:
 	.string "Huff, huff…\n"
@@ -1651,7 +1651,7 @@ Route113_Text_MadelinePostBattle:
 
 Route113_Text_MadelineRegister:
 	.string "Here, slide under my parasol.\n"
-	.string "Let me register you in my iDollNav.$"
+	.string "Let me register you in my TohoNav.$"
 
 Route113_Text_MadelineRematchIntro:
 	.string "Oh, hello, hasn't it been a while?\n"
@@ -1677,7 +1677,7 @@ Route113_Text_LaoPostBattle:
 
 Route113_Text_LaoRegister:
 	.string "Yiiyaah! Witness the ancient ninja\n"
-	.string "technique of iDollNav registration!$"
+	.string "technique of TohoNav registration!$"
 
 Route113_Text_LaoRematchIntro:
 	.string "From out of the ashes I leap! Hiyah!\n"
@@ -1707,7 +1707,7 @@ Route113_Text_LungPostBattle:
 
 Route113_Text_ToriIntro:
 	.string "Tori: Both of us, we collect ashes.\n"
-	.string "We battle Bonéka, too.$"
+	.string "We battle Puppets, too.$"
 
 Route113_Text_ToriDefeat:
 	.string "Tori: We lost… It's boring, so I'm going\n"
@@ -1723,7 +1723,7 @@ Route113_Text_ToriNotEnoughMons:
 
 Route113_Text_TiaIntro:
 	.string "Tia: Both of us, we collect ashes.\n"
-	.string "We battle Bonéka, too.$"
+	.string "We battle Puppets, too.$"
 
 Route113_Text_TiaDefeat:
 	.string "Tia: We couldn't win… It's boring,\n"
@@ -1774,7 +1774,7 @@ Route113_Text_LawrencePostBattle:
 
 Route113_Text_WyattIntro:
 	.string "Y-you want to battle with me?\n"
-	.string "Even though I just caught my Bonéka?$"
+	.string "Even though I just caught my Puppets?$"
 
 Route113_Text_WyattDefeat:
 	.string "Y-you're all happy to win?\n"
@@ -1815,7 +1815,7 @@ Route114_Text_LucasPostBattle:
 Route114_Text_ShaneIntro:
 	.string "Camping's fun! You can fish, roast\n"
 	.string "marshmallows, and tell spooky stories!\p"
-	.string "But the best of all are the Bonéka\n"
+	.string "But the best of all are the Puppet\n"
 	.string "battles!$"
 
 Route114_Text_ShaneDefeat:
@@ -1823,7 +1823,7 @@ Route114_Text_ShaneDefeat:
 
 Route114_Text_ShanePostBattle:
 	.string "I think it's great that I can go\n"
-	.string "camping with my Bonéka.$"
+	.string "camping with my Puppets.$"
 
 Route114_Text_NancyIntro:
 	.string "I need to exercise after a meal.\n"
@@ -1838,16 +1838,16 @@ Route114_Text_NancyPostBattle:
 
 Route114_Text_SteveIntro:
 	.string "Ufufufufufu…\n"
-	.string "Want to battle against my Bonéka?$"
+	.string "Want to battle against my Puppet?$"
 
 Route114_Text_SteveDefeat:
-	.string "M-My Bonéka…$"
+	.string "M-My Puppet…$"
 
 Route114_Text_StevePostBattle:
 	.string "A big body that's all lumpy and hard,\n"
 	.string "enormous horns, and vicious fangs…\p"
 	.string "Ufufufufu…\n"
-	.string "I wish I had a Bonéka like that…$"
+	.string "I wish I had a Puppet like that…$"
 
 Route114_Text_SteveRegister:
 	.string "Don't forget what you've done to me!\n"
@@ -1855,15 +1855,15 @@ Route114_Text_SteveRegister:
 
 Route114_Text_SteveRematchIntro:
 	.string "Ufufufufufu…\n"
-	.string "Come on, battle my Bonéka…$"
+	.string "Come on, battle my Puppets…$"
 
 Route114_Text_SteveRematchDefeat:
 	.string "I feel so lucky getting to see your\n"
-	.string "Bonéka…$"
+	.string "Puppets…$"
 
 Route114_Text_StevePostRematch:
 	.string "Ufufufufufu…\p"
-	.string "When I see Bonéka battling, I get all\n"
+	.string "When I see Puppets battling, I get all\n"
 	.string "shivery and shaky…$"
 
 Route114_Text_BernieIntro:
@@ -1900,7 +1900,7 @@ Route114_Text_BerniePostRematch:
 Route114_Text_ClaudeIntro:
 	.string "If we were fishing, you wouldn't stand\n"
 	.string "a chance against me.\l"
-	.string "So, bring on your Bonéka!$"
+	.string "So, bring on your Puppets!$"
 
 Route114_Text_ClaudeDefeat:
 	.string "If we were fishing, I would've won…$"
@@ -1924,38 +1924,38 @@ Route114_Text_NolanDefeat:
 Route114_Text_NolanPostBattle:
 	.string "This time I'll do it!\p"
 	.string "I always think that, so I can't walk\n"
-	.string "away from fishing or Bonéka.$"
+	.string "away from fishing or Puppets.$"
 
 Route114_Text_TyraIntro:
 	.string "Tyra: Well, sure.\n"
 	.string "I'm in the mood for it.\l"
-	.string "I'll teach you a little about Bonéka.$"
+	.string "I'll teach you a little about Puppets.$"
 
 Route114_Text_TyraDefeat:
 	.string "Tyra: What an amazing battle style!$"
 
 Route114_Text_TyraPostBattle:
 	.string "Tyra: I was teaching my junior Ivy\n"
-	.string "about Bonéka.$"
+	.string "about Puppets.$"
 
 Route114_Text_TyraNotEnoughMons:
 	.string "Tyra: Giggle…\n"
 	.string "If you want to battle with us, just one\l"
-	.string "Bonéka isn't enough!$"
+	.string "Puppet isn't enough!$"
 
 Route114_Text_IvyIntro:
-	.string "Ivy: Who taught you about Bonéka?$"
+	.string "Ivy: Who taught you about Puppets?$"
 
 Route114_Text_IvyDefeat:
 	.string "Ivy: What an amazing battle style!$"
 
 Route114_Text_IvyPostBattle:
-	.string "Ivy: I started training Bonéka\n"
+	.string "Ivy: I started training Puppets\n"
 	.string "because Tyra, my student mentor,\l"
 	.string "taught me!$"
 
 Route114_Text_IvyNotEnoughMons:
-	.string "Ivy: Do you only have one Bonéka?\n"
+	.string "Ivy: Do you only have one Puppet?\n"
 	.string "I think it must feel lonesome.$"
 
 Route114_Text_KaiIntro:
@@ -1978,13 +1978,13 @@ Route114_Text_CharlotteDefeat:
 	.string "That wasn't cute in the least!$"
 
 Route114_Text_CharlottePostBattle:
-	.string "I don't want a Bonéka that's\n"
+	.string "I don't want a Puppet that's\n"
 	.string "just cute.\p"
 	.string "I adore cute ones that have a quirk\n"
 	.string "or two!$"
 
 Route114_Text_AngelinaIntro:
-	.string "Have you made your Bonéka evolve\n"
+	.string "Have you made your Puppets evolve\n"
 	.string "very much?$"
 
 Route114_Text_AngelinaDefeat:
@@ -1992,7 +1992,7 @@ Route114_Text_AngelinaDefeat:
 	.string "That's good to know.$"
 
 Route114_Text_AngelinaPostBattle:
-	.string "Some Bonéka change so much when\n"
+	.string "Some Puppets change so much when\n"
 	.string "they evolve, it's startling!$"
 
 Route115_Text_TimothyIntro:
@@ -2030,14 +2030,14 @@ Route115_Text_TimothyPostRematch:
 
 Route115_Text_KoichiIntro:
 	.string "You!\p"
-	.string "My Bonéka!\p"
+	.string "My Puppets!\p"
 	.string "Demand a battle!$"
 
 Route115_Text_KoichiDefeat:
 	.string "Ouch, ouch, ouch!$"
 
 Route115_Text_KoichiPostBattle:
-	.string "My Bonéka crew!\p"
+	.string "My Puppet crew!\p"
 	.string "So long as they seek power, I will\n"
 	.string "grow strong with them!$"
 
@@ -2050,7 +2050,7 @@ Route115_Text_NobDefeat:
 	.string "My head is busted!$"
 
 Route115_Text_NobPostBattle:
-	.string "I've been teaching my Bonéka karate.\p"
+	.string "I've been teaching my Puppet karate.\p"
 	.string "It looks like they'll get a lot better\n"
 	.string "than me. I'm excited about that.$"
 
@@ -2068,7 +2068,7 @@ Route115_Text_NobRematchDefeat:
 	.string "We lost again!$"
 
 Route115_Text_NobPostRematch:
-	.string "My Bonéka will grow stronger!\n"
+	.string "My Puppets will grow stronger!\n"
 	.string "I'll redouble my training!$"
 
 Route115_Text_CyndyIntro:
@@ -2091,23 +2091,23 @@ Route115_Text_CyndyRematchIntro:
 	.string "Okay, let's get this battle on!$"
 
 Route115_Text_CyndyRematchDefeat:
-	.string "I can battle but my Bonéka…$"
+	.string "I can battle but my Puppets…$"
 
 Route115_Text_CyndyPostRematch:
 	.string "Even when I lose, I still get some\n"
 	.string "enjoyment out of it.\l"
-	.string "It must be that I love Bonéka.$"
+	.string "It must be that I love Puppets.$"
 
 Route115_Text_HectorIntro:
-	.string "I have a rare Bonéka!\n"
+	.string "I have a rare Puppet!\n"
 	.string "Would you like me to show you?$"
 
 Route115_Text_HectorDefeat:
 	.string "You…\n"
-	.string "You want my Bonéka, don't you?$"
+	.string "You want my Puppet, don't you?$"
 
 Route115_Text_HectorPostBattle:
-	.string "I have this rare Bonéka.\n"
+	.string "I have this rare Puppet.\n"
 	.string "It's enough to keep me satisfied.$"
 
 Route115_Text_KyraIntro:
@@ -2124,18 +2124,18 @@ Route115_Text_KyraPostBattle:
 
 Route115_Text_JaidenIntro:
 	.string "Take that!\n"
-	.string "Ultra Bonéka ninja attack!$"
+	.string "Ultra Puppet ninja attack!$"
 
 Route115_Text_JaidenDefeat:
 	.string "Waaah!\n"
 	.string "Our strategy failed!$"
 
 Route115_Text_JaidenPostBattle:
-	.string "But my Bonéka were ultra,\n"
+	.string "But my Puppets were ultra,\n"
 	.string "weren't they?$"
 
 Route115_Text_HeleneIntro:
-	.string "My Bonéka have black belt-level\n"
+	.string "My Puppets have black belt-level\n"
 	.string "strength!$"
 
 Route115_Text_HeleneDefeat:
@@ -2167,7 +2167,7 @@ Route115_Text_MarleneDefeat:
 	.string "You've broken my concentration!$"
 
 Route115_Text_MarlenePostBattle:
-	.string "I was meditating with my Bonéka.\n"
+	.string "I was meditating with my Puppets.\n"
 	.string "But this place isn't very peaceful…$"
 
 Route116_Text_ClarkIntro:
@@ -2183,7 +2183,7 @@ Route116_Text_ClarkPostBattle:
 	.string "To a Hiker, mountains are roads!$"
 
 Route116_Text_JoeyIntro:
-	.string "My Bonéka rule!\n"
+	.string "My Puppets rule!\n"
 	.string "Check them out!$"
 
 Route116_Text_JoeyDefeat:
@@ -2195,7 +2195,7 @@ Route116_Text_JoeyPostBattle:
 	.string "I've got another one!$"
 
 Route116_Text_JoseIntro:
-	.string "My Bug Bonéka are tough!\n"
+	.string "My Bug Puppets are tough!\n"
 	.string "Let's battle!$"
 
 Route116_Text_JoseDefeat:
@@ -2203,18 +2203,18 @@ Route116_Text_JoseDefeat:
 	.string "I thought I had you!$"
 
 Route116_Text_JosePostBattle:
-	.string "Bug Bonéka evolve quickly.\n"
+	.string "Bug Puppets evolve quickly.\n"
 	.string "So they get strong quickly, too.$"
 
 Route116_Text_JaniceIntro:
 	.string "Let me teach you how strong my\n"
-	.string "adorable Bonéka is!$"
+	.string "adorable Puppet is!$"
 
 Route116_Text_JaniceDefeat:
 	.string "You're a notch above me…$"
 
 Route116_Text_JanicePostBattle:
-	.string "Bonéka that possess cuteness and\n"
+	.string "Puppets that possess cuteness and\n"
 	.string "power, that's ideal, I think.$"
 
 Route116_Text_JerryIntro:
@@ -2233,13 +2233,13 @@ Route116_Text_JerryPostBattle:
 
 Route116_Text_JerryRegister1:
 	.string "I learned at the Trainer's School\n"
-	.string "that a iDollNav can register Trainers.\p"
+	.string "that a TohoNav can register Trainers.\p"
 	.string "I don't really get what that means,\n"
 	.string "so can I just try it?$"
 
 Route116_Text_JerryRegister2:
 	.string "I learned at the Trainer's School\n"
-	.string "that a iDollNav can register Trainers.\p"
+	.string "that a TohoNav can register Trainers.\p"
 	.string "I don't really get what that means,\n"
 	.string "so can I just try it?$"
 
@@ -2269,11 +2269,11 @@ Route116_Text_KarenPostBattle:
 	.string "Trainer like Roxanne this way!$"
 
 Route116_Text_KarenRegister1:
-	.string "Oh, wow! Isn't that a iDollNav?\n"
+	.string "Oh, wow! Isn't that a TohoNav?\n"
 	.string "I have one, too! Please register me!$"
 
 Route116_Text_KarenRegister2:
-	.string "Oh, wow! Isn't that a iDollNav?\n"
+	.string "Oh, wow! Isn't that a TohoNav?\n"
 	.string "I have one, too! Please register me!$"
 
 Route116_Text_KarenRematchIntro:
@@ -2299,12 +2299,12 @@ Route116_Text_SarahDefeat:
 Route116_Text_SarahPostBattle:
 	.string "My life of luxury affords me all that\n"
 	.string "I could possibly desire.\p"
-	.string "However, when it comes to Bonéka,\n"
+	.string "However, when it comes to Puppets,\n"
 	.string "my wealth has no meaning.$"
 
 Route116_Text_DawsonIntro:
-	.string "When you lay your eyes on my Bonéka's\n"
-	.string "gorgeous fur, their beauty will render\l"
+	.string "When you lay your eyes on my Puppet's\n"
+	.string "gorgeous hair, their beauty will render\l"
 	.string "you helpless!$"
 
 Route116_Text_DawsonDefeat:
@@ -2312,7 +2312,7 @@ Route116_Text_DawsonDefeat:
 
 Route116_Text_DawsonPostBattle:
 	.string "Oh, no, no, no!\n"
-	.string "You've mussed up my Bonéka's fur!\l"
+	.string "You've mussed up my Puppets's hair!\l"
 	.string "You've ruined my hairdo, too!\l"
 	.string "I'll have to call my stylist now!$"
 
@@ -2324,7 +2324,7 @@ Route116_Text_DevanDefeat:
 	.string "No contest at all!$"
 
 Route116_Text_DevanPostBattle:
-	.string "I should try different Bonéka\n"
+	.string "I should try different Puppet\n"
 	.string "types, that's what I ought to do.$"
 
 Route116_Text_JohnsonIntro:
@@ -2340,23 +2340,23 @@ Route116_Text_JohnsonPostBattle:
 
 Route117_Text_IsaacIntro:
 	.string "Listen, could I get you to battle\n"
-	.string "the Bonéka I'm raising?$"
+	.string "the Puppets I'm raising?$"
 
 Route117_Text_IsaacDefeat:
 	.string "You've raised yours superbly…$"
 
 Route117_Text_IsaacPostBattle:
-	.string "Bonéka isn't all about power.\p"
+	.string "Puppets isn't all about power.\p"
 	.string "Polishing a unique aspect of one's\n"
 	.string "character is another way of enjoying\l"
-	.string "Bonéka.$"
+	.string "Puppets.$"
 
 Route117_Text_IsaacRegister:
 	.string "I'm going to redouble my training.\n"
 	.string "Would you come look in on us?$"
 
 Route117_Text_IsaacRematchIntro:
-	.string "The Bonéka I've been raising are\n"
+	.string "The Puppets I've been raising are\n"
 	.string "looking good, just like before.$"
 
 Route117_Text_IsaacRematchDefeat:
@@ -2364,18 +2364,18 @@ Route117_Text_IsaacRematchDefeat:
 	.string "You might have DAY CARE skills…$"
 
 Route117_Text_IsaacPostRematch:
-	.string "Your Bonéka are growing good!\n"
+	.string "Your Puppets are growing good!\n"
 	.string "You should enter them in Contests.$"
 
 Route117_Text_LydiaIntro:
 	.string "Please, allow me to evaluate if you\n"
-	.string "have raised your Bonéka properly.$"
+	.string "have raised your Puppets properly.$"
 
 Route117_Text_LydiaDefeat:
 	.string "Yes, they are growing properly.$"
 
 Route117_Text_LydiaPostBattle:
-	.string "Try raising Bonéka with more\n"
+	.string "Try raising Puppets with more\n"
 	.string "attention to their character traits.$"
 
 Route117_Text_LydiaRegister:
@@ -2384,13 +2384,13 @@ Route117_Text_LydiaRegister:
 
 Route117_Text_LydiaRematchIntro:
 	.string "Allow me to reevaluate if you have\n"
-	.string "raised your Bonéka properly.$"
+	.string "raised your Puppets properly.$"
 
 Route117_Text_LydiaRematchDefeat:
 	.string "They are growing admirably.$"
 
 Route117_Text_LydiaPostRematch:
-	.string "Bonéka seem to like different kinds\n"
+	.string "Puppets seem to like different kinds\n"
 	.string "of {POKEBLOCK}S, depending on their nature.$"
 
 Route117_Text_DylanIntro:
@@ -2406,7 +2406,7 @@ Route117_Text_DylanPostBattle:
 	.string "that battle…$"
 
 Route117_Text_DylanRegister:
-	.string "Bonéka have to be strong, too?\n"
+	.string "Puppets have to be strong, too?\n"
 	.string "I'd like you to train me!$"
 
 Route117_Text_DylanRematchIntro:
@@ -2420,10 +2420,10 @@ Route117_Text_DylanRematchDefeat:
 Route117_Text_DylanPostRematch:
 	.string "I was tops in swimming and cycling,\n"
 	.string "but I'm not quite that confident with\l"
-	.string "Bonéka yet.$"
+	.string "Puppets yet.$"
 
 Route117_Text_MariaIntro:
-	.string "I do my triathlon training with Bonéka,\n"
+	.string "I do my triathlon training with Puppets,\n"
 	.string "so I'm pretty confident about my speed.$"
 
 Route117_Text_MariaDefeat:
@@ -2456,7 +2456,7 @@ Route117_Text_MariaPostRematch:
 Route117_Text_DerekIntro:
 	.string "Once a Bug Catcher!\n"
 	.string "And now a Bug Maniac!\p"
-	.string "But my love for Bonéka remains\n"
+	.string "But my love for Puppets remains\n"
 	.string "unchanged!$"
 
 Route117_Text_DerekDefeat:
@@ -2466,7 +2466,7 @@ Route117_Text_DerekDefeat:
 Route117_Text_DerekPostBattle:
 	.string "All I did was follow my heart, and now\n"
 	.string "they call me a Bug Maniac…\p"
-	.string "Still, I am an expert on Bug Bonéka,\n"
+	.string "Still, I am an expert on Bug Puppets,\n"
 	.string "so it's only natural that they call me\l"
 	.string "a Bug Maniac.$"
 
@@ -2479,7 +2479,7 @@ Route117_Text_AnnaDefeat:
 	.string "partner! Let me win!$"
 
 Route117_Text_AnnaPostBattle:
-	.string "Anna: Your Bonéka have some good\n"
+	.string "Anna: Your Puppets have some good\n"
 	.string "combinations.\p"
 	.string "I'd say you're second only to us!$"
 
@@ -2489,7 +2489,7 @@ Route117_Text_AnnaAndMegRegister:
 
 Route117_Text_AnnaNotEnoughMons:
 	.string "Anna: If you want to battle us,\n"
-	.string "bring two Bonéka with you.$"
+	.string "bring two Puppets with you.$"
 
 Route117_Text_MegIntro:
 	.string "Meg: I'm going to tag up with my super\n"
@@ -2504,7 +2504,7 @@ Route117_Text_MegPostBattle:
 	.string "If I didn't, she would have won!$"
 
 Route117_Text_MegNotEnoughMons:
-	.string "Meg: Do you only have one Bonéka?\n"
+	.string "Meg: Do you only have one Puppet?\n"
 	.string "We can't battle with you, then.\p"
 	.string "We want to have a 2-on-2 battle.$"
 
@@ -2516,13 +2516,13 @@ Route117_Text_AnnaRematchDefeat:
 	.string "Anna: I couldn't get into the groove.$"
 
 Route117_Text_AnnaPostRematch:
-	.string "Anna: Your Bonéka have some good\n"
+	.string "Anna: Your Puppets have some good\n"
 	.string "combinations.\p"
 	.string "I'd say you're second only to us!$"
 
 Route117_Text_AnnaRematchNotEnoughMons:
 	.string "Anna: If you want to battle us,\n"
-	.string "bring two Bonéka with you.$"
+	.string "bring two Puppets with you.$"
 
 Route117_Text_MegRematchIntro:
 	.string "Meg: I'm going to tag up with my\n"
@@ -2537,7 +2537,7 @@ Route117_Text_MegPostRematch:
 	.string "That's so discouraging…$"
 
 Route117_Text_MegRematchNotEnoughMons:
-	.string "Meg: Do you only have one Bonéka?\n"
+	.string "Meg: Do you only have one Puppet?\n"
 	.string "We can't battle with you, then.\p"
 	.string "We want to have a 2-on-2 battle.$"
 
@@ -2554,13 +2554,13 @@ Route117_Text_MelinaPostBattle:
 
 Route117_Text_BrandiIntro:
 	.string "Let me demonstrate the power\n"
-	.string "hidden within a Psychic Bonéka!$"
+	.string "hidden within a Psychic Puppet!$"
 
 Route117_Text_BrandiDefeat:
 	.string "Astonishing!$"
 
 Route117_Text_BrandiPostBattle:
-	.string "Psychic Bonéka are complex.\n"
+	.string "Psychic Puppets are complex.\n"
 	.string "You should try catching some.$"
 
 Route117_Text_AishaIntro:
@@ -2584,13 +2584,13 @@ Route118_Text_RoseDefeat:
 	.string "I seem to have lost.$"
 
 Route118_Text_RosePostBattle:
-	.string "Flowers, Bonéka…\n"
+	.string "Flowers, Puppets…\n"
 	.string "I love whatever smells nice.\p"
 	.string "Stinky things…\n"
 	.string "I'll pass.$"
 
 Route118_Text_RoseRegister:
-	.string "Sniff… That odor--it's a iDollNav!\n"
+	.string "Sniff… That odor--it's a TohoNav!\n"
 	.string "We must register each other!$"
 
 Route118_Text_RoseRematchIntro:
@@ -2603,10 +2603,10 @@ Route118_Text_RoseRematchDefeat:
 
 Route118_Text_RosePostRematch:
 	.string "If you use a sweet aroma properly,\n"
-	.string "Bonéka will be attracted by it.$"
+	.string "Puppets will be attracted by it.$"
 
 Route118_Text_PerryIntro:
-	.string "Bird Bonéka that Fly elegantly in\n"
+	.string "Bird Puppets that Fly elegantly in\n"
 	.string "the sky… They're the best!$"
 
 Route118_Text_PerryDefeat:
@@ -2614,12 +2614,12 @@ Route118_Text_PerryDefeat:
 	.string "I crashed…$"
 
 Route118_Text_PerryPostBattle:
-	.string "You've got great Bonéka.\n"
+	.string "You've got great Puppets.\n"
 	.string "I'll have to train mine better.$"
 
 Route118_Text_ChesterIntro:
 	.string "Take flight!\n"
-	.string "My Bird Bonéka!$"
+	.string "My Bird Puppets!$"
 
 Route118_Text_ChesterDefeat:
 	.string "They did take flight…$"
@@ -2630,28 +2630,28 @@ Route118_Text_ChesterPostBattle:
 
 Route118_Text_BarnyIntro:
 	.string "I'm a Fisherman, but also a Trainer.\n"
-	.string "I'm raising the Bonéka I caught.$"
+	.string "I'm raising the Puppets I caught.$"
 
 Route118_Text_BarnyDefeat:
 	.string "I thought I was doing okay in my\n"
 	.string "training…$"
 
 Route118_Text_BarnyPostBattle:
-	.string "I couldn't win by training Bonéka\n"
+	.string "I couldn't win by training Puppets\n"
 	.string "while I fished…\p"
 	.string "Was I doing things in half measures?$"
 
 Route118_Text_WadeIntro:
 	.string "For Fishermen, equipment is the key.\p"
 	.string "But for Trainers, the key ingredients\n"
-	.string "are Bonéka and heart, of course!$"
+	.string "are Puppets and heart, of course!$"
 
 Route118_Text_WadeDefeat:
 	.string "I was beaten in heart?$"
 
 Route118_Text_WadePostBattle:
 	.string "Come to think of it, fishing is a battle\n"
-	.string "between a Fisherman and a Bonéka.$"
+	.string "between a Fisherman and a Puppet.$"
 
 Route118_Text_DaltonIntro:
 	.string "Let my melody rock your soul!$"
@@ -2670,7 +2670,7 @@ Route118_Text_DaltonRegister:
 	.string "you have to come listen, okay?$"
 
 Route118_Text_DaltonRematchIntro:
-	.string "A melody from my Bonéka and me…\n"
+	.string "A melody from my Puppets and me…\n"
 	.string "Let us deliver it to your soul.$"
 
 Route118_Text_DaltonRematchDefeat:
@@ -2682,14 +2682,14 @@ Route118_Text_DaltonPostRematch:
 
 Route118_Text_DeandreIntro:
 	.string "Go, go, go!\n"
-	.string "Bonéka 1, 2, and 3!$"
+	.string "Puppets 1, 2, and 3!$"
 
 Route118_Text_DeandreDefeat:
-	.string "Come in, Bonéka! Are you okay?\n"
-	.string "Bonéka 1, 2, and 3?!$"
+	.string "Come in, Puppets! Are you okay?\n"
+	.string "Puppets 1, 2, and 3?!$"
 
 Route118_Text_DeandrePostBattle:
-	.string "Isn't it cool that I have a Bonéka\n"
+	.string "Isn't it cool that I have a Puppet\n"
 	.string "battle team?\p"
 	.string "You can copy me--I don't mind!$"
 
@@ -2708,7 +2708,7 @@ Route119_Text_BrentPostBattle:
 
 Route119_Text_DonaldIntro:
 	.string "So, we finally meet!\n"
-	.string "My Bug Bonéka will keep you company!$"
+	.string "My Bug Puppets will keep you company!$"
 
 Route119_Text_DonaldDefeat:
 	.string "I wish we'd never met…$"
@@ -2766,10 +2766,10 @@ Route119_Text_KentPostBattle:
 Route119_Text_JacksonIntro:
 	.string "Who has the knowledge and\n"
 	.string "the technique for survival?\p"
-	.string "Bonéka Rangers, that's who!$"
+	.string "Puppet Rangers, that's who!$"
 
 Route119_Text_JacksonDefeat:
-	.string "I didn't have enough Bonéka\n"
+	.string "I didn't have enough Puppets\n"
 	.string "know-how…$"
 
 Route119_Text_JacksonPostBattle:
@@ -2783,13 +2783,13 @@ Route119_Text_JacksonRegister:
 
 Route119_Text_JacksonRematchIntro:
 	.string "I'm going to regain my wild spirit by\n"
-	.string "being together with Bonéka.$"
+	.string "being together with Puppets.$"
 
 Route119_Text_JacksonRematchDefeat:
 	.string "You've remained strong!$"
 
 Route119_Text_JacksonPostRematch:
-	.string "Believe in your Bonéka.\n"
+	.string "Believe in your Puppets.\n"
 	.string "Believe in yourself.\p"
 	.string "The road will reveal itself to you.$"
 
@@ -2809,13 +2809,13 @@ Route119_Text_CatherinePostBattle:
 	.string "physically, too.$"
 
 Route119_Text_CatherineRegister:
-	.string "Do you have a iDollNav?\n"
+	.string "Do you have a TohoNav?\n"
 	.string "It's a must-have tool for any Trainer.\p"
 	.string "Oh, you do have one!\n"
 	.string "Let's register each other, then!$"
 
 Route119_Text_CatherineRematchIntro:
-	.string "How's your journey with Bonéka\n"
+	.string "How's your journey with Puppets\n"
 	.string "going?$"
 
 Route119_Text_CatherineRematchDefeat:
@@ -2823,7 +2823,7 @@ Route119_Text_CatherineRematchDefeat:
 
 Route119_Text_CatherinePostRematch:
 	.string "In the same way that you, as a Trainer,\n"
-	.string "rely on your Bonéka, your Bonéka\l"
+	.string "rely on your Puppets, your Puppets\l"
 	.string "rely on you.$"
 
 Route119_Text_HughIntro:
@@ -2835,19 +2835,19 @@ Route119_Text_HughDefeat:
 	.string "Down and out!$"
 
 Route119_Text_HughPostBattle:
-	.string "My Bird Bonéka made my dreams of\n"
+	.string "My Bird Puppets made my dreams of\n"
 	.string "flying come true!$"
 
 Route119_Text_PhilIntro:
 	.string "I'll show you the true potential of me\n"
-	.string "and my Bird Bonéka!$"
+	.string "and my Bird Puppets!$"
 
 Route119_Text_PhilDefeat:
 	.string "We lacked potential…$"
 
 Route119_Text_PhilPostBattle:
 	.string "Ever since I was a little kid, I always\n"
-	.string "admired Bird Bonéka…$"
+	.string "admired Bird Puppets…$"
 
 Route119_Text_YasuIntro:
 	.string "To lurk in shadows, and live in\n"
@@ -2881,14 +2881,14 @@ Route119_Text_HideoDefeat:
 
 Route119_Text_HideoPostBattle:
 	.string "To hide a tree, use a forest!\n"
-	.string "To hide a Bonéka, use a Bonéka!\p"
+	.string "To hide a Puppet, use a Puppet!\p"
 	.string "There is no deep, hidden meaning\n"
 	.string "to that.$"
 
 Route119_Text_ChrisIntro:
 	.string "You spoke to me…\n"
 	.string "So you want to challenge me!\p"
-	.string "Sure! I'll try out the Bonéka I caught\n"
+	.string "Sure! I'll try out the Puppets I caught\n"
 	.string "while Surfing!$"
 
 Route119_Text_ChrisDefeat:
@@ -2896,7 +2896,7 @@ Route119_Text_ChrisDefeat:
 	.string "takes to win.$"
 
 Route119_Text_ChrisPostBattle:
-	.string "Go for a Surf on my Bonéka…\p"
+	.string "Go for a Surf on my Puppet…\p"
 	.string "Then fish off its back…\p"
 	.string "It's an indescribably luxuriant moment!$"
 
@@ -2943,7 +2943,7 @@ Route119_Text_RachelPostBattle:
 
 Route120_Text_ColinIntro:
 	.string "Do you have any moves that can strike\n"
-	.string "a flying Bonéka?$"
+	.string "a flying Puppet?$"
 
 Route120_Text_ColinDefeat:
 	.string "You soared above me!$"
@@ -2951,46 +2951,46 @@ Route120_Text_ColinDefeat:
 Route120_Text_ColinPostBattle:
 	.string "The move Fly is convenient,\n"
 	.string "don't you think?\p"
-	.string "While the Bonéka is flying,\n"
+	.string "While the Puppet is flying,\n"
 	.string "almost no moves can strike it.$"
 
 Route120_Text_RobertIntro:
-	.string "My Bonéka is strong!\n"
+	.string "My Puppet is strong!\n"
 	.string "How about yours?$"
 
 Route120_Text_RobertDefeat:
-	.string "Your Bonéka were stronger…$"
+	.string "Your Puppets were stronger…$"
 
 Route120_Text_RobertPostBattle:
-	.string "A Bonéka that grows steadily is one\n"
+	.string "A Puppet that grows steadily is one\n"
 	.string "you can count on.$"
 
 Route120_Text_RobertRegister:
 	.string "You can be counted on to get better.\n"
-	.string "I'd like to register you in my iDollNav!$"
+	.string "I'd like to register you in my TohoNav!$"
 
 Route120_Text_RobertRematchIntro:
-	.string "A Bonéka that grows steadily is one\n"
+	.string "A Puppet that grows steadily is one\n"
 	.string "you can count on.$"
 
 Route120_Text_RobertRematchDefeat:
-	.string "Your Bonéka are seriously strong.$"
+	.string "Your Puppets are seriously strong.$"
 
 Route120_Text_RobertPostRematch:
-	.string "My Bonéka are growing stronger.\n"
+	.string "My Puppets are growing stronger.\n"
 	.string "I have to grow stronger, too.$"
 
 Route120_Text_LorenzoIntro:
-	.string "I'll check your Bonéka and see if\n"
+	.string "I'll check your Puppets and see if\n"
 	.string "they're fit for the outdoors.$"
 
 Route120_Text_LorenzoDefeat:
-	.string "With Bonéka that strong, you're in\n"
+	.string "With Puppets that strong, you're in\n"
 	.string "no danger of needing rescue!$"
 
 Route120_Text_LorenzoPostBattle:
 	.string "To travel wherever your heart desires\n"
-	.string "with Bonéka…\l"
+	.string "with Puppets…\l"
 	.string "That's the joy of being a Trainer.$"
 
 Route120_Text_JennaIntro:
@@ -3003,7 +3003,7 @@ Route120_Text_JennaDefeat:
 
 Route120_Text_JennaPostBattle:
 	.string "Fitness training is in my routine.\n"
-	.string "I always run with my Bonéka.$"
+	.string "I always run with my Puppets.$"
 
 Route120_Text_JeffreyIntro:
 	.string "… … … … … …\n"
@@ -3021,7 +3021,7 @@ Route120_Text_JeffreyPostBattle:
 Route120_Text_JeffreyRegister:
 	.string "… … … … … …\n"
 	.string "… … … … … …\l"
-	.string "Do you have a iDollNav…?$"
+	.string "Do you have a TohoNav…?$"
 
 Route120_Text_JeffreyRematchIntro:
 	.string "… … … … … …\n"
@@ -3036,10 +3036,10 @@ Route120_Text_JeffreyPostRematch:
 	.string "… … … … … …\n"
 	.string "… … … … … …\l"
 	.string "I'll try harder…\l"
-	.string "For my precious Bug Bonéka…$"
+	.string "For my precious Bug Puppets…$"
 
 Route120_Text_JenniferIntro:
-	.string "Bonéka have many special abilities.\n"
+	.string "Puppets have many special abilities.\n"
 	.string "If you want to become a first-class\l"
 	.string "Trainer, learn about them.$"
 
@@ -3047,7 +3047,7 @@ Route120_Text_JenniferDefeat:
 	.string "You're obviously thinking.$"
 
 Route120_Text_JenniferPostBattle:
-	.string "The special abilities of Bonéka\n"
+	.string "The special abilities of Puppets\n"
 	.string "will make battle styles change.$"
 
 Route120_Text_ChipIntro:
@@ -3069,16 +3069,16 @@ Route120_Text_ClarissaIntro:
 	.string "I'll tell you if you can win against me.$"
 
 Route120_Text_ClarissaDefeat:
-	.string "A parasol can't ward off Bonéka\n"
+	.string "A parasol can't ward off Puppet\n"
 	.string "attacks…$"
 
 Route120_Text_ClarissaPostBattle:
 	.string "I don't think strong sunlight is good\n"
-	.string "for my Bonéka.\l"
+	.string "for my Puppets.\l"
 	.string "So I shield them with my parasol.$"
 
 Route120_Text_AngelicaIntro:
-	.string "Me, Bonéka, and my parasol…\p"
+	.string "Me, Puppets, and my parasol…\p"
 	.string "If any one of them is missing,\n"
 	.string "the picture of beauty will be ruined.$"
 
@@ -3091,7 +3091,7 @@ Route120_Text_AngelicaPostBattle:
 	.string "get in your way.$"
 
 Route120_Text_KeigoIntro:
-	.string "I will adopt the movements of Bonéka\n"
+	.string "I will adopt the movements of Puppets\n"
 	.string "and create new ninja techniques.$"
 
 Route120_Text_KeigoDefeat:
@@ -3124,11 +3124,11 @@ Route120_Text_CallieDefeat:
 	.string "I was the one to get hurt.$"
 
 Route120_Text_CalliePostBattle:
-	.string "I wonder… Should I evolve my Bonéka?\n"
+	.string "I wonder… Should I evolve my Puppets?\n"
 	.string "They're cute the way they are, though.$"
 
 Route120_Text_LeonelIntro:
-	.string "Your party Bonéka…\n"
+	.string "Your party Puppets…\n"
 	.string "Do you have different types?$"
 
 Route120_Text_LeonelDefeat:
@@ -3136,22 +3136,22 @@ Route120_Text_LeonelDefeat:
 
 Route120_Text_LeonelPostBattle:
 	.string "I think it's awesome you're so strong\n"
-	.string "battling with your favorite Bonéka.$"
+	.string "battling with your favorite Puppets.$"
 
 Route121_Text_VanessaIntro:
 	.string "Will you play with my delightfully\n"
-	.string "pretty Bonéka?$"
+	.string "pretty Puppets?$"
 
 Route121_Text_VanessaDefeat:
 	.string "This isn't what I meant!$"
 
 Route121_Text_VanessaPostBattle:
 	.string "I'm going to a Contest in Lilycove.\p"
-	.string "My Bonéka should have no problem\n"
+	.string "My Puppets should have no problem\n"
 	.string "sweeping the Master Class.$"
 
 Route121_Text_WalterIntro:
-	.string "With my Bonéka, I have traveled\n"
+	.string "With my Puppets, I have traveled\n"
 	.string "to the world's four corners.\p"
 	.string "You might say I have some confidence\n"
 	.string "in my abilities.$"
@@ -3161,14 +3161,14 @@ Route121_Text_WalterDefeat:
 
 Route121_Text_WalterPostBattle:
 	.string "I would like to circle the globe once\n"
-	.string "again with my Bonéka.$"
+	.string "again with my Puppets.$"
 
 Route121_Text_WalterRegister:
-	.string "Your Bonéka prowess is remarkable.\n"
+	.string "Your Puppet prowess is remarkable.\n"
 	.string "Allow me to register you as a memento.$"
 
 Route121_Text_WalterRematchIntro:
-	.string "With my Bonéka, I have traveled\n"
+	.string "With my Puppets, I have traveled\n"
 	.string "to the world's four corners.\p"
 	.string "You might say I have some confidence\n"
 	.string "in my abilities.$"
@@ -3177,7 +3177,7 @@ Route121_Text_WalterRematchDefeat:
 	.string "Ah, well played.$"
 
 Route121_Text_WalterPostRematch:
-	.string "Your Bonéka and you…\p"
+	.string "Your Puppets and you…\p"
 	.string "Your prowess together will be\n"
 	.string "considered strong, even overseas.$"
 
@@ -3207,7 +3207,7 @@ Route121_Text_KatePostBattle:
 	.string "of them…$"
 
 Route121_Text_KateNotEnoughMons:
-	.string "Kate: If you've only got one Bonéka,\n"
+	.string "Kate: If you've only got one Puppet,\n"
 	.string "we can't battle with you.\p"
 	.string "That would be bullying.$"
 
@@ -3223,19 +3223,19 @@ Route121_Text_JoyPostBattle:
 	.string "my senior student partner, again.$"
 
 Route121_Text_JoyNotEnoughMons:
-	.string "Joy: You need at least two Bonéka\n"
+	.string "Joy: You need at least two Puppets\n"
 	.string "if you're going to challenge us!$"
 
 Route121_Text_JessicaIntro:
 	.string "Stop! Have a good look at my precious\n"
-	.string "Bonéka!$"
+	.string "Puppets!$"
 
 Route121_Text_JessicaDefeat:
 	.string "Oh, how dare you!\n"
 	.string "Don't take it so seriously!$"
 
 Route121_Text_JessicaPostBattle:
-	.string "Maybe I'll go catch more Bonéka at\n"
+	.string "Maybe I'll go catch more Puppets at\n"
 	.string "the Safari.$"
 
 Route121_Text_JessicaRegister:
@@ -3243,7 +3243,7 @@ Route121_Text_JessicaRegister:
 	.string "It won't be that way the next time!$"
 
 Route121_Text_JessicaRematchIntro:
-	.string "My precious Bonéka grew!\n"
+	.string "My precious Puppets grew!\n"
 	.string "Have a good look!$"
 
 Route121_Text_JessicaRematchDefeat:
@@ -3251,7 +3251,7 @@ Route121_Text_JessicaRematchDefeat:
 	.string "You still won't take it easy!$"
 
 Route121_Text_JessicaPostRematch:
-	.string "Maybe I'll go catch more Bonéka at\n"
+	.string "Maybe I'll go catch more Puppets at\n"
 	.string "the Safari.$"
 
 Route121_Text_CristinIntro:
@@ -3270,7 +3270,7 @@ Route121_Text_CristinPostBattle:
 Route121_Text_CristinRegister:
 	.string "That was total humiliation!\n"
 	.string "I won't forget you…\l"
-	.string "Hand over your iDollNav!$"
+	.string "Hand over your TohoNav!$"
 
 Route121_Text_CristinRematchIntro:
 	.string "I have this new routine.\n"
@@ -3304,17 +3304,17 @@ Route121_Text_CalePostBattle:
 
 Route121_Text_MylesIntro:
 	.string "There's nothing I love more than\n"
-	.string "checking out other people's Bonéka!$"
+	.string "checking out other people's Puppets!$"
 
 Route121_Text_MylesDefeat:
 	.string "Super awesome!$"
 
 Route121_Text_MylesPostBattle:
-	.string "They're great, your Bonéka!\n"
+	.string "They're great, your Puppets!\n"
 	.string "How do you raise them?$"
 
 Route121_Text_PatIntro:
-	.string "I want everybody to see the Bonéka\n"
+	.string "I want everybody to see the Puppets\n"
 	.string "I've raised!$"
 
 Route121_Text_PatDefeat:
@@ -3322,11 +3322,11 @@ Route121_Text_PatDefeat:
 	.string "Spectacular!$"
 
 Route121_Text_PatPostBattle:
-	.string "I raise every Bonéka with the same\n"
+	.string "I raise every Puppet with the same\n"
 	.string "love and care--I don't pick favorites.$"
 
 Route121_Text_MarcelIntro:
-	.string "My Bonéka have never tasted defeat!\n"
+	.string "My Puppets have never tasted defeat!\n"
 	.string "On their next win, I'm entering them\l"
 	.string "in Contests.$"
 
@@ -3389,7 +3389,7 @@ Route123_Text_CameronRegister:
 	.string "I sense it!\n"
 	.string "You and I shall battle again!\l"
 	.string "I can't tell if I'll win, though…\p"
-	.string "Let's see your iDollNav.$"
+	.string "Let's see your TohoNav.$"
 
 Route123_Text_CameronRematchIntro:
 	.string "I've convinced myself that I won't\n"
@@ -3403,7 +3403,7 @@ Route123_Text_CameronPostRematch:
 	.string "I'll never beat you this way…$"
 
 Route123_Text_JackiIntro:
-	.string "Don't be too happy if your Bonéka\n"
+	.string "Don't be too happy if your Puppets\n"
 	.string "develop psychic powers.\p"
 	.string "You need to refine those powers to\n"
 	.string "make them really useful.$"
@@ -3427,27 +3427,27 @@ Route123_Text_JackiRematchDefeat:
 	.string "Astounding!$"
 
 Route123_Text_JackiPostRematch:
-	.string "Your power with Bonéka…\n"
+	.string "Your power with Puppets…\n"
 	.string "That could be a psychic power, too.$"
 
 Route123_Text_MiuIntro:
 	.string "Miu: Hello, Trainer. I hope your\n"
-	.string "Bonéka won't cry when they lose.$"
+	.string "Puppets won't cry when they lose.$"
 
 Route123_Text_MiuDefeat:
 	.string "Miu: Uh-oh, we lost.$"
 
 Route123_Text_MiuPostBattle:
-	.string "Miu: Trainer, your Bonéka are\n"
+	.string "Miu: Trainer, your Puppets are\n"
 	.string "strong because you are friends.$"
 
 Route123_Text_MiuNotEnoughMons:
 	.string "Miu: It's no fun to battle if you\n"
-	.string "don't have two Bonéka.$"
+	.string "don't have two Puppets.$"
 
 Route123_Text_YukiIntro:
 	.string "Yuki: Okay!\n"
-	.string "We're beating the Trainer's Bonéka!$"
+	.string "We're beating the Trainer's Puppets!$"
 
 Route123_Text_YukiDefeat:
 	.string "Yuki: Uh-oh, we lost.$"
@@ -3458,19 +3458,19 @@ Route123_Text_YukiPostBattle:
 
 Route123_Text_YukiNotEnoughMons:
 	.string "Yuki: It's no fun to battle if you\n"
-	.string "don't have two Bonéka.$"
+	.string "don't have two Puppets.$"
 
 Route123_Text_KindraIntro:
 	.string "Mt. Pyre…\n"
-	.string "Where the spirits of Bonéka sleep…\l"
-	.string "Will your Bonéka sleep?$"
+	.string "Where the spirits of Puppets sleep…\l"
+	.string "Will your Puppets sleep?$"
 
 Route123_Text_KindraDefeat:
 	.string "Overflowing with vitality…$"
 
 Route123_Text_KindraPostBattle:
 	.string "Mt. Pyre…\n"
-	.string "Where the spirits of Bonéka sleep…\p"
+	.string "Where the spirits of Puppets sleep…\p"
 	.string "It must overflow with a power that\n"
 	.string "soothes spirits…$"
 
@@ -3504,7 +3504,7 @@ Route123_Text_FernandoPostRematch:
 	.string "by my tune, you'd lose.$"
 
 Route123_Text_DavisIntro:
-	.string "This is my awesome Bug Bonéka!\n"
+	.string "This is my awesome Bug Puppet!\n"
 	.string "My big brother got it for me.$"
 
 Route123_Text_DavisDefeat:
@@ -3540,27 +3540,27 @@ Route123_Text_FrederickPostBattle:
 	.string "Wasn't the prize money enough?$"
 
 Route123_Text_AlbertoIntro:
-	.string "I have to tell you, Bird Bonéka\n"
+	.string "I have to tell you, Bird Puppets\n"
 	.string "are my obsession!\p"
 	.string "Birds are cool!\n"
 	.string "They're the best!$"
 
 Route123_Text_AlbertoDefeat:
-	.string "Even in defeat, Bird Bonéka are cool!$"
+	.string "Even in defeat, Bird Puppets are cool!$"
 
 Route123_Text_AlbertoPostBattle:
-	.string "I gather Bird Bonéka feathers that\n"
+	.string "I gather Bird Puppet feathers that\n"
 	.string "scatter during battles.\p"
 	.string "I'm going to make a hat with\n"
-	.string "Bird Bonéka feathers.$"
+	.string "Bird Puppet feathers.$"
 
 Route123_Text_EdIntro:
 	.string "When there are no Trainers around,\n"
-	.string "I let my Bonéka battle each other.\l"
+	.string "I let my Puppets battle each other.\l"
 	.string "I watch them.$"
 
 Route123_Text_EdDefeat:
-	.string "I kind of like your Bonéka.$"
+	.string "I kind of like your Puppets.$"
 
 Route123_Text_EdPostBattle:
 	.string "Hehe, I'm swiping your battling ideas!\n"
@@ -3592,7 +3592,7 @@ Route123_Text_KayleyPostBattle:
 
 Route124_Text_SpencerIntro:
 	.string "Hey, are you lost at sea?\p"
-	.string "If you can beat my Bonéka,\n"
+	.string "If you can beat my Puppets,\n"
 	.string "I can serve as your pilot.$"
 
 Route124_Text_SpencerDefeat:
@@ -3601,10 +3601,10 @@ Route124_Text_SpencerDefeat:
 Route124_Text_SpencerPostBattle:
 	.string "Many people lose their bearings at sea.\p"
 	.string "If you're that sort, you should refer\n"
-	.string "to the iDollNav's Map.$"
+	.string "to the TohoNav's Map.$"
 
 Route124_Text_RolandIntro:
-	.string "Hm! You're riding a Bonéka instead\n"
+	.string "Hm! You're riding a Puppet instead\n"
 	.string "of swimming yourself…\p"
 	.string "I am envious!$"
 
@@ -3615,11 +3615,11 @@ Route124_Text_RolandDefeat:
 Route124_Text_RolandPostBattle:
 	.string "I'm getting chilled…\n"
 	.string "I've been in the water too long…\p"
-	.string "I wish I could ride a Bonéka like you…$"
+	.string "I wish I could ride a Puppet like you…$"
 
 Route124_Text_JennyIntro:
 	.string "If you just float in the sea like\n"
-	.string "this, Bonéka come around to play.$"
+	.string "this, Puppets come around to play.$"
 
 Route124_Text_JennyDefeat:
 	.string "Oh, darn.\n"
@@ -3627,13 +3627,13 @@ Route124_Text_JennyDefeat:
 
 Route124_Text_JennyPostBattle:
 	.string "While swimming, I noticed that some\n"
-	.string "Bonéka attack, and some just watch.\p"
-	.string "I guess Bonéka have personalities\n"
+	.string "Puppets attack, and some just watch.\p"
+	.string "I guess Puppets have personalities\n"
 	.string "of their own.$"
 
 Route124_Text_JennyRegister:
 	.string "It's only on a whim, but maybe I'll get\n"
-	.string "you to register me in your iDollNav.$"
+	.string "you to register me in your TohoNav.$"
 
 Route124_Text_JennyRematchIntro:
 	.string "If you just float in the sea like this,\n"
@@ -3692,10 +3692,10 @@ Route124_Text_LilaPostBattle:
 
 Route124_Text_LilaNotEnoughMons:
 	.string "Lila: You're planning to battle us?\n"
-	.string "Not unless you have two Bonéka.$"
+	.string "Not unless you have two Puppets.$"
 
 Route124_Text_RoyIntro:
-	.string "Roy: My big sister is tough at Bonéka!\p"
+	.string "Roy: My big sister is tough at Puppets!\p"
 	.string "Don't cry when you lose!$"
 
 Route124_Text_RoyDefeat:
@@ -3714,7 +3714,7 @@ Route124_Text_LilaRoyRegister:
 
 Route124_Text_RoyNotEnoughMons:
 	.string "Roy: Did you want to battle us?\n"
-	.string "Bring two Bonéka, then.$"
+	.string "Bring two Puppets, then.$"
 
 Route124_Text_LilaRematchIntro:
 	.string "Lila: Sigh…\p"
@@ -3735,7 +3735,7 @@ Route124_Text_LilaPostRematch:
 
 Route124_Text_LilaRematchNotEnoughMons:
 	.string "Lila: You're planning to battle us?\n"
-	.string "Not unless you have two Bonéka.$"
+	.string "Not unless you have two Puppets.$"
 
 Route124_Text_RoyRematchIntro:
 	.string "Roy: If we lose, I'll catch heck.\n"
@@ -3749,11 +3749,11 @@ Route124_Text_RoyPostRematch:
 	.string "Roy: My big sister is really scary\n"
 	.string "when she gets angry.\p"
 	.string "She's going to make me train really\n"
-	.string "hard with Bonéka later…$"
+	.string "hard with Puppets later…$"
 
 Route124_Text_RoyRematchNotEnoughMons:
 	.string "Roy: Did you want to battle us?\n"
-	.string "Bring two Bonéka, then.$"
+	.string "Bring two Puppets, then.$"
 
 Route124_Text_DeclanIntro:
 	.string "Here I am swimming by my lonesome\n"
@@ -3794,7 +3794,7 @@ Route125_Text_NolenPostBattle:
 
 Route125_Text_StanIntro:
 	.string "Hey, there!\n"
-	.string "Check out my sweet Bonéka!$"
+	.string "Check out my sweet Puppet!$"
 
 Route125_Text_StanDefeat:
 	.string "I floundered…$"
@@ -3816,7 +3816,7 @@ Route125_Text_TanyaPostBattle:
 
 Route125_Text_SharonIntro:
 	.string "How would you like to take on the\n"
-	.string "Water-type Bonéka I raised?$"
+	.string "Water-type Puppet I raised?$"
 
 Route125_Text_SharonDefeat:
 	.string "Lost it…$"
@@ -3840,7 +3840,7 @@ Route125_Text_ErnestPostBattle:
 	.string "high tide to low tide. Did you know?$"
 
 Route125_Text_ErnestRegister:
-	.string "Register me in your iDollNav,\n"
+	.string "Register me in your TohoNav,\n"
 	.string "and I'll tell you something good.$"
 
 Route125_Text_ErnestRematchIntro:
@@ -3873,7 +3873,7 @@ Route125_Text_KimPostBattle:
 	.string "Let's go see him, Iris!$"
 
 Route125_Text_KimNotEnoughMons:
-	.string "Kim: No, no, no! You need two Bonéka,\n"
+	.string "Kim: No, no, no! You need two Puppets,\n"
 	.string "or it's just no good!$"
 
 Route125_Text_IrisIntro:
@@ -3963,7 +3963,7 @@ Route126_Text_BrendaDefeat:
 	.string "Oh, noooooh!$"
 
 Route126_Text_BrendaPostBattle:
-	.string "I love frolicking with Bonéka in\n"
+	.string "I love frolicking with Puppets in\n"
 	.string "the sea like this!$"
 
 Route126_Text_PabloIntro:
@@ -3976,7 +3976,7 @@ Route126_Text_PabloDefeat:
 
 Route126_Text_PabloPostBattle:
 	.string "Losing to you stimulated my senses!\n"
-	.string "I'll train myself and Bonéka harder!$"
+	.string "I'll train myself and Puppets harder!$"
 
 Route126_Text_PabloRegister:
 	.string "Yep, you're not bad at all!\n"
@@ -4072,18 +4072,18 @@ Route127_Text_JonahPostBattle:
 
 Route127_Text_HenryIntro:
 	.string "Whoops! Don't tell me I snagged\n"
-	.string "a Surfing Bonéka?$"
+	.string "a Surfing Puppet?$"
 
 Route127_Text_HenryDefeat:
 	.string "I can't keep up!$"
 
 Route127_Text_HenryPostBattle:
 	.string "It'd be a handful if I hooked\n"
-	.string "your tough Bonéka!$"
+	.string "your tough Puppets!$"
 
 Route127_Text_RogerIntro:
 	.string "Well, hey! This is a match between\n"
-	.string "a Bonéka fan and a fishing buff!$"
+	.string "a Puppet fan and a fishing buff!$"
 
 Route127_Text_RogerDefeat:
 	.string "No! My line's all tangled!\n"
@@ -4094,7 +4094,7 @@ Route127_Text_RogerPostBattle:
 	.string "The tangle tango! Hahaha, snarl!$"
 
 Route127_Text_AidanIntro:
-	.string "Bird Bonéka have excellent vision.\n"
+	.string "Bird Puppets have excellent vision.\n"
 	.string "They spot prey from great heights.$"
 
 Route127_Text_AidanDefeat:
@@ -4161,7 +4161,7 @@ Route128_Text_IsaiahPostBattle:
 Route128_Text_IsaiahRegister:
 	.string "I know I'm not good now, but I think\n"
 	.string "I can win eventually.\p"
-	.string "Please register me in your iDollNav.$"
+	.string "Please register me in your TohoNav.$"
 
 Route128_Text_IsaiahRematchIntro:
 	.string "I'm still feeling good. I'll keep on\n"
@@ -4181,7 +4181,7 @@ Route128_Text_KatelynIntro:
 	.string "of three events.$"
 
 Route128_Text_KatelynDefeat:
-	.string "A Bonéka battle is grueling, too…$"
+	.string "A Puppet battle is grueling, too…$"
 
 Route128_Text_KatelynPostBattle:
 	.string "I have to ride a Bike next, but…\n"
@@ -4193,11 +4193,11 @@ Route128_Text_KatelynRegister:
 
 Route128_Text_KatelynRematchIntro:
 	.string "A triathlon is long. But I guess the\n"
-	.string "road to become the Bonéka Champion\l"
+	.string "road to become the Hoenn Champion\l"
 	.string "is also a long and grueling one.$"
 
 Route128_Text_KatelynRematchDefeat:
-	.string "A Bonéka battle really is harsh\n"
+	.string "A Puppet battle really is harsh\n"
 	.string "and unforgiving…$"
 
 Route128_Text_KatelynPostRematch:
@@ -4206,7 +4206,7 @@ Route128_Text_KatelynPostRematch:
 
 Route128_Text_AlexaIntro:
 	.string "We've been working so hard to mount\n"
-	.string "a Bonéka League challenge…\p"
+	.string "a Hoenn League challenge…\p"
 	.string "We can't afford to lose now!$"
 
 Route128_Text_AlexaDefeat:
@@ -4229,7 +4229,7 @@ Route128_Text_RubenPostBattle:
 
 Route128_Text_WayneIntro:
 	.string "I want to visit Ever Grande, so I\n"
-	.string "caught myself a Bonéka that knows\l"
+	.string "caught myself a Puppet that knows\l"
 	.string "the move Waterfall to crest the falls.$"
 
 Route128_Text_WayneDefeat:
@@ -4237,7 +4237,7 @@ Route128_Text_WayneDefeat:
 
 Route128_Text_WaynePostBattle:
 	.string "Awww, phooey!\p"
-	.string "My Bonéka knows Waterfall, but\n"
+	.string "My Puppet knows Waterfall, but\n"
 	.string "I don't have the Sootopolis Gym Badge!$"
 
 Route128_Text_HarrisonIntro:
@@ -4326,7 +4326,7 @@ Route129_Text_ClarenceDefeat:
 	.string "Winning sure isn't easy.$"
 
 Route129_Text_ClarencePostBattle:
-	.string "You have your sights on the Bonéka\n"
+	.string "You have your sights on the Hoenn\n"
 	.string "League? Keep at it!$"
 
 Route130_Text_RodneyIntro:
@@ -4349,13 +4349,13 @@ Route130_Text_KatieIntro:
 
 Route130_Text_KatieDefeat:
 	.string "Like the vast blue sea,\n"
-	.string "the world of Bonéka spans\l"
+	.string "the world of Puppets spans\l"
 	.string "depths beyond belief.$"
 
 Route130_Text_KatiePostBattle:
 	.string "The world's children dream\n"
 	.string "of one day becoming\l"
-	.string "the Bonéka Champion.$"
+	.string "the Hoenn Champion.$"
 
 Route130_Text_SantiagoIntro:
 	.string "Floating on the open sea like this…\n"
@@ -4369,11 +4369,11 @@ Route130_Text_SantiagoPostBattle:
 	.string "I'm one happy guy…$"
 
 Route131_Text_RichardIntro:
-	.string "The sea is teeming with Bonéka.\n"
+	.string "The sea is teeming with Puppets.\n"
 	.string "It's not easy swimming, I tell you.$"
 
 Route131_Text_RichardDefeat:
-	.string "Bonéka raised by Trainers are\n"
+	.string "Puppets raised by Trainers are\n"
 	.string "seriously tough…$"
 
 Route131_Text_RichardPostBattle:
@@ -4432,11 +4432,11 @@ Route131_Text_ReliDefeat:
 
 Route131_Text_ReliPostBattle:
 	.string "Reli: The people of Pacifidlog are\n"
-	.string "together with the sea and Bonéka from\l"
+	.string "together with the sea and Puppets from\l"
 	.string "the time they are born.$"
 
 Route131_Text_ReliNotEnoughMons:
-	.string "Reli: You don't have two Bonéka?\n"
+	.string "Reli: You don't have two Puppets?\n"
 	.string "We can't enjoy a battle, then.$"
 
 Route131_Text_IanIntro:
@@ -4454,7 +4454,7 @@ Route131_Text_IanPostBattle:
 	.string "that's a part of Pacifidlog!$"
 
 Route131_Text_IanNotEnoughMons:
-	.string "Ian: If you have two Bonéka,\n"
+	.string "Ian: If you have two Puppets,\n"
 	.string "we'll take you on!$"
 
 Route131_Text_TaliaIntro:
@@ -4522,7 +4522,7 @@ Route132_Text_RonaldPostBattle:
 	.string "victory and defeat!$"
 
 Route132_Text_KiyoIntro:
-	.string "I contemplate Bonéka 24 hours a day.\n"
+	.string "I contemplate Puppets 24 hours a day.\n"
 	.string "How could you possibly beat me?$"
 
 Route132_Text_KiyoDefeat:
@@ -4531,8 +4531,8 @@ Route132_Text_KiyoDefeat:
 
 Route132_Text_KiyoPostBattle:
 	.string "Urggh…\n"
-	.string "You're a Bonéka fanatic, aren't you?\p"
-	.string "You must contemplate Bonéka 24 hours\n"
+	.string "You're a Puppet fanatic, aren't you?\p"
+	.string "You must contemplate Puppets 24 hours\n"
 	.string "a day, don't you?$"
 
 Route132_Text_MakaylaIntro:
@@ -4624,7 +4624,7 @@ Route133_Text_LindaPostBattle:
 
 Route133_Text_WarrenIntro:
 	.string "I want to win like everyone else, but I\n"
-	.string "won't raise Bonéka like everyone else.$"
+	.string "won't raise Puppets like everyone else.$"
 
 Route133_Text_WarrenDefeat:
 	.string "Darn it!\n"
@@ -4637,7 +4637,7 @@ Route133_Text_WarrenPostBattle:
 
 Route133_Text_BeckIntro:
 	.string "I came all the way out here with my\n"
-	.string "Bird Bonéka.$"
+	.string "Bird Puppets.$"
 
 Route133_Text_BeckDefeat:
 	.string "You…\n"
@@ -4671,18 +4671,18 @@ Route133_Text_ConorPostBattle:
 	.string "Don't lose direction as you grow older.$"
 
 Route134_Text_JackIntro:
-	.string "Even those Bonéka that can swim are\n"
+	.string "Even those Puppets that can swim are\n"
 	.string "carried along by the rapid currents.$"
 
 Route134_Text_JackDefeat:
 	.string "Aiyeeeeh!$"
 
 Route134_Text_JackPostBattle:
-	.string "I think Bonéka enjoy the fast-running\n"
+	.string "I think Puppets enjoy the fast-running\n"
 	.string "currents around these parts.$"
 
 Route134_Text_LaurelIntro:
-	.string "My Bonéka are looking for a fun\n"
+	.string "My Puppets are looking for a fun\n"
 	.string "match. Will you join us?$"
 
 Route134_Text_LaurelDefeat:
@@ -4700,11 +4700,11 @@ Route134_Text_AlexDefeat:
 	.string "Tuckered out again…$"
 
 Route134_Text_AlexPostBattle:
-	.string "My Bird Bonéka get tired quickly after\n"
+	.string "My Bird Puppets get tired quickly after\n"
 	.string "a long flight…$"
 
 Route134_Text_HitoshiIntro:
-	.string "You're a Bonéka Trainer.\n"
+	.string "You're a Puppet Trainer.\n"
 	.string "No need for words. We battle now.$"
 
 Route134_Text_HitoshiDefeat:
@@ -4739,11 +4739,11 @@ Route134_Text_KelvinDefeat:
 Route134_Text_KelvinPostBattle:
 	.string "If we can't Surf, how are we supposed\n"
 	.string "to get home?\p"
-	.string "Actually, I know a fainted Bonéka\n"
+	.string "Actually, I know a fainted Puppet\n"
 	.string "can still Surf, but it feels wrong.$"
 
 Route134_Text_MarleyIntro:
-	.string "Can your Bonéka dodge our\n"
+	.string "Can your Puppets dodge our\n"
 	.string "lightning-quick attacks?$"
 
 Route134_Text_MarleyDefeat:
@@ -4755,7 +4755,7 @@ Route134_Text_MarleyPostBattle:
 	.string "I will try harder.$"
 
 Route134_Text_ReynaIntro:
-	.string "My Bonéka can't be taken down\n"
+	.string "My Puppets can't be taken down\n"
 	.string "easily!$"
 
 Route134_Text_ReynaDefeat:

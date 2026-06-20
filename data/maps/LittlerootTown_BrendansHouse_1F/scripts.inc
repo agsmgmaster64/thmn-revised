@@ -288,7 +288,7 @@ PlayersHouse_1F_Text_IsntItNiceInHere:
 	.string "Isn't it nice in here, too?$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "The mover's Bonéka do all the work\n"
+	.string "The mover's Puppets do all the work\n"
 	.string "of moving us in and cleaning up after.\l"
 	.string "This is so convenient!\p"
 	.string "{PLAYER}, your room is upstairs.\n"
@@ -351,7 +351,7 @@ PlayersHouse_1F_Text_DontPushYourselfTooHard:
 	.string "Go for it, honey!$"
 
 PlayersHouse_1F_Text_IsThatAPokenav:
-	.string "Mom: What is that, honey? A iDollNav?\n"
+	.string "Mom: What is that, honey? A TohoNav?\n"
 	.string "Someone from Devon gave it to you?\p"
 	.string "Well, honey, how about registering\n"
 	.string "your mom?\p"
@@ -359,7 +359,7 @@ PlayersHouse_1F_Text_IsThatAPokenav:
 
 PlayersHouse_1F_Text_RegisteredMom:
 	.string "Registered Mom\n"
-	.string "in the iDollNav.$"
+	.string "in the TohoNav.$"
 
 PlayersHouse_1F_Text_Vigoroth1:
 	.string "Chen chen…$"
@@ -409,7 +409,7 @@ PlayersHouse_1F_Text_BetterGetBackToGym:
 PlayersHouse_1F_Text_DadShouldStayLonger:
 	.string "Mom: That Dad of yours…\p"
 	.string "He comes home for the first time in a\n"
-	.string "while, but all he talks about is Bonéka.\p"
+	.string "while, but all he talks about is Puppets.\p"
 	.string "He should relax and stay a little longer.$"
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
@@ -420,8 +420,8 @@ PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "news flash!\p"
 	.string "In various Hoenn locales, there have\n"
 	.string "been reports of a BZZT…colored\l"
-	.string "Bonéka in flight.\p"
-	.string "The identity of this Bonéka is\n"
+	.string "Puppet in flight.\p"
+	.string "The identity of this Puppet is\n"
 	.string "currently unknown.\p"
 	.string "We now return you to the regular\n"
 	.string "movie program.$"
@@ -429,8 +429,8 @@ PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 PlayersHouse_1F_Text_WhatColorDidTheySay:
 	.string "Mom: {PLAYER}, did you catch that?\p"
 	.string "What color did the announcer say\n"
-	.string "that Bonéka was?$"
+	.string "that Puppet was?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "Mom: Well, isn't that something!\n"
-	.string "There are still unknown Bonéka.$"
+	.string "There are still unknown Puppets.$"

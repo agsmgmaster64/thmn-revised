@@ -330,7 +330,7 @@ RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 
 RivalsHouse_1F_Text_LikeChildLikeFather:
 	.string "Like child, like father.\p"
-	.string "My husband is as wild about Bonéka\n"
+	.string "My husband is as wild about Puppets\n"
 	.string "as our child.\p"
 	.string "If he's not at his Lab, he's likely\n"
 	.string "scrabbling about in grassy places.$"
@@ -338,7 +338,7 @@ RivalsHouse_1F_Text_LikeChildLikeFather:
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
 	.string "That {RIVAL}!\p"
 	.string "I guess our child is too busy with\n"
-	.string "Bonéka to notice that you came\l"
+	.string "Puppets to notice that you came\l"
 	.string "to visit, {PLAYER}{KUN}.$"
 
 RivalsHouse_1F_Text_WentOutToRoute103:
@@ -349,7 +349,7 @@ RivalsHouse_1F_Text_WentOutToRoute103:
 
 RivalsHouse_1F_Text_ShouldGoHomeEverySoOften:
 	.string "I think it's wonderful for people to\n"
-	.string "travel with Bonéka.\p"
+	.string "travel with Puppets.\p"
 	.string "But you should go home every so often\n"
 	.string "to let your mother know you're okay.\p"
 	.string "She might not say it, but I'm sure she\n"
@@ -392,14 +392,14 @@ RivalsHouse_1F_Text_BrendanWhoAreYou:
 	.string "My name's Renko.\n"
 	.string "So, hi, neighbor!\p"
 	.string "Huh? Hey, {PLAYER}, don't you have\n"
-	.string "a Bonéka?\p"
+	.string "a Puppet?\p"
 	.string "Do you want me to go catch you one?\p"
 	.string "Aw, darn, I forgot…\p"
 	.string "I'm supposed to go help my dad catch\n"
-	.string "some wild Bonéka.\p"
+	.string "some wild Puppets.\p"
 	.string "Some other time, okay?$"
 
 RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Hi, neighbor!\p"
 	.string "Do you already have your\n"
-	.string "own Bonéka?$"
+	.string "own Puppet?$"

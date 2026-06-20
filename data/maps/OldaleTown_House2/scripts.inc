@@ -10,11 +10,11 @@ OldaleTown_House2_EventScript_Man::
 	end
 
 OldaleTown_House2_Text_PokemonLevelUp:
-	.string "When Bonéka battle, they eventually\n"
+	.string "When Puppets battle, they eventually\n"
 	.string "level up and become stronger.$"
 
 OldaleTown_House2_Text_YoullGoFurtherWithStrongPokemon:
-	.string "If the Bonéka with you become\n"
+	.string "If the Puppets with you become\n"
 	.string "stronger, you'll be able to go farther\l"
 	.string "away from here.$"
 

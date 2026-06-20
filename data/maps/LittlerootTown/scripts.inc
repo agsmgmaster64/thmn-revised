@@ -922,10 +922,10 @@ LittlerootTown_Text_WaitPlayer:
 LittlerootTown_Text_WearTheseRunningShoes:
 	.string "Mom: {PLAYER}! {PLAYER}! Did you\n"
 	.string "introduce yourself to Prof. Birch?\p"
-	.string "Oh! What an adorable Bonéka!\n"
+	.string "Oh! What an adorable Puppet!\n"
 	.string "You got it from Prof. Birch. How nice!\p"
 	.string "You're your father's child, all right.\n"
-	.string "You look good together with Bonéka!\p"
+	.string "You look good together with a Puppet!\p"
 	.string "Here, honey! If you're going out on an\n"
 	.string "adventure, wear these Running Shoes.\p"
 	.string "They'll put a zip in your step!$"
@@ -946,7 +946,7 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "To think that you have your very own\n"
-	.string "Bonéka now…\l"
+	.string "Puppet now…\l"
 	.string "Your father will be overjoyed.\p"
 	.string "…But please be careful.\n"
 	.string "If anything happens, you can come home.\p"
@@ -954,7 +954,7 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 
 LittlerootTown_Text_CanUsePCToStoreItems:
 	.string "If you use a PC, you can store items\n"
-	.string "and Bonéka.\p"
+	.string "and Puppets.\p"
 	.string "The power of science is staggering!$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab:
@@ -967,18 +967,18 @@ LittlerootTown_Text_BirchSpendsDaysInLab:
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
 	.string "Um, um, um!\p"
 	.string "If you go outside and go in the grass,\n"
-	.string "wild Bonéka will jump out!$"
+	.string "wild Puppets will jump out!$"
 
 LittlerootTown_Text_DangerousIfYouDontHavePokemon:
 	.string "It's dangerous if you don't have\n"
-	.string "your own Bonéka.$"
+	.string "your own Puppets.$"
 
 LittlerootTown_Text_CanYouGoSeeWhatsHappening:
 	.string "Um, hi!\p"
-	.string "There are scary Bonéka outside!\n"
+	.string "There are scary Puppets outside!\n"
 	.string "I can hear their cries!\p"
 	.string "I want to go see what's going on,\n"
-	.string "but I don't have any Bonéka…\p"
+	.string "but I don't have any Puppets…\p"
 	.string "Can you go see what's happening\n"
 	.string "for me?$"
 
@@ -987,7 +987,7 @@ LittlerootTown_Text_YouSavedBirch:
 	.string "I'm so glad!$"
 
 LittlerootTown_Text_GoodLuckCatchingPokemon:
-	.string "Are you going to catch Bonéka?\n"
+	.string "Are you going to catch Puppets?\n"
 	.string "Good luck!$"
 
 LittlerootTown_Text_TownSign:
@@ -995,7 +995,7 @@ LittlerootTown_Text_TownSign:
 	.string "“A town that can't be shaded any hue.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "Prof. Birch's Bonéka Lab$"
+	.string "Prof. Birch's Puppet Lab$"
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s House$"
@@ -1009,7 +1009,7 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I knew there was something special\n"
 	.string "about you when I first saw you,\l"
 	.string "but I never expected this.\p"
-	.string "Oh, yes. Do you still have the iDollDex\n"
+	.string "Oh, yes. Do you still have the TohoDex\n"
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my Lab.$"

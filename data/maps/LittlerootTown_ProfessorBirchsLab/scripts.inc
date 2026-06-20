@@ -677,7 +677,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork:
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchEnjoysRivalsHelpToo:
 	.string "Prof. Birch is studying the habitats\n"
-	.string "and distribution of Bonéka.\p"
+	.string "and distribution of Puppets.\p"
 	.string "The Prof enjoys {RIVAL}'s help, too.\n"
 	.string "There's a lot of love there.$"
 
@@ -686,13 +686,13 @@ LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
 	.string "I've heard so much about you from\n"
 	.string "your father.\p"
 	.string "I've heard that you don't have your\n"
-	.string "own Bonéka yet.\p"
+	.string "own Puppet yet.\p"
 	.string "But the way you battled earlier,\n"
 	.string "you pulled it off with aplomb!\p"
 	.string "I guess you have your father's blood\n"
 	.string "in your veins after all!\p"
 	.string "Oh, yes. As thanks for rescuing me,\n"
-	.string "I'd like you to have the Bonéka you\l"
+	.string "I'd like you to have the Puppet you\l"
 	.string "used earlier.\p"
 	.string "{PLAYER} received the {STR_VAR_1}!$"
 
@@ -701,11 +701,11 @@ LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon:
 	.string "give a nickname to that {STR_VAR_1}?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival:
-	.string "Prof. Birch: If you work at Bonéka\n"
+	.string "Prof. Birch: If you work at Puppets\n"
 	.string "and gain experience, I think you'll make\l"
 	.string "an extremely good Trainer.\p"
 	.string "My kid, {RIVAL}, is also studying\n"
-	.string "Bonéka while helping me out.\p"
+	.string "Puppets while helping me out.\p"
 	.string "{PLAYER}{KUN}, don't you think it might be\n"
 	.string "a good idea to go see {RIVAL}?$"
 
@@ -724,7 +724,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome:
 	.string "Gone home, I think.\p"
 	.string "Or maybe that kid's scrabbling around\n"
 	.string "in tall grass again somewhere…\p"
-	.string "If you or your Bonéka get tired,\n"
+	.string "If you or your Puppets get tired,\n"
 	.string "you should get some rest at home.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex:
@@ -737,40 +737,40 @@ LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex:
 	.string "a TRAINER already.\p"
 	.string "Here, {PLAYER}{KUN}, I ordered this for my\n"
 	.string "research, but I think you should have\l"
-	.string "this iDollDex.$"
+	.string "this TohoDex.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex:
-	.string "{PLAYER} received the iDollDex!$"
+	.string "{PLAYER} received the TohoDex!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
-	.string "Prof. Birch: The iDollDex is a high-tech\n"
+	.string "Prof. Birch: The TohoDex is a high-tech\n"
 	.string "tool that automatically makes a record\l"
-	.string "of any Bonéka you meet or catch.\p"
+	.string "of any Puppet you meet or catch.\p"
 	.string "My kid, {RIVAL}, goes everywhere\n"
 	.string "with it.\p"
-	.string "Whenever my kid catches a rare Bonéka\n"
-	.string "and records its data in the iDollDex,\l"
+	.string "Whenever my kid catches a rare Puppet\n"
+	.string "and records its data in the TohoDex,\l"
 	.string "why, {RIVAL} looks for me while I'm out\l"
 	.string "doing fieldwork, and shows me.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
-	.string "Prof. Birch: Countless Bonéka\n"
+	.string "Prof. Birch: Countless Puppets\n"
 	.string "await you!\p"
 	.string "Argh, I'm getting the itch to get out\n"
 	.string "and do fieldwork again!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese:
 	.string "Maribel: Oh, wow, {PLAYER}{KUN}!\n"
-	.string "You got an iDollDex, too!\p"
+	.string "You got a TohoDex, too!\p"
 	.string "That's great! Just like me!\n"
 	.string "I've got something for you, too!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls:
 	.string "Maribel: It's fun if you can get a\n"
-	.string "lot of Bonéka!\p"
+	.string "lot of Puppets!\p"
 	.string "I'm going to look all over the place\n"
-	.string "because I want different Bonéka.\p"
-	.string "If I find any cute Bonéka, I'll catch\n"
+	.string "because I want different Puppets.\p"
+	.string "If I find any cute Puppets, I'll catch\n"
 	.string "them with Miko Orbs!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull:
@@ -778,20 +778,20 @@ LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull:
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhereShouldIGoNext:
 	.string "Maribel: I wonder where I should go\n"
-	.string "look for Bonéka next?$"
+	.string "look for Puppets next?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanGotPokedexTooTakeThese:
 	.string "Renko: Huh…\n"
-	.string "So you got an iDollDex, too.\p"
+	.string "So you got an TohoDex, too.\p"
 	.string "Well then, here.\n"
 	.string "I'll give you these.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls:
 	.string "Renko: You know it's more fun to\n"
-	.string "have a whole bunch of Bonéka.\p"
+	.string "have a whole bunch of Puppets.\p"
 	.string "I'm going to explore all over the place\n"
-	.string "to find different Bonéka.\p"
-	.string "If I find any cool Bonéka, you bet\n"
+	.string "to find different Puppets.\p"
+	.string "If I find any cool Puppets, you bet\n"
 	.string "I'll try to get them with Miko Orbs.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
@@ -799,7 +799,7 @@ LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext:
 	.string "Renko: Where should I look for\n"
-	.string "Bonéka next…$"
+	.string "Puppets next…$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine:
 	.string "It's a serious-looking machine.\n"
@@ -810,7 +810,7 @@ LittlerootTown_ProfessorBirchsLab_Text_PCUsedForResearch:
 	.string "Better not mess around with it.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CrammedWithBooksOnPokemon:
-	.string "It's crammed with books on Bonéka.$"
+	.string "It's crammed with books on Puppets.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BookTooHardToRead:
 	.string "It's a book that's too hard to read.$"
@@ -818,47 +818,47 @@ LittlerootTown_ProfessorBirchsLab_Text_BookTooHardToRead:
 LittlerootTown_ProfessorBirchsLab_Text_OtherRegionsUpgradeToNational:
 	.string "Prof. Birch: Now…\p"
 	.string "{PLAYER}{KUN} and {RIVAL}, I've had the two\n"
-	.string "of you help me study Bonéka.\p"
+	.string "of you help me study Puppets.\p"
 	.string "Thanks to your help, new facts\n"
 	.string "are coming to light.\p"
 	.string "It appears that in the Hoenn region,\n"
-	.string "there are also Bonéka from other\l"
+	.string "there are also Puppets from other\l"
 	.string "regions.\p"
 	.string "It goes to show how rich and varied\n"
 	.string "the natural environments of Hoenn\l"
 	.string "happen to be.\p"
 	.string "That's why I think it's necessary for\n"
-	.string "me to upgrade your iDollDex to\l"
+	.string "me to upgrade your TohoDex to\l"
 	.string "the World Mode.\p"
-	.string "Here, let me see your iDollDex units.$"
+	.string "Here, let me see your TohoDex units.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayUpgradeSoCool:
 	.string "Maribel: Eheheh!\p"
-	.string "It's so cool that even my iDollDex\n"
+	.string "It's so cool that even my TohoDex\n"
 	.string "is getting updated!\p"
 	.string "It's because you went out and caught\n"
-	.string "so many Bonéka, {PLAYER}{KUN}!$"
+	.string "so many Puppets, {PLAYER}{KUN}!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanYouCanThankMe:
 	.string "Renko: I went out all over Hoenn\n"
-	.string "and checked out Bonéka.\p"
+	.string "and checked out Puppets.\p"
 	.string "You can thank me for getting\n"
-	.string "the World Mode iDollDex.\p"
+	.string "the World Mode TohoDex.\p"
 	.string "Yep, you're lucky, {PLAYER}!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OkayAllDone:
 	.string "Prof. Birch: Okay, all done!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PokedexUpgradedToNational:
-	.string "{PLAYER}'s iDollDex was upgraded\n"
+	.string "{PLAYER}'s TohoDex was upgraded\n"
 	.string "to the World Mode!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2:
 	.string "Prof. Birch: But listen.\n"
 	.string "You've become the Champion,\l"
-	.string "but your Bonéka journey isn't over.\p"
+	.string "but your Puppet journey isn't over.\p"
 	.string "There is no end to the road\n"
-	.string "that is Bonéka.\p"
+	.string "that is Puppets.\p"
 	.string "Somewhere, there is a grassy patch\n"
 	.string "that's waiting for you!$"
 
@@ -876,41 +876,41 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanTakeBreakFromFieldwork:
 
 LittlerootTown_ProfessorBirchsLab_Text_CompletedDexChoosePokemon:
 	.string "Prof. Birch: Oh, {PLAYER}{KUN}!\n"
-	.string "Let's have a look at your iDollDex.\p"
+	.string "Let's have a look at your TohoDex.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Yes, there's no doubt about it.\p"
 	.string "You really have completed the Hoenn\n"
-	.string "region's iDollDex.\p"
+	.string "region's TohoDex.\p"
 	.string "That's more than just impressive.\p"
 	.string "I have a gift for you.\p"
 	.string "Consider it my show of appreciation\n"
 	.string "for the fantastic work you've done.\p"
-	.string "My gift is a rare Bonéka only found\n"
+	.string "My gift is a rare Puppets only found\n"
 	.string "in another region!\p"
 	.string "You can have any one of these\n"
-	.string "three Bonéka!$"
+	.string "three Puppets!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CanHaveAnyOneOfRarePokemon:
-	.string "Prof. Birch: These are rare Bonéka\n"
+	.string "Prof. Birch: These are rare Puppets\n"
 	.string "only found in another region!\p"
 	.string "You can have any one of these\n"
-	.string "three Bonéka!$"
+	.string "three Puppets!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_YoullTakeCyndaquil:
-	.string "Prof. Birch: The Miko Bonéka\n"
+	.string "Prof. Birch: The Miko Puppet\n"
 	.string "CReimu caught your eye!\p"
 	.string "You're as sharp as ever!\p"
 	.string "So the CReimu is your final choice?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_YoullTakeTotodile:
-	.string "Prof. Birch: The Magic Bonéka\n"
+	.string "Prof. Birch: The Magic Puppet\n"
 	.string "CMarisa is your choice!\p"
 	.string "You know how to pick a good one.\p"
 	.string "So, you'll take the CMarisa?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_YoullTakeChikorita:
-	.string "Prof. Birch: The Maid Bonéka\n"
+	.string "Prof. Birch: The Maid Puppet\n"
 	.string "CSakuya is your choice!\p"
 	.string "You sure know what you're doing.\p"
 	.string "So, you'll take the CSakuya?$"
@@ -918,12 +918,12 @@ LittlerootTown_ProfessorBirchsLab_Text_YoullTakeChikorita:
 LittlerootTown_ProfessorBirchsLab_Text_TakeYourTimeAllInvaluable:
 	.string "Prof. Birch: Take your time before\n"
 	.string "you decide.\p"
-	.string "They're all invaluable Bonéka.$"
+	.string "They're all invaluable Puppets.$"
 
 @ Unused
 LittlerootTown_ProfessorBirchsLab_Text_PickedFinePokemon:
 	.string "Prof. Birch: I see!\n"
-	.string "You picked a fine Bonéka!$"
+	.string "You picked a fine Puppet!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedJohtoStarter:
 	.string "{PLAYER} received the {STR_VAR_1}\n"
@@ -936,21 +936,21 @@ LittlerootTown_ProfessorBirchsLab_Text_NicknameJohtoStarter:
 
 LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting:
 	.string "Prof. Birch: Listen, {PLAYER}{KUN}.\n"
-	.string "You've completed the Hoenn POKéDEX,\l"
-	.string "but your Bonéka journey isn't over.\p"
+	.string "You've completed the Hoenn TohoDex,\l"
+	.string "but your Puppet journey isn't over.\p"
 	.string "There is no end to the road\n"
-	.string "that is Bonéka.\p"
+	.string "that is Puppets.\p"
 	.string "Somewhere, there is a grassy patch\n"
 	.string "that's waiting for you!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BetterLeaveOthersAlone:
-	.string "You received the promised Bonéka.\n"
+	.string "You received the promised Puppet.\n"
 	.string "Better leave the others alone.$"
 
 @ Unused
 LittlerootTown_ProfessorBirchsLab_Text_DontHaveAnyRoomForPokemon:
 	.string "Oh, you don't have any room for\n"
-	.string "this Bonéka.$"
+	.string "this Puppet.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhatNextImStayingHere:
 	.string "Maribel: {PLAYER}{KUN}, after this…\n"
@@ -958,12 +958,12 @@ LittlerootTown_ProfessorBirchsLab_Text_MayWhatNextImStayingHere:
 	.string "Are you going to keep battling\n"
 	.string "and sharpening your skills?\p"
 	.string "Or are you going to try filling\n"
-	.string "the National iDollDex?\p"
+	.string "the National TohoDex?\p"
 	.string "I'm staying here to help the Prof.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanPreferCollectingSlowly:
 	.string "Renko: Rather than collecting\n"
-	.string "Bonéka, I prefer slowly and \l"
+	.string "Puppets, I prefer slowly and \l"
 	.string "steadily raising the one I chose.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayHaveYouGoneToBattleFrontier:

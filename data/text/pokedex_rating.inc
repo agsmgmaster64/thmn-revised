@@ -1,34 +1,34 @@
 gBirchDexRatingText_AreYouCurious::
 	.string "Prof. Birch: Ah, {PLAYER}{KUN}!\p"
 	.string "Are you curious about how your\n"
-	.string "iDollDex is coming along?$"
+	.string "TohoDex is coming along?$"
 
 gBirchDexRatingText_Cancel::
 	.string "Hm? Oh, you haven't caught enough\n"
-	.string "Bonéka to make it worthwhile.$"
+	.string "Puppets to make it worthwhile.$"
 
 gBirchDexRatingText_SoYouveSeenAndCaught::
 	.string "Hmhm…\p"
-	.string "So, you've seen {STR_VAR_1} Bonéka,\n"
-	.string "and you've caught {STR_VAR_2} Bonéka…$"
+	.string "So, you've seen {STR_VAR_1} Puppets,\n"
+	.string "and you've caught {STR_VAR_2} Puppets…$"
 
 gBirchDexRatingText_LessThan10::
 	.string "Go into grassy areas more and look\n"
-	.string "for Bonéka more carefully.$"
+	.string "for Puppets more carefully.$"
 
 gBirchDexRatingText_LessThan20::
 	.string "I guess you're getting the hang\n"
 	.string "of it. But, it gets harder from here.$"
 
 gBirchDexRatingText_LessThan30::
-	.string "Some Bonéka only appear in\n"
+	.string "Some Puppets only appear in\n"
 	.string "certain areas.\l"
 	.string "You must be persistent.$"
 
 gBirchDexRatingText_LessThan40::
 	.string "Well, it could use more quantity,\n"
 	.string "but this is looking more like\l"
-	.string "an iDollDex now.$"
+	.string "an TohoDex now.$"
 
 gBirchDexRatingText_LessThan50::
 	.string "This is coming along pretty good.\n"
@@ -36,15 +36,15 @@ gBirchDexRatingText_LessThan50::
 
 gBirchDexRatingText_LessThan60::
 	.string "Are you using any Rods?\n"
-	.string "There are many Bonéka in the sea.$"
+	.string "There are many Puppets in the sea.$"
 
 gBirchDexRatingText_LessThan70::
-	.string "Instead of just catching Bonéka,\n"
+	.string "Instead of just catching Puppets,\n"
 	.string "how about making them evolve, too?$"
 
 gBirchDexRatingText_LessThan80::
 	.string "This is going to be a fantastic\n"
-	.string "iDollDex.\l"
+	.string "TohoDex.\l"
 	.string "That's the feeling I'm getting.$"
 
 gBirchDexRatingText_LessThan90::
@@ -53,85 +53,85 @@ gBirchDexRatingText_LessThan90::
 
 gBirchDexRatingText_LessThan100::
 	.string "Have you visited the Safari Zone?\p"
-	.string "I hear there are some Bonéka that\n"
+	.string "I hear there are some Puppets that\n"
 	.string "can only be caught there.$"
 
 gBirchDexRatingText_LessThan110::
 	.string "You've finally reached\n"
 	.string "the 100-kind mark.\p"
-	.string "This is an impressive iDollDex!$"
+	.string "This is an impressive TohoDex!$"
 
 gBirchDexRatingText_LessThan120::
-	.string "There might be Bonéka that can be\n"
+	.string "There might be Puppets that can be\n"
 	.string "found using Rock Smash.$"
 
 gBirchDexRatingText_LessThan130::
-	.string "You should get some more Bonéka\n"
+	.string "You should get some more Puppets\n"
 	.string "by trading with others.$"
 
 gBirchDexRatingText_LessThan140::
-	.string "I've heard of Bonéka that evolve\n"
+	.string "I've heard of Puppets that evolve\n"
 	.string "when they come to fully love their\l"
 	.string "Trainers.$"
 
 gBirchDexRatingText_LessThan150::
 	.string "I had no idea that there were so\n"
-	.string "many Bonéka species in the Hoenn\l"
+	.string "many Puppets species in the Hoenn\l"
 	.string "region.$"
 
 gBirchDexRatingText_LessThan160::
-	.string "On occasion, some Bonéka appear\n"
+	.string "On occasion, some Puppets appear\n"
 	.string "in large numbers like outbreaks.\p"
 	.string "Don't miss opportunities like\n"
 	.string "those.$"
 
 gBirchDexRatingText_LessThan170::
 	.string "One can get a very good idea about\n"
-	.string "the Bonéka of the Hoenn region\l"
-	.string "by looking through your iDollDex.$"
+	.string "the Puppets of the Hoenn region\l"
+	.string "by looking through your TohoDex.$"
 
 gBirchDexRatingText_LessThan180::
 	.string "I would say you already qualify as\n"
-	.string "a Bonéka Professor, and a good\l"
+	.string "a Puppets Professor, and a good\l"
 	.string "one, too!$"
 
 gBirchDexRatingText_LessThan190::
-	.string "With a iDollDex this complete,\n"
+	.string "With a TohoDex this complete,\n"
 	.string "you're a real professional at this!$"
 
 gBirchDexRatingText_LessThan200::
 	.string "You're very close to completing\n"
-	.string "this iDollDex.\l"
+	.string "this TohoDex.\l"
 	.string "I can feel it in my bones!$"
 
 gBirchDexRatingText_DexCompleted::
 	.string "Congratulations!\n"
-	.string "Your iDollDex is complete!$"
+	.string "Your TohoDex is complete!$"
 
 gBirchDexRatingText_OnANationwideBasis::
 	.string "Hmhm…\n"
 	.string "On a nationwide basis…\p"
-	.string "You've seen {STR_VAR_1} Bonéka,\n"
-	.string "and you've caught {STR_VAR_2} Bonéka…$"
+	.string "You've seen {STR_VAR_1} Puppets,\n"
+	.string "and you've caught {STR_VAR_2} Puppets…$"
 
 @ FRLG
 
 PokedexRating_Text_HowIsPokedexComingAlong::
 	.string "Oak: Good to see you!\n"
-	.string "How is your iDollDex coming along?\p"
+	.string "How is your TohoDex coming along?\p"
 	.string "Here, let me take a look.$"
 
 PokedexRating_Text_SeenXOwnedY::
 	.string "The amount of progress you've made\n"
-	.string "on your iDollDex is:\p"
-	.string "{STR_VAR_1} Bonéka seen and\n"
-	.string "{STR_VAR_2} Bonéka owned.\p"
+	.string "on your TohoDex is:\p"
+	.string "{STR_VAR_1} Puppets seen and\n"
+	.string "{STR_VAR_2} Puppets owned.\p"
 	.string "{FONT_NORMAL}Prof. Oak's rating:$"
 
 PokedexRating_Text_LessThan10::
 	.string "You still have lots to do.\p"
 	.string "Go into every patch of grass you\n"
-	.string "see and look for Bonéka!$"
+	.string "see and look for Puppets!$"
 
 PokedexRating_Text_LessThan20::
 	.string "It looks as if you're getting on\n"
@@ -140,10 +140,10 @@ PokedexRating_Text_LessThan20::
 	.string "HM. Make sure you go get it!$"
 
 PokedexRating_Text_LessThan30::
-	.string "Your iDollDex could use a bit more\n"
+	.string "Your TohoDex could use a bit more\n"
 	.string "volume still!\p"
 	.string "Try to catch other species of\n"
-	.string "Bonéka!$"
+	.string "Puppets!$"
 
 PokedexRating_Text_LessThan40::
 	.string "Good, it's apparent that you're\n"
@@ -152,7 +152,7 @@ PokedexRating_Text_LessThan40::
 	.string "Itemfinder. Be sure to collect it!$"
 
 PokedexRating_Text_LessThan50::
-	.string "Your iDollDex is coming along quite\n"
+	.string "Your TohoDex is coming along quite\n"
 	.string "well!\p"
 	.string "I've given one of my Aides an\n"
 	.string "Amulet Coin. Be sure to get it!$"
@@ -165,12 +165,12 @@ PokedexRating_Text_LessThan60::
 
 PokedexRating_Text_LessThan70::
 	.string "Hoho! This is turning into quite the\n"
-	.string "respectable iDollDex!$"
+	.string "respectable TohoDex!$"
 
 PokedexRating_Text_LessThan80::
 	.string "Very good!\p"
 	.string "I think you'll collect even more\n"
-	.string "Bonéka by going fishing!$"
+	.string "Puppets by going fishing!$"
 
 PokedexRating_Text_LessThan90::
 	.string "Wonderful! Let me guess… You\n"
@@ -186,7 +186,7 @@ PokedexRating_Text_LessThan110::
 
 PokedexRating_Text_LessThan120::
 	.string "You even have the evolved forms\n"
-	.string "of Bonéka! Super!$"
+	.string "of Puppets! Super!$"
 
 PokedexRating_Text_LessThan130::
 	.string "Excellent! Trade with friends to\n"
@@ -198,25 +198,25 @@ PokedexRating_Text_LessThan140::
 
 PokedexRating_Text_LessThan150::
 	.string "I have nothing left to say!\n"
-	.string "You're the Bonéka Professor now!$"
+	.string "You're the Puppets Professor now!$"
 
 PokedexRating_Text_Complete::
-	.string "Your iDollDex is entirely complete!\n"
+	.string "Your TohoDex is entirely complete!\n"
 	.string "Congratulations!!$"
 
 PokedexRating_Text_NationalDexSeenXOwnedY::
-	.string "And your National iDollDex is:\p"
-	.string "{STR_VAR_1} Bonéka seen and\n"
-	.string "{STR_VAR_2} Bonéka owned.$"
+	.string "And your National TohoDex is:\p"
+	.string "{STR_VAR_1} Puppets seen and\n"
+	.string "{STR_VAR_2} Puppets owned.$"
 
 PokedexRating_Text_LookForwardToFilledNationalDex::
 	.string "I'll be looking forward to seeing\n"
-	.string "you fill the National iDollDex!$"
+	.string "you fill the National TohoDex!$"
 
 PokedexRating_Text_YouveCompletedDex::
 	.string "Finally…\p"
 	.string "You've finally completed the\n"
-	.string "iDollDex!\p"
+	.string "TohoDex!\p"
 	.string "It's magnificent!\n"
 	.string "Truly, this is a fantastic feat!$"
 
@@ -230,7 +230,7 @@ PokedexRating_Text_ThankYouMadeDreamReality::
 
 PokedexRating_Text_LoveSeeingYourPokedex::
 	.string "OAK: Ah, welcome!\p"
-	.string "Tell me, how is your iDollDex\n"
+	.string "Tell me, how is your TohoDex\n"
 	.string "coming along?\p"
 	.string "Wahaha!\p"
 	.string "Actually, I know how it is, but I\n"

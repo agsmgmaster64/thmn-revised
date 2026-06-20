@@ -272,24 +272,24 @@ Route101_Text_DontLeaveMe:
 Route101_Text_YouSavedMe:
 	.string "Prof. Birch: Whew…\p"
 	.string "I was in the tall grass studying wild\n"
-	.string "Bonéka when I was jumped.\p"
+	.string "Puppets when I was jumped.\p"
 	.string "You saved me.\n"
 	.string "Thanks a lot!\p"
 	.string "Oh?\p"
 	.string "Hi, you're {PLAYER}{KUN}!\p"
 	.string "This is not the place to chat, so come\n"
-	.string "by my Bonéka Lab later, okay?$"
+	.string "by my Puppet Lab later, okay?$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If Bonéka get tired, take them to\n"
-	.string "a Bonéka Center.\p"
-	.string "There's a Bonéka Center in Oldale\n"
+	.string "If Puppets get tired, take them to\n"
+	.string "a Puppet Center.\p"
+	.string "There's a Puppet Center in Oldale\n"
 	.string "Town right close by.$"
 
 Route101_Text_WildPokemonInTallGrass:
-	.string "Wild Bonéka will jump out at you in\n"
+	.string "Wild Puppets will jump out at you in\n"
 	.string "tall grass.\p"
-	.string "If you want to catch Bonéka, you have\n"
+	.string "If you want to catch Puppets, you have\n"
 	.string "to go into the tall grass and search.$"
 
 Route101_Text_RouteSign:

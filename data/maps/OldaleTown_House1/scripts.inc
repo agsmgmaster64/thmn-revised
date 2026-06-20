@@ -6,10 +6,10 @@ OldaleTown_House1_EventScript_Woman::
 	end
 
 OldaleTown_House1_Text_LeftPokemonGoesOutFirst:
-	.string "When a Bonéka battle starts, the one\n"
+	.string "When a Puppet battle starts, the one\n"
 	.string "at the left of the list goes out first.\p"
-	.string "So, when you get more Bonéka in your\n"
+	.string "So, when you get more Puppets in your\n"
 	.string "party, try switching around the order\l"
-	.string "of your Bonéka.\p"
+	.string "of your Puppets.\p"
 	.string "It could give you an advantage.$"
 

@@ -39,24 +39,24 @@ OldaleTown_PokemonCenter_1F_EventScript_WirelessClubAvailable::
 
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
 	.string "That PC in the corner there is\n"
-	.string "for any Bonéka Trainer to use.\p"
+	.string "for any Puppet Trainer to use.\p"
 	.string "Naturally, that means you're welcome\n"
 	.string "to use it, too.$"
 
 OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
-	.string "Bonéka Centers are great!\p"
+	.string "Puppet Centers are great!\p"
 	.string "You can use their services as much\n"
 	.string "as you like, and it's all for free.\l"
 	.string "You never have to worry!$"
 
 OldaleTown_PokemonCenter_1F_Text_WirelessClubNotAvailable:
-	.string "The Bonéka Wireless Club on\n"
+	.string "The Puppet Wireless Club on\n"
 	.string "the second floor was built recently.\p"
 	.string "But they say they're still making\n"
 	.string "adjustments.$"
 
 OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
-	.string "The Bonéka Wireless Club on\n"
+	.string "The Puppet Wireless Club on\n"
 	.string "the second floor was built recently.\p"
-	.string "I traded Bonéka right away.$"
+	.string "I traded a Puppet right away.$"
 

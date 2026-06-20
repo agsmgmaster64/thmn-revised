@@ -58,11 +58,11 @@ OldaleTown_Mart_Text_PokeBallsAreSoldOut:
 
 OldaleTown_Mart_Text_ImGoingToBuyPokeBalls:
 	.string "I'm going to buy a bunch of Miko Orbs\n"
-	.string "and catch a bunch of Bonéka!$"
+	.string "and catch a bunch of Puppets!$"
 
 OldaleTown_Mart_Text_RestoreHPWithPotion:
-	.string "If a Bonéka gets hurt and loses its HP\n"
+	.string "If a Puppet gets hurt and loses its HP\n"
 	.string "and faints, it won't be able to battle.\p"
-	.string "To prevent your Bonéka from fainting,\n"
+	.string "To prevent your Puppet from fainting,\n"
 	.string "restore its HP with a Potion.$"
 

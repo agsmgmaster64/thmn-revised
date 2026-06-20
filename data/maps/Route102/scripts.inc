@@ -310,8 +310,8 @@ Route102_Text_IchiiDefeatedSurprise:
 	.string "Ugh… I lost…$"
 	
 Route102_Text_IchiiTakeThis:
-	.string "Ichii: I am Ichii, a trainer from\n"
-	.string "the Java Region.\p"
+	.string "Ichii: I am Ichii, a Bonéka trainer\n"
+	.string "from the Java Region.\p"
 	.string "Take this for beating me.$"
 
 Route102_Text_PlayerReceivedChibiSatsuki:
@@ -322,7 +322,7 @@ Route102_Text_IchiiWillMeetAgain:
 
 Route102_Text_WatchMeCatchPokemon:
 	.string "Wally: {PLAYER}…\n"
-	.string "Bonéka hide in tall grass like this,\l"
+	.string "Puppets hide in tall grass like this,\l"
 	.string "don't they?\p"
 	.string "Please watch me and see if I can\n"
 	.string "catch one properly.\p"
@@ -330,7 +330,7 @@ Route102_Text_WatchMeCatchPokemon:
 
 Route102_Text_WallyIDidIt:
 	.string "Wally: I did it… It's my…\n"
-	.string "My Bonéka!$"
+	.string "My Puppet!$"
 
 Route102_Text_LetsGoBack:
 	.string "{PLAYER}, thank you!\n"
@@ -345,7 +345,7 @@ Route102_Text_ImNotVeryTall:
 
 Route102_Text_CatchWholeBunchOfPokemon:
 	.string "I'm going to catch a whole bunch of\n"
-	.string "Bonéka!$"
+	.string "Puppets!$"
 
 Route102_Text_RouteSignOldale:
 	.string "Route 102\n"

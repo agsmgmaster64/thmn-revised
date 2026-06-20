@@ -1007,15 +1007,15 @@ Route104_Text_WhatsItLikeAtBottomOfSea:
 
 Route104_Text_ThrowBallAtWeakenedPokemon:
 	.string "If you're going to throw a Miko Orb,\n"
-	.string "weaken the wild Bonéka first.\p"
+	.string "weaken the wild Puppet first.\p"
 	.string "It will be easier to catch if it's been\n"
 	.string "poisoned, burned, or lulled to sleep.$"
 
 Route104_Text_OnlyThrowBallAtWildPokemon:
 	.string "You're a thief if you try to steal\n"
-	.string "someone else's Bonéka.\p"
+	.string "someone else's Puppets.\p"
 	.string "You should throw Miko Orbs only at\n"
-	.string "wild Bonéka.$"
+	.string "wild Puppets.$"
 
 Route104_Text_ImNotATrainer:
 	.string "Oh, no, I'm not a Trainer.\p"
@@ -1028,7 +1028,7 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 	.string "I like filling my mouth with seeds,\n"
 	.string "then spitting them out fast!\p"
 	.string "You can have this, so you try it out!\p"
-	.string "Use it on a Bonéka, and it will learn\n"
+	.string "Use it on a Puppet, and it will learn\n"
 	.string "a move for firing seeds rapidly.$"
 
 Route104_Text_TMsAreOneTimeUse:
@@ -1070,27 +1070,27 @@ Route104_Text_TrainerTipsDoubleBattles:
 	.string "Trainer Tips\p"
 	.string "In the Hoenn region there are pairs\n"
 	.string "of Trainers who challenge others\l"
-	.string "for 2-on-2 Bonéka battles called\l"
+	.string "for 2-on-2 Puppet battles called\l"
 	.string "Double Battles.\p"
 	.string "In a Double Battle, the Trainer must\n"
-	.string "send out two Bonéka, the one at the\l"
+	.string "send out two Puppets, the one at the\l"
 	.string "left of the list and the top one.\l"
-	.string "Watch how Bonéka are lined up.$"
+	.string "Watch how Puppets are lined up.$"
 
 Route104_Text_MayWeShouldRegister:
 	.string "Maribel: Oh, hi, {PLAYER}{KUN}!\p"
-	.string "Devon upgraded your iDollNav with\n"
+	.string "Devon upgraded your TohoNav with\n"
 	.string "the Match Call system, huh?\p"
 	.string "We should register each other so we\n"
 	.string "can get in contact anytime.$"
 
 Route104_Text_RegisteredMay:
 	.string "{PLAYER} registered Maribel\n"
-	.string "in the iDollNav.$"
+	.string "in the TohoNav.$"
 
 Route104_Text_MayHowsYourPokedex:
 	.string "Maribel: Oh, by the way, {PLAYER}{KUN},\n"
-	.string "how's your iDollDex coming along?$"
+	.string "how's your TohoDex coming along?$"
 
 Route104_Text_MayMinesDecentLetsBattle:
 	.string "Mine's looking pretty decent.\n"
@@ -1100,7 +1100,7 @@ Route104_Text_MayMinesDecentLetsBattle:
 Route104_Text_MayHaventRaisedPokemon:
 	.string "Maribel: Oh, what's the matter?\p"
 	.string "Haven't you caught or raised your\n"
-	.string "Bonéka very much?\p"
+	.string "Puppets very much?\p"
 	.string "That's not very good for a Trainer!$"
 
 Route104_Text_MayLetsBattle:
@@ -1117,25 +1117,25 @@ Route104_Text_MayDefeat:
 
 Route104_Text_MayPostBattle:
 	.string "Maribel: I can tell you've gotten pretty\n"
-	.string "good with the way you handle Bonéka.\p"
+	.string "good with the way you handle Puppets.\p"
 	.string "But instead of only making them\n"
 	.string "battle, you should be like Mr. Briney.\p"
 	.string "It's important to become friends with\n"
-	.string "Bonéka, too.$"
+	.string "Puppets, too.$"
 
 Route104_Text_BrendanWeShouldRegister:
 	.string "Renko: Oh, hey, {PLAYER}!\p"
 	.string "Cool, you had Devon install the Match\n"
-	.string "Call system on your iDollNav!\p"
+	.string "Call system on your TohoNav!\p"
 	.string "Let's register each other in our\n"
-	.string "iDollNav so we can keep in touch.$"
+	.string "TohoNav so we can keep in touch.$"
 
 Route104_Text_RegisteredBrendan:
 	.string "{PLAYER} registered Renko\n"
-	.string "in the iDollNav.$"
+	.string "in the TohoNav.$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "Renko: {PLAYER}, how's your iDollDex?\n"
+	.string "Renko: {PLAYER}, how's your TohoDex?\n"
 	.string "Have you filled in any pages yet?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
@@ -1145,7 +1145,7 @@ Route104_Text_BrendanDoingGreatLetsBattle:
 
 Route104_Text_BrendanNoConfidence:
 	.string "Renko: What's the matter? Don't have\n"
-	.string "any confidence in your Bonéka?$"
+	.string "any confidence in your Puppets?$"
 
 Route104_Text_BrendanLetsBattle:
 	.string "Renko: What's up?\n"
@@ -1161,8 +1161,8 @@ Route104_Text_BrendanDefeat:
 
 Route104_Text_BrendanPostBattle:
 	.string "Renko: You've gotten pretty decent\n"
-	.string "at handling Bonéka.\p"
+	.string "at handling Puppets.\p"
 	.string "But, you know, you shouldn't just be\n"
-	.string "making Bonéka battle.\p"
+	.string "making Puppets battle.\p"
 	.string "Like Mr. Briney, it's important to\n"
-	.string "become friends with your Bonéka.$"
+	.string "become friends with your Puppets.$"

@@ -705,7 +705,7 @@ PetalburgCity_Text_WhereIsWally:
 PetalburgCity_Text_AreYouRookieTrainer:
 	.string "Hiya! Are you maybe…\n"
 	.string "A rookie Trainer?\p"
-	.string "Do you know what Bonéka Trainers\n"
+	.string "Do you know what Puppet Trainers\n"
 	.string "do when they reach a new town?\p"
 	.string "They first check what kind of Gym\n"
 	.string "is in the town.$"
@@ -725,13 +725,13 @@ PetalburgCity_Text_WaterReflection:
 	.string "What do you see reflected in your face?$"
 
 PetalburgCity_Text_FullPartyExplanation:
-	.string "Let's say you have six Bonéka.\n"
+	.string "Let's say you have six Puppets.\n"
 	.string "If you catch another one…\p"
 	.string "It is automatically sent to a Storage\n"
 	.string "Box over a PC connection.$"
 
 PetalburgCity_Text_GymSign:
-	.string "Petalburg City Bonéka Gym\n"
+	.string "Petalburg City Puppet Gym\n"
 	.string "Leader: Norman\l"
 	.string "“A man in pursuit of power!”$"
 
@@ -745,7 +745,7 @@ PetalburgCity_Text_WallyHouseSign:
 PetalburgCity_Text_AreYouATrainer:
 	.string "Excuse me!\p"
 	.string "Let me guess, from the way you're\n"
-	.string "dressed, are you a Bonéka Trainer?$"
+	.string "dressed, are you a Puppet Trainer?$"
 
 PetalburgCity_Text_WellMaybeNot:
 	.string "… … … … … …\p"
