@@ -28,19 +28,19 @@ VictoryRoad_B1F_EventScript_Halle::
 
 VictoryRoad_B1F_Text_SamuelIntro:
 	.string "The thought that I'm getting closer to\n"
-	.string "the Hoenn LEAGUE…\p"
+	.string "the Hoenn League…\p"
 	.string "I'm getting stage fright…$"
 
 VictoryRoad_B1F_Text_SamuelDefeat:
 	.string "I couldn't do a thing…$"
 
 VictoryRoad_B1F_Text_SamuelPostBattle:
-	.string "The Hoenn LEAGUE became distant\n"
+	.string "The Hoenn League became distant\n"
 	.string "again… What a letdown…$"
 
 VictoryRoad_B1F_Text_ShannonIntro:
 	.string "To win your way through the Hoenn\n"
-	.string "LEAGUE, you need the trust of your\l"
+	.string "League, you need the trust of your\l"
 	.string "Puppets.$"
 
 VictoryRoad_B1F_Text_ShannonDefeat:
@@ -53,7 +53,7 @@ VictoryRoad_B1F_Text_ShannonPostBattle:
 
 VictoryRoad_B1F_Text_MichelleIntro:
 	.string "This isn't the goal. It's only a place\n"
-	.string "on the way to the Hoenn LEAGUE.$"
+	.string "on the way to the Hoenn League.$"
 
 VictoryRoad_B1F_Text_MichelleDefeat:
 	.string "That's the way!$"

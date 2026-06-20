@@ -190,11 +190,11 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "It seems that I still have much more\n"
 	.string "to learn…\p"
 	.string "I understand.\p"
-	.string "The Hoenn LEAGUE's rules state\n"
+	.string "The Hoenn League's rules state\n"
 	.string "that TRAINERS are to be given this\l"
 	.string "if they defeat a GYM LEADER.\p"
 	.string "Please accept the official Hoenn\n"
-	.string "LEAGUE STONE BADGE.$"
+	.string "League STONE BADGE.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
 	.string "{PLAYER} received the STONE BADGE\n"

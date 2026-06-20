@@ -192,7 +192,7 @@ SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
 	.string "was supposedly the best in all HOENN!\p"
 	.string "Okay! Check out your TRAINER CARD.\p"
 	.string "If you've gotten all the BADGES, you're\n"
-	.string "set for the Hoenn LEAGUE challenge!$"
+	.string "set for the Hoenn League challenge!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "Let me ask you.\n"
@@ -261,17 +261,17 @@ SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "The TRAINERS who have gathered all\n"
 	.string "the GYM BADGES of HOENN should make\l"
 	.string "way to the ultimate destination.\p"
-	.string "The Hoenn LEAGUE.\p"
+	.string "The Hoenn League.\p"
 	.string "Travel to the easternmost reaches\n"
 	.string "of HOENN, to the island EVER GRANDE.\p"
 	.string "There, you shall find the Hoenn\n"
-	.string "LEAGUE.$"
+	.string "League.$"
 
 SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
 	.string "There remains but one BADGE to\n"
 	.string "obtain in HOENN.\p"
 	.string "If you wish to challenge the Hoenn\n"
-	.string "LEAGUE, you must obtain the last\l"
+	.string "League, you must obtain the last\l"
 	.string "BADGE from the GYM in FORTREE.$"
 
 SootopolisCity_Gym_1F_Text_GymStatue:

@@ -89,13 +89,13 @@ Route111_WinstrateFamilysHouse_Text_GrandsonStrong:
 	.string "you'd end up crying in frustration.\p"
 	.string "He's much stronger than any TRAINER\n"
 	.string "our family knows.\p"
-	.string "He must be challenging the Puppet\n"
+	.string "He must be challenging the Hoenn\n"
 	.string "League Champion by now.\p"
 	.string "Knowing my grandson, he could be the\n"
 	.string "Champion already!$"
 
 Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort:
 	.string "My grandson must be challenging the\n"
-	.string "Puppet League Champion by now.\p"
+	.string "Hoenn League Champion by now.\p"
 	.string "Knowing my grandson, he could be the\n"
 	.string "Champion already!$"

@@ -88,7 +88,7 @@ EverGrandeCity_PokemonCenter_1F_Text_BelieveInYourPokemon:
 
 EverGrandeCity_PokemonCenter_1F_Text_ScottHappyForYou:
 	.string "SCOTT: {PLAYER}{KUN}, you've clawed your\n"
-	.string "way up to face the Puppet League!\p"
+	.string "way up to face the Hoenn League!\p"
 	.string "I'm happy for you!\n"
 	.string "You made my cheering worthwhile!\p"
 	.string "{PLAYER}{KUN}, if you were to become\n"
