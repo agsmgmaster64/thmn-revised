@@ -968,17 +968,17 @@ Route110_Text_HeardYouInstallMatchCall:
 	.string "Oh, I see!\n"
 	.string "You two are running separately.\l"
 	.string "Well, that's fine.\p"
-	.string "Oh, yes, I heard that your POKéNAV\n"
+	.string "Oh, yes, I heard that your TohoNav\n"
 	.string "had the MATCH CALL system installed.\p"
 	.string "Well, then, I should register you in\n"
-	.string "my POKéNAV as well.\p"
+	.string "my TohoNav as well.\p"
 	.string "That way, even when we're apart,\n"
-	.string "I can rate your POKéDEX anytime.\p"
+	.string "I can rate your TohoDex anytime.\p"
 	.string "… … … … … …$"
 
 Route110_Text_RegisteredBirchInPokenav:
 	.string "Registered PROF. BIRCH\n"
-	.string "in the POKéNAV.$"
+	.string "in the TohoNav.$"
 
 Route110_Text_KeepAnEyeOutForRival:
 	.string "PROF. BIRCH: {PLAYER}{KUN}…\p"
@@ -986,4 +986,3 @@ Route110_Text_KeepAnEyeOutForRival:
 	.string "… … … … … …\p"
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
-

@@ -68,7 +68,7 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_MetScott::
 LilycoveCity_CoveLilyMotel_2F_Text_ShowMeCompletedDex:
 	.string "I'm the GAME DESIGNER.\p"
 	.string "Oh, is that right?\n"
-	.string "You're working on a POKéDEX?\p"
+	.string "You're working on a TohoDex?\p"
 	.string "It's tough trying to complete it,\n"
 	.string "but don't give up.\p"
 	.string "If you do complete it, please come\n"

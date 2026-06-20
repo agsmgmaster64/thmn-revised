@@ -52,7 +52,7 @@ FallarborTown_ContestHall_Text_MonAllTheseRibbons:
 	.string "See!\n"
 	.string "My Puppets won all these RIBBONS!\p"
 	.string "Have your Puppets earned any RIBBONS?\n"
-	.string "You can check them on your POKéNAV.$"
+	.string "You can check them on your TohoNav.$"
 
 @ Unused
 FallarborTown_ContestHall_Text_CantWinEverywhere:

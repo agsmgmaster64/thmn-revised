@@ -445,7 +445,7 @@ LilycoveCity_Text_MayGoingBackToLittleroot:
 	.string "MAY: I'm thinking of going back to\n"
 	.string "LITTLEROOT soon.\p"
 	.string "I've caught a decent group of Puppets,\n"
-	.string "and my POKéDEX is coming along, so\l"
+	.string "and my TohoDex is coming along, so\l"
 	.string "I'm going home to show my dad.$"
 
 LilycoveCity_Text_MayYouGoingToCollectBadges:
@@ -454,7 +454,7 @@ LilycoveCity_Text_MayYouGoingToCollectBadges:
 	.string "the Hoenn League challenge?\p"
 	.string "Well, while you're collecting BADGES,\n"
 	.string "{PLAYER}{KUN}, I'm going to work on my\l"
-	.string "POKéDEX. I'll complete it before you!\p"
+	.string "TohoDex. I'll complete it before you!\p"
 	.string "See you!$"
 
 LilycoveCity_Text_MayYouGoingToPokemonLeague:
@@ -462,9 +462,9 @@ LilycoveCity_Text_MayYouGoingToPokemonLeague:
 	.string "Are you taking the Hoenn League\n"
 	.string "challenge?\p"
 	.string "Or, are you going to complete your\n"
-	.string "POKéDEX?\p"
+	.string "TohoDex?\p"
 	.string "I might've lost to you in battling,\n"
-	.string "but I'll finish my POKéDEX before you!\p"
+	.string "but I'll finish my TohoDex before you!\p"
 	.string "See you!$"
 
 LilycoveCity_Text_MayYouGoingToBattleFrontier:
@@ -472,9 +472,9 @@ LilycoveCity_Text_MayYouGoingToBattleFrontier:
 	.string "Are you taking the BATTLE FRONTIER\n"
 	.string "challenge?\p"
 	.string "Or, are you going to complete your\n"
-	.string "POKéDEX?\p"
+	.string "TohoDex?\p"
 	.string "I might've lost to you in battling,\n"
-	.string "but I'll finish my POKéDEX before you!\p"
+	.string "but I'll finish my TohoDex before you!\p"
 	.string "See you!$"
 
 LilycoveCity_Text_BrendanShoppingLetsBattle:
@@ -507,7 +507,7 @@ LilycoveCity_Text_BrendanGoingBackToLittleroot:
 	.string "BRENDAN: I…\n"
 	.string "I plan on going home to LITTLEROOT.\p"
 	.string "You know I'm helping out my dad on his\n"
-	.string "POKéDEX. It's coming together pretty\l"
+	.string "TohoDex. It's coming together pretty\l"
 	.string "decently, so I should go show him.$"
 
 LilycoveCity_Text_BrendanYouGoingToCollectBadges:
@@ -531,7 +531,7 @@ LilycoveCity_Text_BrendanYouGoingToBattleFrontier:
 	.string "Are you taking the BATTLE FRONTIER\n"
 	.string "challenge?\p"
 	.string "Or, are you going to complete your\n"
-	.string "POKéDEX?\p"
+	.string "TohoDex?\p"
 	.string "Since you're that strong, you should\n"
 	.string "consider the BATTLE FRONTIER.\p"
 	.string "Heh, if I train my Puppets a bit more,\n"

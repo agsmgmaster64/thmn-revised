@@ -277,7 +277,7 @@ BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier:
 	.string "SCOTT: You don't just train for battle,\n"
 	.string "right?\p"
 	.string "I think I remember you working on\n"
-	.string "a POKéDEX as well.\p"
+	.string "a TohoDex as well.\p"
 	.string "Well, guess what?\p"
 	.string "You may run into wild POKéMON in\n"
 	.string "the BATTLE FRONTIER somewhere…\l"
@@ -344,4 +344,3 @@ BattleFrontier_ScottsHouse_Text_ExpectingToHearEvenGreaterThings:
 BattleFrontier_ScottsHouse_Text_ComeBackForThisLater:
 	.string "Oops, well, if you have too much\n"
 	.string "stuff, come back for this later.$"
-

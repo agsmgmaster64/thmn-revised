@@ -420,7 +420,7 @@ BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading:
 	.string "Which heading do you want to read?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules:
-	.string "The BAG and POKéNAV may not be used\n"
+	.string "The BAG and TohoNav may not be used\n"
 	.string "during a Battle Choice challenge.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules:
@@ -434,4 +434,3 @@ BattleFrontier_BattlePikeLobby_Text_ExplainMonOrderRules:
 	.string "changed.\p"
 	.string "The sequence must be set before\n"
 	.string "starting your challenge.$"
-
