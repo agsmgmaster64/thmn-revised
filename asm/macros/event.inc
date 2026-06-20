@@ -3033,14 +3033,16 @@
 	@ 	removefieldmugshot
 
 	@ spawn a mugshot in the overworld at a specific coordinate
-	.macro createfieldmugshot id:req, emote=0
-	callnative CreateFieldMugshot
-	.2byte \id
+	.macro createfieldmugshot mugshot:req, emote=EMOTE_NORMAL top=MUGSHOT_X left=MUGSHOT_Y
+	callnative Script_CreateFieldMugshot, requests_effects=1
+	.2byte \mugshot
 	.2byte \emote
+	.2byte \top
+	.2byte \left
 	.endm
 
 	@ destroys a mugshot in the overworld, if there is one
 	.macro removefieldmugshot
-	callnative RemoveFieldMugshot
+	callnative Script_RemoveFieldMugshot
 	.endm
 

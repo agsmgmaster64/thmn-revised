@@ -16,11 +16,6 @@ static EWRAM_DATA u8 sFieldMugshotSlot = 0;
 #define TAG_MUGSHOT 0x9000
 #define TAG_MUGSHOT2 0x9001
 
-// don't remove the `+ 32`
-// otherwise your sprite will not be placed in the place you desire
-#define MUGSHOT_X 168 + 32
-#define MUGSHOT_Y 51  + 32
-
 static void SpriteCB_FieldMugshot(struct Sprite *s);
 
 static const struct OamData sFieldMugshot_Oam = {
@@ -50,6 +45,13 @@ static void SpriteCB_FieldMugshot(struct Sprite *s)
     }
 }
 
+void Script_RemoveFieldMugshot(void)
+{
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    RemoveFieldMugshot();
+}
+
 void RemoveFieldMugshot(void)
 {
     ResetPreservedPalettesInWeather();
@@ -70,12 +72,16 @@ void RemoveFieldMugshot(void)
     sIsFieldMugshotActive = FALSE;
 }
 
-void CreateFieldMugshot(struct ScriptContext *ctx)
+void Script_CreateFieldMugshot(struct ScriptContext *ctx)
 {
-    u16 id = VarGet(ScriptReadHalfword(ctx));
-    u16 emote = VarGet(ScriptReadHalfword(ctx));
+    u16 mugshotId = ScriptReadHalfword(ctx);
+    u16 emote = ScriptReadHalfword(ctx);
+    u16 x = ScriptReadHalfword(ctx);
+    u16 y = ScriptReadHalfword(ctx);
 
-    _CreateFieldMugshot(id, emote);
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    CreateFieldMugshotAt(mugshotId, emote, x, y);
 }
 
 void _RemoveFieldMugshot(u8 slot)
@@ -96,7 +102,26 @@ void _RemoveFieldMugshot(u8 slot)
     }
 }
 
-void _CreateFieldMugshot(u32 id, u32 emote)
+static inline u32 GetMugshotXCoord(u32 id, u32 emote)
+{
+    if (sFieldMugshots[id][emote].x != 0)
+        return sFieldMugshots[id][emote].x;
+    return MUGSHOT_X;
+}
+
+static inline u32 GetMugshotYCoord(u32 id, u32 emote)
+{
+    if (sFieldMugshots[id][emote].y != 0)
+        return sFieldMugshots[id][emote].y;
+    return MUGSHOT_Y;
+}
+
+void CreateFieldMugshot(u32 id, u32 emote)
+{
+    CreateFieldMugshotAt(id, emote, GetMugshotXCoord(id, emote), GetMugshotYCoord(id, emote));
+}
+
+void CreateFieldMugshotAt(u32 id, u32 emote, u32 mugshot_x, u32 mugshot_y)
 {
     u32 slot = sFieldMugshotSlot;
     struct SpriteTemplate temp = sFieldMugshot_SpriteTemplate;
