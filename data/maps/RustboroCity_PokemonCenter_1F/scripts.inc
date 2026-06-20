@@ -29,18 +29,19 @@ RustboroCity_PokemonCenter_1F_EventScript_Girl::
 	end
 
 RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities:
-	.string "My Puppet has a NAIVE nature, and my\n"
-	.string "friend's has a JOLLY nature.\p"
+	.string "My Puppet has a Naive nature, and my\n"
+	.string "friend's has a Jolly nature.\p"
 	.string "It's fascinating how Puppets have\n"
 	.string "personalities!$"
 
 RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon:
-	.string "Just like people, there are male and\n"
-	.string "female Puppets.\p"
-	.string "But no one seems to have any idea how\n"
-	.string "they're different.$"
+	.string "There are two types of puppets!\p"
+	.string "They produce slightly different energies\n"
+	.string "from each other!\p"
+	.string "But no one seems to have any idea why\n"
+	.string "they emit energy like this.$"
 
 RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor:
 	.string "The man next door gave me an HM!\p"
 	.string "I used it to teach my Puppets how to\n"
-	.string "CUT down skinny trees.$"
+	.string "Cut down skinny trees.$"

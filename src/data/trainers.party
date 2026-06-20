@@ -225,7 +225,7 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_PETALBURG_WOODS ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
@@ -233,8 +233,8 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 9
+Chibi Suwako
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARCEL ===
@@ -4791,7 +4791,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Crunch
 
 === TRAINER_ROXANNE_1 ===
-Name: ROXANNE
+Name: Roxanne
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -4800,29 +4800,29 @@ Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
 
-Geodude
+Chibi Mamizou
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Spikes
+- Magical Leaf
 - Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+- Leer
 
-Geodude
+Chibi Kasen
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Sandstorm
+- Growl
 - Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+- Leer
 
-Nosepass @ Oran Berry
+Chibi Tenshi @ Oran Berry
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
+- Sandstorm
+- Bulldoze
 - Rock Tomb
+- Cut
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -5973,7 +5973,7 @@ Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSH ===
-Name: JOSH
+Name: Josh
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -5981,13 +5981,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Chibi Chen
 Level: 10
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
+- Scratch
+- Tail Whip
+- Quick Attack
+- Leer
 
 === TRAINER_TOMMY ===
-Name: TOMMY
+Name: Tommy
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -5995,11 +5998,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Chibi Chen
 Level: 8
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
-Geodude
+Chibi Ran
 Level: 8
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
@@ -9505,7 +9508,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Future Sight
 
 === TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
 Gender: Male
@@ -10555,7 +10558,7 @@ Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MARC ===
-Name: MARC
+Name: Marc
 Class: Hiker
 Pic: Hiker
 Gender: Male
@@ -10563,11 +10566,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Chibi Yuugi
 Level: 8
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
-Geodude
+Chibi Suwako
 Level: 8
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
@@ -10846,7 +10849,7 @@ Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_RUSTBORO_TREECKO ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
 Gender: Male
@@ -10854,16 +10857,24 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Lotad
+Chibi Sumireko
 Level: 13
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Swift
+- Confusion
+- Leer
+- Teleport
 
-Torchic
+Chibi Sara
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Focus Energy
+- Knock Off
+- Karate Chop
+- Tackle
 
 === TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
 Gender: Male
@@ -10871,13 +10882,21 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wingull
+Chibi Sumireko
 Level: 13
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Swift
+- Confusion
+- Leer
+- Teleport
 
-Treecko
+Chibi Kurumi
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Mega Drain
+- Snarl
+- Gust
+- Growl
 
 === TRAINER_PAXTON ===
 Name: PAXTON
@@ -10970,7 +10989,7 @@ Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_RUSTBORO_TORCHIC ===
-Name: BRENDAN
+Name: Renko
 Class: Rival
 Pic: Brendan
 Gender: Male
@@ -10978,16 +10997,24 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Slugma
+Chibi Sumireko
 Level: 13
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Swift
+- Confusion
+- Leer
+- Teleport
 
-Mudkip
+Chibi Ellen
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Psybeam
+- Swift
+- Peck
+- Growl
 
 === TRAINER_MAY_RUSTBORO_MUDKIP ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -10995,13 +11022,21 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Wingull
+Chibi Yukari
 Level: 13
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Psybeam
+- Night Shade
+- Teleport
+- Metronome
 
-Treecko
+Chibi Kurumi
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Mega Drain
+- Snarl
+- Gust
+- Growl
 
 === TRAINER_MAXIE_MAGMA_HIDEOUT ===
 Name: MAXIE
@@ -11269,7 +11304,7 @@ Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LYLE ===
-Name: LYLE
+Name: Lyle
 Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
@@ -11277,19 +11312,19 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wurmple
+Chibi Wriggle
 Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
+Chibi Lily White
 Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
+Chibi Lily Black
 Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
+Chibi Daiyousei
 Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11358,7 +11393,7 @@ Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAMES_1 ===
-Name: JAMES
+Name: James
 Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
@@ -11366,11 +11401,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Nincada
+Chibi Daiyousei
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Nincada
+Chibi Wriggle
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14124,7 +14159,7 @@ Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_RUSTBORO_TREECKO ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -14132,16 +14167,24 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Lotad
+Chibi Yukari
 Level: 13
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Psybeam
+- Night Shade
+- Teleport
+- Metronome
 
-Torchic
+Chibi Sara
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Focus Energy
+- Knock Off
+- Karate Chop
+- Tackle
 
 === TRAINER_MAY_RUSTBORO_TORCHIC ===
-Name: MAY
+Name: Maribel
 Class: Rival
 Pic: May
 Gender: Female
@@ -14149,13 +14192,21 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Torkoal
+Chibi Yukari
 Level: 13
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Psybeam
+- Night Shade
+- Teleport
+- Metronome
 
-Mudkip
+Chibi Ellen
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Psybeam
+- Swift
+- Peck
+- Growl
 
 === TRAINER_ROXANNE_2 ===
 Name: ROXANNE

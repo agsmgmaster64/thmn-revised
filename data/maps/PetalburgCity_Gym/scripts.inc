@@ -1279,10 +1279,9 @@ PetalburgCity_Gym_Text_ReceivedBalanceBadge:
 	.string "from Dad!$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
-	.string "Dad: With that Badge, the Defense\n"
-	.string "of all your Puppets will increase.\p"
-	.string "Puppets that know the HM move Surf\n"
-	.string "will be able to travel over water.\p"
+	.string "Dad: With that Badge, Puppets that\n"
+	.string "know the HM move Surf will be able\l"
+	.string "to travel over water.\p"
 	.string "This is my gift to you. {PLAYER}, I'm\n"
 	.string "sure you can use it correctly.$"
 

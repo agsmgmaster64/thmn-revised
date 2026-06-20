@@ -1831,62 +1831,62 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POOCHYENA"
+                "species": "SPECIES_CHIBI_ETERNITY"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WURMPLE"
+                "species": "SPECIES_CHIBI_WRIGGLE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SHROOMISH"
+                "species": "SPECIES_CHIBI_ETERNITY"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_POOCHYENA"
+                "species": "SPECIES_CHIBI_WRIGGLE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SILCOON"
+                "species": "SPECIES_CHIBI_KEINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CASCOON"
+                "species": "SPECIES_CHIBI_KAGEROU"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_WURMPLE"
+                "species": "SPECIES_CHIBI_KEINE"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_SHROOMISH"
+                "species": "SPECIES_CHIBI_KAGEROU"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_CHIBI_KAGUYA"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SLAKOTH"
+                "species": "SPECIES_CHIBI_TEWI"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_CHIBI_KAGUYA"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_SLAKOTH"
+                "species": "SPECIES_CHIBI_TEWI"
               }
             ]
           }
