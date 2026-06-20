@@ -38,9 +38,9 @@ SeafloorCavern_Room3_Text_ShellyPostBattle:
 
 SeafloorCavern_Room3_Text_Grunt5Intro:
 	.string "For our dream to become real, we need\n"
-	.string "the power of POKéMON.\p"
+	.string "the power of Puppets.\p"
 	.string "But meddlers like you use the power of\n"
-	.string "POKéMON to mess with us even at\l"
+	.string "Puppets to mess with us even at\l"
 	.string "a place like this!\p"
 	.string "Life just doesn't work the way we\n"
 	.string "need it to!$"
@@ -55,4 +55,3 @@ SeafloorCavern_Room3_Text_Grunt5PostBattle:
 	.string "going up against our BOSS.\p"
 	.string "Maybe…\n"
 	.string "You must be something…$"
-

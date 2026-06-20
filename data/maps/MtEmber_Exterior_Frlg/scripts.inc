@@ -136,7 +136,7 @@ Text_ExplosionDeclined::
 
 Text_ExplosionWhichMon::
 	.string "You're terribly brave!\p"
-	.string "Which POKéMON should I teach\n"
+	.string "Which Puppet should I teach\n"
 	.string "EXPLOSION?$"
 
 Text_ExplosionTaught::
@@ -244,4 +244,3 @@ MtEmber_Exterior_Text_JocelynDefeat::
 MtEmber_Exterior_Text_JocelynPostBattle::
 	.string "The way you battle, it reminds me\n"
 	.string "of the guy who dumped me…$"
-

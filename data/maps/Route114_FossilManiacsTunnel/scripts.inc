@@ -70,7 +70,7 @@ Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils:
 	.string "What are you going to do with that\n"
 	.string "FOSSIL?\p"
 	.string "From what I've heard, DEVON is doing\n"
-	.string "research on reviving POKéMON from\l"
+	.string "research on reviving Puppets from\l"
 	.string "FOSSILS…\p"
 	.string "I love my FOSSILS, so I would never\n"
 	.string "do anything like that…$"
@@ -88,4 +88,3 @@ Route114_FossilManiacsTunnel_Text_NotSafeThatWay:
 	.string "underneath now…\p"
 	.string "But I've left it alone because I don't\n"
 	.string "think there are any FOSSILS there…$"
-

@@ -21,7 +21,7 @@ RustboroCity_House3_EventScript_Pekachu::
 	end
 
 RustboroCity_House3_Text_IGivePerfectlySuitedNicknames:
-	.string "For my own POKéMON, I give them\n"
+	.string "For my own Puppets, I give them\n"
 	.string "perfectly suited nicknames!\p"
 	.string "It's my expression of, uh…\n"
 	.string "originality, yes, that's it!$"
@@ -34,4 +34,3 @@ RustboroCity_House3_Text_NamingPikachuPekachu:
 
 RustboroCity_House3_Text_Pekachu:
 	.string "PEKACHU: Peka!$"
-

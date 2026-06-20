@@ -28,14 +28,14 @@ PacifidlogTown_House4_EventScript_No::
 	end
 
 PacifidlogTown_House4_Text_PeopleSawHighFlyingPokemon:
-	.string "People were saying they saw a POKéMON\n"
+	.string "People were saying they saw a Puppet\n"
 	.string "flying high above HOENN.\p"
 	.string "Is it flying around all the time?\n"
 	.string "Doesn't it need to rest somewhere?$"
 
 PacifidlogTown_House4_Text_SkyPokemon:
-	.string "A sky POKéMON!\n"
-	.string "A sky POKéMON!$"
+	.string "A sky Puppet!\n"
+	.string "A sky Puppet!$"
 
 PacifidlogTown_House4_Text_WhereDidYouComeFrom:
 	.string "Where did you come from?$"
@@ -50,4 +50,3 @@ PacifidlogTown_House4_Text_YouHaveToComeFromSomewhere:
 	.string "You have to come from somewhere.\p"
 	.string "Oh! Wait! You're not going to say you\n"
 	.string "were born at the bottom of the sea?$"
-
