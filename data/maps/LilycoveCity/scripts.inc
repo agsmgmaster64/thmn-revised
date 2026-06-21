@@ -424,7 +424,7 @@ LilycoveCity_Text_MayNotRaisingPokemon:
 	.string "MAY: Oh, why? {PLAYER}{KUN}, haven't you\n"
 	.string "been raising your Puppets?\p"
 	.string "That's not a very good showing as a\n"
-	.string "TRAINER…$"
+	.string "trainer…$"
 
 LilycoveCity_Text_MayBattleMe:
 	.string "MAY: Come on, battle with me, so I can\n"
@@ -501,7 +501,7 @@ LilycoveCity_Text_BrendanDefeat:
 	.string "Humph…\n"
 	.string "You've done a lot of raising.\p"
 	.string "That stings a bit--I had a head start\n"
-	.string "on you as a TRAINER…$"
+	.string "on you as a trainer…$"
 
 LilycoveCity_Text_BrendanGoingBackToLittleroot:
 	.string "BRENDAN: I…\n"
@@ -668,7 +668,7 @@ LilycoveCity_Text_CitySign:
 
 LilycoveCity_Text_ContestHallSign:
 	.string "Puppet Contest Hall\n"
-	.string "“The gathering place for TRAINERS!”$"
+	.string "“The gathering place for trainers!”$"
 
 LilycoveCity_Text_MotelSign:
 	.string "COVE LILY MOTEL\p"
@@ -699,7 +699,7 @@ LilycoveCity_Text_HarborSign:
 
 LilycoveCity_Text_TrainerFanClubSign:
 	.string "Puppet Trainer Fan Club\p"
-	.string "The names of TRAINERS are scribbled\n"
+	.string "The names of trainers are scribbled\n"
 	.string "all over the sign…$"
 
 LilycoveCity_Text_DepartmentStoreSign:

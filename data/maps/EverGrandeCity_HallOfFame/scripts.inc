@@ -89,6 +89,6 @@ EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
 
 EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
 	.string "WALLACE: Come on, let's record your\n"
-	.string "name as a TRAINER who triumphed over\l"
+	.string "name as a trainer who triumphed over\l"
 	.string "the Hoenn League, and the names of\l"
 	.string "the partners who battled with you.$"

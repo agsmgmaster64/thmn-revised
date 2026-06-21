@@ -79,7 +79,7 @@ VictoryRoad_B2F_Text_JulieDefeat:
 
 VictoryRoad_B2F_Text_JuliePostBattle:
 	.string "Gaze on your collected BADGES and\n"
-	.string "remember the TRAINERS you've faced.$"
+	.string "remember the trainers you've faced.$"
 
 VictoryRoad_B2F_Text_FelixIntro:
 	.string "I've come this far, but the tension's\n"

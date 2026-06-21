@@ -328,4 +328,4 @@ LilycoveCity_LilycoveMuseum_2F_Text_ThesePaintingsOfYourPokemon:
 	.string "Wow, is that right?\n"
 	.string "These paintings are of your Puppets.\p"
 	.string "Isn't that just the ultimate joy for\n"
-	.string "a TRAINER?$"
+	.string "a trainer?$"

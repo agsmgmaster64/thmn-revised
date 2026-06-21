@@ -64,7 +64,7 @@ EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
 	.string "I've traveled from afar to HOENN\n"
 	.string "so that I may hone my ice skills.\p"
 	.string "But all I have seen are challenges by\n"
-	.string "weak TRAINERS and their Puppets.\p"
+	.string "weak trainers and their Puppets.\p"
 	.string "What about you?\p"
 	.string "It would please me to no end if I could\n"
 	.string "go all out against you!$"

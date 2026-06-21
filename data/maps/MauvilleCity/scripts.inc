@@ -522,10 +522,10 @@ MauvilleCity_Text_WallyIllGoBackToVerdanturf:
 
 MauvilleCity_Text_ThankYouNotEnoughToBattle:
 	.string "{PLAYER}, thank you.\n"
-	.string "Being a TRAINER is tough, isn't it?\p"
+	.string "Being a trainer is tough, isn't it?\p"
 	.string "It's not enough just to have Puppets\n"
 	.string "and make them battle. That isn't what\l"
-	.string "being a real TRAINER is about.$"
+	.string "being a real trainer is about.$"
 
 MauvilleCity_Text_UncleNoNeedToBeDown:
 	.string "UNCLE: WALLY, there's no need to be so\n"
@@ -537,7 +537,7 @@ MauvilleCity_Text_UncleNoNeedToBeDown:
 
 MauvilleCity_Text_UncleVisitUsSometime:
 	.string "UNCLE: {PLAYER}{KUN}, it just dawned on me\n"
-	.string "that you must be the TRAINER who kept\l"
+	.string "that you must be the trainer who kept\l"
 	.string "an eye out for WALLY when he caught\l"
 	.string "his Puppet.\p"
 	.string "Why don't you visit us in VERDANTURF\n"
@@ -569,7 +569,7 @@ MauvilleCity_Text_ScottYouDidntHoldBack:
 	.string "and beat him impressively.\p"
 	.string "Yeah! That's what a real Puppet\n"
 	.string "battle is all about!\p"
-	.string "I idolize TRAINERS like that!\p"
+	.string "I idolize trainers like that!\p"
 	.string "… … … … … …\n"
 	.string "I'll be cheering for you!$"
 

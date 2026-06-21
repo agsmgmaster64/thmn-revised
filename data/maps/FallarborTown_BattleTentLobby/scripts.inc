@@ -311,7 +311,7 @@ FallarborTown_BattleTentLobby_Text_FallarborTentMyFavorite:
 	.string "different events in different towns?\p"
 	.string "My favorite is definitely the BATTLE\n"
 	.string "TENT in FALLARBOR TOWN.\p"
-	.string "I think it's fantastic how TRAINERS\n"
+	.string "I think it's fantastic how trainers\n"
 	.string "try to win with all their faith in\l"
 	.string "their Puppets.$"
 
@@ -333,7 +333,7 @@ FallarborTown_BattleTentLobby_Text_ScottLookingForSomeone:
 	.string "How should I say this?\p"
 	.string "Someone bursting with the desire\n"
 	.string "and the drive to win.\p"
-	.string "If there were a TRAINER like that,\n"
+	.string "If there were a trainer like that,\n"
 	.string "I'd immediately…\p"
 	.string "Whoops! Never mind!\n"
 	.string "Keep working at it!$"

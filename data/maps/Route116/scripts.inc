@@ -391,12 +391,12 @@ Route116_Text_ThankYouTokenOfAppreciation:
 	.string "Why, if I were a rain cloud, I would\n"
 	.string "shower you with gratitude and hail\l"
 	.string "you as a hero!\p"
-	.string "For you, the most wonderful TRAINER,\n"
+	.string "For you, the most wonderful trainer,\n"
 	.string "I bear good news!\p"
 	.string "Recently, our company developed\n"
 	.string "a new kind of POKé BALL.\p"
 	.string "As a token of our appreciation, this\n"
-	.string "is our gift to our wonderful TRAINER!$"
+	.string "is our gift to our wonderful trainer!$"
 
 Route116_Text_NewBallAvailableAtMart:
 	.string "Our new POKé BALL will be available\n"
@@ -412,7 +412,7 @@ Route116_Text_TokenOfAppreciation:
 	.string "As a token of our appreciation for\n"
 	.string "your delivering our package, I have\l"
 	.string "a gift of a new kind of POKé BALL\l"
-	.string "for our most wonderful TRAINER!$"
+	.string "for our most wonderful trainer!$"
 
 Route116_Text_CanYouHelpMeFindGlasses:
 	.string "I dropped my glasses…\n"
@@ -453,7 +453,7 @@ Route116_Text_TunnelersRestHouse:
 	.string "TUNNELER'S REST HOUSE$"
 
 Route116_Text_TrainerTipsBToStopEvolution:
-	.string "TRAINER TIPS\p"
+	.string "trainer TIPS\p"
 	.string "If you want to stop a Puppet from\n"
 	.string "evolving, press the B Button while it\l"
 	.string "is trying to evolve.\l"
@@ -461,9 +461,9 @@ Route116_Text_TrainerTipsBToStopEvolution:
 	.string "This is called an evolution cancel.$"
 
 Route116_Text_TrainerTipsBagHasPockets:
-	.string "TRAINER TIPS\p"
+	.string "trainer TIPS\p"
 	.string "Your BAG has several POCKETS.\p"
 	.string "Items you obtain are automatically\n"
 	.string "placed in the appropriate POCKETS.\p"
-	.string "No TRAINER can afford to be without\n"
+	.string "No trainer can afford to be without\n"
 	.string "a BAG of their own.$"

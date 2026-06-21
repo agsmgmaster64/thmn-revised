@@ -17,6 +17,6 @@ SlateportCity_House_Text_NatureToDoWithStatGains:
 	.string "do with the stat gains of Puppets.$"
 
 SlateportCity_House_Text_MustBeGoingToBattleTent:
-	.string "You're a TRAINER, aren't you?\p"
+	.string "You're a trainer, aren't you?\p"
 	.string "Since you came to SLATEPORT CITY,\n"
 	.string "you must be going to the BATTLE TENT.$"

@@ -87,7 +87,7 @@ Route111_WinstrateFamilysHouse_Text_GrandsonStrong:
 	.string "There's no question that you're strong.\p"
 	.string "But if you were to battle my grandson,\n"
 	.string "you'd end up crying in frustration.\p"
-	.string "He's much stronger than any TRAINER\n"
+	.string "He's much stronger than any trainer\n"
 	.string "our family knows.\p"
 	.string "He must be challenging the Hoenn\n"
 	.string "League Champion by now.\p"

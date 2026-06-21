@@ -26,7 +26,7 @@ MossdeepCity_House3_EventScript_DeclineSuperRod::
 	end
 
 MossdeepCity_House3_Text_YouWantSuperRod:
-	.string "Hey there, TRAINER!\n"
+	.string "Hey there, trainer!\n"
 	.string "A SUPER ROD really is super!\p"
 	.string "Say all you want, but this baby can\n"
 	.string "catch Puppets off the seafloor!\p"

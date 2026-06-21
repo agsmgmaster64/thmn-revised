@@ -120,10 +120,10 @@ EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay:
 	step_end
 
 EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges:
-	.string "Beyond this point, only those TRAINERS\n"
+	.string "Beyond this point, only those trainers\n"
 	.string "who have collected all the GYM BADGES\l"
 	.string "are permitted to enter.\p"
-	.string "TRAINER, let us confirm that you have\n"
+	.string "trainer, let us confirm that you have\n"
 	.string "all the GYM BADGES.$"
 
 EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges:

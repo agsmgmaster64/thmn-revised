@@ -28,7 +28,7 @@ PacifidlogTown_PokemonCenter_1F_EventScript_OldMan::
 	end
 
 PacifidlogTown_PokemonCenter_1F_Text_WhatColorTrainerCard:
-	.string "What color is your TRAINER CARD?\n"
+	.string "What color is your Trainer Card?\n"
 	.string "Mine's copper!$"
 
 PacifidlogTown_PokemonCenter_1F_Text_OnColonyOfCorsola:
@@ -45,4 +45,3 @@ PacifidlogTown_PokemonCenter_1F_Text_AncestorsLivedOnBoats:
 	.string "I understand that they lived that way\n"
 	.string "because they were searching for\l"
 	.string "something.$"
-

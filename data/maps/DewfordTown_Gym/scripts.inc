@@ -295,7 +295,7 @@ DewfordTown_Gym_Text_GymGuideAdvice:
 	.string "What's worse, the GYM is as dark as\n"
 	.string "the ocean floor.\p"
 	.string "But it will get brighter after defeating\n"
-	.string "the TRAINERS in your way.\p"
+	.string "the trainers in your way.\p"
 	.string "Hey, okay, go for it!$"
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
@@ -421,14 +421,14 @@ DewfordTown_Gym_Text_RegisteredBrawly:
 DewfordTown_Gym_Text_BrawlyPostBattle:
 	.string "I can see your talent becoming a giant\n"
 	.string "wave to cause a storm of astonishment\l"
-	.string "among TRAINERS one day!$"
+	.string "among trainers one day!$"
 
 DewfordTown_Gym_Text_GymStatue:
 	.string "Dewford Town Puppet Gym$"
 
 DewfordTown_Gym_Text_GymStatueCertified:
 	.string "Dewford Town Puppet Gym\p"
-	.string "BRAWLY'S CERTIFIED TRAINERS:\n"
+	.string "BRAWLY'S CERTIFIED trainers:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:

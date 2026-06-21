@@ -190,7 +190,7 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
 	.string "Yow! You've beaten even JUAN, who\n"
 	.string "was supposedly the best in all HOENN!\p"
-	.string "Okay! Check out your TRAINER CARD.\p"
+	.string "Okay! Check out your trainer CARD.\p"
 	.string "If you've gotten all the BADGES, you're\n"
 	.string "set for the Hoenn League challenge!$"
 
@@ -258,7 +258,7 @@ SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "in the TohoNav.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:
-	.string "The TRAINERS who have gathered all\n"
+	.string "The trainers who have gathered all\n"
 	.string "the GYM BADGES of HOENN should make\l"
 	.string "way to the ultimate destination.\p"
 	.string "The Hoenn League.\p"
@@ -279,7 +279,7 @@ SootopolisCity_Gym_1F_Text_GymStatue:
 
 SootopolisCity_Gym_1F_Text_GymStatueCertified:
 	.string "SOOTOPOLIS CITY Puppet GYM\p"
-	.string "JUAN'S CERTIFIED TRAINERS:\n"
+	.string "JUAN'S CERTIFIED trainers:\n"
 	.string "{PLAYER}$"
 
 SootopolisCity_Gym_1F_Text_JuanPreRematch:

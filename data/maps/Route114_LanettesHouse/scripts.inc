@@ -63,7 +63,7 @@ Route114_LanettesHouse_Text_ResearchNotesPage1:
 	.string "It's LANETTE's research notes.\n"
 	.string "There's information about BOXES.\p"
 	.string "Design BOXES to hold 30 Puppets each.\p"
-	.string "Each TRAINER should be able to store\n"
+	.string "Each trainer should be able to store\n"
 	.string "420 Puppets on the PC system.\p"
 	.string "Keep reading?$"
 

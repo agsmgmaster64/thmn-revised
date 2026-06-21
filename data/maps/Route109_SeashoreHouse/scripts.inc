@@ -107,7 +107,7 @@ Route109_SeashoreHouse_Text_SeashoreHouseIntro:
 	.string "What I love above all is to see hot\n"
 	.string "Puppets battles.\p"
 	.string "Let me see that your heart burns hot!\p"
-	.string "If you can defeat all the TRAINERS\n"
+	.string "If you can defeat all the trainers\n"
 	.string "here, I'll reward your efforts.$"
 
 Route109_SeashoreHouse_Text_ShowMeSomeHotMatches:
@@ -146,7 +146,7 @@ Route109_SeashoreHouse_Text_ThatsTooBad:
 Route109_SeashoreHouse_Text_DwayneIntro:
 	.string "If you're looking for a battle in the\n"
 	.string "SEASHORE HOUSE, you'll find no\l"
-	.string "hotter TRAINER than me, matey!$"
+	.string "hotter trainer than me, matey!$"
 
 Route109_SeashoreHouse_Text_DwayneDefeated:
 	.string "That was a hot battle!\n"
@@ -159,7 +159,7 @@ Route109_SeashoreHouse_Text_DwaynePostBattle:
 Route109_SeashoreHouse_Text_JohannaIntro:
 	.string "Boring battles aren't worth the effort.\p"
 	.string "Fiery hot battles are what toughen up\n"
-	.string "TRAINERS and Puppets!$"
+	.string "Trainers and Puppets!$"
 
 Route109_SeashoreHouse_Text_JohannaDefeated:
 	.string "That's hot!$"

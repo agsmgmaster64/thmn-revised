@@ -49,7 +49,7 @@ VictoryRoad_B1F_Text_ShannonDefeat:
 
 VictoryRoad_B1F_Text_ShannonPostBattle:
 	.string "By being together all the time, trust\n"
-	.string "grows between Puppets and TRAINERS.$"
+	.string "grows between Puppets and Trainers.$"
 
 VictoryRoad_B1F_Text_MichelleIntro:
 	.string "This isn't the goal. It's only a place\n"

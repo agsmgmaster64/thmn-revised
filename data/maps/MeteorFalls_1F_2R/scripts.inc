@@ -111,12 +111,12 @@ MeteorFalls_1F_2R_Text_JohnPostBattle:
 	.string "my dear wife in a battle.$"
 
 MeteorFalls_1F_2R_Text_JohnNotEnoughMons:
-	.string "JOHN: Well, well, what a young TRAINER!\p"
+	.string "JOHN: Well, well, what a young trainer!\p"
 	.string "Will you battle with us? If so, you'll\n"
 	.string "have to return with more Puppets.$"
 
 MeteorFalls_1F_2R_Text_JohnRegister:
-	.string "JOHN: Young TRAINER, if the chance\n"
+	.string "JOHN: Young trainer, if the chance\n"
 	.string "arises, will you battle with us again?$"
 
 MeteorFalls_1F_2R_Text_JayIntro:
@@ -136,7 +136,7 @@ MeteorFalls_1F_2R_Text_JayPostBattle:
 
 MeteorFalls_1F_2R_Text_JayNotEnoughMons:
 	.string "JAY: Well, well, aren't you a young\n"
-	.string "TRAINER?\p"
+	.string "trainer?\p"
 	.string "If you'd care to battle with us, you'll\n"
 	.string "have to come back with more Puppets.$"
 
@@ -155,7 +155,7 @@ MeteorFalls_1F_2R_Text_JohnPostRematch:
 	.string "we battled day in and day out…$"
 
 MeteorFalls_1F_2R_Text_JohnRematchNotEnoughMons:
-	.string "JOHN: Well, well, what a young TRAINER!\p"
+	.string "JOHN: Well, well, what a young trainer!\p"
 	.string "Will you battle with us? If so, you'll\n"
 	.string "have to return with more Puppets.$"
 
@@ -177,6 +177,6 @@ MeteorFalls_1F_2R_Text_JayPostRematch:
 
 MeteorFalls_1F_2R_Text_JayRematchNotEnoughMons:
 	.string "JAY: Well, well, aren't you a young\n"
-	.string "TRAINER?\p"
+	.string "trainer?\p"
 	.string "If you'd care to battle with us, you'll\n"
 	.string "have to come back with more Puppets.$"

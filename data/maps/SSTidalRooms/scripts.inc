@@ -111,7 +111,7 @@ SSTidalRooms_Text_JedDefeat:
 SSTidalRooms_Text_JedPostBattle:
 	.string "JED: It's the first time that our lovey-\n"
 	.string "dovey power couldn't prevail!\l"
-	.string "You must be an awesome TRAINER!$"
+	.string "You must be an awesome trainer!$"
 
 SSTidalRooms_Text_JedNotEnoughMons:
 	.string "JED: You only have one Puppet?\n"
@@ -127,7 +127,7 @@ SSTidalRooms_Text_LeaDefeat:
 SSTidalRooms_Text_LeaPostBattle:
 	.string "LEA: I can't believe it!\n"
 	.string "Our lovey-dovey power failed…\l"
-	.string "You must be an awesome TRAINER!$"
+	.string "You must be an awesome trainer!$"
 
 SSTidalRooms_Text_LeaNotEnoughMons:
 	.string "LEA: I wanted to battle…\n"
@@ -147,7 +147,7 @@ SSTidalRooms_Text_GarretPostBattle:
 	.string "A yacht for me and Puppets!$"
 
 SSTidalRooms_Text_NaomiIntro:
-	.string "Oh, you're such an adorable TRAINER.\n"
+	.string "Oh, you're such an adorable trainer.\n"
 	.string "Would you like to have tea?\l"
 	.string "Or would you rather battle?$"
 

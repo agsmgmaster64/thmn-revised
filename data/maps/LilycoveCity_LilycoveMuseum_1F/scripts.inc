@@ -286,5 +286,5 @@ LilycoveCity_LilycoveMuseum_1F_Text_MuseumTouristDestination:
 	.string "tourist destination.\p"
 	.string "It's great for LILYCOVE…\n"
 	.string "No, great for the HOENN region!\p"
-	.string "This is what I've heard--a lone TRAINER\n"
+	.string "This is what I've heard--a lone trainer\n"
 	.string "procured all the paintings upstairs.$"

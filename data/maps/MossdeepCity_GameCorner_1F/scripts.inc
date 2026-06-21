@@ -43,13 +43,13 @@ RS_MysteryEventsHouse_Text_OldManGreeting:
 	.string "as a Puppet Trainer.\p"
 	.string "Now that I've become an old buzzard,\n"
 	.string "my only amusement is watching young\l"
-	.string "TRAINERS battle.$"
+	.string "trainers battle.$"
 
 RS_MysteryEventsHouse_Text_DoorIsLocked:
 	.string "The door appears to be locked.$"
 
 RS_MysteryEventsHouse_Text_ChallengeVisitingTrainer:
-	.string "A TRAINER named {STR_VAR_1} is\n"
+	.string "A trainer named {STR_VAR_1} is\n"
 	.string "visiting my home.\p"
 	.string "Would you like to challenge\n"
 	.string "{STR_VAR_1}?$"

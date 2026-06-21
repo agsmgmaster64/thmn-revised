@@ -513,7 +513,7 @@ Route109_Text_BrineyTellMeWhenYouNeedToSail:
 	.string "you need to set sail again!$"
 
 Route109_Text_ChillAtMyPapasSpot:
-	.string "Yo, TRAINERS!\n"
+	.string "Yo, trainers!\n"
 	.string "Whether you're hot to trot,\l"
 	.string "or cool cat not,\l"
 	.string "chill at my papa's spot!$"
@@ -554,11 +554,11 @@ Route109_Text_ZigzagoonCry:
 Route109_Text_SeashoreHouseSign:
 	.string "SEASHORE HOUSE\p"
 	.string "“May hot battles rage on hot sands!\n"
-	.string "The place for hot TRAINERS!”$"
+	.string "The place for hot trainers!”$"
 
 Route109_Text_TrainerTipsSign:
-	.string "TRAINER TIPS\p"
+	.string "Trainer Tips\p"
 	.string "Puppets at the same level may not\n"
 	.string "always have identical stats.\p"
-	.string "Puppets raised by TRAINERS are said\n"
+	.string "Puppets raised by trainers are said\n"
 	.string "to grow stronger than wild Puppets.$"

@@ -158,7 +158,7 @@ FortreeCity_Gym_Text_JaredDefeat:
 	.string "You're strong…$"
 
 FortreeCity_Gym_Text_JaredPostBattle:
-	.string "A TRAINER has to be smart to keep\n"
+	.string "A trainer has to be smart to keep\n"
 	.string "up with unexpected turns of events.\p"
 	.string "Do you have the smarts to get to\n"
 	.string "our LEADER?$"
@@ -175,7 +175,7 @@ FortreeCity_Gym_Text_EdwardoDefeat:
 
 FortreeCity_Gym_Text_EdwardoPostBattle:
 	.string "The world is huge, and there are\n"
-	.string "countless tough TRAINERS.\p"
+	.string "countless tough trainers.\p"
 	.string "I'm going to keep training and make\n"
 	.string "myself even stronger.$"
 
@@ -243,7 +243,7 @@ FortreeCity_Gym_Text_WinonaIntro:
 	.string "of BIRD Puppets and I!$"
 
 FortreeCity_Gym_Text_WinonaDefeat:
-	.string "Never before have I seen a TRAINER\n"
+	.string "Never before have I seen a trainer\n"
 	.string "command Puppets with more grace\l"
 	.string "than I…\p"
 	.string "In recognition of your prowess,\n"
@@ -281,7 +281,7 @@ FortreeCity_Gym_Text_GymStatue:
 
 FortreeCity_Gym_Text_GymStatueCertified:
 	.string "Fortree City Puppet Gym\p"
-	.string "WINONA'S CERTIFIED TRAINERS:\n"
+	.string "WINONA'S CERTIFIED trainers:\n"
 	.string "{PLAYER}$"
 
 FortreeCity_Gym_Text_WinonaPreRematch:

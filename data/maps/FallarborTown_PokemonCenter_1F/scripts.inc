@@ -85,7 +85,7 @@ FallarborTown_PokemonCenter_1F_Text_LanetteGreeting:
 	.string "Oh, hello.\n"
 	.string "You are?\p"
 	.string "Okay, your name's {PLAYER}{KUN}.\n"
-	.string "I can see that you're a TRAINER.\p"
+	.string "I can see that you're a trainer.\p"
 	.string "So that means you use the Puppet\n"
 	.string "Storage System I developed.\p"
 	.string "How I arrived at that conclusion is\n"

@@ -382,7 +382,7 @@ Route120_Text_StevenReadyForBattle:
 
 Route120_Text_StevenShowMeYourPower:
 	.string "STEVEN: {PLAYER}{KUN}, show me your true\n"
-	.string "power as a TRAINER!$"
+	.string "power as a trainer!$"
 
 Route120_Text_StevenUsedDevonScope:
 	.string "STEVEN used the DEVON SCOPE.\p"
@@ -402,7 +402,7 @@ Route120_Text_StevenGiveDevonScope:
 
 Route120_Text_StevenGoodbye:
 	.string "STEVEN: {PLAYER}{KUN}.\p"
-	.string "I enjoy seeing Puppets and TRAINERS\n"
+	.string "I enjoy seeing Puppets and trainers\n"
 	.string "who strive together.\p"
 	.string "I think you're doing great.\p"
 	.string "Well, let's meet again somewhere.$"

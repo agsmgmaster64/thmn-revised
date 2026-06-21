@@ -270,7 +270,7 @@ SlateportCity_PokemonFanClub_Text_MeetChairman:
 	.string "show us theirs.$"
 
 SlateportCity_PokemonFanClub_Text_LikeToSeeEnteredContestPokemon:
-	.string "The Puppet of a TRAINER who has\n"
+	.string "The Puppet of a trainer who has\n"
 	.string "entered a Puppet CONTEST…\l"
 	.string "That, I would like to see.$"
 
@@ -280,10 +280,10 @@ SlateportCity_PokemonFanClub_Text_AllowMeToExamineYourPokemon:
 	.string "Please! Allow me to examine how you\n"
 	.string "have raised your Puppets.\p"
 	.string "It delights me no end to see Puppets\n"
-	.string "raised by other TRAINERS.\p"
+	.string "raised by other trainers.\p"
 	.string "The happy expressions of Puppets\n"
 	.string "raised with proper care…\p"
-	.string "The kindly eyes of the TRAINER that\n"
+	.string "The kindly eyes of the trainer that\n"
 	.string "nurtured and raised the Puppets…\p"
 	.string "The very thought fills my heart to\n"
 	.string "overwhelming with joy.\p"
@@ -303,7 +303,7 @@ SlateportCity_PokemonFanClub_Text_HmHmISee:
 SlateportCity_PokemonFanClub_Text_GiveMonMorePokeblocks:
 	.string "Hmmm… It's not bad, but it's not\n"
 	.string "good, either…\p"
-	.string "You, the TRAINER, must put more\n"
+	.string "You, the trainer, must put more\n"
 	.string "effort into raising this Puppet!\p"
 	.string "For instance, may I suggest that\n"
 	.string "you give it more {POKEBLOCK}S?$"
@@ -356,9 +356,9 @@ SlateportCity_PokemonFanClub_Text_NothingElseToGiveYou:
 
 SlateportCity_PokemonFanClub_Text_ShowMePokemonThatLoveYou:
 	.string "I love seeing Puppets that love\n"
-	.string "their TRAINERS.\p"
+	.string "their trainers.\p"
 	.string "Puppets are very sensitive to\n"
-	.string "the feelings of their TRAINERS.\p"
+	.string "the feelings of their trainers.\p"
 	.string "If you treat your Puppets with love\n"
 	.string "and care, they'll love you back.\p"
 	.string "When your Puppets grow to love you,\n"
@@ -367,11 +367,11 @@ SlateportCity_PokemonFanClub_Text_ShowMePokemonThatLoveYou:
 SlateportCity_PokemonFanClub_Text_PokemonAdoresYou:
 	.string "Your Puppet really adores you.\p"
 	.string "For you, a most compassionate\n"
-	.string "TRAINER, a gift from the FAN CLUB!$"
+	.string "trainer, a gift from the FAN CLUB!$"
 
 SlateportCity_PokemonFanClub_Text_TreatPokemonWithLove:
 	.string "Puppets are very sensitive to\n"
-	.string "the feelings of their TRAINERS.\p"
+	.string "the feelings of their trainers.\p"
 	.string "If you treat your Puppets with love\n"
 	.string "and care, they'll love you back.$"
 
@@ -379,7 +379,7 @@ SlateportCity_PokemonFanClub_Text_PokemonDontLikeFainting:
 	.string "If you keep letting a Puppet faint\n"
 	.string "in battle, it'll come to resent it.\p"
 	.string "Soon, it will become less trusting\n"
-	.string "of the TRAINER.\p"
+	.string "of the trainer.\p"
 	.string "In other words, it certainly won't\n"
 	.string "like you very much.$"
 
