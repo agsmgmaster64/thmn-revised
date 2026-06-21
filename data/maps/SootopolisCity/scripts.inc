@@ -1412,7 +1412,7 @@ SootopolisCity_Text_WhatIsThatGreenPokemon:
 	.string "What is that green Puppet?!$"
 
 SootopolisCity_Text_WhereDidLegendariesGo:
-	.string "GROUDON and KYOGRE…\n"
+	.string "LUtsuho and LSuwako…\n"
 	.string "Where did they go?\p"
 	.string "Will they cause droughts or downpours\n"
 	.string "somewhere else?$"
@@ -1570,15 +1570,15 @@ SootopolisCity_Text_YouBroughtFlyingMon:
 	.string "Well, aren't you amazing!$"
 
 SootopolisCity_Text_GroudonPleaseStop:
-	.string "MAXIE: G… GROUDON…\n"
+	.string "Maxie: G… LUtsuho…\n"
 	.string "Please! Stop what you're doing!\p"
 	.string "I know the extent of your power now!\p"
-	.string "If you keep going, all HOENN, not just\n"
+	.string "If you keep going, all Hoenn, not just\n"
 	.string "SOOTOPOLIS, will be utterly ruined!$"
 
 SootopolisCity_Text_AfterAllOurScheming:
-	.string "MAXIE: So the super-ancient Puppets\n"
-	.string "weren't only GROUDON and KYOGRE…\p"
+	.string "Maxie: So the super-ancient Puppets\n"
+	.string "weren't only LUtsuho and LSuwako…\p"
 	.string "After all our fruitless scheming and\n"
 	.string "frantic efforts, that one Puppet's\l"
 	.string "simple action puts everything right\l"
@@ -1587,18 +1587,18 @@ SootopolisCity_Text_AfterAllOurScheming:
 	.string "Fuhahaha…$"
 
 SootopolisCity_Text_KyogreCalmDown:
-	.string "ARCHIE: KYOGRE! What's wrong?!\n"
+	.string "Archie: LSuwako! What's wrong?!\n"
 	.string "Look over here! It's the RED ORB!\l"
-	.string "Calm down! KYOGRE!\p"
+	.string "Calm down! LSuwako!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "It's no good!\n"
 	.string "It's not responding at all!$"
 
 SootopolisCity_Text_TryingMeaninglessToPokemon:
-	.string "ARCHIE: KYOGRE and GROUDON both\n"
+	.string "Archie: LSuwako and LUtsuho both\n"
 	.string "flew off to who knows where.\p"
-	.string "The weather in HOENN has returned\n"
+	.string "The weather in Hoenn has returned\n"
 	.string "to its normal state…\p"
 	.string "Haha…\n"
 	.string "Hahaha…\p"
@@ -1607,8 +1607,8 @@ SootopolisCity_Text_TryingMeaninglessToPokemon:
 	.string "to Puppets…$"
 
 SootopolisCity_Text_InvolvedWithCrisisComeWithMe:
-	.string "STEVEN: Those Puppets fighting…\n"
-	.string "GROUDON… And KYOGRE…\p"
+	.string "Steven: Those Puppets fighting…\n"
+	.string "LUtsuho… And LSuwako…\p"
 	.string "The two super-ancient Puppets\n"
 	.string "were awakened from a long sleep…\p"
 	.string "And now they are smashing each other\n"
@@ -1622,8 +1622,8 @@ SootopolisCity_Text_InvolvedWithCrisisComeWithMe:
 	.string "Come with me, please.$"
 
 SootopolisCity_Text_DoesThisMakeYourFearPokemon:
-	.string "STEVEN: Listen, {PLAYER}{KUN}.\p"
-	.string "Does seeing GROUDON and KYOGRE make\n"
+	.string "Steven: Listen, {PLAYER}{KUN}.\p"
+	.string "Does seeing LUtsuho and LSuwako make\n"
 	.string "you think Puppets are to be feared?\p"
 	.string "But that's not true.\n"
 	.string "Puppets are really more…\p"
@@ -1631,29 +1631,29 @@ SootopolisCity_Text_DoesThisMakeYourFearPokemon:
 	.string "You already know.$"
 
 SootopolisCity_Text_HereWereAreHelpWallace:
-	.string "STEVEN: Okay, here we are!\p"
+	.string "Steven: Okay, here we are!\p"
 	.string "Inside here you'll find someone named\n"
 	.string "WALLACE.\p"
 	.string "I think you have what's needed to\n"
 	.string "help him…$"
 
 SootopolisCity_Text_KnowWhatsNeededToHelpHim:
-	.string "STEVEN: I think you have what's\n"
+	.string "Steven: I think you have what's\n"
 	.string "needed to help him…$"
 
 SootopolisCity_Text_NeverBeenToSkyPillar:
-	.string "STEVEN: The SKY PILLAR…\p"
+	.string "Steven: The SKY PILLAR…\p"
 	.string "I've never been there.\n"
 	.string "I wonder where it could be?$"
 
 SootopolisCity_Text_SoThatsRayquaza:
-	.string "STEVEN: So that's RAYQUAZA…\p"
+	.string "Steven: So that's LKanako…\p"
 	.string "It's incredible how the two rampaging\n"
 	.string "Puppets would flee from it in fear…$"
 
 SootopolisCity_Text_MaxieArchieLeft:
-	.string "STEVEN: It looks like both MAXIE and\n"
-	.string "ARCHIE have gone away somewhere.\p"
+	.string "Steven: It looks like both Maxie and\n"
+	.string "Archie have gone away somewhere.\p"
 	.string "Perhaps they've gone to MT. PYRE to\n"
 	.string "return those ORBS…$"
 
@@ -1667,7 +1667,7 @@ SootopolisCity_Text_HaventYouScaledSkyPillar:
 
 SootopolisCity_Text_AquaMagmaDidntMeanHarm:
 	.string "WALLACE: {PLAYER}{KUN}…\p"
-	.string "The leaders of TEAM MAGMA and AQUA,\n"
+	.string "The leaders of Team Magma and Aqua,\n"
 	.string "I don't think they meant harm.\p"
 	.string "It wouldn't hurt to hear what they\n"
 	.string "have to say for themselves.$"
@@ -1676,7 +1676,7 @@ SootopolisCity_Text_ThankYouForHelpAcceptThis:
 	.string "WALLACE: {PLAYER}{KUN}…\n"
 	.string "My eyes didn't deceive me.\p"
 	.string "Thanks to your help, SOOTOPOLIS…\n"
-	.string "No, all of HOENN was saved.\p"
+	.string "No, all of Hoenn was saved.\p"
 	.string "On behalf of the people, I thank you.\p"
 	.string "This is a gift from me.\n"
 	.string "Please accept it.$"

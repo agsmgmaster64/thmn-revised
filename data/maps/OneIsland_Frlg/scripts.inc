@@ -145,7 +145,7 @@ OneIsland_Text_HavePCLinkageWithHoenn::
 	.string "My granddaughter was in a tizzy\n"
 	.string "over a new breakthrough.\p"
 	.string "She said we finally have PC linkage\n"
-	.string "with people in HOENN.\p"
+	.string "with people in Hoenn.\p"
 	.string "I'm not sure what that means, but\n"
 	.string "CELIO is quite the man.\p"
 	.string "He would make a fine husband for\n"
@@ -166,4 +166,3 @@ OneIsland_Text_ReturnToCinnabar::
 OneIsland_Text_IsntWarmClimateHereGreat::
 	.string "Hi, sight-seeing, are you?\n"
 	.string "Isn't the warm climate here great?$"
-

@@ -17,7 +17,7 @@ MagmaHideout_1F_EventScript_Grunt2::
 	end
 
 MagmaHideout_1F_Text_Grunt1Intro:
-	.string "When TEAM MAGMA has roll call, we get\n"
+	.string "When Team Magma has roll call, we get\n"
 	.string "important guarding assignments in\l"
 	.string "the order that we line up.\p"
 	.string "That's why I'm stuck off in this corner.\n"
@@ -50,4 +50,3 @@ MagmaHideout_1F_Text_Grunt2PostBattle:
 	.string "You'll find out when you get there!\p"
 	.string "It'd be better if you saved surprises\n"
 	.string "to the end, don't you think?$"
-

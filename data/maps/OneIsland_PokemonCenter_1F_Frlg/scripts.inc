@@ -918,4 +918,3 @@ OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn::
 
 OneIsland_PokemonCenter_1F_Text_ObtainedTriPass::
 	.string "Obtained the TRI-PASS!$"
-

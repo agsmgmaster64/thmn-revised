@@ -239,7 +239,7 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "others like you have achieved.\p"
 	.string "Now!\p"
 	.string "Who can most elegantly dance with\n"
-	.string "their Puppets in HOENN?\p"
+	.string "their Puppets in Hoenn?\p"
 	.string "Show me right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:

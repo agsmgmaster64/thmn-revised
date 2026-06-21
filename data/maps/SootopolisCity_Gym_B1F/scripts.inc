@@ -106,7 +106,7 @@ SootopolisCity_Gym_B1F_Text_ConniePostBattle:
 
 SootopolisCity_Gym_B1F_Text_BridgetIntro:
 	.string "The Puppet GYM of the highest level\n"
-	.string "in the HOENN region…\p"
+	.string "in the Hoenn region…\p"
 	.string "That's the SOOTOPOLIS GYM.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetDefeat:

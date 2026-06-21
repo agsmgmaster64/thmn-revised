@@ -1,4 +1,4 @@
-Route118_MapScripts::
+StevenRoute118_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, Route118_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route118_OnFrame
@@ -244,8 +244,8 @@ Route118_EventScript_Deandre::
 	end
 
 Route118_Text_StevenQuestions:
-	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
-	.string "It's me, STEVEN!\n"
+	.string "Steven: Hi, {PLAYER}{KUN}!\p"
+	.string "It's me, Steven!\n"
 	.string "We met in the cave near DEWFORD.\p"
 	.string "Have you met many kinds of Puppets\n"
 	.string "since I last saw you?\p"
