@@ -6848,7 +6848,7 @@ static inline u32 CalcMoveBasePower(struct DamageContext *ctx)
             basePower = 100;
         break;
     case EFFECT_LAST_RESPECTS:
-        basePower += (basePower * min(100, gBattleStruct->faintCounter[GetBattlerTrainer(battlerAtk)]));
+        basePower += (basePower * min(5, gBattleStruct->faintCounter[GetBattlerTrainer(battlerAtk)]));
         break;
     case EFFECT_SPECIES_POWER_OVERRIDE:
         if (gBattleMons[battlerAtk].species == GetMoveSpeciesPowerOverride_Species(ctx->move))

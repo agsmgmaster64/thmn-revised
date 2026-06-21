@@ -84,7 +84,7 @@
 #define B_TOXIC_NEVER_MISS          GEN_LATEST // In Gen6+, Toxic bypasses accuracy checks when used by Poison-types.
 #define B_MINIMIZE_DMG_ACC          GEN_LATEST // In Gen6+, moves that deal double damage to minimized Pokémon will bypass accuracy checks.
 #define B_BLIZZARD_HAIL             GEN_LATEST // In Gen4+, Blizzard bypasses accuracy checks if it's hailing.
-#define B_SHEER_COLD_ACC            GEN_LATEST // In Gen7+, Sheer Cold's accuracy is reduced to 20% if the user isn't an Ice-type.
+#define B_SHEER_COLD_ACC            FALSE // In Gen7+, Sheer Cold's accuracy is reduced to 20% if the user isn't an Ice-type.
 
 // Move stat change settings
 #define B_FELL_STINGER_STAT_RAISE   GEN_LATEST // In Gen7+, if Fell Stinger causes the target to faint, the user's Attack raises by 3 stages instead of 2.
