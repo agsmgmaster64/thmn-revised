@@ -3023,3 +3023,26 @@
 	getbraillestringwidth \text
 	call EventScript_BrailleCursorWaitButton
 	.endm
+
+	@ example_usage:
+	@ 	createfieldmugshot MUGSHOT_TEST, EMOTE_NORMAL
+	@ 	msgbox test
+	@ 	removefieldmugshot
+	@ 	createfieldmugshot MUGSHOT_TEST, EMOTE_ALT
+	@ 	msgbox test2
+	@ 	removefieldmugshot
+
+	@ spawn a mugshot in the overworld at a specific coordinate
+	.macro createfieldmugshot mugshot:req, emote=EMOTE_NORMAL top=MUGSHOT_X left=MUGSHOT_Y
+	callnative Script_CreateFieldMugshot, requests_effects=1
+	.2byte \mugshot
+	.2byte \emote
+	.2byte \top
+	.2byte \left
+	.endm
+
+	@ destroys a mugshot in the overworld, if there is one
+	.macro removefieldmugshot
+	callnative Script_RemoveFieldMugshot
+	.endm
+
