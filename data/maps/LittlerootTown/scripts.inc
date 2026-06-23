@@ -159,6 +159,7 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	hideplayer
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
+	setflag FLAG_SYS_B_DASH
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	return
@@ -887,7 +888,7 @@ LittlerootTown_EventScript_Mom::
 
 LittlerootTown_EventScript_SetReceivedRunningShoes::
 	removeobject LOCALID_LITTLEROOT_MOM
-	setflag FLAG_SYS_B_DASH
+	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	release
 	end
@@ -895,10 +896,8 @@ LittlerootTown_EventScript_SetReceivedRunningShoes::
 LittlerootTown_EventScript_GiveRunningShoes::
 	msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_Text_SwitchShoesWithRunningShoes
-	waitfanfare
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-	msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
+	giveitem ITEM_OLD_ROD
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
 	closemessage
 	delay 30
@@ -927,20 +926,15 @@ LittlerootTown_Text_WearTheseRunningShoes:
 	.string "You're your father's child, all right.\n"
 	.string "You look good together with a Puppet!\p"
 	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these Running Shoes.\p"
-	.string "They'll put a zip in your step!$"
+	.string "adventure, take Dad's old Fishing Rod.\p"
+	.string "He never uses it anyway!$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
-	.string "{PLAYER} switched shoes with the\n"
-	.string "Running Shoes.$"
+	.string "Obtained the Old Rod!$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "Mom: {PLAYER}, those shoes came with\n"
-	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "Running Shoes to run extra-fast!\p"
-	.string "“Slip on these Running Shoes and race\n"
-	.string "in the great outdoors!”$"
+	.string "{PLAYER} put away the Old Rod\n"
+	.string "in the Key Items pocket.$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"

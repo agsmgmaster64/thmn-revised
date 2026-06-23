@@ -1,4 +1,4 @@
-StevenRoute118_MapScripts::
+Route118_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, Route118_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route118_OnFrame
