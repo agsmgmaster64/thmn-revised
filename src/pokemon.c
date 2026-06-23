@@ -6716,7 +6716,7 @@ static bool32 ResolveIsEgg(u32 isEggTemplate)
 
 static bool32 ResolveTeraType(u32 teraTypeTemplate)
 {
-    assertf(teraTypeTemplate != TYPE_NONE && teraTypeTemplate != TYPE_MYSTERY && teraTypeTemplate < NUMBER_OF_MON_TYPES, "using invalid tera type %d when creating pokemon", teraTypeTemplate)
+    assertf(teraTypeTemplate != TYPE_NONE && teraTypeTemplate < NUMBER_OF_MON_TYPES, "using invalid tera type %d when creating pokemon", teraTypeTemplate)
     {
         return TYPE_STELLAR;
     }

@@ -577,7 +577,7 @@ static bool32 HandleEndTurnPoison(enum BattlerId battler)
 
             poisonMultiplier = (gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8;
 
-            if (IsAbilityOnOpposingSide(battler, ABILITY_CATALYST))
+            if (IsAbilityOnSide(BATTLE_OPPOSITE(battler), ABILITY_CATALYST))
                 poisonMultiplier += 2;
 
             gBattleStruct->passiveHpUpdate[battler] *= poisonMultiplier;
@@ -588,7 +588,7 @@ static bool32 HandleEndTurnPoison(enum BattlerId battler)
         else
         {
             poisonMultiplier = 1;
-            if (IsAbilityOnOpposingSide(battler, ABILITY_CATALYST))
+            if (IsAbilityOnSide(BATTLE_OPPOSITE(battler), ABILITY_CATALYST))
                 poisonMultiplier++;
 
             SetPassiveDamageAmount(battler, (GetNonDynamaxMaxHP(battler) * poisonMultiplier) / 8);
