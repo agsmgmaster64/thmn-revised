@@ -13,6 +13,7 @@
 #include "region_map_frlg.h"
 #include "palette.h"
 #include "party_menu.h"
+#include "qol_field_moves.h"
 #include "sound.h"
 #include "scanline_effect.h"
 #include "strings.h"
@@ -3789,6 +3790,8 @@ static void Task_FlyMap(u8 taskId)
         {
             if (sFlyMapFrlg->selectedDestination == TRUE)
                 SetFlyDestinationMapSec(GetMapsecUnderCursor());
+            if (IsFlyToolUsed())
+                gSkipShowMonAnim = TRUE;
             ReturnToFieldFromFlyMapSelect();
             FreeFlyMap(taskId);
         }
@@ -3814,8 +3817,17 @@ static void FreeFlyMap(u8 taskId)
     DestroyTask(taskId);
     FreeAllWindowBuffers();
     if (sFlyMapFrlg->selectedDestination == TRUE)
+    {
         SetMainCallback2(CB2_ReturnToField);
+    }
+    else if (IsFlyToolUsed())
+    {
+        ReturnToFieldOrBagFromFlyTool();
+    }
     else
+    {
         SetMainCallback2(CB2_ReturnToPartyMenuFromFlyMap);
+    }
+    ResetFlyTool();
     FREE_IF_NOT_NULL(sFlyMapFrlg);
 }

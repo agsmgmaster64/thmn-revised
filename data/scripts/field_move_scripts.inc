@@ -2,7 +2,7 @@
 EventScript_CutTree::
 	lockall
 	checkfieldmove FIELD_MOVE_CUT, TRUE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseCutOtherwise
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	buffermovename STR_VAR_2, MOVE_CUT
@@ -18,11 +18,40 @@ EventScript_CutTreeCommon:
 EventScript_CutTreeDown:: @ fallthrough
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
+EventScript_CutTreeDownNoFollowerCheck:: 
 	applymovement VAR_LAST_TALKED, Movement_CutTreeDown
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
 	releaseall
 	end
+
+EventScript_CanUseCutOtherwise::
+	partycheckfieldmove FIELD_MOVE_CUT, TRUE
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseBigAxe
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	msgbox Text_WantToCut, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
+	buffermovename STR_VAR_2, MOVE_CUT
+	msgbox Text_MonAttemptedToUseFieldMove, MSGBOX_DEFAULT
+	closemessage
+	goto EventScript_CutTreeCommon
+
+EventScript_UseBigAxe::
+	lockall
+	goto EventScript_UseBigAxe_SkipCheck
+
+EventScript_CanUseBigAxe::
+	checkitem ITEM_BIG_AXE, 1
+	goto_if_ne VAR_RESULT, TRUE, EventScript_CheckTreeCantCut
+	msgbox Text_WantToCutBigAxe, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
+EventScript_UseBigAxe_SkipCheck::
+	bufferitemname STR_VAR_2, ITEM_BIG_AXE
+	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	goto EventScript_CutTreeDownNoFollowerCheck
 
 @ Use cut from party menu
 EventScript_UseCut::
@@ -45,15 +74,27 @@ EventScript_CancelCut::
 
 Text_WantToCut:
 	.string "This tree looks like it can be\n"
-	.string "CUT down!\p"
-	.string "Would you like to CUT it?$"
+	.string "Cut down!\p"
+	.string "Would you like to Cut it?$"
+
+Text_WantToCutBigAxe:
+	.string "This tree looks like it can be\n"
+	.string "Cut down!\p"
+	.string "Would you like to use the Big Axe?$"
 
 Text_MonUsedFieldMove:
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
+Text_MonAttemptedToUseFieldMove::
+	.string "{STR_VAR_1} attempted to\n"
+	.string "use {STR_VAR_2}!$"
+
+Text_PlayerUsedFieldTool::
+	.string "{PLAYER} used the {STR_VAR_2}!$"
+
 Text_CantCut:
 	.string "This tree looks like it can be\n"
-	.string "CUT down!$"
+	.string "Cut down!$"
 
 @ Use rock smash from party menu
 EventScript_UseRockSmash::
@@ -64,7 +105,7 @@ EventScript_UseRockSmash::
 EventScript_RockSmash::
 	lockall
 	checkfieldmove FIELD_MOVE_ROCK_SMASH, TRUE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseRockSmashOtherwise
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
@@ -81,6 +122,7 @@ EventScript_RockSmashCommon:
 EventScript_SmashRock:: @ fallthrough
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
+EventScript_SmashRockNoFollowerCheck::
 	applymovement VAR_LAST_TALKED, Movement_SmashRock
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
@@ -91,6 +133,34 @@ EventScript_SmashRock:: @ fallthrough
 	waitstate
 	releaseall
 	end
+
+EventScript_CanUseRockSmashOtherwise::
+	partycheckfieldmove FIELD_MOVE_ROCK_SMASH, TRUE
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUsePickaxe
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	msgbox Text_WantToSmash, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
+	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
+	msgbox Text_MonAttemptedToUseFieldMove, MSGBOX_DEFAULT
+	closemessage
+	goto EventScript_RockSmashCommon
+
+EventScript_UsePickaxe::
+	lockall
+	goto EventScript_UsePickaxe_SkipCheck
+
+EventScript_CanUsePickaxe::
+	checkitem ITEM_PICKAXE, 1
+	goto_if_ne VAR_RESULT, TRUE, EventScript_CantSmashRock
+	msgbox Text_WantToSmashItem, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
+EventScript_UsePickaxe_SkipCheck::
+	bufferitemname STR_VAR_2, ITEM_PICKAXE
+	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	goto EventScript_SmashRockNoFollowerCheck
 
 EventScript_FollowerFieldMove:
 	getdirectiontoface VAR_0x8005, OBJ_EVENT_ID_FOLLOWER, OBJ_EVENT_ID_PLAYER
@@ -215,38 +285,71 @@ EventScript_CancelSmash::
 
 Text_WantToSmash:
 	.string "This rock appears to be breakable.\n"
-	.string "Would you like to use ROCK SMASH?$"
+	.string "Would you like to use Rock Smash?$"
+
+Text_WantToSmashItem:
+	.string "This rock appears to be breakable.\n"
+	.string "Would you like to use the Pickaxe?$"
 
 Text_CantSmash:
-	.string "It's a rugged rock, but a POKéMON\n"
+	.string "It's a rugged rock, but a Puppet\n"
 	.string "may be able to smash it.$"
 
 EventScript_StrengthBoulder::
 	lockall
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
 	checkfieldmove FIELD_MOVE_STRENGTH, TRUE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantStrength
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseStrengthOtherwise
+	setfieldeffectargument 0, VAR_RESULT
+	msgbox Text_WantToStrength, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
+	closemessage
+EventScript_StrengthCommon::
+	dofieldeffect FLDEFF_USE_STRENGTH
+	waitstate
+EventScript_ActivateStrength::
+	setflag FLAG_SYS_USE_STRENGTH
+	msgbox Text_MonUsedStrength, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_CanUseStrengthOtherwise::
+	partycheckfieldmove FIELD_MOVE_STRENGTH, TRUE
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUsePowerGlove
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
 	closemessage
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
-	goto EventScript_ActivateStrength
+	setflag FLAG_SYS_USE_STRENGTH
+	msgbox Text_MonAttemptedUseStrength, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_UsePowerGlove::
+	lockall
+	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulderItem
+	goto EventScript_UsePowerGlove_SkipCheck
+
+EventScript_CanUsePowerGlove::
+	checkitem ITEM_POWER_GLOVE, 1
+	goto_if_ne VAR_RESULT, TRUE, EventScript_CantStrength
+	msgbox Text_WantToStrengthItem, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
+EventScript_UsePowerGlove_SkipCheck::
+	setflag FLAG_SYS_USE_STRENGTH
+	bufferitemname STR_VAR_2, ITEM_POWER_GLOVE
+	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
+EventScript_CheckActivatedBoulderItem:
+	bufferitemname STR_VAR_2, ITEM_POWER_GLOVE
+	msgbox Text_StrengthActivated, MSGBOX_DEFAULT
+	releaseall
 	end
 
 EventScript_UseStrength::
 	lockall
-	dofieldeffect FLDEFF_USE_STRENGTH
-	waitstate
-	goto EventScript_ActivateStrength
-	end
-
-EventScript_ActivateStrength::
-	setflag FLAG_SYS_USE_STRENGTH
-	msgbox Text_MonUsedStrength, MSGBOX_DEFAULT
-	releaseall
-	end
+	goto EventScript_StrengthCommon
 
 EventScript_CantStrength::
 	msgbox Text_CantStrength, MSGBOX_DEFAULT
@@ -254,6 +357,7 @@ EventScript_CantStrength::
 	end
 
 EventScript_CheckActivatedBoulder::
+	buffermovename STR_VAR_2, MOVE_STRENGTH
 	msgbox Text_StrengthActivated, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -264,43 +368,81 @@ EventScript_CancelStrength::
 	end
 
 Text_WantToStrength:
-	.string "It's a big boulder, but a POKéMON\n"
+	.string "It's a big boulder, but a Puppet\n"
 	.string "may be able to push it aside.\p"
-	.string "Would you like to use STRENGTH?$"
+	.string "Would you like to use Strength?$"
+
+Text_WantToStrengthItem:
+	.string "It's a big boulder, but a Puppet\n"
+	.string "may be able to push it aside.\p"
+	.string "Would you like to use the Power Glove?$"
 
 Text_MonUsedStrength:
-	.string "{STR_VAR_1} used STRENGTH!\p"
-	.string "{STR_VAR_1}'s STRENGTH made it\n"
+	.string "{STR_VAR_1} used Strength!\p"
+	.string "{STR_VAR_1}'s Strength made it\n"
+	.string "possible to move boulders around!$"
+
+Text_MonAttemptedUseStrength:
+	.string "{STR_VAR_1} attempted to\n"
+	.string "use Strength!\p"
+	.string "{STR_VAR_1}'s attempt made it\n"
 	.string "possible to move boulders around!$"
 
 Text_CantStrength:
-	.string "It's a big boulder, but a POKéMON\n"
+	.string "It's a big boulder, but a Puppet\n"
 	.string "may be able to push it aside.$"
 
 Text_StrengthActivated:
-	.string "STRENGTH made it possible to move\n"
+	.string "{STR_VAR_2} made it possible to move\n"
 	.string "boulders around.$"
 
 EventScript_UseWaterfall::
 	lockall
 	checkfieldmove FIELD_MOVE_WATERFALL
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantWaterfall
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseWaterfallOtherwise
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
-	msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
+	buffermovename STR_VAR_2, MOVE_WATERFALL
+	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+EventScript_WaterfallCommon::
 	hidefollowernpc
 	dofieldeffect FLDEFF_USE_WATERFALL
 	callnative FollowerNPC_WarpSetEnd
 	goto EventScript_EndWaterfall
 
+EventScript_CanUseWaterfallOtherwise::
+	partycheckfieldmove FIELD_MOVE_WATERFALL
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseSurfboardPlusWaterfall
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	msgbox Text_WantToWaterfall, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
+	buffermovename STR_VAR_2, MOVE_WATERFALL
+	msgbox Text_MonAttemptedToUseFieldMove, MSGBOX_DEFAULT
+	goto EventScript_WaterfallCommon
+
+EventScript_UseSurfboardPlusWaterfall::
+	lock
+	goto EventScript_UseSurfboardPlusWaterfall_SkipCheck
+
+EventScript_CanUseSurfboardPlusWaterfall::
+	checkitem ITEM_SURFBOARD_PLUS, 1
+	goto_if_ne VAR_RESULT, TRUE, EventScript_CantWaterfall
+	msgbox Text_WantToWaterfallItem, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
+EventScript_UseSurfboardPlusWaterfall_SkipCheck::
+	bufferitemname STR_VAR_2, ITEM_SURFBOARD_PLUS
+	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
+	waitmessage
+	setskipshowanim
+	goto EventScript_WaterfallCommon
+
 EventScript_CannotUseWaterfall::
 	lockall
-
 EventScript_CantWaterfall::
 	msgbox Text_CantWaterfall, MSGBOX_DEFAULT
-
 EventScript_EndWaterfall::
 	releaseall
 	end
@@ -311,10 +453,11 @@ Text_CantWaterfall:
 
 Text_WantToWaterfall:
 	.string "It's a large waterfall.\n"
-	.string "Would you like to use WATERFALL?$"
+	.string "Would you like to use Waterfall?$"
 
-Text_MonUsedWaterfall:
-	.string "{STR_VAR_1} used WATERFALL.$"
+Text_WantToWaterfallItem:
+	.string "It's a large waterfall.\n"
+	.string "Would you like to use the Surfboard?$"
 
 EventScript_UseDive::
 	lockall
@@ -342,6 +485,18 @@ EventScript_CantDive::
 EventScript_EndDive::
 	releaseall
 	end
+
+EventScript_UseScubaGear::
+	lockall
+	goto EventScript_UseDiveItem_SkipCheck
+
+EventScript_UseDiveItem_SkipCheck::
+	bufferitemname STR_VAR_2, ITEM_SCUBA_GEAR
+	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
+	waitmessage
+	setskipshowanim
+	dofieldeffect FLDEFF_USE_DIVE
+	goto EventScript_EndDive
 
 EventScript_UseDiveUnderwater::
 	lockall
@@ -400,23 +555,23 @@ EventScript_UseCutGrass::
 	goto EventScript_CutGrassCommon
 
 Text_CantDive:
-	.string "The sea is deep here. A POKéMON\n"
+	.string "The sea is deep here. A Puppet\n"
 	.string "may be able to go underwater.$"
 
 Text_WantToDive:
 	.string "The sea is deep here.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Would you like to use Dive?$"
 
 Text_MonUsedDive:
-	.string "{STR_VAR_1} used DIVE.$"
+	.string "{STR_VAR_1} used Dive.$"
 
 Text_CantSurface:
 	.string "Light is filtering down from above.\n"
-	.string "A POKéMON may be able to surface.$"
+	.string "A Puppet may be able to surface.$"
 
 Text_WantToSurface:
 	.string "Light is filtering down from above.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Would you like to use Dive?$"
 
 EventScript_FailSweetScent::
 	msgbox Text_FailSweetScent, MSGBOX_SIGN
@@ -444,33 +599,72 @@ EventScript_UseDefog::
 
 EventScript_UseRockClimb::
 	lockall
-	checkfieldmove FIELD_MOVE_ROCK_CLIMB
+	checkfieldmove FIELD_MOVE_ROCK_CLIMB, TRUE
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantRockClimb
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToRockClimb, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndRockClimb
-	msgbox Text_MonUsedRockClimb, MSGBOX_DEFAULT
+	buffermovename STR_VAR_2, MOVE_ROCK_CLIMB
+	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
+EventScript_RockClimbCommon::
 	dofieldeffect FLDEFF_USE_ROCK_CLIMB
 	waitstate
-	goto EventScript_EndRockClimb
-	end
-
-EventScript_CantRockClimb::
-	msgbox Text_CantRockClimb, MSGBOX_DEFAULT
-
 EventScript_EndRockClimb::
 	releaseall
 	end
+
+EventScript_CanUseRockClimbOtherwise::
+	partycheckfieldmove FIELD_MOVE_ROCK_CLIMB, TRUE
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseClimbingGear
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	msgbox Text_WantToRockClimb, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndRockClimb
+	buffermovename STR_VAR_2, MOVE_ROCK_CLIMB
+	msgbox Text_MonAttemptedToUseFieldMove, MSGBOX_DEFAULT
+	closemessage
+	goto EventScript_RockClimbCommon
+
+EventScript_UseClimbingGear::
+	lock
+	goto EventScript_UseClimbingGear_SkipCheck
+
+EventScript_CanUseClimbingGear::
+	checkitem ITEM_CLIMBING_GEAR, 1
+	goto_if_ne VAR_RESULT, TRUE, EventScript_CantRockClimb
+	msgbox Text_WantToRockClimbItem, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndRockClimb
+EventScript_UseClimbingGear_SkipCheck::
+	bufferitemname STR_VAR_2, ITEM_CLIMBING_GEAR
+	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
+	waitmessage
+	setskipshowanim
+	goto EventScript_RockClimbCommon
+
+EventScript_CantRockClimb::
+	msgbox Text_CantRockClimb, MSGBOX_DEFAULT
+	goto EventScript_EndRockClimb
 
 Text_WantToRockClimb:
 	.string "The cliff is steep.\n"
 	.string "Would you like to use Rock Climb?$"
 
-Text_MonUsedRockClimb:
-	.string "{STR_VAR_1} used Rock Climb!$"
+Text_WantToRockClimbItem:
+	.string "The cliff is steep.\n"
+	.string "Would you like to use the Climbing\l"
+	.string "Gear?$"
 
 Text_CantRockClimb:
 	.string "The cliff is steep.\n"
-	.string "A Pokémon may be able to climb it.$"
+	.string "A Puppet may be able to climb it.$"
+
+EventScript_UseLantern::
+	animateflash 0
+	setflashlevel 0
+	delay 40
+	bufferitemname STR_VAR_2, ITEM_LANTERN
+	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
+	closemessage
+	end

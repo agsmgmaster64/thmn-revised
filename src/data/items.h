@@ -16474,6 +16474,150 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_LightBall,
         .iconPalette = gItemIconPalette_LightBall,
     },
+
+    [ITEM_BIG_AXE] =
+    {
+        .name = ITEM_NAME("Big Axe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A big axe that\n"
+            "can cut down\n"
+            "small trees."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_BigAxe,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_PAGER] =
+    {
+        .name = ITEM_NAME("Pager"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A device that can\n"
+            "summon a Puppet\n"
+            "to fly with."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_FlyTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_SURFBOARD] =
+    {
+        .name = ITEM_NAME("Surfboard"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A surfboard for\n"
+            "surfing on bodies\n"
+            "of water."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Surfboard,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_SURFBOARD_PLUS] =
+    {
+        .name = ITEM_NAME("Surfboard"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A surfboard for\n"
+            "surfing on bodies\n"
+            "of water."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_SurfboardPlus,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_POWER_GLOVE] =
+    {
+        .name = ITEM_NAME("Power Glove"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Some gloves that\n"
+            "have the strength\n"
+            "to move boulders."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_PowerGlove,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_LANTERN] =
+    {
+        .name = ITEM_NAME("Lantern"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A lantern that\n"
+            "can light up\n"
+            "dark areas."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Lantern,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_PICKAXE] =
+    {
+        .name = ITEM_NAME("Pickaxe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A pickaxe that\n"
+            "can smash away\n"
+            "weak rocks."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Pickaxe,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_CLIMBING_GEAR] =
+    {
+        .name = ITEM_NAME("Climbing Gear"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Some gear that\n"
+            "can let you\n"
+            "scale rock walls."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_ClimbingGear,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_SCUBA_GEAR] =
+    {
+        .name = ITEM_NAME("Scuba Gear"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Some scuba gear\n"
+            "for diving down\n"
+            "the ocean."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_ScubaGear,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
 };
 
 #undef ITEM_NAME
