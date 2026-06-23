@@ -3043,6 +3043,24 @@
 
 	@ destroys a mugshot in the overworld, if there is one
 	.macro removefieldmugshot
-	callnative Script_RemoveFieldMugshot
+	callnative Script_RemoveFieldMugshot, requests_effects=1
 	.endm
+
+	@ Start qol_field_moves
+
+	@ Checks if any Pokémon in the party can learn a specific HM.
+	@ If so, VAR_RESULT is set to the
+	@ (zero-indexed) slot number of the first Pokemon that knows the move. If not, VAR_RESULT is set to PARTY_SIZE.
+	@ VAR_0x8004 is also set to this Pokemon's species.
+	.macro partycheckfieldmove fieldMove:req, checkUnlocked=FALSE
+	callnative ScrCmd_partycheckfieldmove, requests_effects=1
+	.byte \fieldMove
+	.byte \checkUnlocked
+	.endm
+
+	.macro setskipshowanim
+	callnative ScrCmd_setskipshowanim, requests_effects=1
+	.endm
+
+	@ End qol_field_moves
 

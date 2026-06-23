@@ -43,6 +43,7 @@
 #include "party_menu.h"
 #include "pokedex.h"
 #include "pokemon_storage_system.h"
+#include "qol_field_moves.h"
 #include "random.h"
 #include "overworld.h"
 #include "rotating_tile_puzzle.h"
@@ -3421,3 +3422,27 @@ bool8 ScrCmd_getbraillestringwidth(struct ScriptContext * ctx)
     gSpecialVar_0x8004 = GetStringWidth(FONT_BRAILLE, msg, -1);
     return FALSE;
 }
+
+// Start qol_field_moves
+bool8 ScrCmd_partycheckfieldmove(struct ScriptContext *ctx)
+{
+    enum FieldMove fieldMove = ScriptReadByte(ctx);
+    bool32 doUnlockedCheck = ScriptReadByte(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+
+    PartyCanUseFieldMove(fieldMove, doUnlockedCheck, TRUE);
+
+    return FALSE;
+}
+
+bool8 ScrCmd_setskipshowanim(struct ScriptContext * ctx)
+{
+    gSkipShowMonAnim = TRUE;
+
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    return FALSE;
+}
+
+// End qol_field_moves

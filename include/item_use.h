@@ -53,6 +53,19 @@ void ItemUseOutOfBattle_BerryPouch(u8 taskId);
 bool8 ItemfinderCheckForHiddenItems(const struct MapEvents *, u8);
 enum Direction GetDirectionToHiddenItem(s16, s16);
 
+// Start qol_field_moves
+
+void ItemUseOutOfBattle_BigAxe(u8 taskId);
+void ItemUseOutOfBattle_FlyTool(u8 taskId);
+void ItemUseOutOfBattle_Surfboard(u8 taskId);
+void ItemUseOutOfBattle_PowerGlove(u8 taskId);
+void ItemUseOutOfBattle_Lantern(u8 taskId);
+void ItemUseOutOfBattle_Pickaxe(u8 taskId);
+void ItemUseOutOfBattle_SurfboardPlus(u8 taskId);
+void ItemUseOutOfBattle_ScubaGear(u8 taskId);
+void ItemUseOutOfBattle_ClimbingGear(u8);
+
+// End qol_field_moves
 enum {
     BALL_THROW_UNABLE_TWO_MONS,
     BALL_THROW_UNABLE_NO_ROOM,

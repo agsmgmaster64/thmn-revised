@@ -24,6 +24,7 @@
 #include "decompress.h"
 #include "constants/region_map_sections.h"
 #include "heal_location.h"
+#include "qol_field_moves.h"
 #include "constants/field_specials.h"
 #include "constants/heal_locations.h"
 #include "constants/rgb.h"
@@ -2486,12 +2487,19 @@ static void CB_ExitFlyMap(void)
                 struct RegionMap* tempRegionMap = &sFlyMap->regionMap;
 
                 SetFlyDestination(tempRegionMap);
+                if (IsFlyToolUsed())
+                    gSkipShowMonAnim = TRUE;
                 ReturnToFieldFromFlyMapSelect();
+            }
+            else if (IsFlyToolUsed())
+            {
+                ReturnToFieldOrBagFromFlyTool();
             }
             else
             {
                 SetMainCallback2(CB2_ReturnToPartyMenuFromFlyMap);
             }
+            ResetFlyTool();
             TRY_FREE_AND_SET_NULL(sFlyMap);
             FreeAllWindowBuffers();
         }
