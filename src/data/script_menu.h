@@ -72,7 +72,7 @@ static const struct MenuAction MultichoiceList_StatusInfo[] =
     {COMPOUND_STRING("PAR")},
     {COMPOUND_STRING("SLP")},
     {COMPOUND_STRING("BRN")},
-    {COMPOUND_STRING("FRZ")},
+    {COMPOUND_STRING("FRB")},
     {gText_Exit},
 };
 
