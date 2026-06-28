@@ -628,6 +628,9 @@ enum __attribute__((packed)) MoveEffect
     SECRET_POWER_SP_ATK_MINUS_1,
     SECRET_POWER_ACC_MINUS_1,
 
+    //new
+    MOVE_EFFECT_DEBT_SPIRAL,
+
     NUM_MOVE_EFFECTS
 };
 

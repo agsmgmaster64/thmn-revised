@@ -987,6 +987,8 @@ enum __attribute__((packed)) Move
     MOVE_GIGA_FLARE = 926,
     MOVE_MANASHOCK = 927,
 
+    MOVE_DEBT_SPIRAL = 928,
+
     MOVES_COUNT_GEN9,
 
     MOVES_COUNT = MOVES_COUNT_GEN9,

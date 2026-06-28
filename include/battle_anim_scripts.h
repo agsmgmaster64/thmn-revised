@@ -1021,6 +1021,7 @@ extern const u8 gBattleAnimGeneral_Buzzer[];
 extern const u8 gBattleAnimMove_TakeOver[];
 extern const u8 gBattleAnimMove_ThirdEye[];
 extern const u8 gBattleAnimMove_FocusStance[];
+extern const u8 gBattleAnimMove_DebtSpiral[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];
