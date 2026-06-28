@@ -145,7 +145,7 @@
 #define B_FORESIGHT_FAIL                GEN_LATEST // In Gen2 and Gen5+, Foresight fails if used against a target already under its effect.
 #define B_MIRACLE_EYE_FAIL              GEN_LATEST // In Gen5+, Miracle Eye fails if used against a target already under its effect.
 #define B_PURSUIT_TARGET                GEN_LATEST // In Gen4+, Pursuit automatically targets and attacks any switching opponent. Previously, it only attacked a switching opponent if they were chose as the target.
-#define B_SKIP_RECHARGE                 GEN_LATEST // In Gen1 only, moves with recharge turns do not need to recharge if they knock out the target.
+#define B_SKIP_RECHARGE                 GEN_1 // In Gen1 only, moves with recharge turns do not need to recharge if they knock out the target.
 #define B_ENCORE_TARGET                 GEN_LATEST // In Gen5+, an encored Pokémon can select the target of its move.
 #define B_TIME_OF_DAY_HEALING_MOVES     GEN_LATEST // In Gen2 only, the amount of HP restored by Morning Sun, Synthesis, and Moonlight doubles during the morning, day, and night, respectively.
                                                    // If OW_TIMES_OF_DAY is set to GEN_3, Morning Sun is boosted during the day instead of the morning. If it is set to GEN_4 or higher, Moonlight is also boosted in the evening.
@@ -179,7 +179,7 @@
                                                    // In Gen9-, Encore allows the target to use the Encored move using the priority of the selected move
 
 // Ability settings
-#define B_GALE_WINGS                    GEN_LATEST // In Gen7+, Gale Wings requires full HP to trigger.
+#define B_GALE_WINGS                    GEN_6 // In Gen7+, Gale Wings requires full HP to trigger.
 #define B_STANCE_CHANGE_FAIL            GEN_LATEST // In Gen7+, Stance Change fails if the Pokémon is unable to use a move due to confusion, paralysis, etc.
 #define B_SHADOW_TAG_ESCAPE             GEN_LATEST // In Gen4+, if both sides have a Pokémon with Shadow Tag, all battlers can escape. Previously, neither side could escape this situation.
 #define B_MOODY_ACC_EVASION             GEN_LATEST // In Gen8+, Moody can no longer raise accuracy and evasion.
@@ -197,7 +197,7 @@
 #define B_TRANSISTOR_BOOST              GEN_LATEST // In Gen9+, Transistor increases the power of Electric-type moves by 1.3x instead of 1.5x.
 #define B_ILLUMINATE_EFFECT             GEN_LATEST // In Gen9+, Illuminate prevents accuracy from being lowered and ignores the target's evasion. Previously, it had no in-battle effect.
 #define B_WEAK_ARMOR_SPEED              GEN_LATEST // In Gen7+, when hit by a physical move, Weak Armor raises Speed by 2 stages instead of 1.
-#define B_PROTEAN_LIBERO                GEN_LATEST // In Gen9+, Protean and Libero trigger only once per Battle.
+#define B_PROTEAN_LIBERO                GEN_7 // In Gen9+, Protean and Libero trigger only once per Battle.
 #define B_INTREPID_SWORD                GEN_LATEST // In Gen9+, Intrepid Sword triggers only once per battle.
 #define B_DAUNTLESS_SHIELD              GEN_LATEST // In Gen9+, Dauntless Shield triggers only once per battle.
 #define B_DISGUISE_HP_LOSS              GEN_LATEST // In Gen8+, when a disguised Mimikyu's Disguise is busted, upon changing to its Busted Form, it loses 1/8 of its max HP.
