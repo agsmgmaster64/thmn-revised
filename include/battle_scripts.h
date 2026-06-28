@@ -756,5 +756,7 @@ extern const u8 BattleScript_MyRealmActivates[];
 extern const u8 BattleScript_BuzzerBlocked[];
 extern const u8 BattleScript_EffectThirdEye[];
 extern const u8 BattleScript_EffectFocusStance[];
+extern const u8 BattleScript_PrintDebtSpiralMoneyString[];
+extern const u8 BattleScript_MoveEffectDebtSpiral[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

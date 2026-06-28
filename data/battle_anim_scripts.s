@@ -35188,3 +35188,32 @@ gBattleAnimMove_ThirdEye::
 	clearmonbg_static ANIM_DEF_PARTNER
 	blendoff
 	end
+
+gBattleAnimMove_DebtSpiral::
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	call DizzyPunchLunge
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 5, 16, 8, 20, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 4, 16, 0, 1, 1
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, 160, -32
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, -256, -40
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, 128, -16
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, 416, -38
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, -128, -22
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, -384, -31
+	delay 10
+	call DizzyPunchLunge
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 5, -16, -8, 20, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 4, -16, -16, 1, 1
+	playsewithpan SE_M_VITAL_THROW2, SOUND_PAN_TARGET
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, 160, -32
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, -256, -40
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, 128, -16
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, 416, -38
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, -128, -22
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, -384, -31
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end

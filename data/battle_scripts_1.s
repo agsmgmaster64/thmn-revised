@@ -6606,3 +6606,13 @@ BattleScript_BelchFails::
 	printstring STRINGID_BELCHCANTSELECT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_MoveEffectDebtSpiral::
+	printstring STRINGID_POVERTYSCATTERED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_PrintDebtSpiralMoneyString::
+	printstring STRINGID_DEBTSPIRALDEPLETION
+	waitmessage B_WAIT_TIME_LONG
+	return

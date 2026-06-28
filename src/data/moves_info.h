@@ -27043,29 +27043,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
-    // [MOVE_DEBT_SPIRAL] =
-    // {
-    //     .name = COMPOUND_STRING("Debt Spiral"),
-    //     .description = COMPOUND_STRING(
-    //         "Throws coins at the foe.\n"
-    //         "Money is lost after."),
-    //     .effect = EFFECT_HIT,
-    //     .power = 120,
-    //     .type = TYPE_NORMAL,
-    //     .accuracy = 100,
-    //     .pp = 30,
-    //     .target = TARGET_SELECTED,
-    //     .priority = 0,
-    //     .category = DAMAGE_CATEGORY_PHYSICAL,
-    //     .additionalEffects = ADDITIONAL_EFFECTS({
-    //         .moveEffect = MOVE_EFFECT_DEBT_SPIRAL,
-    //     }),
-    //     .contestEffect = CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED,
-    //     .contestCategory = CONTEST_CATEGORY_SMART,
-    //     .contestComboStarterId = 0,
-    //     .contestComboMoves = {0},
-    //     .battleAnimScript = gBattleAnimMove_DebtSpiral,
-    // },
+    [MOVE_DEBT_SPIRAL] =
+    {
+        .name = COMPOUND_STRING("Debt Spiral"),
+        .description = COMPOUND_STRING(
+            "Throws coins at the foe.\n"
+            "Money is lost after."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 30,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_DEBT_SPIRAL,
+        }),
+        .contestEffect = CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_DebtSpiral,
+    },
 
     //revised moves
 

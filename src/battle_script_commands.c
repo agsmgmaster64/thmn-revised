@@ -2265,6 +2265,7 @@ static inline bool32 IgnoreTargetingForMoveEffect(enum MoveEffect moveEffect) //
     case MOVE_EFFECT_RAINBOW:
     case MOVE_EFFECT_SEA_OF_FIRE:
     case MOVE_EFFECT_SWAMP:
+    case MOVE_EFFECT_DEBT_SPIRAL:
         return TRUE;
     default:
         return FALSE;
@@ -2440,6 +2441,30 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
             gBattlescriptCurrInstr = battleScript;
         }
         break;
+	case MOVE_EFFECT_DEBT_SPIRAL:
+		if (IsOnPlayerSide(gBattlerAttacker) && gSpecialStatuses[gBattlerAttacker].parentalBondState != PARENTAL_BOND_2ND_HIT)
+		{
+			u16 payday = gDebtSpiralMoney;
+			enum MoveTarget moveTarget = GetBattlerMoveTargetType(battlerAtk, gCurrentMove);
+			gDebtSpiralMoney += (gBattleMons[gBattlerAttacker].level * 20);
+			if (payday > gDebtSpiralMoney)
+				gDebtSpiralMoney = 0xFFFF;
+
+			// For a move that hits multiple targets (i.e. Make it Rain)
+			// we only want to print the message on the final hit
+			if (!(NumAffectedSpreadMoveTargets() > 1 && GetNextTarget(moveTarget, TRUE) != MAX_BATTLERS_COUNT))
+			{
+				BattleScriptPush(gBattlescriptCurrInstr + 1);
+				gBattlescriptCurrInstr = BattleScript_MoveEffectDebtSpiral;
+			}
+			else
+				gBattlescriptCurrInstr = battleScript;
+		}
+		else
+		{
+			gBattlescriptCurrInstr = battleScript;
+		}
+		break;
     case MOVE_EFFECT_HAPPY_HOUR:
         if (IsOnPlayerSide(battlerAtk) && !gBattleStruct->moneyMultiplierMove)
         {
@@ -7457,15 +7482,25 @@ static void Cmd_givepaydaymoney(void)
 {
     CMD_ARGS();
 
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)) && gPaydayMoney != 0)
+    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)) && (gPaydayMoney != 0 || gDebtSpiralMoney != 0))
     {
-        u32 bonusMoney = gPaydayMoney * gBattleStruct->moneyMultiplier;
-        AddMoney(&gSaveBlock1Ptr->money, bonusMoney);
+        u32 bonusMoney = (gPaydayMoney * gBattleStruct->moneyMultiplier) - gDebtSpiralMoney;
+        u8 negative = (bonusMoney < 0);
+        if (negative)
+            bonusMoney *= -1;
+
+        if (!negative)
+            AddMoney(&gSaveBlock1Ptr->money, bonusMoney);
+        else
+            RemoveMoney(&gSaveBlock1Ptr->money, bonusMoney);
 
         PREPARE_HWORD_NUMBER_BUFFER(gBattleTextBuff1, 5, bonusMoney)
-
         BattleScriptPush(cmd->nextInstr);
-        gBattlescriptCurrInstr = BattleScript_PrintPayDayMoneyString;
+        
+        if (negative)
+            gBattlescriptCurrInstr = BattleScript_PrintDebtSpiralMoneyString;
+        else
+            gBattlescriptCurrInstr = BattleScript_PrintPayDayMoneyString;
     }
     else
     {
