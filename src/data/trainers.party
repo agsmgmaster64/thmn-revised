@@ -2541,7 +2541,7 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Chibi Nazrin @ Nugget
+Chibi Mike @ Nugget
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4817,22 +4817,22 @@ Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Spikes
 - Magical Leaf
-- Tackle
+- Tremor
 - Leer
 
 Chibi Kasen
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Sandstorm
-- Growl
-- Tackle
+- Sandy Mash
+- Holy Strike
 - Leer
 
 Chibi Tenshi @ Oran Berry
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Sandstorm
-- Bulldoze
+- Sharpen
+- Sandy Mash
 - Rock Tomb
 - Cut
 
@@ -5976,7 +5976,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Chibi Nazrin
+Chibi Eika
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -5993,13 +5993,9 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Chibi Chen
+Chibi Ringo
 Level: 10
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Scratch
-- Tail Whip
-- Quick Attack
-- Leer
 
 === TRAINER_TOMMY ===
 Name: Tommy
@@ -6027,9 +6023,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Chibi Nazrin
+Chibi Nazrin @ Focus Band
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Endeavor
+- Quick Attack
 
 === TRAINER_BEN ===
 Name: BEN
@@ -10578,11 +10576,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Chibi Yuugi
+Chibi Mayumi
 Level: 8
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
-Chibi Suwako
+Chibi Tsukasa
 Level: 8
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
@@ -12983,7 +12981,7 @@ Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DAWSON ===
-Name: DAWSON
+Name: Dawson
 Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
