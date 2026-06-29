@@ -27297,6 +27297,57 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_PristineShot,
     },
 
+    [MOVE_DESTITUTION] =
+    {
+        .name = COMPOUND_STRING("Destitution"),
+        .description = COMPOUND_STRING(
+            "Pestilence traps the foe\n"
+            "for "BINDING_TURNS" turns."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_POISON,
+        .accuracy = 90,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .ignoresKingsRock = B_UPDATED_MOVE_FLAGS < GEN_3,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_WRAP,
+            .multistring.wrapped = B_MSG_WRAPPED_DESTITUTION,
+        }),
+        .contestEffect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = gBattleAnimMove_Destitution,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_EARTH_PRESS] =
+    {
+        .name = COMPOUND_STRING("Earth Press"),
+        .description = COMPOUND_STRING(
+            "Uses Defense instead of\n"
+            "Atk when dealing damage."),
+        .effect = EFFECT_BODY_PRESS,
+        .power = 80,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .metronomeBanned = TRUE,
+        .skyBattleBanned = B_EXTRAPOLATED_MOVE_FLAGS,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_EarthPress,
+    },
+
     //revised moves
 
     [MOVE_MINERAL_PELT] =

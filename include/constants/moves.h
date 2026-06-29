@@ -997,6 +997,8 @@ enum __attribute__((packed)) Move
     MOVE_EXTERMINATE = 935,
     MOVE_SUTRA = 936,
     MOVE_PRISTINE_SHOT = 937,
+    MOVE_DESTITUTION = 938,
+    MOVE_EARTH_PRESS = 939,
 
     MOVES_COUNT_GEN9,
 

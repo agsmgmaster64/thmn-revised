@@ -350,7 +350,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNCOPIEDFOE]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} copied {B_DEF_NAME_WITH_PREFIX2}'s Ability!"),
     [STRINGID_PKMNWISHCAMETRUE]                     = COMPOUND_STRING("{B_BUFF1}'s wish came true!"),
     [STRINGID_PKMNPLANTEDROOTS]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} planted its roots!"),
-    [STRINGID_PKMNABSORBEDNUTRIENTS]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} absorbed nutrients with its roots!"),
+    [STRINGID_PKMNABSORBEDNUTRIENTS]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} healed by absorbing energy!"),
     [STRINGID_PKMNANCHOREDITSELF]                   = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} is anchored in place with its roots!"),
     [STRINGID_PKMNWASMADEDROWSY]                    = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} grew drowsy!"),
     [STRINGID_PKMNKNOCKEDOFF]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} knocked off {B_DEF_NAME_WITH_PREFIX2}'s {B_LAST_ITEM}!"),
@@ -919,6 +919,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_APOLLON_START]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} fired a volley of arrows upward!"),
     [STRINGID_TARGETCURSED]                         = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was cursed!"),
     [STRINGID_BEGINSREGENERATING]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} anchors itself and starts regenerating!"),
+    [STRINGID_PKMNTRAPPEDINDESTITUTION]             = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was engulfed in misfortune!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1178,6 +1179,7 @@ const u16 gWrappedStringIds[NUM_TRAPPING_MOVES] =
     [B_MSG_WRAPPED_INFESTATION] = STRINGID_INFESTATION,            // MOVE_INFESTATION
     [B_MSG_WRAPPED_SNAP_TRAP]   = STRINGID_PKMNINSNAPTRAP,         // MOVE_SNAP_TRAP
     [B_MSG_WRAPPED_THUNDER_CAGE]= STRINGID_THUNDERCAGETRAPPED,     // MOVE_THUNDER_CAGE
+    [B_MSG_WRAPPED_DESTITUTION]  = STRINGID_PKMNTRAPPEDINDESTITUTION
 };
 
 const u16 gMistUsedStringIds[] =

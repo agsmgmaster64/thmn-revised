@@ -1045,3 +1045,14 @@ const struct SpriteTemplate gRockPlumeSpriteTemplate =
     .anims = gAnims_FlyingRock,
     .callback = AnimDirtPlumeParticle,
 };
+
+const struct SpriteTemplate gDestitutionSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_DESTITUTION_ORB,
+    .paletteTag = ANIM_TAG_DESTITUTION_ORB,
+    .oam = &gOamData_AffineNormal_ObjBlend_16x16,
+    .anims = gAnims_WaterMudOrb,
+    .images = NULL,
+    .affineAnims = gAffineAnims_Whirlpool,
+    .callback = AnimParticleInVortex,
+};

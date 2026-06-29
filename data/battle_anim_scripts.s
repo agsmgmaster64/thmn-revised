@@ -28520,6 +28520,7 @@ gBattleAnimGeneral_TurnTrap::
 	jumpargeq 0, TRAP_ANIM_INFESTATION, Status_Infestation
 	jumpargeq 0, TRAP_ANIM_SNAP_TRAP, Status_Snap_Trap
 	jumpargeq 0, TRAP_ANIM_THUNDER_CAGE, Status_Thunder_Cage
+	jumpargeq 0, TRAP_ANIM_DESTITUTION, Status_Destitution
 	goto Status_BindWrap
 Status_BindWrap:
 	loopsewithpan SE_M_SCRATCH, SOUND_PAN_TARGET, 6, 2
@@ -35380,5 +35381,60 @@ gBattleAnimMove_PristineShot::
 	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
 	waitforvisualfinish
 	clearmonbg 1
+	blendoff
+	end
+
+Status_Destitution:
+	goto gBattleAnimMove_Destitution
+
+gBattleAnimMove_Destitution::
+	monbg ANIM_DEF_PARTNER
+	splitbgprio 0
+	setalpha 12, 8
+	delay 0
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 0, 7, 0x28CB
+	loopsewithpan SE_M_PSYBEAM2, 192, 3, 10
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 30, 1
+	call DestitutionEffect
+	call DestitutionEffect
+	delay 12
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 7, 0, 0x28CB
+	waitforvisualfinish
+	stopsound
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
+DestitutionEffect:: @ 81CFB92
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 28, 384, 50, 8, 50, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 32, 240, 40, 11, -46, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 33, 416, 40, 4, 42, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 31, 288, 45, 6, -42, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 28, 448, 45, 11, 46, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 33, 464, 50, 10, -50, 1
+	delay 2
+	return
+
+gBattleAnimMove_EarthPress::
+	monbg ANIM_DEF_PARTNER
+	splitbgprio 0
+	setalpha 12, 8
+	
+	playsewithpan SE_M_ROCK_THROW, 63
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32, -24, 0, -24, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32, -12, 0, -12, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32,   0, 0,   0, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32,  12, 0,  12, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32,  24, 0,  24, 10, 1, 3, 0
+	waitforvisualfinish
+	playsewithpan SE_M_STRENGTH, 63
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 4, 0, 6, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end

@@ -1072,3 +1072,14 @@ const struct SpriteTemplate gDebtSpiralSpriteTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimDizzyPunchDuck,
 };
+
+const struct SpriteTemplate gEarthPressSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ROCKS,
+    .paletteTag = ANIM_TAG_ROCKS,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sAnims_BasicRock,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSlideHandOrFootToTarget,
+};
