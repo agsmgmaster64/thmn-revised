@@ -3627,6 +3627,7 @@ BattleScript_MonTookFutureAttack::
 	goto BattleScript_DoFutureAttackHit
 BattleScript_FutureHitAnimDoomDesire::
 	playanimation BS_ATTACKER, B_ANIM_DOOM_DESIRE_HIT
+	goto BattleScript_DoFutureAttackHit
 BattleScript_ApollonHit::
 	playanimation BS_TARGET, B_ANIM_APOLLON_HIT
 BattleScript_DoFutureAttackHit::
