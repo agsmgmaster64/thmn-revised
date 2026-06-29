@@ -35217,3 +35217,38 @@ gBattleAnimMove_DebtSpiral::
 	clearmonbg ANIM_TARGET
 	blendoff
 	end
+
+gBattleAnimMove_Apollon::
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, 0, 32, 0, -96, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    
+    delay 6
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, -10, 32, -10, -96, 25, 0
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, 10, 32, 10, -96, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+
+    delay 6
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, -20, 32, -20, -96, 25, 0
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, 20, 32, 20, -96, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+
+	waitforvisualfinish
+    end
+
+gBattleAnimGeneral_ApollonHit::
+	playsewithpan SE_M_SKETCH, 0
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, 0, -96, 0, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 6
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, -10, -96, -10, 32, 25, 0
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, 10, -96, 10, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 6
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, -20, -96, -20, 32, 25, 0
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, 20, -96, 20, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 8, 0, 16, 1
+	loopsewithpan SE_M_HORN_ATTACK, 63, 3, 5
+	waitforvisualfinish
+    end

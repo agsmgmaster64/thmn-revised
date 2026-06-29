@@ -988,6 +988,10 @@ enum __attribute__((packed)) Move
     MOVE_MANASHOCK = 927,
 
     MOVE_DEBT_SPIRAL = 928,
+    MOVE_DAM_BREACH = 929,
+    MOVE_COLD_SNAP = 930,
+    MOVE_APOLLON = 931,
+    MOVE_RAPID_FIRE = 932,
 
     MOVES_COUNT_GEN9,
 

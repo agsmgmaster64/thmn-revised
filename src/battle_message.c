@@ -916,6 +916,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_BELCHCANTUSE]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} hasn't eaten any held Berries, so it can't possibly belch!\p"),
     [STRINGID_DEBTSPIRALDEPLETION]                  = COMPOUND_STRING("You used up ¥{B_BUFF1} for premium attack costs…\p"),
     [STRINGID_POVERTYSCATTERED]                     = COMPOUND_STRING("Financial assets were consumed!"),
+    [STRINGID_APOLLON_START]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} fired a volley of arrows upward!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1285,7 +1286,8 @@ const u16 gPartyStatusHealStringIds[] =
 const u16 gFutureMoveUsedStringIds[] =
 {
     [B_MSG_FUTURE_SIGHT] = STRINGID_PKMNFORESAWATTACK,
-    [B_MSG_DOOM_DESIRE]  = STRINGID_PKMNCHOSEXASDESTINY
+    [B_MSG_DOOM_DESIRE]  = STRINGID_PKMNCHOSEXASDESTINY,
+    [B_MSG_APOLLON]      = STRINGID_APOLLON_START
 };
 
 const u16 gBallEscapeStringIds[] =

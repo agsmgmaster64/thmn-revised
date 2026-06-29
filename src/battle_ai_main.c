@@ -2005,6 +2005,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
     case EFFECT_HIT_ESCAPE:
         break;
     case EFFECT_FUTURE_SIGHT:
+    case EFFECT_APOLLON:
         if (gBattleStruct->futureSight[LEFT_FOE(battlerAtk)].counter > 0
          || gBattleStruct->futureSight[RIGHT_FOE(battlerAtk)].counter > 0)
             ADJUST_SCORE(-12);

@@ -3439,4 +3439,8 @@ extern const u16 gBattleIcons_Pal2[];
 extern const u32 gGhostFrontPic[];
 extern const u16 gGhostPalette[];
 
+//new touhoumon stuff
+extern const u32 gBattleAnimSpriteGfx_Apollon[];
+extern const u16 gBattleAnimSpritePal_Apollon[];
+
 #endif //GUARD_GRAPHICS_H

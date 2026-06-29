@@ -487,6 +487,11 @@ const u16 gBattleAnimSpritePal_IvyCudgelFire[] = INCGFX_U16("graphics/pokemon/og
 const u16 gBattleAnimSpritePal_IvyCudgelRock[] = INCGFX_U16("graphics/pokemon/ogerpon/cornerstone/normal.pal", ".gbapal");
 const u16 gBattleAnimSpritePal_IvyCudgelWater[] = INCGFX_U16("graphics/pokemon/ogerpon/wellspring/normal.pal", ".gbapal");
 
+//new
+
+const u32 gBattleAnimSpriteGfx_Apollon[] = INCGFX_U32("graphics/battle_anims/sprites/apollon.png", ".4bpp.smol");
+const u16 gBattleAnimSpritePal_Apollon[] = INCGFX_U16("graphics/battle_anims/sprites/apollon.png", ".gbapal");
+
 // old battle interface data, unused
 
 const u32 gOldBattleInterfaceGfx[] = INCGFX_U32("graphics/unused/obi1.4bpp", ".smol");
