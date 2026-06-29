@@ -1243,6 +1243,10 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
         if (gBattleMons[cv->battlerAtk].volatiles.noRetreat)
             battleScript = BattleScript_ButItFailed;
         break;
+    case EFFECT_AEGIS_MERGE:
+        if (gBattleMons[cv->battlerAtk].volatiles.root)
+            battleScript = BattleScript_ButItFailed;
+        break;
     case EFFECT_PROTECT:
     case EFFECT_ENDURE:
         TryResetConsecutiveUseCounter(cv->battlerAtk);
@@ -1368,6 +1372,7 @@ static enum CancelerResult CancelerMoveEffectFailureTarget(struct BattleCalcValu
             }
             break;
         case EFFECT_FUTURE_SIGHT:
+        case EFFECT_APOLLON:
             if (gBattleStruct->futureSight[battlerDef].counter > 0)
             {
                 battleScript = BattleScript_ButItFailed;
@@ -1623,6 +1628,7 @@ static enum CancelerResult CancelerInterruptibleMoves(struct BattleCalcValues *c
     switch (cv->moveEffect)
     {
     case EFFECT_FUTURE_SIGHT:
+    case EFFECT_APOLLON:
         gBattleStruct->futureSight[cv->battlerDef].move = cv->move;
         gBattleStruct->futureSight[cv->battlerDef].battlerIndex = cv->battlerAtk;
         gBattleStruct->futureSight[cv->battlerDef].partyIndex = gBattlerPartyIndexes[cv->battlerAtk];
@@ -1630,6 +1636,8 @@ static enum CancelerResult CancelerInterruptibleMoves(struct BattleCalcValues *c
 
         if (gCurrentMove == MOVE_DOOM_DESIRE)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
+        else if (gCurrentMove == MOVE_APOLLON)
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_APOLLON;
         else
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FUTURE_SIGHT;
 

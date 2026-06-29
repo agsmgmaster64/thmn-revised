@@ -630,7 +630,7 @@ enum __attribute__((packed)) MoveEffect
 
     //new
     MOVE_EFFECT_DEBT_SPIRAL,
-
+    MOVE_EFFECT_CURSE,
     NUM_MOVE_EFFECTS
 };
 

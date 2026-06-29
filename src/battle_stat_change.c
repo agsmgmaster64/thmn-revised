@@ -1049,6 +1049,14 @@ static void SetAdditionalEffectsOnStatChange(struct BattleCalcValues *cv, struct
             st->moveScript = BattleScript_NoRetreatMessage;
         }
         break;
+    case EFFECT_AEGIS_MERGE:
+        if (!gBattleMons[cv->battlerDef].volatiles.root)
+        {
+            gBattleMons[cv->battlerDef].volatiles.root = TRUE;
+            gBattleMons[cv->battlerDef].volatiles.escapePrevention = TRUE;
+            st->moveScript = BattleScript_AegisMergeMessage;
+        }
+        break;
     case EFFECT_AUTOTOMIZE:
         if (gBattleStruct->moveResultFlags[cv->battlerDef] & MOVE_RESULT_STAT_CHANGED
          && GetBattlerWeight(cv->battlerDef, cv->abilities[cv->battlerDef], cv->holdEffects[cv->battlerDef]) > 1)

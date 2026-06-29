@@ -3621,11 +3621,15 @@ BattleScript_MonTookFutureAttack::
 	printstring STRINGID_PKMNTOOKATTACK
 	waitmessage B_WAIT_TIME_LONG
 	futuresighttargetfailure BattleScript_DoFutureAttackResult
-	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_FUTURE_SIGHT, BattleScript_FutureHitAnimDoomDesire
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_DOOM_DESIRE, BattleScript_FutureHitAnimDoomDesire
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_APOLLON, BattleScript_ApollonHit
 	playanimation BS_ATTACKER, B_ANIM_FUTURE_SIGHT_HIT
 	goto BattleScript_DoFutureAttackHit
 BattleScript_FutureHitAnimDoomDesire::
 	playanimation BS_ATTACKER, B_ANIM_DOOM_DESIRE_HIT
+	goto BattleScript_DoFutureAttackHit
+BattleScript_ApollonHit::
+	playanimation BS_TARGET, B_ANIM_APOLLON_HIT
 BattleScript_DoFutureAttackHit::
 	effectivenesssound
 	hitanimation BS_TARGET
@@ -6616,3 +6620,13 @@ BattleScript_PrintDebtSpiralMoneyString::
 	printstring STRINGID_DEBTSPIRALDEPLETION
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_Cursed::
+	printstring STRINGID_TARGETCURSED
+	waitmessage 0x40
+	return
+
+BattleScript_AegisMergeMessage::
+	printstring STRINGID_BEGINSREGENERATING
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

@@ -28520,6 +28520,7 @@ gBattleAnimGeneral_TurnTrap::
 	jumpargeq 0, TRAP_ANIM_INFESTATION, Status_Infestation
 	jumpargeq 0, TRAP_ANIM_SNAP_TRAP, Status_Snap_Trap
 	jumpargeq 0, TRAP_ANIM_THUNDER_CAGE, Status_Thunder_Cage
+	jumpargeq 0, TRAP_ANIM_DESTITUTION, Status_Destitution
 	goto Status_BindWrap
 Status_BindWrap:
 	loopsewithpan SE_M_SCRATCH, SOUND_PAN_TARGET, 6, 2
@@ -35215,5 +35216,225 @@ gBattleAnimMove_DebtSpiral::
 	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, -384, -31
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
+gBattleAnimMove_Apollon::
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, 0, 32, 0, -96, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    
+    delay 6
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, -10, 32, -10, -96, 25, 0
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, 10, 32, 10, -96, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+
+    delay 6
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, -20, 32, -20, -96, 25, 0
+	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, 20, 32, 20, -96, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+
+	waitforvisualfinish
+    end
+
+gBattleAnimGeneral_ApollonHit::
+	playsewithpan SE_M_SKETCH, 0
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, 0, -96, 0, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 6
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, -10, -96, -10, 32, 25, 0
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, 10, -96, 10, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 6
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, -20, -96, -20, 32, 25, 0
+	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, 20, -96, 20, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 8, 0, 16, 1
+	loopsewithpan SE_M_HORN_ATTACK, 63, 3, 5
+	waitforvisualfinish
+    end
+
+gBattleAnimMove_Mishaguji::
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	monbg 1
+	setalpha 12, 8
+	playsewithpan SE_M_DOUBLE_SLAP, 63
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 2, 1, 3, 0, 6, 1
+	waitforvisualfinish
+	clearmonbg 1
+	blendoff
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_AegisMerge::
+	loopsewithpan SE_SHINY, 192, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 0, 1, RGB(31, 31, 10)
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 8, 2, -1, 14, -1, 0
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_Exterminate::
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 0, 0, 4
+	delay 4
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 12, -18, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 25, 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 12, -18, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 12, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, 12, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, -12, -18, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, -12, -18, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 12, 11, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 12, 11, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, -12, 11, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, -12, 11, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -6, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, -6, 8, 1, 0
+	delay 5
+	
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 5
+	waitforvisualfinish
+
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 1
+	setarg 7, 4096
+	delay 1
+	end
+
+gBattleAnimMove_Sutra::
+	monbg ANIM_DEF_PARTNER
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 12, RGB(27, 27, 27)
+	waitforvisualfinish
+	
+	loopsewithpan SE_M_MORNING_SUN, 192, 4, 8
+	
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	
+	waitforvisualfinish
+	
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 12, 0, RGB(27, 27, 27)
+	waitforvisualfinish
+	
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
+gBattleAnimMove_PristineShot::
+	monbg 1
+	splitbgprio 0
+	setalpha 12, 8
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	playsewithpan SE_M_JUMP_KICK, 192
+	createsprite gPinMissileSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, -8, -8, 20, -32
+	delay 19
+	playsewithpan SE_M_HORN_ATTACK, 63
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, -8, -8, 1, 2
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 3, 0, 2, 1
+	waitforvisualfinish
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	clearmonbg 1
+	blendoff
+	end
+
+Status_Destitution:
+	goto gBattleAnimMove_Destitution
+
+gBattleAnimMove_Destitution::
+	monbg ANIM_DEF_PARTNER
+	splitbgprio 0
+	setalpha 12, 8
+	delay 0
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 0, 7, 0x28CB
+	loopsewithpan SE_M_PSYBEAM2, 192, 3, 10
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 30, 1
+	call DestitutionEffect
+	call DestitutionEffect
+	delay 12
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 7, 0, 0x28CB
+	waitforvisualfinish
+	stopsound
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
+DestitutionEffect:: @ 81CFB92
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 28, 384, 50, 8, 50, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 32, 240, 40, 11, -46, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 33, 416, 40, 4, 42, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 31, 288, 45, 6, -42, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 28, 448, 45, 11, 46, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 33, 464, 50, 10, -50, 1
+	delay 2
+	return
+
+gBattleAnimMove_EarthPress::
+	monbg ANIM_DEF_PARTNER
+	splitbgprio 0
+	setalpha 12, 8
+	
+	playsewithpan SE_M_ROCK_THROW, 63
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32, -24, 0, -24, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32, -12, 0, -12, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32,   0, 0,   0, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32,  12, 0,  12, 10, 1, 3, 0
+	createsprite gEarthPressSpriteTemplate, ANIM_ATTACKER, 2, -32,  24, 0,  24, 10, 1, 3, 0
+	waitforvisualfinish
+	playsewithpan SE_M_STRENGTH, 63
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 4, 0, 6, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end

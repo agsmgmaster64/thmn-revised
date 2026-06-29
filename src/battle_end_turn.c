@@ -262,8 +262,10 @@ static bool32 HandleEndTurnFutureSight(enum BattlerId battler)
 
         if (gBattleStruct->futureSight[battler].move == MOVE_FUTURE_SIGHT)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FUTURE_SIGHT;
-        else
+        else if (gBattleStruct->futureSight[battler].move == MOVE_DOOM_DESIRE)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
+        else //(gBattleStruct->futureSight[battler].move == MOVE_APOLLON)
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_APOLLON;
 
         PREPARE_MOVE_BUFFER(gBattleTextBuff1, gBattleStruct->futureSight[battler].move);
 

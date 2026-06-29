@@ -27067,6 +27067,287 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_DebtSpiral,
     },
 
+    [MOVE_DAM_BREACH] =
+    {
+        .name = COMPOUND_STRING("Dam Breach"),
+        .description = COMPOUND_STRING(
+            "Powerful, but lowers user's\n"
+            "Special Attack by 2 stages."),
+        .effect = EFFECT_HIT,
+        .power = 140,
+        .type = TYPE_WATER,
+        .accuracy = 90,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .spAtk = 2,
+            .self = TRUE,
+        }),
+        .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Pound,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_COLD_SNAP] =
+    {
+        .name = COMPOUND_STRING("Cold Snap"),
+        .description = COMPOUND_STRING(
+            "Powerful, but lowers user's\n"
+            "Special Attack by 2 stages."),
+        .effect = EFFECT_HIT,
+        .power = 140,
+        .type = TYPE_ICE,
+        .accuracy = 90,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .spAtk = 2,
+            .self = TRUE,
+        }),
+        .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Pound,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_APOLLON] =
+    {
+        .name = COMPOUND_STRING("Apollon"),
+        .description = COMPOUND_STRING(
+            "Arrow storm that deals\n"
+            "1.5x user's Lv. as damage.\n"
+            "Ignores protect."),
+        .effect = EFFECT_APOLLON,
+        .power = 1,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Apollon,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_RAPID_FIRE] =
+    {
+        .name = COMPOUND_STRING("Rapid Fire"),
+        .description = COMPOUND_STRING(
+            "An extremely fast attack\n"
+            "that always strikes first.\n"
+            "(Priority +1)"),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 30,
+        .target = TARGET_SELECTED,
+        .priority = 1,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .windMove = B_EXTRAPOLATED_MOVE_FLAGS,
+        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Pound,
+    },
+
+    [MOVE_MISHAGUJI] =
+    {
+        .name = COMPOUND_STRING("Mishaguji"),
+        .description = COMPOUND_STRING(
+            "Inflicts a powerful curse\n"
+            "upon the foe. (100%)"),
+        .effect = EFFECT_HIT,
+        .power = 20,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_CURSE,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_STARTLE_PREV_MON,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Mishaguji,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_AEGIS_MERGE] =
+    {
+        .name = COMPOUND_STRING("Aegis Merge"),
+        .description = COMPOUND_STRING(
+            "Gain titanic defenses and\n"
+            "regen. Can't switch out.\n"
+            "(+3/+3)"),
+        .effect = EFFECT_AEGIS_MERGE,
+        .power = 0,
+        .type = TYPE_FAITH,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
+            .defense = 3,
+            .spDef = 3,
+        }),
+        .battleAnimScript = gBattleAnimMove_AegisMerge,
+    },
+
+    [MOVE_EXTERMINATE] =
+    {
+        .name = COMPOUND_STRING("Exterminate"),
+        .description = COMPOUND_STRING(
+            "Secret exorcism technique.\n"
+            "Ignores target abilities."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_FAITH,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .ignoresTargetAbility = TRUE,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Exterminate,
+    },
+
+    [MOVE_SUTRA] =
+    {
+        .name = COMPOUND_STRING("Sutra"),
+        .description = COMPOUND_STRING(
+            "Recites a holy sutra to\n"
+            "damage all enemies."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_FAITH,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .soundMove = TRUE,
+        .ignoresSubstitute = B_UPDATED_MOVE_FLAGS >= GEN_6,
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Sutra,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_PRISTINE_SHOT] =
+    {
+        .name = COMPOUND_STRING("Pristine Shot"),
+        .description = COMPOUND_STRING(
+            "A bullet of pure power.\n"
+            "Ignores abilities and\n"
+            "protection effects."),
+        .effect = EFFECT_HIT,
+        .power = 150,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 1,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .ignoresTargetAbility = TRUE,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_PristineShot,
+    },
+
+    [MOVE_DESTITUTION] =
+    {
+        .name = COMPOUND_STRING("Destitution"),
+        .description = COMPOUND_STRING(
+            "Pestilence traps the foe\n"
+            "for "BINDING_TURNS" turns."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_POISON,
+        .accuracy = 90,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .ignoresKingsRock = B_UPDATED_MOVE_FLAGS < GEN_3,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_WRAP,
+            .multistring.wrapped = B_MSG_WRAPPED_DESTITUTION,
+        }),
+        .contestEffect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = gBattleAnimMove_Destitution,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_EARTH_PRESS] =
+    {
+        .name = COMPOUND_STRING("Earth Press"),
+        .description = COMPOUND_STRING(
+            "Uses Defense instead of\n"
+            "Atk when dealing damage."),
+        .effect = EFFECT_BODY_PRESS,
+        .power = 80,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .metronomeBanned = TRUE,
+        .skyBattleBanned = B_EXTRAPOLATED_MOVE_FLAGS,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_EarthPress,
+    },
+
     //revised moves
 
     [MOVE_MINERAL_PELT] =

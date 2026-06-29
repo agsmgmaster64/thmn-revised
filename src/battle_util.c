@@ -8348,6 +8348,9 @@ s32 DoFixedDamageMoveCalc(struct DamageContext *ctx)
     case EFFECT_BIDE:
         dmg = gBideDmg[ctx->battlerAtk] * 2;
         break;
+    case EFFECT_APOLLON:
+        dmg = (gBattleMons[ctx->battlerAtk].level * 1.5);
+        break;
     default:
         break;
     }
