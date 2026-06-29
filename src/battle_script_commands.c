@@ -2465,6 +2465,18 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
             gBattlescriptCurrInstr = battleScript;
         }
 		break;
+    case MOVE_EFFECT_CURSE:
+        if (gBattleMons[gBattlerTarget].volatiles.cursed)
+        {
+            gBattlescriptCurrInstr = battleScript;
+        }
+        else
+        {
+            gBattleMons[gBattlerTarget].volatiles.cursed = TRUE;
+            BattleScriptPush(battleScript);
+            gBattlescriptCurrInstr = BattleScript_Cursed;
+        }
+        break;
     case MOVE_EFFECT_HAPPY_HOUR:
         if (IsOnPlayerSide(battlerAtk) && !gBattleStruct->moneyMultiplierMove)
         {

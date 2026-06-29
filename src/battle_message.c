@@ -917,6 +917,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_DEBTSPIRALDEPLETION]                  = COMPOUND_STRING("You used up ¥{B_BUFF1} for premium attack costs…\p"),
     [STRINGID_POVERTYSCATTERED]                     = COMPOUND_STRING("Financial assets were consumed!"),
     [STRINGID_APOLLON_START]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} fired a volley of arrows upward!"),
+    [STRINGID_TARGETCURSED]                         = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was cursed!"),
+    [STRINGID_BEGINSREGENERATING]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} anchors itself and starts regenerating!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

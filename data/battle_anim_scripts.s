@@ -35252,3 +35252,133 @@ gBattleAnimGeneral_ApollonHit::
 	loopsewithpan SE_M_HORN_ATTACK, 63, 3, 5
 	waitforvisualfinish
     end
+
+gBattleAnimMove_Mishaguji::
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	monbg 1
+	setalpha 12, 8
+	playsewithpan SE_M_DOUBLE_SLAP, 63
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 2, 1, 3, 0, 6, 1
+	waitforvisualfinish
+	clearmonbg 1
+	blendoff
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_AegisMerge::
+	loopsewithpan SE_SHINY, 192, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 0, 1, RGB(31, 31, 10)
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 8, 2, -1, 14, -1, 0
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_Exterminate::
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 0, 0, 4
+	delay 4
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 12, -18, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 25, 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 12, -18, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 12, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, 12, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, -12, -18, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, -12, -18, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 12, 11, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 12, 11, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, -12, 11, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, -12, 11, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -6, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, -6, 8, 1, 0
+	delay 5
+	
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 5
+	waitforvisualfinish
+
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 1
+	setarg 7, 4096
+	delay 1
+	end
+
+gBattleAnimMove_Sutra::
+	monbg ANIM_DEF_PARTNER
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 12, RGB(27, 27, 27)
+	waitforvisualfinish
+	
+	loopsewithpan SE_M_MORNING_SUN, 192, 4, 8
+	
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	
+	waitforvisualfinish
+	
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 12, 0, RGB(27, 27, 27)
+	waitforvisualfinish
+	
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
+gBattleAnimMove_PristineShot::
+	monbg 1
+	splitbgprio 0
+	setalpha 12, 8
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	playsewithpan SE_M_JUMP_KICK, 192
+	createsprite gPinMissileSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, -8, -8, 20, -32
+	delay 19
+	playsewithpan SE_M_HORN_ATTACK, 63
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, -8, -8, 1, 2
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 3, 0, 2, 1
+	waitforvisualfinish
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	clearmonbg 1
+	blendoff
+	end

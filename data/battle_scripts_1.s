@@ -6620,3 +6620,13 @@ BattleScript_PrintDebtSpiralMoneyString::
 	printstring STRINGID_DEBTSPIRALDEPLETION
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_Cursed::
+	printstring STRINGID_TARGETCURSED
+	waitmessage 0x40
+	return
+
+BattleScript_AegisMergeMessage::
+	printstring STRINGID_BEGINSREGENERATING
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

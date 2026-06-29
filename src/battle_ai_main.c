@@ -1621,6 +1621,12 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         else if (!AI_CanAnyStatChange(battlerAtk, battlerAtk, move))
             ADJUST_SCORE(-10);
         break;
+    case EFFECT_AEGIS_MERGE:
+        if (gBattleMons[battlerAtk].volatiles.root)
+            ADJUST_SCORE(-10);
+        else if (!AI_CanAnyStatChange(battlerAtk, battlerAtk, move))
+            ADJUST_SCORE(-10);
+        break;
     case EFFECT_TOXIC_THREAD:
         if (!AI_CanAnyStatChange(battlerAtk, battlerDef, move)
          && !AI_CanPoison(battlerAtk, battlerDef, aiData->abilities[battlerDef], move, aiData->partnerMove))
@@ -6615,6 +6621,7 @@ static s32 AI_PredictSwitch(enum BattlerId battlerAtk, enum BattlerId battlerDef
     case EFFECT_INGRAIN:
     case EFFECT_NO_RETREAT:
     case EFFECT_MEAN_LOOK:
+    case EFFECT_AEGIS_MERGE:
         ADJUST_SCORE(AWFUL_EFFECT);
         break;
 

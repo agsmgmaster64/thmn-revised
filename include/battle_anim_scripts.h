@@ -1024,6 +1024,11 @@ extern const u8 gBattleAnimMove_FocusStance[];
 extern const u8 gBattleAnimMove_DebtSpiral[];
 extern const u8 gBattleAnimMove_Apollon[];
 extern const u8 gBattleAnimGeneral_ApollonHit[];
+extern const u8 gBattleAnimMove_Mishaguji[];
+extern const u8 gBattleAnimMove_AegisMerge[];
+extern const u8 gBattleAnimMove_Exterminate[];
+extern const u8 gBattleAnimMove_Sutra[];
+extern const u8 gBattleAnimMove_PristineShot[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

@@ -758,5 +758,7 @@ extern const u8 BattleScript_EffectThirdEye[];
 extern const u8 BattleScript_EffectFocusStance[];
 extern const u8 BattleScript_PrintDebtSpiralMoneyString[];
 extern const u8 BattleScript_MoveEffectDebtSpiral[];
+extern const u8 BattleScript_Cursed[];
+extern const u8 BattleScript_AegisMergeMessage[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

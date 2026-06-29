@@ -291,6 +291,7 @@ enum  BattleMoveEffects
     //touhoumon customs
     EFFECT_THIRD_EYE,
     EFFECT_APOLLON,
+    EFFECT_AEGIS_MERGE,
     
     NUM_BATTLE_MOVE_EFFECTS,
 };
