@@ -217,40 +217,40 @@ static const u8 sText_ThrowInPremierBall[] = _("I'll throw in\na PREMIER BALL,\n
 static const u8 sText_ThrowInPremierBalls[] = _("I'll throw in\n{STR_VAR_1} PREMIER BALLS,\ntoo.");
 
 // default state if all seller-based graphics fails
-static const u32 sNewShopMenu_DefaultMenuGfx[] = INCBIN_U32("graphics/new_shop/menu.4bpp.lz");
-static const u32 sNewShopMenu_DefaultMenuCoinGfx[] = INCBIN_U32("graphics/new_shop/menu_coin.4bpp.lz");
-static const u32 sNewShopMenu_DefaultMenuPointGfx[] = INCBIN_U32("graphics/new_shop/menu_bp.4bpp.lz");
-static const u16 sNewShopMenu_DefaultMenuPal[] = INCBIN_U16("graphics/new_shop/menu.gbapal");
-static const u32 sNewShopMenu_DefaultMenuTilemap[] = INCBIN_U32("graphics/new_shop/menu.bin.lz");
-static const u32 sNewShopMenu_DefaultScrollGfx[] = INCBIN_U32("graphics/new_shop/scroll.4bpp.lz");
-static const u32 sNewShopMenu_DefaultScrollTilemap[] = INCBIN_U32("graphics/new_shop/scroll.bin.lz");
-static const u16 sNewShopMenu_DefaultCursorGfx[] = INCBIN_U16("graphics/new_shop/cursor.4bpp"); // uses the menu palette
+static const u32 sNewShopMenu_DefaultMenuGfx[] = INCGFX_U32("graphics/new_shop/menu.png", ".4bpp.smol");
+static const u32 sNewShopMenu_DefaultMenuCoinGfx[] = INCGFX_U32("graphics/new_shop/menu_coin.png", ".4bpp.smol");
+static const u32 sNewShopMenu_DefaultMenuPointGfx[] = INCGFX_U32("graphics/new_shop/menu_bp.png", ".4bpp.smol");
+static const u16 sNewShopMenu_DefaultMenuPal[] = INCGFX_U16("graphics/new_shop/menu.png", ".gbapal");
+static const u32 sNewShopMenu_DefaultMenuTilemap[] = INCBIN_U32("graphics/new_shop/menu.bin.smolTM");
+static const u32 sNewShopMenu_DefaultScrollGfx[] = INCGFX_U32("graphics/new_shop/scroll.png", ".4bpp.smol");
+static const u32 sNewShopMenu_DefaultScrollTilemap[] = INCBIN_U32("graphics/new_shop/scroll.bin.smolTM");
+static const u16 sNewShopMenu_DefaultCursorGfx[] = INCGFX_U16("graphics/new_shop/cursor.png", ".4bpp"); // uses the menu palette
 
-static const u8 sNewShopMenu_SellerMugshotGfx_Jerry[] = INCBIN_U8("graphics/new_shop/sellers/jerry/mugshot.4bpp");
-static const u16 sNewShopMenu_SellerMugshotPal_Jerry[] = INCBIN_U16("graphics/new_shop/sellers/jerry/mugshot.gbapal");
-static const u32 sNewShopMenu_SellerMenuGfx_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/menu.4bpp.lz");
-static const u32 sNewShopMenu_SellerMenuCoinGfx_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/menu_coin.4bpp.lz");
-static const u32 sNewShopMenu_SellerMenuPointsGfx_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/menu_bp.4bpp.lz");
-static const u16 sNewShopMenu_SellerMenuPal_Jerry[] = INCBIN_U16("graphics/new_shop/sellers/jerry/menu.gbapal");
-static const u32 sNewShopMenu_SellerMenuMap_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/menu.bin.lz");
-static const u32 sNewShopMenu_SellerScrollGfx_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/scroll.4bpp.lz");
-static const u16 sNewShopMenu_SellerScrollPal_Jerry[] = INCBIN_U16("graphics/new_shop/sellers/jerry/scroll.gbapal");
-static const u32 sNewShopMenu_SellerScrollMap_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/scroll.bin.lz");
-static const u16 sNewShopMenu_SellerCursorGfx_Jerry[] = INCBIN_U16("graphics/new_shop/sellers/jerry/cursor.4bpp");
-static const u16 sNewShopMenu_SellerCursorPal_Jerry[] = INCBIN_U16("graphics/new_shop/sellers/jerry/cursor.gbapal");
+static const u8 sNewShopMenu_SellerMugshotGfx_Jerry[] = INCGFX_U8("graphics/new_shop/sellers/jerry/mugshot.png", ".4bpp");
+static const u16 sNewShopMenu_SellerMugshotPal_Jerry[] = INCGFX_U16("graphics/new_shop/sellers/jerry/mugshot.png", ".gbapal");
+static const u32 sNewShopMenu_SellerMenuGfx_Jerry[] = INCGFX_U32("graphics/new_shop/sellers/jerry/menu.png", ".4bpp.smol");
+static const u32 sNewShopMenu_SellerMenuCoinGfx_Jerry[] = INCGFX_U32("graphics/new_shop/sellers/jerry/menu_coin.png", ".4bpp.smol");
+static const u32 sNewShopMenu_SellerMenuPointsGfx_Jerry[] = INCGFX_U32("graphics/new_shop/sellers/jerry/menu_bp.png", ".4bpp.smol");
+static const u16 sNewShopMenu_SellerMenuPal_Jerry[] = INCGFX_U16("graphics/new_shop/sellers/jerry/menu.png", ".gbapal");
+static const u32 sNewShopMenu_SellerMenuMap_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/menu.bin.smolTM");
+static const u32 sNewShopMenu_SellerScrollGfx_Jerry[] = INCGFX_U32("graphics/new_shop/sellers/jerry/scroll.png", ".4bpp.smol");
+static const u16 sNewShopMenu_SellerScrollPal_Jerry[] = INCGFX_U16("graphics/new_shop/sellers/jerry/scroll.png", ".gbapal");
+static const u32 sNewShopMenu_SellerScrollMap_Jerry[] = INCBIN_U32("graphics/new_shop/sellers/jerry/scroll.bin.smolTM");
+static const u16 sNewShopMenu_SellerCursorGfx_Jerry[] = INCGFX_U16("graphics/new_shop/sellers/jerry/cursor.png", ".4bpp");
+static const u16 sNewShopMenu_SellerCursorPal_Jerry[] = INCGFX_U16("graphics/new_shop/sellers/jerry/cursor.png", ".gbapal");
 
-static const u8 sNewShopMenu_SellerMugshotGfx_Jennie[] = INCBIN_U8("graphics/new_shop/sellers/jennie/mugshot.4bpp");
-static const u16 sNewShopMenu_SellerMugshotPal_Jennie[] = INCBIN_U16("graphics/new_shop/sellers/jennie/mugshot.gbapal");
-static const u32 sNewShopMenu_SellerMenuGfx_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/menu.4bpp.lz");
-static const u32 sNewShopMenu_SellerMenuCoinGfx_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/menu_coin.4bpp.lz");
-static const u32 sNewShopMenu_SellerMenuBpGfx_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/menu_bp.4bpp.lz");
-static const u16 sNewShopMenu_SellerMenuPal_Jennie[] = INCBIN_U16("graphics/new_shop/sellers/jennie/menu.gbapal");
-static const u32 sNewShopMenu_SellerMenuMap_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/menu.bin.lz");
-static const u32 sNewShopMenu_SellerScrollGfx_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/scroll.4bpp.lz");
-static const u16 sNewShopMenu_SellerScrollPal_Jennie[] = INCBIN_U16("graphics/new_shop/sellers/jennie/scroll.gbapal");
-static const u32 sNewShopMenu_SellerScrollMap_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/scroll.bin.lz");
-static const u16 sNewShopMenu_SellerCursorGfx_Jennie[] = INCBIN_U16("graphics/new_shop/sellers/jennie/cursor.4bpp");
-static const u16 sNewShopMenu_SellerCursorPal_Jennie[] = INCBIN_U16("graphics/new_shop/sellers/jennie/cursor.gbapal");
+static const u8 sNewShopMenu_SellerMugshotGfx_Jennie[] = INCGFX_U8("graphics/new_shop/sellers/jennie/mugshot.png", ".4bpp");
+static const u16 sNewShopMenu_SellerMugshotPal_Jennie[] = INCGFX_U16("graphics/new_shop/sellers/jennie/mugshot.png", ".gbapal");
+static const u32 sNewShopMenu_SellerMenuGfx_Jennie[] = INCGFX_U32("graphics/new_shop/sellers/jennie/menu.png", ".4bpp.smol");
+static const u32 sNewShopMenu_SellerMenuCoinGfx_Jennie[] = INCGFX_U32("graphics/new_shop/sellers/jennie/menu_coin.png", ".4bpp.smol");
+static const u32 sNewShopMenu_SellerMenuBpGfx_Jennie[] = INCGFX_U32("graphics/new_shop/sellers/jennie/menu_bp.png", ".4bpp.smol");
+static const u16 sNewShopMenu_SellerMenuPal_Jennie[] = INCGFX_U16("graphics/new_shop/sellers/jennie/menu.png", ".gbapal");
+static const u32 sNewShopMenu_SellerMenuMap_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/menu.bin.smolTM");
+static const u32 sNewShopMenu_SellerScrollGfx_Jennie[] = INCGFX_U32("graphics/new_shop/sellers/jennie/scroll.png", ".4bpp.smol");
+static const u16 sNewShopMenu_SellerScrollPal_Jennie[] = INCGFX_U16("graphics/new_shop/sellers/jennie/scroll.png", ".gbapal");
+static const u32 sNewShopMenu_SellerScrollMap_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/scroll.bin.smolTM");
+static const u16 sNewShopMenu_SellerCursorGfx_Jennie[] = INCGFX_U16("graphics/new_shop/sellers/jennie/cursor.png", ".4bpp");
+static const u16 sNewShopMenu_SellerCursorPal_Jennie[] = INCGFX_U16("graphics/new_shop/sellers/jennie/cursor.png", ".gbapal");
 
 static void Task_ShopMenu(u8 taskId);
 static void Task_HandleShopMenuQuit(u8 taskId);
@@ -1105,8 +1105,8 @@ static void BuyMenuDecompressBgGraphics(void)
         else // if (IsMartTypeMoney(sMartInfo.martType))
             DecompressAndCopyTileDataToVram(2, sNewShopMenu_DefaultMenuGfx, 0, DEFAULT_MENU_TILE_OFFSET, 0);
         DecompressAndCopyTileDataToVram(2, sNewShopMenu_DefaultScrollGfx, 0, 0, 0);
-        LZDecompressWram(sNewShopMenu_DefaultMenuTilemap, sShopData->tilemapBuffers[0]);
-        LZDecompressWram(sNewShopMenu_DefaultScrollTilemap, sShopData->tilemapBuffers[1]);
+        DecompressDataWithHeaderWram(sNewShopMenu_DefaultMenuTilemap, sShopData->tilemapBuffers[0]);
+        DecompressDataWithHeaderWram(sNewShopMenu_DefaultScrollTilemap, sShopData->tilemapBuffers[1]);
         LoadPalette(sNewShopMenu_DefaultMenuPal, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadPalette(sNewShopMenu_DefaultMenuPal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         return;
@@ -1114,8 +1114,8 @@ static void BuyMenuDecompressBgGraphics(void)
     DecompressAndCopyTileDataToVram(2, Shop_GetSellerGraphics(SELLER_GFX_MENU_GFX), 0, sSellers[i].menuTileOffset != 0 ? sSellers[i].menuTileOffset : DEFAULT_MENU_TILE_OFFSET, 0);
     DecompressAndCopyTileDataToVram(2, Shop_GetSellerGraphics(SELLER_GFX_SCROLL_GFX), 0, 0, 0);
 
-    LZDecompressWram(Shop_GetSellerGraphics(SELLER_GFX_MENU_MAP), sShopData->tilemapBuffers[0]);
-    LZDecompressWram(Shop_GetSellerGraphics(SELLER_GFX_SCROLL_MAP), sShopData->tilemapBuffers[1]);
+    DecompressDataWithHeaderWram(Shop_GetSellerGraphics(SELLER_GFX_MENU_MAP), sShopData->tilemapBuffers[0]);
+    DecompressDataWithHeaderWram(Shop_GetSellerGraphics(SELLER_GFX_SCROLL_MAP), sShopData->tilemapBuffers[1]);
 
     LoadPalette(Shop_GetSellerGraphics(SELLER_GFX_MENU_PAL), BG_PLTT_ID(0), PLTT_SIZE_4BPP);
     LoadPalette(Shop_GetSellerGraphics(SELLER_GFX_SCROLL_PAL), BG_PLTT_ID(1), PLTT_SIZE_4BPP);
@@ -1779,7 +1779,7 @@ static void BuyMenuSubtractMoney(u8 taskId)
 
 static void Task_ReturnToItemListWaitMsg(u8 taskId)
 {
-    if (!IsTextPrinterActive(WIN_ITEM_DESCRIPTION))
+    if (!IsTextPrinterActiveOnWindow(WIN_ITEM_DESCRIPTION))
     {
         if (JOY_NEW(A_BUTTON | B_BUTTON))
         {
@@ -1798,7 +1798,7 @@ static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
 
     if (GetItemPocket(sShopData->currentItemId) == POCKET_POKE_BALLS)
     {
-        if (IsTextPrinterActive(WIN_ITEM_DESCRIPTION))
+        if (IsTextPrinterActiveOnWindow(WIN_ITEM_DESCRIPTION))
         {
             return;
         }
