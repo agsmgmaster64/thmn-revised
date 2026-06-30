@@ -2443,3 +2443,35 @@ u8 GetGhostSpriteDefault_Y(enum BattlerId battler)
     else
         return GetBattlerSpriteCoord(battler, BATTLER_COORD_Y);
 }
+
+void AnimTask_GetMoodSwingAnimation(u8 taskId)
+{
+
+    switch (gBattleSpritesDataPtr->animationData->animArg)
+    {
+    case STAT_ANIM_PLUS1 + STAT_ATK:
+        gBattleAnimArgs[7] = 0;
+        break;
+    case STAT_ANIM_PLUS1 + STAT_DEF:
+        gBattleAnimArgs[7] = 1;
+        break;
+    case STAT_ANIM_PLUS1 + STAT_SPEED:    
+        gBattleAnimArgs[7] = 2;
+        break;
+    case STAT_ANIM_PLUS1 + STAT_SPATK:  
+        gBattleAnimArgs[7] = 3;
+        break;
+    case STAT_ANIM_PLUS1 + STAT_SPDEF:    
+        gBattleAnimArgs[7] = 4;
+        break;
+    case STAT_ANIM_PLUS1 + STAT_ACC:   
+        gBattleAnimArgs[7] = 5;
+        break;
+    case STAT_ANIM_PLUS1 + STAT_EVASION: 
+        gBattleAnimArgs[7] = 6;
+        break;
+    }
+
+	//gBattleAnimArgs[7] = gBattleScripting.statChanger - 9;
+	DestroyAnimVisualTask(taskId);
+}

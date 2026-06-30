@@ -4456,6 +4456,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
         break;
     // treat as offense booster
     case EFFECT_ACUPRESSURE:
+    case EFFECT_MOOD_SWING:
         // the old logic didn't make any sense
         break;
     case EFFECT_HAZE:
@@ -6038,6 +6039,7 @@ static s32 AI_ForceSetupFirstTurn(enum BattlerId battlerAtk, enum BattlerId batt
     case EFFECT_WEATHER_AND_SWITCH:
     case EFFECT_CEASELESS_EDGE:
     case EFFECT_STONE_AXE:
+    case EFFECT_MOOD_SWING:
         ADJUST_SCORE(DECENT_EFFECT);
         break;
     default:

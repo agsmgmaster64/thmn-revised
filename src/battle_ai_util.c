@@ -2978,7 +2978,7 @@ bool32 HasMoveUsableWhileAsleep(enum BattlerId battler)
 bool32 IsStatRaisingMove(enum Move move)
 {
     return GetMoveEffect(move) == EFFECT_ACUPRESSURE
-        || MoveHasAdditionalEffect(move, STAT_CHANGE_EFFECT_PLUS);
+        || MoveHasAdditionalEffect(move, STAT_CHANGE_EFFECT_PLUS) || GetMoveEffect(move) == EFFECT_MOOD_SWING;
 }
 
 bool32 IsStatLoweringMove(enum Move move)

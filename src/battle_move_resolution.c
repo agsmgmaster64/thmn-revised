@@ -4825,11 +4825,46 @@ static void TryAcupressureStatChange(struct BattleCalcValues *cv)
     }
 }
 
+static void TryMoodSwingStatChange(struct BattleCalcValues *cv)
+{
+    u32 bits = 0;
+
+    if (ShouldSkipStatChangeOnBattler(cv->battlerAtk, cv->battlerDef))
+        return;
+
+    for (enum Stat stat = STAT_ATK; stat < NUM_BATTLE_STATS; stat++)
+    {
+        if (CompareStat(cv->battlerDef, stat, MAX_STAT_STAGE, CMP_LESS_THAN, cv->abilities[cv->battlerDef]))
+            bits |= 1u << stat;
+    }
+    if (bits)
+    {
+        enum Stat statId;
+        do
+        {
+            statId = (Random() % (NUM_BATTLE_STATS - 1)) + 1;
+        } while (!(bits & (1u << statId)));
+
+        SetStatChange(cv->battlerDef, statId, 1);
+        gBattleStruct->moveResultFlags[cv->battlerDef] = MOVE_RESULT_ATTEMPT_STAT_CHANGE;
+    }
+    else
+    {
+        gBattleStruct->moveResultFlags[cv->battlerDef] = MOVE_RESULT_DOESNT_AFFECT_FOE;
+    }
+}
+
 static enum MoveResult StatChangeCanAnyChange(struct BattleCalcValues *cv)
 {
     if (GetMoveEffect(cv->move) == EFFECT_ACUPRESSURE)
     {
         TryAcupressureStatChange(cv);
+        return MOVE_RESULT_CONTINUE;
+    }
+
+    if (GetMoveEffect(cv->move) == EFFECT_MOOD_SWING)
+    {
+        TryMoodSwingStatChange(cv);
         return MOVE_RESULT_CONTINUE;
     }
 

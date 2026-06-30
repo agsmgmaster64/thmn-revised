@@ -1031,6 +1031,7 @@ extern const u8 gBattleAnimMove_Sutra[];
 extern const u8 gBattleAnimMove_PristineShot[];
 extern const u8 gBattleAnimMove_Destitution[];
 extern const u8 gBattleAnimMove_EarthPress[];
+extern const u8 gBattleAnimMove_MoodSwing[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];
