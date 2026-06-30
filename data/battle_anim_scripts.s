@@ -35447,8 +35447,14 @@ gBattleAnimMove_MoodSwing::
 	@ speed: fear
 	@ acc: pacing
 	@ eva: confused
- 
+
+	jumpifcontest MoodSwing_GetContestAnimation
 	createvisualtask AnimTask_GetMoodSwingAnimation, 1
+	goto MoodSwing_GetAnimation
+
+MoodSwing_GetContestAnimation::
+	createvisualtask AnimTask_GetMoodSwingContestAnimation, 1
+MoodSwing_GetAnimation::
 	jumpargeq 7, 0, MoodSwing_Atk
 	jumpargeq 7, 1, MoodSwing_Def
 	jumpargeq 7, 2, MoodSwing_Speed

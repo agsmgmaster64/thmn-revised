@@ -4846,6 +4846,7 @@ static void TryMoodSwingStatChange(struct BattleCalcValues *cv)
         } while (!(bits & (1u << statId)));
 
         SetStatChange(cv->battlerDef, statId, 1);
+        gBattleCommunication[MULTISTRING_CHOOSER] = statId;
         gBattleStruct->moveResultFlags[cv->battlerDef] = MOVE_RESULT_ATTEMPT_STAT_CHANGE;
     }
     else
