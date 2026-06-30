@@ -59,4 +59,9 @@ struct FrontierBrain
 
 extern const struct FrontierBrain gFrontierBrainInfo[];
 
+u16 GetBattlePoints(void);
+bool8 IsEnoughBattlePoints(u16 cost);
+void SetBattlePoints(u16 pointAmount);
+bool8 RemoveBattlePoints(u16 toSub);
+
 #endif // GUARD_FRONTIER_UTIL_H

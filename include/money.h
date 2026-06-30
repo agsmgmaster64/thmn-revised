@@ -32,5 +32,6 @@ u32 CalculateMoneyTextHorizontalPosition(u32 amount);
 void PrintMoneyAmountInMoneyBoxFrlg(u8 windowId, int amount, u8 speed);
 void PrintMoneyAmountFrlg(u8 windowId, u8 x, u8 y, int amount, u8 speed);
 void PrintMoneyAmountInMoneyBoxWithBorderFrlg(u8 windowId, u16 tileStart, u8 pallete, int amount);
+u32 CalculateLeadingSpacesForMoney(u32 numDigits);
 
 #endif // GUARD_MONEY_H
