@@ -1928,4 +1928,11 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 1,
         .encourageEncore = TRUE,
     },
+
+    [EFFECT_IDENTIFY] =
+    {
+        .battleScript = BattleScript_EffectIdentify,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+    },
 };

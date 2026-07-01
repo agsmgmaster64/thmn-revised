@@ -6625,3 +6625,22 @@ BattleScript_AegisMergeMessage::
 	printstring STRINGID_BEGINSREGENERATING
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectIdentify::
+	attackcanceler
+	accuracycheck
+	attackanimation
+	waitanimation
+    identify1
+	printstring STRINGID_IDENTIFY
+	waitmessage 0x40
+    identify2
+	printstring STRINGID_IDENTIFYITEMABILITY
+	waitmessage 0x40
+    identify3
+	printstring STRINGID_IDENTIFYMOVESET1
+	waitmessage 0x40
+    identify4
+	printstring STRINGID_IDENTIFYMOVESET2
+	waitmessage 0x40
+    end

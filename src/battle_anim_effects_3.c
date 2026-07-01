@@ -5665,3 +5665,14 @@ static void AnimTask_SlackOffSquish_Step(u8 taskId)
     if (!RunAffineAnimFromTaskData(&gTasks[taskId]))
         DestroyAnimVisualTask(taskId);
 }
+
+const struct SpriteTemplate gIdentifySpriteTemplate =
+{
+    .tileTag = ANIM_TAG_MAGNIFYING_GLASS,
+    .paletteTag = ANIM_TAG_MAGNIFYING_GLASS,
+    .oam = &gOamData_AffineOff_ObjBlend_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimAssistPawprint,
+};

@@ -27373,6 +27373,87 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MoodSwing,
     },
 
+    [MOVE_LUNAR_SEA] =
+    {
+        .name = COMPOUND_STRING("Lunar Sea"),
+        .description = COMPOUND_STRING(
+            "Summons the lunar sea to\n"
+            "drown foe. Uses 50% Max HP.\n"
+            "Can be fatal."),
+        .effect = EFFECT_MAX_HP_50_RECOIL,
+        .power = 150,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_LunarSea,
+    },
+
+    [MOVE_APOTHEOSIS] =
+    {
+        .name = COMPOUND_STRING("Apotheosis"),
+        .description = COMPOUND_STRING(
+            "Raises Sp. Atk, Sp. Def,\n"
+            "Acc, Evasion by 1 Stage."),
+        .effect = EFFECT_STAT_CHANGE,
+        .power = 0,
+        .type = TYPE_FAITH,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .danceMove = TRUE,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
+            .spAtk = 1,
+            .spDef = 1,
+            .accuracy = 1,
+            .evasion = 1,
+        }),
+        .battleAnimScript = gBattleAnimMove_Apotheosis,
+    },
+
+    [MOVE_IDENTIFY] =
+    {
+        .name = COMPOUND_STRING("Identify"),
+        .description = COMPOUND_STRING(
+            "Reveals most information\n"
+            "about the foe. +1 Priority."),
+        .effect = EFFECT_IDENTIFY,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 40,
+        .target = TARGET_SELECTED,
+        .priority = 1,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_BOOST_CRITS },
+        .magicCoatAffected = B_UPDATED_MOVE_FLAGS >= GEN_5,
+        .ignoresSubstitute = TRUE,
+        .contestEffect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Identify,
+        .validApprenticeMove = TRUE,
+    },
+
     //revised moves
 
     [MOVE_MINERAL_PELT] =

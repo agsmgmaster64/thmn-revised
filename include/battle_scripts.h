@@ -760,5 +760,6 @@ extern const u8 BattleScript_PrintDebtSpiralMoneyString[];
 extern const u8 BattleScript_MoveEffectDebtSpiral[];
 extern const u8 BattleScript_Cursed[];
 extern const u8 BattleScript_AegisMergeMessage[];
+extern const u8 BattleScript_EffectIdentify[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
