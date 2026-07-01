@@ -1000,6 +1000,9 @@ enum __attribute__((packed)) Move
     MOVE_DESTITUTION = 938,
     MOVE_EARTH_PRESS = 939,
     MOVE_MOOD_SWING = 940,
+    MOVE_LUNAR_SEA = 941,
+    MOVE_APOTHEOSIS = 942,
+    MOVE_IDENTIFY = 943,
 
     MOVES_COUNT_GEN9,
 

@@ -35526,3 +35526,72 @@ MoodSwing_Evasion::
 	loopsewithpan SE_M_METRONOME, 192, 16, 3
 	waitforvisualfinish
 	end
+
+gBattleAnimMove_LunarSea::
+	playsewithpan SE_M_BUBBLE3, 192
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 6, 0, 16, RGB(0, 0, 31)
+	createsprite gWaterPulseBubbleSpriteTemplate, ANIM_ATTACKER, 66, 100, 100, 8, 1, 20, 40, 0
+	createsprite gWaterPulseBubbleSpriteTemplate, ANIM_ATTACKER, 66, 20, 100, 16, 2, 10, 35, 1
+	createsprite gWaterPulseBubbleSpriteTemplate, ANIM_ATTACKER, 66, 200, 80, 8, 1, 40, 20, 0
+	createsprite gWaterPulseBubbleSpriteTemplate, ANIM_ATTACKER, 66, 80, 60, 10, 3, 20, 50, 0
+	createsprite gWaterPulseBubbleSpriteTemplate, ANIM_ATTACKER, 66, 140, 100, 16, 1, 20, 30, 1
+	delay 10
+	panse SE_M_SURF, 192, 63, 2, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_DEF_PARTNER, 4, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATK_PARTNER, 4, 0, 10, 1
+	delay 20
+	panse SE_M_HYDRO_PUMP, 192, 63, 2, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 6, 0, 18, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_DEF_PARTNER, 6, 0, 18, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATK_PARTNER, 6, 0, 18, 1
+	waitforvisualfinish
+	delay 30
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 0, 16, 0, RGB(0, 0, 31)
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_Apotheosis::
+	monbg ANIM_ATK_PARTNER
+	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 0, 0, 0, 16, 0
+	waitforvisualfinish
+	createvisualtask AnimTask_SetAllNonAttackersInvisiblity, 5, 1
+	waitforvisualfinish
+	createsprite gApotheosisRingSpriteTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 1, 0, 15, RGB(25, 15, 25)
+	playsewithpan SE_M_SUPERSONIC, 192
+	delay 14
+	createsprite gApotheosisRingSpriteTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0
+	playsewithpan SE_M_SUPERSONIC, 192
+	delay 14
+	createsprite gApotheosisRingSpriteTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 1, 15, 0, RGB(25, 15, 25)
+	playsewithpan SE_M_SUPERSONIC, 192
+	waitforvisualfinish
+	createvisualtask AnimTask_SetAllNonAttackersInvisiblity, 5, 0
+	visible 0
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 0, 0, 16, 0, 0
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	end
+
+gBattleAnimMove_Identify::
+	createsprite gIdentifySpriteTemplate, ANIM_ATTACKER, 50, 112, -16, 140, 128, 36
+	delay 2
+	createsprite gIdentifySpriteTemplate, ANIM_ATTACKER, 50, 208, 128, -16, 48, 36
+	playsewithpan SE_M_SCRATCH, 0
+	delay 2
+	createsprite gIdentifySpriteTemplate, ANIM_ATTACKER, 50, -16, 112, 256, -16, 36
+	playsewithpan SE_M_SCRATCH, 0
+	delay 2
+	createsprite gIdentifySpriteTemplate, ANIM_ATTACKER, 50, 108, 128, 84, -16, 36
+	playsewithpan SE_M_SCRATCH, 0
+	delay 2
+	createsprite gIdentifySpriteTemplate, ANIM_ATTACKER, 50, -16, 56, 256, 56, 36
+	playsewithpan SE_M_SCRATCH, 0
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendMonInAndOut, 5, 1, RGB_WHITE, 12, 2, 1
+	playsewithpan SE_M_DETECT, 63
+	waitforvisualfinish
+	end

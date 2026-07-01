@@ -2158,3 +2158,19 @@
 	.macro multihitplurality
 	callnative BS_MultiHitPlurality
 	.endm
+
+	.macro identify1
+	callnative BS_Identify1
+	.endm
+
+	.macro identify2
+	callnative BS_Identify2
+	.endm
+
+	.macro identify3
+	callnative BS_Identify3
+	.endm
+
+	.macro identify4
+	callnative BS_Identify4
+	.endm
