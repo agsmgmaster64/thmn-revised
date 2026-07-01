@@ -22,16 +22,21 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
+	call_if_unset FLAG_RECEIVED_HM_CUT, RustboroCity_Gym_EventScript_CutAxeState
 	goto RustboroCity_Gym_EventScript_GiveRockTomb
 	end
 
 RustboroCity_Gym_EventScript_GiveRockTomb::
-	giveitem ITEM_TM_ROCK_TOMB
+	giveitem ITEM_TM_DOUBLE_TEAM
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM_ROCK_TOMB
 	msgbox RustboroCity_Gym_Text_ExplainRockTomb, MSGBOX_DEFAULT
 	release
 	end
+
+RustboroCity_Gym_EventScript_CutAxeState::
+	setvar VAR_CUT_BIG_AXE_STATE, 1
+	return
 
 RustboroCity_Gym_EventScript_RoxanneRematch::
 	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons

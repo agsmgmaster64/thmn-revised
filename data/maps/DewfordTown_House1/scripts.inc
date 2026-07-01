@@ -13,7 +13,7 @@ DewfordTown_House1_EventScript_Zigzagoon::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	playmoncry SPECIES_NORMAL_IKU, CRY_MODE_NORMAL
 	msgbox DewfordTown_House1_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -25,11 +25,11 @@ DewfordTown_House1_Text_LotToBeSaidForLivingOnIsland:
 	.string "Puppets and the family.$"
 
 DewfordTown_House1_Text_LifeGoesSlowlyOnIsland:
-	.string "I left the major port of SLATEPORT\n"
-	.string "CITY when I married my husband here.\p"
+	.string "I left the major port of Slateport\n"
+	.string "City when I married my husband here.\p"
 	.string "Life goes by slowly on this little\n"
 	.string "island. But being surrounded by the\l"
 	.string "beautiful sea--that's happiness, too.$"
 
 DewfordTown_House1_Text_Zigzagoon:
-	.string "ZIGZAGOON: Guguuh!$"
+	.string "Iku: Guguuh!$"

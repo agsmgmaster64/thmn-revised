@@ -864,13 +864,15 @@
 #define TRAINER_BRAWLY_7					857 //4th gym
 #define TRAINER_WINONA_6					858 //7th gym
 #define TRAINER_WINONA_7					859 //8th gym
+#define TRAINER_ARCHIE_2					860 //Slateport Museum
+#define TRAINER_ARCHIE_3					861 //Mt. Pyre
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     860
-#define MAX_TRAINERS_COUNT_EMERALD 869
+#define TRAINERS_COUNT_EMERALD     862
+#define MAX_TRAINERS_COUNT_EMERALD 871
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

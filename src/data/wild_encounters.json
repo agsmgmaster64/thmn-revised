@@ -1969,62 +1969,62 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_CHIBI_RUMIA"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_CHIBI_KOAKUMA"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_CHIBI_RUMIA"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_CHIBI_KISUME"
               },
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_CHIBI_KISUME"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_ABRA"
+                "species": "SPECIES_CHIBI_YAMAME"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_CHIBI_KOAKUMA"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_CHIBI_YAMAME"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_REMILIA"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_REISEN"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_REMILIA"
               },
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_REISEN"
               }
             ]
           }
@@ -2038,62 +2038,62 @@
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_CHIBI_RUMIA"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_CHIYARI"
               },
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_RUMIA"
               },
               {
                 "min_level": 11,
                 "max_level": 11,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_PARSEE"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_CHIBI_PARSEE"
               },
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_ABRA"
+                "species": "SPECIES_CHIBI_YAMAME"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_CHIBI_CHIYARI"
               },
               {
                 "min_level": 11,
                 "max_level": 11,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_CHIBI_YAMAME"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_CHIBI_REMILIA"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_CHIBI_REISEN"
               },
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_CHIBI_REMILIA"
               },
               {
                 "min_level": 11,
                 "max_level": 11,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_CHIBI_REISEN"
               }
             ]
           }
@@ -2437,62 +2437,62 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_CHIBI_LETTY"
               },
               {
                 "min_level": 11,
                 "max_level": 11,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_MAI"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_LETTY"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
-                "species": "SPECIES_ZUBAT"
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_CIRNO"
               },
               {
                 "min_level": 12,
                 "max_level": 12,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_MAI"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_ABRA"
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_CIRNO"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_SABLEYE"
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_CIRNO"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
-                "species": "SPECIES_SABLEYE"
-              },
-              {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_SABLEYE"
-              },
-              {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_SABLEYE"
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_CIRNO"
               },
               {
                 "min_level": 12,
                 "max_level": 12,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_CHIBI_YUYUKO"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_CHIBI_YUMEMI"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_CHIBI_YUYUKO"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_CHIBI_YUMEMI"
               }
             ]
           },
@@ -2502,27 +2502,27 @@
               {
                 "min_level": 10,
                 "max_level": 15,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_LETTY"
               },
               {
                 "min_level": 10,
                 "max_level": 20,
-                "species": "SPECIES_NOSEPASS"
+                "species": "SPECIES_CHIBI_SUIKA"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_TENSHI"
               },
               {
                 "min_level": 15,
                 "max_level": 20,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_YUUGI"
               },
               {
                 "min_level": 15,
                 "max_level": 20,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_CHIBI_KASEN"
               }
             ]
           }
@@ -4593,64 +4593,64 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_ZUBAT"
-              },
-              {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_MAKUHITA"
-              },
-              {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_MAKUHITA"
-              },
-              {
-                "min_level": 8,
-                "max_level": 8,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_CHIBI_RUMIA"
               },
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_MAKUHITA"
-              },
-              {
-                "min_level": 8,
-                "max_level": 8,
-                "species": "SPECIES_ABRA"
+                "species": "SPECIES_CHIBI_PARSEE"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_MAKUHITA"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_MAKUHITA"
-              },
-              {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_RUMIA"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_MEIRA"
               },
               {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_ARON"
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_PARSEE"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_CHIBI_MISUMARU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_MISUMARU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_CHIBI_MEIRA"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_YUUMA"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_CHIBI_YUUGI"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_CHIBI_YUUMA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_CHIBI_YUUGI"
               }
             ]
           }

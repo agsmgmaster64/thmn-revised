@@ -844,7 +844,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Poison Sting
 
 === TRAINER_FOSTER ===
-Name: FOSTER
+Name: Foster
 Class: Ruin Maniac
 Pic: Ruin Maniac
 Gender: Male
@@ -852,21 +852,13 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Sandshrew
+Normal Tenshi
 Level: 25
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
 
-Sandslash
+Normal Yuugi
 Level: 25
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
 
 === TRAINER_DUSTY_2 ===
 Name: DUSTY
@@ -2757,7 +2749,7 @@ Level: 35
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_LUIS ===
-Name: LUIS
+Name: Luis
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
@@ -2765,12 +2757,12 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Normal Hina
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DOMINIK ===
-Name: DOMINIK
+Name: Dominik
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
@@ -2778,12 +2770,12 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
+Normal Chiyuri
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DOUGLAS ===
-Name: DOUGLAS
+Name: Douglas
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
@@ -2791,11 +2783,11 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
+Chibi Komachi
 Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Tentacool
+Normal Chiyuri
 Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -3177,7 +3169,7 @@ Level: 39
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_TAKAO ===
-Name: TAKAO
+Name: Takao
 Class: Black Belt
 Pic: Black Belt
 Gender: Male
@@ -3185,7 +3177,7 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Machop
+Chibi Yuugi
 Level: 13
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
@@ -4846,29 +4838,37 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Machop
+Chibi Ichirin @ TwistedSpoon
 Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bulk Up
+- Holy Strike
 - Karate Chop
-- Low Kick
-- Seismic Toss
-- Bulk Up
+- Psyslap
 
-Meditite
-Level: 16
+Chibi Seija @ Silk Scarf
+Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
-- Light Screen
-- Reflect
 - Bulk Up
+- Karate Chop
+- Pursuit
+- Quick Attack
 
-Makuhita @ Sitrus Berry
+Chibi Suika @ Soft Sand
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bulk Up
+- Rock Tomb
+- Karate Chop
+- Sandy Mash
+
+Normal Yuugi @ Sitrus Berry
 Level: 19
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Arm Thrust
-- Vital Throw
-- Reversal
 - Bulk Up
+- Aqua Cutter
+- Karate Chop
+- Focus Energy
 
 === TRAINER_WATTSON_1 ===
 Name: WATTSON
@@ -6378,7 +6378,7 @@ Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ELLIOT_1 ===
-Name: ELLIOT
+Name: Elliot
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -6386,20 +6386,20 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
-Level: 10
+Chibi Hina
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacool
-Level: 7
+Chibi Hina
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
+Chibi Hina
 Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NED ===
-Name: NED
+Name: Ned
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -6407,7 +6407,7 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
+Chibi Yuyuko
 Level: 11
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -7847,7 +7847,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Sludge
 
 === TRAINER_JOCELYN ===
-Name: JOCELYN
+Name: Jocelyn
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
@@ -7855,12 +7855,12 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Meditite
+Chibi Elly
 Level: 13
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_LAURA ===
-Name: LAURA
+Name: Laura
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
@@ -7868,7 +7868,7 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Meditite
+Chibi Meiling
 Level: 13
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -8119,7 +8119,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Sunny Day
 
 === TRAINER_BEVERLY ===
-Name: BEVERLY
+Name: Beverly
 Class: Swimmer F
 Pic: Swimmer F
 Gender: Female
@@ -8127,16 +8127,16 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Wingull
+Chibi Chiyuri
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
+Normal Wakasagihime
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_IMANI ===
-Name: IMANI
+Name: Imani
 Class: Swimmer F
 Pic: Swimmer F
 Gender: Female
@@ -8144,12 +8144,12 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Marill
+Normal Chiyuri
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KYLA ===
-Name: KYLA
+Name: Kyla
 Class: Swimmer F
 Pic: Swimmer F
 Gender: Female
@@ -8157,7 +8157,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Wailmer
+Normal Komachi
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10585,7 +10585,7 @@ Level: 8
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_BRENDEN ===
-Name: BRENDEN
+Name: Brenden
 Class: Sailor
 Pic: Sailor
 Gender: Male
@@ -10593,12 +10593,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machop
+Chibi Suika
 Level: 13
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_LILITH ===
-Name: LILITH
+Name: Lilith
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
@@ -10606,12 +10606,12 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Meditite
+Chibi Ubame
 Level: 13
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_CRISTIAN ===
-Name: CRISTIAN
+Name: Cristian
 Class: Black Belt
 Pic: Black Belt
 Gender: Male
@@ -10619,7 +10619,7 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Makuhita
+Chibi Seiran
 Level: 13
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -13623,7 +13623,7 @@ Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDRES_1 ===
-Name: ANDRES
+Name: Andres
 Class: Ruin Maniac
 Pic: Ruin Maniac
 Gender: Male
@@ -13631,16 +13631,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Sandshrew
+Chibi Tenshi
 Level: 25
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Sandshrew
+Normal Ran
 Level: 25
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_JOSUE ===
-Name: JOSUE
+Name: Josue
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
@@ -13648,11 +13648,11 @@ Music: Cool
 Double Battle: No
 AI: Check Bad Move
 
-Taillow
+Normal Mystia
 Level: 25
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Wingull
+Normal Tokiko
 Level: 25
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -16965,29 +16965,37 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Machop
+Normal Ichirin @ TwistedSpoon
 Level: 21
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bulk Up
+- Holy Strike
 - Karate Chop
-- Low Kick
-- Seismic Toss
-- Bulk Up
+- Mana Punch
 
-Meditite
-Level: 21
+Normal Seija @ Black Belt
+Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
-- Light Screen
-- Reflect
 - Bulk Up
+- Karate Chop
+- Pursuit
+- Mach Punch
 
-Makuhita @ Sitrus Berry
+Normal Suika @ Soft Sand
+Level: 23
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bulk Up
+- Rock Tomb
+- Karate Chop
+- Sandy Mash
+
+Normal Yuugi @ Sitrus Berry
 Level: 24
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Arm Thrust
-- Vital Throw
-- Reversal
 - Bulk Up
+- Aqua Cutter
+- Drain Punch
+- Focus Energy
 
 === TRAINER_BRAWLY_7 ===
 Name: Brawly
@@ -16999,33 +17007,45 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Machop
-Level: 24
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Karate Chop
-- Low Kick
-- Seismic Toss
-- Bulk Up
-
-Meditite
-Level: 24
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Bulk Up
-
-Makuhita @ Sitrus Berry
+Normal Ichirin @ Magnet
 Level: 26
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Arm Thrust
-- Vital Throw
-- Reversal
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Bulk Up
+- Holy Strike
+- Karate Chop
+- ThunderPunch
 
-Normal Reimu
+Normal Seija @ Black Belt
+Level: 26
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bulk Up
+- Karate Chop
+- Pursuit
+- Mach Punch
+
+Normal Seiran @ Black Belt
+Level: 27
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Arm Thrust
+- Bulk Up
+- Psybeam
+- Knock Off
+
+Normal Suika @ Soft Sand
+Level: 28
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Bulk Up
+- Rock Tomb
+- Drain Punch
+- Sandy Mash
+
+Normal Yuugi @ Sitrus Berry
 Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Bulk Up
+- Aqua Cutter
+- Drain Punch
+- Focus Energy
 
 === TRAINER_WINONA_6 ===
 Name: Winona

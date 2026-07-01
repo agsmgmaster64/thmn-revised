@@ -174,6 +174,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	setflag FLAG_BADGE02_GET
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
+	call_if_unset FLAG_RECEIVED_HM_FLASH, DewfordTown_Gym_EventScript_FlashLanternState
 	setvar VAR_0x8008, 2
 	call Common_EventScript_SetGymTrainers
 	call DewfordTown_Gym_EventScript_GiveBulkUp
@@ -190,6 +191,10 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	release
 	end
+	
+DewfordTown_Gym_EventScript_FlashLanternState::
+	setvar VAR_FLASH_LANTERN_STATE, 1
+	return
 
 DewfordTown_Gym_EventScript_GiveBulkUp::
 	giveitem ITEM_TM_BULK_UP
@@ -307,16 +312,16 @@ DewfordTown_Gym_EventScript_GymStatue::
 	end
 
 DewfordTown_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER Brawly commands\n"
-	.string "FIGHTING-type Puppets.\p"
-	.string "Going against him with NORMAL-type\n"
+	.string "Dewford's Gym Leader Brawly commands\n"
+	.string "Fighting-type Puppets.\p"
+	.string "Going against him with Normal-type\n"
 	.string "Puppets is asking for trouble.\p"
-	.string "FIGHTING Puppets will lay a serious\n"
-	.string "smack down on NORMAL Puppets,\l"
+	.string "Fighting Puppets will lay a serious\n"
+	.string "smack down on Normal Puppets,\l"
 	.string "so be careful!\p"
-	.string "What's worse, the GYM is as dark as\n"
+	.string "What's worse, the Gym is as dark as\n"
 	.string "the ocean floor.\p"
 	.string "But it will get brighter after defeating\n"
 	.string "the trainers in your way.\p"
@@ -349,7 +354,7 @@ DewfordTown_Gym_Text_JocelynDefeat:
 DewfordTown_Gym_Text_JocelynPostBattle:
 	.string "I'm not going to waste this loss.\n"
 	.string "I'll use it to motivate me to train!\p"
-	.string "One day I'll become a GYM LEADER…\p"
+	.string "One day I'll become a Gym Leader…\p"
 	.string "No, I'll become the Hoenn League\n"
 	.string "Champion!$"
 
@@ -389,7 +394,7 @@ DewfordTown_Gym_Text_BrendenDefeat:
 
 DewfordTown_Gym_Text_BrendenPostBattle:
 	.string "Oh, aye! You're worthy of seeing\n"
-	.string "our GYM LEADER.$"
+	.string "our Gym Leader.$"
 
 DewfordTown_Gym_Text_CristianIntro:
 	.string "If you mean to pass, it has to be\n"
@@ -401,11 +406,11 @@ DewfordTown_Gym_Text_CristianDefeat:
 
 DewfordTown_Gym_Text_CristianPostBattle:
 	.string "You win!\n"
-	.string "Go after that BADGE!$"
+	.string "Go after that Badge!$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
 	.string "I'm Brawly!\n"
-	.string "DEWFORD's GYM LEADER!\p"
+	.string "Dewford's Gym Leader!\p"
 	.string "I've been churned in the rough waves\n"
 	.string "of these parts, and I've grown tough\l"
 	.string "in the pitch-black cave!\p"
@@ -417,7 +422,7 @@ DewfordTown_Gym_Text_BrawlyDefeat:
 	.string "splash than I expected!\p"
 	.string "You swamped me!\p"
 	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
+	.string "Take this Gym Badge!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
 	.string "{PLAYER} received the Knuckle Badge\n"
@@ -428,18 +433,18 @@ DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
 	.string "up to Level 30, even those you get in\l"
 	.string "trades, obey without question.\p"
 	.string "And, you'll be able to use the HM move\n"
-	.string "FLASH outside of battle.\p"
-	.string "If you'd like, use this TECHNICAL\n"
-	.string "MACHINE, too.$"
+	.string "Flash outside of battle.\p"
+	.string "If you'd like, use this Technical\n"
+	.string "Machine, too.$"
 
 DewfordTown_Gym_Text_ExplainBulkUp:
-	.string "That TM08 contains BULK UP.\p"
-	.string "It's a move that raises both ATTACK\n"
-	.string "and DEFENSE stats.\p"
+	.string "That TM08 contains Bulk Up.\p"
+	.string "It's a move that raises both Attack\n"
+	.string "and Defense stats.\p"
 	.string "… … … … … …$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
-	.string "Registered GYM LEADER Brawly\n"
+	.string "Registered Gym Leader Brawly\n"
 	.string "in the TohoNav.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:
@@ -452,7 +457,7 @@ DewfordTown_Gym_Text_GymStatue:
 
 DewfordTown_Gym_Text_GymStatueCertified:
 	.string "Dewford Town Puppet Gym\p"
-	.string "Brawly'S CERTIFIED trainers:\n"
+	.string "Brawly's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:

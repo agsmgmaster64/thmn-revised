@@ -68,46 +68,9 @@ DewfordTown_EventScript_GymSign::
 DewfordTown_EventScript_HallSign::
 	msgbox DewfordTown_Text_HallSign, MSGBOX_SIGN
 	end
-
-DewfordTown_EventScript_OldRodFisherman::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_HowsFishing
-	msgbox DewfordTown_Text_GettingItchToFish, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_GiveOldRod
-	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_NotGettingItchToFish
-	end
-
-DewfordTown_EventScript_GiveOldRod::
-	msgbox DewfordTown_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
-	giveitem ITEM_OLD_ROD
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_OLD_ROD
-	msgbox DewfordTown_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
-	release
-	end
-
-DewfordTown_EventScript_NotGettingItchToFish::
-	msgbox DewfordTown_Text_ThatsTooBadThen, MSGBOX_DEFAULT
-	release
-	end
-
-DewfordTown_EventScript_HowsFishing::
-	message DewfordTown_Text_HowsYourFishing
-	waitmessage
-	multichoice 20, 8, MULTI_HOWS_FISHING, TRUE
-	goto_if_eq VAR_RESULT, 0, DewfordTown_EventScript_FishingExcellent
-	goto_if_eq VAR_RESULT, 1, DewfordTown_EventScript_FishingNotSoGood
-	end
-
-DewfordTown_EventScript_FishingExcellent::
-	msgbox DewfordTown_Text_GreatHaulInSomeBigOnes, MSGBOX_DEFAULT
-	release
-	end
-
-DewfordTown_EventScript_FishingNotSoGood::
-	msgbox DewfordTown_Text_FishingAdvice, MSGBOX_DEFAULT
-	release
+	
+DewfordTown_EventScript_SurprisedWoman::
+	msgbox DewfordTown_Text_SurprisedWoman, MSGBOX_NPC
 	end
 
 DewfordTown_EventScript_SailToPetalburg::
@@ -628,113 +591,76 @@ DewfordTown_EventScript_PhraseNotTrendyEnough::
 	end
 
 DewfordTown_Text_TinyIslandCommunity:
-	.string "DEWFORD is a tiny island community.\n"
+	.string "Dewford is a tiny island community.\n"
 	.string "If something gets trendy here,\l"
 	.string "everyone picks up on it right away.$"
 
 DewfordTown_Text_TownSign:
-	.string "DEWFORD TOWN\n"
+	.string "Dewford Town\n"
 	.string "“A tiny island in the blue sea.”$"
 
 DewfordTown_Text_GymSign:
 	.string "Dewford Town Pokemon Gym\n"
-	.string "LEADER: Brawly\l"
+	.string "Leader: Brawly\l"
 	.string "“A big wave in fighting!”$"
 
 DewfordTown_Text_HallSign:
-	.string "DEWFORD HALL\n"
+	.string "Dewford Hall\n"
 	.string "“Everyone's information exchange!”$"
 
 Route104_Text_LandedInDewfordDeliverLetter:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in DEWFORD.\p"
+	.string "Mr. Briney: Ahoy!\n"
+	.string "We've hit land in Dewford.\p"
 	.string "I suppose you're off to deliver that\n"
-	.string "LETTER to, who was it now, Steven!$"
+	.string "Letter to, who was it now, Steven!$"
 
 DewfordTown_Text_SetSailBackToPetalburg:
-	.string "MR. BRINEY: Have you delivered your\n"
-	.string "LETTER?\p"
+	.string "Mr. Briney: Have you delivered your\n"
+	.string "Letter?\p"
 	.string "Or were you meaning to sail back to\n"
-	.string "PETALBURG?$"
+	.string "Petalburg?$"
 
 DewfordTown_Text_PetalburgWereSettingSail2:
-	.string "MR. BRINEY: PETALBURG it is, then!\p"
+	.string "Mr. Briney: Petalburg it is, then!\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_GoDeliverIllBeWaiting:
-	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the LETTER. I'll be waiting.$"
+	.string "Mr. Briney: Then you go on and deliver\n"
+	.string "the Letter. I'll be waiting.$"
 
 DewfordTown_Text_BrineyLandedInDewford:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in DEWFORD!\p"
+	.string "Mr. Briney: Ahoy!\n"
+	.string "We've hit land in Dewford!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
 DewfordTown_Text_WhereAreWeBound:
-	.string "MR. BRINEY: Ahoy!\n"
+	.string "Mr. Briney: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
 	.string "Now, my friend, where are we bound?$"
 
 DewfordTown_Text_PetalburgWereSettingSail:
-	.string "MR. BRINEY: PETALBURG, is it?\p"
+	.string "Mr. Briney: Petalburg, is it?\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_SlateportWereSettingSail:
-	.string "MR. BRINEY: SLATEPORT, is it?\p"
+	.string "Mr. Briney: Slateport, is it?\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
-	.string "MR. BRINEY: You just tell me whenever\n"
+	.string "Mr. Briney: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
-DewfordTown_Text_GettingItchToFish:
-	.string "This is a renowned fishing spot.\n"
-	.string "Are you getting the itch to fish?$"
-
-DewfordTown_Text_GiveYouOneOfMyRods:
-	.string "I hear you, and I like what\n"
-	.string "you're saying!\p"
-	.string "I'll give you one of my fishing RODS.$"
-
-DewfordTown_Text_ThrowInFishingAdvice:
-	.string "And, as an added bonus, I'll even throw\n"
-	.string "in a little fishing advice!\p"
-	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
-	.string "Focus your mind…\n"
-	.string "If you get a bite, pull on the ROD.\p"
-	.string "Sometimes you can snag something\n"
-	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
-	.string "to haul them in.$"
-
-DewfordTown_Text_ThatsTooBadThen:
-	.string "Oh, is that so?\n"
-	.string "That's too bad, then.$"
-
-DewfordTown_Text_HowsYourFishing:
-	.string "Yo!\n"
-	.string "How's your fishing?$"
-
-DewfordTown_Text_GreatHaulInSomeBigOnes:
-	.string "Is that right! That's great!\n"
-	.string "Haul in some big ones!$"
-
-DewfordTown_Text_FishingAdvice:
-	.string "Oh, hey, don't get down on yourself!\n"
-	.string "I'll give you a little fishing advice.\p"
-	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
-	.string "Focus your mind…\n"
-	.string "If you get a bite, pull the ROD.\p"
-	.string "Sometimes you can snag something\n"
-	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
-	.string "to haul them in.$"
+DewfordTown_Text_SurprisedWoman:
+	.string "Wow, you bothered to cross the sea\n"
+	.string "to visit Dewford?\p"
+	.string "Did you maybe come here because you\n"
+	.string "Heard about Brawly?\p"
+	.string "He's so cool…\n"
+	.string "Everyone idolizes him.$"
 
 DewfordTown_Text_XIsTheBiggestHappeningThingRight:
 	.string "I like what's hip, happening, and trendy.\n"

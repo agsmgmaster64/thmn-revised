@@ -4,6 +4,7 @@ GraniteCave_1F_MapScripts::
 GraniteCave_1F_EventScript_Hiker::
 	lock
 	faceplayer
+	goto_if_eq VAR_FLASH_LANTERN_STATE, 1, GraniteCave_1F_EventScript_GetFlashAndLantern
 	goto_if_set FLAG_RECEIVED_HM_FLASH, GraniteCave_1F_EventScript_ReceivedFlash
 	msgbox GraniteCave_1F_Text_GetsDarkAheadHereYouGo, MSGBOX_DEFAULT
 	giveitem ITEM_HM_FLASH
@@ -13,9 +14,52 @@ GraniteCave_1F_EventScript_Hiker::
 	end
 
 GraniteCave_1F_EventScript_ReceivedFlash::
+	goto_if_set FLAG_BADGE02_GET, GraniteCave_1F_EventScript_GetLantern
 	msgbox GraniteCave_1F_Text_ExplainFlash, MSGBOX_DEFAULT
 	release
 	end
+	
+GraniteCave_1F_EventScript_GetLantern::
+	goto_if_set FLAG_RECEIVED_LANTERN, GraniteCave_1F_EventScript_ReceivedLantern
+	msgbox GraniteCave_1F_Text_HereIsLantern, MSGBOX_DEFAULT
+	giveitem ITEM_LANTERN
+	setflag FLAG_RECEIVED_LANTERN
+	msgbox GraniteCave_1F_Text_ExplainLantern, MSGBOX_DEFAULT
+	release
+	end
+	
+GraniteCave_1F_EventScript_ReceivedLantern::
+	msgbox GraniteCave_1F_Text_ExplainLantern, MSGBOX_DEFAULT
+	release
+	end
+	
+GraniteCave_1F_EventScript_GetFlashAndLantern::
+	goto_if_set FLAG_RECEIVED_LANTERN, GraniteCave_1F_EventScript_ReceivedLantern
+	msgbox GraniteCave_1F_Text_GetsDarkAheadHereYouGo, MSGBOX_DEFAULT
+	giveitem ITEM_HM_FLASH
+	setflag FLAG_RECEIVED_HM_FLASH
+	msgbox GraniteCave1F_Text_ExplainFlash2, MSGBOX_DEFAULT
+	giveitem ITEM_LANTERN
+	setflag FLAG_RECEIVED_LANTERN
+	msgbox GraniteCave_1F_Text_ExplainLantern, MSGBOX_DEFAULT
+	setvar VAR_FLASH_LANTERN_STATE, 2
+	release
+	end
+	
+GraniteCave_1F_Text_HereIsLantern:
+	.string "Oh! Look at that, you got the Knuckle\n"
+	.string "Badge!\p"
+	.string "Congratulations!\n"
+	.string "I told you I'd have another gift to\l"
+	.string "give you, so here you go!$"
+	
+GraniteCave_1F_Text_ExplainLantern:
+	.string "This is a lantern. It lights up the\n"
+	.string "inky black darkness of caves.\p"
+	.string "Except instead of being a move you\n"
+	.string "teach your puppet, it's an item you\l"
+	.string "can carry yourself!\p"
+	.string "How unbelievably convenient, eh?$"
 
 GraniteCave_1F_Text_GetsDarkAheadHereYouGo:
 	.string "Hey, you.\n"
@@ -23,16 +67,29 @@ GraniteCave_1F_Text_GetsDarkAheadHereYouGo:
 	.string "It'll be tough trying to explore.\p"
 	.string "That guy who came by earlier…\n"
 	.string "Steven, I think it was.\p"
-	.string "He knew how to use FLASH, so he ought\n"
+	.string "He knew how to use Flash, so he ought\n"
 	.string "to be all right, but…\p"
-	.string "Well, for us HIKERS, helping out those\n"
+	.string "Well, for us Hikers, helping out those\n"
 	.string "that we meet is our motto.\p"
 	.string "Here you go, I'll pass this on to you.$"
 
 GraniteCave_1F_Text_ExplainFlash:
-	.string "Teach that hidden move FLASH to\n"
+	.string "Teach that hidden move Flash to\n"
 	.string "a Puppet and use it.\p"
 	.string "It lights up even the inky darkness\n"
 	.string "of caves.\p"
-	.string "But, to use it, you need the GYM BADGE\n"
-	.string "from Dewford's Puppet Gym.$"
+	.string "But, to use it, you need the Gym Badge\n"
+	.string "from Dewford's Puppet Gym.\p"
+	.string "Oh, that reminds me. Come back here\n"
+	.string "When you beat the Gym Leader.\p"
+	.string "I'll have another gift to give you.$"
+	
+GraniteCave1F_Text_ExplainFlash2:
+	.string "Teach that hidden move Flash to\n"
+	.string "a Puppet and use it.\p"
+	.string "It lights up even the inky darkness\n"
+	.string "of caves.\p"
+	.string "But, to use it, you need the Gym Badge\n"
+	.string "from Dewford's Puppet Gym.\p"
+	.string "Oh, wait, don't go anywhere. Let me\n"
+	.string "give you one last thing.$"
