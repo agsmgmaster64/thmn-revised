@@ -85,6 +85,8 @@ struct ItemInfo
     u8 type;
     u8 battleUsage;
     u8 flingPower;
+    u16 coinPrice;
+    u16 bpPrice;
     const u32 *iconPic;
     const u16 *iconPalette;
     ShopCriteriaFunc shopCriteriaFunc;
@@ -280,6 +282,8 @@ u32 GetItemSecondaryId(enum Item itemId);
 u32 GetItemFlingPower(enum Item itemId);
 u32 GetItemStatus1Mask(enum Item itemId);
 u32 GetItemSellPrice(enum Item itemId);
+u32 GetItemCoinPrice(enum Item itemId);
+u32 GetItemBpPrice(enum Item itemId);
 bool32 IsHoldEffectChoice(enum HoldEffect holdEffect);
 ShopCriteriaFunc GetItemShopCriteriaFunc(enum Item itemId);
 bool32 IsItemShopCriteriaFulfilled(enum Item itemId);

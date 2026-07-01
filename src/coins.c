@@ -24,7 +24,7 @@ void PrintCoinsString(u32 coinAmount)
 void ShowCoinsWindow(u32 coinAmount, u8 x, u8 y)
 {
     struct WindowTemplate template;
-    SetWindowTemplateFields(&template, 0, x, y, 8, 2, 0xF, 0x141);
+    SetWindowTemplateFields(&template, 0, x + 1, y + 1, 8, 2, 0xF, 0x141);
     sCoinsWindowId = AddWindow(&template);
     FillWindowPixelBuffer(sCoinsWindowId, PIXEL_FILL(0));
     PutWindowTilemap(sCoinsWindowId);
@@ -79,4 +79,12 @@ bool8 RemoveCoins(u16 toSub)
         return TRUE;
     }
     return FALSE;
+}
+
+bool8 IsEnoughCoins(u16 cost)
+{
+    if (GetCoins() >= cost)
+        return TRUE;
+    else
+        return FALSE;
 }

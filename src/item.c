@@ -1006,3 +1006,13 @@ bool32 IsItemShopCriteriaFulfilled(enum Item itemId)
 
     return func(SanitizeItemId(itemId));
 }
+
+u32 GetItemCoinPrice(enum Item itemId)
+{
+    return gItemsInfo[SanitizeItemId(itemId)].coinPrice;
+}
+
+u32 GetItemBpPrice(enum Item itemId)
+{
+    return gItemsInfo[SanitizeItemId(itemId)].bpPrice;
+}

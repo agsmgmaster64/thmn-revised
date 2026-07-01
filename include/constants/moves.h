@@ -999,6 +999,7 @@ enum __attribute__((packed)) Move
     MOVE_PRISTINE_SHOT = 937,
     MOVE_DESTITUTION = 938,
     MOVE_EARTH_PRESS = 939,
+    MOVE_MOOD_SWING = 940,
 
     MOVES_COUNT_GEN9,
 

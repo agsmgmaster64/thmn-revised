@@ -39,6 +39,7 @@
 #include "move.h"
 #include "move_relearner.h"
 #include "mystery_event_script.h"
+#include "new_shop.h"
 #include "palette.h"
 #include "party_menu.h"
 #include "pokedex.h"
@@ -67,6 +68,7 @@
 #include "constants/event_objects.h"
 #include "constants/map_types.h"
 #include "constants/party_menu.h"
+#include "constants/new_shop.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(struct ScriptContext *ctx);
@@ -100,12 +102,6 @@ static const u8 sScriptConditionTable[6][3] =
     {1, 0, 1}, // !=
 };
 
-static u8 *const sScriptStringVars[] =
-{
-    gStringVar1,
-    gStringVar2,
-    gStringVar3,
-};
 
 bool8 ScrCmd_nop(struct ScriptContext *ctx)
 {
@@ -2112,7 +2108,7 @@ bool8 ScrCmd_bufferspeciesname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], GetSpeciesName(species));
+    StringCopy(GetStringVar(stringVarIndex), GetSpeciesName(species));
     return FALSE;
 }
 
@@ -2122,7 +2118,7 @@ bool8 ScrCmd_bufferleadmonspeciesname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    u8 *dest = sScriptStringVars[stringVarIndex];
+    u8 *dest = GetStringVar(stringVarIndex);
     u8 partyIndex = GetLeadMonIndex();
     enum Species species = GetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_SPECIES);
     StringCopy(dest, GetSpeciesName(species));
@@ -2135,8 +2131,8 @@ void BufferFirstLiveMonNickname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    GetMonData(GetFirstLiveMon(), MON_DATA_NICKNAME, sScriptStringVars[stringVarIndex]);
-    StringGet_Nickname(sScriptStringVars[stringVarIndex]);
+    GetMonData(GetFirstLiveMon(), MON_DATA_NICKNAME, GetStringVar(stringVarIndex));
+    StringGet_Nickname(GetStringVar(stringVarIndex));
 }
 
 bool8 ScrCmd_bufferpartymonnick(struct ScriptContext *ctx)
@@ -2146,8 +2142,8 @@ bool8 ScrCmd_bufferpartymonnick(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    GetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_NICKNAME, sScriptStringVars[stringVarIndex]);
-    StringGet_Nickname(sScriptStringVars[stringVarIndex]);
+    GetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_NICKNAME, GetStringVar(stringVarIndex));
+    StringGet_Nickname(GetStringVar(stringVarIndex));
     return FALSE;
 }
 
@@ -2158,7 +2154,7 @@ bool8 ScrCmd_bufferitemname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    CopyItemName(itemId, sScriptStringVars[stringVarIndex]);
+    CopyItemName(itemId, GetStringVar(stringVarIndex));
     return FALSE;
 }
 
@@ -2170,7 +2166,7 @@ bool8 ScrCmd_bufferitemnameplural(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    CopyItemNameHandlePlural(itemId, sScriptStringVars[stringVarIndex], quantity);
+    CopyItemNameHandlePlural(itemId, GetStringVar(stringVarIndex), quantity);
     return FALSE;
 }
 
@@ -2181,7 +2177,7 @@ bool8 ScrCmd_bufferdecorationname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], gDecorations[decorId].name);
+    StringCopy(GetStringVar(stringVarIndex), gDecorations[decorId].name);
     return FALSE;
 }
 
@@ -2192,7 +2188,7 @@ bool8 ScrCmd_buffermovename(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], GetMoveName(move));
+    StringCopy(GetStringVar(stringVarIndex), GetMoveName(move));
     return FALSE;
 }
 
@@ -2204,7 +2200,7 @@ bool8 ScrCmd_buffernumberstring(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    ConvertIntToDecimalStringN(sScriptStringVars[stringVarIndex], num, STR_CONV_MODE_LEFT_ALIGN, numDigits);
+    ConvertIntToDecimalStringN(GetStringVar(stringVarIndex), num, STR_CONV_MODE_LEFT_ALIGN, numDigits);
     return FALSE;
 }
 
@@ -2215,7 +2211,7 @@ bool8 ScrCmd_bufferstdstring(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], gStdStrings[index]);
+    StringCopy(GetStringVar(stringVarIndex), gStdStrings[index]);
     return FALSE;
 }
 
@@ -2226,7 +2222,7 @@ bool8 ScrCmd_buffercontestname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    BufferContestName(sScriptStringVars[stringVarIndex], category);
+    BufferContestName(GetStringVar(stringVarIndex), category);
     return FALSE;
 }
 
@@ -2237,7 +2233,7 @@ bool8 ScrCmd_bufferstring(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], text);
+    StringCopy(GetStringVar(stringVarIndex), text);
     return FALSE;
 }
 
@@ -2259,7 +2255,7 @@ bool8 ScrCmd_vbufferstring(struct ScriptContext *ctx)
     Script_RequestEffects(SCREFF_V1);
 
     const u8 *src = (u8 *)(addr - sAddressOffset);
-    u8 *dest = sScriptStringVars[stringVarIndex];
+    u8 *dest = GetStringVar(stringVarIndex);
     StringCopy(dest, src);
     return FALSE;
 }
@@ -2271,7 +2267,7 @@ bool8 ScrCmd_bufferboxname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], GetBoxNamePtr(boxId));
+    StringCopy(GetStringVar(stringVarIndex), GetBoxNamePtr(boxId));
     return FALSE;
 }
 
@@ -2329,42 +2325,31 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
 bool8 ScrCmd_addmoney(struct ScriptContext *ctx)
 {
     u32 amount = ScriptReadWord(ctx);
-    u8 ignore = ScriptReadByte(ctx);
 
-    if (!ignore)
-    {
-        Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
+    Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
 
-        AddMoney(&gSaveBlock1Ptr->money, amount);
-    }
+    AddMoney(&gSaveBlock1Ptr->money, amount);
     return FALSE;
 }
 
 bool8 ScrCmd_removemoney(struct ScriptContext *ctx)
 {
     u32 amount = ScriptReadWord(ctx);
-    u8 ignore = ScriptReadByte(ctx);
 
-    if (!ignore)
-    {
-        Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
+    Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
 
-        RemoveMoney(&gSaveBlock1Ptr->money, amount);
-    }
+    RemoveMoney(&gSaveBlock1Ptr->money, amount);
     return FALSE;
 }
 
 bool8 ScrCmd_checkmoney(struct ScriptContext *ctx)
 {
     u32 amount = ScriptReadWord(ctx);
-    u8 ignore = ScriptReadByte(ctx);
 
-    if (!ignore)
-    {
-        Script_RequestEffects(SCREFF_V1);
+    Script_RequestEffects(SCREFF_V1);
 
-        gSpecialVar_Result = IsEnoughMoney(&gSaveBlock1Ptr->money, amount);
-    }
+    gSpecialVar_Result = IsEnoughMoney(&gSaveBlock1Ptr->money, amount);
+
     return FALSE;
 }
 
@@ -2372,14 +2357,10 @@ bool8 ScrCmd_showmoneybox(struct ScriptContext *ctx)
 {
     u8 x = ScriptReadByte(ctx);
     u8 y = ScriptReadByte(ctx);
-    u8 ignore = ScriptReadByte(ctx);
 
-    if (!ignore)
-    {
-        Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-        DrawMoneyBox(GetMoney(&gSaveBlock1Ptr->money), x, y);
-    }
+    DrawMoneyBox(GetMoney(&gSaveBlock1Ptr->money), x, y);
     return FALSE;
 }
 
@@ -2387,17 +2368,12 @@ bool8 ScrCmd_hidemoneybox(struct ScriptContext *ctx)
 {
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    /*u8 x = ScriptReadByte(ctx);
-    u8 y = ScriptReadByte(ctx);*/
-
     HideMoneyBox();
     return FALSE;
 }
 
 bool8 ScrCmd_updatemoneybox(struct ScriptContext *ctx)
 {
-    u8 UNUSED x = ScriptReadByte(ctx);
-    u8 UNUSED y = ScriptReadByte(ctx);
     u8 ignore = ScriptReadByte(ctx);
 
     if (!ignore)
@@ -2422,9 +2398,6 @@ bool8 ScrCmd_showcoinsbox(struct ScriptContext *ctx)
 
 bool8 ScrCmd_hidecoinsbox(struct ScriptContext *ctx)
 {
-    u8 UNUSED x = ScriptReadByte(ctx);
-    u8 UNUSED y = ScriptReadByte(ctx);
-
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
     HideCoinsWindow();
@@ -2433,9 +2406,6 @@ bool8 ScrCmd_hidecoinsbox(struct ScriptContext *ctx)
 
 bool8 ScrCmd_updatecoinsbox(struct ScriptContext *ctx)
 {
-    u8 UNUSED x = ScriptReadByte(ctx);
-    u8 UNUSED y = ScriptReadByte(ctx);
-
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
     PrintCoinsString(GetCoins());
@@ -2546,10 +2516,25 @@ bool8 ScrCmd_dowildbattle(struct ScriptContext *ctx)
 bool8 ScrCmd_pokemart(struct ScriptContext *ctx)
 {
     const void *ptr = (void *)ScriptReadWord(ctx);
+    u16 shopType = ScriptReadHalfword(ctx);
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    CreatePokemartMenu(ptr);
+    switch (shopType)
+    {
+    case NEW_SHOP_PRICE_TYPE_VARIABLE:
+        NewShop_CreateVariablePokemartMenu(ptr);
+        break;
+    case NEW_SHOP_PRICE_TYPE_COINS:
+        NewShop_CreateCoinPokemartMenu(ptr);
+        break;
+    case NEW_SHOP_PRICE_TYPE_POINTS:
+        NewShop_CreatePointsPokemartMenu(ptr);
+        break;
+    default:
+        NewShop_CreatePokemartMenu(ptr);
+        break;
+    }
     ScriptContext_Stop();
     return TRUE;
 }
@@ -2560,19 +2545,19 @@ bool8 ScrCmd_pokemartdecoration(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    CreateDecorationShop1Menu(ptr);
+    NewShop_CreateDecorationShop1Menu(ptr);
     ScriptContext_Stop();
     return TRUE;
 }
 
-// Changes clerk dialogue slightly from above. See MART_TYPE_DECOR2
+// Changes clerk dialogue slightly from above. See NEW_SHOP_TYPE_DECOR2
 bool8 ScrCmd_pokemartdecoration2(struct ScriptContext *ctx)
 {
     const void *ptr = (void *)ScriptReadWord(ctx);
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    CreateDecorationShop2Menu(ptr);
+    NewShop_CreateDecorationShop2Menu(ptr);
     ScriptContext_Stop();
     return TRUE;
 }
@@ -3055,7 +3040,7 @@ bool8 ScrCmd_buffertrainerclassname(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], GetTrainerClassNameFromId(trainerClassId));
+    StringCopy(GetStringVar(stringVarIndex), GetTrainerClassNameFromId(trainerClassId));
     return FALSE;
 }
 
@@ -3066,7 +3051,7 @@ bool8 ScrCmd_buffertrainername(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
-    StringCopy(sScriptStringVars[stringVarIndex], GetTrainerNameFromId(trainerClassId));
+    StringCopy(GetStringVar(stringVarIndex), GetTrainerNameFromId(trainerClassId));
     return FALSE;
 }
 

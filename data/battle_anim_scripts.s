@@ -28926,6 +28926,7 @@ gBattleAnimGeneral_MegaEvolution::
 	playsewithpan SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER
 	createsprite gMegaStoneSpriteTemplate, ANIM_ATTACKER, 41, 0, 0, 0, 0
 	delay 20
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_MEGA_STONE, 4, 0, 16, RGB_WHITEALPHA
 	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 5, 2, 0, 16, RGB_WHITEALPHA
 	waitforvisualfinish
 	createvisualtask SoundTask_PlayNormalCry, 0
@@ -29129,6 +29130,7 @@ General_PrimalReversion_Alpha:
 	playsewithpan SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER
 	createsprite gAlphaStoneSpriteTemplate, ANIM_ATTACKER, 41, 0, 0, 0, 0
 	delay 20
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_ALPHA_STONE, 4, 0, 16, RGB_WHITEALPHA
 	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 5, 2, 0, 16, RGB_WHITEALPHA
 	waitforvisualfinish
 	createvisualtask AnimTask_HideSwapSprite, 2
@@ -29158,6 +29160,7 @@ General_PrimalReversion_Omega:
 	playsewithpan SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER
 	createsprite gOmegaStoneSpriteTemplate, ANIM_ATTACKER, 41, 0, 0, 0, 0
 	delay 20
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_OMEGA_STONE, 4, 0, 16, RGB_WHITEALPHA
 	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 5, 2, 0, 16, RGB_WHITEALPHA
 	waitforvisualfinish
 	createvisualtask AnimTask_HideSwapSprite, 2
@@ -35437,4 +35440,89 @@ gBattleAnimMove_EarthPress::
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
+	end
+
+gBattleAnimMove_MoodSwing::
+	@ atk: anger
+	@ def: sigh
+	@ satk: cheerful
+	@ sdef: melancholy
+	@ speed: fear
+	@ acc: pacing
+	@ eva: confused
+
+	jumpifcontest MoodSwing_GetContestAnimation
+	createvisualtask AnimTask_GetMoodSwingAnimation, 1
+	goto MoodSwing_GetAnimation
+
+MoodSwing_GetContestAnimation::
+	createvisualtask AnimTask_GetMoodSwingContestAnimation, 1
+MoodSwing_GetAnimation::
+	jumpargeq 7, 0, MoodSwing_Atk
+	jumpargeq 7, 1, MoodSwing_Def
+	jumpargeq 7, 2, MoodSwing_Speed
+	jumpargeq 7, 3, MoodSwing_SpAtk
+	jumpargeq 7, 4, MoodSwing_SpDef
+	jumpargeq 7, 5, MoodSwing_Accuracy
+	jumpargeq 7, 6, MoodSwing_Evasion
+	end
+ 
+MoodSwing_Atk::
+	monbg 1
+	setalpha 12, 8
+	createvisualtask AnimTask_BlendMonInAndOut, 3, 0, 31, 10, 0, 2
+	createsprite gAngerMarkSpriteTemplate, ANIM_ATTACKER, 2, 0, -20, -28
+	playsewithpan SE_M_SWAGGER2, 192
+	waitforvisualfinish
+	clearmonbg 1
+	end
+ 
+MoodSwing_Def::
+	createsprite gBreathPuffSpriteTemplate, ANIM_ATTACKER, 2, 
+	loopsewithpan SE_M_SWAGGER, 192, 4, 2
+	waitforvisualfinish
+	end
+
+MoodSwing_Speed::
+	createsprite gSprayWaterDropletSpriteTemplate, ANIM_TARGET, 5, 0, 1
+	playsewithpan SE_M_SKETCH, 63
+	createsprite gSprayWaterDropletSpriteTemplate, ANIM_TARGET, 5, 1, 1
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 5, 1
+	createvisualtask AnimTask_StretchTargetUp, 3, 
+	delay 2
+	playsewithpan SE_M_SKETCH, 63
+	waitforvisualfinish
+	end
+
+MoodSwing_SpAtk::
+	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 6, 1, 0
+	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_TAIL_WHIP, -64
+	waitforvisualfinish
+	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 6, 1, 0
+	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_TAIL_WHIP, -64
+	waitforvisualfinish
+	end
+
+MoodSwing_SpDef::
+	monbg ANIM_ATK_PARTNER
+	createvisualtask AnimTask_SetGrayscaleOrOriginalPal, 5, 1, 0
+	setalpha 8, 8
+	playsewithpan SE_M_PSYBEAM, 192
+	delay 20
+	createvisualtask AnimTask_SetGrayscaleOrOriginalPal, 5, 1, 1
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	end
+
+MoodSwing_Accuracy::
+	createvisualtask AnimTask_SwayMon, 5, 0, 10, 1536, 3, 0
+	waitforvisualfinish
+	end
+
+MoodSwing_Evasion::
+	createsprite gQuestionMarkSpriteTemplate, ANIM_ATTACKER, 20 
+	playsewithpan SE_M_METRONOME, 192
+	delay 54
+	loopsewithpan SE_M_METRONOME, 192, 16, 3
+	waitforvisualfinish
 	end

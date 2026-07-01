@@ -75,6 +75,7 @@
 #include "constants/weather.h"
 #include "constants/speaker_names.h"
 #include "constants/field_mugshots.h"
+#include "constants/new_shop.h"
 	.include "asm/macros.inc"
 	.include "asm/macros/event.inc"
 	.include "constants/constants.inc"

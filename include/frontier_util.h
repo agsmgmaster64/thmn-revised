@@ -44,4 +44,24 @@ s32 GetHighestLevelInPlayerParty(void);
 u16 FacilityClassToGraphicsId(u8 facilityClass);
 void ShowBattleFrontierCaughtBannedSpecies(void);
 
+struct FrontierBrain
+{
+    u16 trainerId;
+    u8 objEventGfx;
+    u8 isFemale;
+    const u8 *lostTexts[2];
+    const u8 *wonTexts[2];
+    u16 battledBit[2];
+    u8 streakAppearances[4];
+    u16 goldSymbolFlag;
+    u16 silverSymbolFlag;
+};
+
+extern const struct FrontierBrain gFrontierBrainInfo[];
+
+u16 GetBattlePoints(void);
+bool8 IsEnoughBattlePoints(u16 cost);
+void SetBattlePoints(u16 pointAmount);
+bool8 RemoveBattlePoints(u16 toSub);
+
 #endif // GUARD_FRONTIER_UTIL_H
