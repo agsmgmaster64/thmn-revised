@@ -1039,7 +1039,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Hyper Voice
 
 === TRAINER_LOLA_1 ===
-Name: LOLA
+Name: Lola
 Class: Tuber F
 Pic: Tuber F
 Gender: Female
@@ -1047,16 +1047,16 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Azurill
+Chibi Louise
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Azurill
+Chibi Suwako
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_AUSTINA ===
-Name: AUSTINA
+Name: Austina
 Class: Tuber F
 Pic: Tuber F
 Gender: Female
@@ -1064,12 +1064,12 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Marill
-Level: 26
+Chibi Nitori
+Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GWEN ===
-Name: GWEN
+Name: Gwen
 Class: Tuber F
 Pic: Tuber F
 Gender: Female
@@ -1077,8 +1077,8 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Marill
-Level: 26
+Chibi Chiyuri
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LOLA_2 ===
@@ -1150,7 +1150,7 @@ Level: 35
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_RICKY_1 ===
-Name: RICKY
+Name: Ricky
 Class: Tuber M
 Pic: Tuber M
 Gender: Male
@@ -1158,16 +1158,12 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
+Chibi Nitori
 Level: 13
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
-- Headbutt
-- Tail Whip
-- Surf
 
 === TRAINER_SIMON ===
-Name: SIMON
+Name: Simon
 Class: Tuber M
 Pic: Tuber M
 Gender: Male
@@ -1175,11 +1171,11 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Azurill
+Chibi Miyoi
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Marill
+Chibi Yachie
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2826,7 +2822,7 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JEROME ===
-Name: JEROME
+Name: Jerome
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
@@ -2834,12 +2830,12 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Tentacruel
+Normal Hina
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MATTHEW ===
-Name: MATTHEW
+Name: Matthew
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
@@ -2847,7 +2843,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Normal Murasa
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6480,7 +6476,7 @@ Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CARTER ===
-Name: CARTER
+Name: Carter
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -6488,12 +6484,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Wailmer
-Level: 25
+Chibi Hina
+Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Tentacruel
-Level: 25
+Chibi Hina
+Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_ELLIOT_2 ===
@@ -8192,7 +8188,7 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TARA ===
-Name: TARA
+Name: Tara
 Class: Swimmer F
 Pic: Swimmer F
 Gender: Female
@@ -8200,16 +8196,16 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Horsea
+Normal Chiyuri
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Marill
+Normal Murasa
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MISSY ===
-Name: MISSY
+Name: Missy
 Class: Swimmer F
 Pic: Swimmer F
 Gender: Female
@@ -8217,7 +8213,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Goldeen
+Normal Wakasagihime
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8952,7 +8948,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Helping Hand
 
 === TRAINER_HUEY ===
-Name: HUEY
+Name: Huey
 Class: Sailor
 Pic: Sailor
 Gender: Male
@@ -8960,16 +8956,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wingull
+Chibi Meiling
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Machop
+Chibi Murasa
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_EDMOND ===
-Name: EDMOND
+Name: Edmond
 Class: Sailor
 Pic: Sailor
 Gender: Male
@@ -8977,7 +8973,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wingull
+Chibi Sakuya
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8999,7 +8995,7 @@ Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DWAYNE ===
-Name: DWAYNE
+Name: Dwayne
 Class: Sailor
 Pic: Sailor
 Gender: Male
@@ -9007,15 +9003,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wingull
+Chibi Meiling
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Machop
+Chibi Chiyuri
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacool
+Chibi Murasa
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11895,7 +11891,7 @@ Level: 39
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_JOHANNA ===
-Name: JOHANNA
+Name: Johanna
 Class: Beauty
 Pic: Beauty
 Gender: Female
@@ -11903,7 +11899,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Goldeen
+Chibi Mokou
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12687,7 +12683,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Rock Throw
 
 === TRAINER_MEL_AND_PAUL ===
-Name: MEL & PAUL
+Name: Mel & Paul
 Class: Young Couple
 Pic: Young Couple
 Gender: Male
@@ -12695,21 +12691,13 @@ Music: Girl
 Double Battle: Yes
 AI: Check Bad Move
 
-Dustox
-Level: 27
+Normal Reisen
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Gust
-- Psybeam
-- Toxic
-- Protect
 
-Beautifly
-Level: 27
+Normal Youmu
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Gust
-- Mega Drain
-- Attract
-- Stun Spore
 
 === TRAINER_JOHN_AND_JAY_1 ===
 Name: JOHN & JAY
@@ -13029,7 +13017,7 @@ Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HAILEY ===
-Name: HAILEY
+Name: Hailey
 Class: Tuber F
 Pic: Tuber F
 Gender: Female
@@ -13037,12 +13025,12 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Marill
+Chibi Chiyuri
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHANDLER ===
-Name: CHANDLER
+Name: Chandler
 Class: Tuber M
 Pic: Tuber M
 Gender: Male
@@ -13050,11 +13038,11 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
+Chibi Sanae
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacool
+Chibi Kogasa
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13691,7 +13679,7 @@ Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAROLINA ===
-Name: CAROLINA
+Name: Carolina
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
@@ -13700,20 +13688,20 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Manectric
+Normal Suwako
 Level: 24
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Swellow
+Normal Mai
 Level: 24
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Manectric
+Normal Kotohime
 Level: 24
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_ELIJAH ===
-Name: ELIJAH
+Name: Elijah
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
@@ -13721,12 +13709,12 @@ Music: Cool
 Double Battle: No
 AI: Check Bad Move
 
-Skarmory
-Level: 25
+Chibi Mystia
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Skarmory
-Level: 25
+Chibi Tokiko
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CELIA ===
