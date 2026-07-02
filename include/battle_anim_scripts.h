@@ -1035,6 +1035,8 @@ extern const u8 gBattleAnimMove_MoodSwing[];
 extern const u8 gBattleAnimMove_LunarSea[];
 extern const u8 gBattleAnimMove_Apotheosis[];
 extern const u8 gBattleAnimMove_Identify[];
+extern const u8 gBattleAnimMove_GroupPrank[];
+extern const u8 gBattleAnimMove_Butchery[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

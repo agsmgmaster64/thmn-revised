@@ -1935,4 +1935,19 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 1,
         .encourageEncore = TRUE,
     },
+
+    [EFFECT_GROUP_PRANK] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+        .twoTurnEffect = TRUE,
+    },
+
+    [EFFECT_BEDDY_BYE] =
+    {
+        .battleScript = BattleScript_EffectBeddyBye,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+    },
 };

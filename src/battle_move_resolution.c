@@ -1277,6 +1277,7 @@ static enum CancelerResult CancelerMoveFailure(struct BattleCalcValues *cv)
         }
         break;
     case EFFECT_REST:
+    case EFFECT_BEDDY_BYE:
         if (IsAsleepOrComatose(cv->battlerDef, cv->abilities[cv->battlerDef]))
             battleScript = BattleScript_RestIsAlreadyAsleep;
         else if (gBattleMons[cv->battlerAtk].hp == gBattleMons[cv->battlerAtk].maxHP)
@@ -1692,7 +1693,9 @@ static enum CancelerResult CancelerProtean(struct BattleCalcValues *cv)
 
 static bool32 CanTwoTurnMoveFireThisTurn(struct BattleCalcValues *cv)
 {
-    if (cv->moveEffect == EFFECT_GEOMANCY || gBattleMoveEffects[cv->moveEffect].semiInvulnerableEffect)
+    if (cv->moveEffect == EFFECT_GEOMANCY
+     || cv->moveEffect == EFFECT_GROUP_PRANK
+     || gBattleMoveEffects[cv->moveEffect].semiInvulnerableEffect)
         return FALSE;
 
     u32 weather = GetWeather();

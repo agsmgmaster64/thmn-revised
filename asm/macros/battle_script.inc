@@ -2174,3 +2174,7 @@
 	.macro identify4
 	callnative BS_Identify4
 	.endm
+
+	.macro groupprankanimsetup
+	callnative BS_Groupprankanimsetup
+	.endm

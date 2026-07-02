@@ -8489,3 +8489,14 @@ const struct SpriteTemplate gApotheosisRingSpriteTemplate =
     .affineAnims = gThinRingShrinkingAffineAnimTable,
     .callback = AnimSpriteOnMonPos,
 };
+
+const struct SpriteTemplate gGroupPrankFallSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_ITEM_BAG,
+    .paletteTag = ANIM_TAG_ITEM_BAG,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimApollon2,
+};

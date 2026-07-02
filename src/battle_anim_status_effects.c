@@ -602,3 +602,14 @@ static void Task_DoStatusAnimation(u8 taskId)
         DestroyTask(taskId);
     }
 }
+
+const struct SpriteTemplate gGroupPrankUpSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ITEM_BAG,
+    .paletteTag = ANIM_TAG_ITEM_BAG,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sAnims_WeatherBallNormal,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimWeatherBallUp,
+};

@@ -924,6 +924,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_IDENTIFYITEMABILITY]                  = COMPOUND_STRING("It is holding {B_BUFF1}.\nIts ability is {B_DEF_ABILITY}."),
     [STRINGID_IDENTIFYMOVESET1]                     = COMPOUND_STRING("1st move: {B_BUFF1}.\n2nd move: {B_BUFF2}."),
     [STRINGID_IDENTIFYMOVESET2]                     = COMPOUND_STRING("3rd move: {B_BUFF1}.\n4th move: {B_BUFF2}."),
+    [STRINGID_SCHEMING]                             = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is scheming..."),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

@@ -1003,6 +1003,9 @@ enum __attribute__((packed)) Move
     MOVE_LUNAR_SEA = 941,
     MOVE_APOTHEOSIS = 942,
     MOVE_IDENTIFY = 943,
+    MOVE_GROUP_PRANK = 944,
+    MOVE_BUTCHERY = 945,
+    MOVE_BEDDY_BYE = 946,
 
     MOVES_COUNT_GEN9,
 

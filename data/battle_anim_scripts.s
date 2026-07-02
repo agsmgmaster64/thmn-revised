@@ -35595,3 +35595,92 @@ gBattleAnimMove_Identify::
 	playsewithpan SE_M_DETECT, 63
 	waitforvisualfinish
 	end
+
+gBattleAnimMove_GroupPrank::
+	jumpifmoveturn 0, GroupPrankSetup
+	jumpifmoveturn 2, GroupPrankAttackFirst
+	goto GroupPrankAttackFirst
+	
+GroupPrankSetup::
+	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 8, 1, 0
+	delay 8
+	playsewithpan SE_M_SWAGGER, 192
+	createsprite gGroupPrankUpSpriteTemplate, ANIM_ATTACKER, 2
+	waitforvisualfinish
+	end
+
+GroupPrankAttackFirst::
+	playsewithpan SE_M_SKETCH, 0
+	createsprite gGroupPrankFallSpriteTemplate, ANIM_TARGET, 2, 0, -96, 0, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 6
+	createsprite gGroupPrankFallSpriteTemplate, ANIM_TARGET, 2, -10, -96, -10, 32, 25, 0
+	createsprite gGroupPrankFallSpriteTemplate, ANIM_TARGET, 2, 10, -96, 10, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 6
+	createsprite gGroupPrankFallSpriteTemplate, ANIM_TARGET, 2, -20, -96, -20, 32, 25, 0
+	createsprite gGroupPrankFallSpriteTemplate, ANIM_TARGET, 2, 20, -96, 20, 32, 25, 0
+	playsewithpan SE_M_WING_ATTACK, 64
+    delay 10
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 0, 0, 1, 1
+	delay 6
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 4, 0, 30, 1
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 24, -24, 1, 1
+	delay 6
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, -16, 16, 1, 1
+	delay 6
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, -24, -12, 1, 1
+	delay 6
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 16, 16, 1, 1
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_Butchery::
+	fadetobg 7
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 5, -2304, 768, 1, -1
+	waitbgfadein
+	setalpha 12, 8
+	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0
+	playsewithpan SE_M_HEADBUTT, 192
+	waitforvisualfinish
+	delay 2
+	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 1
+	waitforvisualfinish
+	playse SE_BANG
+	createvisualtask AnimTask_ShakeMonInPlace, 2, 0, 2, 0, 40, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, 1, 10, 0, 40, 1
+
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -10, 0
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, 63
+	delay 15
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 10, 0
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, 63
+	delay 15
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -25, 0
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, 63
+	delay 15
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 25, 0
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, 63
+	delay 15
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 1, 0
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, 63
+	delay 15
+
+	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 2
+	waitforvisualfinish
+	restorebg
+	waitbgfadeout
+	setarg 7, 65535
+	waitbgfadein
+	end

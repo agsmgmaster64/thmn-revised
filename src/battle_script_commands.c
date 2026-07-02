@@ -14780,3 +14780,11 @@ void BS_Identify4(void)
     PREPARE_MOVE_BUFFER(gBattleTextBuff2, gBattleMons[gBattlerTarget].moves[3]);
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
+
+void BS_Groupprankanimsetup()
+{
+    NATIVE_ARGS();
+
+	gAnimMoveTurn++;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}

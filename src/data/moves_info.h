@@ -27454,6 +27454,85 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_GROUP_PRANK] =
+    {
+        .name = COMPOUND_STRING("Group Prank"),
+        .description = COMPOUND_STRING(
+            "Very nasty 2-turn surprise.\n"
+            "Halves victim's HP twice."),
+        .effect = EFFECT_GROUP_PRANK,
+        .power = 1,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .strikeCount = 2,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument.twoTurnAttack = { .stringId = STRINGID_SCHEMING},
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .ignoresKingsRock = (B_UPDATED_MOVE_FLAGS == GEN_3 || B_UPDATED_MOVE_FLAGS == GEN_4),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_GroupPrank,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_BUTCHERY] =
+    {
+        .name = COMPOUND_STRING("Butchery"),
+        .description = COMPOUND_STRING(
+            "Can't avoid attacks, take\n"
+            "2x damage until next move."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_GLAIVE_RUSH,
+            .self = TRUE,
+        }),
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Butchery,
+    },
+
+    [MOVE_BEDDY_BYE] =
+    {
+        .name = COMPOUND_STRING("Beddy Bye"),
+        .description = COMPOUND_STRING(
+            "Fall asleep for 2 turns,\n"
+            "healing and switching out."),
+        .effect = EFFECT_BEDDY_BYE,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 5,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .healingMove = TRUE,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = COMBO_STARTER_REST,
+        .contestComboMoves = {COMBO_STARTER_YAWN},
+        .battleAnimScript = gBattleAnimMove_Rest,
+        .validApprenticeMove = TRUE,
+    },
+
     //revised moves
 
     [MOVE_MINERAL_PELT] =
