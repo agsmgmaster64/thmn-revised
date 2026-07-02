@@ -2792,7 +2792,7 @@ Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_DARRIN ===
-Name: DARRIN
+Name: Darrin
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
@@ -2800,20 +2800,20 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
+Normal Hinaa
 Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Wingull
+Normal Nitori
 Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Tentacool
+Normal Komachi
 Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_TONY_1 ===
-Name: TONY
+Name: Tony
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
@@ -2821,7 +2821,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Normal Mitori
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8179,7 +8179,7 @@ Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BETH ===
-Name: BETH
+Name: Beth
 Class: Swimmer F
 Pic: Swimmer F
 Gender: Female
@@ -8187,7 +8187,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Goldeen
+Normal Komachi
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12939,19 +12939,19 @@ Level: 49
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LISA_AND_RAY ===
-Name: LISA & RAY
-Class: Sis And Bro
-Pic: Sis And Bro
-Gender: Male
+Name: Lisa & Jia
+Class: Twins
+Pic: Twins
+Gender: Female
 Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Goldeen
+Normal Benben
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacool
+Normal Yatsuhashi
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13657,7 +13657,7 @@ Level: 25
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_CAMRON ===
-Name: CAMRON
+Name: Camron
 Class: Triathlete
 Pic: Swimming Triathlete M
 Gender: Male
@@ -13665,7 +13665,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Staryu
+Normal Komachi
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

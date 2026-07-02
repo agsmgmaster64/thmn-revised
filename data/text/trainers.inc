@@ -667,8 +667,7 @@ Route107_Text_BethPostBattle:
 	.string "better. I'll go for it, too!$"
 
 Route107_Text_LisaIntro:
-	.string "Lisa: We challenge you as a sister\n"
-	.string "and brother!$"
+	.string "Lisa: We challenge you as twins!$"
 
 Route107_Text_LisaDefeated:
 	.string "Lisa: Awesome.\n"
@@ -683,22 +682,22 @@ Route107_Text_LisaNotEnoughPokemon:
 	.string "bring more Puppets.$"
 
 Route107_Text_RayIntro:
-	.string "Ray: We always battle Puppets,\n"
+	.string "Jia: We always battle Puppets,\n"
 	.string "me and my sister.\p"
 	.string "I always lose, but we can beat you\n"
 	.string "2-on-2!$"
 
 Route107_Text_RayDefeated:
-	.string "Ray: Wowee, you're at a higher level\n"
+	.string "Jia: Wowee, you're at a higher level\n"
 	.string "than us!$"
 
 Route107_Text_RayPostBattle:
-	.string "Ray: My sister gave me my Puppet.\n"
+	.string "Jia: My sister gave me my Puppet.\n"
 	.string "I raised it, and now it's my important\l"
 	.string "partner!$"
 
 Route107_Text_RayNotEnoughPokemon:
-	.string "Ray: If you want to battle us,\n"
+	.string Jia: If you want to battle us,\n"
 	.string "go bring some more Puppets!$"
 
 Route107_Text_CamronIntro:
