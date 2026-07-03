@@ -14788,3 +14788,11 @@ void BS_Groupprankanimsetup()
 	gAnimMoveTurn++;
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
+
+void BS_Flight(void)
+{
+    NATIVE_ARGS();
+	gBattleMons[gBattlerAttacker].ability = ABILITY_LEVITATE;
+
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}

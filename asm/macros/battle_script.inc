@@ -2178,3 +2178,7 @@
 	.macro groupprankanimsetup
 	callnative BS_Groupprankanimsetup
 	.endm
+
+	.macro flight
+	callnative BS_Flight
+	.endm

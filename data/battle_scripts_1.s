@@ -6682,3 +6682,18 @@ BattleScript_EffectBeddyBye::
 	switchineffects BS_ATTACKER
     
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectFlight::
+	attackcanceler
+	jumpifability BS_ATTACKER, ABILITY_LEVITATE, BattleScript_ButItFailed
+	flight
+	attackanimation
+	waitanimation
+	printstring STRINGID_ABILITYBECAMELEVITATE
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_InvocationMessage::
+	printstring STRINGID_PKMNCURSEDSELF
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

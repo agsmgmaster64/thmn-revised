@@ -1056,3 +1056,14 @@ const struct SpriteTemplate gDestitutionSpriteTemplate =
     .affineAnims = gAffineAnims_Whirlpool,
     .callback = AnimParticleInVortex,
 };
+
+const struct SpriteTemplate gFlightSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_WHITE_FEATHER,
+    .paletteTag = ANIM_TAG_WHITE_FEATHER,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimRockFragment,
+};
