@@ -33,13 +33,13 @@ SlateportCity_Mart_EventScript_Man::
 	end
 
 SlateportCity_Mart_Text_SomeItemsOnlyAtMart:
-	.string "The MARKET does have some interesting\n"
+	.string "The Market does have some interesting\n"
 	.string "merchandise.\p"
 	.string "But there are some items you can only\n"
-	.string "get at a Puppet MART.$"
+	.string "get at a Puppet Mart.$"
 
 SlateportCity_Mart_Text_GreatBallIsBetter:
-	.string "A GREAT BALL is better than a POKé BALL\n"
+	.string "A Great Orb is better than a Miko Orb\n"
 	.string "at catching Puppets.\p"
 	.string "With this, I should be able to get that\n"
 	.string "elusive Puppet…$"

@@ -697,7 +697,7 @@ Route107_Text_RayPostBattle:
 	.string "partner!$"
 
 Route107_Text_RayNotEnoughPokemon:
-	.string Jia: If you want to battle us,\n"
+	.string "Jia: If you want to battle us,\n"
 	.string "go bring some more Puppets!$"
 
 Route107_Text_CamronIntro:

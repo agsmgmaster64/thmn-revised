@@ -396,7 +396,7 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MUSEUM_1 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
@@ -404,12 +404,12 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Chibi Momiji
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MUSEUM_2 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
@@ -417,11 +417,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Chibi Kisume
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Chibi Nitori
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -602,7 +602,7 @@ Mightyena
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_ARCHIE ===
+=== TRAINER_ARCHIE_1 ===
 Name: ARCHIE
 Class: Aqua Leader
 Pic: Aqua Leader Archie
@@ -2796,7 +2796,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Normal Hinaa
+Normal Hina
 Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -17134,3 +17134,145 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Breath
 - Dragon Dance
 - Aerial Ace
+
+=== TRAINER_ARCHIE_2 ===
+Name: Archie
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Chibi Kagerou @ BlackGlasses
+Level: 16
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Howl
+- Rock Throw
+- Pursuit
+- Tail Whip
+
+Chibi Remilia @ BlackGlasses
+Level: 17
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Wing Attack
+- Feint Attack
+- Snarl
+- Leer
+
+Chibi Murasa @ Metal Coat
+Level: 17
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Confuse Ray
+- Aqua Cutter
+- Metal Claw
+- Astonish
+
+Chibi Suwako @ Sitrus Berry
+Level: 19
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Aurora Beam
+- Water Pulse
+- Mud Shot
+- Decision
+
+=== TRAINER_ARCHIE_3 ===
+Name: Archie
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Extra Kagerou
+Level: 40
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Crunch
+- Rock Slide
+- Poison Jab
+- Accelerock
+
+Advent Remilia
+Level: 41
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Glare
+- Whirlpool
+- Sludge Bomb
+- Dream Eater
+
+Extra Chiyuri
+Level: 41
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Rain Dance
+- Surf
+- Shock Absorb
+- Air Slash
+
+Extra Murasa
+Level: 42
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Waterfall
+- Shadow Punch
+- Brick Break
+- Aqua Jet
+
+Extra Suwako
+Level: 43
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Surf
+- Earth Power
+- Ice Beam
+- Energy Ball
+
+=== TRAINER_TEST ===
+Name: Archie
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Extra Kagerou
+Level: 40
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Crunch
+- Rock Slide
+- Poison Jab
+- Accelerock
+
+Advent Remilia
+Level: 41
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Glare
+- Whirlpool
+- Sludge Bomb
+- Dream Eater
+
+Extra Chiyuri
+Level: 41
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Rain Dance
+- Surf
+- Shock Absorb
+- Air Slash
+
+Extra Murasa
+Level: 42
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Waterfall
+- Shadow Punch
+- Brick Break
+- Aqua Jet
+
+Extra Suwako
+Level: 43
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Surf
+- Earth Power
+- Ice Beam
+- Energy Ball

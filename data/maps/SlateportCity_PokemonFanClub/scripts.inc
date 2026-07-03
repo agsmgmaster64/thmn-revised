@@ -226,7 +226,7 @@ SlateportCity_PokemonFanClub_EventScript_Skitty::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
+	playmoncry SPECIES_NORMAL_TEWI, CRY_MODE_NORMAL
 	msgbox SlateportCity_PokemonFanClub_Text_Skitty, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -236,7 +236,7 @@ SlateportCity_PokemonFanClub_EventScript_Zigzagoon::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	playmoncry SPECIES_NORMAL_IKU, CRY_MODE_NORMAL
 	msgbox SlateportCity_PokemonFanClub_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -246,16 +246,16 @@ SlateportCity_PokemonFanClub_EventScript_Azumarill::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZUMARILL, CRY_MODE_NORMAL
+	playmoncry SPECIES_NORMAL_YUUKA, CRY_MODE_NORMAL
 	msgbox SlateportCity_PokemonFanClub_Text_Azumarill, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
 SlateportCity_PokemonFanClub_Text_MeetChairman:
-	.string "Er-hem! I am the CHAIRMAN of the\n"
-	.string "Puppet FAN CLUB!\p"
-	.string "Being the CHAIRMAN, I am naturally\n"
+	.string "Er-hem! I am the Chairman of the\n"
+	.string "Puppet Fan Club!\p"
+	.string "Being the Chairman, I am naturally\n"
 	.string "the most important!\p"
 	.string "No one can best me when it comes\n"
 	.string "to raising Puppets. No one!\p"
@@ -271,12 +271,12 @@ SlateportCity_PokemonFanClub_Text_MeetChairman:
 
 SlateportCity_PokemonFanClub_Text_LikeToSeeEnteredContestPokemon:
 	.string "The Puppet of a trainer who has\n"
-	.string "entered a Puppet CONTEST…\l"
+	.string "entered a Puppet Contest…\l"
 	.string "That, I would like to see.$"
 
 SlateportCity_PokemonFanClub_Text_AllowMeToExamineYourPokemon:
 	.string "Er-hem! I see you've participated in\n"
-	.string "a Puppet CONTEST!\p"
+	.string "a Puppet Contest!\p"
 	.string "Please! Allow me to examine how you\n"
 	.string "have raised your Puppets.\p"
 	.string "It delights me no end to see Puppets\n"
@@ -323,27 +323,27 @@ SlateportCity_PokemonFanClub_Text_MonMostImpressiveGiveItThis:
 	.string "it would grow even better! Indeed!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainRedScarf:
-	.string "Let a Puppet hold that RED SCARF.\p"
+	.string "Let a Puppet hold that Red Scarf.\p"
 	.string "Everyone will recognize the coolness\n"
 	.string "of that Puppet!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainBlueScarf:
-	.string "Let a Puppet hold that BLUE SCARF.\p"
+	.string "Let a Puppet hold that Blue Scarf.\p"
 	.string "Its beauty will be accentuated much\n"
 	.string "more than now!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainPinkScarf:
-	.string "Let a Puppet hold that PINK SCARF.\p"
+	.string "Let a Puppet hold that Pink Scarf.\p"
 	.string "It will draw out the cuteness of\n"
 	.string "the Puppet some more!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainGreenScarf:
-	.string "Let a Puppet hold that GREEN SCARF.\p"
+	.string "Let a Puppet hold that Green Scarf.\p"
 	.string "That will enhance the\n"
-	.string "smartness of Puppet!$"
+	.string "smartness of the Puppet!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainYellowScarf:
-	.string "Let a Puppet hold that YELLOW SCARF.\p"
+	.string "Let a Puppet hold that Yellow Scarf.\p"
 	.string "It will bolster your Puppet's\n"
 	.string "toughness so much more!$"
 
@@ -367,7 +367,7 @@ SlateportCity_PokemonFanClub_Text_ShowMePokemonThatLoveYou:
 SlateportCity_PokemonFanClub_Text_PokemonAdoresYou:
 	.string "Your Puppet really adores you.\p"
 	.string "For you, a most compassionate\n"
-	.string "trainer, a gift from the FAN CLUB!$"
+	.string "trainer, a gift from the Fan Club!$"
 
 SlateportCity_PokemonFanClub_Text_TreatPokemonWithLove:
 	.string "Puppets are very sensitive to\n"
@@ -387,13 +387,13 @@ SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein:
 	.string "Do Puppets enjoy having items used\n"
 	.string "on them?\p"
 	.string "Mine acted really happy when I gave\n"
-	.string "it some PROTEIN.$"
+	.string "it some Protein.$"
 
 SlateportCity_PokemonFanClub_Text_Skitty:
-	.string "SKITTY: Fffnyaaaah…$"
+	.string "Tewi: Fffnyaaaah…$"
 
 SlateportCity_PokemonFanClub_Text_Zigzagoon:
-	.string "ZIGZAGOON: Kyuuu…$"
+	.string "Iku: Kyuuu…$"
 
 SlateportCity_PokemonFanClub_Text_Azumarill:
-	.string "AZUMARILL: Marimari?$"
+	.string "Yuuka: Yuuu?$"
