@@ -3096,12 +3096,7 @@
     "TutorMoves": []
   },
   "C_HATATE": {
-    "LevelMoves": [
-      {
-        "Level": 1,
-        "Move": "MOVE_POUND"
-      }
-    ],
+    "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],

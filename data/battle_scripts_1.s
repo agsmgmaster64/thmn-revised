@@ -6617,11 +6617,13 @@ BattleScript_PrintDebtSpiralMoneyString::
 	return
 
 BattleScript_Cursed::
+	pause B_WAIT_TIME_SHORTEST
 	printstring STRINGID_TARGETCURSED
 	waitmessage 0x40
 	return
 
 BattleScript_AegisMergeMessage::
+	pause B_WAIT_TIME_SHORTEST
 	printstring STRINGID_BEGINSREGENERATING
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
@@ -6694,6 +6696,7 @@ BattleScript_EffectFlight::
 	goto BattleScript_MoveEnd
 
 BattleScript_InvocationMessage::
+	pause B_WAIT_TIME_SHORTEST
 	printstring STRINGID_PKMNCURSEDSELF
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd

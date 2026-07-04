@@ -12530,7 +12530,7 @@ const struct ItemInfo gItemsInfo[] =
 
 // TMs/HMs. They don't have a set flingPower, as that's handled by GetFlingPowerFromItemId.
 
-    [ITEM_TM_FOCUS_PUNCH] =
+    [ITEM_TM_U_TURN] =
     {
         .name = ITEM_NAME("TM01"),
         .price = 3000,
@@ -12544,7 +12544,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_DRAGON_CLAW] =
+    [ITEM_TM_HEART_BREAK] =
     {
         .name = ITEM_NAME("TM02"),
         .price = 3000,
@@ -12662,7 +12662,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_HIDDEN_POWER] =
+    [ITEM_TM_MULTI_PULSE] =
     {
         .name = ITEM_NAME("TM10"),
         .price = 3000,
@@ -12748,7 +12748,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_HYPER_BEAM] =
+    [ITEM_TM_LUNATIC] =
     {
         .name = ITEM_NAME("TM15"),
         .price = 7500,
@@ -12838,7 +12838,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_FRUSTRATION] =
+    [ITEM_TM_RAZOR_WIND] =
     {
         .name = ITEM_NAME("TM21"),
         .price = 1000,
@@ -12866,7 +12866,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_IRON_TAIL] =
+    [ITEM_TM_STEEL_FIST] =
     {
         .name = ITEM_NAME("TM23"),
         .price = 3000,
@@ -12950,7 +12950,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_PSYCHIC] =
+    [ITEM_TM_MANA_BURST] =
     {
         .name = ITEM_NAME("TM29"),
         .price = 2000,
@@ -12992,7 +12992,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_DOUBLE_TEAM] =
+    [ITEM_TM_SPIKES] =
     {
         .name = ITEM_NAME("TM32"),
         .price = 2000,
@@ -13048,7 +13048,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SLUDGE_BOMB] =
+    [ITEM_TM_POISON_BOMB] =
     {
         .name = ITEM_NAME("TM36"),
         .price = 1000,
@@ -13118,7 +13118,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_TORMENT] =
+    [ITEM_TM_SIGNAL_BEAM] =
     {
         .name = ITEM_NAME("TM41"),
         .price = 3000,
@@ -13146,7 +13146,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SECRET_POWER] =
+    [ITEM_TM_POISON_JAB] =
     {
         .name = ITEM_NAME("TM43"),
         .price = 3000,
@@ -13174,7 +13174,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_ATTRACT] =
+    [ITEM_TM_ENERGY_LIGHT] =
     {
         .name = ITEM_NAME("TM45"),
         .price = 3000,
@@ -13202,7 +13202,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_STEEL_WING] =
+    [ITEM_TM_MANA_PUNCH] =
     {
         .name = ITEM_NAME("TM47"),
         .price = 3000,
@@ -13216,7 +13216,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SKILL_SWAP] =
+    [ITEM_TM_SUBSTITUTE] =
     {
         .name = ITEM_NAME("TM48"),
         .price = 3000,
@@ -13230,7 +13230,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SNATCH] =
+    [ITEM_TM_SOAR] =
     {
         .name = ITEM_NAME("TM49"),
         .price = 3000,
@@ -13244,7 +13244,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_OVERHEAT] =
+    [ITEM_TM_MYSTICAL_FIRE] =
     {
         .name = ITEM_NAME("TM50"),
         .price = 3000,
@@ -13916,7 +13916,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_DIVE] =
+    [ITEM_HM_SHADOW_DIVE] =
     {
         .name = ITEM_NAME("HM08"),
         .price = 0,

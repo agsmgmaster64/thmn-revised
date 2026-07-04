@@ -35988,3 +35988,22 @@ AuraBreakShatteredWall::
 	waitforvisualfinish
 	clearmonbg 1
 	end
+
+gBattleAnimMove_SteelFist::
+	loopsewithpan SE_M_HARDEN, 192, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 1, 0, 0
+	waitforvisualfinish
+	monbg 1
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
+	delay 6
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1, 2
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 8, 1, 0
+	createvisualtask AnimTask_ShakeMon, 2, 1, 3, 0, 6, 1
+	playsewithpan SE_M_VITAL_THROW2, 63
+	waitforvisualfinish
+	createvisualtask AnimTask_SetGrayscaleOrOriginalPal, 5, 0, 1
+	clearmonbg 1
+	blendoff
+	waitforvisualfinish
+	end
