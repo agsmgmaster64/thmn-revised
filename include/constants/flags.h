@@ -266,7 +266,7 @@
 #define FLAG_RECEIVED_LANTERN                0xE9 // Formerly Unused Flag
 
 #define FLAG_RECEIVED_TM_REST                0xEA
-#define FLAG_RECEIVED_TM_ENERGY_LIGHT             0xEB
+#define FLAG_RECEIVED_TM_ENERGY_LIGHT        0xEB
 #define FLAG_RECEIVED_GLASS_ORNAMENT         0xEC
 #define FLAG_RECEIVED_SILVER_SHIELD          0xED
 #define FLAG_RECEIVED_GOLD_SHIELD            0xEE
@@ -291,12 +291,12 @@
 #define FLAG_RECEIVED_OLD_ROD                0x101
 #define FLAG_RECEIVED_COIN_CASE              0x102
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
-#define FLAG_RECEIVED_TM_SOAR              0x104
+#define FLAG_RECEIVED_TM_SOAR                0x104
 #define FLAG_RECEIVED_TM_DIG                 0x105
 #define FLAG_RECEIVED_TM_BULLET_SEED         0x106
 #define FLAG_ENTERED_ELITE_FOUR              0x107
-#define FLAG_RECEIVED_TM_MULTI_PULSE        0x108
-#define FLAG_RECEIVED_TM_SIGNAL_BEAM             0x109
+#define FLAG_RECEIVED_TM_MULTI_PULSE         0x108
+#define FLAG_RECEIVED_TM_PROTECT             0x109
 #define FLAG_RECEIVED_LAVARIDGE_EGG          0x10A
 #define FLAG_RECEIVED_REVIVED_FOSSIL_MON     0x10B
 #define FLAG_SECRET_BASE_REGISTRY_ENABLED    0x10C

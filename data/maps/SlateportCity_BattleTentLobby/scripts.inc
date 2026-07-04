@@ -201,7 +201,7 @@ SlateportCity_BattleTentLobby_EventScript_TormentGiver::
 	msgbox SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe, MSGBOX_DEFAULT
 	giveitem ITEM_TM_PROTECT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_SIGNAL_BEAM
+	setflag FLAG_RECEIVED_TM_PROTECT
 	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
 	release
 	end
