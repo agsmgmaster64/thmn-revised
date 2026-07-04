@@ -1057,6 +1057,13 @@ static void SetAdditionalEffectsOnStatChange(struct BattleCalcValues *cv, struct
             st->moveScript = BattleScript_AegisMergeMessage;
         }
         break;
+    case EFFECT_INVOCATION:
+        if (!gBattleMons[cv->battlerDef].volatiles.cursed)
+        {
+            gBattleMons[cv->battlerDef].volatiles.cursed = TRUE;
+            st->moveScript = BattleScript_InvocationMessage;
+        }
+        break;
     case EFFECT_AUTOTOMIZE:
         if (gBattleStruct->moveResultFlags[cv->battlerDef] & MOVE_RESULT_STAT_CHANGED
          && GetBattlerWeight(cv->battlerDef, cv->abilities[cv->battlerDef], cv->holdEffects[cv->battlerDef]) > 1)

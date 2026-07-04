@@ -1035,6 +1035,16 @@ extern const u8 gBattleAnimMove_MoodSwing[];
 extern const u8 gBattleAnimMove_LunarSea[];
 extern const u8 gBattleAnimMove_Apotheosis[];
 extern const u8 gBattleAnimMove_Identify[];
+extern const u8 gBattleAnimMove_GroupPrank[];
+extern const u8 gBattleAnimMove_Butchery[];
+extern const u8 gBattleAnimMove_Shriek[];
+extern const u8 gBattleAnimMove_Flight[];
+extern const u8 gBattleAnimMove_Cataclysm[];
+extern const u8 gBattleAnimMove_Blossoming[];
+extern const u8 gBattleAnimMove_PassionDance[];
+extern const u8 gBattleAnimMove_AnoxicFumes[];
+extern const u8 gBattleAnimMove_Invocation[];
+extern const u8 gBattleAnimMove_AuraBreak[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

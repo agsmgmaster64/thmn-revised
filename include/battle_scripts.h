@@ -761,5 +761,9 @@ extern const u8 BattleScript_MoveEffectDebtSpiral[];
 extern const u8 BattleScript_Cursed[];
 extern const u8 BattleScript_AegisMergeMessage[];
 extern const u8 BattleScript_EffectIdentify[];
+extern const u8 BattleScript_EffectGroupPrank[];
+extern const u8 BattleScript_EffectBeddyBye[];
+extern const u8 BattleScript_EffectFlight[];
+extern const u8 BattleScript_InvocationMessage[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

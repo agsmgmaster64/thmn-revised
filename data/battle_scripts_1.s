@@ -6644,3 +6644,56 @@ BattleScript_EffectIdentify::
 	printstring STRINGID_IDENTIFYMOVESET2
 	waitmessage 0x40
     end
+
+BattleScript_EffectBeddyBye::
+	attackcanceler
+	jumpifstatus BS_ATTACKER, STATUS1_SLEEP, BattleScript_RestIsAlreadyAsleep
+	jumpifuproarwakes BattleScript_RestCantSleep
+	trysetrest
+	pause 0x20
+	printfromtable gRestUsedStringIds
+	waitmessage 0x40
+	updatestatusicon BS_ATTACKER
+	waitstate
+    
+	attackanimation
+	waitanimation
+	healthbarupdate BS_TARGET, PASSIVE_HP_UPDATE
+	datahpupdate BS_TARGET, PASSIVE_HP_UPDATE
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage 0x40
+    
+	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_MoveSwitchEnd
+	printstring STRINGID_PKMNWENTBACK
+	waitmessage 64
+    playmoveanimation MOVE_BATON_PASS
+	
+	openpartyscreen BS_ATTACKER, BattleScript_MoveSwitchEnd
+	switchoutabilities BS_ATTACKER
+	waitstate
+	switchhandleorder BS_ATTACKER, 2
+	returntoball BS_ATTACKER, FALSE
+	getswitchedmondata BS_ATTACKER
+	switchindataupdate BS_ATTACKER
+	hpthresholds BS_ATTACKER
+	printstring 3
+	switchinanim BS_ATTACKER, FALSE, FALSE
+	waitstate
+	switchineffects BS_ATTACKER
+    
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectFlight::
+	attackcanceler
+	jumpifability BS_ATTACKER, ABILITY_LEVITATE, BattleScript_ButItFailed
+	flight
+	attackanimation
+	waitanimation
+	printstring STRINGID_ABILITYBECAMELEVITATE
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_InvocationMessage::
+	printstring STRINGID_PKMNCURSEDSELF
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
