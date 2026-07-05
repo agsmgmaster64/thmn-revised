@@ -5,7 +5,7 @@ RustboroCity_Gym_EventScript_Roxanne::
 	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
-	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
+	goto_if_unset FLAG_RECEIVED_TM_SPIKES, RustboroCity_Gym_EventScript_GiveSpikes
 	msgbox RustboroCity_Gym_Text_RoxannePostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -23,14 +23,14 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	call Common_EventScript_SetGymTrainers
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	call_if_unset FLAG_RECEIVED_HM_CUT, RustboroCity_Gym_EventScript_CutAxeState
-	goto RustboroCity_Gym_EventScript_GiveRockTomb
+	goto RustboroCity_Gym_EventScript_GiveSpikes
 	end
 
-RustboroCity_Gym_EventScript_GiveRockTomb::
-	giveitem ITEM_TM_DOUBLE_TEAM
+RustboroCity_Gym_EventScript_GiveSpikes::
+	giveitem ITEM_TM_SPIKES
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_ROCK_TOMB
-	msgbox RustboroCity_Gym_Text_ExplainRockTomb, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_SPIKES
+	msgbox RustboroCity_Gym_Text_ExplainSpikes, MSGBOX_DEFAULT
 	release
 	end
 
@@ -211,7 +211,7 @@ RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 	.string "battle.\p"
 	.string "Please take this with you, too.$"
 
-RustboroCity_Gym_Text_ExplainRockTomb:
+RustboroCity_Gym_Text_ExplainSpikes:
 	.string "That Technical Machine, TM39,\n"
 	.string "contains Spikes.\p"
 	.string "It inflicts damage onto almost any\n"

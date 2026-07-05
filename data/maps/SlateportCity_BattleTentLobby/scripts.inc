@@ -194,20 +194,20 @@ SlateportCity_BattleTentLobby_Movement_UnusedEnterDoor::
 	set_invisible
 	step_end
 
-SlateportCity_BattleTentLobby_EventScript_TormentGiver::
+SlateportCity_BattleTentLobby_EventScript_ProtectGiver::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_SIGNAL_BEAM, SlateportCity_BattleTentLobby_EventScript_ReceivedTorment
+	goto_if_set FLAG_RECEIVED_TM_PROTECT, SlateportCity_BattleTentLobby_EventScript_ReceivedProtect
 	msgbox SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe, MSGBOX_DEFAULT
 	giveitem ITEM_TM_PROTECT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM_PROTECT
-	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
+	msgbox SlateportCity_BattleTentLobby_Text_ExplainProtect, MSGBOX_DEFAULT
 	release
 	end
 
-SlateportCity_BattleTentLobby_EventScript_ReceivedTorment::
-	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
+SlateportCity_BattleTentLobby_EventScript_ReceivedProtect::
+	msgbox SlateportCity_BattleTentLobby_Text_ExplainProtect, MSGBOX_DEFAULT
 	release
 	end
 
@@ -282,7 +282,7 @@ SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
 	.string "Hey, like, you! Zip it, you know?\n"
 	.string "Just, you know, take this!$"
 
-SlateportCity_BattleTentLobby_Text_ExplainTorment:
+SlateportCity_BattleTentLobby_Text_ExplainProtect:
 	.string "That's, like, TM17, you know?\n"
 	.string "Hey, it's Protect, you hearing me?\p"
 	.string "Like, it won't let the other guy\n"

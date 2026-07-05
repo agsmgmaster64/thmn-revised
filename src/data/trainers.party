@@ -4101,7 +4101,7 @@ Level: 38
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_EDWARD ===
-Name: EDWARD
+Name: Edward
 Class: Psychic
 Pic: Psychic M
 Gender: Male
@@ -4109,10 +4109,9 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Abra
+Chibi Shinmyoumaru
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Hidden Power
 
 === TRAINER_PRESTON ===
 Name: PRESTON
@@ -4273,7 +4272,7 @@ Level: 45
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_JACLYN ===
-Name: JACLYN
+Name: Jaclyn
 Class: Psychic
 Pic: Psychic F
 Gender: Female
@@ -4281,10 +4280,9 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Abra
+Chibi Margatroid
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Hidden Power
 
 === TRAINER_HANNAH ===
 Name: HANNAH
@@ -5683,7 +5681,7 @@ Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_ISABEL_1 ===
-Name: ISABEL
+Name: Isabel
 Class: Pokefan
 Pic: Pokefan F
 Gender: Female
@@ -5691,11 +5689,11 @@ Music: Twins
 Double Battle: No
 AI: Check Bad Move
 
-Plusle @ Oran Berry
+Chibi Tewi
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Minun @ Oran Berry
+Chibi Yatsuhashi
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6235,7 +6233,7 @@ Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMMY ===
-Name: TIMMY
+Name: Timmy
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -6243,12 +6241,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Aron
-Level: 15
+Chibi Rika
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Electrike
-Level: 13
+Chibi Yumeko
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLACE ===
@@ -6408,7 +6406,7 @@ Level: 11
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_DALE ===
-Name: DALE
+Name: Dale
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -6416,19 +6414,19 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
+Chibi Komachi
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
+Chibi Hina
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacool
+Chibi Nitori
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
+Chibi Hina
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6622,7 +6620,7 @@ Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACOB ===
-Name: JACOB
+Name: Jacob
 Class: Triathlete
 Pic: Cycling Triathlete M
 Gender: Male
@@ -6630,20 +6628,20 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Voltorb
-Level: 6
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Voltorb
-Level: 6
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Magnemite
+Chibi Tokiko
 Level: 14
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Chibi Tokiko
+Level: 14
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Chibi Hatate
+Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_ANTHONY ===
-Name: ANTHONY
+Name: Anthony
 Class: Triathlete
 Pic: Cycling Triathlete M
 Gender: Male
@@ -6651,16 +6649,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Magnemite
+Chibi Tokiko
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magnemite
+Chibi Hatate
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BENJAMIN_1 ===
-Name: BENJAMIN
+Name: Benjamin
 Class: Triathlete
 Pic: Cycling Triathlete M
 Gender: Male
@@ -6668,7 +6666,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Magnemite
+Chibi Tokiko
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6725,7 +6723,7 @@ Level: 39
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_ABIGAIL_1 ===
-Name: ABIGAIL
+Name: Abigail
 Class: Triathlete
 Pic: Cycling Triathlete F
 Gender: Female
@@ -6733,12 +6731,12 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Magnemite
+Chibi Hatate
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JASMINE ===
-Name: JASMINE
+Name: Jasmine
 Class: Triathlete
 Pic: Cycling Triathlete F
 Gender: Female
@@ -6746,15 +6744,15 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Magnemite
+Chibi Tokiko
 Level: 14
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magnemite
+Chibi Hatate
 Level: 14
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Voltorb
+Chibi Mystia
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9340,7 +9338,7 @@ Level: 33
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_EDWIN_1 ===
-Name: EDWIN
+Name: Edwin
 Class: Collector
 Pic: Collector
 Gender: Male
@@ -9348,11 +9346,11 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Lombre
+Chibi Rikako
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Nuzleaf
+Chibi Mokou
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9535,17 +9533,29 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Slugma
+Chibi Yumemi @ Charcoal
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Aurora Beam
+- Psybeam
+- Fire Bullets
+- Teleport
 
-Wingull
+Chibi Sumireko @ Mystic Water
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Confuse Ray
+- Psybeam
+- Swift
+- Water Pulse
 
-Grovyle
+Normal Sara @ Sitrus Berry
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bulk Up
+- Knock Off
+- Mach Punch
+- Focus Energy
 
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
 Name: Renko
@@ -9556,17 +9566,37 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Slugma
-Level: 29
+Normal Sanae @ Sharp Beak
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Surf
+- Extrasensory
+- Air Slash
+- Razor Wind
 
-Pelipper
-Level: 29
+Normal Yumemi @ Silk Scarf
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Ice Beam
+- Mana Burst
+- Tri-Attack
+- Ice Shard
 
-Grovyle
-Level: 31
+Normal Sumireko @ Gohei
+Level: 32
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Confuse Ray
+- Mana Burst
+- Tri-Attack
+- Flash
+
+Normal Sara
+Level: 34
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Bulk Up
+- Drain Punch
+- Knock Off
+- Mach Punch
 
 === TRAINER_BRENDAN_ROUTE_103_TREECKO ===
 Name: Renko
@@ -9590,17 +9620,29 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Wingull
+Chibi Yumemi @ Charcoal
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Aurora Beam
+- Psybeam
+- Fire Bullets
+- Teleport
 
-Lombre
+Chibi Sumireko @ Mystic Water
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Confuse Ray
+- Psybeam
+- Swift
+- Water Pulse
 
-Combusken
+Normal Kurumi @ Sitrus Berry
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Twister
+- Snarl
+- Mega Drain
+- Growl
 
 === TRAINER_BRENDAN_ROUTE_119_TREECKO ===
 Name: Renko
@@ -9611,17 +9653,37 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Pelipper
-Level: 29
+Normal Sanae @ Sharp Beak
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Surf
+- Extrasensory
+- Air Slash
+- Razor Wind
 
-Lombre
-Level: 29
+Normal Yumemi @ Silk Scarf
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Ice Beam
+- Mana Burst
+- Tri-Attack
+- Ice Shard
 
-Combusken
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Normal Sumireko @ Gohei
+Level: 32
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Confuse Ray
+- Mana Burst
+- Tri-Attack
+- Flash
+
+Normal Kurumi @ Sitrus Berry
+Level: 34
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Lovely Kiss
+- Dream Eater
+- Air Slash
+- Giga Drain
 
 === TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
 Name: Renko
@@ -9645,17 +9707,29 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Lombre
+Chibi Yumemi @ Charcoal
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Aurora Beam
+- Psybeam
+- Fire Bullets
+- Teleport
 
-Slugma
+Chibi Sumireko @ Mystic Water
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Confuse Ray
+- Psybeam
+- Swift
+- Water Pulse
 
-Marshtomp
+Normal Ellen @ Sitrus Berry
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Psybeam
+- Swift
+- Bug Whistle
+- Teleport
 
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
 Name: Renko
@@ -9666,17 +9740,37 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Lombre
-Level: 29
+Normal Sanae @ Sharp Beak
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Surf
+- Extrasensory
+- Air Slash
+- Razor Wind
 
-Slugma
-Level: 29
+Normal Yumemi @ Silk Scarf
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Ice Beam
+- Mana Burst
+- Tri-Attack
+- Ice Shard
 
-Marshtomp
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Normal Sumireko @ Gohei
+Level: 32
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Confuse Ray
+- Mana Burst
+- Tri-Attack
+- Flash
+
+Normal Ellen @ Sitrus Berry
+Level: 34
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Mana Burst
+- Shadow Ball
+- Tri-Attack
+- Flash
 
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
 Name: Maribel
@@ -9700,17 +9794,29 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Wingull
+Chibi Koishi @ Spell Tag
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Camouflage
+- Swift
+- Eerie Wave
+- Teleport
 
-Slugma
+Chibi Yukari @ Gohei
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Yawn
+- Psybeam
+- Flash
+- Metronome
 
-Grovyle
+Normal Sara @ Sitrus Berry
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bulk Up
+- Knock Off
+- Mach Punch
+- Focus Energy
 
 === TRAINER_MAY_ROUTE_119_MUDKIP ===
 Name: Maribel
@@ -9721,17 +9827,37 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Slugma
-Level: 29
+Normal Sanae @ Sharp Beak
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Surf
+- Extrasensory
+- Air Slash
+- Razor Wind
 
-Lombre
-Level: 29
+Chibi Koishi @ Spell Tag
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Disable
+- Mana Burst
+- Tri-Attack
+- Eerie Wave
 
-Grovyle
-Level: 31
+Chibi Yukari @ Gohei
+Level: 32
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Yawn
+- Mana Burst
+- Extrasensory
+- Slack Off
+
+Normal Sara
+Level: 34
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Bulk Up
+- Drain Punch
+- Knock Off
+- Mach Punch
 
 === TRAINER_MAY_ROUTE_103_TREECKO ===
 Name: Maribel
@@ -9755,17 +9881,29 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Wingull
+Chibi Koishi @ Spell Tag
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Camouflage
+- Swift
+- Eerie Wave
+- Teleport
 
-Lombre
+Chibi Yukari @ Gohei
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Yawn
+- Psybeam
+- Flash
+- Metronome
 
-Combusken
+Normal Kurumi @ Sitrus Berry
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Twister
+- Snarl
+- Mega Drain
+- Growl
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
 Name: Maribel
@@ -9776,17 +9914,37 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Pelipper
-Level: 29
+Normal Sanae @ Sharp Beak
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Surf
+- Extrasensory
+- Air Slash
+- Razor Wind
 
-Lombre
-Level: 29
+Chibi Koishi @ Spell Tag
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Disable
+- Mana Burst
+- Tri-Attack
+- Eerie Wave
 
-Combusken
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Chibi Yukari @ Gohei
+Level: 32
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Yawn
+- Mana Burst
+- Extrasensory
+- Slack Off
+
+Normal Kurumi @ Sitrus Berry
+Level: 34
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Lovely Kiss
+- Dream Eater
+- Air Slash
+- Giga Drain
 
 === TRAINER_MAY_ROUTE_103_TORCHIC ===
 Name: Maribel
@@ -9810,17 +9968,29 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Lombre
+Chibi Koishi @ Spell Tag
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Camouflage
+- Swift
+- Eerie Wave
+- Teleport
 
-Slugma
+Chibi Yukari @ Gohei
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Yawn
+- Psybeam
+- Flash
+- Metronome
 
-Marshtomp
+Normal Ellen @ Sitrus Berry
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Psybeam
+- Swift
+- Bug Whistle
+- Teleport
 
 === TRAINER_MAY_ROUTE_119_TORCHIC ===
 Name: Maribel
@@ -9831,17 +10001,37 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Lombre
-Level: 29
+Normal Sanae @ Sharp Beak
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Surf
+- Extrasensory
+- Air Slash
+- Razor Wind
 
-Slugma
-Level: 29
+Chibi Koishi @ Spell Tag
+Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Disable
+- Mana Burst
+- Tri-Attack
+- Eerie Wave
 
-Marshtomp
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Chibi Yukari @ Gohei
+Level: 32
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Yawn
+- Mana Burst
+- Extrasensory
+- Slack Off
+
+Normal Ellen @ Sitrus Berry
+Level: 34
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Mana Burst
+- Shadow Ball
+- Tri-Attack
+- Flash
 
 === TRAINER_ISAAC_1 ===
 Name: ISAAC
@@ -13047,7 +13237,7 @@ Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KALEB ===
-Name: KALEB
+Name: Kaleb
 Class: Pokefan
 Pic: Pokefan M
 Gender: Male
@@ -13055,16 +13245,16 @@ Music: Twins
 Double Battle: No
 AI: Check Bad Move
 
-Minun @ Oran Berry
+Chibi Reisen
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Plusle @ Oran Berry
+Chibi Benben
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSEPH ===
-Name: JOSEPH
+Name: Joseph
 Class: Guitarist
 Pic: Guitarist
 Gender: Male
@@ -13072,16 +13262,16 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Electrike
+Chibi Marisa
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Voltorb
+Chibi Rika
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALYSSA ===
-Name: ALYSSA
+Name: Alyssa
 Class: Triathlete
 Pic: Cycling Triathlete F
 Gender: Female
@@ -13089,7 +13279,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Magnemite
+Chibi Koakuma
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
