@@ -2021,6 +2021,14 @@ static bool8 LoadGraphics(void)
         gPaletteFade.bufferTransferDisabled = 0;
         gMain.state++;
         break;
+    case 26:
+        if ((sMonSummaryScreen->mode == SUMMARY_MODE_RELEARNER_BATTLE || sMonSummaryScreen->mode == SUMMARY_MODE_RELEARNER_CONTEST)
+            && ShouldShowMoveRelearner())
+        {
+            ShowMoveRelearner();
+        }
+        gMain.state++;
+        break;
     default:
         SetVBlankCallback(VBlank);
         SetMainCallback2(MainCB2);
@@ -5557,7 +5565,6 @@ static void ShowMoveRelearner(void)
         sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_RELEARN_PROMPT] = CreateSprite(&sSpriteTemplate_RelearnPrompt, 60, 148, 0);
     
     gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_RELEARN_PROMPT]].invisible = FALSE;
-    StartSpriteAnim(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_RELEARN_PROMPT]], gMoveRelearnerState);
 }
 
 static void HideMoveRelearner(void)
