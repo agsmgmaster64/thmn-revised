@@ -1046,6 +1046,7 @@ extern const u8 gBattleAnimMove_AnoxicFumes[];
 extern const u8 gBattleAnimMove_Invocation[];
 extern const u8 gBattleAnimMove_AuraBreak[];
 extern const u8 gBattleAnimMove_SteelFist[];
+extern const u8 gBattleAnimMove_Braver[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

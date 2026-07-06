@@ -1020,7 +1020,10 @@ enum __attribute__((packed)) Move
     MOVE_STEEL_FIST = 957,
     MOVE_POISON_BOMB = 958,
     MOVE_ENERGY_LIGHT = 959,
-    MOVE_SHADOW_DIVE = 960,
+    MOVE_BRAVER = 960,
+    MOVE_CHEER = 961,
+    MOVE_PRANK = 962,
+    MOVE_SHADOW_DIVE = 963,
 
     MOVES_COUNT_GEN9,
 
