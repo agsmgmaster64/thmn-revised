@@ -728,7 +728,6 @@ const struct SpeciesInfo gSpeciesInfoTouhouSpinoff[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sTenmaLevelUpLearnset,
 		.teachableLearnset = sTenmaTeachableLearnset,
-		.eggMoveLearnset = sTenmaEggMoveLearnset,
 	},
 
 	[SPECIES_CHIBI_IKU] =

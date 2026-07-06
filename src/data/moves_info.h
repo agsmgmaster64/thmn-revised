@@ -29602,6 +29602,80 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MorningSun,
     },
 
+    [MOVE_BRAVER] =
+    {
+        .name = COMPOUND_STRING("Braver"),
+        .description = COMPOUND_STRING(
+            "Powerful jumping slash.\n"
+            "May lower Def. (30%/-1)"),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_STEEL,
+        .accuracy = 85,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .defense = 1,
+            .chance = 30,
+        }),
+        .contestEffect = CONTEST_EFFECT_BETTER_WITH_GOOD_CONDITION,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Braver,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_CHEER] =
+    {
+        .name = COMPOUND_STRING("Cheer"),
+        .description = COMPOUND_STRING(
+            "Boosts the power of an\n"
+            "ally's move by 1.5x."),
+        .effect = EFFECT_HELPING_HAND,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 20,
+        .target = B_UPDATED_MOVE_DATA >= GEN_4 ? TARGET_ALLY : TARGET_USER,
+        .priority = 5,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_HIGHLY_APPEALING : CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HelpingHand,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_PRANK] =
+    {
+        .name = COMPOUND_STRING("Prank"),
+        .description = COMPOUND_STRING(
+            "A nasty prank that cuts\n"
+            "the target's HP in half."),
+        .effect = EFFECT_FIXED_PERCENT_DAMAGE,
+        .power = 1,
+        .type = TYPE_DARK,
+        .accuracy = 90,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument = { .damagePercentage = 50 },
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
 
     [MOVE_SHADOW_DIVE] =
     {
