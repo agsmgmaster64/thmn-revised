@@ -246,7 +246,7 @@ Route118_EventScript_Deandre::
 Route118_Text_StevenQuestions:
 	.string "Steven: Hi, {PLAYER}{KUN}!\p"
 	.string "It's me, Steven!\n"
-	.string "We met in the cave near DEWFORD.\p"
+	.string "We met in the cave near Dewford.\p"
 	.string "Have you met many kinds of Puppets\n"
 	.string "since I last saw you?\p"
 	.string "There are many, many kinds of Puppets\n"
@@ -263,14 +263,14 @@ Route118_Text_StevenQuestions:
 
 Route118_Text_YouAgreeGoodRodIsGood:
 	.string "Hmm!\n"
-	.string "A GOOD ROD is really good!\p"
+	.string "A Good Rod is really good!\p"
 	.string "Wouldn't you agree?$"
 
 Route118_Text_IdenticalMindsTakeThis:
 	.string "Hmm!\n"
 	.string "We're of identical minds!\p"
 	.string "Hmm!\n"
-	.string "Take this GOOD ROD!$"
+	.string "Take this Good Rod!$"
 
 Route118_Text_TryYourLuckFishing:
 	.string "Wherever there's water, try your luck\n"
@@ -281,19 +281,19 @@ Route118_Text_DontYouLikeToFish:
 
 Route118_Text_TryCatchingMonWithGoodRod:
 	.string "Try catching all sorts of Puppets\n"
-	.string "with your GOOD ROD.$"
+	.string "with your Good Rod.$"
 
 Route118_Text_CanCrossRiversWithSurf:
 	.string "Even if there isn't a boat, you can\n"
 	.string "cross rivers and the sea if you have\l"
-	.string "a Puppet that knows SURF.\p"
+	.string "a Puppet that knows Surf.\p"
 	.string "Puppets can be counted on to do so\n"
 	.string "much!$"
 
 Route118_Text_RouteSignMauville:
-	.string "ROUTE 118\n"
-	.string "{LEFT_ARROW} MAUVILLE CITY$"
+	.string "Route 118\n"
+	.string "{LEFT_ARROW} Mauville City$"
 
 Route118_Text_RouteSign119:
-	.string "ROUTE 118\n"
-	.string "{UP_ARROW} ROUTE 119$"
+	.string "Route 118\n"
+	.string "{UP_ARROW} Route 119$"

@@ -2453,21 +2453,15 @@ Route117_Text_MariaPostRematch:
 	.string "Let's battle again sometime!$"
 
 Route117_Text_DerekIntro:
-	.string "Once a Bug Catcher!\n"
-	.string "And now a Bug Maniac!\p"
-	.string "But my love for Puppets remains\n"
-	.string "unchanged!$"
+	.string "Ah, the air is so pleasant here.\p"
+	.string "Care for a quick battle?$"
 
 Route117_Text_DerekDefeat:
-	.string "My ineptitude also remains\n"
-	.string "unchanged…$"
+	.string "Oh no! My parasol got scratched!$"
 
 Route117_Text_DerekPostBattle:
-	.string "All I did was follow my heart, and now\n"
-	.string "they call me a Bug Maniac…\p"
-	.string "Still, I am an expert on Bug Puppets,\n"
-	.string "so it's only natural that they call me\l"
-	.string "a Bug Maniac.$"
+	.string "Verdanturf is such a lovely town. I\n"
+	.string "wouldn't want to live anywhere else.$"
 
 Route117_Text_AnnaIntro:
 	.string "Anna: I'm with my pretty junior student\n"
