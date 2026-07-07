@@ -434,6 +434,7 @@ static void Task_ItemMenuAction_SortByIndex(u8 taskId);
 static void Task_SortItem_Yes(u8 taskId);
 static void Task_SortItem_No(u8 taskId);
 static void Task_ItemContext_ChooseMulch(u8 taskId);
+static void Task_ItemContext_ChooseBerry(u8 taskId);
 static bool8 BagIsTutorial(void);
 static void Task_Bag_OldManTutorial(u8 taskId);
 static void Task_Pokedude_FadeFromBag(u8 taskId);
@@ -526,6 +527,7 @@ static const u8 sListItemTextColor_TmCase_BerryPouch[] = _("{COLOR_HIGHLIGHT_SHA
 static const u8 sText_TossOutHowManyStrVar1s[] = _("Toss out how many\n{STR_VAR_1}?");
 static const u8 sText_ThrowAwayStrVar2OfThisItemQM[] = _("Throw away {STR_VAR_2} of\nthis item?");
 static const u8 sText_DepositItem[] = _("DEPOSIT ITEM");
+static const u8 sText_CantStoreImportantItems[] = _("Important items can't be\nstored in the PC!");
 static const u8 sText_NoRoomForItems[] = _("There's no room to\nstore items.");
 static const u8 sText_DepositHowManyVar1[] = _("Deposit how many\n{STR_VAR_1}?");
 static const u8 sText_DepositedVar2Var1s[] = _("Deposited {STR_VAR_2}\n{STR_VAR_1}.");
@@ -551,6 +553,7 @@ static const struct MenuAction sItemMenuContextActions[ITEMMENUACTION_COUNT] = {
     [ITEMMENUACTION_SORT_TYPE]      = { COMPOUND_STRING("Type"),    {Task_ItemMenuAction_SortByType}},
     [ITEMMENUACTION_SORT_INDEX]     = { COMPOUND_STRING("Index"),   {Task_ItemMenuAction_SortByIndex}},
     [ITEMMENUACTION_CHECK_TAG]      = { COMPOUND_STRING("Check"),   {Task_ItemMenuAction_CheckTag}},
+    [ITEMMENUACTION_CONFIRM]        = { COMPOUND_STRING("Confirm"), {Task_ItemContext_ChooseBerry}},
     [ITEMMENUACTION_DUMMY]          = { COMPOUND_STRING(""),        {NULL}}
 };
 
@@ -653,6 +656,12 @@ static const u8 sContextMenuItems_Open[] = {
     ITEMMENUACTION_CANCEL
 };
 
+static const u8 sContextMenuItems_BerryBlenderCrush[] = {
+    ITEMMENUACTION_CONFIRM,
+    ITEMMENUACTION_CHECK_TAG,
+    ITEMMENUACTION_CANCEL
+};
+
 static const u8 sContextMenuItems_BattleUse[] = {
     ITEMMENUACTION_BATTLE_USE,
     ITEMMENUACTION_CANCEL
@@ -667,16 +676,22 @@ static const u8 sContextMenuItems_Cancel[] = {
     ITEMMENUACTION_CANCEL,
 };
 
-static const TaskFunc sItemContextTaskFuncs[] = {
-    [ITEMMENULOCATION_FIELD]            = Task_ItemContext_FieldOrBattle,
-    [ITEMMENULOCATION_PARTY]            = Task_ItemContext_FieldGive,
-    [ITEMMENULOCATION_SHOP]             = Task_ItemContext_Sell,
-    [ITEMMENULOCATION_ITEMPC]           = Task_ItemContext_Deposit,
-    [ITEMMENULOCATION_PCBOX]            = Task_ItemContext_PcBoxGive,
-    [ITEMMENULOCATION_BATTLE]           = Task_ItemContext_FieldOrBattle,
-    [ITEMMENULOCATION_BERRY_TREE_MULCH] = Task_ItemContext_ChooseMulch,
-    [ITEMMENULOCATION_BERRY_TREE]       = ItemMenu_StartFadeToExitCallback,
-    [ITEMMENULOCATION_WALLY]            = NULL
+static const TaskFunc sItemContextTaskFuncs[] =
+{
+    [ITEMMENULOCATION_FIELD]                    = Task_ItemContext_FieldOrBattle,
+    [ITEMMENULOCATION_BATTLE]                   = Task_ItemContext_FieldOrBattle,
+    [ITEMMENULOCATION_PARTY]                    = Task_ItemContext_FieldGive,
+    [ITEMMENULOCATION_SHOP]                     = Task_ItemContext_Sell,
+    [ITEMMENULOCATION_BERRY_TREE]               = Task_ItemContext_ChooseBerry,
+    [ITEMMENULOCATION_BERRY_BLENDER_CRUSH]      = Task_ItemContext_FieldOrBattle,
+    [ITEMMENULOCATION_ITEMPC]                   = Task_ItemContext_Deposit,
+    [ITEMMENULOCATION_FAVOR_LADY]               = Task_ItemContext_FieldOrBattle,
+    [ITEMMENULOCATION_QUIZ_LADY]                = Task_ItemContext_FieldOrBattle,
+    [ITEMMENULOCATION_APPRENTICE]               = Task_ItemContext_FieldOrBattle,
+    [ITEMMENULOCATION_WALLY]                    = NULL,
+    [ITEMMENULOCATION_PCBOX]                    = Task_ItemContext_PcBoxGive,
+    [ITEMMENULOCATION_BERRY_TREE_MULCH]         = Task_ItemContext_ChooseMulch,
+    [ITEMMENULOCATION_RAIDEND]                  = Task_ItemContext_FieldOrBattle,
 };
 
 static const struct YesNoFuncTable sYesNoMenu_Toss = {
@@ -745,7 +760,10 @@ void GoToBagMenuFrlg(u8 location, u8 pocket, MainCallback bagCallback)
         sBagMenuDisplay->inhibitItemDescriptionPrint = FALSE;
         sBagMenuDisplay->pocketScrollArrowsTask = TASK_NONE;
         sBagMenuDisplay->pocketSwitchArrowsTask = TASK_NONE;
-        if (location == ITEMMENULOCATION_BERRY_TREE)
+        if (location == ITEMMENULOCATION_BERRY_TREE
+         || location == ITEMMENULOCATION_BERRY_TREE_MULCH
+         || location == ITEMMENULOCATION_BERRY_BLENDER_CRUSH
+         || location == ITEMMENULOCATION_RAIDEND)
             sBagMenuDisplay->pocketSwitchMode = 1;
         else if (location == ITEMMENULOCATION_WALLY)
             sBagMenuDisplay->pocketSwitchMode = 2;
@@ -1484,6 +1502,11 @@ static void Task_BagMenu_HandleInput(u8 taskId)
     case LIST_NOTHING_CHOSEN:
         return;
     case LIST_CANCEL:
+        if (gBagMenuState.location == ITEMMENULOCATION_BERRY_BLENDER_CRUSH)
+        {
+            PlaySE(SE_FAILURE);
+            break;
+        }
         PlaySE(SE_SELECT);
         gSpecialVar_ItemId = ITEM_NONE;
         Bag_BeginCloseWin0Animation();
@@ -1756,6 +1779,7 @@ static void OpenContextMenu(u8 taskId)
     switch (gBagMenuState.location)
     {
     case ITEMMENULOCATION_BATTLE:
+    case ITEMMENULOCATION_RAIDEND:
         if (gSpecialVar_ItemId == ITEM_BERRY_POUCH)
         {
             sContextMenuItemsPtr = sContextMenuItems_BerryPouch;
@@ -1771,6 +1795,10 @@ static void OpenContextMenu(u8 taskId)
             sContextMenuItemsPtr = sContextMenuItems_Cancel;
             sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Cancel);
         }
+        break;
+    case ITEMMENULOCATION_BERRY_BLENDER_CRUSH:
+        sContextMenuItemsPtr = sContextMenuItems_BerryBlenderCrush;
+        sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerryBlenderCrush);
         break;
     case ITEMMENULOCATION_WALLY:
         sContextMenuItemsPtr = sContextMenuItems_BattleUse;
@@ -2456,7 +2484,12 @@ static void Task_SelectQuantityToDeposit(u8 taskId)
 static void Task_TryDoItemDeposit(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (AddPCItem(gSpecialVar_ItemId, tItemCount) == TRUE)
+    if (GetItemImportance(gSpecialVar_ItemId))
+    {
+        // Can't deposit important items
+        DisplayItemMessageFrlg(taskId, FONT_NORMAL, sText_CantStoreImportantItems, Task_WaitAButtonAndCloseContextMenu);
+    }
+    else if (AddPCItem(gSpecialVar_ItemId, tItemCount) == TRUE)
     {
         CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, tItemCount);
         ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_ITEM_DIGITS);
@@ -2615,6 +2648,12 @@ static void Task_ItemContext_ChooseMulch(u8 taskId)
         return;
     }
     DisplayDadsAdviceCannotUseItemMessage(taskId, FALSE);
+}
+
+static void Task_ItemContext_ChooseBerry(u8 taskId)
+{
+    Bag_BeginCloseWin0Animation();
+    ItemMenu_StartFadeToExitCallback(taskId);
 }
 
 static bool8 BagIsTutorial(void)

@@ -666,7 +666,10 @@ void ChooseBerryForMachine(MainCallback exitCallback)
 
 void CB2_ChooseBall(void)
 {
-    GoToBagMenu(ITEMMENULOCATION_RAIDEND, POCKET_POKE_BALLS, CB2_SetUpReshowBattleScreenAfterMenu2);
+    if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_RAIDEND, FRLG_POCKET_POKEBALLS, CB2_SetUpReshowBattleScreenAfterMenu2);
+    else
+        GoToBagMenu(ITEMMENULOCATION_RAIDEND, POCKET_POKE_BALLS, CB2_SetUpReshowBattleScreenAfterMenu2);
 }
 
 void CB2_GoToSellMenu(void)
