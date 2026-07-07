@@ -4542,6 +4542,28 @@ static void DebugAction_PCBag_Fill_PocketItems(u8 taskId)
     }
 }
 
+static void DebugAction_PCBag_Fill_PocketBattleItems(u8 taskId)
+{
+    enum Item itemId;
+
+    for (itemId = 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (GetItemPocket(itemId) == POCKET_BATTLE_ITEMS && CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
+static void DebugAction_PCBag_Fill_PocketMedicine(u8 taskId)
+{
+    enum Item itemId;
+
+    for (itemId = 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (GetItemPocket(itemId) == POCKET_MEDICINE && CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
 static void DebugAction_PCBag_Fill_PocketPokeBalls(u8 taskId)
 {
     for (enum PokeBall ballId = BALL_STRANGE; ballId < POKEBALL_COUNT; ballId++)

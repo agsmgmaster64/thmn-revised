@@ -378,6 +378,7 @@ static void Task_BagMenu_HandleInput(u8 taskId);
 static void Task_ItemContextMenuByLocation(u8 taskId);
 static void Bag_FillMessageBoxWithPalette(u32 a0);
 static u8 ProcessPocketSwitchInput(u8 taskId, u8 pocketId);
+static void DrawPocketIndicatorSquare(u8, bool8);
 static void SwitchPockets(u8 taskId, s16 direction, bool16 a2);
 static void Task_AnimateSwitchPockets(u8 taskId);
 static void BeginMovingItemInPocket(u8 taskId, s16 itemIndex);
@@ -560,6 +561,8 @@ static const struct MenuAction sItemMenuContextActions[ITEMMENUACTION_COUNT] = {
 static const u8 sBagTabToPocket[FRLG_POCKET_COUNT] =
 {
     [FRLG_POCKET_ITEMS] = POCKET_ITEMS,
+    [FRLG_POCKET_BATTLE_ITEMS] = POCKET_BATTLE_ITEMS,
+    [FRLG_POCKET_MEDICINE] = POCKET_MEDICINE,
     [FRLG_POCKET_KEYITEMS] = POCKET_KEY_ITEMS,
     [FRLG_POCKET_POKEBALLS] = POCKET_POKE_BALLS,
     [FRLG_POCKET_BERRIES] = POCKET_BERRIES,
@@ -568,6 +571,8 @@ static const u8 sBagTabToPocket[FRLG_POCKET_COUNT] =
 static const u8 sPocketToBagTab[POCKETS_COUNT] =
 {
     [POCKET_ITEMS] = FRLG_POCKET_ITEMS,
+    [POCKET_BATTLE_ITEMS] = FRLG_POCKET_BATTLE_ITEMS,
+    [POCKET_MEDICINE] = FRLG_POCKET_MEDICINE,
     [POCKET_KEY_ITEMS] = FRLG_POCKET_KEYITEMS,
     [POCKET_POKE_BALLS] = FRLG_POCKET_POKEBALLS,
     [POCKET_BERRIES] = FRLG_POCKET_BERRIES,
@@ -900,6 +905,7 @@ static bool8 LoadBagMenuGraphics(void)
             PrintBagPocketName();
         else
             BagDrawDepositItemTextBox();
+        DrawPocketIndicatorSquare(gBagMenuState.bagTab, TRUE);
         gMain.state++;
         break;
     case 14:
@@ -1049,9 +1055,11 @@ static u8 CreateBagInputHandlerTask(u8 location)
 // This constant picks the max of the existing pocket sizes.
 // By default, the largest pocket is BAG_ITEMS_COUNT at 30.
 #define MAX_POCKET_ITEMS  ((max(BAG_ITEMS_COUNT,             \
+                            max(BAG_BATTLEITEMS_COUNT,       \
+                            max(BAG_MEDICINE_COUNT,          \
                             max(BAG_KEYITEMS_COUNT,          \
-                            max(BAG_POKEBALLS_COUNT,          \
-                                BAG_BERRIES_COUNT)))) + 1)
+                            max(BAG_POKEBALLS_COUNT,         \
+                                BAG_BERRIES_COUNT)))))) + 1)
 
 static bool8 TryAllocListMenuBuffers(void)
 {
@@ -1593,6 +1601,8 @@ static void SwitchPockets(u8 taskId, s16 direction, bool16 a2)
         ItemRG_EraseItemIcon(sBagMenuDisplay->itemMenuIcon ^ 1);
         BagDestroyPocketScrollArrowPairFrlg();
     }
+    DrawPocketIndicatorSquare(gBagMenuState.bagTab, FALSE);
+    DrawPocketIndicatorSquare(gBagMenuState.bagTab + tSwitchDir, TRUE);
     FillBgTilemapBufferRect_Palette0(1, 0x02D, 11, 1, 18, 12);
     ScheduleBgCopyTilemapToVram(1);
     ItemRG_SetBagVisualPocketId(gBagMenuState.bagTab + direction);
@@ -1649,6 +1659,16 @@ static void Task_AnimateSwitchPockets(u8 taskId)
         SwitchTaskToFollowupFunc(taskId);
         break;
     }
+}
+
+static void DrawPocketIndicatorSquare(u8 pocket, bool8 isCurrentPocket)
+{
+    u8 x = pocket;
+    if (!isCurrentPocket)
+        FillBgTilemapBufferRect_Palette0(1, 0x02E, x + 2, 3, 1, 1);
+    else
+        FillBgTilemapBufferRect_Palette0(1, 0x02F, x + 2, 3, 1, 1);
+    ScheduleBgCopyTilemapToVram(1);
 }
 
 static void BeginMovingItemInPocket(u8 taskId, s16 itemIndex)
@@ -1831,6 +1851,8 @@ static void OpenContextMenu(u8 taskId)
             switch (gBagMenuState.pocket)
             {
             default:
+            case POCKET_MEDICINE:
+            case POCKET_BATTLE_ITEMS:
             case POCKET_ITEMS:
                 if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
                 {
@@ -2510,6 +2532,8 @@ static void OpenSortMenu(u8 taskId)
     {
     default:
     case POCKET_ITEMS:
+    case POCKET_BATTLE_ITEMS:
+    case POCKET_MEDICINE:
         sContextMenuItemsPtr = sContextMenuItems_SortItems;
         sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_SortItems);
         break;
@@ -2667,7 +2691,7 @@ static void BackUpPlayerBag(void)
 {
     u32 i;
     sBackupPlayerBag = AllocZeroed(sizeof(struct BagSlots));
-    memcpy(sBackupPlayerBag->bagPocket_Items, gSaveBlock1Ptr->bag.items, BAG_ITEMS_COUNT * sizeof(struct ItemSlot));
+    memcpy(sBackupPlayerBag->bagPocket_Items, gSaveBlock1Ptr->bag.medicine, BAG_MEDICINE_COUNT * sizeof(struct ItemSlot));
     memcpy(sBackupPlayerBag->bagPocket_KeyItems, gSaveBlock1Ptr->bag.keyItems, BAG_KEYITEMS_COUNT * sizeof(struct ItemSlot));
     memcpy(sBackupPlayerBag->bagPocket_PokeBalls, gSaveBlock1Ptr->bag.pokeBalls, BAG_POKEBALLS_COUNT * sizeof(struct ItemSlot));
     sBackupPlayerBag->registeredItem = gSaveBlock1Ptr->registeredItem;
@@ -2677,7 +2701,7 @@ static void BackUpPlayerBag(void)
         sBackupPlayerBag->cursorPos[i] = gBagMenuState.cursorPos[i];
         sBackupPlayerBag->scrollPosition[i] = gBagMenuState.scrollPosition[i];
     }
-    memset(gSaveBlock1Ptr->bag.items, 0, sizeof(gSaveBlock1Ptr->bag.items));
+    memset(gSaveBlock1Ptr->bag.medicine, 0, sizeof(gSaveBlock1Ptr->bag.medicine));
     memset(gSaveBlock1Ptr->bag.keyItems, 0, sizeof(gSaveBlock1Ptr->bag.keyItems));
     memset(gSaveBlock1Ptr->bag.pokeBalls, 0, sizeof(gSaveBlock1Ptr->bag.pokeBalls));
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
@@ -2687,7 +2711,7 @@ static void BackUpPlayerBag(void)
 static void RestorePlayerBag(void)
 {
     u32 i;
-    memcpy(gSaveBlock1Ptr->bag.items, sBackupPlayerBag->bagPocket_Items, BAG_ITEMS_COUNT * sizeof(struct ItemSlot));
+    memcpy(gSaveBlock1Ptr->bag.medicine, sBackupPlayerBag->bagPocket_Items, BAG_MEDICINE_COUNT * sizeof(struct ItemSlot));
     memcpy(gSaveBlock1Ptr->bag.keyItems, sBackupPlayerBag->bagPocket_KeyItems, BAG_KEYITEMS_COUNT * sizeof(struct ItemSlot));
     memcpy(gSaveBlock1Ptr->bag.pokeBalls, sBackupPlayerBag->bagPocket_PokeBalls, BAG_POKEBALLS_COUNT * sizeof(struct ItemSlot));
     gSaveBlock1Ptr->registeredItem = sBackupPlayerBag->registeredItem;
@@ -2706,7 +2730,7 @@ void InitOldManBagFrlg(void)
     BackUpPlayerBag();
     AddBagItem(ITEM_POTION, 1);
     AddBagItem(ITEM_POKE_BALL, 1);
-    GoToBagMenuFrlg(ITEMMENULOCATION_WALLY, FRLG_POCKET_ITEMS, CB2_SetUpReshowBattleScreenAfterMenu);
+    GoToBagMenuFrlg(ITEMMENULOCATION_WALLY, FRLG_POCKET_MEDICINE, CB2_SetUpReshowBattleScreenAfterMenu);
 }
 
 static void Task_Bag_OldManTutorial(u8 taskId)
