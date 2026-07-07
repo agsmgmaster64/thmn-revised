@@ -77,10 +77,12 @@ static const union AnimCmd sAnim_Bag_OpenMedicinePocket[] = {
 };
 
 static const union AnimCmd *const sAnims_Bag[] = {
-    [FRLG_POCKET_ITEMS]      = sAnim_Bag_OpenItemsPocket,
-    [FRLG_POCKET_KEYITEMS]   = sAnim_Bag_OpenKeyItemsPocket,
-    [FRLG_POCKET_POKEBALLS]  = sAnim_Bag_OpenPokeBallsPocket,
-    [FRLG_POCKET_BERRIES]    = sAnim_Bag_OpenBerriesPocket,
+    [FRLG_POCKET_ITEMS]        = sAnim_Bag_OpenItemsPocket,
+    [FRLG_POCKET_BATTLE_ITEMS] = sAnim_Bag_OpenBattleItemsPocket,
+    [FRLG_POCKET_MEDICINE]     = sAnim_Bag_OpenMedicinePocket,
+    [FRLG_POCKET_KEYITEMS]     = sAnim_Bag_OpenKeyItemsPocket,
+    [FRLG_POCKET_POKEBALLS]    = sAnim_Bag_OpenPokeBallsPocket,
+    [FRLG_POCKET_BERRIES]      = sAnim_Bag_OpenBerriesPocket,
 };
 
 static const union AffineAnimCmd sAffineAnim_BagIdle[] = {
@@ -165,7 +167,7 @@ void ItemRG_ResetItemMenuIconState(void)
 
 void ItemRG_CreateBagSprite(u8 animNum)
 {
-    sItemMenuIconSpriteIds[SPR_BAG] = CreateSprite(&sSpriteTemplate_Bag, 40, 68, 0);
+    sItemMenuIconSpriteIds[SPR_BAG] = CreateSprite(&sSpriteTemplate_Bag, 40, 76, 0);
     ItemRG_SetBagVisualPocketId(animNum);
 }
 

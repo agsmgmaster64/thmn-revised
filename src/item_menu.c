@@ -2641,6 +2641,11 @@ static void RestoreBagAfterWallyTutorial(void)
 
 void DoWallyTutorialBagMenu(void)
 {
+    if (FRLG_I_USE_FRLG_BAG)
+    {
+        InitOldManBagFrlg();
+        return;
+    }
     PrepareBagForWallyTutorial();
     AddBagItem(ITEM_POTION, 1);
     AddBagItem(ITEM_POKE_BALL, 1);

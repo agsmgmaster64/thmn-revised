@@ -1314,7 +1314,7 @@ const u8 *const gStdStrings[] =
     [STDSTRING_TOUGH2] = COMPOUND_STRING("Tough"),
     [STDSTRING_ITEMS] = COMPOUND_STRING("Items"),
     [STDSTRING_KEYITEMS] = COMPOUND_STRING("Key Items"),
-    [STDSTRING_POKEBALLS] = COMPOUND_STRING("Miko Orbs"),
+    [STDSTRING_POKEBALLS] = COMPOUND_STRING("Toho Orbs"),
     [STDSTRING_TMHMS] = COMPOUND_STRING("TMs & HMs"),
     [STDSTRING_BERRIES] = COMPOUND_STRING("Berries"),
     [STDSTRING_SINGLE] = COMPOUND_STRING("Single"),
@@ -1337,6 +1337,8 @@ const u8 *const gStdStrings[] =
     [STDSTRING_VOLCANO_BADGE] = gText_Volcanobadge,
     [STDSTRING_EARTH_BADGE]   = gText_Earthbadge,
     [STDSTRING_COINS]         = COMPOUND_STRING("Coins"),
+    [STDSTRING_BATTLE_ITEMS] = COMPOUND_STRING("Battle Items"),
+    [STDSTRING_MEDICINE] = COMPOUND_STRING("Medicine"),
 };
 
 static const u8 sLinkServicesMultichoiceIds[] =
