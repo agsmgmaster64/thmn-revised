@@ -5,21 +5,21 @@ LavaridgeTown_House_EventScript_OldMan::
 	msgbox LavaridgeTown_House_Text_WifeWarmingEggInHotSprings, MSGBOX_NPC
 	end
 
-LavaridgeTown_House_EventScript_Zigzagoon::
+LavaridgeTown_House_EventScript_Iku::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
-	msgbox LavaridgeTown_House_Text_Zigzagoon, MSGBOX_DEFAULT
+	playmoncry SPECIES_NORMAL_IKU, CRY_MODE_NORMAL
+	msgbox LavaridgeTown_House_Text_Iku, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
 LavaridgeTown_House_Text_WifeWarmingEggInHotSprings:
-	.string "My wife's warming an EGG in the hot\n"
+	.string "My wife's warming an Egg in the hot\n"
 	.string "springs. This is what she told me.\p"
-	.string "She left two Puppets with the DAY CARE.\n"
-	.string "And they discovered that EGG!$"
+	.string "She left two Puppets with the Day Care.\n"
+	.string "And they discovered that Egg!$"
 
-LavaridgeTown_House_Text_Zigzagoon:
-	.string "ZIGZAGOON: Pshoo!$"
+LavaridgeTown_House_Text_Iku:
+	.string "Iku: Pshoo!$"

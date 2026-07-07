@@ -58,7 +58,7 @@ Route114_EventScript_Poochyena::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_NORMAL_MOMIJI, CRY_MODE_ENCOUNTER
 	msgbox Route114_Text_Poochyena, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -174,25 +174,25 @@ Route114_EventScript_Kai::
 	end
 
 Route114_Text_AllMyMonDoesIsRoarTakeThis:
-	.string "All my Puppet does is ROAR…\n"
+	.string "All my Puppet does is Roar…\n"
 	.string "No one dares to come near me…\p"
 	.string "Sigh… If you would, please take\n"
 	.string "this TM away…$"
 
 Route114_Text_ExplainRoar:
-	.string "TM05 contains ROAR.\n"
-	.string "A ROAR sends Puppets scurrying.$"
+	.string "TM05 contains Roar.\n"
+	.string "A Roar sends Puppets scurrying.$"
 
 Route114_Text_Poochyena:
 	.string "Bow! Bowwow!$"
 
 Route114_Text_MeteorFallsSign:
-	.string "METEOR FALLS\n"
-	.string "RUSTBORO CITY THROUGH HERE$"
+	.string "Meteor Falls\n"
+	.string "Rustboro City Through Here$"
 
 Route114_Text_FossilManiacsHouseSign:
-	.string "FOSSIL MANIAC'S HOUSE\n"
+	.string "Fossil Maniac's House\n"
 	.string "“Fossils gratefully accepted!”$"
 
 Route114_Text_LanettesHouse:
-	.string "LANETTE'S HOUSE$"
+	.string "Lanette's House$"

@@ -75,7 +75,7 @@ JaggedPass_EventScript_MagmaHideoutGuard::
 	waitmovement 0
 	msgbox JaggedPass_Text_GruntIntro, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro TRAINER_GRUNT_JAGGED_PASS, JaggedPass_Text_GruntDefeat
+	trainerbattle_no_intro TRAINER_COURTNEY_JAGGED_PASS, JaggedPass_Text_GruntDefeat
 	setflag FLAG_BEAT_MAGMA_GRUNT_JAGGED_PASS
 	applymovement LOCALID_MAGMA_HIDEOUT_GUARD, Common_Movement_FaceOriginalDirection
 	waitmovement 0
@@ -92,10 +92,29 @@ JaggedPass_EventScript_GuardDefeated::
 	releaseall
 	end
 
-JaggedPass_EventScript_Eric::
-	trainerbattle_single TRAINER_ERIC, JaggedPass_Text_EricIntro, JaggedPass_Text_EricDefeat
-	msgbox JaggedPass_Text_EricPostBattle, MSGBOX_AUTOCLOSE
+JaggedPass_EventScript_Artemis::
+	trainerbattle_single TRAINER_ARTEMIS, JaggedPass_Text_ArtemisIntro, JaggedPass_Text_ArtemisDefeat, JaggedPass_EventScript_ArtemisToHeal
+	msgbox JaggedPass_Text_ArtemisPostBattle, MSGBOX_DEFAULT
+	call JaggedPass_EventScript_ArtemisHeal
+	msgbox JaggedPass_Text_ArtemisAnotherCheckup, MSGBOX_DEFAULT
+	release
 	end
+	
+JaggedPass_EventScript_ArtemisToHeal::
+	msgbox JaggedPass_Text_ArtemisPostBattle, MSGBOX_DEFAULT
+	call JaggedPass_EventScript_ArtemisHeal
+	msgbox JaggedPass_Text_ArtemisAnotherCheckup, MSGBOX_DEFAULT
+	release
+	end
+	
+JaggedPass_EventScript_ArtemisHeal::
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	return
 
 JaggedPass_EventScript_Diana::
 	trainerbattle_single TRAINER_DIANA_1, JaggedPass_Text_DianaIntro, JaggedPass_Text_DianaDefeat, JaggedPass_EventScript_RegisterDiana
@@ -147,20 +166,23 @@ JaggedPass_EventScript_Autumn::
 	msgbox JaggedPass_Text_AutumnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-JaggedPass_Text_EricIntro:
-	.string "MT. CHIMNEY's JAGGED PASS…\p"
-	.string "Now this is what I've always wanted\n"
-	.string "in a mountain.\p"
-	.string "This jagged bumpiness…\n"
-	.string "It rocks my soul!$"
+JaggedPass_Text_ArtemisIntro:
+	.string "Why, hello there!\p"
+	.string "The famous wandering Puppet Center\n"
+	.string "nurse, Artemis, is here to give\l"
+	.string "your Puppets a checkup!$"
 
-JaggedPass_Text_EricDefeat:
-	.string "Losing left me bitter!$"
+JaggedPass_Text_ArtemisDefeat:
+	.string "Your Puppets are glowing with health!$"
 
-JaggedPass_Text_EricPostBattle:
-	.string "Yes, I did lose at battling…\p"
-	.string "But, when it comes to the love of\n"
-	.string "the mountains, I have you beat!$"
+JaggedPass_Text_ArtemisPostBattle:
+	.string "Well then, time to heal up your\n"
+	.string "Puppets!$"
+	
+JaggedPass_Text_ArtemisAnotherCheckup:
+	.string "There, good as new!\p"
+	.string "If you need another checkup,\n"
+	.string "I'll always be here.$"
 
 JaggedPass_Text_DianaIntro:
 	.string "This place isn't your casual hike.\n"
@@ -192,7 +214,7 @@ JaggedPass_Text_DianaPostRematch:
 	.string "enjoy this bumpy hike.$"
 
 JaggedPass_Text_EthanIntro:
-	.string "JAGGED PASS is hard to walk on.\n"
+	.string "Jagged Pass is hard to walk on.\n"
 	.string "It's a good place for training.$"
 
 JaggedPass_Text_EthanDefeat:
@@ -200,7 +222,7 @@ JaggedPass_Text_EthanDefeat:
 	.string "trying to find a good footing…$"
 
 JaggedPass_Text_EthanPostBattle:
-	.string "If I had an ACRO BIKE, I'd be able to\n"
+	.string "If I had an Acro Bike, I'd be able to\n"
 	.string "jump ledges.$"
 
 JaggedPass_Text_EthanRegister:
@@ -217,8 +239,8 @@ JaggedPass_Text_EthanRematchDefeat:
 	.string "bumpy ground…$"
 
 JaggedPass_Text_EthanPostRematch:
-	.string "I should get an ACRO BIKE from RYDEL\n"
-	.string "in MAUVILLE CITY…$"
+	.string "I should get an Acro Bike from Rydel\n"
+	.string "in Mauville City…$"
 
 JaggedPass_Text_GruntIntro:
 	.string "Wah!\n"
@@ -228,7 +250,7 @@ JaggedPass_Text_GruntIntro:
 
 JaggedPass_Text_GruntDefeat:
 	.string "Urrrgh…\p"
-	.string "I should've ducked into our HIDEOUT\n"
+	.string "I should've ducked into our Hideout\n"
 	.string "right away…$"
 
 JaggedPass_Text_GoWhereverYouWant:

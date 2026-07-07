@@ -180,9 +180,9 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 	end
 
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "LAVARIDGE's GYM LEADER FLANNERY\n"
+	.string "Lavaridge's Gym Leader Flannery\n"
 	.string "uses FIRE-type Puppets.\p"
 	.string "Her passion for Puppets burns stronger\n"
 	.string "and hotter than a volcano.\p"
@@ -211,7 +211,7 @@ LavaridgeTown_Gym_1F_Text_AxleIntro:
 	.string "Don't come along and stress me out!$"
 
 LavaridgeTown_Gym_1F_Text_AxleDefeat:
-	.string "I hope FLANNERY flames you good!$"
+	.string "I hope Flannery flames you good!$"
 
 LavaridgeTown_Gym_1F_Text_AxlePostBattle:
 	.string "Haaah… Whew…\p"
@@ -231,7 +231,7 @@ LavaridgeTown_Gym_B1F_Text_KeeganDefeat:
 
 LavaridgeTown_Gym_B1F_Text_KeeganPostBattle:
 	.string "Your skill is real…\n"
-	.string "But our LEADER FLANNERY is strong.\p"
+	.string "But our Leader Flannery is strong.\p"
 	.string "If you don't watch yourself, you'll be\n"
 	.string "burned seriously.$"
 
@@ -257,7 +257,7 @@ LavaridgeTown_Gym_1F_Text_DanielleDefeat:
 
 LavaridgeTown_Gym_1F_Text_DaniellePostBattle:
 	.string "I'm going to be a pretty and strong\n"
-	.string "TRAINER just like FLANNERY.$"
+	.string "Trainer just like Flannery.$"
 
 LavaridgeTown_Gym_B1F_Text_JaceIntro:
 	.string "Come on, get with it!\n"
@@ -270,7 +270,7 @@ LavaridgeTown_Gym_B1F_Text_JaceDefeat:
 LavaridgeTown_Gym_B1F_Text_JacePostBattle:
 	.string "The way the battling spirit burns\n"
 	.string "within you, you may stand a chance\l"
-	.string "against our LEADER.$"
+	.string "against our Leader.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffIntro:
 	.string "See how the flames blaze wildly?\n"
@@ -294,20 +294,20 @@ LavaridgeTown_Gym_B1F_Text_EliDefeat:
 
 LavaridgeTown_Gym_B1F_Text_EliPostBattle:
 	.string "I stay here because I became a fan\n"
-	.string "of FLANNERY's power.\p"
+	.string "of Flannery's power.\p"
 	.string "Hehehehe.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "Welcome… No, wait.\p"
-	.string "Puny TRAINER, how good to see you've\n"
+	.string "Puny Trainer, how good to see you've\n"
 	.string "made it here!\p"
 	.string "I have been entrusted with the…\n"
 	.string "No, wait.\p"
-	.string "I am FLANNERY, and I'm the GYM\n"
-	.string "LEADER here!\p"
+	.string "I am Flannery, and I'm the Gym\n"
+	.string "Leader here!\p"
 	.string "Uh…\n"
 	.string "Dare not underestimate me, though\l"
-	.string "I have been LEADER only a short time!\p"
+	.string "I have been Leader only a short time!\p"
 	.string "With skills inherited from my grand-\n"
 	.string "father, I shall, uh…demonstrate the\l"
 	.string "hot moves we have honed on this land!$"
@@ -316,7 +316,7 @@ LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
 	.string "Oh…\n"
 	.string "I guess I was trying too hard…\p"
 	.string "I… I've only recently become\n"
-	.string "a GYM LEADER.\p"
+	.string "a Gym Leader.\p"
 	.string "I tried too hard to be someone\n"
 	.string "I'm not.\p"
 	.string "I have to do things my natural way. If\n"
@@ -325,50 +325,49 @@ LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
 	.string "For that, you deserve this.$"
 
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge:
-	.string "{PLAYER} received the HEAT BADGE\n"
-	.string "from FLANNERY.$"
+	.string "{PLAYER} received the Heat Badge\n"
+	.string "from Flannery.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
-	.string "If you have a HEAT BADGE, all Puppets\n"
+	.string "If you have a Heat Badge, all Puppets\n"
 	.string "up to Level 50, even those you get in\l"
 	.string "trades from other people, will obey\l"
 	.string "you completely.\p"
 	.string "And, it lets Puppets use the HM move\n"
-	.string "STRENGTH outside of battle.\p"
+	.string "Strength outside of battle.\p"
 	.string "This is a token of my appreciation.\n"
 	.string "Don't be shy about taking it!$"
 
 LavaridgeTown_Gym_1F_Text_ExplainOverheat:
-	.string "That TM50 contains OVERHEAT.\p"
-	.string "That move inflicts serious damage on\n"
-	.string "the opponent.\p"
-	.string "But it also sharply cuts the SP. ATK\n"
-	.string "of the Puppet using it. It might not\l"
-	.string "be suitable for longer battles.$"
+	.string "That TM50 contains Mystical Fire.\p"
+	.string "That move not only inflicts damage on\n"
+	.string ", but it also cuts the opponent's\l"
+	.string "Sp. Atk stat.\p"
+	.string "It's a neat move, isn't it?$"
 
 LavaridgeTown_Gym_1F_Text_RegisteredFlannery:
-	.string "Registered GYM LEADER FLANNERY\n"
+	.string "Registered Gym Leader Flannery\n"
 	.string "in the TohoNav.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPostBattle:
 	.string "Your power reminds me of someone…\p"
-	.string "Oh! I know! You battle like NORMAN,\n"
-	.string "the GYM LEADER of PETALBURG.$"
+	.string "Oh! I know! You battle like Norman,\n"
+	.string "the Gym Leader of Petalburg.$"
 
 LavaridgeTown_Gym_1F_Text_GymStatue:
 	.string "Lavaridge Town Puppet Gym$"
 
 LavaridgeTown_Gym_1F_Text_GymStatueCertified:
 	.string "Lavaridge Town Puppet Gym\p"
-	.string "FLANNERY'S CERTIFIED trainers:\n"
+	.string "Flannery'S Certified trainers:\n"
 	.string "{PLAYER}$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPreRematch:
-	.string "FLANNERY: Losing a battle isn't going\n"
+	.string "Flannery: Losing a battle isn't going\n"
 	.string "to deflate me.\p"
 	.string "I love Puppets.\n"
 	.string "I love to battle.\l"
-	.string "And… I love this GYM!\p"
+	.string "And… I love this Gym!\p"
 	.string "Let's exchange superhot moves\n"
 	.string "in another battle!$"
 
@@ -377,7 +376,7 @@ LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat:
 	.string "On the verge of eruption!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPostRematch:
-	.string "FLANNERY: I lost the match,\n"
+	.string "Flannery: I lost the match,\n"
 	.string "but I'm completely satisfied.\p"
 	.string "It's not often I get to enjoy a battle\n"
 	.string "this heated.\p"
@@ -385,11 +384,11 @@ LavaridgeTown_Gym_1F_Text_FlanneryPostRematch:
 	.string "again sometime!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons:
-	.string "FLANNERY: Losing a battle isn't going\n"
+	.string "Flannery: Losing a battle isn't going\n"
 	.string "to deflate me.\p"
 	.string "I love Puppets.\n"
 	.string "I love to battle.\l"
-	.string "And… I love this GYM!\p"
+	.string "And… I love this Gym!\p"
 	.string "Let's exchange superhot moves\n"
 	.string "in another battle!\p"
 	.string "Oh, wait. Do you only have one Puppet\n"

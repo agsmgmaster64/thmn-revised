@@ -1257,7 +1257,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Surf
 
 === TRAINER_RANDALL ===
-Name: RANDALL
+Name: Randall
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
@@ -1266,15 +1266,16 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Swellow
-Level: 26
+Normal Aya @ Quick Claw
+Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Quick Attack
 - Agility
 - Wing Attack
+- Aerial Ace
 
 === TRAINER_PARKER ===
-Name: PARKER
+Name: Parker
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
@@ -1283,15 +1284,16 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Spinda
-Level: 26
+Normal Tewi @ Persim Berry
+Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Teeter Dance
-- Dizzy Punch
-- Focus Punch
+- Confuse Ray
+- Swagger
+- Quick Attack
 
 === TRAINER_GEORGE ===
-Name: GEORGE
+Name: George
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
@@ -1300,15 +1302,16 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Slakoth @ Sitrus Berry
-Level: 26
+Normal Orange @ Chesto Berry
+Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Slack Off
-- Counter
-- Shadow Ball
+- Body Slam
+- Drain Punch
+- Knock Off
+- Rest
 
 === TRAINER_BERKE ===
-Name: BERKE
+Name: Berke
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
@@ -1317,11 +1320,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Vigoroth
-Level: 26
+Normal Reimu
+Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Focus Energy
 - Slash
+- Karate Chop
+- Storm Throw
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON
@@ -1648,7 +1653,7 @@ Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MARY ===
-Name: MARY
+Name: Mary
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
@@ -1657,14 +1662,16 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Delcatty
-Level: 26
+Normal Tokiko @ BrightPowder
+Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Feint Attack
-- Shock Wave
+- Brick Break
+- Aerial Ace
+- Quick Attack
+- Sand Attack
 
 === TRAINER_ALEXIA ===
-Name: ALEXIA
+Name: Alexia
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
@@ -1673,15 +1680,16 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Wigglytuff
-Level: 26
+Normal Kotohime @ Ganlon Berry
+Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Defense Curl
-- Double Edge
-- Shadow Ball
+- Barrier
+- Counter
+- Mirror Coat
+- Night Shade
 
 === TRAINER_JODY ===
-Name: JODY
+Name: Jody
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
@@ -1690,11 +1698,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Zangoose
-Level: 26
+Rinnosuke @ Lum Berry
+Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Slash
+- Knock Off
+- Aerial Ace
+- Rock Smash
+- Strength
 
 === TRAINER_WENDY ===
 Name: WENDY
@@ -2621,7 +2631,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Sand Attack
 
 === TRAINER_STEVE_1 ===
-Name: STEVE
+Name: Steve
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
@@ -2629,7 +2639,7 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Aron
+Chibi Kanako
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3204,7 +3214,7 @@ Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_KOICHI ===
-Name: KOICHI
+Name: Koichi
 Class: Black Belt
 Pic: Black Belt
 Gender: Male
@@ -3212,16 +3222,16 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Machop
-Level: 24
+Chibi Elly
+Level: 18
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Machoke
-Level: 28
+Chibi Ichirin
+Level: 18
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_NOB_1 ===
-Name: NOB
+Name: Nob
 Class: Black Belt
 Pic: Black Belt
 Gender: Male
@@ -3229,7 +3239,7 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Machop
+Normal Yuugi
 Level: 19
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -3535,7 +3545,7 @@ Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_COLE ===
-Name: COLE
+Name: Cole
 Class: Kindler
 Pic: Kindler
 Gender: Male
@@ -3543,12 +3553,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Numel
-Level: 23
+Normal Yuki
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JEFF ===
-Name: JEFF
+Name: Jeff
 Class: Kindler
 Pic: Kindler
 Gender: Male
@@ -3556,16 +3566,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Slugma
+Normal Yuki
 Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Slugma
+Normal Clownpiece
 Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_AXLE ===
-Name: AXLE
+Name: Axle
 Class: Kindler
 Pic: Kindler
 Gender: Male
@@ -3573,12 +3583,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Normal Chiyari
 Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JACE ===
-Name: JACE
+Name: Jace
 Class: Kindler
 Pic: Kindler
 Gender: Male
@@ -3586,12 +3596,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Slugma
+Normal Mokou
 Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_KEEGAN ===
-Name: KEEGAN
+Name: Keegan
 Class: Kindler
 Pic: Kindler
 Gender: Male
@@ -3599,12 +3609,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Slugma
+Normal Futo
 Level: 23
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 === TRAINER_BERNIE_1 ===
-Name: BERNIE
+Name: Bernie
 Class: Kindler
 Pic: Kindler
 Gender: Male
@@ -3612,11 +3622,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Slugma
+Chibi Flandre
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wingull
+Chibi Yuki
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3723,7 +3733,7 @@ Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LARRY ===
-Name: LARRY
+Name: Larry
 Class: Camper
 Pic: Camper
 Gender: Male
@@ -3731,12 +3741,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Nuzleaf
+Chibi Suika
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHANE ===
-Name: SHANE
+Name: Shane
 Class: Camper
 Pic: Camper
 Gender: Male
@@ -3744,11 +3754,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Sandshrew
+Chibi Kyouko
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Nuzleaf
+Normal Orange
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3766,7 +3776,7 @@ Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ETHAN_1 ===
-Name: ETHAN
+Name: Ethan
 Class: Camper
 Pic: Camper
 Gender: Male
@@ -3774,16 +3784,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
+Normal Nazrin
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Taillow
+Normal Kogasa
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AUTUMN ===
-Name: AUTUMN
+Name: Autumn
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
@@ -3791,7 +3801,7 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Shroomish
+Normal Shizuha
 Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4880,7 +4890,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Water Pulse
 
 === TRAINER_FLANNERY_1 ===
-Name: FLANNERY
+Name: Flannery
 Class: Leader
 Pic: Leader Flannery
 Gender: Female
@@ -4889,40 +4899,48 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Numel
-Level: 24
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Take Down
-- Magnitude
-- Sunny Day
-
-Slugma
-Level: 24
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Smog
-- Light Screen
-- Sunny Day
-
-Camerupt
+Normal Flandre @ SilverPowder
 Level: 26
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Overheat
-- Tackle
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Fire Punch
+- Leech Life
+- Pursuit
 - Sunny Day
-- Attract
 
-Torkoal @ White Herb
+Normal Sannyo @ Poison Barb
+Level: 26
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Confuse Ray
+- Mystical Fire
+- Poison Gas
+- Haze
+
+Normal Yuki @ Iceburn Gem
+Level: 27
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Will-o-Wisp
+- Mystical Fire
+- Psybeam
+- Flash
+
+Normal Mokou @ Charcoal
+Level: 28
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Will-O-Wisp
+- Drain Punch
+- Flame Wheel
+- Smokescreen
+
+Normal Rin @ Sitrus Berry
 Level: 29
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Overheat
-- Sunny Day
-- Body Slam
-- Attract
+- Slash
+- Flame Wheel
+- Astonish
+- Quick Attack
 
 === TRAINER_NORMAN_1 ===
-Name: NORMAN
+Name: Norman
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -4931,37 +4949,45 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Spinda
+Normal Alice @ Gohei
 Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Teeter Dance
+- Reflect
+- Tri-Attack
 - Psybeam
-- Facade
-- Encore
+- Flash
 
-Vigoroth
-Level: 27
+Normal Mike @ Black Belt
+Level: 28
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
+- Fake Out
 - Facade
-- Encore
+- Rock Smash
 - Feint Attack
 
-Linoone
+Rinnosuke @ BlackGlasses
+Level: 28
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Drain Punch
+- Knock Off
+- Facade
+- Foresight
+
+Tori @ Metal Coat
 Level: 29
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
+- Soar
+- Steel Wing
 - Facade
-- Headbutt
+- Quick Attack
 
-Slaking @ Sitrus Berry
+Normal Koishi @ Sitrus Berry
 Level: 31
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
-- Yawn
-- Facade
-- Feint Attack
+- Tri-Attack
+- Shadow Ball
+- Signal Beam
+- Haze
 
 === TRAINER_WINONA_1 ===
 Name: WINONA
@@ -5732,7 +5758,7 @@ Level: 35
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_TIMOTHY_1 ===
-Name: TIMOTHY
+Name: Timothy
 Class: Expert
 Pic: Expert M
 Gender: Male
@@ -5740,8 +5766,8 @@ Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Hariyama
-Level: 27
+Chibi Sendai
+Level: 20
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_TIMOTHY_2 ===
@@ -6059,7 +6085,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Brick Break
 
 === TRAINER_JAYLEN ===
-Name: JAYLEN
+Name: Jaylen
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -6067,12 +6093,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Trapinch
+Normal Chen
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DILLON ===
-Name: DILLON
+Name: Dillon
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -6080,7 +6106,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Aron
+Normal Nazrin
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6309,7 +6335,7 @@ Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CLAUDE ===
-Name: CLAUDE
+Name: Claude
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -6317,15 +6343,15 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
+Chibi Hina
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Goldeen
+Chibi Wakasagihime
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Barboach
+Chibi Yuugi
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6389,7 +6415,7 @@ Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NOLAN ===
-Name: NOLAN
+Name: Nolan
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -6397,7 +6423,7 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Barboach
+Chibi Suwako
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7155,7 +7181,7 @@ Level: 48
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_NICOLAS_1 ===
-Name: NICOLAS
+Name: Nicolas
 Class: Dragon Tamer
 Pic: Dragon Tamer
 Gender: Male
@@ -7163,12 +7189,12 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Altaria
-Level: 37
+Extra Byakuren
+Level: 54
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Altaria
-Level: 37
+Extra Shinki
+Level: 54
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_NICOLAS_2 ===
@@ -7605,50 +7631,38 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAO_1 ===
-Name: LAO
+Name: Lao
 Class: Ninja Boy
 Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
+Chibi Lunasa
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
 
-Koffing
+Chibi Lyrica
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
 
-Koffing
+Chibi Merlin
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
 
 === TRAINER_LUNG ===
-Name: LUNG
+Name: Lung
 Class: Ninja Boy
 Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
+Chibi Meira
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Ninjask
+Chibi Nue
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7825,7 +7839,7 @@ Level: 13
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_CYNDY_1 ===
-Name: CYNDY
+Name: Cyndy
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
@@ -7833,11 +7847,11 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Meditite
+Chibi Meiling
 Level: 18
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Makuhita
+Chibi Elly
 Level: 18
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -7936,7 +7950,7 @@ Level: 35
 IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
 
 === TRAINER_MADELINE_1 ===
-Name: MADELINE
+Name: Madeline
 Class: Parasol Lady
 Pic: Parasol Lady
 Gender: Female
@@ -7944,13 +7958,9 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Chibi Yuuka
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Ember
-- Tackle
-- Magnitude
-- Sunny Day
 
 === TRAINER_CLARISSA ===
 Name: CLARISSA
@@ -8525,7 +8535,7 @@ Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAROL ===
-Name: CAROL
+Name: Carol
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
@@ -8533,16 +8543,16 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Taillow
+Chibi Ran
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lombre
+Chibi Chen
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NANCY ===
-Name: NANCY
+Name: Nancy
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
@@ -8550,11 +8560,11 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Marill
+Dolls
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lombre
+Chibi Alice
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8576,7 +8586,7 @@ Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DIANA_1 ===
-Name: DIANA
+Name: Diana
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
@@ -8584,15 +8594,15 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Shroomish
+Chibi Mokou
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Oddish
+Normal Lily White
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Swablu
+Normal Lily Black
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9095,7 +9105,7 @@ Level: 45
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_ELI ===
-Name: ELI
+Name: Eli
 Class: Hiker
 Pic: Hiker
 Gender: Male
@@ -9103,7 +9113,7 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Normal Mokou
 Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -9297,7 +9307,7 @@ Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HECTOR ===
-Name: HECTOR
+Name: Hector
 Class: Collector
 Pic: Collector
 Gender: Male
@@ -9305,11 +9315,11 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Zangoose
+Chibi Gengetsu
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seviper
+Chibi Mugetsu
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10623,7 +10633,7 @@ Level: 39
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_JULIO ===
-Name: JULIO
+Name: Julio
 Class: Triathlete
 Pic: Cycling Triathlete M
 Gender: Male
@@ -10631,7 +10641,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Magnemite
+Normal Mystia
 Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10686,22 +10696,38 @@ Zubat
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_JAGGED_PASS ===
-Name: GRUNT
+=== TRAINER_COURTNEY_JAGGED_PASS ===
+Name: Courtney
 Class: Team Magma
-Pic: Magma Grunt M
-Gender: Male
+Pic: Magma Grunt F
+Gender: Female
 Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Normal Rin @ Silk Scarf
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Confuse Ray
+- Flame Wheel
+- Astonish
+- Quick Attack
 
-Numel
+Normal Yamame @ BlackGlasses
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Spider Web
+- Bug Grip
+- Sandy Mash
+- Pursuit
+
+Normal Marisa @ Sitrus Berry
+Level: 24
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Incinerate
+- Shock Wave
+- Swift
+- Flash
 
 === TRAINER_MARC ===
 Name: Marc
@@ -11092,7 +11118,7 @@ Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MT_CHIMNEY ===
-Name: TABITHA
+Name: Tabitha
 Class: Magma Admin
 Pic: Magma Admin
 Gender: Male
@@ -11100,21 +11126,37 @@ Music: Magma
 Double Battle: No
 AI: Basic Trainer
 
-Numel
-Level: 18
+Chibi Remilia @ BlackGlasses
+Level: 21
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Haze
+- Wing Attack
+- Bite
+- Snarl
 
-Poochyena
-Level: 20
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Numel
+Chibi Mokou
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Flame Wheel
+- Revenge
+- Double Kick
+- Smokescreen
 
-Zubat
+Chibi Kagerou
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Howl
+- Bite
+- Rock Throw
+- Metal Claw
+
+Chibi Utsuho
+Level: 23
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Mystical Fire
+- Twister
+- Fire Spin
+- Smokescreen
 
 === TRAINER_JONATHAN ===
 Name: JONATHAN
@@ -11216,17 +11258,37 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
+Normal Kagerou @ Metal Coat
 Level: 24
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Howl
+- Bite
+- Metal Claw
+- Accelerock
 
-Zubat
+Normal Remilia @ Black Belt
 Level: 24
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Bite
+- Wing Attack
+- Rock Smash
+- Leer
 
-Camerupt
+Normal Rin @ Silk Scarf
 Level: 25
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Confuse Ray
+- Hex
+- Flame Wheel
+- Quick Attack
+
+Normal Utsuho @ Sitrus Berry
+Level: 26
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Air Slash
+- Mystical Fire
+- Razor Wind
+- Smokescreen
 
 === TRAINER_TIANA ===
 Name: Tiana
@@ -11632,7 +11694,7 @@ Level: 33
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_BRICE ===
-Name: BRICE
+Name: Brice
 Class: Hiker
 Pic: Hiker
 Gender: Male
@@ -11640,16 +11702,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Chibi Yuugi
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Machop
+Chibi Tenshi
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRENT_1 ===
-Name: TRENT
+Name: Trent
 Class: Hiker
 Pic: Hiker
 Gender: Male
@@ -11657,20 +11719,20 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Chibi Shou
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
+Chibi Tenshi
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
+Chibi Shou
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LENNY ===
-Name: LENNY
+Name: Lenny
 Class: Hiker
 Pic: Hiker
 Gender: Male
@@ -11678,16 +11740,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Chibi Tenshi
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Machop
+Normal Kyouko
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LUCAS_1 ===
-Name: LUCAS
+Name: Lucas
 Class: Hiker
 Pic: Hiker
 Gender: Male
@@ -11695,11 +11757,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Chibi Tenshi
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Numel
+Chibi Letty
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11737,20 +11799,20 @@ Chibi Kyouko
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ERIC ===
-Name: ERIC
+=== TRAINER_ARTEMIS ===
+Name: Artemis
 Class: Hiker
 Pic: Hiker
-Gender: Male
-Music: Hiker
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Chibi Kaguya
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Baltoy
+Chibi Mokou
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12044,7 +12106,7 @@ Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GERALD ===
-Name: GERALD
+Name: Gerald
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
@@ -12053,13 +12115,9 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Kecleon
+Normal Mokou
 Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Flamethrower
-- Fury Swipes
-- Feint Attack
-- Bind
 
 === TRAINER_VIVIAN ===
 Name: Vivian
@@ -12079,7 +12137,7 @@ Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_DANIELLE ===
-Name: DANIELLE
+Name: Danielle
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
@@ -12087,13 +12145,9 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Meditite
+Normal Kisume
 Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Bide
-- Detect
-- Confusion
-- Fire Punch
 
 === TRAINER_HIDEO ===
 Name: HIDEO
@@ -12800,7 +12854,7 @@ Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TORI_AND_TIA ===
-Name: TORI & TIA
+Name: Tori & Tia
 Class: Twins
 Pic: Twins
 Gender: Male
@@ -12808,11 +12862,11 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move
 
-Spinda
+Chibi Teireida
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Spinda
+Chibi Satono
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12842,7 +12896,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Earthquake
 
 === TRAINER_TYRA_AND_IVY ===
-Name: TYRA & IVY
+Name: Tyra & Ivy
 Class: Sr And Jr
 Pic: Sr And Jr
 Gender: Male
@@ -12850,21 +12904,13 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move
 
-Roselia
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Growth
-- Stun Spore
-- Mega Drain
-- Leech Seed
-
-Graveler
+Chibi Momiji
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Defense Curl
-- Rollout
-- Mud Sport
-- Rock Throw
+
+Chibi Aya
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MEL_AND_PAUL ===
 Name: Mel & Paul
@@ -12884,7 +12930,7 @@ Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHN_AND_JAY_1 ===
-Name: JOHN & JAY
+Name: John & Jay
 Class: Old Couple
 Pic: Old Couple
 Gender: Male
@@ -12892,21 +12938,13 @@ Music: Intense
 Double Battle: Yes
 AI: Basic Trainer
 
-Medicham
-Level: 39
+Extra Utsuho
+Level: 54
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Psychic
-- Fire Punch
-- Psych Up
-- Protect
 
-Hariyama
-Level: 39
+Extra Suwako
+Level: 54
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Focus Punch
-- Rock Tomb
-- Rest
-- Belly Drum
 
 === TRAINER_JOHN_AND_JAY_2 ===
 Name: JOHN & JAY
@@ -13356,7 +13394,7 @@ Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SOPHIE ===
-Name: SOPHIE
+Name: Sophie
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
@@ -13364,16 +13402,16 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Marill
-Level: 17
+Chibi Chen
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lombre
+Chibi Nazrin
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_COBY ===
-Name: COBY
+Name: Coby
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
@@ -13381,16 +13419,16 @@ Music: Cool
 Double Battle: No
 AI: Check Bad Move
 
-Skarmory
-Level: 17
+Chibi Mystia
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Swellow
+Normal Tokiko
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAWRENCE ===
-Name: LAWRENCE
+Name: Lawrence
 Class: Camper
 Pic: Camper
 Gender: Male
@@ -13398,16 +13436,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Baltoy
+Chibi Chen
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Sandshrew
+Chibi Ran
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WYATT ===
-Name: WYATT
+Name: Wyatt
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
@@ -13415,16 +13453,16 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Aron
+Chibi Hakurei
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Aron
+Chibi Kirisame
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANGELINA ===
-Name: ANGELINA
+Name: Angelina
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
@@ -13432,16 +13470,16 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Lombre
+Chibi Kagerou
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Marill
+Normal Tokiko
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAI ===
-Name: KAI
+Name: Kai
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -13449,12 +13487,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Barboach
+Normal Hina
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHARLOTTE ===
-Name: CHARLOTTE
+Name: Charlotte
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
@@ -13462,7 +13500,7 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Nuzleaf
+Normal Kyouko
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13953,7 +13991,7 @@ Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRYANT ===
-Name: BRYANT
+Name: Bryant
 Class: Kindler
 Pic: Kindler
 Gender: Male
@@ -13961,16 +13999,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Chibi Yuki
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Slugma
+Chibi Mokou
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHAYLA ===
-Name: SHAYLA
+Name: Shayla
 Class: Aroma Lady
 Pic: Aroma Lady
 Gender: Female
@@ -13978,16 +14016,16 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Shroomish
+Chibi Yuuka
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Roselia
+Normal Medicine
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KYRA ===
-Name: KYRA
+Name: Kyra
 Class: Triathlete
 Pic: Running Triathlete F
 Gender: Female
@@ -13995,16 +14033,16 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Doduo
-Level: 26
+Chibi Aya
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Dodrio
-Level: 26
+Normal Chen
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAIDEN ===
-Name: JAIDEN
+Name: Jaiden
 Class: Ninja Boy
 Pic: Ninja Boy
 Gender: Male
@@ -14012,16 +14050,16 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Ninjask
-Level: 26
+Chibi Medicine
+Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Gulpin
-Level: 26
+Normal Hina
+Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALIX ===
-Name: ALIX
+Name: Alix
 Class: Psychic
 Pic: Psychic F
 Gender: Female
@@ -14029,16 +14067,16 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Kadabra
-Level: 26
+Chibi Yukari
+Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Kirlia
-Level: 26
+Chibi Byakuren
+Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HELENE ===
-Name: HELENE
+Name: Helene
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
@@ -14046,16 +14084,16 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Meditite
-Level: 26
+Chibi Suika
+Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Makuhita
-Level: 26
+Chibi Meiling
+Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARLENE ===
-Name: MARLENE
+Name: Marlene
 Class: Psychic
 Pic: Psychic F
 Gender: Female
@@ -14063,11 +14101,11 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Meditite
+Chibi Reisen
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Spoink
+Chibi Alice
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
