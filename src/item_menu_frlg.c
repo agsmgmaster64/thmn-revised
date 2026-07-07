@@ -457,7 +457,7 @@ const u32 gBagBg_Gfx[] = INCGFX_U32("graphics/item_menu_frlg/bg.png", ".4bpp.smo
 const u32 gBagBg_Tilemap[] = INCBIN_U32("graphics/item_menu_frlg/bg.bin.smolTM");
 const u32 gBagBg_ItemPC_Tilemap[] = INCBIN_U32("graphics/item_menu_frlg/bg_item_pc.bin.smolTM");
 const u16 gBagBgPalette[] = INCGFX_U16("graphics/item_menu_frlg/bg.png", ".gbapal"); // palette 1 (Boy + misc Pal)
-const u16 gBagBgPalette_FemaleOverride[] = INCGFX_U16("graphics/item_menu_frlg/bg_female.pal", ".gbapal"); // palette 2 (Girl)
+const u16 gBagBgPalette_AWR[] = INCGFX_U16("graphics/item_menu_frlg/bg_awr.png", ".gbapal"); // palette 2 (Girl)
 
 const u32 gBagMale_Gfx[] = INCGFX_U32("graphics/item_menu_frlg/bag_male.png", ".4bpp.smol");
 const u32 gBagFemale_Gfx[] = INCGFX_U32("graphics/item_menu_frlg/bag_female.png", ".4bpp.smol");
@@ -467,13 +467,13 @@ static const u16 sBagWindowPalF[] = INCGFX_U16("graphics/item_menu_frlg/bag_wind
 
 static const struct CompressedSpriteSheet gSpriteSheet_BagMale = {
     .data = gBagMale_Gfx,
-    .size = 0x2000,
+    .size = 0x3800,
     .tag = RG_TAG_BAG
 };
 
 static const struct CompressedSpriteSheet gSpriteSheet_BagFemale = {
     .data = gBagFemale_Gfx,
-    .size = 0x2000,
+    .size = 0x3800,
     .tag = RG_TAG_BAG
 };
 
@@ -1005,8 +1005,8 @@ static bool8 DoLoadBagGraphics(void)
         break;
     case 2:
         LoadPalette(gBagBgPalette, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
-        if (!BagIsTutorial() && gSaveBlock2Ptr->playerGender != MALE)
-            LoadPalette(gBagBgPalette_FemaleOverride, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
+        if (IS_AWR)
+            LoadPalette(gBagBgPalette_AWR, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
         sBagMenuDisplay->data[0]++;
         break;
     case 3:
