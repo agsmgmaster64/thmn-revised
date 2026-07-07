@@ -41,26 +41,38 @@ static const struct OamData sOamData_Bag = {
 };
 
 static const union AnimCmd sAnim_Bag_OpenPokeBallsPocket[] = {
-    ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0x40, 0),
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x040, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sAnim_Bag_OpenItemsPocket[] = {
-    ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0x80, 0),
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x080, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sAnim_Bag_OpenKeyItemsPocket[] = {
-    ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0xc0, 0),
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x0c0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Bag_OpenBattleItemsPocket[] = {
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x100, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sAnim_Bag_OpenBerriesPocket[] = {
-    ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0xc0, 0),
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x140, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Bag_OpenMedicinePocket[] = {
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x180, 0),
     ANIMCMD_END
 };
 
