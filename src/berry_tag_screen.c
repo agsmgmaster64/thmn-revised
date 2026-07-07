@@ -5,6 +5,7 @@
 #include "decompress.h"
 #include "event_object_movement.h"
 #include "item_menu.h"
+#include "item_menu_frlg.h"
 #include "item.h"
 #include "item_use.h"
 #include "main.h"
@@ -616,7 +617,7 @@ static void Task_HandleInput(u8 taskId)
 static void TryChangeDisplayedBerry(u8 taskId, s8 toMove)
 {
     s16 *data = gTasks[taskId].data;
-    s16 currPocketPosition = gBagPosition.scrollPosition[POCKET_BERRIES] + gBagPosition.cursorPosition[POCKET_BERRIES];
+    s16 currPocketPosition = gBagMenuState.scrollPosition[FRLG_POCKET_BERRIES] + gBagMenuState.cursorPos[FRLG_POCKET_BERRIES];
     u32 newPocketPosition = currPocketPosition + toMove;
     if (newPocketPosition < NUM_BERRIES && GetBagItemId(POCKET_BERRIES, newPocketPosition) != ITEM_NONE)
     {
@@ -634,8 +635,8 @@ static void TryChangeDisplayedBerry(u8 taskId, s8 toMove)
 
 static void HandleBagCursorPositionChange(s8 toMove)
 {
-    u16 *scrollPos = &gBagPosition.scrollPosition[POCKET_BERRIES];
-    u16 *cursorPos = &gBagPosition.cursorPosition[POCKET_BERRIES];
+    u16 *scrollPos = &gBagMenuState.scrollPosition[FRLG_POCKET_BERRIES];
+    u16 *cursorPos = &gBagMenuState.cursorPos[FRLG_POCKET_BERRIES];
     if (toMove > 0)
     {
         if (*cursorPos < 4 || GetBagItemId(POCKET_BERRIES, *scrollPos + 8) == 0)

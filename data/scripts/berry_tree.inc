@@ -232,6 +232,8 @@ BerryTree_EventScript_DontWater::
 BerryTree_EventScript_ItemUseWailmerPail::
 	special ObjectEventInteractionGetBerryTreeData
 	lockall
+	specialvar VAR_RESULT, CanWaterBerryPlot
+	goto_if_eq VAR_RESULT, FALSE, BerryTree_EventScript_WailmerPail_AlreadyWatered
 BerryTree_EventScript_WaterBerry::
 	special ObjectEventInteractionGetBerryName
 	message BerryTree_Text_WateredTheBerry
@@ -243,6 +245,10 @@ BerryTree_EventScript_WaterBerry::
 	waitbuttonpress
 	releaseall
 	end
+
+BerryTree_EventScript_WailmerPail_AlreadyWatered:
+	msgbox BerryTree_Text_PlantAlreadyWatered
+	goto BerryTree_EventScript_DontWater
 
 BerryTree_EventScript_PlantBerry::
 	special ObjectEventInteractionPlantBerryTree
@@ -340,6 +346,9 @@ BerryTree_Text_WateredTheBerry:
 
 BerryTree_Text_PlantIsDelighted:
 	.string "The plant seems to be delighted.$"
+
+BerryTree_Text_PlantAlreadyWatered:
+	.string "The plant has already been watered.$"
 
 BerryTree_Text_ExclamationPoint:
 	.string "!$"
