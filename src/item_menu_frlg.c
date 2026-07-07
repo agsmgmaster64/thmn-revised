@@ -4,6 +4,7 @@
 #include "battle_controllers.h"
 #include "bg.h"
 #include "berry_pouch.h"
+#include "berry_tag_screen.h"
 #include "decompress.h"
 #include "event_scripts.h"
 #include "event_object_movement.h"
@@ -89,6 +90,7 @@ enum {
     FRLG_BAG_SUBWINDOW_OPTIONS_2,
     FRLG_BAG_SUBWINDOW_OPTIONS_3,
     FRLG_BAG_SUBWINDOW_OPTIONS_4,
+    FRLG_BAG_SUBWINDOW_OPTIONS_5,
 };
 
 enum {
@@ -321,7 +323,17 @@ static const struct WindowTemplate sWindowTemplates[] = {
         .height = 8,
         .paletteNum = 15,
         .baseBlock = 0x20a
-    }
+    },
+    [FRLG_BAG_SUBWINDOW_OPTIONS_5] =
+    {
+        .bg = 0,
+        .tilemapLeft = 22,
+        .tilemapTop = 9,
+        .width = 7,
+        .height = 10,
+        .paletteNum = 15,
+        .baseBlock = 0x20a
+    },
 };
 
 static EWRAM_DATA u8 sOpenWindows[11] = {};
@@ -330,7 +342,7 @@ EWRAM_DATA struct BagStruct gBagMenuState = {};
 static EWRAM_DATA struct BagMenuAlloc * sBagMenuDisplay = NULL;
 static EWRAM_DATA void *sBagBgTilemapBuffer = NULL;
 static EWRAM_DATA struct ListMenuItem * sListMenuItems = NULL;
-static EWRAM_DATA u8 (*sListMenuItemStrings)[19] = NULL;
+static EWRAM_DATA u8 (*sListMenuItemStrings)[ITEM_NAME_LENGTH + 6] = NULL;
 static EWRAM_DATA u8 sContextMenuItemsBuffer[4] = {};
 static EWRAM_DATA const u8 *sContextMenuItemsPtr = NULL;
 static EWRAM_DATA u8 sContextMenuNumItems = 0;
@@ -389,6 +401,7 @@ static void Task_ItemMenuAction_Cancel(u8 taskId);
 static void Task_PrintItemCantBeHeld(u8 taskId);
 static void Task_WaitAButtonAndCloseContextMenu(u8 taskId);
 static void Task_ItemMenuAction_BattleUse(u8 taskId);
+static void Task_ItemMenuAction_CheckTag(u8 taskId);
 static void Task_ItemContext_FieldGive(u8 taskId);
 static void GoToTMCase_Give(void);
 static void GoToBerryPouch_Give(void);
@@ -417,6 +430,7 @@ static void Task_TrySortOptions(u8 taskId);
 static void Task_ItemMenuAction_SortByName(u8 taskId);
 static void Task_ItemMenuAction_SortByType(u8 taskId);
 static void Task_ItemMenuAction_SortByAmount(u8 taskId);
+static void Task_ItemMenuAction_SortByIndex(u8 taskId);
 static void Task_SortItem_Yes(u8 taskId);
 static void Task_SortItem_No(u8 taskId);
 static void Task_ItemContext_ChooseMulch(u8 taskId);
@@ -527,14 +541,16 @@ static const struct MenuAction sItemMenuContextActions[ITEMMENUACTION_COUNT] = {
     [ITEMMENUACTION_GIVE]           = { gMenuText_Give,             {Task_ItemMenuAction_Give}},
     [ITEMMENUACTION_CANCEL]         = { gText_Cancel,               {Task_ItemMenuAction_Cancel}},
     [ITEMMENUACTION_BATTLE_USE]     = { gMenuText_Use,              {Task_ItemMenuAction_BattleUse}},
-    [ITEMMENUACTION_CHECK]          = { COMPOUND_STRING("CHECK"),   {Task_ItemMenuAction_Use}},
-    [ITEMMENUACTION_OPEN]           = { COMPOUND_STRING("OPEN"),    {Task_ItemMenuAction_Use}},
-    [ITEMMENUACTION_OPEN_BERRIES]   = { COMPOUND_STRING("OPEN"),    {Task_ItemMenuAction_BattleUse}},
-    [ITEMMENUACTION_WALK]           = { COMPOUND_STRING("WALK"),    {Task_ItemMenuAction_Use}},
+    [ITEMMENUACTION_CHECK]          = { COMPOUND_STRING("Check"),   {Task_ItemMenuAction_Use}},
+    [ITEMMENUACTION_OPEN]           = { COMPOUND_STRING("Open"),    {Task_ItemMenuAction_Use}},
+    [ITEMMENUACTION_OPEN_BERRIES]   = { COMPOUND_STRING("Open"),    {Task_ItemMenuAction_BattleUse}},
+    [ITEMMENUACTION_WALK]           = { COMPOUND_STRING("Walk"),    {Task_ItemMenuAction_Use}},
     [ITEMMENUACTION_DESELECT]       = { gText_Deselect,             {Task_ItemMenuAction_ToggleSelect}},
-    [ITEMMENUACTION_SORT_NAME]      = { COMPOUND_STRING("NAME"),    {Task_ItemMenuAction_SortByName}},
-    [ITEMMENUACTION_SORT_AMOUNT]    = { COMPOUND_STRING("AMOUNT"),  {Task_ItemMenuAction_SortByAmount}},
-    [ITEMMENUACTION_SORT_TYPE]      = { COMPOUND_STRING("TYPE"),    {Task_ItemMenuAction_SortByType}},
+    [ITEMMENUACTION_SORT_NAME]      = { COMPOUND_STRING("Name"),    {Task_ItemMenuAction_SortByName}},
+    [ITEMMENUACTION_SORT_AMOUNT]    = { COMPOUND_STRING("Amount"),  {Task_ItemMenuAction_SortByAmount}},
+    [ITEMMENUACTION_SORT_TYPE]      = { COMPOUND_STRING("Type"),    {Task_ItemMenuAction_SortByType}},
+    [ITEMMENUACTION_SORT_INDEX]     = { COMPOUND_STRING("Index"),   {Task_ItemMenuAction_SortByIndex}},
+    [ITEMMENUACTION_CHECK_TAG]      = { COMPOUND_STRING("Check"),   {Task_ItemMenuAction_CheckTag}},
     [ITEMMENUACTION_DUMMY]          = { COMPOUND_STRING(""),        {NULL}}
 };
 
@@ -543,6 +559,7 @@ static const u8 sBagTabToPocket[FRLG_POCKET_COUNT] =
     [FRLG_POCKET_ITEMS] = POCKET_ITEMS,
     [FRLG_POCKET_KEYITEMS] = POCKET_KEY_ITEMS,
     [FRLG_POCKET_POKEBALLS] = POCKET_POKE_BALLS,
+    [FRLG_POCKET_BERRIES] = POCKET_BERRIES,
 };
 
 static const u8 sPocketToBagTab[POCKETS_COUNT] =
@@ -550,56 +567,61 @@ static const u8 sPocketToBagTab[POCKETS_COUNT] =
     [POCKET_ITEMS] = FRLG_POCKET_ITEMS,
     [POCKET_KEY_ITEMS] = FRLG_POCKET_KEYITEMS,
     [POCKET_POKE_BALLS] = FRLG_POCKET_POKEBALLS,
-    [POCKET_BERRIES] = FRLG_POCKET_COUNT,
+    [POCKET_BERRIES] = FRLG_POCKET_BERRIES,
     [POCKET_TM_HM] = FRLG_POCKET_COUNT,
 };
 
-static const u8 sContextMenuItems_Field[][4] = {
-    [FRLG_POCKET_ITEMS] =
-    {
-        ITEMMENUACTION_USE,
-        ITEMMENUACTION_GIVE,
-        ITEMMENUACTION_TOSS,
-        ITEMMENUACTION_CANCEL
-    },
-    [FRLG_POCKET_KEYITEMS] =
-    {
-        ITEMMENUACTION_USE,
-        ITEMMENUACTION_REGISTER,
-        ITEMMENUACTION_CANCEL,
-        ITEMMENUACTION_DUMMY
-    },
-    [FRLG_POCKET_POKEBALLS] =
-    {
-        ITEMMENUACTION_GIVE,
-        ITEMMENUACTION_TOSS,
-        ITEMMENUACTION_CANCEL,
-        ITEMMENUACTION_DUMMY
-    }
+static const u8 sContextMenuItems_Items[] =
+{
+    ITEMMENUACTION_USE,
+    ITEMMENUACTION_GIVE,
+    ITEMMENUACTION_TOSS,
+    ITEMMENUACTION_CANCEL,
 };
 
-static const u8 sContextMenuItems_Sort[][4] = {
-    [FRLG_POCKET_ITEMS] =
-    {
-        ITEMMENUACTION_SORT_NAME,
-        ITEMMENUACTION_SORT_AMOUNT,
-        ITEMMENUACTION_SORT_TYPE,
-        ITEMMENUACTION_CANCEL
-    },
-    [FRLG_POCKET_KEYITEMS] =
-    {
-        ITEMMENUACTION_SORT_NAME,
-        ITEMMENUACTION_CANCEL,
-        ITEMMENUACTION_DUMMY,
-        ITEMMENUACTION_DUMMY
-    },
-    [FRLG_POCKET_POKEBALLS] =
-    {
-        ITEMMENUACTION_SORT_NAME,
-        ITEMMENUACTION_SORT_AMOUNT,
-        ITEMMENUACTION_CANCEL,
-        ITEMMENUACTION_DUMMY
-    }
+static const u8 sContextMenuItems_PokeBalls[] =
+{
+    ITEMMENUACTION_GIVE,
+    ITEMMENUACTION_TOSS,
+    ITEMMENUACTION_CANCEL,
+};
+
+static const u8 sContextMenuItems_Berries[] =
+{
+    ITEMMENUACTION_USE,
+    ITEMMENUACTION_CHECK_TAG,
+    ITEMMENUACTION_GIVE,
+    ITEMMENUACTION_TOSS,
+    ITEMMENUACTION_CANCEL,
+};
+
+static const u8 sContextMenuItems_SortItems[] =
+{
+    ITEMMENUACTION_SORT_NAME,
+    ITEMMENUACTION_SORT_TYPE,
+    ITEMMENUACTION_SORT_AMOUNT,
+    ITEMMENUACTION_CANCEL,
+};
+
+static const u8 sContextMenuItems_SortKeyItems[] =
+{
+    ITEMMENUACTION_SORT_NAME,
+    ITEMMENUACTION_CANCEL,
+};
+
+static const u8 sContextMenuItems_SortPokeBalls[] =
+{
+    ITEMMENUACTION_SORT_NAME,
+    ITEMMENUACTION_SORT_AMOUNT,
+    ITEMMENUACTION_CANCEL,
+};
+
+static const u8 sContextMenuItems_SortBerriesTMsHMs[] =
+{
+    ITEMMENUACTION_SORT_NAME,
+    ITEMMENUACTION_SORT_AMOUNT,
+    ITEMMENUACTION_SORT_INDEX,
+    ITEMMENUACTION_CANCEL,
 };
 
 static const u8 *const sSortTypeStrings[] =
@@ -610,29 +632,20 @@ static const u8 *const sSortTypeStrings[] =
     [SORT_BY_INDEX] = COMPOUND_STRING("index")
 };
 
-static const u8 sContextMenuItems_CheckGiveTossCancel[] = {
+static const u8 sContextMenuItems_Mail[] = {
     ITEMMENUACTION_CHECK,
     ITEMMENUACTION_GIVE,
     ITEMMENUACTION_TOSS,
     ITEMMENUACTION_CANCEL
 };
 
-static const u8 sContextMenuItems_GiveIfNotKeyItemPocket[][2] = {
-    [FRLG_POCKET_ITEMS] =
-    {
-        ITEMMENUACTION_GIVE,
-        ITEMMENUACTION_CANCEL
-    },
-    [FRLG_POCKET_KEYITEMS] =
-    {
-        ITEMMENUACTION_CANCEL,
-        ITEMMENUACTION_DUMMY
-    },
-    [FRLG_POCKET_POKEBALLS] =
-    {
-        ITEMMENUACTION_GIVE,
-        ITEMMENUACTION_CANCEL
-    }
+static const u8 sContextMenuItems_KeyItemsLink[] = {
+    ITEMMENUACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_Link[] = {
+    ITEMMENUACTION_GIVE,
+    ITEMMENUACTION_CANCEL
 };
 
 static const u8 sContextMenuItems_Open[] = {
@@ -645,9 +658,13 @@ static const u8 sContextMenuItems_BattleUse[] = {
     ITEMMENUACTION_CANCEL
 };
 
+static const u8 sContextMenuItems_BerryPouch[] = {
+    ITEMMENUACTION_OPEN_BERRIES,
+    ITEMMENUACTION_CANCEL
+};
+
 static const u8 sContextMenuItems_Cancel[] = {
     ITEMMENUACTION_CANCEL,
-    ITEMMENUACTION_DUMMY
 };
 
 static const TaskFunc sItemContextTaskFuncs[] = {
@@ -658,6 +675,7 @@ static const TaskFunc sItemContextTaskFuncs[] = {
     [ITEMMENULOCATION_PCBOX]            = Task_ItemContext_PcBoxGive,
     [ITEMMENULOCATION_BATTLE]           = Task_ItemContext_FieldOrBattle,
     [ITEMMENULOCATION_BERRY_TREE_MULCH] = Task_ItemContext_ChooseMulch,
+    [ITEMMENULOCATION_BERRY_TREE]       = ItemMenu_StartFadeToExitCallback,
     [ITEMMENULOCATION_WALLY]            = NULL
 };
 
@@ -684,7 +702,7 @@ static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
     .secondX = 72,
     .secondY = 72,
     .fullyUpThreshold = 0,
-    .fullyDownThreshold = 2,
+    .fullyDownThreshold = FRLG_POCKET_COUNT - 1,
     .tileTag = 111,
     .palTag = 111,
     .palNum = 0,
@@ -727,7 +745,7 @@ void GoToBagMenuFrlg(u8 location, u8 pocket, MainCallback bagCallback)
         sBagMenuDisplay->inhibitItemDescriptionPrint = FALSE;
         sBagMenuDisplay->pocketScrollArrowsTask = TASK_NONE;
         sBagMenuDisplay->pocketSwitchArrowsTask = TASK_NONE;
-        if (location == ITEMMENULOCATION_ITEMPC)
+        if (location == ITEMMENULOCATION_BERRY_TREE)
             sBagMenuDisplay->pocketSwitchMode = 1;
         else if (location == ITEMMENULOCATION_WALLY)
             sBagMenuDisplay->pocketSwitchMode = 2;
@@ -1014,7 +1032,8 @@ static u8 CreateBagInputHandlerTask(u8 location)
 // By default, the largest pocket is BAG_ITEMS_COUNT at 30.
 #define MAX_POCKET_ITEMS  ((max(BAG_ITEMS_COUNT,             \
                             max(BAG_KEYITEMS_COUNT,          \
-                                BAG_POKEBALLS_COUNT))) + 1)
+                            max(BAG_POKEBALLS_COUNT,          \
+                                BAG_BERRIES_COUNT)))) + 1)
 
 static bool8 TryAllocListMenuBuffers(void)
 {
@@ -1063,11 +1082,23 @@ static void Bag_BuildListMenuTemplate(u8 pocket, u8 bagTab)
 
 static void BagListMenuGetItemNameColored(u8 *dest, u16 itemId)
 {
-    if (itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH)
-        StringCopy(dest, sListItemTextColor_TmCase_BerryPouch);
+    u8 *end;
+    if (GetItemPocket(itemId) == POCKET_BERRIES)
+    {
+        end = CopyItemName(itemId, gStringVar2);
+        ConvertIntToDecimalStringN(gStringVar1, ItemIdToBerryType(itemId), STR_CONV_MODE_LEADING_ZEROS, 2);
+        PrependFontIdToFit(gStringVar2, end, FONT_SHORT, 100);
+        StringExpandPlaceholders(dest, gText_NumberItem_TMBerry);
+    }
     else
-        StringCopy(dest, sListItemTextColor_RegularItem);
-    StringAppend(dest, GetItemName(itemId));
+    {
+        if (itemId == ITEM_TM_CASE || itemId == ITEM_BERRY_POUCH)
+            StringCopy(dest, sListItemTextColor_TmCase_BerryPouch);
+        else
+            StringCopy(dest, sListItemTextColor_RegularItem);
+        end = StringAppend(dest, GetItemName(itemId));
+        PrependFontIdToFit(dest, end, FONT_SHORT, 100);
+    }
 }
 
 static void BagListMenuMoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
@@ -1532,7 +1563,8 @@ static void SwitchPockets(u8 taskId, s16 direction, bool16 a2)
     {
         ClearWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
         ClearWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
-        ClearWindowTilemap(FRLG_BAG_WINDOW_POCKET_NAME);
+        if (gBagMenuState.location != ITEMMENULOCATION_ITEMPC)
+            ClearWindowTilemap(FRLG_BAG_WINDOW_POCKET_NAME);
         DestroyListMenuTask(tListTaskId, &gBagMenuState.scrollPosition[gBagMenuState.bagTab], &gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         ScheduleBgCopyTilemapToVram(0);
         ItemRG_EraseItemIcon(sBagMenuDisplay->itemMenuIcon ^ 1);
@@ -1582,7 +1614,8 @@ static void Task_AnimateSwitchPockets(u8 taskId)
     case 1:
         gBagMenuState.bagTab += tSwitchDir;
         gBagMenuState.pocket = sBagTabToPocket[gBagMenuState.bagTab];
-        PrintBagPocketName();
+        if (gBagMenuState.location != ITEMMENULOCATION_ITEMPC)
+            PrintBagPocketName();
         Bag_BuildListMenuTemplate(gBagMenuState.pocket, gBagMenuState.bagTab);
         tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagMenuState.scrollPosition[gBagMenuState.bagTab], gBagMenuState.cursorPos[gBagMenuState.bagTab]);
         PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
@@ -1725,25 +1758,23 @@ static void OpenContextMenu(u8 taskId)
     case ITEMMENULOCATION_BATTLE:
         if (gSpecialVar_ItemId == ITEM_BERRY_POUCH)
         {
-            sContextMenuItemsBuffer[0] = ITEMMENUACTION_OPEN_BERRIES;
-            sContextMenuItemsBuffer[1] = ITEMMENUACTION_CANCEL;
-            sContextMenuItemsPtr = sContextMenuItemsBuffer;
-            sContextMenuNumItems = 2;
+            sContextMenuItemsPtr = sContextMenuItems_BerryPouch;
+            sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerryPouch);
         }
         else if (GetItemBattleUsage(gSpecialVar_ItemId))
         {
             sContextMenuItemsPtr = sContextMenuItems_BattleUse;
-            sContextMenuNumItems = 2;
+            sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleUse);
         }
         else
         {
             sContextMenuItemsPtr = sContextMenuItems_Cancel;
-            sContextMenuNumItems = 1;
+            sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Cancel);
         }
         break;
     case ITEMMENULOCATION_WALLY:
         sContextMenuItemsPtr = sContextMenuItems_BattleUse;
-        sContextMenuNumItems = 2;
+        sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleUse);
         break;
     default:
         if (MenuHelpers_IsLinkActive() == TRUE || InUnionRoom() == TRUE)
@@ -1751,15 +1782,20 @@ static void OpenContextMenu(u8 taskId)
             if (gSpecialVar_ItemId == ITEM_TM_CASE || gSpecialVar_ItemId == ITEM_BERRY_POUCH)
             {
                 sContextMenuItemsPtr = sContextMenuItems_Open;
-                sContextMenuNumItems = 2;
+                sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Open);
             }
             else
             {
                 if (gBagMenuState.pocket == POCKET_KEY_ITEMS)
-                    sContextMenuNumItems = 1;
+                {
+                    sContextMenuItemsPtr = sContextMenuItems_KeyItemsLink;
+                    sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_KeyItemsLink);
+                }
                 else
-                    sContextMenuNumItems = 2;
-                sContextMenuItemsPtr = sContextMenuItems_GiveIfNotKeyItemPocket[gBagMenuState.bagTab];
+                {
+                    sContextMenuItemsPtr = sContextMenuItems_Link;
+                    sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Link);
+                }
             }
         }
         else
@@ -1768,11 +1804,16 @@ static void OpenContextMenu(u8 taskId)
             {
             default:
             case POCKET_ITEMS:
-                sContextMenuNumItems = 4;
                 if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
-                    sContextMenuItemsPtr = sContextMenuItems_CheckGiveTossCancel;
+                {
+                    sContextMenuItemsPtr = sContextMenuItems_Mail;
+                    sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Mail);
+                }
                 else
-                    sContextMenuItemsPtr = sContextMenuItems_Field[FRLG_POCKET_ITEMS];
+                {
+                    sContextMenuItemsPtr = sContextMenuItems_Items;
+                    sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Items);
+                }
                 break;
             case POCKET_KEY_ITEMS:
                 sContextMenuItemsPtr = sContextMenuItemsBuffer;
@@ -1793,8 +1834,12 @@ static void OpenContextMenu(u8 taskId)
                     sContextMenuItemsBuffer[0] = ITEMMENUACTION_USE;
                 break;
             case POCKET_POKE_BALLS:
-                sContextMenuItemsPtr = sContextMenuItems_Field[FRLG_POCKET_POKEBALLS];
-                sContextMenuNumItems = 3;
+                sContextMenuItemsPtr = sContextMenuItems_PokeBalls;
+                sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_PokeBalls);
+                break;
+            case POCKET_BERRIES:
+                sContextMenuItemsPtr = sContextMenuItems_Berries;
+                sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Berries);
                 break;
             }
         }
@@ -2087,6 +2132,18 @@ static void Task_ItemMenuAction_BattleUse(u8 taskId)
         ItemUseInBattle_PartyMenu(taskId);
     else if (type == ITEM_USE_PARTY_MENU_MOVES)
         ItemUseInBattle_PartyMenuChooseMove(taskId);
+}
+
+static void Task_ItemMenuAction_CheckTag(u8 taskId)
+{
+    HideBagWindow(FRLG_BAG_SUBWINDOW_OPTIONS_1);
+    HideBagWindow(FRLG_BAG_SUBWINDOW_SELECTED);
+    PutWindowTilemap(FRLG_BAG_WINDOW_ITEM_LIST);
+    PutWindowTilemap(FRLG_BAG_WINDOW_DESCRIPTION);
+    CopyWindowToVram(FRLG_BAG_WINDOW_ITEM_LIST, COPYWIN_MAP);
+
+    ItemMenu_SetExitCallback(DoBerryTagScreen);
+    ItemMenu_StartFadeToExitCallback(taskId);
 }
 
 static void Task_ItemContext_FieldGive(u8 taskId)
@@ -2420,16 +2477,20 @@ static void OpenSortMenu(u8 taskId)
     {
     default:
     case POCKET_ITEMS:
-        sContextMenuItemsPtr = sContextMenuItems_Sort[FRLG_POCKET_ITEMS];
-        sContextMenuNumItems = 4;
+        sContextMenuItemsPtr = sContextMenuItems_SortItems;
+        sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_SortItems);
         break;
     case POCKET_KEY_ITEMS:
-        sContextMenuItemsPtr = sContextMenuItems_Sort[FRLG_POCKET_KEYITEMS];
-        sContextMenuNumItems = 2;
+        sContextMenuItemsPtr = sContextMenuItems_SortKeyItems;
+        sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_SortKeyItems);
         break;
     case POCKET_POKE_BALLS:
-        sContextMenuItemsPtr = sContextMenuItems_Sort[FRLG_POCKET_POKEBALLS];
-        sContextMenuNumItems = 3;
+        sContextMenuItemsPtr = sContextMenuItems_SortPokeBalls;
+        sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_SortPokeBalls);
+        break;
+    case POCKET_BERRIES:
+        sContextMenuItemsPtr = sContextMenuItems_SortBerriesTMsHMs;
+        sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_SortBerriesTMsHMs);
         break;
     }
     optionWindow = ShowBagWindow(FRLG_BAG_SUBWINDOW_OPTIONS_1, sContextMenuNumItems - 1);
@@ -2478,6 +2539,13 @@ static void Task_ItemMenuAction_SortByType(u8 taskId)
 {
     gTasks[taskId].tSortMethod = SORT_BY_TYPE;
     StringCopy(gStringVar1, sSortTypeStrings[SORT_BY_TYPE]);
+    Task_ItemContext_ConfirmSort(taskId);
+}
+
+static void Task_ItemMenuAction_SortByIndex(u8 taskId)
+{
+    gTasks[taskId].tSortMethod = SORT_BY_INDEX;
+    StringCopy(gStringVar1, sSortTypeStrings[SORT_BY_INDEX]);
     Task_ItemContext_ConfirmSort(taskId);
 }
 

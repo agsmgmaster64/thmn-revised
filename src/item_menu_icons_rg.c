@@ -58,10 +58,17 @@ static const union AnimCmd sAnim_Bag_OpenKeyItemsPocket[] = {
     ANIMCMD_END
 };
 
+static const union AnimCmd sAnim_Bag_OpenBerriesPocket[] = {
+    ANIMCMD_FRAME(   0, 5),
+    ANIMCMD_FRAME(0xc0, 0),
+    ANIMCMD_END
+};
+
 static const union AnimCmd *const sAnims_Bag[] = {
     [FRLG_POCKET_ITEMS]      = sAnim_Bag_OpenItemsPocket,
     [FRLG_POCKET_KEYITEMS]   = sAnim_Bag_OpenKeyItemsPocket,
     [FRLG_POCKET_POKEBALLS]  = sAnim_Bag_OpenPokeBallsPocket,
+    [FRLG_POCKET_BERRIES]    = sAnim_Bag_OpenBerriesPocket,
 };
 
 static const union AffineAnimCmd sAffineAnim_BagIdle[] = {

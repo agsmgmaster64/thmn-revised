@@ -638,6 +638,8 @@ void CB2_ChooseBerry(void)
 {
     if (FRLG_I_ADD_BERRY_POUCH_WITH_BERRIES)
         InitBerryPouch(BERRYPOUCH_BERRY_TREE, CB2_ReturnToFieldContinueScript, FALSE);
+    else if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_BERRY_TREE, FRLG_POCKET_BERRIES, CB2_ReturnToFieldContinueScript);
     else
         GoToBagMenu(ITEMMENULOCATION_BERRY_TREE, POCKET_BERRIES, CB2_ReturnToFieldContinueScript);
 }
@@ -656,6 +658,8 @@ void ChooseBerryForMachine(MainCallback exitCallback)
 {
     if (FRLG_I_ADD_BERRY_POUCH_WITH_BERRIES)
         InitBerryPouch(BERRYPOUCH_BERRY_BLENDER_CRUSH, exitCallback, FALSE);
+    else if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_BERRY_BLENDER_CRUSH, FRLG_POCKET_BERRIES, exitCallback);
     else
         GoToBagMenu(ITEMMENULOCATION_BERRY_BLENDER_CRUSH, POCKET_BERRIES, exitCallback);
 }
@@ -683,7 +687,7 @@ void CB2_GoToSellMenu(void)
 void CB2_GoToItemDepositMenu(void)
 {
     if (FRLG_I_USE_FRLG_BAG)
-        GoToBagMenuFrlg(ITEMMENULOCATION_ITEMPC, FRLG_POCKET_ITEMS, CB2_PlayerPCExitBagMenu);
+        GoToBagMenuFrlg(ITEMMENULOCATION_ITEMPC, OPEN_BAG_LAST, CB2_PlayerPCExitBagMenu);
     else
         GoToBagMenu(ITEMMENULOCATION_ITEMPC, POCKETS_COUNT, CB2_PlayerPCExitBagMenu);
 }
