@@ -145,6 +145,8 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
+enum CanMoveBeLearned CanTeachMove(struct Pokemon *, enum Move);
+
 bool32 SetUpFieldMove_Surf(void);
 bool32 SetUpFieldMove_Fly(void);
 bool32 SetUpFieldMove_Waterfall(void);

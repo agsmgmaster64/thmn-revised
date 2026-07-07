@@ -2112,3 +2112,24 @@ const u16 gItemIconPalette_SwapSnack[] = INCGFX_U16("graphics/items/icon_palette
 
 const u32 gItemIcon_TwiceSpicedRadish[] = INCGFX_U32("graphics/items/icons/twice_spiced_radish.png", ".4bpp.smol");
 const u16 gItemIconPalette_TwiceSpicedRadish[] = INCGFX_U16("graphics/items/icon_palettes/twice_spiced_radish.pal", ".gbapal");
+
+// Revised items
+
+const u32 gItemIcon_BigAxe[] = INCGFX_U32("graphics/items/icons/big_axe.png", ".4bpp.smol");
+const u16 gItemIconPalette_BigAxe[] = INCGFX_U16("graphics/items/icon_palettes/big_axe.pal", ".gbapal");
+
+const u32 gItemIcon_Surfboard[] = INCGFX_U32("graphics/items/icons/surfboard.png", ".4bpp.smol");
+const u16 gItemIconPalette_Surfboard[] = INCGFX_U16("graphics/items/icon_palettes/surfboard.pal", ".gbapal");
+
+const u32 gItemIcon_PowerGlove[] = INCGFX_U32("graphics/items/icons/power_glove.png", ".4bpp.smol");
+const u16 gItemIconPalette_PowerGlove[] = INCGFX_U16("graphics/items/icon_palettes/power_glove.pal", ".gbapal");
+
+const u32 gItemIcon_Lantern[] = INCGFX_U32("graphics/items/icons/lantern.png", ".4bpp.smol");
+const u16 gItemIconPalette_Lantern[] = INCGFX_U16("graphics/items/icon_palettes/lantern.pal", ".gbapal");
+
+const u32 gItemIcon_Pickaxe[] = INCGFX_U32("graphics/items/icons/pickaxe.png", ".4bpp.smol");
+const u16 gItemIconPalette_Pickaxe[] = INCGFX_U16("graphics/items/icon_palettes/pickaxe.pal", ".gbapal");
+
+const u32 gItemIcon_ScubaGear[] = INCGFX_U32("graphics/items/icons/scuba_gear.png", ".4bpp.smol");
+const u16 gItemIconPalette_ScubaGear[] = INCGFX_U16("graphics/items/icon_palettes/scuba_gear.pal", ".gbapal");
+

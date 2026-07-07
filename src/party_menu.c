@@ -272,7 +272,6 @@ static void DisplayPartyPokemonHPBarCheck(struct Pokemon *, struct PartyMenuBox 
 static void DisplayPartyPokemonDescriptionText(u8, struct PartyMenuBox *, u8);
 static bool8 IsMonAllowedInMinigame(u8);
 static void DisplayPartyPokemonDataToTeachMove(u8, enum Move);
-static enum CanMoveBeLearned CanTeachMove(struct Pokemon *, enum Move);
 static void DisplayPartyPokemonBarDetail(u8, const u8 *, u8, const u8 *);
 static void DisplayPartyPokemonBarDetailToFit(u8 windowId, const u8 *str, u8 color, const u8 *align, u32 width);
 static void DisplayPartyPokemonLevel(u8, struct PartyMenuBox *);
@@ -2359,7 +2358,7 @@ static void Task_HandleCancelParticipationYesNoInput(u8 taskId)
     }
 }
 
-static enum CanMoveBeLearned CanTeachMove(struct Pokemon *mon, enum Move move)
+enum CanMoveBeLearned CanTeachMove(struct Pokemon *mon, enum Move move)
 {
     if (GetMonData(mon, MON_DATA_IS_EGG))
         return CANNOT_LEARN_MOVE_IS_EGG;
@@ -3148,12 +3147,24 @@ static void CB2_ShowPokemonSummaryScreen(void)
                 GetMultiPartyForSummaryScreen();
         }
 
-        if (gPartyMenu.layout == PARTY_LAYOUT_MULTI_FULL_PARTNER)
-            ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PARTNER], gPartyMenu.slotId, CalculatePartyCount(B_TRAINER_PARTNER) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
-        else if (gPartyMenu.layout == PARTY_LAYOUT_MULTI_FULL)
-            ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PLAYER], gPartyMenu.slotId, CalculatePartyCount(B_TRAINER_PLAYER) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+        if (BW_SUMMARY_SCREEN)
+        {
+            if (gPartyMenu.layout == PARTY_LAYOUT_MULTI_FULL_PARTNER)
+                ShowPokemonSummaryScreen_BW(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PARTNER], gPartyMenu.slotId, CalculatePartyCount(B_TRAINER_PARTNER) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+            else if (gPartyMenu.layout == PARTY_LAYOUT_MULTI_FULL)
+                ShowPokemonSummaryScreen_BW(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PLAYER], gPartyMenu.slotId, CalculatePartyCount(B_TRAINER_PLAYER) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+            else
+                ShowPokemonSummaryScreen_BW(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PLAYER], gPartyMenu.slotId, CalculatePartyCountOfSide(B_BATTLER_0) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+        }
         else
-            ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PLAYER], gPartyMenu.slotId, CalculatePartyCountOfSide(B_BATTLER_0) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+        {
+            if (gPartyMenu.layout == PARTY_LAYOUT_MULTI_FULL_PARTNER)
+                ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PARTNER], gPartyMenu.slotId, CalculatePartyCount(B_TRAINER_PARTNER) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+            else if (gPartyMenu.layout == PARTY_LAYOUT_MULTI_FULL)
+                ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PLAYER], gPartyMenu.slotId, CalculatePartyCount(B_TRAINER_PLAYER) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+            else
+                ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gParties[B_TRAINER_PLAYER], gPartyMenu.slotId, CalculatePartyCountOfSide(B_BATTLER_0) - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+        }
     }
     else if (gPartyMenu.menuType == PARTY_MENU_TYPE_CHOOSE_HALF)
     {

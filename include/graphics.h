@@ -1773,6 +1773,19 @@ extern const u16 gItemIconPalette_SwapSnack[];
 extern const u32 gItemIcon_TwiceSpicedRadish[];
 extern const u16 gItemIconPalette_TwiceSpicedRadish[];
 
+extern const u32 gItemIcon_BigAxe[];
+extern const u16 gItemIconPalette_BigAxe[];
+extern const u32 gItemIcon_Surfboard[];
+extern const u16 gItemIconPalette_Surfboard[];
+extern const u32 gItemIcon_PowerGlove[];
+extern const u16 gItemIconPalette_PowerGlove[];
+extern const u32 gItemIcon_Lantern[];
+extern const u16 gItemIconPalette_Lantern[];
+extern const u32 gItemIcon_Pickaxe[];
+extern const u16 gItemIconPalette_Pickaxe[];
+extern const u32 gItemIcon_ScubaGear[];
+extern const u16 gItemIconPalette_ScubaGear[];
+
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
 
@@ -3438,5 +3451,11 @@ extern const u16 gBattleIcons_Pal2[];
 
 extern const u32 gGhostFrontPic[];
 extern const u16 gGhostPalette[];
+
+//new touhoumon stuff
+extern const u32 gBattleAnimSpriteGfx_Apollon[];
+extern const u16 gBattleAnimSpritePal_Apollon[];
+extern const u32 gBattleAnimSpriteGfx_DestitutionOrb[];
+extern const u16 gBattleAnimSpritePal_DestitutionOrb[];
 
 #endif //GUARD_GRAPHICS_H

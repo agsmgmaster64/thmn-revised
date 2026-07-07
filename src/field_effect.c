@@ -2082,9 +2082,12 @@ static bool8 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent 
     if (!ObjectEventIsMovementOverridden(objectEvent))
     {
         ObjectEventClearHeldMovementIfFinished(objectEvent);
-        gFieldEffectArguments[0] = task->tMonId;
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;
+        if (!gSkipShowMonAnim)
+        {
+            gFieldEffectArguments[0] = task->tMonId;
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        }
     }
     return FALSE;
 }
@@ -2101,6 +2104,7 @@ static bool8 WaterfallFieldEffect_WaitForShowMon(struct Task *task, struct Objec
 
 static bool8 WaterfallFieldEffect_RideUp(struct Task *task, struct ObjectEvent *objectEvent)
 {
+    gSkipShowMonAnim = FALSE;
     ObjectEventSetHeldMovement(objectEvent, GetWalkSlowMovementAction(DIR_NORTH));
     task->tState++;
     return FALSE;
@@ -2153,9 +2157,12 @@ static bool8 DiveFieldEffect_Init(struct Task *task)
 static bool8 DiveFieldEffect_ShowMon(struct Task *task)
 {
     LockPlayerFieldControls();
-    gFieldEffectArguments[0] = task->data[15];
-    FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     task->data[0]++;
+    if (!gSkipShowMonAnim)
+    {
+        gFieldEffectArguments[0] = task->data[15];
+        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+    }
     return FALSE;
 }
 
@@ -2167,6 +2174,7 @@ static bool8 DiveFieldEffect_TryWarp(struct Task *task)
     // Wait for show mon first
     if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
     {
+        gSkipShowMonAnim = FALSE;
         TryDoDiveWarp(&mapPosition, gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior);
         DestroyTask(FindTaskIdByFunc(Task_UseDive));
         FieldEffectActiveListRemove(FLDEFF_USE_DIVE);
@@ -3388,9 +3396,12 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
-        gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;
+        if (!gSkipShowMonAnim)
+        {
+            gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        }
     }
 }
 
@@ -3399,6 +3410,7 @@ static void SurfFieldEffect_JumpOnSurfBlob(struct Task *task)
     struct ObjectEvent *objectEvent;
     if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
     {
+        gSkipShowMonAnim = FALSE;
         objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
         ObjectEventClearHeldMovementIfFinished(objectEvent);
@@ -4378,9 +4390,12 @@ static bool8 RockClimb_ShowMon(struct Task *task, struct ObjectEvent *objectEven
 {
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
-        gFieldEffectArguments[0] = task->tMonId | 0x80000000;
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;
+        if (!gSkipShowMonAnim)
+        {
+            gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        }
         return TRUE;
     }
     return FALSE;
@@ -4390,6 +4405,7 @@ static bool8 RockClimb_JumpOnRockClimbBlob(struct Task *task, struct ObjectEvent
 {
     if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
     {
+        gSkipShowMonAnim = FALSE;
         objectEvent->noShadow = TRUE; // hide shadow
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
         ObjectEventClearHeldMovementIfFinished(objectEvent);

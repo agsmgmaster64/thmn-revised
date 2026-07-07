@@ -79,7 +79,7 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
 
     [EFFECT_DREAM_EATER] =
     {
-        .battleScript = BattleScript_EffectDreamEater,
+        .battleScript = BattleScript_EffectHit,
         .battleTvScore = 5,
         .encourageEncore = TRUE,
     },
@@ -515,7 +515,7 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
 
     [EFFECT_PRESENT] =
     {
-        .battleScript = BattleScript_EffectPresent,
+        .battleScript = BattleScript_EffectHit,
         .battleTvScore = 1,
         .battleFactoryStyle = FACTORY_STYLE_UNPREDICTABLE,
     },
@@ -1704,7 +1704,7 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
 
     [EFFECT_SHELL_TRAP] =
     {
-        .battleScript = BattleScript_EffectShellTrap,
+        .battleScript = BattleScript_EffectHit,
         .battleTvScore = 0, // TODO: Assign points
     },
 
@@ -1906,5 +1906,62 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
     {
         .battleScript = BattleScript_EffectHit,
         .battleTvScore = 0, // TODO: Assign points
+    },
+
+    [EFFECT_APOLLON] =
+    {
+        .battleScript = BattleScript_EffectFutureSight,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_AEGIS_MERGE] =
+    {
+        .battleScript = BattleScript_EffectStatChange,
+        .battleTvScore = 0, // TODO: Assign points
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_MOOD_SWING] =
+    {
+        .battleScript = BattleScript_EffectStatChange,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_IDENTIFY] =
+    {
+        .battleScript = BattleScript_EffectIdentify,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_GROUP_PRANK] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+        .twoTurnEffect = TRUE,
+    },
+
+    [EFFECT_BEDDY_BYE] =
+    {
+        .battleScript = BattleScript_EffectBeddyBye,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_FLIGHT] =
+    {
+        .battleScript = BattleScript_EffectFlight,
+        .battleTvScore = 1,
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_INVOCATION] =
+    {
+        .battleScript = BattleScript_EffectStatChange,
+        .battleTvScore = 0, // TODO: Assign points
+        .encourageEncore = TRUE,
     },
 };

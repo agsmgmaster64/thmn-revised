@@ -308,30 +308,6 @@ enum StatChangeResult TryStatChange(struct BattleCalcValues *cv, struct StatChan
     return result;
 }
 
-enum StatChangeResult TrySingleStatChange(struct BattleCalcValues *cv, struct StatChange *st)
-{
-    AdjustStatStage(cv, st);
-
-    if (st->stage < 0)
-    {
-        if (CanDecreaseStat(cv, st) == STAT_CHANGE_DIDNT_WORK)
-            return STAT_CHANGE_DIDNT_WORK;
-
-        if (DecreaseStat(cv, st) == STAT_CHANGE_WORKED)
-            return STAT_CHANGE_WORKED;
-    }
-    else
-    {
-        if (CanIncreaseStat(cv, st) == STAT_CHANGE_DIDNT_WORK)
-            return STAT_CHANGE_DIDNT_WORK;
-
-        if (IncreaseStat(cv, st) == STAT_CHANGE_WORKED)
-            return STAT_CHANGE_WORKED;
-    }
-
-    return STAT_CHANGE_DIDNT_WORK;
-}
-
 static enum StatChangeResult CanDecreaseStat(struct BattleCalcValues *cv, struct StatChange *st)
 {
     if (IsMistProtected(cv, st)
@@ -1071,6 +1047,21 @@ static void SetAdditionalEffectsOnStatChange(struct BattleCalcValues *cv, struct
             gBattleMons[cv->battlerDef].volatiles.noRetreat = TRUE;
             gBattleMons[cv->battlerDef].volatiles.escapePrevention = TRUE;
             st->moveScript = BattleScript_NoRetreatMessage;
+        }
+        break;
+    case EFFECT_AEGIS_MERGE:
+        if (!gBattleMons[cv->battlerDef].volatiles.root)
+        {
+            gBattleMons[cv->battlerDef].volatiles.root = TRUE;
+            gBattleMons[cv->battlerDef].volatiles.escapePrevention = TRUE;
+            st->moveScript = BattleScript_AegisMergeMessage;
+        }
+        break;
+    case EFFECT_INVOCATION:
+        if (!gBattleMons[cv->battlerDef].volatiles.cursed)
+        {
+            gBattleMons[cv->battlerDef].volatiles.cursed = TRUE;
+            st->moveScript = BattleScript_InvocationMessage;
         }
         break;
     case EFFECT_AUTOTOMIZE:

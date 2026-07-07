@@ -41,27 +41,48 @@ static const struct OamData sOamData_Bag = {
 };
 
 static const union AnimCmd sAnim_Bag_OpenPokeBallsPocket[] = {
-    ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0x40, 0),
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x040, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sAnim_Bag_OpenItemsPocket[] = {
-    ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0x80, 0),
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x080, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sAnim_Bag_OpenKeyItemsPocket[] = {
-    ANIMCMD_FRAME(   0, 5),
-    ANIMCMD_FRAME(0xc0, 0),
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x0c0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Bag_OpenBattleItemsPocket[] = {
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x100, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Bag_OpenBerriesPocket[] = {
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x140, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Bag_OpenMedicinePocket[] = {
+    ANIMCMD_FRAME(    0, 5),
+    ANIMCMD_FRAME(0x180, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd *const sAnims_Bag[] = {
-    [FRLG_POCKET_ITEMS]      = sAnim_Bag_OpenItemsPocket,
-    [FRLG_POCKET_KEYITEMS]   = sAnim_Bag_OpenKeyItemsPocket,
-    [FRLG_POCKET_POKEBALLS]  = sAnim_Bag_OpenPokeBallsPocket,
+    [FRLG_POCKET_ITEMS]        = sAnim_Bag_OpenItemsPocket,
+    [FRLG_POCKET_BATTLE_ITEMS] = sAnim_Bag_OpenBattleItemsPocket,
+    [FRLG_POCKET_MEDICINE]     = sAnim_Bag_OpenMedicinePocket,
+    [FRLG_POCKET_KEYITEMS]     = sAnim_Bag_OpenKeyItemsPocket,
+    [FRLG_POCKET_POKEBALLS]    = sAnim_Bag_OpenPokeBallsPocket,
+    [FRLG_POCKET_BERRIES]      = sAnim_Bag_OpenBerriesPocket,
 };
 
 static const union AffineAnimCmd sAffineAnim_BagIdle[] = {
@@ -146,7 +167,7 @@ void ItemRG_ResetItemMenuIconState(void)
 
 void ItemRG_CreateBagSprite(u8 animNum)
 {
-    sItemMenuIconSpriteIds[SPR_BAG] = CreateSprite(&sSpriteTemplate_Bag, 40, 68, 0);
+    sItemMenuIconSpriteIds[SPR_BAG] = CreateSprite(&sSpriteTemplate_Bag, 40, 76, 0);
     ItemRG_SetBagVisualPocketId(animNum);
 }
 

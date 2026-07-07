@@ -1061,3 +1061,25 @@ void AnimTask_MoveSkyUppercutBg(u8 taskId)
         DestroyAnimVisualTask(taskId);
     }
 }
+
+const struct SpriteTemplate gDebtSpiralSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_COIN,
+    .paletteTag = ANIM_TAG_COIN,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDizzyPunchDuck,
+};
+
+const struct SpriteTemplate gEarthPressSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ROCKS,
+    .paletteTag = ANIM_TAG_ROCKS,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sAnims_BasicRock,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSlideHandOrFootToTarget,
+};

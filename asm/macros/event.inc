@@ -762,7 +762,7 @@
 	.ifgt \isDouble; .set trainerbattle_flags, trainerbattle_flags | (1 << 0); .endif
 	.ifgt \isRematch; .set trainerbattle_flags, trainerbattle_flags | (1 << 1); .endif
 	.ifgt \playMusicA; .set trainerbattle_flags, trainerbattle_flags | (1 << 2); .endif
-	.ifgt \playMusicB; .set trainerBattle_flags, trainerbattle_flags | (1 << 3); .endif
+	.ifgt \playMusicB; .set trainerbattle_flags, trainerbattle_flags | (1 << 3); .endif
 	.ifgt \continueScript; .set trainerbattle_flags, trainerbattle_flags | (1 << 4); .endif
 	.ifgt \facePlayer; .set trainerbattle_flags, trainerbattle_flags | (1 << 5); .endif
 	.ifgt \earlyRival; .set trainerbattle_flags, trainerbattle_flags | (1 << 6); .endif
@@ -831,7 +831,7 @@
 
 	@ Starts a trainer battle with victory text if the player loses. If flags is nonzero, the player will be healed after battle (and its assumed to be the tutorial battle)
 	.macro trainerbattle_earlyrival trainer:req, flags:req, lose_text:req, victory_text:req
-	trainerbattle OBJ_ID_NONE, \trainer, NULL, \lose_text, NULL, OBJ_ID_NONE, TRAINER_NONE, NULL, NULL, NULL, \victory_text, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, \flags
+	trainerbattle OBJ_ID_NONE, \trainer, NULL, \lose_text, NULL, OBJ_ID_NONE, TRAINER_NONE, NULL, NULL, NULL, \victory_text, NULL, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, \flags
 	.endm
 
 	@ Starts a lavaridge gym battle
@@ -1299,9 +1299,20 @@
 
 	@ Opens the Pokemart system, offering the specified products for sale.
 	@ Products should be a list of .2byte item values preceded by an .align 2
-	.macro pokemart products=Pokemart_DefaultItemList
+	.macro pokemart products=Pokemart_DefaultItemList, shopType=NEW_SHOP_PRICE_TYPE_NORMAL
 	.byte SCR_OP_POKEMART
 	.4byte \products
+	.2byte \shopType
+	.endm
+
+	@ Pokemart using coins for currency
+	.macro coinmart products:req
+	pokemart \products, NEW_SHOP_PRICE_TYPE_COINS
+	.endm
+
+	@ Pokemart using battle points for currency
+	.macro battlepointmart products:req
+	pokemart \products, NEW_SHOP_PRICE_TYPE_POINTS
 	.endm
 
 	@ Used as the endpoint for a Pokemart item list
@@ -1318,7 +1329,7 @@
 	.4byte \products
 	.endm
 
-	@ Identical to pokemartdecoration, but with slight changes to the clerk dialogue. See uses of MART_TYPE_DECOR2.
+	@ Identical to pokemartdecoration, but with slight changes to the clerk dialogue. See uses of NEW_SHOP_TYPE_DECOR2.
 	.macro pokemartdecoration2 products:req
 	.byte SCR_OP_POKEMARTDECORATION2
 	.4byte \products
@@ -1369,52 +1380,38 @@
 	.endm
 
 	@ Adds value to the player's money. If adding 'value' money would exceed MAX_MONEY, the player's money is set to MAX_MONEY.
-	@ If 'disable' is set to anything but 0 then this command does nothing.
-	.macro addmoney value:req, disable=0
+	.macro addmoney value:req
 	.byte SCR_OP_ADDMONEY
 	.4byte \value
-	.byte \disable
 	.endm
 
 	@ Subtracts value from the player's money. If the player has less than 'value' money, their money is set to 0.
-	@ If 'disable' is set to anything but 0 then this command does nothing.
-	.macro removemoney value:req, disable=0
+	.macro removemoney value:req
 	.byte SCR_OP_REMOVEMONEY
 	.4byte \value
-	.byte \disable
 	.endm
 
 	@ Checks if the player has money >= value. VAR_RESULT is set to TRUE if the player has enough money, or FALSE if they do not.
-	@ If 'disable' is set to anything but 0 then this command does nothing.
-	.macro checkmoney value:req, disable=0
+	.macro checkmoney value:req
 	.byte SCR_OP_CHECKMONEY
 	.4byte \value
-	.byte \disable
 	.endm
 
 	@ Creates a window showing how much money the player has.
-	@ If 'disable' is set to anything but 0 then this command does nothing.
-	.macro showmoneybox x:req, y:req, disable=0
+	.macro showmoneybox x:req, y:req
 	.byte SCR_OP_SHOWMONEYBOX
 	.byte \x
 	.byte \y
-	.byte \disable
 	.endm
 
-	@ Destroys the window created by showmoneybox. Consumption of the x and y arguments was dummied out.
+	@ Destroys the window created by showmoneybox.
 	.macro hidemoneybox
 	.byte SCR_OP_HIDEMONEYBOX
-	.byte 0  @ \x
-	.byte 0  @ \y
 	.endm
 
-	@ Updates the window created by showmoneybox. Consumption of the x and y arguments was dummied out.
-	@ If 'disable' is set to anything but 0 then this command does nothing.
-	.macro updatemoneybox disable=0
+	@ Updates the window created by showmoneybox.
+	.macro updatemoneybox
 	.byte SCR_OP_UPDATEMONEYBOX
-	.byte 0  @ \x
-	.byte 0  @ \y
-	.byte \disable
 	.endm
 
 	@ Gets whether the effects of the specified PokeNews program are active. newsKind is a POKENEWS_* constant.
@@ -1726,18 +1723,14 @@
 	.byte \y
 	.endm
 
-	@ Destroys the window created by showcoins. It consumes its arguments but doesn't use them.
-	.macro hidecoinsbox x:req, y:req
+	@ Destroys the window created by showcoins.
+	.macro hidecoinsbox
 	.byte SCR_OP_HIDECOINSBOX
-	.byte \x
-	.byte \y
 	.endm
 
-	@ Updates the window created by showcoins. It consumes its arguments but doesn't use them.
-	.macro updatecoinsbox x:req, y:req
+	@ Updates the window created by showcoins.
+	.macro updatecoinsbox
 	.byte SCR_OP_UPDATECOINSBOX
-	.byte \x
-	.byte \y
 	.endm
 
 	@ Increases the value of the specified game stat by 1. The maximum value of a stat is 0xFFFFFF. See include/constants/game_stat.h
@@ -3023,3 +3016,44 @@
 	getbraillestringwidth \text
 	call EventScript_BrailleCursorWaitButton
 	.endm
+
+	@ example_usage:
+	@ 	createfieldmugshot MUGSHOT_TEST, EMOTE_NORMAL
+	@ 	msgbox test
+	@ 	removefieldmugshot
+	@ 	createfieldmugshot MUGSHOT_TEST, EMOTE_ALT
+	@ 	msgbox test2
+	@ 	removefieldmugshot
+
+	@ spawn a mugshot in the overworld at a specific coordinate
+	.macro createfieldmugshot mugshot:req, emote=EMOTE_NORMAL top=MUGSHOT_X left=MUGSHOT_Y
+	callnative Script_CreateFieldMugshot, requests_effects=1
+	.2byte \mugshot
+	.2byte \emote
+	.2byte \top
+	.2byte \left
+	.endm
+
+	@ destroys a mugshot in the overworld, if there is one
+	.macro removefieldmugshot
+	callnative Script_RemoveFieldMugshot, requests_effects=1
+	.endm
+
+	@ Start qol_field_moves
+
+	@ Checks if any Pokémon in the party can learn a specific HM.
+	@ If so, VAR_RESULT is set to the
+	@ (zero-indexed) slot number of the first Pokemon that knows the move. If not, VAR_RESULT is set to PARTY_SIZE.
+	@ VAR_0x8004 is also set to this Pokemon's species.
+	.macro partycheckfieldmove fieldMove:req, checkUnlocked=FALSE
+	callnative ScrCmd_partycheckfieldmove, requests_effects=1
+	.byte \fieldMove
+	.byte \checkUnlocked
+	.endm
+
+	.macro setskipshowanim
+	callnative ScrCmd_setskipshowanim, requests_effects=1
+	.endm
+
+	@ End qol_field_moves
+

@@ -51,6 +51,7 @@
 #include "window.h"
 #include "apprentice.h"
 #include "battle_pike.h"
+#include "new_shop.h"
 #include "constants/items.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
@@ -637,6 +638,8 @@ void CB2_ChooseBerry(void)
 {
     if (FRLG_I_ADD_BERRY_POUCH_WITH_BERRIES)
         InitBerryPouch(BERRYPOUCH_BERRY_TREE, CB2_ReturnToFieldContinueScript, FALSE);
+    else if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_BERRY_TREE, FRLG_POCKET_BERRIES, CB2_ReturnToFieldContinueScript);
     else
         GoToBagMenu(ITEMMENULOCATION_BERRY_TREE, POCKET_BERRIES, CB2_ReturnToFieldContinueScript);
 }
@@ -655,27 +658,39 @@ void ChooseBerryForMachine(MainCallback exitCallback)
 {
     if (FRLG_I_ADD_BERRY_POUCH_WITH_BERRIES)
         InitBerryPouch(BERRYPOUCH_BERRY_BLENDER_CRUSH, exitCallback, FALSE);
+    else if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_BERRY_BLENDER_CRUSH, FRLG_POCKET_BERRIES, exitCallback);
     else
         GoToBagMenu(ITEMMENULOCATION_BERRY_BLENDER_CRUSH, POCKET_BERRIES, exitCallback);
 }
 
 void CB2_ChooseBall(void)
 {
-    GoToBagMenu(ITEMMENULOCATION_RAIDEND, POCKET_POKE_BALLS, CB2_SetUpReshowBattleScreenAfterMenu2);
+    if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_RAIDEND, FRLG_POCKET_POKEBALLS, CB2_SetUpReshowBattleScreenAfterMenu2);
+    else
+        GoToBagMenu(ITEMMENULOCATION_RAIDEND, POCKET_POKE_BALLS, CB2_SetUpReshowBattleScreenAfterMenu2);
 }
 
 void CB2_GoToSellMenu(void)
 {
+    #ifdef MUDSKIP_SHOP_UI
+    if (FRLG_I_USE_FRLG_BAG)
+        GoToBagMenuFrlg(ITEMMENULOCATION_SHOP, OPEN_BAG_LAST, CB2_ExitSellNewShopMenu);
+    else
+        GoToBagMenu(ITEMMENULOCATION_SHOP, POCKETS_COUNT, CB2_ExitSellNewShopMenu);
+    #else
     if (FRLG_I_USE_FRLG_BAG)
         GoToBagMenuFrlg(ITEMMENULOCATION_SHOP, OPEN_BAG_LAST, CB2_ExitSellMenu);
     else
         GoToBagMenu(ITEMMENULOCATION_SHOP, POCKETS_COUNT, CB2_ExitSellMenu);
+    #endif // MUDSKIP_SHOP_UI
 }
 
 void CB2_GoToItemDepositMenu(void)
 {
     if (FRLG_I_USE_FRLG_BAG)
-        GoToBagMenuFrlg(ITEMMENULOCATION_ITEMPC, FRLG_POCKET_ITEMS, CB2_PlayerPCExitBagMenu);
+        GoToBagMenuFrlg(ITEMMENULOCATION_ITEMPC, OPEN_BAG_LAST, CB2_PlayerPCExitBagMenu);
     else
         GoToBagMenu(ITEMMENULOCATION_ITEMPC, POCKETS_COUNT, CB2_PlayerPCExitBagMenu);
 }
@@ -2626,6 +2641,11 @@ static void RestoreBagAfterWallyTutorial(void)
 
 void DoWallyTutorialBagMenu(void)
 {
+    if (FRLG_I_USE_FRLG_BAG)
+    {
+        InitOldManBagFrlg();
+        return;
+    }
     PrepareBagForWallyTutorial();
     AddBagItem(ITEM_POTION, 1);
     AddBagItem(ITEM_POKE_BALL, 1);

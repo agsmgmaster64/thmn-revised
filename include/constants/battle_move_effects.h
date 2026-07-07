@@ -287,8 +287,18 @@ enum  BattleMoveEffects
     EFFECT_CEASELESS_EDGE, // Same applies to spikes
     EFFECT_SPECIES_POWER_OVERRIDE, // Uses argument field to for the species, power and (number of hits, used only for multi hit moves)
     EFFECT_SCALE_SHOT,
+
     //touhoumon customs
     EFFECT_THIRD_EYE,
+    EFFECT_APOLLON,
+    EFFECT_AEGIS_MERGE,
+    EFFECT_MOOD_SWING,
+    EFFECT_IDENTIFY,
+    EFFECT_GROUP_PRANK,
+    EFFECT_BEDDY_BYE,
+    EFFECT_FLIGHT,
+    EFFECT_INVOCATION,
+    
     NUM_BATTLE_MOVE_EFFECTS,
 };
 

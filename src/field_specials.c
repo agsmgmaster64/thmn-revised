@@ -538,7 +538,7 @@ u8 GetLinkPartnerNames(void)
     {
         if (myLinkPlayerNumber != i)
         {
-            StringCopy(gTVStringVarPtrs[j], gLinkPlayers[i].name);
+            StringCopy(GetStringVar(j), gLinkPlayers[i].name);
             j++;
         }
     }
@@ -1646,12 +1646,6 @@ u8 GetLeadMonIndex(void)
 enum Species ScriptGetPartyMonSpecies(void)
 {
     return GetMonData(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8004], MON_DATA_SPECIES_OR_EGG, NULL);
-}
-
-enum Species ScriptGetSelectedMonSpecies(void)
-{
-    struct BoxPokemon *boxmon = GetSelectedBoxMonFromPcOrParty();
-    return GetBoxMonData(boxmon, MON_DATA_SPECIES_OR_EGG);
 }
 
 // Removed for Emerald
@@ -5551,14 +5545,6 @@ static void Task_CancelPokemonLeagueLightingEffect(u8 taskId)
             BlendPalettes(0x00000080, 16, RGB_BLACK);
         }
         DestroyTask(taskId);
-    }
-}
-
-void StopPokemonLeagueLightingEffectTask(void)
-{
-    if (FuncIsActiveTask(Task_RunPokemonLeagueLightingEffect) == TRUE)
-    {
-        DestroyTask(FindTaskIdByFunc(Task_RunPokemonLeagueLightingEffect));
     }
 }
 

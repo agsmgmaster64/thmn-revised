@@ -53,8 +53,8 @@ const struct TmHmIndexKey gTMHMItemMoveIds[NUM_ALL_MACHINES + 1] =
     /*
      * Expands to the following:
      *
-     * [1] = { ITEM_TM_FOCUS_PUNCH, MOVE_FOCUS_PUNCH },
-     * [2] = { ITEM_TM_DRAGON_CLAW, MOVE_DRAGON_CLAW },
+     * [1] = { ITEM_TM_U_TURN, MOVE_FOCUS_PUNCH },
+     * [2] = { ITEM_TM_HEART_BREAK, MOVE_DRAGON_CLAW },
      * [3] = { ITEM_TM_WATER_PULSE, MOVE_WATER_PULSE },
      * etc etc
     */
@@ -96,6 +96,8 @@ struct ItemSlot NONNULL BagPocket_GetSlotData(struct BagPocket *pocket, u32 pock
     switch (pocket->id)
     {
     case POCKET_ITEMS:
+    case POCKET_BATTLE_ITEMS:
+    case POCKET_MEDICINE:
     case POCKET_KEY_ITEMS:
     case POCKET_POKE_BALLS:
     case POCKET_TM_HM:
@@ -119,6 +121,8 @@ void NONNULL BagPocket_SetSlotData(struct BagPocket *pocket, u32 pocketPos, stru
     switch (pocket->id)
     {
     case POCKET_ITEMS:
+    case POCKET_BATTLE_ITEMS:
+    case POCKET_MEDICINE:
     case POCKET_KEY_ITEMS:
     case POCKET_POKE_BALLS:
     case POCKET_TM_HM:
@@ -147,6 +151,14 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_ITEMS].itemSlots = gSaveBlock1Ptr->bag.items;
     gBagPockets[POCKET_ITEMS].capacity = BAG_ITEMS_COUNT;
     gBagPockets[POCKET_ITEMS].id = POCKET_ITEMS;
+
+    gBagPockets[POCKET_BATTLE_ITEMS].itemSlots = gSaveBlock1Ptr->bag.battleItems;
+    gBagPockets[POCKET_BATTLE_ITEMS].capacity = BAG_BATTLEITEMS_COUNT;
+    gBagPockets[POCKET_BATTLE_ITEMS].id = POCKET_BATTLE_ITEMS;
+
+    gBagPockets[POCKET_MEDICINE].itemSlots = gSaveBlock1Ptr->bag.medicine;
+    gBagPockets[POCKET_MEDICINE].capacity = BAG_MEDICINE_COUNT;
+    gBagPockets[POCKET_MEDICINE].id = POCKET_MEDICINE;
 
     gBagPockets[POCKET_KEY_ITEMS].itemSlots = gSaveBlock1Ptr->bag.keyItems;
     gBagPockets[POCKET_KEY_ITEMS].capacity = BAG_KEYITEMS_COUNT;
@@ -980,20 +992,6 @@ u32 GetItemStatus1Mask(enum Item itemId)
     return 0;
 }
 
-bool32 ItemHasVolatileFlag(enum Item itemId, enum Volatile _volatile)
-{
-    const u8 *effect = GetItemEffect(itemId);
-    switch (_volatile)
-    {
-    case VOLATILE_CONFUSION:
-        return (effect[3] & ITEM3_STATUS_ALL) || (effect[3] & ITEM3_CONFUSION);
-    case VOLATILE_INFATUATION:
-        return (effect[3] & ITEM3_STATUS_ALL) || (effect[0] & ITEM0_INFATUATION);
-    default:
-        return FALSE;
-    }
-}
-
 u32 GetItemSellPrice(enum Item itemId)
 {
     return GetItemPrice(itemId) / ITEM_SELL_FACTOR;
@@ -1019,4 +1017,14 @@ bool32 IsItemShopCriteriaFulfilled(enum Item itemId)
         return TRUE;
 
     return func(SanitizeItemId(itemId));
+}
+
+u32 GetItemCoinPrice(enum Item itemId)
+{
+    return gItemsInfo[SanitizeItemId(itemId)].coinPrice;
+}
+
+u32 GetItemBpPrice(enum Item itemId)
+{
+    return gItemsInfo[SanitizeItemId(itemId)].bpPrice;
 }

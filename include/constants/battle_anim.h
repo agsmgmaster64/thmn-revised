@@ -425,7 +425,9 @@
 #define ANIM_TAG_TATSUGIRI_DROOPY           (ANIM_SPRITES_START + 410)
 #define ANIM_TAG_TATSUGIRI_STRETCHY         (ANIM_SPRITES_START + 411)
 #define ANIM_TAG_SAFARI_BAIT                (ANIM_SPRITES_START + 412)
-#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_SAFARI_BAIT + 1)
+#define ANIM_TAG_APOLLON                    (ANIM_SPRITES_START + 413)
+#define ANIM_TAG_DESTITUTION_ORB            (ANIM_SPRITES_START + 414)
+#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_DESTITUTION_ORB + 1)
 
 // battlers
 enum AnimBattler
@@ -609,7 +611,9 @@ enum AnimBattler
 #define B_ANIM_FORM_CHANGE_DISGUISE     62
 #define B_ANIM_BUZZER                   63
 #define B_ANIM_HELD_ITEM_BERRY          64
-#define NUM_B_ANIMS_GENERAL             65
+#define B_ANIM_APOLLON_HIT              65
+#define B_ANIM_DESTITUTION_ORB          66
+#define NUM_B_ANIMS_GENERAL             67
 
 // special animations table (sBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0
@@ -654,6 +658,7 @@ enum AnimBattler
 #define TRAP_ANIM_INFESTATION 6
 #define TRAP_ANIM_SNAP_TRAP 7
 #define TRAP_ANIM_THUNDER_CAGE 8
+#define TRAP_ANIM_DESTITUTION 9
 
 // Weather defines for battle animation scripts.
 #define ANIM_WEATHER_NONE 0

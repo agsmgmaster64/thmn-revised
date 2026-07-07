@@ -99,6 +99,8 @@ static void SpriteCB_GlacialLance_Step1(struct Sprite* sprite);
 static void SpriteCB_GlacialLance_Step2(struct Sprite* sprite);
 static void SpriteCB_GlacialLance(struct Sprite* sprite);
 static void SpriteCB_TripleArrowKick(struct Sprite* sprite);
+static void AnimApollon1(struct Sprite *);
+static void AnimApollon2(struct Sprite *);
 
 // const data
 // general
@@ -7747,7 +7749,7 @@ void AnimTask_PrimalReversion(u8 taskId)
 
 void AnimTask_ShellSideArm(u8 taskId)
 {
-    if (gBattleStruct->swapDamageCategory)
+    if (IsBattleMovePhysical(gCurrentMove))
         gBattleAnimArgs[0] = TRUE;
     else
         gBattleAnimArgs[0] = FALSE;
@@ -8404,4 +8406,174 @@ const struct SpriteTemplate gTakeOverSpriteTemplate =
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimRockFragment,
+};
+
+const struct SpriteTemplate gApollon1SpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_APOLLON,
+    .paletteTag = ANIM_TAG_APOLLON,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimApollon1,
+};
+
+const struct SpriteTemplate gApollon2SpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_APOLLON,
+    .paletteTag = ANIM_TAG_APOLLON,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimApollon2,
+};
+
+static void AnimApollon1(struct Sprite *sprite)
+{
+    bool8 respectMonPicOffsets;
+    u8 coordType;
+
+    if (!(gBattleAnimArgs[5] & 0xFF00))
+        respectMonPicOffsets = TRUE;
+    else
+        respectMonPicOffsets = FALSE;
+    if (!(gBattleAnimArgs[5] & 0xFF))
+        coordType = BATTLER_COORD_Y_PIC_OFFSET;
+    else
+        coordType = BATTLER_COORD_Y;
+    InitSpritePosToAnimAttacker(sprite, respectMonPicOffsets);
+    if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
+        gBattleAnimArgs[2] = -gBattleAnimArgs[2];
+    sprite->data[0] = gBattleAnimArgs[4];
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2) + gBattleAnimArgs[2];
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimAttacker, coordType) + gBattleAnimArgs[3];
+    sprite->callback = StartAnimLinearTranslation;
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+}
+
+static void AnimApollon2(struct Sprite *sprite)
+{
+    bool8 respectMonPicOffsets;
+    u8 coordType;
+
+    if (!(gBattleAnimArgs[5] & 0xFF00))
+        respectMonPicOffsets = TRUE;
+    else
+        respectMonPicOffsets = FALSE;
+    if (!(gBattleAnimArgs[5] & 0xFF))
+        coordType = BATTLER_COORD_Y_PIC_OFFSET;
+    else
+        coordType = BATTLER_COORD_Y;
+    sprite->x = GetBattlerSpriteCoord2(gBattleAnimTarget, BATTLER_COORD_X);
+    sprite->y = GetBattlerSpriteCoord2(gBattleAnimTarget, BATTLER_COORD_Y);
+    sprite->x += gBattleAnimArgs[0];
+    sprite->y += gBattleAnimArgs[1];
+
+    TrySetSpriteRotScale(sprite, 0, 0x100, 0x100, 0x8000);
+    sprite->data[0] = gBattleAnimArgs[4];
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2) + gBattleAnimArgs[2];
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, coordType) + gBattleAnimArgs[3];
+    sprite->callback = StartAnimLinearTranslation;
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+}
+
+const struct SpriteTemplate gApotheosisRingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_THIN_RING,
+    .paletteTag = ANIM_TAG_WATER_ORB,
+    .oam = &gOamData_AffineDouble_ObjBlend_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gThinRingShrinkingAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+};
+
+const struct SpriteTemplate gGroupPrankFallSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_ITEM_BAG,
+    .paletteTag = ANIM_TAG_ITEM_BAG,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimApollon2,
+};
+
+static const union AnimCmd sAnim_FlyingRock_2[] =
+{
+    ANIMCMD_FRAME(64, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const gAnims_CataclysmRock[] =
+{
+    sAnim_FlyingRock_2,
+};
+
+const struct SpriteTemplate gCataclysmSetupSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ROCKS,
+    .paletteTag = ANIM_TAG_ROCKS,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gAnims_CataclysmRock,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMudSportDirt,
+};
+
+const struct SpriteTemplate gBlossomingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FLOWER,
+    .paletteTag = ANIM_TAG_FLOWER,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gPetalDanceBigFlowerAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimParticleInVortex,
+};
+
+const struct SpriteTemplate gPassionDance1SpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FLOWER,
+    .paletteTag = ANIM_TAG_FLOWER,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gPetalDanceBigFlowerAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDizzyPunchDuck,
+};
+
+const struct SpriteTemplate gPassionDance2SpriteTemplate =
+{
+    .tileTag = ANIM_TAG_RED_HEART,
+    .paletteTag = ANIM_TAG_RED_HEART,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDizzyPunchDuck,
+};
+
+static const union AnimCmd sPassionDanceFlameAnimCmds[] =
+{
+    ANIMCMD_FRAME(32, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sPassionDanceFlameAnimTable[] =
+{
+    sPassionDanceFlameAnimCmds,
+};
+
+const struct SpriteTemplate gPassionDance3SpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_EMBER,
+    .paletteTag = ANIM_TAG_SMALL_EMBER,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sPassionDanceFlameAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDizzyPunchDuck,
 };

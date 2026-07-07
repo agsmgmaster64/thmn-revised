@@ -208,7 +208,6 @@ const struct SpeciesInfo gSpeciesInfoTouhouPrint[] =
 		.iconPalIndex = 1,
 		.levelUpLearnset = sAkyuuLevelUpLearnset,
 		.teachableLearnset = sAkyuuTeachableLearnset,
-		.eggMoveLearnset = sAkyuuEggMoveLearnset,
 	},
 
 	[SPECIES_REISEN_II] =

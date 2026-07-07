@@ -85,6 +85,8 @@ struct ItemInfo
     u8 type;
     u8 battleUsage;
     u8 flingPower;
+    u16 coinPrice;
+    u16 bpPrice;
     const u32 *iconPic;
     const u16 *iconPalette;
     ShopCriteriaFunc shopCriteriaFunc;
@@ -120,9 +122,9 @@ static inline enum TMHMIndex GetItemTMHMIndex(enum Item item)
     switch (item)
     {
     /* Expands to:
-        * case ITEM_TM_FOCUS_PUNCH:
+        * case ITEM_TM_U_TURN:
         *     return 1;
-        * case ITEM_TM_DRAGON_CLAW:
+        * case ITEM_TM_HEART_BREAK:
         *      return 2;
         * etc */
     FOREACH_TM(UNPACK_ITEM_TO_TM_INDEX)
@@ -137,9 +139,9 @@ static inline enum Move GetItemTMHMMoveId(enum Item item)
     switch (item)
     {
     /* Expands to:
-        * case ITEM_TM_FOCUS_PUNCH:
+        * case ITEM_TM_U_TURN:
         *     return MOVE_FOCUS_PUNCH;
-        * case ITEM_TM_DRAGON_CLAW:
+        * case ITEM_TM_HEART_BREAK:
         *      return MOVE_DRAGON_CLAW;
         * etc */
     FOREACH_TM(UNPACK_ITEM_TO_TM_MOVE_ID)
@@ -155,9 +157,9 @@ static inline enum Item GetTMHMItemIdFromMoveId(enum Move move)
     {
     /* Expands to:
         * case MOVE_FOCUS_PUNCH:
-        *     return ITEM_TM_FOCUS_PUNCH;
+        *     return ITEM_TM_U_TURN;
         * case MOVE_DRAGON_CLAW:
-        *      return ITEM_TM_DRAGON_CLAW;
+        *      return ITEM_TM_HEART_BREAK;
         * etc */
     FOREACH_TM(UNPACK_TM_MOVE_TO_ITEM_ID)
     FOREACH_HM(UNPACK_HM_MOVE_TO_ITEM_ID)
@@ -279,8 +281,9 @@ enum EffectItem GetItemBattleUsage(enum Item itemId);
 u32 GetItemSecondaryId(enum Item itemId);
 u32 GetItemFlingPower(enum Item itemId);
 u32 GetItemStatus1Mask(enum Item itemId);
-bool32 ItemHasVolatileFlag(enum Item itemId, enum Volatile volatile);
 u32 GetItemSellPrice(enum Item itemId);
+u32 GetItemCoinPrice(enum Item itemId);
+u32 GetItemBpPrice(enum Item itemId);
 bool32 IsHoldEffectChoice(enum HoldEffect holdEffect);
 ShopCriteriaFunc GetItemShopCriteriaFunc(enum Item itemId);
 bool32 IsItemShopCriteriaFulfilled(enum Item itemId);
