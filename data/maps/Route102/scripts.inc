@@ -110,7 +110,7 @@ Route102_EventScript_IchiiScene::
 	delay 20
 	msgbox Route102_Text_IchiiLetsBattle, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro TRAINER_ICHII, Route102_Text_IchiiDefeated
+	trainerbattle_no_intro TRAINER_ICHII_1, Route102_Text_IchiiDefeated
 	msgbox Route102_Text_IchiiDefeatedSurprise, MSGBOX_DEFAULT
 	closemessage
 	delay 20
