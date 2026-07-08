@@ -28,6 +28,7 @@
 #include "strings.h"
 #include "task.h"
 #include "text_window.h"
+#include "oak_speech.h"
 #include "overworld.h"
 #include "event_data.h"
 #include "constants/items.h"
@@ -39,6 +40,7 @@
 #include "pokedex.h"
 #include "title_screen.h"
 #include "main_menu.h"
+#include "option_plus_menu.h"
 #include "option_menu.h"
 #include "mystery_event_menu.h"
 #include "mystery_gift_menu.h"
@@ -199,28 +201,28 @@ static const struct HWWindowPosition HWinCoords[6] =
 //
 //  Graphic and Tilemap Pointers for Bgs and Mughsots
 //
-static const u32 sMainBgTiles[] = INCBIN_U32("graphics/ui_main_menu/main_tiles.4bpp.lz");
-static const u32 sMainBgTilemap[] = INCBIN_U32("graphics/ui_main_menu/main_tiles.bin.lz");
-static const u16 sMainBgPalette[] = INCBIN_U16("graphics/ui_main_menu/main_tiles.gbapal");
+static const u32 sMainBgTiles[] = INCGFX_U32("graphics/ui_main_menu/main_tiles.png", ".4bpp.smol");
+static const u32 sMainBgTilemap[] = INCBIN_U32("graphics/ui_main_menu/main_tiles.bin.smolTM");
+static const u16 sMainBgPalette[] = INCGFX_U16("graphics/ui_main_menu/main_tiles.png", ".gbapal");
 
-static const u32 sMainBgTilesFem[] = INCBIN_U32("graphics/ui_main_menu/main_tiles_fem.4bpp.lz");
-static const u32 sMainBgTilemapFem[] = INCBIN_U32("graphics/ui_main_menu/main_tiles_fem.bin.lz");
-static const u16 sMainBgPaletteFem[] = INCBIN_U16("graphics/ui_main_menu/main_tiles_fem.gbapal");
+static const u32 sMainBgTilesFem[] = INCGFX_U32("graphics/ui_main_menu/main_tiles_fem.png", ".4bpp.smol");
+static const u32 sMainBgTilemapFem[] = INCBIN_U32("graphics/ui_main_menu/main_tiles_fem.bin.smolTM");
+static const u16 sMainBgPaletteFem[] = INCGFX_U16("graphics/ui_main_menu/main_tiles_fem.png", ".gbapal");
 
-static const u32 sScrollBgTiles[] = INCBIN_U32("graphics/ui_main_menu/scroll_tiles.4bpp.lz");
-static const u32 sScrollBgTilemap[] = INCBIN_U32("graphics/ui_main_menu/scroll_tiles.bin.lz");
-static const u16 sScrollBgPalette[] = INCBIN_U16("graphics/ui_main_menu/scroll_tiles.gbapal");
+static const u32 sScrollBgTiles[] = INCGFX_U32("graphics/ui_main_menu/scroll_tiles.png", ".4bpp.smol");
+static const u32 sScrollBgTilemap[] = INCBIN_U32("graphics/ui_main_menu/scroll_tiles.bin.smolTM");
+static const u16 sScrollBgPalette[] = INCGFX_U16("graphics/ui_main_menu/scroll_tiles.png", ".gbapal");
 
-static const u16 sIconBox_Pal[] = INCBIN_U16("graphics/ui_main_menu/icon_shadow.gbapal");
-static const u32 sIconBox_Gfx[] = INCBIN_U32("graphics/ui_main_menu/icon_shadow.4bpp.lz");
+static const u16 sIconBox_Pal[] = INCGFX_U16("graphics/ui_main_menu/icon_shadow.png", ".gbapal");
+static const u32 sIconBox_Gfx[] = INCGFX_U32("graphics/ui_main_menu/icon_shadow.png", ".4bpp.smol");
 
-static const u16 sIconBox_PalFem[] = INCBIN_U16("graphics/ui_main_menu/icon_shadow_fem.gbapal");
-static const u32 sIconBox_GfxFem[] = INCBIN_U32("graphics/ui_main_menu/icon_shadow_fem.4bpp.lz");
+static const u16 sIconBox_PalFem[] = INCGFX_U16("graphics/ui_main_menu/icon_shadow_fem.png", ".gbapal");
+static const u32 sIconBox_GfxFem[] = INCGFX_U32("graphics/ui_main_menu/icon_shadow_fem.png", ".4bpp.smol");
 
-static const u16 sBrendanMugshot_Pal[] = INCBIN_U16("graphics/ui_main_menu/brendan_mugshot.gbapal");
-static const u32 sBrendanMugshot_Gfx[] = INCBIN_U32("graphics/ui_main_menu/brendan_mugshot.4bpp.lz");
-static const u16 sMayMugshot_Pal[] = INCBIN_U16("graphics/ui_main_menu/may_mugshot.gbapal");
-static const u32 sMayMugshot_Gfx[] = INCBIN_U32("graphics/ui_main_menu/may_mugshot.4bpp.lz");
+static const u16 sBrendanMugshot_Pal[] = INCGFX_U16("graphics/ui_main_menu/brendan_mugshot.png", ".gbapal");
+static const u32 sBrendanMugshot_Gfx[] = INCGFX_U32("graphics/ui_main_menu/brendan_mugshot.png", ".4bpp.smol");
+static const u16 sMayMugshot_Pal[] = INCGFX_U16("graphics/ui_main_menu/may_mugshot.png", ".gbapal");
+static const u32 sMayMugshot_Gfx[] = INCGFX_U32("graphics/ui_main_menu/may_mugshot.png", ".4bpp.smol");
 
 
 //
@@ -348,7 +350,16 @@ void Task_OpenMainMenu(u8 taskId)
         {                //  where the UI is initialized by swapping a task func with this one 
             case HAS_NO_SAVED_GAME:
             default:
-                SetMainCallback2(CB2_NewGameBirchSpeech_FromNewMainMenu);
+                //ResetChallengesData();
+                if (IS_FRLG)
+                {
+                    gMain.savedCallback = StartNewGameSceneFrlg;
+                }
+                else
+                {
+                    gMain.savedCallback = CB2_NewGameBirchSpeech_ReturnFromOptionsMenu;
+                }
+                SetMainCallback2(CB2_InitOptionPlusMenu);
                 DestroyTask(taskId);
                 return;
             case HAS_SAVED_GAME:       
@@ -622,11 +633,11 @@ static bool8 MainMenu_LoadGraphics(void) // Load all the tilesets, tilemaps, spr
         {
             if (gSaveBlock2Ptr->playerGender == MALE)
             {
-                LZDecompressWram(sMainBgTilemap, sBg1TilemapBuffer);
+                DecompressDataWithHeaderWram(sMainBgTilemap, sBg1TilemapBuffer);
             }
             else
             {
-                LZDecompressWram(sMainBgTilemapFem, sBg1TilemapBuffer);
+                DecompressDataWithHeaderWram(sMainBgTilemapFem, sBg1TilemapBuffer);
             }
             sMainMenuDataPtr->gfxLoadState++;
         }
@@ -639,7 +650,7 @@ static bool8 MainMenu_LoadGraphics(void) // Load all the tilesets, tilemaps, spr
     case 3:
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
-            LZDecompressWram(sScrollBgTilemap, sBg2TilemapBuffer);
+            DecompressDataWithHeaderWram(sScrollBgTilemap, sBg2TilemapBuffer);
             sMainMenuDataPtr->gfxLoadState++;
         }
         break;
@@ -727,14 +738,14 @@ static void CreateIconShadow()
     sMainMenuDataPtr->iconBoxSpriteIds[4] = CreateSprite(&sSpriteTemplate_IconBox, ICON_BOX_1_START_X + (ICON_BOX_X_DIFFERENCE * 1), ICON_BOX_1_START_Y + (ICON_BOX_Y_DIFFERENCE * 1), 2);
     sMainMenuDataPtr->iconBoxSpriteIds[5] = CreateSprite(&sSpriteTemplate_IconBox, ICON_BOX_1_START_X + (ICON_BOX_X_DIFFERENCE * 2), ICON_BOX_1_START_Y + (ICON_BOX_Y_DIFFERENCE * 1), 2);
 
-    for(i = 0; i < gPlayerPartyCount; i++)
+    for(i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
     {
         gSprites[sMainMenuDataPtr->iconBoxSpriteIds[i]].invisible = FALSE;
         StartSpriteAnim(&gSprites[sMainMenuDataPtr->iconBoxSpriteIds[i]], 0);
         gSprites[sMainMenuDataPtr->iconBoxSpriteIds[i]].oam.priority = 1;
     }
 
-    for(i = gPlayerPartyCount; i < 6; i++) // Hide Shadows For Mons that don't exist
+    for(i = gPartiesCount[B_TRAINER_PLAYER]; i < 6; i++) // Hide Shadows For Mons that don't exist
     {
         gSprites[sMainMenuDataPtr->iconBoxSpriteIds[i]].invisible = TRUE;
     }
@@ -745,7 +756,7 @@ static void CreateIconShadow()
 static void DestroyIconShadow()
 {
     u8 i = 0;
-    for(i = 0; i < gPlayerPartyCount; i++)
+    for(i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
     {
         DestroySprite(&gSprites[sMainMenuDataPtr->iconBoxSpriteIds[i]]);
         sMainMenuDataPtr->iconBoxSpriteIds[i] = SPRITE_NONE;
@@ -754,7 +765,7 @@ static void DestroyIconShadow()
 
 static u32 GetHPEggCyclePercent(u32 partyIndex) // Random HP function from psf's hack written by Rioluwott
 {
-    struct Pokemon *mon = &gPlayerParty[partyIndex];
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][partyIndex];
     if (!GetMonData(mon, MON_DATA_IS_EGG))
         return ((GetMonData(mon, MON_DATA_HP)) * 100 / (GetMonData(mon,MON_DATA_MAX_HP)));
     else
@@ -766,9 +777,8 @@ static void CreatePartyMonIcons()
     u8 i = 0;
     s16 x = ICON_BOX_1_START_X;
     s16 y = ICON_BOX_1_START_Y;
-    struct Pokemon *mon;
     LoadMonIconPalettes();
-    for(i = 0; i < gPlayerPartyCount; i++)
+    for(i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
     {   
         switch (i) // choose position for each icon
         {
@@ -799,9 +809,9 @@ static void CreatePartyMonIcons()
         }
 
 #ifdef RHH_EXPANSION
-            sMainMenuDataPtr->iconMonSpriteIds[i] = CreateMonIcon(GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG), SpriteCB_MonIcon, x, y - 2, 0, GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY));
+            sMainMenuDataPtr->iconMonSpriteIds[i] = CreateMonIcon(GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES_OR_EGG), SpriteCB_MonIcon, x, y - 2, 0, GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_PERSONALITY));
 #else
-            sMainMenuDataPtr->iconMonSpriteIds[i] = CreateMonIcon(GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG), SpriteCB_MonIcon, x, y - 2, 0, GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY), TRUE);
+            sMainMenuDataPtr->iconMonSpriteIds[i] = CreateMonIcon(GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES_OR_EGG), SpriteCB_MonIcon, x, y - 2, 0, GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_PERSONALITY), TRUE);
 #endif
 
         gSprites[sMainMenuDataPtr->iconMonSpriteIds[i]].oam.priority = 0;
@@ -903,12 +913,20 @@ static void Task_MainMenuMain(u8 taskId)
                 sSelectedOption = HW_WIN_CONTINUE;
                 break;
             case HW_WIN_NEW_GAME:
-                sMainMenuDataPtr->savedCallback = CB2_NewGameBirchSpeech_FromNewMainMenu;
+                if (IS_FRLG)
+                {
+                    gMain.savedCallback = StartNewGameSceneFrlg;
+                }
+                else
+                {
+                    gMain.savedCallback = CB2_NewGameBirchSpeech_ReturnFromOptionsMenu;
+                }
+                sMainMenuDataPtr->savedCallback = CB2_InitOptionPlusMenu;
                 sSelectedOption = HW_WIN_CONTINUE;
                 break;
             case HW_WIN_OPTIONS:
                 gMain.savedCallback = CB2_ReinitMainMenu;
-                sMainMenuDataPtr->savedCallback = CB2_InitOptionMenu;
+                sMainMenuDataPtr->savedCallback = CB2_InitOptionPlusMenu;
                 break;
             case HW_WIN_MYSTERY_EVENT:
                 sMainMenuDataPtr->savedCallback = CB2_InitMysteryEventMenu;
