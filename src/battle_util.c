@@ -7017,6 +7017,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         modifier = uq4_12_multiply(modifier, GetSupremeOverlordModifier(battlerAtk));
         break;
     case ABILITY_HARMONIZE:
+	{
         u8 i = 0;
         u8 boost = 0;
         struct Pokemon *party = GetBattlerParty(battlerAtk);
@@ -7036,6 +7037,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         }
         modifier = uq4_12_multiply(modifier, UQ_4_12((100 + boost)) / 100);
         break;
+	}
     default:
         break;
     }
