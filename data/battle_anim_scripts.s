@@ -35173,6 +35173,8 @@ gBattleAnimMove_DebtSpiral::
 	end
 
 gBattleAnimMove_Apollon::
+	choosetwoturnanim ApollonSetUp ApollonHit
+ApollonSetUp::
 	createsprite gApollon1SpriteTemplate, ANIM_ATTACKER, 2, 0, 32, 0, -96, 25, 0
 	playsewithpan SE_M_WING_ATTACK, 64
     
@@ -35189,7 +35191,7 @@ gBattleAnimMove_Apollon::
 	waitforvisualfinish
     end
 
-gBattleAnimGeneral_ApollonHit::
+ApollonHit::
 	playsewithpan SE_M_SKETCH, 0
 	createsprite gApollon2SpriteTemplate, ANIM_TARGET, 2, 0, -96, 0, 32, 25, 0
 	playsewithpan SE_M_WING_ATTACK, 64
