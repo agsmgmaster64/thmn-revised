@@ -147,6 +147,11 @@ Route103_EventScript_RivalEnd::
 	fadedefaultbgm
 	releaseall
 	end
+	
+Route103_EventScript_HexManiacCave::
+	msgbox Route103_Text_HexManiacSuspicious, MSGBOX_NPC
+	applymovement LOCALID_ROUTE103_SUSPICIOUS_HEX_MANIAC, Common_Movement_FaceOriginalDirection
+	end
 
 Route103_Movement_RivalExitFacingNorth1:
 	walk_left
@@ -285,6 +290,12 @@ Route103_EventScript_Isabelle::
 	trainerbattle_single TRAINER_ISABELLE, Route103_Text_IsabelleIntro, Route103_Text_IsabelleDefeated
 	msgbox Route103_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
+	
+Route103_Text_HexManiacSuspicious:
+	.string "I sense something odd behind this\n"
+	.string "wall…\p"
+	.string "I won't budge until I get to the\n"
+	.string "bottom of this…$"
 
 Route103_Text_MayRoute103Pokemon:
 	.string "Maribel: Let's see… The Puppets found\n"
