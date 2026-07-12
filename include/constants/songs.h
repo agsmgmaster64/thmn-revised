@@ -490,19 +490,6 @@
 #define MUS_RG_TRAINER_TOWER        556 // MUS_RG_T_TOWER
 #define MUS_RG_SLOW_PALLET          557 // MUS_RG_SLOWMASARA
 #define MUS_RG_TEACHY_TV_MENU       558 // MUS_RG_TVNOIZE
-#define MUS_HGSS_CASINO             559
-#define MUS_CASINO_PLUS_1           560
-#define MUS_CASINO_PLUS_2           561
-#define MUS_CASINO_PLUS_3           562
-#define MUS_CASINO_PLUS_4           563
-#define MUS_CASINO_PLUS_5           564
-#define MUS_CASINO_PLUS_6           565
-#define MUS_CASINO_PLUS_7           566
-#define MUS_CASINO_PLUS_8           567
-#define MUS_CASINO_PLUS_9           568
-#define MUS_CASINO_PLUS_GACHA       569
-#define END_MUS                     MUS_CASINO_PLUS_GACHA
-
 // These PH_* constants are phoneme sounds used by the "bard" NPC (see src/bard_music.c and src/mauville_old_man.c).
 // Each comes in a triplet of PH_*_BLEND, PH_*_HELD, and PH_*_SOLO, and the name of each triplet incorporates the English phonetic sound it represents.
 #define PH_TRAP_BLEND               559
@@ -929,8 +916,19 @@
 #define MUS_THPPRF_GIRLS_SEALING_CLUB 979
 #define MUS_THPPRF_NOBETA_1 980
 #define MUS_THPPRF_NOBETA_2 981
+#define MUS_HGSS_CASINO             982
+#define MUS_CASINO_PLUS_1           983
+#define MUS_CASINO_PLUS_2           984
+#define MUS_CASINO_PLUS_3           985
+#define MUS_CASINO_PLUS_4           986
+#define MUS_CASINO_PLUS_5           987
+#define MUS_CASINO_PLUS_6           988
+#define MUS_CASINO_PLUS_7           989
+#define MUS_CASINO_PLUS_8           990
+#define MUS_CASINO_PLUS_9           991
+#define MUS_CASINO_PLUS_GACHA       992
 
-#define END_MUS                     MUS_THPPRF_NOBETA_2
+#define END_MUS                     MUS_CASINO_PLUS_GACHA
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
