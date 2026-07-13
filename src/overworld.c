@@ -3770,7 +3770,7 @@ void ScriptShowItemDescription(struct ScriptContext *ctx)
         return; //no box if item obtained previously
     }
 
-    SetWindowTemplateFields(&template, 0, 1, 1, 28, 3, 15, 8);
+    SetWindowTemplateFields(&template, 0, 1, 1, 28, 5, 15, 8);
     sHeaderBoxWindowId = AddWindow(&template);
     FillWindowPixelBuffer(sHeaderBoxWindowId, PIXEL_FILL(0));
     PutWindowTilemap(sHeaderBoxWindowId);
