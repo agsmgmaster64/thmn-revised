@@ -1,0 +1,42 @@
+{
+  "id": "MAP_FALLARBOR_TOWN_POWER_GLOVE_HOUSE_POWER_GLOVE_ROOM",
+  "name": "FallarborTown_PowerGloveHouse_PowerGloveRoom",
+  "layout": "LAYOUT_FALLARBOR_TOWN_POWER_GLOVE_HOUSE_POWER_GLOVE_ROOM",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 5,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POWER_GLOVE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_POWER_GLOVE_GET"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN_POWER_GLOVE_HOUSE_STRENGTH_ROOM",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

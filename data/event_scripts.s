@@ -1898,3 +1898,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/LandofGensokyo_HumanVillage_HiedaMansion/scripts.inc"
 
 	.include "data/maps/LandofGensokyoHumanVillage_TrainerHouse_B1F/scripts.inc"
+
+	.include "data/maps/FallarborTown_PowerGloveHouse_B1F/scripts.inc"
+
+	.include "data/maps/FallarborTown_PowerGloveHouse_StrengthRoom/scripts.inc"
+
+	.include "data/maps/FallarborTown_PowerGloveHouse_PowerGloveRoom/scripts.inc"

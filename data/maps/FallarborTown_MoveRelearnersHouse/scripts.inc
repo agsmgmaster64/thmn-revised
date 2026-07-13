@@ -56,6 +56,30 @@ FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
 	msgbox FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
 	releaseall
 	end
+	
+FallarborTown_MoveRelearnersHouse_EventScript_PowerGloveHouseGuy::
+	goto_if_set FLAG_POWER_GLOVE_GET, FallarborTown_MoveRelearnersHouse_EventScript_GotPowerGlove
+	msgbox FallarborTown_MoveRelearnersHouse_Text_BasementText, MSGBOX_NPC
+	end
+	
+FallarborTown_MoveRelearnersHouse_EventScript_GotPowerGlove::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_PowerGloveText, MSGBOX_NPC
+	end
+	
+FallarborTown_MoveRelearnersHouse_Text_PowerGloveText:
+	.string "So there was something down there!\n"
+	.string "Well, whatever it was, you can keep\l"
+	.string "it.\p"
+	.string "You did find it yourself, after all.$"
+
+FallarborTown_MoveRelearnersHouse_Text_BasementText:
+	.string "I've been trying to expand my\n"
+	.string "basement recently, you know?\p"
+	.string "One day my wall collapses in on\n"
+	.string "itself!\p"
+	.string "I tried to see what was in there,\n"
+	.string "but there's big boulders in the way!\p"
+	.string "What if there's treasure in there?$"
 
 FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
 	.string "I'm the MOVE TUTOR.\p"

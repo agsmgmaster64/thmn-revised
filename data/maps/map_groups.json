@@ -186,7 +186,10 @@
     "FallarborTown_PokemonCenter_1F",
     "FallarborTown_PokemonCenter_2F",
     "FallarborTown_CozmosHouse",
-    "FallarborTown_MoveRelearnersHouse"
+    "FallarborTown_MoveRelearnersHouse",
+    "FallarborTown_PowerGloveHouse_B1F",
+    "FallarborTown_PowerGloveHouse_StrengthRoom",
+    "FallarborTown_PowerGloveHouse_PowerGloveRoom"
   ],
   "gMapGroup_IndoorVerdanturf": [
     "VerdanturfTown_BattleTentLobby",
