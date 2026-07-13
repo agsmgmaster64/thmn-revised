@@ -5377,7 +5377,18 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_THPPRF_IMMEMORIALMARKETEER) \
     X(MUS_THPPRF_GIRLS_SEALING_CLUB) \
     X(MUS_THPPRF_NOBETA_1) \
-    X(MUS_THPPRF_NOBETA_2)
+    X(MUS_THPPRF_NOBETA_2) \
+    X(MUS_HGSS_CASINO)              \
+    X(MUS_CASINO_PLUS_1)            \
+    X(MUS_CASINO_PLUS_2)            \
+    X(MUS_CASINO_PLUS_3)            \
+    X(MUS_CASINO_PLUS_4)            \
+    X(MUS_CASINO_PLUS_5)            \
+    X(MUS_CASINO_PLUS_6)            \
+    X(MUS_CASINO_PLUS_7)            \
+    X(MUS_CASINO_PLUS_8)            \
+    X(MUS_CASINO_PLUS_9)            \
+    X(MUS_CASINO_PLUS_GACHA)        \
 
 #define SOUND_LIST_SE               \
     X(SE_USE_ITEM)                  \

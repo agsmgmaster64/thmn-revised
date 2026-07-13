@@ -7178,13 +7178,11 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_GIRATINA && (moveType == TYPE_GHOST || moveType == TYPE_FAITH))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
         break;
+    */
     case HOLD_EFFECT_SOUL_DEW:
-        if ((gBattleMons[battlerAtk].species == SPECIES_LATIAS || gBattleMons[battlerAtk].species == SPECIES_LATIOS)
-            && ((B_SOUL_DEW_BOOST >= GEN_7 && (moveType == TYPE_PSYCHIC || moveType == TYPE_FAITH))
-             || (B_SOUL_DEW_BOOST < GEN_7 && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER) && IsBattleMoveSpecial(move))))
+        if ((gBattleMons[battlerAtk].species == SPECIES_TOYOHIME || gBattleMons[battlerAtk].species == SPECIES_YORIHIME) && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER))
             modifier = uq4_12_multiply(modifier, holdEffectModifier);
         break;
-    */
     case HOLD_EFFECT_TYPE_POWER:
     case HOLD_EFFECT_PLATE:
         if (moveType == GetItemSecondaryId(gBattleMons[battlerAtk].item))
@@ -7627,6 +7625,10 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
         if (IsBattleMoveSpecial(move) && ((gBattleMons[battlerAtk].species == SPECIES_NORMAL_YUKI) || (gBattleMons[battlerAtk].species == SPECIES_NORMAL_MAI))) 
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
+    case HOLD_EFFECT_KUSANAGI:
+        if ((gBattleMons[battlerAtk].species == SPECIES_RINNOSUKE || gBattleMons[battlerAtk].species == SPECIES_KOSUZU))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        break;
     default:
         break;
     }
@@ -7871,6 +7873,10 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
         break;
     case HOLD_EFFECT_LUNAR_VEST:
         if ((gBattleMons[battlerDef].species == SPECIES_REISEN_II && usesDefStat))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        break;
+    case HOLD_EFFECT_YATA_MIRROR:
+        if ((gBattleMons[battlerDef].species == SPECIES_RINNOSUKE || gBattleMons[battlerDef].species == SPECIES_KOSUZU))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
     default:
