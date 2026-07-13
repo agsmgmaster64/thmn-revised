@@ -3119,9 +3119,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Old Amber"),
         .description = COMPOUND_STRING(
-            "A stone containing\n"
-            "the genes of an\n"
-            "ancient Pokémon."),
+            "A preserved piece of amber that\n"
+            "has traces of an ancient Puppet."),
     #if I_KEY_FOSSILS >= GEN_4
         .price = 1000,
         .pocket = POCKET_ITEMS,
@@ -13832,9 +13831,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Bike"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A folding bicycle\n"
-            "that is faster than\n"
-            "the Running Shoes."),
+            "A handy folding bicycle.\n"
+            "It's about twice as fast as running."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -13949,9 +13947,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Town Map"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Can be viewed\n"
-            "anytime. Shows your\n"
-            "present location."),
+            "A useful map of the region that\n"
+            "even displays your current location."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -13965,9 +13962,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Vs. Seeker"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A rechargeable unit\n"
-            "that flags battle-\n"
-            "ready Trainers."),
+            "A device that pings nearby Trainers\n"
+            "for rematches. It is an improved\n"
+            "model that can be used repeatedly."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -14047,9 +14044,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Powder Jar"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Stores Berry\n"
-            "Powder made using\n"
-            "a Berry Crusher."),
+            "Stores Berry Powder.\n"
+            "It can hold up to 99,999 units."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14126,9 +14122,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Poké Flute"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A sweet-sounding\n"
-            "flute that awakens\n"
-            "Pokémon."),
+            "A flute that can awaken sleeping\n"
+            "Puppets."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14225,9 +14220,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Aurora Ticket"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A ticket required\n"
-            "to board the ship\n"
-            "to Birth Island."),
+            "A ticket that grants passage to\n"
+            "Mt. Aurora in the Java region."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14482,9 +14476,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Parcel"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A parcel for Prof.\n"
-            "Oak from a Pokémon\n"
-            "Mart's clerk."),
+            "A parcel for Professor Oak from the\n"
+            "Viridian City mart."),
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14498,9 +14491,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Secret Key"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "The key to the\n"
-            "Cinnabar Island\n"
-            "Gym's entrance."),
+            "The key to the Cinnabar Island gym."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14514,9 +14505,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Bike Voucher"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A voucher for\n"
-            "obtaining a bicycle\n"
-            "from the Bike Shop."),
+            "A voucher to claim a free bicycle at\n"
+            "the Cerulean City bike shop."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14531,9 +14521,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Gold Teeth"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Gold dentures lost\n"
-            "by the Safari\n"
-            "Zone's Warden."),
+            "The Safari Zone Warden's dentures.\n"
+            "He needs them to talk."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14547,9 +14536,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Card Key"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A card-type door\n"
-            "key used in Silph\n"
-            "Co's office."),
+            "Unlocks the doors in Silph Co.'s \n"
+            "office in Saffron City."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14563,9 +14551,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Lift Key"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "An elevator key\n"
-            "used in Team\n"
-            "Rocket's Hideout."),
+            "Allows operation of the elevator at\n"
+            "Team Rocket's hideout under the\n"
+            "Game Corner."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14579,9 +14567,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Silph Scope"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Silph Co's scope\n"
-            "makes unseeable\n"
-            "Pokémon visible."),
+            "A scope that can see hidden entities\n"
+            "like ghosts, etc."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14613,9 +14600,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Rainbow Passes"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "For ferries serving\n"
-            "Vermilion and the\n"
-            "Sevii Islands."),
+            "A pass that allows travel between\n"
+            "Vermilion City and the Sevii Islands."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14630,9 +14616,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Tea"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A thirst-quenching\n"
-            "tea prepared by an\n"
-            "old lady."),
+            "A tea that is very useful for those\n"
+            "suffering from thirst."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -16365,8 +16350,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Big Axe"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A big axe that\n"
-            "can cut down\n"
+            "A sturdy axe that can cut down\n"
             "small trees."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
@@ -16381,9 +16365,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Pager"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A device that can\n"
-            "summon a Puppet\n"
-            "to fly with."),
+            "A communication device that can\n"
+            "summon a Puppet for travel."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -16397,9 +16380,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Surfboard"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A surfboard for\n"
-            "surfing on bodies\n"
-            "of water."),
+            "A surfboard that can traverse most\n"
+            "bodies of water."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -16410,12 +16392,11 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_SURFBOARD_PLUS] =
     {
-        .name = ITEM_NAME("Surfboard"),
+        .name = ITEM_NAME("Surfboard+"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A surfboard for\n"
-            "surfing on bodies\n"
-            "of water."),
+            "An upgraded surfboard that can\n"
+            "also scale waterfalls."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -16429,9 +16410,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Power Glove"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Some gloves that\n"
-            "have the strength\n"
-            "to move boulders."),
+            "Gloves that enhance the wearer's\n"
+            "strength, allowing them to move\n"
+            "heavy stones."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -16445,9 +16426,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Lantern"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A lantern that\n"
-            "can light up\n"
-            "dark areas."),
+            "A lantern useful for exploring dark\n"
+            "areas."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -16461,9 +16441,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Pickaxe"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A pickaxe that\n"
-            "can smash away\n"
-            "weak rocks."),
+            "A pickaxe that is useful for clearing\n"
+            "away cracked rocks."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -16477,9 +16456,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Climbing Gear"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Some gear that\n"
-            "can let you\n"
-            "scale rock walls."),
+            "Equipment that is useful for scaling\n"
+            "rock walls."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -16493,15 +16471,155 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Scuba Gear"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Some scuba gear\n"
-            "for diving down\n"
-            "the ocean."),
+            "Allows the wearer to dive and\n"
+            "explore deep areas of water safely."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_ScubaGear,
         .iconPic = gItemIcon_ScubaGear,
         .iconPalette = gItemIconPalette_ScubaGear,
+    },
+
+    [ITEM_LINK_SYSTEM] =
+    {
+        .name = ITEM_NAME("Link System"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A high-tech device that can\n"
+            "perform several Puppet-related\n"
+            "services on the fly."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_FameChecker,
+        .iconPalette = gItemIconPalette_FameChecker,
+    },
+
+    [ITEM_JX_PASS] =
+    {
+        .name = ITEM_NAME("JX-Pass"),
+        .pluralName = ITEM_PLURAL_NAME("JX-Passes"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A pass that allows one to go\n"
+            "to the Java region."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TriPass,
+        .iconPalette = gItemIconPalette_TriPass,
+    },
+
+    [ITEM_DREAM_STONE] =
+    {
+        .name = ITEM_NAME("Dream Stone"),
+        .pluralName = ITEM_PLURAL_NAME("Dream Stones"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A stone with a strange power.\n"
+            "It seems to react when near the\n"
+            "Hakurei Shrine."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_AdamantOrb,
+        .iconPalette = gItemIconPalette_AdamantOrb,
+    },
+
+    [ITEM_MIKO_ZIRCON] =
+    {
+        .name = ITEM_NAME("Miko Zircon"),
+        .description = COMPOUND_STRING(
+            "A crystal with holy essence.\n"
+            "Someone interested in ancient\n"
+            "Puppets may want to see this."),
+    #if I_KEY_FOSSILS >= GEN_4
+        .price = 1000,
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_FOSSIL,
+    #else
+        .price = 0,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+    #endif
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 100,
+        .iconPic = gItemIcon_OldAmber,
+        .iconPalette = gItemIconPalette_OldAmber,
+    },
+
+    [ITEM_MAGE_ZIRCON] =
+    {
+        .name = ITEM_NAME("Mage Zircon"),
+        .description = COMPOUND_STRING(
+            "A crystal with magic essence.\n"
+            "Someone interested in ancient\n"
+            "Puppets may want to see this."),
+    #if I_KEY_FOSSILS >= GEN_4
+        .price = 1000,
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_FOSSIL,
+    #else
+        .price = 0,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+    #endif
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 100,
+        .iconPic = gItemIcon_OldAmber,
+        .iconPalette = gItemIconPalette_OldAmber,
+    },
+
+    [ITEM_PRISM_ZIRCON] =
+    {
+        .name = ITEM_NAME("Prism Zircon"),
+        .description = COMPOUND_STRING(
+            "A crystal with colorful essence.\n"
+            "Someone interested in ancient\n"
+            "Puppets may want to see this."),
+    #if I_KEY_FOSSILS >= GEN_4
+        .price = 1000,
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_FOSSIL,
+    #else
+        .price = 0,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+    #endif
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 100,
+        .iconPic = gItemIcon_OldAmber,
+        .iconPalette = gItemIconPalette_OldAmber,
+    },
+
+    [ITEM_LEAF_ZIRCON] =
+    {
+        .name = ITEM_NAME("Leaf Zircon"),
+        .description = COMPOUND_STRING(
+            "A crystal with natural essence.\n"
+            "Someone interested in ancient\n"
+            "Puppets may want to see this."),
+    #if I_KEY_FOSSILS >= GEN_4
+        .price = 1000,
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_FOSSIL,
+    #else
+        .price = 0,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+    #endif
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 100,
+        .iconPic = gItemIcon_OldAmber,
+        .iconPalette = gItemIconPalette_OldAmber,
     },
 };
 
