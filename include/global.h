@@ -225,6 +225,14 @@ struct Time
     /*0x04*/ s8 seconds;
 };
 
+struct DerbyRacers
+{
+    u16 nicknameId:6;
+    u16 species:4;
+    u16 isShiny:1;
+    u16 condition:5;
+};
+
 struct NPCFollowerPadding
 {
     u8 padding1;
@@ -272,6 +280,7 @@ struct SaveBlock3
 #if APRICORN_TREE_COUNT > 0
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif
+    struct DerbyRacers derbyRacers[6]; // DERBY_RACER_COUNT
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
