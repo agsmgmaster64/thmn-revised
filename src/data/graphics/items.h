@@ -2133,3 +2133,8 @@ const u16 gItemIconPalette_Pickaxe[] = INCGFX_U16("graphics/items/icon_palettes/
 const u32 gItemIcon_ScubaGear[] = INCGFX_U32("graphics/items/icons/scuba_gear.png", ".4bpp.smol");
 const u16 gItemIconPalette_ScubaGear[] = INCGFX_U16("graphics/items/icon_palettes/scuba_gear.pal", ".gbapal");
 
+const u16 gItemIconPalette_Emerald[] = INCGFX_U16("graphics/items/icon_palettes/emerald.pal", ".gbapal");
+const u16 gItemIconPalette_Topaz[] = INCGFX_U16("graphics/items/icon_palettes/topaz.pal", ".gbapal");
+const u16 gItemIconPalette_Diamond[] = INCGFX_U16("graphics/items/icon_palettes/diamond.pal", ".gbapal");
+const u16 gItemIconPalette_PearlStone[] = INCGFX_U16("graphics/items/icon_palettes/pearl_stone.pal", ".gbapal");
+const u16 gItemIconPalette_Amethyst[] = INCGFX_U16("graphics/items/icon_palettes/amethyst.pal", ".gbapal");
