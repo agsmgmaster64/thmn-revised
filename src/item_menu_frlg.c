@@ -587,6 +587,13 @@ static const u8 sContextMenuItems_Items[] =
     ITEMMENUACTION_CANCEL,
 };
 
+static const u8 sContextMenuItems_KeyItems[] =
+{
+    ITEMMENUACTION_USE,
+    ITEMMENUACTION_REGISTER,
+    ITEMMENUACTION_CANCEL,
+};
+
 static const u8 sContextMenuItems_PokeBalls[] =
 {
     ITEMMENUACTION_GIVE,
@@ -1854,7 +1861,7 @@ static void OpenContextMenu(u8 taskId)
             case POCKET_MEDICINE:
             case POCKET_BATTLE_ITEMS:
             case POCKET_ITEMS:
-                if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
+                if (ItemIsMail(gSpecialVar_ItemId))
                 {
                     sContextMenuItemsPtr = sContextMenuItems_Mail;
                     sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Mail);
@@ -1867,21 +1874,29 @@ static void OpenContextMenu(u8 taskId)
                 break;
             case POCKET_KEY_ITEMS:
                 sContextMenuItemsPtr = sContextMenuItemsBuffer;
-                sContextMenuNumItems = 3;
-                sContextMenuItemsBuffer[2] = ITEMMENUACTION_CANCEL;
-                if (gSaveBlock1Ptr->registeredItem == gSpecialVar_ItemId)
-                    sContextMenuItemsBuffer[1] = ITEMMENUACTION_DESELECT;
+                if (GetItemFieldFunc(gSpecialVar_ItemId) == ItemUseOutOfBattle_CannotUse)
+                {
+                    sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_KeyItemsLink);
+                    memcpy(&sContextMenuItemsBuffer, &sContextMenuItems_KeyItemsLink, sizeof(sContextMenuItems_KeyItemsLink));
+                }
                 else
-                    sContextMenuItemsBuffer[1] = ITEMMENUACTION_REGISTER;
-                if (gSpecialVar_ItemId == ITEM_TM_CASE || gSpecialVar_ItemId == ITEM_BERRY_POUCH)
+                {
+                    sContextMenuNumItems = ARRAY_COUNT(sContextMenuItems_KeyItems);
+                    memcpy(&sContextMenuItemsBuffer, &sContextMenuItems_KeyItems, sizeof(sContextMenuItems_KeyItems));
+                }
+                if (gSpecialVar_ItemId == ITEM_MACH_BIKE || gSpecialVar_ItemId == ITEM_ACRO_BIKE || gSpecialVar_ItemId == ITEM_BICYCLE)
+                {
+                    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+                        sContextMenuItemsBuffer[0] = ITEMMENUACTION_WALK;
+                }
+                else if (gSpecialVar_ItemId == ITEM_TM_CASE || gSpecialVar_ItemId == ITEM_BERRY_POUCH)
+                {
                     sContextMenuItemsBuffer[0] = ITEMMENUACTION_OPEN;
-                else if ((gSpecialVar_ItemId == ITEM_BICYCLE
-                 || gSpecialVar_ItemId == ITEM_ACRO_BIKE
-                 || gSpecialVar_ItemId == ITEM_MACH_BIKE)
-                 && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE | PLAYER_AVATAR_FLAG_MACH_BIKE))
-                    sContextMenuItemsBuffer[0] = ITEMMENUACTION_WALK;
-                else
-                    sContextMenuItemsBuffer[0] = ITEMMENUACTION_USE;
+                }
+                if (gSaveBlock1Ptr->registeredItem == gSpecialVar_ItemId)
+                {
+                    sContextMenuItemsBuffer[1] = ITEMMENUACTION_DESELECT;
+                }
                 break;
             case POCKET_POKE_BALLS:
                 sContextMenuItemsPtr = sContextMenuItems_PokeBalls;

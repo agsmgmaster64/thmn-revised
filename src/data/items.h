@@ -16051,7 +16051,7 @@ const struct ItemInfo gItemsInfo[] =
             "An orb of pure ice.\n"
             "Doubles normal Cirno's offensive stats\n"
             "when held."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16069,7 +16069,7 @@ const struct ItemInfo gItemsInfo[] =
             "A hold item that\n"
             "doubles the Def of\n"
             "all Yuuka puppets."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16093,7 +16093,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Boosts the user's Faith-type move\n"
             "damage by 20%."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16118,7 +16118,7 @@ const struct ItemInfo gItemsInfo[] =
             "Recovers 1/16 of Max HP every turn\n"
             "for Poison-types. Lose 1/8 Max HP per\n"
             "turn if not a Poison-type."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16136,7 +16136,7 @@ const struct ItemInfo gItemsInfo[] =
             "A hold item that\n"
             "doubles Reisen II's\n"
             "Defense."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16153,7 +16153,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Not for kids.\n"
             "Restores 100 HP to one Puppet.\n"),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -16179,7 +16179,7 @@ const struct ItemInfo gItemsInfo[] =
             "Extends the length\n"
             "of set weather\n"
             "from 5 turns to 8."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16197,7 +16197,7 @@ const struct ItemInfo gItemsInfo[] =
             "A hold item that\n"
             "doubles the Sp. Atk\n"
             "of normal Yuki/Mai."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16215,7 +16215,7 @@ const struct ItemInfo gItemsInfo[] =
             "An ancient weapon from the age of gods.\n"
             "Increases Atk and Sp. Atk by 2x if\n"
             "held by Rinnosuke or Kosuzu."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16233,7 +16233,7 @@ const struct ItemInfo gItemsInfo[] =
             "An old mirror from the age of gods.\n"
             "Increases Def and Sp. Def by 2x if\n"
             "held by Rinnosuke or Kosuzu."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
