@@ -93,7 +93,7 @@ JaggedPass_EventScript_GuardDefeated::
 	end
 
 JaggedPass_EventScript_Artemis::
-	trainerbattle_single TRAINER_ARTEMIS, JaggedPass_Text_ArtemisIntro, JaggedPass_Text_ArtemisDefeat, JaggedPass_EventScript_ArtemisToHeal
+	trainerbattle_single TRAINER_ARTEMIS_1, JaggedPass_Text_ArtemisIntro, JaggedPass_Text_ArtemisDefeat, JaggedPass_EventScript_ArtemisToHeal
 	msgbox JaggedPass_Text_ArtemisPostBattle, MSGBOX_DEFAULT
 	call JaggedPass_EventScript_ArtemisHeal
 	msgbox JaggedPass_Text_ArtemisAnotherCheckup, MSGBOX_DEFAULT

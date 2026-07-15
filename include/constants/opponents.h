@@ -70,7 +70,7 @@
 #define TRAINER_LOLA_5                       63
 #define TRAINER_RICKY_1                      64
 #define TRAINER_SIMON                        65
-#define TRAINER_CHARLIE                      66
+#define TRAINER_ARTEMIS_2                    66
 #define TRAINER_RICKY_2                      67
 #define TRAINER_RICKY_3                      68
 #define TRAINER_RICKY_4                      69
@@ -636,7 +636,7 @@
 #define TRAINER_LUCAS_1                     629
 #define TRAINER_ALAN                        630
 #define TRAINER_CLARK                       631
-#define TRAINER_ARTEMIS                     632
+#define TRAINER_ARTEMIS_1                     632
 #define TRAINER_LUCAS_2                     633
 #define TRAINER_MIKE_1                      634
 #define TRAINER_MIKE_2                      635

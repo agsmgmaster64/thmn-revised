@@ -1387,9 +1387,9 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_POWER_GLOVE_GET                        (SYSTEM_FLAGS + 0x21) // Unused Flag
-#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
-#define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
+#define FLAG_POWER_GLOVE_GET                        (SYSTEM_FLAGS + 0x21) // Formerly Unused Flag
+#define FLAG_DEFEATED_VIVIT                         (SYSTEM_FLAGS + 0x22) // Formerly Unused Flag
+#define FLAG_HIDE_VIVIT                             (SYSTEM_FLAGS + 0x23) // Formerly Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag

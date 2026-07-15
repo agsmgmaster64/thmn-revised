@@ -67,6 +67,8 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	waitfanfare
 	closemessage
 	delay 30
+	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
+	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
 	setflag FLAG_ENABLE_WINONA_MATCH_CALL
 	setvar VAR_SCOTT_FORTREE_CALL_STEP_COUNTER, 0
 	setvar VAR_WINONA_BADGE_STATE, 1

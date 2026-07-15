@@ -1317,7 +1317,7 @@ Chibi Yachie
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CHARLIE ===
+=== TRAINER_ARTEMIS_2 ===
 Name: Artemis
 Class: RS Protag
 Pic: Old Couple
@@ -1326,7 +1326,11 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Eirin @ Lum Berry
+Normal Eirin @ Lum Berry
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Kaguya @ Lum Berry
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2703,11 +2707,11 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Louise
+Normal Louise
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Reisen
+Normal Reisen
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7137,11 +7141,11 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Kogasa
+Normal Kogasa
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Himawari
+Normal Himawari
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7808,7 +7812,7 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Komachi
+Normal Komachi
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9098,11 +9102,11 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Chiyuri
+Normal Chiyuri
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Murasa
+Normal Murasa
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10474,7 +10478,7 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Ran
+Normal Ran
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12119,7 +12123,7 @@ Chibi Kyouko
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ARTEMIS ===
+=== TRAINER_ARTEMIS_1 ===
 Name: Artemis
 Class: RS Protag
 Pic: Old Couple
@@ -12330,11 +12334,11 @@ Music: Girl
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Yumeko
+Normal Yumeko
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Shinki
+Normal Shinki
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

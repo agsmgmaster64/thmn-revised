@@ -6,7 +6,7 @@ AbandonedShip_Corridors_1F_EventScript_Youngster::
 	end
 
 AbandonedShip_Corridors_1F_EventScript_Charlie::
-	trainerbattle_single TRAINER_CHARLIE, AbandonedShip_Corridors_1F_Text_CharlieIntro, AbandonedShip_Corridors_1F_Text_CharlieDefeat
+	trainerbattle_single TRAINER_JANI, AbandonedShip_Corridors_1F_Text_CharlieIntro, AbandonedShip_Corridors_1F_Text_CharlieDefeat
 	msgbox AbandonedShip_Corridors_1F_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -18,7 +18,7 @@ AbandonedShip_Corridors_1F_Text_CharlieDefeat:
 	.string "Whoa, you overwhelmed me!$"
 
 AbandonedShip_Corridors_1F_Text_CharliePostBattle:
-	.string "It's not easy throwing POKé BALLS\n"
+	.string "It's not easy throwing Miko Orbs\n"
 	.string "while hanging on to an inner tube!$"
 
 AbandonedShip_Corridors_1F_Text_IsntItFunHere:
