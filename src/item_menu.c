@@ -37,6 +37,7 @@
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "pokemon_summary_screen.h"
+#include "registered_items_menu.h"
 #include "scanline_effect.h"
 #include "script.h"
 #include "shop.h"
@@ -2358,7 +2359,7 @@ bool32 CheckRegisteredKeyItem(u8 button)
         registeredItem = gSaveBlock3Ptr->registeredItemR;
         break;
     }
-    if (registeredItem != ITEM_NONE)
+    if (registeredItem == ITEM_NONE)
     {
         return FALSE;
     }
@@ -2413,6 +2414,23 @@ bool8 UseRegisteredKeyItemOnField(u8 button)
         return TRUE;
     }
     ScriptContext_SetupScript(EventScript_SelectWithoutRegisteredItem);
+    return TRUE;
+}
+
+bool8 TrySetUpRegisterItemMenu(void)
+{
+    if (!CheckRegisteredKeyItem(1)
+     && !CheckRegisteredKeyItem(2))
+    {
+        return UseRegisteredKeyItemOnField(0);
+    }
+
+    if (InUnionRoom() == TRUE || CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InBattlePike() || InMultiPartnerRoom() == TRUE)
+        return FALSE;
+    HideMapNamePopUpWindow();
+    ChangeBgY_ScreenOff(0, 0, BG_COORD_SET);
+
+    TxRegItemsMenu_OpenMenu();
     return TRUE;
 }
 

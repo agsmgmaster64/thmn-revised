@@ -116,8 +116,6 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         {
             if (newKeys & START_BUTTON)
                 input->pressedStartButton = TRUE;
-            if (newKeys & SELECT_BUTTON)
-                input->pressedSelectButton = TRUE;
             if (newKeys & A_BUTTON)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
@@ -126,7 +124,6 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedRButton = TRUE;
             if (newKeys & L_BUTTON)
                 input->pressedLButton = TRUE;
-/*
             if (sPlayerSelectHoldFrames == 60)
                 input->heldSelectButton = TRUE;
             if (heldKeys & SELECT_BUTTON)
@@ -139,7 +136,6 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                     input->pressedSelectButton = TRUE;
                 sPlayerSelectHoldFrames = 0;
             }
-*/
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -290,6 +286,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             break;
         }
     }
+
+    if (input->heldSelectButton && TrySetUpRegisterItemMenu())
+        return TRUE;
 
     if (input->input_field_1_2 && DEBUG_OVERWORLD_MENU && !DEBUG_OVERWORLD_IN_MENU)
     {
