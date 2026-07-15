@@ -11192,12 +11192,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Razz Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Razz."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11212,12 +11209,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Bluk Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Bluk."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11232,12 +11226,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Nanab Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Nanab."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11252,12 +11243,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Wepear Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Wepear."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11272,12 +11260,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Pinap Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Pinap."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11292,12 +11277,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Pomeg Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "Makes a Pokémon\n"
-            "friendly but lowers\n"
-            "base HP."),
-        .descriptionLong = COMPOUND_STRING(
-            "Using it on a Pokémon makes it\n"
-            "friendlier, but also lowers HP."),
+            "A delicious berry that lowers HP\n"
+            "EVs by 10 when eaten.\n"),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
@@ -11313,12 +11294,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Kelpsy Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "Makes a Pokémon\n"
-            "friendly but lowers\n"
-            "base Attack."),
-        .descriptionLong = COMPOUND_STRING(
-            "Using it on a Pokémon makes it\n"
-            "friendlier, but also lowers Attack."),
+            "A delicious berry that lowers\n"
+            "Attack EVs by 10 when eaten.\n"),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
@@ -11334,12 +11311,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Qualot Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "Makes a Pokémon\n"
-            "friendly but lowers\n"
-            "base Defense."),
-        .descriptionLong = COMPOUND_STRING(
-            "Using it on a Pokémon makes it\n"
-            "friendlier, but also lowers Defense."),
+            "A delicious berry that lowers\n"
+            "Defense EVs by 10 when eaten.\n"),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
@@ -11355,12 +11328,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Hondew Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "Makes a Pokémon\n"
-            "friendly but lowers\n"
-            "base Sp. Atk."),
-        .descriptionLong = COMPOUND_STRING(
-            "Using it on a Pokémon makes it\n"
-            "friendlier, but also lowers Sp. Atk."),
+            "A delicious berry that lowers\n"
+            "Sp. Atk EVs by 10 when eaten.\n"),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
@@ -11376,12 +11345,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Grepa Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "Makes a Pokémon\n"
-            "friendly but lowers\n"
-            "base Sp. Def."),
-        .descriptionLong = COMPOUND_STRING(
-            "Using it on a Pokémon makes it\n"
-            "friendlier, but also lowers Sp. Def."),
+            "A delicious berry that lowers\n"
+            "Sp. Def EVs by 10 when eaten.\n"),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
@@ -11397,12 +11362,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Tamato Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "Makes a Pokémon\n"
-            "friendly but lowers\n"
-            "base Speed."),
-        .descriptionLong = COMPOUND_STRING(
-            "Using it on a Pokémon makes it\n"
-            "friendlier, but also lowers Speed."),
+            "A delicious berry that lowers\n"
+            "Speed EVs by 10 when eaten.\n"),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
@@ -11418,12 +11379,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Cornn Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Cornn."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11438,12 +11396,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Magost Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Magost."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11458,12 +11413,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Rabuta Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Rabuta."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11478,12 +11430,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Nomel Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Nomel."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11498,12 +11447,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Spelon Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Spelon."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11518,12 +11464,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Pamtre Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Pamtre."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11538,12 +11481,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Watmel Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Watmel."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11558,12 +11498,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Durin Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Durin."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11578,12 +11515,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Belue Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "{POKEBLOCK} ingredient.\n"
-            "Plant in loamy soil\n"
-            "to grow Belue."),
-        .descriptionLong = COMPOUND_STRING(
-            "Can be ground up into a powder as\n"
-            "an ingredient for medicine."),
+            "A berry good for food processing.\n"
+            "It can be made into Candy at a\n"
+            "Contest Hall using a blender."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -14669,7 +14603,7 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPalette = gItemIconPalette_Emerald,
     },
 
     [ITEM_TOPAZ] =
@@ -14684,7 +14618,7 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPalette = gItemIconPalette_Topaz,
     },
 
     [ITEM_DIAMOND] =
@@ -14699,7 +14633,7 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPalette = gItemIconPalette_Diamond,
     },
 
     [ITEM_PEARL_STONE] =
@@ -14714,7 +14648,7 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPalette = gItemIconPalette_PearlStone,
     },
 
     [ITEM_AMETHYST] =
@@ -14729,7 +14663,7 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPalette = gItemIconPalette_Amethyst,
     },
 
     [ITEM_SCARLET_TOME] =
@@ -16117,7 +16051,7 @@ const struct ItemInfo gItemsInfo[] =
             "An orb of pure ice.\n"
             "Doubles normal Cirno's offensive stats\n"
             "when held."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16135,7 +16069,7 @@ const struct ItemInfo gItemsInfo[] =
             "A hold item that\n"
             "doubles the Def of\n"
             "all Yuuka puppets."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16159,7 +16093,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Boosts the user's Faith-type move\n"
             "damage by 20%."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16184,7 +16118,7 @@ const struct ItemInfo gItemsInfo[] =
             "Recovers 1/16 of Max HP every turn\n"
             "for Poison-types. Lose 1/8 Max HP per\n"
             "turn if not a Poison-type."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16202,7 +16136,7 @@ const struct ItemInfo gItemsInfo[] =
             "A hold item that\n"
             "doubles Reisen II's\n"
             "Defense."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16219,7 +16153,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Not for kids.\n"
             "Restores 100 HP to one Puppet.\n"),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -16245,7 +16179,7 @@ const struct ItemInfo gItemsInfo[] =
             "Extends the length\n"
             "of set weather\n"
             "from 5 turns to 8."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16263,7 +16197,7 @@ const struct ItemInfo gItemsInfo[] =
             "A hold item that\n"
             "doubles the Sp. Atk\n"
             "of normal Yuki/Mai."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16281,7 +16215,7 @@ const struct ItemInfo gItemsInfo[] =
             "An ancient weapon from the age of gods.\n"
             "Increases Atk and Sp. Atk by 2x if\n"
             "held by Rinnosuke or Kosuzu."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -16299,7 +16233,7 @@ const struct ItemInfo gItemsInfo[] =
             "An old mirror from the age of gods.\n"
             "Increases Def and Sp. Def by 2x if\n"
             "held by Rinnosuke or Kosuzu."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

@@ -48,6 +48,7 @@
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPrevMetatileBehavior = 0;
+static EWRAM_DATA u8 sPlayerSelectHoldFrames = 0;
 
 COMMON_DATA u8 gSelectedObjectEvent = 0;
 
@@ -97,9 +98,9 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
     input->pressedRButton = FALSE;
-    input->input_field_1_1 = FALSE;
+    input->pressedLButton = FALSE;
     input->input_field_1_2 = FALSE;
-    input->input_field_1_3 = FALSE;
+    input->heldSelectButton = FALSE;
     input->dpadDirection = 0;
 }
 
@@ -115,14 +116,26 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         {
             if (newKeys & START_BUTTON)
                 input->pressedStartButton = TRUE;
-            if (newKeys & SELECT_BUTTON)
-                input->pressedSelectButton = TRUE;
             if (newKeys & A_BUTTON)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
                 input->pressedBButton = TRUE;
             if (newKeys & R_BUTTON)
                 input->pressedRButton = TRUE;
+            if (newKeys & L_BUTTON)
+                input->pressedLButton = TRUE;
+            if (sPlayerSelectHoldFrames == 60)
+                input->heldSelectButton = TRUE;
+            if (heldKeys & SELECT_BUTTON)
+            {
+                sPlayerSelectHoldFrames = sPlayerSelectHoldFrames < 0xFF ? sPlayerSelectHoldFrames + 1 : 0xFF;
+            }
+            else if (sPlayerSelectHoldFrames != 0)
+            {
+                if (sPlayerSelectHoldFrames < 60)
+                    input->pressedSelectButton = TRUE;
+                sPlayerSelectHoldFrames = 0;
+            }
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -235,10 +248,46 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->tookStep && TryFindHiddenPokemon())
         return TRUE;
 
-    if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
+    if (input->pressedSelectButton && UseRegisteredKeyItemOnField(0))
         return TRUE;
 
-    if (input->pressedRButton && TryStartDexNavSearch())
+    if (input->pressedLButton)
+    {
+        switch (gSaveBlock2Ptr->optionsLButtonMode)
+        {
+        case 1:
+            PlaySE(SE_WIN_OPEN);
+            FreezeObjectEvents();
+            Debug_ShowMainMenu();
+            return TRUE;
+            break;
+        case 3:
+            if (UseRegisteredKeyItemOnField(1))
+                return TRUE;
+            break;
+        default:
+            break;
+        }
+    }
+
+    if (input->pressedRButton)
+    {
+        switch (gSaveBlock2Ptr->optionsRButtonMode)
+        {
+        case 1:
+            if (TryStartDexNavSearch())
+                return TRUE;
+            break;
+        case 3:
+            if (UseRegisteredKeyItemOnField(2))
+                return TRUE;
+            break;
+        default:
+            break;
+        }
+    }
+
+    if (input->heldSelectButton && TrySetUpRegisterItemMenu())
         return TRUE;
 
     if (input->input_field_1_2 && DEBUG_OVERWORLD_MENU && !DEBUG_OVERWORLD_IN_MENU)
