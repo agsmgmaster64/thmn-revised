@@ -1319,7 +1319,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ARTEMIS_2 ===
 Name: Artemis
-Class: RS Protag
+Class: Nurse
 Pic: Old Couple
 Gender: Female
 Music: Female
@@ -12125,7 +12125,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ARTEMIS_1 ===
 Name: Artemis
-Class: RS Protag
+Class: Nurse
 Pic: Old Couple
 Gender: Female
 Music: Female
