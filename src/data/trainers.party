@@ -263,11 +263,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Tokiko
+Extra Tokiko
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mystia
+Extra Mystia
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -280,11 +280,11 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Mugetsu
+Normal Mugetsu
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Gengetsu
+Normal Gengetsu
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -354,11 +354,11 @@ Music: Aqua
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Momiji
+Normal Momiji
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Suwako
+Normal Suwako
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -371,11 +371,11 @@ Music: Aqua
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Remilia
+Normal Remilia
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Murasa
+Normal Murasa
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -388,15 +388,15 @@ Music: Aqua
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Momiji
+Normal Momiji
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Komachi
+Normal Komachi
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Suwako
+Normal Suwako
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -534,11 +534,11 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Kasen
+Normal Kasen
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Sendai
+Normal Sendai
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -628,7 +628,7 @@ Ball: Ultra
 - Strength
 - Accelerock
 
-Chibi Remilia @ Charcoal
+Normal Remilia @ Charcoal
 Level: 31
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -650,7 +650,7 @@ Ball: Ultra
 - Mermaid Song
 - Aurora Beam
 
-Chibi Suwako @ Sitrus Berry
+Normal Suwako @ Sitrus Berry
 Level: 33
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -670,7 +670,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kagerou @ Poison Barb
+Extra Kagerou @ Poison Barb
 Level: 50
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -681,7 +681,7 @@ Ball: Ultra
 - Poison Fang
 - Accelerock
 
-Normal Wakasagihime @ TwistedSpoon
+Extra Wakasagihime @ TwistedSpoon
 Level: 51
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -692,7 +692,7 @@ Ball: Ultra
 - Ice Beam
 - Mermaid Song
 
-Normal Suwako @ Sitrus Berry
+Extra Suwako @ Sitrus Berry
 Level: 52
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -869,11 +869,11 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yuuka
+Normal Yuuka
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Medicine
+Normal Medicine
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2133,11 +2133,11 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Kokoro
+Normal Kokoro
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuyuko
+Normal Yuyuko
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3490,11 +3490,11 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Raiko
+Normal Raiko
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Shou
+Normal Shou
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3958,7 +3958,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Nue
+Normal Nue
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3971,15 +3971,15 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Medicine
+Normal Medicine
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hina
+Normal Hina
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Parsee
+Normal Parsee
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3992,11 +3992,11 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yoshika
+Normal Yoshika
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Medicine
+Normal Medicine
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4237,7 +4237,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Byakuren
+Normal Byakuren
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4408,7 +4408,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Byakuren
+Normal Byakuren
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7518,7 +7518,7 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Rika
+Normal Rika
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7765,7 +7765,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Nue
+Normal Nue
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7778,7 +7778,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Mamizou
+Normal Mamizou
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8894,11 +8894,11 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Yuki
+Normal Yuki
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Mai
+Normal Mai
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9233,7 +9233,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Ran
+Normal Ran
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9246,7 +9246,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Parsee
+Extra Parsee
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10623,7 +10623,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Nitori
+Normal Nitori
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10726,7 +10726,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Momiji
+Normal Momiji
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11903,11 +11903,11 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Lily White
+Normal Lily White
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Lily Black
+Normal Lily Black
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12479,7 +12479,7 @@ Normal Meira
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuka
+Normal Yuuka
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13736,15 +13736,15 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Hina
+Normal Hina
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Komachi
+Normal Komachi
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Chiyuri
+Normal Chiyuri
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14815,7 +14815,7 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Shou
+Normal Shou
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14828,11 +14828,11 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yuki
+Normal Yuki
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Futo
+Normal Futo
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14845,7 +14845,7 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yukari
+Normal Yukari
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
