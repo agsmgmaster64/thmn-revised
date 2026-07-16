@@ -267,6 +267,7 @@ static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
     [PLAYER_AVATAR_STATE_FISHING]    = {OBJ_EVENT_GFX_BRENDAN_FISHING,          OBJ_EVENT_GFX_MAY_FISHING},
     [PLAYER_AVATAR_STATE_WATERING]   = {OBJ_EVENT_GFX_BRENDAN_WATERING,         OBJ_EVENT_GFX_MAY_WATERING},
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_RIVAL_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE},
+    [PLAYER_AVATAR_STATE_VSSEEKER_BIKE]   = {OBJ_EVENT_GFX_RIVAL_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE},
 };
 
 static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
@@ -280,6 +281,7 @@ static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
     [PLAYER_AVATAR_STATE_FISHING]    = {PLAYER_AVATAR_GFX_MALE_FISHING,    PLAYER_AVATAR_GFX_FEMALE_FISHING},
     [PLAYER_AVATAR_STATE_WATERING]   = {PLAYER_AVATAR_GFX_MALE_WATERING,   PLAYER_AVATAR_GFX_FEMALE_WATERING},
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {PLAYER_AVATAR_GFX_MALE_VSSEEKER,   PLAYER_AVATAR_GFX_FEMALE_VSSEEKER},
+    [PLAYER_AVATAR_STATE_VSSEEKER_BIKE] = {PLAYER_AVATAR_GFX_MALE_VSSEEKER_BIKE,   PLAYER_AVATAR_GFX_FEMALE_VSSEEKER_BIKE},
 };
 
 static const u8 sFRLGAvatarGfxIds[GENDER_COUNT] =
@@ -1740,6 +1742,16 @@ void SetPlayerAvatarFieldMove(void)
     EndORASDowsing();
     ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_FIELD_MOVE));
     StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], ANIM_FIELD_MOVE);
+}
+
+void SetPlayerAvatarVsSeeker(void)
+{
+    EndORASDowsing();
+    if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+        ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_VSSEEKER_BIKE));
+    else
+        ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_VSSEEKER));
+    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], 0);
 }
 
 void SetPlayerAvatarFishing(enum Direction direction)

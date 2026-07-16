@@ -1355,6 +1355,148 @@ static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_RenkoNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_RenkoNormalRunning, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoFieldMove[] = {
+    overworld_ascending_frames(gObjectEventPic_RenkoFieldMove, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoVSSeeker[] = {
+    overworld_ascending_frames(gObjectEventPic_RenkoVSSeeker, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoVSSeekerBike[] = {
+    overworld_ascending_frames(gObjectEventPic_RenkoVSSeekerBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoSurfing[] = {
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RenkoSurfing, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoMachBike[] = {
+    overworld_ascending_frames(gObjectEventPic_RenkoMachBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoAcroBike[] = {
+    overworld_ascending_frames(gObjectEventPic_RenkoAcroBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_RenkoFishing, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoWatering[] = {
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 5),
+    overworld_frame(gObjectEventPic_RenkoWatering, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoDecorating[] = {
+    obj_frame_tiles(gObjectEventPic_RenkoDecorating),
+};
+
+static const struct SpriteFrameImage sPicTable_RenkoUnderwater[] = {
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RenkoUnderwater, 4, 4, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_MaribelNormalRunning, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelFieldMove[] = {
+    overworld_ascending_frames(gObjectEventPic_MaribelFieldMove, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelVSSeeker[] = {
+    overworld_ascending_frames(gObjectEventPic_MaribelVSSeeker, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelVSSeekerBike[] = {
+    overworld_ascending_frames(gObjectEventPic_MaribelVSSeekerBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelSurfing[] = {
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 3),
+    overworld_frame(gObjectEventPic_MaribelSurfing, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelMachBike[] = {
+    overworld_ascending_frames(gObjectEventPic_MaribelMachBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelAcroBike[] = {
+    overworld_ascending_frames(gObjectEventPic_MaribelAcroBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_MaribelFishing, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelWatering[] = {
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 4),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 5),
+    overworld_frame(gObjectEventPic_MaribelWatering, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelDecorating[] = {
+    obj_frame_tiles(gObjectEventPic_MaribelDecorating),
+};
+
+static const struct SpriteFrameImage sPicTable_MaribelUnderwater[] = {
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MaribelUnderwater, 4, 4, 2),
+};
+
 #if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {
