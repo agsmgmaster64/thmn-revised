@@ -1659,7 +1659,7 @@ static void ItemUseOnFieldCB_ClimbingGear(u8 taskId)
 
 void ItemUseOutOfBattle_ClimbingGear(u8 taskId)
 {
-    if (CanUseClmibingGear())
+    if (CanUseRockClimbFacingTile())
     {
         sItemUseOnFieldCB = ItemUseOnFieldCB_ClimbingGear;
         SetUpItemUseOnFieldCallback(taskId);

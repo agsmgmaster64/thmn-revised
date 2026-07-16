@@ -25,7 +25,7 @@ u32 CanUseWaterfallFromInteractedWater(void);
 u32 CanUseDiveDown(void);
 u32 CanUseDiveEmerge(void);
 
-bool32 CanUseClmibingGear(void);
+bool32 CanUseRockClimbFacingTile(void);
 
 bool32 PartyCanUseFieldMove(u32 fieldMove, bool32 doUnlockedCheck, bool32 setVariables);
 

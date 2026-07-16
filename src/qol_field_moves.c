@@ -198,7 +198,7 @@ u32 CanUseDiveEmerge(void)
 }
 
 
-u32 CanUseClmibingGear(void)
+u32 CanUseRockClimbFacingTile(void)
 {
     s16 x, y;
 
@@ -206,7 +206,7 @@ u32 CanUseClmibingGear(void)
 
     if (MetatileBehavior_IsRockClimbable(MapGridGetMetatileBehaviorAt(x, y)))
     {
-        return TRUE;
+        return GetFieldMoveUsage(FIELD_MOVE_ROCK_CLIMB, ITEM_CLIMBING_GEAR);
     }
 
     return FALSE;

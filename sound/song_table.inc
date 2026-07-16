@@ -619,87 +619,20 @@ gSongTable::
 	song mus_thppme_263_evo_start, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_264_bokura_no_hisoutensoku, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_265_fate_of_sixty_years, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_266_fate_of_sixty_years, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_273_curious, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_274_dark_road, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_275_cosmic_mind, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_276_deaf_to_all_but_the_song, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_277_imperishable_night, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_278_dream_battle, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_279_hellfire_mantle, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_280_ultimate_truth, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_282_flowering_night, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_283_forsaken_doll, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_284_judas_kiss, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_285_princess_inada, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_286_forgathering_dream, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_287_deaf_to_all_but_the_song, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_288_the_bridge, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_289_third_eye, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_290_credits_medley, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_291_red_soul, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_292_innocent_treasure, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_293_lunate_elf, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_294_gensokyo_the_god_loved, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_295_septette, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_296_unknown_was_her, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_297_master_spark, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_298_doll_judgement, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_299_necrofantasia, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_300_colorful_path, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_301_plain_asia, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_302_scarlet_beyond, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_303_history_of_the_moon, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_304_interdimensional_voyage, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_305_candid_friend, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_306_ancient_temple, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_307_heian_alien, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_308_beloved_tomboyish_girl, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_309_today_was_special, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_313_the_umbrella, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_314_old_world, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_315_fly_above_hatoyama, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_316_kaguya, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_326_city_of_flower, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_327_end_of_daylight, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_328_history_of_the_moon, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_330_infinity_nightmare, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_331_hakurei_shrine_grounds, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_333_innocent_treasure, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_334_bad_apple, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_335_eternal_miko, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_336_lost_dream, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_337_alice_in_wonderland, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_338_phantom_ensemble, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_340_civilization_of_magic, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_341_now_until_the_moment_you_die, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_342, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_343_sacred_lot, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_344_greenwich_in_the_sky, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_345_legend_of_hourai, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_347_wind_god_girl, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_349_shanghai_alice_of_meiji_17, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_350_septette, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_351_locked_girl, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_352_megamari_opening, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_353_phantom_ensemble, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_354_phantom_ensemble, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_355_deep_mountain, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_356_candid_friend, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_357_alice_in_wonderland, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_358_witches_ball, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_359_megamari_opening, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_360_grimoire_of_alice, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_361_reincarnation, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_362_faith_is_for_the_transient_people, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_363_invisible_full_moon, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_364_nuclear_fusion, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_365_lost_place, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_366_sake_dish, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_367_young_girl_and_old_man, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_368_wind_god_girl, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_369_love_consultation, MUSIC_PLAYER_BGM, 0
-	song mus_thppme_370_fly_above_hatoyama, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_381_hermit_and_jiangshi, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_382_unknown_was_her, MUSIC_PLAYER_BGM, 0
 	song mus_thppme_383_master_spark, MUSIC_PLAYER_BGM, 0
@@ -834,7 +767,6 @@ gSongTable::
 	song mus_thppzgsk_314A_old_world, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_314B_old_world, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_315A_fly_above_hatoyama, MUSIC_PLAYER_BGM, 0
-	song mus_thppzgsk_316A_fly_above_hatoyama, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_319A_puppet_caught, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_322A_immortal_smoke, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_324A_bokura_no_hisoutensoku, MUSIC_PLAYER_BGM, 0
@@ -916,15 +848,12 @@ gSongTable::
 	song mus_thppzgsk_392A_luna_dial, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_393A_magus_night, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_394A_imperishable_dream_battle, MUSIC_PLAYER_BGM, 0
-	song mus_thppzgsk_399A_master_spark, MUSIC_PLAYER_BGM, 0
-	song mus_thppzgsk_400A_faith_is_for_the_transient_people, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_401A_plastic_mind, MUSIC_PLAYER_BGM, 0
 	song mus_thppzgsk_402A_master_spark, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_maidencapriccio_a, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_trueadministrator, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_367, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_368, MUSIC_PLAYER_BGM, 0
-	song mus_thpprf_loveconsultation_a, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_littleprincess, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_marithemagician, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_372, MUSIC_PLAYER_BGM, 0
@@ -942,7 +871,6 @@ gSongTable::
 	song mus_thpprf_hartmannsyoukai, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_nativefaith, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_unknownwasher, MUSIC_PLAYER_BGM, 0
-	song mus_thpprf_dreambattle, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_badapple, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_necrofantasia_b, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_groundscolorisyellow, MUSIC_PLAYER_BGM, 0
@@ -950,7 +878,6 @@ gSongTable::
 	song mus_thpprf_oniisland, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_borderoflife, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_394, MUSIC_PLAYER_BGM, 0
-	song mus_thpprf_phantomensemble, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_necrofantasia_c, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_stalkthenight, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_398, MUSIC_PLAYER_BGM, 0
@@ -988,6 +915,17 @@ gSongTable::
 	song mus_thpprf_girls_sealing_club, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_nobeta_1, MUSIC_PLAYER_BGM, 0
 	song mus_thpprf_nobeta_2, MUSIC_PLAYER_BGM, 0
+	song mus_hgss_casino, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_1, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_2, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_3, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_4, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_5, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_6, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_7, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_8, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_9, MUSIC_PLAYER_BGM, 0
+	song mus_casino_plus_gacha, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:
