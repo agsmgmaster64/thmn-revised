@@ -1388,9 +1388,9 @@
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
 #define FLAG_POWER_GLOVE_GET                        (SYSTEM_FLAGS + 0x21) // Formerly Unused Flag
-#define FLAG_DEFEATED_VIVIT                         (SYSTEM_FLAGS + 0x22) // Formerly Unused Flag
+#define FLAG_SYS_VS_SEEKER_CHARGING                 (SYSTEM_FLAGS + 0x22) // Formerly Unused Flag
 #define FLAG_HIDE_VIVIT                             (SYSTEM_FLAGS + 0x23) // Formerly Unused Flag
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
+#define FLAG_DEFEATED_VIVIT                         (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
