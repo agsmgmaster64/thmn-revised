@@ -72,8 +72,10 @@ FortreeCity_House2_Text_YourHiddenPowerHasAwoken:
 	.string "power of your Puppets.$"
 
 FortreeCity_House2_Text_ExplainHiddenPower:
-	.string "HIDDEN POWER is a move that changes\n"
-	.string "with the Puppet.$"
+	.string "Multi-Pulse is a move that changes\n"
+	.string "with a Puppet's held item.\p"
+	.string "I hear it only works with items\n"
+	.string "like Miracle Seed or Charcoal, though.$"
 
 FortreeCity_House2_Text_YouGuessedWrong:
 	.string "No, too bad.\n"

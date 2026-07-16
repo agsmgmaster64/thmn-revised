@@ -251,7 +251,7 @@
 #define TRAINER_HANNAH                      244
 #define TRAINER_SAMANTHA                    245
 #define TRAINER_MAURA                       246
-#define TRAINER_KAYLA                       247
+#define TRAINER_ARTEMIS_3                   247
 #define TRAINER_ALEXIS                      248
 #define TRAINER_JACKI_1                     249
 #define TRAINER_JACKI_2                     250

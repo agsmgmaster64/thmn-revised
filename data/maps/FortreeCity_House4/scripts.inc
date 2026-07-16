@@ -70,25 +70,25 @@ FortreeCity_House4_Text_BringsWorldCloserTogether:
 
 FortreeCity_House4_Text_GoBirdPokemon:
 	.string "There!\n"
-	.string "Go, BIRD Puppets!$"
+	.string "Go, Nitori!$"
 
 FortreeCity_House4_Text_AskedWingullToRunErrand:
-	.string "Heheh, I asked my WINGULL to run\n"
+	.string "Heheh, I asked my Nitori to run\n"
 	.string "an errand for me.$"
 
 FortreeCity_House4_Text_WelcomeWingullTakeMentalHerb:
 	.string "Good!\n"
-	.string "Welcome back, WINGULL!\p"
+	.string "Welcome back, Nitori!\p"
 	.string "Huh? What is this?\n"
 	.string "What is it holding?\p"
-	.string "A MENTAL HERB?\n"
+	.string "A Mental Herb?\n"
 	.string "It must have picked it up somewhere.\p"
 	.string "But I'm not a trainer, so you can\n"
 	.string "have it.$"
 
 FortreeCity_House4_Text_FriendsFarAwayThanksToWingull:
-	.string "Thanks to my WINGULL, I have friends\n"
+	.string "Thanks to my Nitori, I have friends\n"
 	.string "who live far away.$"
 
 FortreeCity_House4_Text_Wingull:
-	.string "WINGULL: Pihyoh!$"
+	.string "Nitori: Pihyoh!$"

@@ -13,14 +13,14 @@ FortreeCity_House5_EventScript_Zigzagoon::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	playmoncry SPECIES_NORMAL_IKU, CRY_MODE_NORMAL
 	msgbox FortreeCity_House5_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
 FortreeCity_House5_Text_TreeHousesAreGreat:
-	.string "The tree houses of FORTREE are great!\p"
+	.string "The tree houses of Fortree are great!\p"
 	.string "I think it's the number one town for\n"
 	.string "living together with Puppets.$"
 
@@ -31,4 +31,4 @@ FortreeCity_House5_Text_AdaptedToNature:
 	.string "conform to the way we want to live.$"
 
 FortreeCity_House5_Text_Zigzagoon:
-	.string "ZIGZAGOON: Bufuu!$"
+	.string "Iku: Bufuu!$"

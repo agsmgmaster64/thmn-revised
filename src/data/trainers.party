@@ -200,23 +200,23 @@ Music: Female
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Benben
+Normal Benben
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yatsuhashi
+Normal Yatsuhashi
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Raiko
+Normal Raiko
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Kokoro
+Normal Kokoro
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Seiga
+Normal Seiga
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -250,7 +250,7 @@ Normal Shizuha
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Minoriko
+Extra Minoriko
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -452,7 +452,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kisume
+Extra Kisume
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -465,7 +465,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Remilia
+Normal Remilia
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -478,11 +478,11 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Momiji
+Normal Komachi
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Komachi
+Extra Momiji
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -787,7 +787,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Kokoro
+Normal Kokoro
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -979,15 +979,15 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Suika
+Normal Suika
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Ran
+Normal Ran
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Tenshi
+Normal Tenshi
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2450,11 +2450,11 @@ Music: Female
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Iku
+Normal Iku
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Kaguya
+Normal Kaguya
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2724,7 +2724,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Merlin
+Extra Merlin
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3413,7 +3413,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Zanmu
+Normal Zanmu
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4013,7 +4013,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Suika
+Normal Suika
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4199,11 +4199,11 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Karen
+Normal Karen
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Patchouli
+Normal Patchouli
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4361,9 +4361,9 @@ Normal Keine
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_KAYLA ===
+=== TRAINER_ARTEMIS_3 ===
 Name: Artemis
-Class: RS Protag
+Class: Nurse
 Pic: Old Couple
 Gender: Female
 Music: Female
@@ -4374,11 +4374,11 @@ Normal Reisen @ Lum Berry
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Kaguya @ Lum Berry
+Normal Kaguya @ Lum Berry
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Eirin @ Lum Berry
+Normal Eirin @ Lum Berry
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -5622,7 +5622,7 @@ Music: Twins
 Battle Type: Doubles
 AI: Basic Trainer
 
-Chibi Mokou
+Normal Mokou
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8113,11 +8113,11 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yuuka
+Normal Yuuka
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yukari
+Normal Yukari
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10636,11 +10636,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Kanako
+Normal Kanako
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Suwako
+Normal Suwako
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10743,11 +10743,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Aya
+Normal Aya
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hatate
+Normal Hatate
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10925,7 +10925,7 @@ Normal Kagerou
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Suwako
+Normal Suwako
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12304,7 +12304,7 @@ Normal Youmu
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuyuko
+Normal Yuyuko
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12496,7 +12496,7 @@ Normal Youmu
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meira
+Extra Meira
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12513,7 +12513,7 @@ Normal Youmu
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nue
+Normal Nue
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14888,11 +14888,11 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Yumeko
+Normal Yumeko
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rumia
+Extra Rumia
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14909,11 +14909,11 @@ Akyuu
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuka
+Normal Yuuka
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Letty
+Normal Letty
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14925,7 +14925,7 @@ Normal Nemuno
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Aunn
+Normal Aunn
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14938,19 +14938,19 @@ Music: Female
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Lyrica
+Normal Lyrica
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Lunasa
+Normal Lunasa
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Merlin
+Normal Merlin
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuyuko
+Normal Yuyuko
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14958,7 +14958,7 @@ Kedama
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Eiki
+Normal Eiki
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14975,7 +14975,7 @@ Normal Rumia
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kyouko
+Extra Kyouko
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -19160,7 +19160,7 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Normal Kagerou @ Poison Barb
+Extra Kagerou @ Poison Barb
 Level: 40
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -19182,7 +19182,7 @@ Ball: Ultra
 - Poison Bomb
 - Dream Eater
 
-Normal Chiyuri @ Sharp Beak
+Extra Chiyuri @ Sharp Beak
 Level: 41
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -19193,7 +19193,7 @@ Ball: Ultra
 - Shock Absorb
 - Air Slash
 
-Normal Murasa @ Black Belt
+Extra Murasa @ Black Belt
 Level: 42
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -19204,7 +19204,7 @@ Ball: Ultra
 - Brick Break
 - Aqua Jet
 
-Normal Suwako @ Sitrus Berry
+Extra Suwako @ Sitrus Berry
 Level: 43
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe

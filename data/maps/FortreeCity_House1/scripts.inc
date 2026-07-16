@@ -34,7 +34,7 @@ FortreeCity_House1_EventScript_Zigzagoon::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	playmoncry SPECIES_NORMAL_IKU, CRY_MODE_NORMAL
 	msgbox FortreeCity_House1_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -64,9 +64,9 @@ FortreeCity_House1_Text_YouWontTradeMe:
 	.string "Even after I bared my heart to you?$"
 
 FortreeCity_House1_Text_GoingToMakeVolbeatStrong:
-	.string "I'm going to make VOLBEAT super\n"
+	.string "I'm going to make ECirno super\n"
 	.string "strong from this moment on!\p"
-	.string "I hope you do the same with PLUSLE!$"
+	.string "I hope you do the same with Goliath!$"
 
 FortreeCity_House1_Text_TradingMemoriesWithOthers:
 	.string "Trading Puppets with others…\p"
@@ -74,4 +74,4 @@ FortreeCity_House1_Text_TradingMemoriesWithOthers:
 	.string "memories with other people.$"
 
 FortreeCity_House1_Text_Zigzagoon:
-	.string "ZIGZAGOON: Gumomoh?$"
+	.string "Iku: Gumomoh?$"

@@ -6,10 +6,28 @@ MtPyre_3F_EventScript_William::
 	msgbox MtPyre_3F_Text_WilliamPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MtPyre_3F_EventScript_Kayla::
-	trainerbattle_single TRAINER_KAYLA, MtPyre_3F_Text_KaylaIntro, MtPyre_3F_Text_KaylaDefeat
-	msgbox MtPyre_3F_Text_KaylaPostBattle, MSGBOX_AUTOCLOSE
+MtPyre_3F_EventScript_Artemis::
+	trainerbattle_single TRAINER_ARTEMIS_3, MtPyre_3F_Text_ArtemisIntro, MtPyre_3F_Text_ArtemisDefeat, AbandonedShip_Rooms2_1F_EventScript_ArtemisToHeal
+	msgbox MtPyre_3F_Text_ArtemisPostBattle, MSGBOX_DEFAULT
+	call MtPyre_3F_EventScript_ArtemisHeal
+	msgbox MtPyre_3F_Text_ArtemisAnotherCheckup, MSGBOX_AUTOCLOSE
 	end
+	
+MtPyre_3F_EventScript_ArtemisToHeal::
+	msgbox MtPyre_3F_Text_ArtemisPostBattle, MSGBOX_DEFAULT
+	call MtPyre_3F_EventScript_ArtemisHeal
+	msgbox MtPyre_3F_Text_ArtemisAnotherCheckup, MSGBOX_DEFAULT
+	release
+	end
+	
+MtPyre_3F_EventScript_ArtemisHeal::
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	return
 
 MtPyre_3F_EventScript_Gabrielle::
 	trainerbattle_single TRAINER_GABRIELLE_1, MtPyre_3F_Text_GabrielleIntro, MtPyre_3F_Text_GabrielleDefeat, MtPyre_3F_EventScript_RegisterGabrielle
@@ -45,20 +63,23 @@ MtPyre_3F_Text_WilliamPostBattle:
 	.string "My psychic powers have surely\n"
 	.string "grown several times, but…$"
 
-MtPyre_3F_Text_KaylaIntro:
-	.string "Ahahahaha!\p"
-	.string "This is no place for children, least\n"
-	.string "of all you!$"
+MtPyre_3F_Text_ArtemisIntro:
+	.string "Why, hello there!\p"
+	.string "The famous wandering Puppet Center\n"
+	.string "nurse, Artemis, is here to give\l"
+	.string "your Puppets a checkup!$"
 
-MtPyre_3F_Text_KaylaDefeat:
-	.string "I lost that cleanly…$"
+MtPyre_3F_Text_ArtemisDefeat:
+	.string "Your Puppets are glowing with health!$"
 
-MtPyre_3F_Text_KaylaPostBattle:
-	.string "This means my training is still not\n"
-	.string "enough…\p"
-	.string "I've got to keep working toward the\n"
-	.string "summit…\p"
-	.string "Go, me!$"
+MtPyre_3F_Text_ArtemisPostBattle:
+	.string "Well then, time to heal up your\n"
+	.string "Puppets!$"
+	
+MtPyre_3F_Text_ArtemisAnotherCheckup:
+	.string "There, good as new!\p"
+	.string "If you need another checkup,\n"
+	.string "I'll always be here.$"
 
 MtPyre_3F_Text_GabrielleIntro:
 	.string "Why have you come here?$"

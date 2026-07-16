@@ -190,7 +190,7 @@ Route120_EventScript_StevenBattleKecleon::
 	playmoncry SPECIES_KECLEON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_KECLEON, 30
+	setwildbattle SPECIES_NORMAL_NUE, 30
 	setvar VAR_0x8009, 0
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
@@ -385,7 +385,7 @@ Route120_Text_StevenShowMeYourPower:
 	.string "power as a trainer!$"
 
 Route120_Text_StevenUsedDevonScope:
-	.string "Steven used the DEVON SCOPE.\p"
+	.string "Steven used the Devon Scope.\p"
 	.string "An invisible Puppet became completely\n"
 	.string "visible!\p"
 	.string "The startled Puppet attacked!$"
@@ -394,9 +394,9 @@ Route120_Text_StevenGiveDevonScope:
 	.string "Steven: I see…\n"
 	.string "Your battle style is intriguing.\p"
 	.string "Your Puppets have obviously grown\n"
-	.string "since I first met you in DEWFORD.\p"
+	.string "since I first met you in Dewford.\p"
 	.string "I'd like you to have this\n"
-	.string "DEVON SCOPE.\p"
+	.string "Devon Scope.\p"
 	.string "Who knows, there may be other\n"
 	.string "concealed Puppets.$"
 
@@ -412,18 +412,18 @@ Kecleon_Text_SomethingUnseeable:
 
 Kecleon_Text_WantToUseDevonScope:
 	.string "Something unseeable is in the way.\p"
-	.string "Want to use the DEVON SCOPE?$"
+	.string "Want to use the Devon Scope?$"
 
 Kecleon_Text_UseDevonScopeMonAttacked:
-	.string "{PLAYER} used the DEVON SCOPE.\p"
+	.string "{PLAYER} used the Devon Scope.\p"
 	.string "An invisible Puppet became completely\n"
 	.string "visible!\p"
 	.string "The startled Puppet attacked!$"
 
 Route120_Text_RouteSignFortree:
-	.string "ROUTE 120\n"
-	.string "{LEFT_ARROW} FORTREE CITY$"
+	.string "Route 120\n"
+	.string "{LEFT_ARROW} Fortree City$"
 
 Route120_Text_RouteSign121:
-	.string "{RIGHT_ARROW} ROUTE 121\n"
-	.string "{LEFT_ARROW} ROUTE 120$"
+	.string "{RIGHT_ARROW} Route 121\n"
+	.string "{LEFT_ARROW} Route 120$"

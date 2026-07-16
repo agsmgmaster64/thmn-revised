@@ -84,14 +84,14 @@ FortreeCity_EventScript_UseDevonScope::
 	end
 
 FortreeCity_Movement_KecleonFlee:
-	walk_right
+	walk_down
 	step_end
 
 FortreeCity_Text_SawGiganticPokemonInSky:
 	.string "No one believes me, but I saw this\n"
 	.string "gigantic Puppet in the sky.\p"
 	.string "It seemed to squirm as it flew toward\n"
-	.string "ROUTE 131.\p"
+	.string "Route 131.\p"
 	.string "By the way… Sniff…\n"
 	.string "Um… You, uh…smell singed.\p"
 	.string "Were you at a volcano or something?$"
@@ -100,20 +100,20 @@ FortreeCity_Text_SomethingBlockingGym:
 	.string "I want to go to the Puppet Gym,\n"
 	.string "but something's blocking the way.\p"
 	.string "After all the bother I went through\n"
-	.string "training on ROUTE 120…$"
+	.string "training on Route 120…$"
 
 FortreeCity_Text_ThisTimeIllBeatWinona:
 	.string "I've got my pride-and-joy Puppets\n"
-	.string "with me. This time, I'll beat WINONA.$"
+	.string "with me. This time, I'll beat Winona.$"
 
 FortreeCity_Text_TreesGrowByDrinkingRainwater:
 	.string "The ground absorbs rainwater, and\n"
 	.string "trees grow by drinking that water…\p"
-	.string "Our FORTREE CITY exists because\n"
+	.string "Our Fortree City exists because\n"
 	.string "there's both water and soil.$"
 
 FortreeCity_Text_EveryoneHealthyAndLively:
-	.string "The CITY consists of homes built on\n"
+	.string "The City consists of homes built on\n"
 	.string "trees.\p"
 	.string "Perhaps because of that lifestyle,\n"
 	.string "everyone is healthy and lively.\p"
@@ -122,7 +122,7 @@ FortreeCity_Text_EveryoneHealthyAndLively:
 
 FortreeCity_Text_BugPokemonComeThroughWindow:
 	.string "Living on top of trees is okay.\p"
-	.string "But sometimes BUG Puppets come in\n"
+	.string "But sometimes Bug Puppets come in\n"
 	.string "through windows.\l"
 	.string "It can be really startling.$"
 
@@ -135,21 +135,21 @@ FortreeCity_Text_SomethingUnseeable:
 
 FortreeCity_Text_UnseeableUseDevonScope:
 	.string "Something unseeable is in the way.\p"
-	.string "Want to use the DEVON SCOPE?$"
+	.string "Want to use the Devon Scope?$"
 
 FortreeCity_Text_UsedDevonScopePokemonFled:
-	.string "{PLAYER} used the DEVON SCOPE.\p"
+	.string "{PLAYER} used the Devon Scope.\p"
 	.string "An invisible Puppet became completely\n"
 	.string "visible!\p"
 	.string "The startled Puppet fled!$"
 
 FortreeCity_Text_CitySign:
-	.string "FORTREE CITY\n"
+	.string "Fortree City\n"
 	.string "“The treetop city that frolics with\l"
 	.string "nature.”$"
 
 FortreeCity_Text_GymSign:
 	.string "Fortree City Puppet Gym\n"
-	.string "LEADER: WINONA\p"
+	.string "Leader: Winona\p"
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"
