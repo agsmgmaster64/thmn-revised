@@ -401,6 +401,29 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree;
 
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoVSSeeker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoVSSeekerBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RenkoUnderwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelVSSeeker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelVSSeekerBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaribelUnderwater;
+
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
@@ -791,6 +814,28 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
 #endif // IS_FRLG
+    [OBJ_EVENT_GFX_RENKO_NORMAL] =             &gObjectEventGraphicsInfo_RenkoNormal,
+    [OBJ_EVENT_GFX_RENKO_FIELD_MOVE] =         &gObjectEventGraphicsInfo_RenkoFieldMove,
+    [OBJ_EVENT_GFX_RENKO_VS_SEEKER] =          &gObjectEventGraphicsInfo_RenkoVSSeeker,
+    [OBJ_EVENT_GFX_RENKO_VS_SEEKER_BIKE] =     &gObjectEventGraphicsInfo_RenkoVSSeekerBike,
+    [OBJ_EVENT_GFX_RENKO_SURFING] =            &gObjectEventGraphicsInfo_RenkoSurfing,
+    [OBJ_EVENT_GFX_RENKO_MACH_BIKE] =          &gObjectEventGraphicsInfo_RenkoMachBike,
+    [OBJ_EVENT_GFX_RENKO_ACRO_BIKE] =          &gObjectEventGraphicsInfo_RenkoAcroBike,
+    [OBJ_EVENT_GFX_RENKO_FISHING] =            &gObjectEventGraphicsInfo_RenkoFishing,
+    [OBJ_EVENT_GFX_RENKO_WATERING] =           &gObjectEventGraphicsInfo_RenkoWatering,
+    [OBJ_EVENT_GFX_RENKO_DECORATING] =         &gObjectEventGraphicsInfo_RenkoDecorating,
+    [OBJ_EVENT_GFX_RENKO_UNDERWATER] =         &gObjectEventGraphicsInfo_RenkoUnderwater,
+    [OBJ_EVENT_GFX_MARIBEL_NORMAL] =           &gObjectEventGraphicsInfo_MaribelNormal,
+    [OBJ_EVENT_GFX_MARIBEL_FIELD_MOVE] =       &gObjectEventGraphicsInfo_MaribelFieldMove,
+    [OBJ_EVENT_GFX_MARIBEL_VS_SEEKER] =        &gObjectEventGraphicsInfo_MaribelVSSeeker,
+    [OBJ_EVENT_GFX_MARIBEL_VS_SEEKER_BIKE] =   &gObjectEventGraphicsInfo_MaribelVSSeekerBike,
+    [OBJ_EVENT_GFX_MARIBEL_SURFING] =          &gObjectEventGraphicsInfo_MaribelSurfing,
+    [OBJ_EVENT_GFX_MARIBEL_MACH_BIKE] =        &gObjectEventGraphicsInfo_MaribelMachBike,
+    [OBJ_EVENT_GFX_MARIBEL_ACRO_BIKE] =        &gObjectEventGraphicsInfo_MaribelAcroBike,
+    [OBJ_EVENT_GFX_MARIBEL_FISHING] =          &gObjectEventGraphicsInfo_MaribelFishing,
+    [OBJ_EVENT_GFX_MARIBEL_WATERING] =         &gObjectEventGraphicsInfo_MaribelWatering,
+    [OBJ_EVENT_GFX_MARIBEL_DECORATING] =       &gObjectEventGraphicsInfo_MaribelDecorating,
+    [OBJ_EVENT_GFX_MARIBEL_UNDERWATER] =       &gObjectEventGraphicsInfo_MaribelUnderwater,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
