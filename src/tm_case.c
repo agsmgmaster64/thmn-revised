@@ -17,6 +17,7 @@
 #include "money.h"
 #include "party_menu.h"
 #include "palette.h"
+#include "pokemon_icon.h"
 #include "pokemon_storage_system.h"
 #include "shop.h"
 #include "task.h"
@@ -115,6 +116,7 @@ static EWRAM_DATA struct ListMenuItem * sListMenuItemsBuffer = NULL;
 static EWRAM_DATA u8 (* sListMenuStringsBuffer)[29] = NULL;
 static EWRAM_DATA u16 * sTMSpritePaletteBuffer = NULL;
 static EWRAM_DATA u8 sIsInTMCase = FALSE;
+static EWRAM_DATA u8 sTMIconSprites[PARTY_SIZE] = {};
 
 static void CB2_SetUpTMCaseUI_Blocking(void);
 static bool8 DoSetUpTMCaseUI(void);
@@ -167,13 +169,9 @@ static void PrintPlayersMoney(void);
 static void HandleCreateYesNoMenu(u8 taskId, const struct YesNoFuncTable * ptrs);
 static u8 AddContextMenu(u8 * windowId, u8 windowIndex);
 static void RemoveContextMenu(u8 * windowId);
-static u8 CreateDiscSprite(u16 itemId);
-static void SetDiscSpriteAnim(struct Sprite *sprite, u8 tmIdx);
-static void TintDiscpriteByType(u8 type);
-static void SetDiscSpritePosition(struct Sprite *sprite, u8 tmIdx);
-static void SwapDisc(u8 spriteId, u16 itemId);
-static void SpriteCB_SwapDisc(struct Sprite *sprite);
-static void LoadDiscTypePalettes(void);
+static void DrawPartyMonIcons(void);
+static void TintPartyMonIcons(u16 itemIndex);
+static void DestroyPartyMonIcons(void);
 
 static const struct BgTemplate sBGTemplates[] =
 {
@@ -253,8 +251,8 @@ static const u8 sText_TMCaseWillBePutAway[] = _("The TM Case will be\nput away."
 static const u32 sTMCase_Gfx[] = INCGFX_U32("graphics/tm_case/tm_case.png", ".4bpp.smol");
 static const u32 sTMCaseMenu_Tilemap[] = INCBIN_U32("graphics/tm_case/menu.bin.smolTM");
 static const u32 sTMCase_Tilemap[] = INCBIN_U32("graphics/tm_case/tm_case.bin.smolTM");
-static const u16 gTMCaseMenu_Male_Pal[] = INCGFX_U16("graphics/tm_case/menu_male.pal", ".gbapal");
-static const u16 gTMCaseMenu_Female_Pal[] = INCGFX_U16("graphics/tm_case/menu_female.pal", ".gbapal");
+static const u16 gTMCaseMenu_Pal[] = INCGFX_U16("graphics/tm_case/menu.pal", ".gbapal");
+static const u16 gTMCaseMenu_AWR_Pal[] = INCGFX_U16("graphics/tm_case/menu_awr.pal", ".gbapal");
 static const u32 sTMCaseDisc_Gfx[] = INCGFX_U32("graphics/tm_case/disc.png", ".4bpp.smol");
 static const u16 gTMCaseDiscTypes1_Pal[] = INCGFX_U16("graphics/tm_case/disc_types_1.pal", ".gbapal");
 static const u16 gTMCaseDiscTypes2_Pal[] = INCGFX_U16("graphics/tm_case/disc_types_2.pal", ".gbapal");
@@ -284,9 +282,9 @@ static const struct WindowTemplate sWindowTemplates[] =
     [WIN_LIST] =
     {
         .bg = 0,
-        .tilemapLeft = 10,
+        .tilemapLeft = 14,
         .tilemapTop = 1,
-        .width = 19,
+        .width = 15,
         .height = 10,
         .paletteNum = 15,
         .baseBlock = 0x081
@@ -314,7 +312,7 @@ static const struct WindowTemplate sWindowTemplates[] =
     [WIN_TITLE] =
     {
         .bg = 0,
-        .tilemapLeft = 0,
+        .tilemapLeft = 2,
         .tilemapTop = 1,
         .width = 10,
         .height = 2,
@@ -441,28 +439,6 @@ static const struct SpriteTemplate sSpriteTemplate_Disc = {
     .callback = SpriteCallbackDummy
 };
 
-// If including new types, please add onto this table as well to make the TM Case load the proper palette for it as well
-static const u16 sTMSpritePaletteOffsetByType[] = {
-    [TYPE_NORMAL]   = 0x000,
-    [TYPE_FIRE]     = 0x010,
-    [TYPE_WATER]    = 0x020,
-    [TYPE_GRASS]    = 0x030,
-    [TYPE_ELECTRIC] = 0x040,
-    [TYPE_ROCK]     = 0x050,
-    [TYPE_GROUND]   = 0x060,
-    [TYPE_ICE]      = 0x070,
-    [TYPE_FLYING]   = 0x080,
-    [TYPE_FIGHTING] = 0x090,
-    [TYPE_GHOST]    = 0x0a0,
-    [TYPE_BUG]      = 0x0b0,
-    [TYPE_POISON]   = 0x0c0,
-    [TYPE_PSYCHIC]  = 0x0d0,
-    [TYPE_STEEL]    = 0x0e0,
-    [TYPE_DARK]     = 0x0f0,
-    [TYPE_FAITH]   = 0x100,
-    [TYPE_FAIRY]    = 0x110,
-};
-
 void InitTMCase(u8 type, void (* exitCallback)(void), bool8 allowSelectClose)
 {
     ResetBufferPointers_NoFree();
@@ -576,6 +552,7 @@ static bool8 DoSetUpTMCaseUI(void)
         break;
     case 11:
         DrawMoveInfoLabels();
+        DrawPartyMonIcons();
         gMain.state++;
         break;
     case 12:
@@ -597,7 +574,7 @@ static bool8 DoSetUpTMCaseUI(void)
         gMain.state++;
         break;
     case 16:
-        sTMCaseDynamicResources->discSpriteId = CreateDiscSprite(GetTMCaseItemIdByPosition(sTMCaseStaticResources.scrollOffset + sTMCaseStaticResources.selectedRow));
+        //sTMCaseDynamicResources->discSpriteId = CreateDiscSprite(GetTMCaseItemIdByPosition(sTMCaseStaticResources.scrollOffset + sTMCaseStaticResources.selectedRow));
         gMain.state++;
         break;
     case 17:
@@ -665,18 +642,16 @@ static bool8 HandleLoadTMCaseGraphicsAndPalettes(void)
         sTMCaseDynamicResources->seqId++;
         break;
     case 3:
-        if (gSaveBlock2Ptr->playerGender == MALE)
-            LoadPalette(gTMCaseMenu_Male_Pal, BG_PLTT_ID(0), 4 * PLTT_SIZE_4BPP);
+        if (IS_AWR)
+            LoadPalette(gTMCaseMenu_AWR_Pal, BG_PLTT_ID(0), 4 * PLTT_SIZE_4BPP);
         else
-            LoadPalette(gTMCaseMenu_Female_Pal, BG_PLTT_ID(0), 4 * PLTT_SIZE_4BPP);
+            LoadPalette(gTMCaseMenu_Pal, BG_PLTT_ID(0), 4 * PLTT_SIZE_4BPP);
         sTMCaseDynamicResources->seqId++;
         break;
     case 4:
-        LoadCompressedSpriteSheet(&sSpriteSheet_Disc);
         sTMCaseDynamicResources->seqId++;
         break;
     default:
-        LoadDiscTypePalettes();
         sTMCaseDynamicResources->seqId = 0;
         return TRUE;
     }
@@ -759,10 +734,10 @@ static void List_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *li
     if (onInit != TRUE)
     {
         PlaySE(SE_SELECT);
-        SwapDisc(sTMCaseDynamicResources->discSpriteId, itemId);
     }
     PrintDescription(itemIndex);
     PrintMoveInfo(itemId);
+    TintPartyMonIcons(itemId);
 }
 
 static void List_ItemPrintFunc(u8 windowId, u32 itemIndex, u8 y)
@@ -823,7 +798,7 @@ static void PrintListCursorAtRow(u8 y, u8 colorIdx)
 static void CreateListScrollArrows(void)
 {
     sTMCaseDynamicResources->scrollArrowsTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP,
-                                                                                           160, 8, 88,
+                                                                                           180, 8, 88,
                                                                                            sTMCaseDynamicResources->numTMs - sTMCaseDynamicResources->maxTMsShown + 1,
                                                                                            TAG_SCROLL_ARROW, TAG_SCROLL_ARROW,
                                                                                            &sTMCaseStaticResources.scrollOffset);
@@ -930,6 +905,7 @@ static void Task_FadeOutAndCloseTMCase(u8 taskId)
         else
             SetMainCallback2(sTMCaseStaticResources.exitCallback);
         RemoveScrollArrows();
+        DestroyPartyMonIcons();
         DestroyTMCaseBuffers();
         DestroyTask(taskId);
     }
@@ -1518,131 +1494,114 @@ static void RemoveContextMenu(u8 * windowId)
     *windowId = WINDOW_NONE;
 }
 
-static u8 CreateDiscSprite(u16 itemId)
-{
-    u8 spriteId = CreateSprite(&sSpriteTemplate_Disc, DISC_BASE_X, DISC_BASE_Y, 0);
-    u8 tmIdx;
-    if (itemId == ITEM_NONE)
-    {
-        SetDiscSpritePosition(&gSprites[spriteId], DISC_HIDDEN);
-        return spriteId;
-    }
-    else
-    {
-        tmIdx = GetItemTMHMIndex(itemId);
-        SetDiscSpriteAnim(&gSprites[spriteId], tmIdx);
-        TintDiscpriteByType(GetMoveType(ItemIdToBattleMoveId(itemId)));
-        SetDiscSpritePosition(&gSprites[spriteId], tmIdx);
-        return spriteId;
-    }
-}
-
-static void SetDiscSpriteAnim(struct Sprite *sprite, u8 tmIdx)
-{
-    if (tmIdx > NUM_TECHNICAL_MACHINES)
-        StartSpriteAnim(sprite, ANIM_HM);
-    else
-        StartSpriteAnim(sprite, ANIM_TM);
-}
-
-static void TintDiscpriteByType(u8 type)
-{
-    u8 palOffset = PLTT_ID(IndexOfSpritePaletteTag(TAG_DISC));
-    LoadPalette(sTMSpritePaletteBuffer + sTMSpritePaletteOffsetByType[type], OBJ_PLTT_OFFSET + palOffset, PLTT_SIZE_4BPP);
-}
-
-static void SetDiscSpritePosition(struct Sprite *sprite, u8 tmIdx)
-{
-    s32 x, y;
-    if (tmIdx == DISC_HIDDEN)
-    {
-        x = 27;
-        y = 54;
-        sprite->y2 = DISC_CASE_DISTANCE;
-    }
-    else
-    {
-        if (FRLG_I_HMS_FIRST)
-        {
-            if (tmIdx > NUM_TECHNICAL_MACHINES)
-                tmIdx -= NUM_TECHNICAL_MACHINES;
-            else
-                tmIdx += NUM_HIDDEN_MACHINES;
-        }
-
-        x = DISC_BASE_X - Q_24_8_TO_INT(Q_24_8(14 * tmIdx) / (NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES));
-        y = DISC_BASE_Y + Q_24_8_TO_INT(Q_24_8(8 * tmIdx) / (NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES));
-    }
-    sprite->x = x;
-    sprite->y = y;
-}
-
-#define sItemId  data[0]
-#define sState   data[1]
-
-static void SwapDisc(u8 spriteId, u16 itemId)
-{
-    gSprites[spriteId].sItemId = itemId;
-    gSprites[spriteId].sState = 0;
-    gSprites[spriteId].callback = SpriteCB_SwapDisc;
-}
-
-static void SpriteCB_SwapDisc(struct Sprite *sprite)
-{
-    switch (sprite->sState)
-    {
-    case 0:
-        // Lower old disc back into case
-        if (sprite->y2 >= DISC_CASE_DISTANCE)
-        {
-            // Old disc is hidden, set up new disc
-            if (sprite->sItemId != ITEM_NONE)
-            {
-                sprite->sState++;
-                TintDiscpriteByType(GetMoveType(ItemIdToBattleMoveId(sprite->sItemId)));
-                sprite->sItemId = GetItemTMHMIndex(sprite->sItemId);
-                SetDiscSpriteAnim(sprite, sprite->sItemId);
-                SetDiscSpritePosition(sprite, sprite->sItemId);
-            }
-            else
-                sprite->callback = SpriteCallbackDummy;
-        }
-        else
-        {
-            sprite->y2 += DISC_Y_MOVE;
-        }
-        break;
-    case 1:
-        // Raise new disc out of case
-        if (sprite->y2 <= 0)
-            sprite->callback = SpriteCallbackDummy;
-        else
-            sprite->y2 -= DISC_Y_MOVE;
-    }
-}
-
-// - 3 excludes TYPE_NONE, TYPE_MYSTERY, and TYPE_STELLAR
-#define NUM_DISC_COLORS ((NUMBER_OF_MON_TYPES - 3) * 16)
-
-static void LoadDiscTypePalettes(void)
-{
-    struct SpritePalette spritePalette;
-
-    sTMSpritePaletteBuffer = Alloc(NUM_DISC_COLORS * sizeof(u16));
-    CpuCopy16(gTMCaseDiscTypes1_Pal, sTMSpritePaletteBuffer, sizeof(gTMCaseDiscTypes1_Pal)); // Copy over the first 16 types within
-    CpuCopy16(gTMCaseDiscTypes2_Pal, sTMSpritePaletteBuffer + 0x100, sizeof(gTMCaseDiscTypes2_Pal)); // Copy over the rest
-    spritePalette.data = sTMSpritePaletteBuffer + NUM_DISC_COLORS;
-    spritePalette.tag = TAG_DISC;
-    LoadSpritePalette(&spritePalette);
-}
-
 bool32 CheckIfInTMCase(void)
 {
     return sIsInTMCase;
 }
 
-#undef sItemId
-#undef sState
+static void SpriteCb_MonIcon(struct Sprite *sprite)
+{
+    UpdateMonIconFrame(sprite);
+}
+
+#define MON_ICON_START_X  0x10
+#define MON_ICON_START_Y  0x2a
+#define MON_ICON_PADDING  0x20
+#define MON_ICON_PADDING_SHORT  0x10
+
+static void DrawPartyMonIcons(void)
+{
+    u8 i;
+    enum Species species;
+    u32 personality;
+    bool32 isEgg;
+    u8 icon_x = 0;
+    u8 icon_y = 0;
+
+    LoadMonIconPalettes();
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        //calc icon position (centered)
+        if (gPartiesCount[B_TRAINER_PLAYER] == 1)
+        {
+            icon_x = MON_ICON_START_X + MON_ICON_PADDING;
+            icon_y = MON_ICON_START_Y + MON_ICON_PADDING_SHORT;
+        }
+        else if (gPartiesCount[B_TRAINER_PLAYER] == 2)
+        {
+            icon_x = i < 2 ? MON_ICON_START_X + MON_ICON_PADDING_SHORT + MON_ICON_PADDING * i : MON_ICON_START_X + MON_ICON_PADDING_SHORT + MON_ICON_PADDING * (i - 2);
+            icon_y = MON_ICON_START_Y + MON_ICON_PADDING_SHORT;
+        }
+        else if (gPartiesCount[B_TRAINER_PLAYER] == 3)
+        {
+            icon_x = i < 3 ? MON_ICON_START_X + MON_ICON_PADDING * i : MON_ICON_START_X + MON_ICON_PADDING * (i - 3);
+            icon_y = MON_ICON_START_Y + MON_ICON_PADDING_SHORT;
+        }
+        else if (gPartiesCount[B_TRAINER_PLAYER] == 4)
+        {
+            icon_x = i < 2 ? MON_ICON_START_X + MON_ICON_PADDING_SHORT + MON_ICON_PADDING * i : MON_ICON_START_X + MON_ICON_PADDING_SHORT + MON_ICON_PADDING * (i - 2);
+            icon_y = i < 2 ? MON_ICON_START_Y : MON_ICON_START_Y + MON_ICON_PADDING;
+        }
+        else
+        {
+            icon_x = i < 3 ? MON_ICON_START_X + MON_ICON_PADDING * i : MON_ICON_START_X + MON_ICON_PADDING * (i - 3);
+            icon_y = i < 3 ? MON_ICON_START_Y : MON_ICON_START_Y + MON_ICON_PADDING;
+        }
+        //get species
+        species = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES);
+        personality = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_PERSONALITY);
+        isEgg = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG);
+
+        //create icon sprite
+        sTMIconSprites[i] = CreateMonIconIsEgg(species, SpriteCb_MonIcon, icon_x, icon_y, 1, personality, isEgg);
+
+        //Set priority, stop movement and save original palette position
+        gSprites[sTMIconSprites[i]].oam.priority = 0;
+        StartSpriteAnim(&gSprites[sTMIconSprites[i]], 4); //full stop
+    }
+}
+
+static void TintPartyMonIcons(u16 itemId)
+{
+    u32 i;
+    enum Species species;
+    enum Move move = ItemIdToBattleMoveId(itemId);
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (itemId == ITEM_NONE)
+        {
+            gSprites[sTMIconSprites[i]].oam.objMode = ST_OAM_OBJ_BLEND;
+            StartSpriteAnim(&gSprites[sTMIconSprites[i]], 4); //full stop
+            continue;
+        }
+        species = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES_OR_EGG);
+        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT2_ALL);
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(7, 11));
+        if (!CanLearnTeachableMove(species, move))
+        {
+            gSprites[sTMIconSprites[i]].oam.objMode = ST_OAM_OBJ_BLEND;
+            StartSpriteAnim(&gSprites[sTMIconSprites[i]], 4); //full stop
+        }
+        else
+        {
+            gSprites[sTMIconSprites[i]].oam.objMode = ST_OAM_OBJ_NORMAL;
+            StartSpriteAnim(&gSprites[sTMIconSprites[i]], 0);
+        }
+    }
+    
+}
+
+static void DestroyPartyMonIcons(void)
+{
+    u8 i;
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        FreeAndDestroyMonIconSprite(&gSprites[sTMIconSprites[i]]);
+        FreeMonIconPalettes();
+    }
+}
 
 #undef tListTaskId
 #undef tPosition
