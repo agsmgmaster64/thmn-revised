@@ -974,12 +974,12 @@ LilycoveCity_ContestLobby_EventScript_LittleGirlHaveCase::
 LilycoveCity_ContestLobby_Text_LadyGaveMePokeblockCase:
 	.string "Yippee!\p"
 	.string "The lady at the reception counter\n"
-	.string "gave me a case for {POKEBLOCK}S!$"
+	.string "gave me a case for {POKEBLOCK}s!$"
 
 LilycoveCity_ContestLobby_Text_MakePokeblocksDifferentBerries:
-	.string "Make {POKEBLOCK}S and put them in there.\p"
+	.string "Make {POKEBLOCK}s and put them in there.\p"
 	.string "When you make a {POKEBLOCK}, everyone\n"
-	.string "has to put in a different BERRY.$"
+	.string "has to put in a different Berry.$"
 
 LilycoveCity_ContestLobby_Text_YourPokemonSpurredMeToPaint:
 	.string "Congratulations!\p"
@@ -1014,10 +1014,10 @@ LilycoveCity_ContestLobby_Text_TakeMementoOfPainting:
 	.string "Puppet, please take this.$"
 
 LilycoveCity_ContestLobby_Text_ReceivedARibbon:
-	.string "{PLAYER} received a RIBBON.$"
+	.string "{PLAYER} received a Ribbon.$"
 
 LilycoveCity_ContestLobby_Text_PutTheRibbonOnMon:
-	.string "{PLAYER} put the RIBBON on\n"
+	.string "{PLAYER} put the Ribbon on\n"
 	.string "{STR_VAR_1}.$"
 
 LilycoveCity_ContestLobby_Text_OkaySeeYou:
@@ -1036,7 +1036,7 @@ LilycoveCity_ContestLobby_Text_FineThatsTheWayItIs:
 	.string "Well, be seeing you.$"
 
 LilycoveCity_ContestLobby_Text_MasterRankHereICome:
-	.string "Hoo, boy… Master Rank CONTESTS,\n"
+	.string "Hoo, boy… Master Rank Contests,\n"
 	.string "here I come.\p"
 	.string "The world will know that my dearest\n"
 	.string "Puppet is the cutest being in all\l"
@@ -1050,13 +1050,13 @@ LilycoveCity_ContestLobby_Text_WholeVarietyOfPokemonHere:
 	.string "part of my daily stroll.$"
 
 LilycoveCity_ContestLobby_Text_ContestFeastForEyes:
-	.string "Wow, coming out to a CONTEST is\n"
+	.string "Wow, coming out to a Contest is\n"
 	.string "a feast for these eyes!\p"
 	.string "Would you look at all the Puppets\n"
 	.string "that just scream to be painted?$"
 
 LilycoveCity_ContestLobby_Text_ToughContestIsExtreme:
-	.string "The TOUGHNESS CONTEST is like\n"
+	.string "The Toughness Contest is like\n"
 	.string "extreme, man!\p"
 	.string "Those muscular appeals…\n"
 	.string "Cascading sweat… I swoon!$"
@@ -1068,7 +1068,7 @@ LilycoveCity_ContestLobby_Text_LavishedCareOnMon:
 	.string "Today, victory is mine!$"
 
 LilycoveCity_ContestLobby_Text_MadePokeblocksWithFamily:
-	.string "I made {POKEBLOCK}S with Mom, Dad, and\n"
+	.string "I made {POKEBLOCK}s with Mom, Dad, and\n"
 	.string "Big Sister. They turned out great!\p"
 	.string "I bet you can make smoother, better\n"
 	.string "{POKEBLOCK}S if you have more people.$"

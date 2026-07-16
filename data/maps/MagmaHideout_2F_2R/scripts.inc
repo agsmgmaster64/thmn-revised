@@ -30,7 +30,7 @@ MagmaHideout_2F_2R_Text_Grunt15Defeat:
 
 MagmaHideout_2F_2R_Text_Grunt15PostBattle:
 	.string "We dug up something beyond belief!\n"
-	.string "And, we got the BLUE ORB!\p"
+	.string "And, we got the Blue Orb!\p"
 	.string "All that's left is for our leader to…\n"
 	.string "Fufufu… Fwahahaha!$"
 
@@ -49,7 +49,7 @@ MagmaHideout_2F_2R_Text_Grunt6PostBattle:
 MagmaHideout_2F_2R_Text_Grunt7Intro:
 	.string "You can hear tremors here sometimes.\p"
 	.string "Could it be the volcano rattling?\n"
-	.string "Or is it GROU…\p"
+	.string "Or is it LUts…\p"
 	.string "Whoops!\n"
 	.string "No, no, never mind!$"
 

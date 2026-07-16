@@ -508,7 +508,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Chiyuri
+Extra Chiyuri
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -551,7 +551,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kagerou @ Poison Barb
+Extra Kagerou @ Poison Barb
 Level: 38
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -562,7 +562,7 @@ Ball: Ultra
 - Poison Jab
 - Accelerock
 
-Normal Remilia @ Metal Coat
+Extra Remilia @ Metal Coat
 Level: 39
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -573,7 +573,7 @@ Ball: Ultra
 - Steel Wing
 - Poison Jab
 
-Normal Komachi @ Nevermeltice
+Extra Komachi @ Nevermeltice
 Level: 40
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -584,7 +584,7 @@ Ball: Ultra
 - Drawn Line
 - Knock Off
 
-Normal Suwako @ Sitrus Berry
+Extra Suwako @ Sitrus Berry
 Level: 41
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -3443,7 +3443,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kagerou
+Extra Kagerou
 Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11506,7 +11506,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kagerou @ Poison Barb
+Extra Kagerou @ Poison Barb
 Level: 43
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -11517,7 +11517,7 @@ Ball: Ultra
 - Poison Jab
 - Accelerock
 
-Normal Remilia @ Metal Coat
+Extra Remilia @ Metal Coat
 Level: 44
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -11528,7 +11528,7 @@ Ball: Ultra
 - Steel Wing
 - Fire Punch
 
-Normal Parsee @ Lum Berry
+Extra Parsee @ Lum Berry
 Level: 43
 Nature: Bold
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -11539,7 +11539,7 @@ Ball: Ultra
 - Foul Play
 - Haze
 
-Normal Rin @ Silk Scarf
+Extra Rin @ Silk Scarf
 Level: 45
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -11550,7 +11550,7 @@ Ball: Ultra
 - Corpse Rush
 - ExtremeSpeed
 
-Normal Utsuho @ Sitrus Berry
+Extra Utsuho @ Sitrus Berry
 Level: 46
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -14134,11 +14134,11 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kisume
+Normal Mokou
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mokou
+Extra Kisume
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14155,7 +14155,7 @@ Normal Momiji
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuki
+Extra Yuki
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14168,7 +14168,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kisume
+Extra Kisume
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14194,7 +14194,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Futo
+Extra Futo
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14207,7 +14207,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Benben
+Extra Benben
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14220,7 +14220,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Rika
+Normal Rika
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14246,7 +14246,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yamame
+Extra Yamame
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14272,7 +14272,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kagerou
+Extra Kagerou
 Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14298,7 +14298,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yuugi
+Extra Yuugi
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14322,7 +14322,7 @@ Ball: Ultra
 - Soar
 - Steel Wing
 
-Normal Kagerou @ Poison Barb
+Extra Kagerou @ Poison Barb
 Level: 38
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -14344,7 +14344,7 @@ Ball: Ultra
 - ThunderPunch
 - Poison Jab
 
-Normal Utsuho @ Sitrus Berry
+Extra Utsuho @ Sitrus Berry
 Level: 40
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -24686,7 +24686,7 @@ Advent Meiling
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_1206 ===
+=== TRAINER_BLUE_100 ===
 Name: Blue
 Class: Tuber M
 Pic: Brendan
@@ -24743,7 +24743,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1207 ===
+=== TRAINER_HEMOGLOBIN_A1C ===
 Name: Hemoglobin
 Class: Tuber M
 Pic: Rich Boy
@@ -24929,7 +24929,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1210 ===
+=== TRAINER_AQUA ===
 Name: Aqua
 Class: Tuber M
 Pic: Factory Head Noland
@@ -24986,7 +24986,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1211 ===
+=== TRAINER_XAN ===
 Name: Xan
 Class: Tuber M
 Pic: Psychic M
@@ -25043,7 +25043,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1212 ===
+=== TRAINER_SIN ===
 Name: SiN
 Class: Tuber M
 Pic: Cooltrainer M
@@ -25100,7 +25100,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1213 ===
+=== TRAINER_RUBY ===
 Name: Ruby
 Class: Tuber M
 Pic: Pokemon Breeder M
@@ -25157,7 +25157,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1214 ===
+=== TRAINER_KAREL ===
 Name: Karel
 Class: Tuber M
 Pic: School Kid M
@@ -26628,7 +26628,7 @@ Ball: Great
 - Earthquake
 - Mana Punch
 
-=== TRAINER_NEW_1235 ===
+=== TRAINER_BLUE_75 ===
 Name: Blue
 Class: Tuber M
 Pic: Brendan
@@ -30252,7 +30252,7 @@ Ball: Premier
 - Aeroblast
 - Shadow Ball
 
-=== TRAINER_NEW_1286 ===
+=== TRAINER_BLUE_50 ===
 Name: Blue
 Class: Tuber M
 Pic: Brendan

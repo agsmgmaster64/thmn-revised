@@ -11360,6 +11360,16 @@
       "secondary_tileset": "gTileset_BattlePyramid",
       "border_filepath": "data/layouts/FallarborTown_PowerGloveHouse_PowerGloveRoom/border.bin",
       "blockdata_filepath": "data/layouts/FallarborTown_PowerGloveHouse_PowerGloveRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_TRAINING_HOUSE",
+      "name": "LilycoveCity_TrainingHouse",
+      "width": 12,
+      "height": 21,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/LilycoveCity_TrainingHouse/border.bin",
+      "blockdata_filepath": "data/layouts/LilycoveCity_TrainingHouse/map.bin"
     }
   ]
 }

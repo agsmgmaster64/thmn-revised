@@ -1390,9 +1390,9 @@
 #define FLAG_POWER_GLOVE_GET                        (SYSTEM_FLAGS + 0x21) // Formerly Unused Flag
 #define FLAG_SYS_VS_SEEKER_CHARGING                 (SYSTEM_FLAGS + 0x22) // Formerly Unused Flag
 #define FLAG_HIDE_VIVIT                             (SYSTEM_FLAGS + 0x23) // Formerly Unused Flag
-#define FLAG_DEFEATED_VIVIT                         (SYSTEM_FLAGS + 0x24) // Unused Flag
-#define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
-#define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
+#define FLAG_DEFEATED_VIVIT                         (SYSTEM_FLAGS + 0x24) // Formerly Unused Flag
+#define FLAG_HIDE_ELIS                              (SYSTEM_FLAGS + 0x25) // Formerly Unused Flag
+#define FLAG_DEFEATED_ELIS                          (SYSTEM_FLAGS + 0x26) // Formerly Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
@@ -1507,7 +1507,7 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
+#define FLAG_GRAND_LEAGUE_DEFEATED                  (SYSTEM_FLAGS + 0x85) // Formerly Unused Flag
 #define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
 #define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
 #define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
