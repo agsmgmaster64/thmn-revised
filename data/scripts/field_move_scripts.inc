@@ -406,6 +406,7 @@ EventScript_UseWaterfall::
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
 	buffermovename STR_VAR_2, MOVE_WATERFALL
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	closemessage
 EventScript_WaterfallCommon::
 	hidefollowernpc
 	dofieldeffect FLDEFF_USE_WATERFALL
@@ -421,6 +422,7 @@ EventScript_CanUseWaterfallOtherwise::
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
 	buffermovename STR_VAR_2, MOVE_WATERFALL
 	msgbox Text_MonAttemptedToUseFieldMove, MSGBOX_DEFAULT
+	closemessage
 	goto EventScript_WaterfallCommon
 
 EventScript_UseSurfboardPlusWaterfall::
@@ -435,7 +437,7 @@ EventScript_CanUseSurfboardPlusWaterfall::
 EventScript_UseSurfboardPlusWaterfall_SkipCheck::
 	bufferitemname STR_VAR_2, ITEM_SURFBOARD_PLUS
 	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	setskipshowanim
 	goto EventScript_WaterfallCommon
 
@@ -639,7 +641,7 @@ EventScript_CanUseClimbingGear::
 EventScript_UseClimbingGear_SkipCheck::
 	bufferitemname STR_VAR_2, ITEM_CLIMBING_GEAR
 	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	setskipshowanim
 	goto EventScript_RockClimbCommon
 
