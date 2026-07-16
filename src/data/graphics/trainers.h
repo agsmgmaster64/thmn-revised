@@ -469,6 +469,12 @@ const u16 gTrainerPalette_LadyFrlg[] = INCGFX_U16("graphics/trainers/palettes/la
 const u32 gTrainerFrontPic_PainterFrlg[] = INCGFX_U32("graphics/trainers/front_pics/painter_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_PainterFrlg[] = INCGFX_U16("graphics/trainers/palettes/painter_frlg.pal", ".gbapal");
 
+const u32 gTrainerFrontPic_Renko[] = INCGFX_U32("graphics/trainers/front_pics/renko.png", ".4bpp.smol");
+const u16 gTrainerPalette_Renko[] = INCGFX_U16("graphics/trainers/front_pics/renko.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Maribel[] = INCGFX_U32("graphics/trainers/front_pics/maribel.png", ".4bpp.smol");
+const u16 gTrainerPalette_Maribel[] = INCGFX_U16("graphics/trainers/front_pics/maribel.png", ".gbapal");
+
 static const u8 gTrainerBackPic_None[] = INCGFX_U8("graphics/trainers/back_pics/none.png", ".4bpp");
 const u8 gTrainerBackPic_Brendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan.png", ".4bpp");
 const u8 gTrainerBackPic_May[] = INCGFX_U8("graphics/trainers/back_pics/may.png", ".4bpp");
@@ -480,11 +486,15 @@ const u8 gTrainerBackPic_Wally[] = INCGFX_U8("graphics/trainers/back_pics/wally.
 const u8 gTrainerBackPic_Steven[] = INCGFX_U8("graphics/trainers/back_pics/steven.png", ".4bpp");
 const u8 gTrainerBackPic_Pokedude[] = INCGFX_U8("graphics/trainers/back_pics/pokedude.png", ".4bpp");
 const u8 gTrainerBackPic_OldMan[] = INCGFX_U8("graphics/trainers/back_pics/old_man.png", ".4bpp");
+const u8 gTrainerBackPic_Renko[] = INCGFX_U8("graphics/trainers/back_pics/renko.png", ".4bpp");
+const u8 gTrainerBackPic_Maribel[] = INCGFX_U8("graphics/trainers/back_pics/maribel.png", ".4bpp");
 
 const u16 gTrainerBackPicPalette_Red[] = INCGFX_U16("graphics/trainers/back_pics/red.png", ".gbapal");
 const u16 gTrainerBackPicPalette_Leaf[] = INCGFX_U16("graphics/trainers/back_pics/leaf.png", ".gbapal");
 const u16 gTrainerBackPicPalette_Pokedude[] = INCGFX_U16("graphics/trainers/back_pics/pokedude.png", ".gbapal");
 const u16 gTrainerBackPicPalette_OldMan[] = INCGFX_U16("graphics/trainers/back_pics/old_man.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Renko[] = INCGFX_U16("graphics/trainers/back_pics/renko.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Maribel[] = INCGFX_U16("graphics/trainers/back_pics/maribel.png", ".gbapal");
 
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
@@ -1225,5 +1235,15 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_PAINTER_FRLG] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PainterFrlg, gTrainerPalette_PainterFrlg),
+    },
+    [TRAINER_PIC_RENKO] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Renko, gTrainerPalette_Renko),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Renko, gTrainerBackPicPalette_Renko, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_MARIBEL] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Maribel, gTrainerPalette_Maribel),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Maribel, gTrainerBackPicPalette_Maribel, sBackAnims_Kanto),
     },
 };

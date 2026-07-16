@@ -3,7 +3,7 @@
 
 static enum TrainerPicID GetEmeraldTrainerPic(enum Gender gender)
 {
-    return gender == MALE ? TRAINER_PIC_BRENDAN : TRAINER_PIC_MAY;
+    return gender == MALE ? TRAINER_PIC_RENKO : TRAINER_PIC_MARIBEL;
 }
 static enum TrainerPicID GetRSTrainerPic(enum Gender gender)
 {
@@ -12,7 +12,7 @@ static enum TrainerPicID GetRSTrainerPic(enum Gender gender)
 
 static enum TrainerPicID GetKantoTrainerPic(enum Gender gender)
 {
-    return gender == MALE ? TRAINER_PIC_RED : TRAINER_PIC_LEAF;
+    return gender == MALE ? TRAINER_PIC_RENKO : TRAINER_PIC_MARIBEL;
 }
 
 enum TrainerPicID GetPlayerTrainerPic(enum Gender gender, enum GameVersion version)
