@@ -152,6 +152,10 @@ Route103_EventScript_HexManiacCave::
 	msgbox Route103_Text_HexManiacSuspicious, MSGBOX_NPC
 	applymovement LOCALID_ROUTE103_SUSPICIOUS_HEX_MANIAC, Common_Movement_FaceOriginalDirection
 	end
+	
+Route103_EventScript_RemembranceHouseSign::
+	msgbox Route103_Text_RemembranceHouseSign, MSGBOX_SIGN
+	end
 
 Route103_Movement_RivalExitFacingNorth1:
 	walk_left
@@ -361,4 +365,7 @@ Route103_Text_ShortcutToOldale:
 Route103_Text_RouteSign:
 	.string "Route 103\n"
 	.string "{DOWN_ARROW} Oldale Town$"
+
+Route103_Text_RemembranceHouseSign:
+	.string "Puppet House of Memories$"
 

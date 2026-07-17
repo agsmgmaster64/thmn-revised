@@ -240,12 +240,12 @@
       "name": "Route103_Layout",
       "width": 80,
       "height": 22,
-      "border_width": 2,
-      "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin",
+      "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     },
     {
@@ -6701,12 +6701,12 @@
       "name": "BorderCave_Layout",
       "width": 21,
       "height": 24,
-      "border_width": 2,
-      "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/BorderCave_Layout/border.bin",
       "blockdata_filepath": "data/layouts/BorderCave_Layout/map.bin",
+      "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     },
     {
@@ -11370,6 +11370,16 @@
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/LilycoveCity_TrainingHouse/border.bin",
       "blockdata_filepath": "data/layouts/LilycoveCity_TrainingHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE103_HOUSE_OF_MEMORIES",
+      "name": "Route103_House_Of_Memories",
+      "width": 12,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route103_House_Of_Memories/border.bin",
+      "blockdata_filepath": "data/layouts/Route103_House_Of_Memories/map.bin"
     }
   ]
 }
