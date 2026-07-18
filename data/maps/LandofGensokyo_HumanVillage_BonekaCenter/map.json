@@ -32,14 +32,14 @@
   ],
   "warp_events": [
     {
-      "x": 7,
+      "x": 8,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
+      "x": 7,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE",
