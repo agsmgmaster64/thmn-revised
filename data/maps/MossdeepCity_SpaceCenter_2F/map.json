@@ -3,7 +3,6 @@
   "name": "MossdeepCity_SpaceCenter_2F",
   "layout": "LAYOUT_MOSSDEEP_CITY_SPACE_CENTER_2F",
   "music": "MUS_RUSTBORO",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_MOSSDEEP_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -115,7 +114,7 @@
     },
     {
       "local_id": "LOCALID_SPACE_CENTER_TABITHA",
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
       "x": 0,
       "y": 8,
       "elevation": 3,
@@ -152,5 +151,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

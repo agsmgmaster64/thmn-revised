@@ -13,32 +13,32 @@ Gender: Male
 Music: Male
 AI: Basic Trainer
 
-Metang
-Brave Nature
-Level: 42
+Koumajou Sakuya
+Nature: Modest
+Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Def / 6 SpA
-- Light Screen
-- Psychic
-- Reflect
-- Metal Claw
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+- Sucker Punch
+- Sonic Boom
+- Dark Pulse
+- Ice Beam
 
-Skarmory
-Impish Nature
-Level: 43
+Magic Stones
+Nature: Calm
+Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 6 SpA / 252 SpD
-- Toxic
-- Aerial Ace
-- Protect
-- Steel Wing
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 0 Spe
+- Mana Burst
+- Rock Gale
+- Earth Power
+- Safeguard
 
-Aggron
-Adamant Nature
-Level: 44
+Extra Miko
+Nature: Jolly
+Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 SpA / 6 SpD
-- Thunder
-- Protect
-- Solar Beam
-- Dragon Claw
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Force Palm
+- Drain Punch
+- Mana Punch
+- ThunderPunch

@@ -439,7 +439,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Rin
+Extra Rin
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2295,15 +2295,15 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kisume
+Extra Kisume
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tenshi
+Extra Tenshi
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Utsuho
+Extra Utsuho
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2990,7 +2990,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Hina
+Extra Hina
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3003,11 +3003,11 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Shou
+Normal Shou
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shou
+Extra Shou
 Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4160,7 +4160,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Koakuma
+Extra Koakuma
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4173,7 +4173,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Ran
+Extra Ran
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4186,7 +4186,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kaguya
+Extra Kaguya
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4331,7 +4331,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Eirin
+Extra Eirin
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4344,7 +4344,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Sumireko
+Extra Sumireko
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4357,7 +4357,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Keine
+Extra Keine
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -5255,7 +5255,7 @@ Music: Female
 Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Seiran @ Miracle Seed
+Extra Seiran @ Miracle Seed
 Level: 48
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5266,7 +5266,7 @@ Ball: Ultra
 - Arm Thrust
 - Bullet Seed
 
-Normal Yukari @ Gohei
+Extra Yukari @ Gohei
 Level: 48
 Nature: Bold
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5277,7 +5277,7 @@ Ball: Ultra
 - Extrasensory
 - Reflect
 
-Normal Margatroid @ Charcoal
+Extra Margatroid @ Charcoal
 Level: 47
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5288,7 +5288,7 @@ Ball: Ultra
 - Mana Burst
 - Flamethrower
 
-Normal Shinmyoumaru @ Spell Tag
+Extra Shinmyoumaru @ Spell Tag
 Level: 47
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5299,7 +5299,7 @@ Ball: Ultra
 - Sonic Boom
 - Shadow Ball
 
-Normal Kaguya @ Sitrus Berry
+Extra Kaguya @ Sitrus Berry
 Level: 50
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -5310,7 +5310,7 @@ Ball: Ultra
 - Giga Drain
 - Earth Power
 
-Normal Eirin @ Sitrus Berry
+Extra Eirin @ Sitrus Berry
 Level: 50
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -5330,7 +5330,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Komachi @ Nevermeltice
+Extra Komachi @ Nevermeltice
 Level: 55
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5341,7 +5341,7 @@ Ball: Ultra
 - Ice Punch
 - Drawn Line
 
-Normal Nina @ TwistedSpoon
+Extra Nina @ TwistedSpoon
 Level: 56
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5352,7 +5352,7 @@ Ball: Ultra
 - Ice Beam
 - Mermaid Song
 
-Normal Futo @ Nevermeltice
+Extra Futo @ Nevermeltice
 Level: 55
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5363,7 +5363,7 @@ Ball: Ultra
 - Flamethrower
 - Earth Power
 
-Advent Eirin @ BlackGlasses
+Extra Eirin @ BlackGlasses
 Level: 57
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -5385,7 +5385,7 @@ Ball: Ultra
 - Waterfall
 - Aqua Jet
 
-Normal Wakasagihime @ Sitrus Berry
+Extra Wakasagihime @ Sitrus Berry
 Level: 58
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -7124,11 +7124,11 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kaguya
+Extra Kaguya
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shinki
+Extra Shinki
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7171,11 +7171,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Komachi
+Extra Komachi
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyuri
+Extra Chiyuri
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7257,7 +7257,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Wakasagihime
+Extra Wakasagihime
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7270,11 +7270,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Wriggle
+Normal Wriggle
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Keiki
+Normal Keiki
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8379,11 +8379,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Wakasagihime
+Normal Wakasagihime
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Wakasagihime
+Extra Wakasagihime
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8396,7 +8396,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Wakasagihime
+Extra Wakasagihime
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8465,11 +8465,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
+Extra Murasa
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kisume
+Extra Kisume
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9394,13 +9394,13 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TABITHA_MOSSDEEP ===
 Name: Courtney
 Class: Magma Admin
-Pic: Youngster FRLG
+Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Rin @ Silk Scarf
+Extra Rin @ Silk Scarf
 Level: 45
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -9411,7 +9411,7 @@ Ball: Ultra
 - Poison Bomb
 - ExtremeSpeed
 
-Normal Yamame @ Toxic Orb
+Extra Yamame @ Toxic Orb
 Level: 46
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -11036,7 +11036,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yukari
+Extra Yukari
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11049,7 +11049,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kisume
+Extra Kisume
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11062,11 +11062,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yumeko
+Extra Yumeko
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yumemi
+Extra Yumemi
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11131,7 +11131,7 @@ Music: Rich
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Satori
+Extra Satori
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11144,7 +11144,7 @@ Music: Suspicious
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kokoro
+Extra Kokoro
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11157,7 +11157,7 @@ Music: Rich
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Alice
+Extra Alice
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11170,7 +11170,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Byakuren
+Extra Byakuren
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11187,7 +11187,7 @@ Mimi Chan
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Utsuho
+Extra Utsuho
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11200,7 +11200,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Momiji
+Extra Momiji
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11213,7 +11213,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Sasha
+Extra Sasha
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11226,7 +11226,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kasen
+Extra Kasen
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11239,7 +11239,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Koishi
+Extra Koishi
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11252,7 +11252,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Reisen
+Extra Reisen
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13290,15 +13290,15 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Hina
+Normal Hina
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hina
+Normal Hina
 Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Hina
+Extra Hina
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13311,11 +13311,11 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Nitori
+Extra Nitori
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Futo
+Extra Futo
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13328,15 +13328,15 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
+Extra Murasa
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyuri
+Extra Chiyuri
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Hina
+Extra Hina
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13383,7 +13383,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Mayumi
+Extra Mayumi
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13417,11 +13417,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kutaka
+Extra Kutaka
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Ariya
+Extra Ariya
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14381,7 +14381,7 @@ Music: Magma
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kagerou @ Poison Barb
+Extra Kagerou @ Poison Barb
 Level: 48
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -14392,7 +14392,7 @@ Ball: Ultra
 - Soar
 - Poison Fang
 
-Normal Remilia @ Metal Coat
+Extra Remilia @ Metal Coat
 Level: 49
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -14403,7 +14403,7 @@ Ball: Ultra
 - Fire Punch
 - Steel Wing
 
-Normal Utsuho @ Sitrus Berry
+Extra Utsuho @ Sitrus Berry
 Level: 50
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
