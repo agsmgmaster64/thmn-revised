@@ -14723,8 +14723,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_AzureTome,
     },
 
     [ITEM_JADE_TOME] =
@@ -14738,8 +14738,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_JadeTome,
     },
 
     [ITEM_AQUA_TOME] =
