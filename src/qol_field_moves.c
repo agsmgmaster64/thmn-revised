@@ -49,9 +49,9 @@ static void SetMonResultVariables(u32 partyIndex, enum Species species);
 
 static inline u32 GetFieldMoveUsage(enum FieldMove fieldMove, u32 item)
 {
-    if (PartyCanUseFieldMove(fieldMove, TRUE, FALSE) || CheckBagHasItem(item, 1))
+    if (CheckBagHasItem(item, 1))
         return TRUE;
-    return FALSE;
+    return PartyCanUseFieldMove(fieldMove, TRUE, FALSE);
 }
 
 // Fly
@@ -113,14 +113,12 @@ void ResetFlyTool(void)
 
 u32 CanUseSurfFromInteractedWater(void)
 {
-    if (IsPlayerFacingSurfableFishableWater())
-    {
-        if (GetFieldMoveUsage(FIELD_MOVE_SURF, ITEM_SURFBOARD_PLUS))
-            return TRUE;
-        return GetFieldMoveUsage(FIELD_MOVE_SURF, ITEM_SURFBOARD);
-    }
+    if (!IsPlayerFacingSurfableFishableWater())
+        return FALSE;
 
-    return FALSE;
+    if (GetFieldMoveUsage(FIELD_MOVE_SURF, ITEM_SURFBOARD_PLUS))
+        return TRUE;
+    return GetFieldMoveUsage(FIELD_MOVE_SURF, ITEM_SURFBOARD);
 }
 
 // Flash
@@ -136,26 +134,25 @@ void FldEff_UseFlashTool(void)
 u32 CanUseLantern(void)
 {
     bool32 playerIsInCave = (gMapHeader.cave == TRUE);
+    if (!playerIsInCave)
+        return FALSE;
     bool32 mapIsNotLit = (GetFlashLevel() == (gMaxFlashLevel - 1));
+    if (!mapIsNotLit)
+        return FALSE;
     bool32 playerHasUsedFlash = FlagGet(FLAG_SYS_USE_FLASH);
-
-    if (playerIsInCave && mapIsNotLit && !playerHasUsedFlash)
-    {
-        return TRUE;
-    }
-    return FALSE;
+    if (playerHasUsedFlash)
+        return FALSE;
+    return TRUE;
 }
 
 //Waterfall
 
 u32 CanUseWaterfallFromInteractedWater(void)
 {
-    if (IsPlayerSurfingNorth())
-    {
-        return GetFieldMoveUsage(FIELD_MOVE_WATERFALL, ITEM_SURFBOARD_PLUS);
-    }
+    if (!IsPlayerSurfingNorth())
+        return FALSE;
 
-    return FALSE;
+    return GetFieldMoveUsage(FIELD_MOVE_WATERFALL, ITEM_SURFBOARD_PLUS);
 }
 
 u32 CanUseWaterfallSurfboardPlus(void)
@@ -179,22 +176,18 @@ u32 CanUseWaterfallSurfboardPlus(void)
 
 u32 CanUseDiveDown(void)
 {
-    if (TrySetDiveWarp() == 2)
-    {
-        return GetFieldMoveUsage(FIELD_MOVE_DIVE, ITEM_SCUBA_GEAR);
-    }
+    if (TrySetDiveWarp() != 2)
+        return FALSE;
 
-    return FALSE;
+    return GetFieldMoveUsage(FIELD_MOVE_DIVE, ITEM_SCUBA_GEAR);
 }
 
 u32 CanUseDiveEmerge(void)
 {
-    if (TrySetDiveWarp() == 1 && gMapHeader.mapType == MAP_TYPE_UNDERWATER)
-    {
-        return GetFieldMoveUsage(FIELD_MOVE_DIVE, ITEM_SCUBA_GEAR);
-    }
+    if (TrySetDiveWarp() != 1)
+        return FALSE;
 
-    return FALSE;
+    return GetFieldMoveUsage(FIELD_MOVE_DIVE, ITEM_SCUBA_GEAR);
 }
 
 
@@ -204,12 +197,10 @@ u32 CanUseRockClimbFacingTile(void)
 
     GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
 
-    if (MetatileBehavior_IsRockClimbable(MapGridGetMetatileBehaviorAt(x, y)))
-    {
-        return GetFieldMoveUsage(FIELD_MOVE_ROCK_CLIMB, ITEM_CLIMBING_GEAR);
-    }
+    if (!MetatileBehavior_IsRockClimbable(MapGridGetMetatileBehaviorAt(x, y)))
+        return FALSE;
 
-    return FALSE;
+    return GetFieldMoveUsage(FIELD_MOVE_ROCK_CLIMB, ITEM_CLIMBING_GEAR);
 }
 
 static bool32 CanSpeciesLearnMoveLevelUp(enum Species species, enum Move move)
@@ -228,7 +219,7 @@ static bool32 CanSpeciesLearnMoveLevelUp(enum Species species, enum Move move)
 bool32 PartyCanUseFieldMove(u32 fieldMove, bool32 doUnlockedCheck, bool32 setVariables)
 {
     struct Pokemon *mon;
-    u32 i, monCanLearn, canUseMove;
+    u32 i, monCanLearn;
     gSpecialVar_Result = PARTY_SIZE;
     gSpecialVar_0x8004 = 0;
     enum Move move = FieldMove_GetMoveId(fieldMove);
