@@ -9397,15 +9397,15 @@ Class: Magma Admin
 Pic: Magma Grunt F
 Gender: Female
 Music: Magma
-Battle Type: Singles
+Double Battle: No
 AI: Basic Trainer
+Multi Party: Half
 
 Extra Rin @ Silk Scarf
 Level: 45
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 EVs: 100 HP / 10 Atk / 100 Def / 100 SpA / 100 SpD / 100 Spe
-Ball: Ultra
 - Shadow Ball
 - Flamethrower
 - Poison Bomb
@@ -9416,7 +9416,6 @@ Level: 46
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 EVs: 100 HP / 100 Atk / 100 Def / 10 SpA / 100 SpD / 100 Spe
-Ball: Ultra
 - Earthquake
 - Leech Life
 - Poison Fang
@@ -9427,7 +9426,6 @@ Level: 47
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 100 HP / 10 Atk / 100 Def / 100 SpA / 100 SpD / 100 Spe
-Ball: Ultra
 - Solar Beam
 - Heat Wave
 - Ice Beam
@@ -14378,15 +14376,15 @@ Class: Magma Leader
 Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
-Battle Type: Singles
+Double Battle: No
 AI: Basic Trainer
+Multi Party: Half
 
 Extra Kagerou @ Poison Barb
 Level: 48
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 EVs: 100 HP / 100 Atk / 100 Def / 10 SpA / 100 SpD / 100 Spe
-Ball: Ultra
 - Heart Break
 - Rock Slide
 - Soar
@@ -14397,7 +14395,6 @@ Level: 49
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 EVs: 100 HP / 100 Atk / 100 Def / 10 SpA / 100 SpD / 100 Spe
-Ball: Ultra
 - Heart Break
 - Soar
 - Fire Punch
