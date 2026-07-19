@@ -11,8 +11,8 @@ PacifidlogTown_House1_EventScript_Woman::
 
 PacifidlogTown_House1_Text_RegiStory:
 	.string "In the Hoenn region, there are three\n"
-	.string "Puppets that represent the power of\l"
-	.string "rock, ice, and steel.\p"
+	.string "Puppets that represent spirits,\l"
+	.string "darkness, and metal.\p"
 	.string "Each of them is said to hide away deep\n"
 	.string "inside caves.\p"
 	.string "That's the story I heard when I was\n"

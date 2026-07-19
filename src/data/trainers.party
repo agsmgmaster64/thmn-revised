@@ -3024,7 +3024,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Komachi
+Extra Komachi
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3054,7 +3054,7 @@ Normal Suwako
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nitori
+Extra Nitori
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3067,11 +3067,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
+Extra Murasa
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kisume
+Extra Kisume
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3110,7 +3110,7 @@ Music: Female
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yukari
+Extra Yukari
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7188,11 +7188,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
+Extra Murasa
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kisume
+Extra Kisume
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7300,7 +7300,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
+Extra Murasa
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7317,7 +7317,7 @@ Normal Futo
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyuri
+Extra Chiyuri
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8409,11 +8409,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Wakasagihime
+Extra Wakasagihime
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyuri
+Extra Chiyuri
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8426,7 +8426,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Nina
+Extra Nina
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8439,7 +8439,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Wakasagihime
+Extra Wakasagihime
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8546,7 +8546,7 @@ Music: Female
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yukari
+Extra Yukari
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11077,7 +11077,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Wriggle
+Extra Wriggle
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11103,7 +11103,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kasen
+Extra Kasen
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13347,11 +13347,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Lily White
+Extra Lily White
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lily Black
+Extra Lily Black
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13364,11 +13364,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Patchouli
+Extra Patchouli
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Alice
+Extra Alice
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13394,15 +13394,15 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
-Level: 38
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Ichirin
-Level: 38
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 Normal Mitori
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Ichirin
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Murasa
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13436,7 +13436,7 @@ Normal Shinmyoumaru
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Margatroid
+Extra Margatroid
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13449,7 +13449,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Sasha
+Extra Sasha
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13615,11 +13615,11 @@ Music: Girl
 Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Marisa
+Extra Marisa
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Alice
+Extra Alice
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

@@ -93,7 +93,7 @@ PacifidlogTown_House2_EventScript_UnhappyAzurill::
 PacifidlogTown_House2_Text_ChairmansYoungerBrotherOnVacation:
 	.string "Er-hem!\p"
 	.string "I am the Puppet Fan Club's most\n"
-	.string "important person, the CHAIRMAN's\l"
+	.string "important person, the Chairman's\l"
 	.string "younger brother.\p"
 	.string "I'm here enjoying my vacation with\n"
 	.string "Puppets, yes, indeed.$"
@@ -132,14 +132,14 @@ PacifidlogTown_House2_Text_GetGoodTMInXDays:
 	.string "your Puppet.$"
 
 PacifidlogTown_House2_Text_Rurii:
-	.string "AZURILL: Rurii.$"
+	.string "Mystia: Mysti.$"
 
 PacifidlogTown_House2_Text_VeryFriendlyWithTrainer:
 	.string "It appears to be very friendly with the\n"
 	.string "trainer.$"
 
 PacifidlogTown_House2_Text_Rururi:
-	.string "AZURILL: Rururi!$"
+	.string "Mystia: Mysti!$"
 
 PacifidlogTown_House2_Text_DoesntLikeTrainerVeryMuch:
 	.string "It doesn't appear to like the trainer\n"

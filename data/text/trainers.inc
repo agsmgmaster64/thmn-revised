@@ -4416,7 +4416,7 @@ Route131_Text_KaraPostBattle:
 	.string "makes men look. It must be my beauty!$"
 
 Route131_Text_ReliIntro:
-	.string "Reli: We'll work together as siblings\n"
+	.string "Reli: We'll work together as lovers\n"
 	.string "to take you on!$"
 
 Route131_Text_ReliDefeat:
@@ -4434,10 +4434,10 @@ Route131_Text_ReliNotEnoughMons:
 
 Route131_Text_IanIntro:
 	.string "Ian: I'm doing my best together with\n"
-	.string "my sis!$"
+	.string "my girlfriend!$"
 
 Route131_Text_IanDefeat:
-	.string "Ian: I did my best with my sis,\n"
+	.string "Ian: I did my best with my girlfriend,\n"
 	.string "but we still couldn't win…$"
 
 Route131_Text_IanPostBattle:
