@@ -276,6 +276,7 @@ static const struct WindowTemplate sSubwindowTemplates[] =
 
 static const u8 sItemPcTiles[] = INCGFX_U8("graphics/item_pc_rg/bg.png", ".4bpp.smol");
 static const u16 sItemPcBgPals[] = INCGFX_U16("graphics/item_pc_rg/bg.png", ".gbapal");
+static const u16 sItemPcBgPalsAWR[] = INCGFX_U16("graphics/item_pc_rg/bg_awr.png", ".gbapal");
 static const u32 sItemPcTilemap[] = INCBIN_U32("graphics/item_pc_rg/bg.bin.smolTM");
 
 #define tListTaskId     data[0]
@@ -514,7 +515,10 @@ static bool8 ItemPc_LoadGraphics(void)
         }
         break;
     case 2:
-        LoadPalette(sItemPcBgPals, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
+        if (IS_AWR)
+            LoadPalette(sItemPcBgPalsAWR, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
+        else
+            LoadPalette(sItemPcBgPals, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
         sItemPcRGResources->data[0]++;
         break;
     case 3:
