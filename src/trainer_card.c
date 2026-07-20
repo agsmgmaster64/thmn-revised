@@ -677,17 +677,18 @@ u32 CountPlayerTrainerStars(void)
     return stars;
 }
 
+// Ignore this, should never be called under any circumstances
 static u8 GetRubyTrainerStars(struct TrainerCard *trainerCard)
 {
     u8 stars = 0;
 
     if (trainerCard->hofDebutHours || trainerCard->hofDebutMinutes || trainerCard->hofDebutSeconds)
         stars++;
-    if (trainerCard->caughtAllHoenn)
+    if (trainerCard->hasAllMons)
         stars++;
     if (trainerCard->battleTowerStraightWins > 49)
         stars++;
-    if (trainerCard->hasAllPaintings)
+    if (trainerCard->defeatAichi)
         stars++;
 
     return stars;
@@ -701,7 +702,7 @@ static u8 GetEmeraldTrainerStars(struct TrainerCard *trainerCard)
         stars++;
     if (trainerCard->hasAllMons)
         stars++;
-    if (FlagGet(FLAG_SYS_DEFEAT_AICHI))
+    if (trainerCard->defeatAichi)
         stars++;
     if (HasAllFrontierSymbols())
         stars++;
@@ -717,9 +718,9 @@ static u8 GetKantoTrainerStars(struct TrainerCard *trainerCard)
         stars++;
     if (trainerCard->hasAllMons)
         stars++;
-    if (FlagGet(FLAG_SYS_GENSOKYO_LEAGUE_CLEAR))
+    if (trainerCard->gensokyoClear)
         stars++;
-    if (FlagGet(FLAG_SYS_DEFEAT_AICHI))
+    if (trainerCard->defeatAichi)
         stars++;
 
     return stars;
@@ -749,7 +750,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     }
 
     trainerCard->hasPokedex = FlagGet(FLAG_SYS_POKEDEX_GET);
-    trainerCard->caughtAllHoenn = HasAllRegionalMons();
+    trainerCard->defeatAichi = FlagGet(FLAG_SYS_DEFEAT_AICHI);
     trainerCard->hasAllMons = HasAllMons();
     trainerCard->caughtMonsCount = GetCaughtMonsCount();
 
@@ -772,17 +773,15 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     case CARD_TYPE_EMERALD:
         trainerCard->battleTowerWins = 0;
         trainerCard->battleTowerStraightWins = 0;
+        trainerCard->gensokyoClear = 0;
         trainerCard->contestsWithFriends = GetCappedGameStat(GAME_STAT_WON_LINK_CONTEST, 999);
         trainerCard->pokeblocksWithFriends = GetCappedGameStat(GAME_STAT_POKEBLOCKS_WITH_FRIENDS, 0xFFFF);
-        if (CountPlayerMuseumPaintings() >= CONTEST_CATEGORIES_COUNT)
-            trainerCard->hasAllPaintings = TRUE;
         trainerCard->stars = GetEmeraldTrainerStars(trainerCard);
         break;
     case CARD_TYPE_RS:
+        trainerCard->gensokyoClear = 0;
         trainerCard->contestsWithFriends = GetCappedGameStat(GAME_STAT_WON_LINK_CONTEST, 999);
         trainerCard->pokeblocksWithFriends = GetCappedGameStat(GAME_STAT_POKEBLOCKS_WITH_FRIENDS, 0xFFFF);
-        if (CountPlayerMuseumPaintings() >= CONTEST_CATEGORIES_COUNT)
-            trainerCard->hasAllPaintings = TRUE;
         trainerCard->stars = GetRubyTrainerStars(trainerCard);
         break;
     case CARD_TYPE_FRLG:
@@ -790,7 +789,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
         trainerCard->battleTowerStraightWins = 0;
         trainerCard->contestsWithFriends = 0;
         trainerCard->pokeblocksWithFriends = 0;
-        trainerCard->hasAllPaintings = 0;
+        trainerCard->gensokyoClear = FlagGet(FLAG_SYS_GENSOKYO_LEAGUE_CLEAR);
         trainerCard->linkPoints.berryCrush = GetCappedGameStat(GAME_STAT_PLAYED_BERRY_CRUSH, 0xFFFF);
         trainerCard->unionRoomNum = GetCappedGameStat(GAME_STAT_NUM_UNION_ROOM_BATTLES, 0xFFFF);
         trainerCard->shouldDrawStickers = TRUE;
