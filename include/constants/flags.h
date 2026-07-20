@@ -1393,7 +1393,7 @@
 #define FLAG_DEFEATED_VIVIT                         (SYSTEM_FLAGS + 0x24) // Formerly Unused Flag
 #define FLAG_HIDE_ELIS                              (SYSTEM_FLAGS + 0x25) // Formerly Unused Flag
 #define FLAG_DEFEATED_ELIS                          (SYSTEM_FLAGS + 0x26) // Formerly Unused Flag
-#define FLAG_POWER_GLOVE_GET                        (SYSTEM_FLAGS + 0x21) // Formerly Unused Flag
+#define FLAG_POWER_GLOVE_GET                        (SYSTEM_FLAGS + 0x27) // Formerly Unused Flag
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
 #define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
