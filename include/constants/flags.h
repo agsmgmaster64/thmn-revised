@@ -1387,8 +1387,8 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
-#define FLAG_SYS_VS_SEEKER_CHARGING                 (SYSTEM_FLAGS + 0x22) // Unused Flag
+#define FLAG_SYS_DEFEAT_AICHI                       (SYSTEM_FLAGS + 0x21)
+#define FLAG_SYS_VS_SEEKER_CHARGING                 (SYSTEM_FLAGS + 0x22)
 #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
@@ -2380,6 +2380,7 @@
 #define FLAG_SYS_SEVII_MAP_4567                                     0
 #define FLAG_SYS_GOT_BERRY_POUCH                                    0
 #define FLAG_SYS_UNLOCKED_TANOBY_RUINS                              0
+#define FLAG_SYS_GENSOKYO_LEAGUE_CLEAR                              0
 
 // World Map Flags
 #define FLAG_WORLD_MAP_PALLET_TOWN                                  0
