@@ -3,7 +3,7 @@
   "name": "RiveryPass",
   "layout": "LAYOUT_RIVERY_PASS",
   "music": "MUS_THPPZGSK_378A_PRIMAL_SCENE",
-  "region_map_section": "MAPSEC_SEVII_ISLE_23",
+  "region_map_section": "MAPSEC_WEEPTH_CHAMBER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
