@@ -52,19 +52,28 @@ SootopolisCity_Gym_B1F_EventScript_Daphne::
 	end
 
 SootopolisCity_Gym_B1F_Text_AndreaIntro:
-	.string "I'll show you the sublime techniques\n"
-	.string "I learned from our LEADER JUAN!$"
+	.string "Don't tell my Boss, but I've been\n"
+	.string "training with Juan to improve my\l"
+	.string "Team's condition.\p"
+	.string "I've been coming here the past few\n"
+	.string "weeks. It's hard work!\p"
+	.string "… … … … …\n"
+	.string "… … … … …\p"
+	.string "Huh? I missed WHAT outside?!$"
 
 SootopolisCity_Gym_B1F_Text_AndreaDefeat:
-	.string "Please forgive me, JUAN…$"
+	.string "Please forgive me, Boss…$"
 
 SootopolisCity_Gym_B1F_Text_AndreaPostBattle:
-	.string "Watch what happens if you crack all\n"
-	.string "the floor tiles.$"
+	.string "Eh? Team Aqua's disbanded?!\n"
+	.string "… … … … …\p"
+	.string "Well… I guess that means I can\n"
+	.string "devote myself fully to training\l"
+	.string "with Juan!$"
 
 SootopolisCity_Gym_B1F_Text_CrissyIntro:
 	.string "You came all the way here, but you won't\n"
-	.string "get to see JUAN.\p"
+	.string "get to see Juan.\p"
 	.string "Not if you lose to me, you won't!$"
 
 SootopolisCity_Gym_B1F_Text_CrissyDefeat:
@@ -73,10 +82,10 @@ SootopolisCity_Gym_B1F_Text_CrissyDefeat:
 
 SootopolisCity_Gym_B1F_Text_CrissyPostBattle:
 	.string "You might be good enough to avoid\n"
-	.string "being wiped out in one hit by JUAN.$"
+	.string "being wiped out in one hit by Juan.$"
 
 SootopolisCity_Gym_B1F_Text_DaphneIntro:
-	.string "The sight of JUAN conducting\n"
+	.string "The sight of Juan conducting\n"
 	.string "a battle…\p"
 	.string "The very beauty of it compelled me to\n"
 	.string "become a trainer.$"
@@ -101,26 +110,26 @@ SootopolisCity_Gym_B1F_Text_ConnieDefeat:
 
 SootopolisCity_Gym_B1F_Text_ConniePostBattle:
 	.string "I'll tell you something good.\p"
-	.string "If you want to reach JUAN, you\n"
+	.string "If you want to reach Juan, you\n"
 	.string "need to walk on each floor tile once.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetIntro:
-	.string "The Puppet GYM of the highest level\n"
+	.string "The Puppet Gym of the highest level\n"
 	.string "in the Hoenn region…\p"
-	.string "That's the SOOTOPOLIS GYM.$"
+	.string "That's the Sootopolis Gym.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetDefeat:
 	.string "What a high level you are!$"
 
 SootopolisCity_Gym_B1F_Text_BridgetPostBattle:
 	.string "Rather than being satisfied by being\n"
-	.string "in a strong GYM, I imagine training in\l"
+	.string "in a strong Gym, I imagine training in\l"
 	.string "other places will make you stronger.\l"
 	.string "But above all, it looks more fun.$"
 
 SootopolisCity_Gym_B1F_Text_OliviaIntro:
 	.string "I train my Puppets together with\n"
-	.string "JUAN.\p"
+	.string "Juan.\p"
 	.string "Don't think I'm a pushover.$"
 
 SootopolisCity_Gym_B1F_Text_OliviaDefeat:
@@ -164,9 +173,9 @@ SootopolisCity_Gym_B1F_Text_AnnikaDefeat:
 	.string "at my Puppets?$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaPostBattle:
-	.string "I came to this GYM because JUAN\n"
+	.string "I came to this Gym because Juan\n"
 	.string "praised me for my darling Puppets.\p"
-	.string "Oh, if only I'd met JUAN years ago\n"
+	.string "Oh, if only I'd met Juan years ago\n"
 	.string "when I was younger…$"
 
 SootopolisCity_Gym_B1F_Text_BriannaIntro:
@@ -178,5 +187,5 @@ SootopolisCity_Gym_B1F_Text_BriannaDefeat:
 	.string "I went much too easy on you.$"
 
 SootopolisCity_Gym_B1F_Text_BriannaPostBattle:
-	.string "You couldn't lay a finger on JUAN,\n"
+	.string "You couldn't lay a finger on Juan,\n"
 	.string "I'm sure. Giggle…$"

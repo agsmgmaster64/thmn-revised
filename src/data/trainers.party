@@ -161,7 +161,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Suwako
+Extra Suwako
 Level: 48
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -174,7 +174,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Rumia
+Extra Rumia
 Level: 48
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -187,7 +187,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Suwako
+Extra Suwako
 Level: 48
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -297,7 +297,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Suwako
+Extra Suwako
 Level: 48
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1802,7 +1802,7 @@ Normal Satori
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shou
+Extra Shou
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2612,11 +2612,11 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Seiga
+Extra Seiga
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Sanae
+Extra Sanae
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3084,7 +3084,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
+Extra Murasa
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3097,7 +3097,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Futo
+Extra Futo
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3123,7 +3123,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Suwako
+Extra Suwako
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3247,11 +3247,11 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Elly
+Extra Elly
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
+Extra Meiling
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6780,19 +6780,19 @@ Chibi Hina
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hina
+Normal Hina
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hina
+Normal Hina
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hina
+Normal Hina
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Hina
+Extra Hina
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7475,7 +7475,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Miyoi
+Extra Miyoi
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7735,11 +7735,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kutaka
+Extra Kutaka
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mystia
+Extra Mystia
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7752,7 +7752,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Megumu
+Extra Megumu
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8452,7 +8452,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Nina
+Extra Nina
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8482,7 +8482,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Nitori
+Extra Nitori
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8495,11 +8495,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Hina
+Extra Hina
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
+Extra Komachi
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8529,11 +8529,11 @@ Music: Swimmer
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Wakasagihime
+Extra Wakasagihime
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Futo
+Extra Futo
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9289,11 +9289,11 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Meiling
+Extra Meiling
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nitori
+Extra Nitori
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9306,7 +9306,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Aya
+Extra Aya
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9319,11 +9319,11 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Ichirin
+Extra Ichirin
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuugi
+Extra Yuugi
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9336,7 +9336,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Murasa
+Extra Murasa
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9349,7 +9349,7 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kasen
+Extra Kasen
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10860,7 +10860,7 @@ Music: Aqua
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Remilia @ Metal Coat
+Extra Remilia @ Metal Coat
 Level: 50
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -10871,7 +10871,7 @@ Ball: Ultra
 - Steel Wing
 - Poison Jab
 
-Normal Komachi @ Nevermeltice
+Extra Komachi @ Nevermeltice
 Level: 51
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -10882,7 +10882,7 @@ Ball: Ultra
 - Drawn Line
 - Shadow Punch
 
-Normal Suwako @ Sitrus Berry
+Extra Suwako @ Sitrus Berry
 Level: 52
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -11329,7 +11329,7 @@ Normal Byakuren
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shinki
+Extra Shinki
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11429,7 +11429,7 @@ Normal Shinmyoumaru
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Seija
+Extra Seija
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14362,11 +14362,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Koakuma
+Extra Koakuma
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Patchouli
+Extra Patchouli
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14799,7 +14799,7 @@ Normal Miko
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Sendai
+Extra Sendai
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

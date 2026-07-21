@@ -53,9 +53,9 @@ SealedChamber_OuterRoom_Braille_DigHere:
 SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth:
 	brailleformat 0, 0, 29, 19, 3, 3
 	.braille "FIRST COMES\n"
-	.braille "WAILORD.\n"
+	.braille "LOTUS FLOWER.\n"
 	.braille "LAST COMES\n"
-	.braille "RELICANTH.$"
+	.braille "SHINKI.$"
 
 SealedChamber_InnerRoom_Braille_InThisCaveWeHaveLived:
 	brailleformat 2, 0, 26, 19, 5, 3
@@ -68,13 +68,13 @@ SealedChamber_InnerRoom_Braille_WeOweAllToThePokemon:
 	brailleformat 7, 2, 23, 17, 10, 5
 	.braille "WE OWE ALL\n"
 	.braille "TO THE\n"
-	.braille "POKEMON.$"
+	.braille "PUPPETS.$"
 
 SealedChamber_InnerRoom_Braille_ButWeSealedThePokemonAway:
 	brailleformat 3, 0, 25, 19, 6, 3
 	.braille "BUT, WE\n"
 	.braille "SEALED THE\n"
-	.braille "POKEMON\n"
+	.braille "PUPPETS\n"
 	.braille "AWAY.$"
 
 SealedChamber_InnerRoom_Braille_WeFearedIt:
@@ -92,7 +92,7 @@ SealedChamber_InnerRoom_Braille_OpenDoorEternalPokemonWaits:
 	brailleformat 3, 2, 27, 17, 6, 5
 	.braille "OPEN A DOOR.\n"
 	.braille "AN ETERNAL\n"
-	.braille "POKEMON\n"
+	.braille "PUPPET\n"
 	.braille "WAITS.$"
 
 DesertRuins_Braille_UseRockSmash:

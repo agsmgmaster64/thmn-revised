@@ -104,28 +104,28 @@ SootopolisCity_LotadAndSeedotHouse_EventScript_LotadSizeRecord::
 	end
 
 SootopolisCity_LotadAndSeedotHouse_Text_PleaseShowMeBigSeedot:
-	.string "Do you know the Puppet SEEDOT?\n"
-	.string "It's hardly ever seen in SOOTOPOLIS.\p"
-	.string "Anyway, I love big SEEDOT.\n"
+	.string "Do you know the Puppet Shou?\n"
+	.string "It's hardly ever seen in Sootopolis.\p"
+	.string "Anyway, I love big Shou.\n"
 	.string "The bigger the better.\p"
 	.string "But my younger brother, he says that\n"
-	.string "LOTAD is bigger.\p"
+	.string "Murasa is bigger.\p"
 	.string "That's silly.\n"
-	.string "SEEDOT has to be bigger than that!\p"
-	.string "Huh? Do you have a SEEDOT with you?\n"
+	.string "Shou has to be bigger than that!\p"
+	.string "Huh? Do you have a Shou with you?\n"
 	.string "P-p-please, show me!$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_GoshMightBeBiggerThanLotad:
 	.string "{STR_VAR_2}!\n"
 	.string "Oh, my gosh, this is a big one!\p"
-	.string "It might even beat the big LOTAD\n"
+	.string "It might even beat the big Murasa\n"
 	.string "my younger brother saw!\p"
 	.string "Thanks for showing me.\n"
 	.string "This is my thanks!$"
 
 @ Unused
 SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion1:
-	.string "{PLAYER} received a POTION.$"
+	.string "{PLAYER} received a Potion.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull1:
 	.string "Hunh?\n"
@@ -133,47 +133,47 @@ SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull1:
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerSeedot:
 	.string "{STR_VAR_2}, is it?\p"
-	.string "Hmm… I've seen a bigger SEEDOT\n"
+	.string "Hmm… I've seen a bigger Shou\n"
 	.string "than this one.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_ThatsNotSeedot:
 	.string "Oh, now this is quite something…\n"
-	.string "But it's not a SEEDOT!$"
+	.string "But it's not a Shou!$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigSeedot:
-	.string "You don't have a big SEEDOT?\n"
+	.string "You don't have a big Shou?\n"
 	.string "That's too bad…\p"
-	.string "If you get a big SEEDOT, please\n"
+	.string "If you get a big Shou, please\n"
 	.string "come show me.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BiggestSeedotInHistory:
-	.string "The biggest SEEDOT in history!\n"
+	.string "The biggest Shou in history!\n"
 	.string "{STR_VAR_2}'s {STR_VAR_3} giant!\p"
-	.string "A SEEDOT bigger than a LOTAD\n"
+	.string "A Shou bigger than a Murasa\n"
 	.string "always wanted!$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_PleaseShowMeBigLotad:
-	.string "Do you know the Puppet LOTAD?\n"
-	.string "It's rarely seen in SOOTOPOLIS.\p"
-	.string "I love, I mean love, big LOTAD!\p"
-	.string "My big brother says that SEEDOT is\n"
+	.string "Do you know the Puppet Murasa?\n"
+	.string "It's rarely seen in Sootopolis.\p"
+	.string "I love, I mean love, big Murasa!\p"
+	.string "My big brother says that Shou is\n"
 	.string "bigger.\p"
 	.string "But that's wrong! Everyone knows that\n"
-	.string "LOTAD is a lot bigger.\p"
-	.string "Hunh? Do you have a LOTAD?\n"
+	.string "Murasa is a lot bigger.\p"
+	.string "Hunh? Do you have a Murasa?\n"
 	.string "P-p-please show me!$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_WowMightBeBiggerThanSeedot:
 	.string "{STR_VAR_2}!\n"
 	.string "Wow, that is big!\p"
 	.string "It might be even bigger than the huge\n"
-	.string "SEEDOT my big brother saw.\p"
+	.string "Shou my big brother saw.\p"
 	.string "Thanks for showing me!\n"
 	.string "This is my thanks!$"
 
 @ Unused
 SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion2:
-	.string "{PLAYER} received a POTION.$"
+	.string "{PLAYER} received a Potion.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull2:
 	.string "Hunh?\n"
@@ -181,21 +181,21 @@ SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull2:
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerLotad:
 	.string "{STR_VAR_2}?\p"
-	.string "Hmm… I've seen a bigger LOTAD\n"
+	.string "Hmm… I've seen a bigger Murasa\n"
 	.string "than this one here.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_ThatsNotLotad:
 	.string "Well, isn't this something!\n"
-	.string "But it's no LOTAD!$"
+	.string "But it's no Murasa!$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigLotad:
-	.string "Don't you have a big LOTAD?\n"
+	.string "Don't you have a big Murasa?\n"
 	.string "How disappointing…\p"
-	.string "If you get a big LOTAD, please\n"
+	.string "If you get a big Murasa, please\n"
 	.string "come show me!$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BiggestLotadInHistory:
-	.string "The biggest LOTAD in history!\n"
+	.string "The biggest Murasa in history!\n"
 	.string "{STR_VAR_2}'s {STR_VAR_3} colossus!\p"
-	.string "A LOTAD bigger than a SEEDOT\n"
+	.string "A Murasa bigger than a Shou\n"
 	.string "always wanted!$"

@@ -176,11 +176,11 @@ SootopolisCity_Gym_1F_EventScript_GymStatue::
 	end
 
 SootopolisCity_Gym_1F_Text_GymGuideAdvice:
-	.string "Yo! How's it going, CHAMPION-\n"
+	.string "Yo! How's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "SOOTOPOLIS's GYM LEADER JUAN is\n"
-	.string "a master of WATER-type Puppets.\p"
-	.string "And, to get to JUAN, an icy floor\n"
+	.string "Sootopolis's Gym Leader Juan is\n"
+	.string "a master of Water-type Puppets.\p"
+	.string "And, to get to Juan, an icy floor\n"
 	.string "will hamper your progress…\p"
 	.string "Listen, I'm sorry, but that's all the\n"
 	.string "advice that I have for you.\p"
@@ -188,22 +188,22 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "go for it yourself!$"
 
 SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
-	.string "Yow! You've beaten even JUAN, who\n"
+	.string "Yow! You've beaten even Juan, who\n"
 	.string "was supposedly the best in all Hoenn!\p"
-	.string "Okay! Check out your trainer CARD.\p"
-	.string "If you've gotten all the BADGES, you're\n"
+	.string "Okay! Check out your trainer Card.\p"
+	.string "If you've gotten all the Badges, you're\n"
 	.string "set for the Hoenn League challenge!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "Let me ask you.\n"
 	.string "Did you know?\l"
 	.string "Ah, I should not be so coy.\p"
-	.string "It was I who taught WALLACE everything\n"
+	.string "It was I who taught Wallace everything\n"
 	.string "there is to know about Puppets.\p"
 	.string "Once, I had given up my position as\n"
-	.string "the GYM LEADER.\p"
-	.string "In my place, I had entrusted WALLACE\n"
-	.string "with the GYM.\p"
+	.string "the Gym Leader.\p"
+	.string "In my place, I had entrusted Wallace\n"
+	.string "with the Gym.\p"
 	.string "However, a compelling reason arose for\n"
 	.string "me to make a comeback.\p"
 	.string "Ah, but enough chatter.\n"
@@ -223,67 +223,67 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "From you, I sense the brilliant shine\n"
 	.string "of skill that will overcome all.\p"
 	.string "However, compared with me or even\n"
-	.string "WALLACE, you are lacking in elegance.\p"
+	.string "Wallace, you are lacking in elegance.\p"
 	.string "Perhaps I should make you a loan\n"
 	.string "of my outfit?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Hahaha, I merely jest!\p"
 	.string "Rather than my clothes, I shall reward\n"
-	.string "you with this, the RAIN BADGE!$"
+	.string "you with this, the Rain Badge!$"
 
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
-	.string "{PLAYER} received the RAIN BADGE\n"
-	.string "from JUAN.$"
+	.string "{PLAYER} received the Rain Badge\n"
+	.string "from Juan.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
-	.string "Having the RAIN BADGE shall assure you\n"
+	.string "Having the Rain Badge shall assure you\n"
 	.string "the full obedience of all your Puppets\l"
 	.string "to your every command.\p"
-	.string "The RAIN BADGE also allows the use\n"
-	.string "of the HM move WATERFALL to scale\l"
+	.string "The Rain Badge also allows the use\n"
+	.string "of the HM move Waterfall to scale\l"
 	.string "walls of cascading water.\p"
 	.string "And, so that you never forget the\n"
 	.string "battle we shared, take this…$"
 
 SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
-	.string "The TECHNICAL MACHINE I handed you\n"
-	.string "contains WATER PULSE.\p"
+	.string "The Technical Machine I handed you\n"
+	.string "contains Water Pulse.\p"
 	.string "In use, it will occasionally confuse\n"
 	.string "the target with ultrasonic waves.\p"
 	.string "… … … … … …$"
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
-	.string "Registered GYM LEADER JUAN\n"
+	.string "Registered Gym Leader Juan\n"
 	.string "in the TohoNav.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "The trainers who have gathered all\n"
-	.string "the GYM BADGES of Hoenn should make\l"
+	.string "the Gym Badges of Hoenn should make\l"
 	.string "way to the ultimate destination.\p"
 	.string "The Hoenn League.\p"
 	.string "Travel to the easternmost reaches\n"
-	.string "of Hoenn, to the island EVER GRANDE.\p"
+	.string "of Hoenn, to the island Ever Grande.\p"
 	.string "There, you shall find the Hoenn\n"
 	.string "League.$"
 
 SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
-	.string "There remains but one BADGE to\n"
+	.string "There remains but one Badge to\n"
 	.string "obtain in Hoenn.\p"
 	.string "If you wish to challenge the Hoenn\n"
 	.string "League, you must obtain the last\l"
-	.string "BADGE from the GYM in FORTREE.$"
+	.string "Badge from the Gym in Fortree.$"
 
 SootopolisCity_Gym_1F_Text_GymStatue:
-	.string "SOOTOPOLIS CITY Puppet GYM$"
+	.string "Sootopolis City Puppet Gym$"
 
 SootopolisCity_Gym_1F_Text_GymStatueCertified:
-	.string "SOOTOPOLIS CITY Puppet GYM\p"
-	.string "JUAN'S CERTIFIED trainers:\n"
+	.string "Sootopolis City Puppet Gym\p"
+	.string "Juan'S Certified trainers:\n"
 	.string "{PLAYER}$"
 
 SootopolisCity_Gym_1F_Text_JuanPreRematch:
-	.string "JUAN: Ah, this GYM had returned to its\n"
+	.string "Juan: Ah, this Gym had returned to its\n"
 	.string "usual state of serenity…\p"
 	.string "But our young typhoon has returned\n"
 	.string "to put us to the test again!\p"
@@ -296,7 +296,7 @@ SootopolisCity_Gym_1F_Text_JuanRematchDefeat:
 	.string "You have defeated me again!$"
 
 SootopolisCity_Gym_1F_Text_JuanPostRematch:
-	.string "JUAN: If I told you to become my\n"
+	.string "Juan: If I told you to become my\n"
 	.string "apprentice, you will refuse, I am sure.\p"
 	.string "I would like to make a gift of my coat\n"
 	.string "to you.\p"
@@ -306,7 +306,7 @@ SootopolisCity_Gym_1F_Text_JuanPostRematch:
 	.string "of nobility!$"
 
 SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
-	.string "JUAN: Ah, this GYM had returned to its\n"
+	.string "Juan: Ah, this Gym had returned to its\n"
 	.string "usual state of serenity…\p"
 	.string "But our young typhoon has returned\n"
 	.string "to put us to the test again!\p"

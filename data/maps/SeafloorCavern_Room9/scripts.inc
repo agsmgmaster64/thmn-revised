@@ -246,16 +246,16 @@ SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
 	.string "you are truly gifted.\p"
 	.string "But!\n"
 	.string "I have this in my possession!\p"
-	.string "With this RED ORB, I can make LSuwako…$"
+	.string "With this Red Orb, I can make LSuwako…$"
 
 SeafloorCavern_Room9_Text_RedOrbShinesByItself:
-	.string "The RED ORB suddenly began shining\n"
+	.string "The Red Orb suddenly began shining\n"
 	.string "by itself!$"
 
 SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo:
 	.string "Archie: What?!\p"
 	.string "I didn't do anything.\n"
-	.string "Why did the RED ORB…\p"
+	.string "Why did the Red Orb…\p"
 	.string "Where did LSuwako go?$"
 
 SeafloorCavern_Room9_Text_ArchieAMessageFromOutside:
@@ -280,7 +280,7 @@ SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
 
 SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear:
 	.string "Archie: There's something wrong…\p"
-	.string "The RED ORB is supposed to awaken\n"
+	.string "The Red Orb is supposed to awaken\n"
 	.string "and control LSuwako…\p"
 	.string "But… Why?\n"
 	.string "Why did LSuwako disappear?\p"
@@ -300,7 +300,7 @@ SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
 	.string "Don't get all high and mighty with me!\p"
 	.string "Wasn't it you, Team Magma, that\n"
 	.string "infuriated LUtsuho?\p"
-	.string "So long as I have this RED ORB,\n"
+	.string "So long as I have this Red Orb,\n"
 	.string "I should be able to control LSuwako…\p"
 	.string "I should be able to control it…$"
 
