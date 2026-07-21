@@ -9501,7 +9501,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLY_VR_1 ===
 Name: Wally
-Class: Cooltrainer 2
+Class: Rival
 Pic: Wally
 Gender: Male
 Music: Male
@@ -9576,8 +9576,8 @@ Ball: Ultra
 
 === TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9589,8 +9589,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9631,8 +9631,8 @@ Ball: Great
 
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9684,8 +9684,8 @@ Ball: Ultra
 
 === TRAINER_BRENDAN_ROUTE_103_TREECKO ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9697,8 +9697,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9739,8 +9739,8 @@ Ball: Great
 
 === TRAINER_BRENDAN_ROUTE_119_TREECKO ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9792,8 +9792,8 @@ Ball: Ultra
 
 === TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9805,8 +9805,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9847,8 +9847,8 @@ Ball: Great
 
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -9900,8 +9900,8 @@ Ball: Ultra
 
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -9913,8 +9913,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -9955,8 +9955,8 @@ Ball: Great
 
 === TRAINER_MAY_ROUTE_119_MUDKIP ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -10008,8 +10008,8 @@ Ball: Ultra
 
 === TRAINER_MAY_ROUTE_103_TREECKO ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -10021,8 +10021,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -10063,8 +10063,8 @@ Ball: Great
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -10116,8 +10116,8 @@ Ball: Ultra
 
 === TRAINER_MAY_ROUTE_103_TORCHIC ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -10129,8 +10129,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -10171,8 +10171,8 @@ Ball: Great
 
 === TRAINER_MAY_ROUTE_119_TORCHIC ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -11256,8 +11256,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_RUSTBORO_TREECKO ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -11287,8 +11287,8 @@ Ball: Great
 
 === TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -11435,8 +11435,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_RUSTBORO_TORCHIC ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -11466,8 +11466,8 @@ Ball: Great
 
 === TRAINER_MAY_RUSTBORO_MUDKIP ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -12897,8 +12897,8 @@ Ball: Premier
 
 === TRAINER_BRENDAN_LILYCOVE_MUDKIP ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -12961,8 +12961,8 @@ Ball: Ultra
 
 === TRAINER_BRENDAN_LILYCOVE_TREECKO ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -13025,8 +13025,8 @@ Ball: Ultra
 
 === TRAINER_BRENDAN_LILYCOVE_TORCHIC ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -13089,8 +13089,8 @@ Ball: Ultra
 
 === TRAINER_MAY_LILYCOVE_MUDKIP ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -13153,8 +13153,8 @@ Ball: Ultra
 
 === TRAINER_MAY_LILYCOVE_TREECKO ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -13217,8 +13217,8 @@ Ball: Ultra
 
 === TRAINER_MAY_LILYCOVE_TORCHIC ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -14978,8 +14978,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_RUSTBORO_TREECKO ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -15009,8 +15009,8 @@ Ball: Great
 
 === TRAINER_MAY_RUSTBORO_TORCHIC ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -25651,8 +25651,8 @@ Ball: Master
 
 === TRAINER_MARIBEL_EVER_GRANDE_TREECKO ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -25726,8 +25726,8 @@ Ball: Ultra
 
 === TRAINER_MARIBEL_EVER_GRANDE_TORCHIC ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -25801,8 +25801,8 @@ Ball: Ultra
 
 === TRAINER_MARIBEL_EVER_GRANDE_MUDKIP ===
 Name: Maribel
-Class: Pkmn Trainer 1
-Pic: May
+Class: Rival
+Pic: Maribel
 Gender: Female
 Music: Female
 Battle Type: Singles
@@ -25876,8 +25876,8 @@ Ball: Ultra
 
 === TRAINER_RENKO_EVER_GRANDE_TREECKO ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -25951,8 +25951,8 @@ Ball: Ultra
 
 === TRAINER_RENKO_EVER_GRANDE_TORCHIC ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles
@@ -26026,8 +26026,8 @@ Ball: Ultra
 
 === TRAINER_RENKO_EVER_GRANDE_MUDKIP ===
 Name: Renko
-Class: Pkmn Trainer 1
-Pic: Brendan
+Class: Rival
+Pic: Renko
 Gender: Male
 Music: Male
 Battle Type: Singles

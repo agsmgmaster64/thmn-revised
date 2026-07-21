@@ -773,7 +773,7 @@ Route110_Text_MayTakeThis:
 	.string "This is from me!$"
 
 Route110_Text_MayExplainItemfinder:
-	.string "Maribel: That's an Itemfinder.\p"
+	.string "Maribel: That's a Dowsing Machine.\p"
 	.string "Try it out. If there is an item that's\n"
 	.string "not visible, it emits a sound.\p"
 	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
@@ -799,7 +799,7 @@ Route110_Text_BrendanTakeThis:
 	.string "Here, take this.$"
 
 Route110_Text_BrendanExplainItemfinder:
-	.string "Renko: That's an Itemfinder.\p"
+	.string "Renko: That's a Dowsing Machine.\p"
 	.string "Use it to root around for items that\n"
 	.string "aren't visible.\p"
 	.string "If it senses something, it emits\n"
