@@ -838,7 +838,7 @@ Music: Female
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kaguya @ Lum Berry
+Extra Kaguya @ Lum Berry
 Level: 54
 Nature: Docile
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -849,7 +849,7 @@ Ball: Great
 - Earth Power
 - Extrasensory
 
-Normal Eirin @ Lum Berry
+Extra Eirin @ Lum Berry
 Level: 54
 Nature: Docile
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -1580,11 +1580,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Flandre
+Extra Flandre
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rika
+Extra Rika
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1597,11 +1597,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Mokou
+Extra Mokou
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meira
+Extra Meira
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1618,7 +1618,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Hakurei @ Spell Tag
+Extra Hakurei @ Spell Tag
 Level: 55
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -1629,7 +1629,7 @@ Ball: Ultra
 - Mana Burst
 - Shadow Ball
 
-Normal Kirisame @ Spell Tag
+Extra Kirisame @ Spell Tag
 Level: 55
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -1640,7 +1640,7 @@ Ball: Ultra
 - Shadow Ball
 - Energy Light
 
-Normal Margatroid @ SilverPowder
+Extra Margatroid @ SilverPowder
 Level: 55
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -1651,7 +1651,7 @@ Ball: Ultra
 - Flamethrower
 - Signal Beam
 
-Normal Yuuka @ Soft Sand
+Extra Yuuka @ Soft Sand
 Level: 55
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -1693,15 +1693,15 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Suika
+Extra Suika
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kanako
+Extra Kanako
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eiki
+Extra Eiki
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1947,7 +1947,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Kokoro
+Extra Kokoro
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1960,7 +1960,7 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yuyuko
+Extra Yuyuko
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1973,15 +1973,15 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Nazrin
+Extra Nazrin
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Merlin
+Extra Merlin
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rikako
+Extra Rikako
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2015,11 +2015,11 @@ Advent Mokou
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Daiyousei
+Extra Daiyousei
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Satori
+Extra Satori
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7795,11 +7795,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Shinki
+Extra Shinki
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yumeko
+Extra Yumeko
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10459,11 +10459,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Mai
+Extra Mai
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuki
+Extra Yuki
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

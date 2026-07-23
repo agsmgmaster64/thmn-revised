@@ -7,7 +7,7 @@ MtPyre_3F_EventScript_William::
 	end
 
 MtPyre_3F_EventScript_Artemis::
-	trainerbattle_single TRAINER_ARTEMIS_3, MtPyre_3F_Text_ArtemisIntro, MtPyre_3F_Text_ArtemisDefeat, AbandonedShip_Rooms2_1F_EventScript_ArtemisToHeal
+	trainerbattle_single TRAINER_ARTEMIS_3, MtPyre_3F_Text_ArtemisIntro, MtPyre_3F_Text_ArtemisDefeat, MtPyre_3F_EventScript_ArtemisToHeal
 	msgbox MtPyre_3F_Text_ArtemisPostBattle, MSGBOX_DEFAULT
 	call MtPyre_3F_EventScript_ArtemisHeal
 	msgbox MtPyre_3F_Text_ArtemisAnotherCheckup, MSGBOX_AUTOCLOSE

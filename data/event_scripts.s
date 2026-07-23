@@ -1907,3 +1907,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/FallarborTown_PowerGloveHouse_PowerGloveRoom/scripts.inc"
 
 	.include "data/maps/Route103_HouseOfMemories/scripts.inc"
+
+	.include "data/maps/VictoryRoad1F_Exit/scripts.inc"

@@ -11380,6 +11380,26 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Route103_House_Of_Memories/border.bin",
       "blockdata_filepath": "data/layouts/Route103_House_Of_Memories/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_1F_EXIT",
+      "name": "VictoryRoad_1F_Exit",
+      "width": 32,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_1F_Exit/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_1F_Exit/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD1F_EXIT",
+      "name": "VictoryRoad1F_Exit_Layout",
+      "width": 32,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad1F_Exit/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad1F_Exit/map.bin"
     }
   ]
 }

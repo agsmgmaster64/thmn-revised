@@ -491,7 +491,8 @@
     "NewMauville_VIVITRoom",
     "ScorchedSlab_B1F",
     "CaveofWisdom_B1F",
-    "BorderCave"
+    "BorderCave",
+    "VictoryRoad1F_Exit"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

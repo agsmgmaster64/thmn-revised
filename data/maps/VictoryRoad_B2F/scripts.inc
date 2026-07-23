@@ -22,9 +22,27 @@ VictoryRoad_B2F_EventScript_Julie::
 	end
 
 VictoryRoad_B2F_EventScript_Felix::
-	trainerbattle_single TRAINER_FELIX, VictoryRoad_B2F_Text_FelixIntro, VictoryRoad_B2F_Text_FelixDefeat
+	trainerbattle_single TRAINER_FELIX, VictoryRoad_B2F_Text_FelixIntro, VictoryRoad_B2F_Text_FelixDefeat, VictoryRoad_B2F_EventScript_ArtemisToHeal
 	msgbox VictoryRoad_B2F_Text_FelixPostBattle, MSGBOX_AUTOCLOSE
+	call VictoryRoad_B2F_EventScript_ArtemisHeal
+	msgbox VictoryRoad_B2F_Text_ArtemisAnotherCheckup, MSGBOX_AUTOCLOSE
 	end
+	
+VictoryRoad_B2F_EventScript_ArtemisToHeal::
+	msgbox VictoryRoad_B2F_Text_FelixPostBattle, MSGBOX_DEFAULT
+	call VictoryRoad_B2F_EventScript_ArtemisHeal
+	msgbox VictoryRoad_B2F_Text_ArtemisAnotherCheckup, MSGBOX_DEFAULT
+	release
+	end
+	
+VictoryRoad_B2F_EventScript_ArtemisHeal::
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	return
 
 VictoryRoad_B2F_EventScript_Dianne::
 	trainerbattle_single TRAINER_DIANNE, VictoryRoad_B2F_Text_DianneIntro, VictoryRoad_B2F_Text_DianneDefeat
@@ -55,7 +73,7 @@ VictoryRoad_B2F_Text_OwenDefeat:
 
 VictoryRoad_B2F_Text_OwenPostBattle:
 	.string "The rumors I heard, that tough little\n"
-	.string "kid is from PETALBURG CITY.$"
+	.string "kid is from Petalburg City.$"
 
 VictoryRoad_B2F_Text_CarolineIntro:
 	.string "You must be getting a little tired.$"
@@ -64,13 +82,13 @@ VictoryRoad_B2F_Text_CarolineDefeat:
 	.string "No signs of tiring at all!$"
 
 VictoryRoad_B2F_Text_CarolinePostBattle:
-	.string "VICTORY ROAD and the Hoenn League\n"
+	.string "Victory Road and the Hoenn League\n"
 	.string "are long and grueling challenges.\l"
 	.string "Beware of fatigue!$"
 
 VictoryRoad_B2F_Text_JulieIntro:
 	.string "You shouldn't get complacent just\n"
-	.string "because you have a lot of GYM BADGES.\p"
+	.string "because you have a lot of Gym Badges.\p"
 	.string "There's always going to be someone\n"
 	.string "who's better than you!$"
 
@@ -78,21 +96,26 @@ VictoryRoad_B2F_Text_JulieDefeat:
 	.string "You're better than me!$"
 
 VictoryRoad_B2F_Text_JuliePostBattle:
-	.string "Gaze on your collected BADGES and\n"
+	.string "Gaze on your collected Badges and\n"
 	.string "remember the trainers you've faced.$"
 
 VictoryRoad_B2F_Text_FelixIntro:
-	.string "I've come this far, but the tension's\n"
-	.string "giving me awful stomach pain…$"
+	.string "Why, hello there!\p"
+	.string "The famous wandering Puppet Center\n"
+	.string "nurse, Artemis, is here to give\l"
+	.string "your Puppets a checkup!$"
 
 VictoryRoad_B2F_Text_FelixDefeat:
-	.string "Ooh…\n"
-	.string "It hurts…$"
+	.string "Your Puppets are glowing with health!$"
 
 VictoryRoad_B2F_Text_FelixPostBattle:
-	.string "I can't help getting all tense knowing\n"
-	.string "that I'm nearing the Hoenn League.\p"
-	.string "It's all I can do to feign calm.$"
+	.string "Well then, time to heal up your\n"
+	.string "Puppets!$"
+	
+VictoryRoad_B2F_Text_ArtemisAnotherCheckup:
+	.string "There, good as new!\p"
+	.string "If you need another checkup,\n"
+	.string "I'll always be here.$"
 
 VictoryRoad_B2F_Text_DianneIntro:
 	.string "The elite among the elite gather in\n"
