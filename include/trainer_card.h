@@ -9,8 +9,8 @@ struct TrainerCard
     /*0x00*/ u8 gender;
     /*0x01*/ u8 stars;
     /*0x02*/ bool8 hasPokedex;
-    /*0x03*/ bool8 caughtAllHoenn;
-    /*0x04*/ bool8 hasAllPaintings;
+    /*0x03*/ bool8 gensokyoClear;
+    /*0x04*/ bool8 defeatAichi;
     /*0x06*/ u16 hofDebutHours;
     /*0x08*/ u16 hofDebutMinutes;
     /*0x0A*/ u16 hofDebutSeconds;
@@ -35,16 +35,17 @@ struct TrainerCard
                 u32 frontier;
              } linkPoints; // This field is used differently by FRLG vs Emerald
     /*0x40*/ u32 unionRoomNum;
-    /*0x4C*/ bool8 shouldDrawStickers; // FRLG only
-    /*0x4D*/ u8 unused;
-    /*0x4E*/ u8 monIconTint; // FRLG only
-    /*0x4F*/ u8 unionRoomClass;
-    /*0x50*/ u8 stickers[TRAINER_CARD_STICKER_TYPES]; // FRLG only
-    /*0x54*/ enum Species monSpecies[PARTY_SIZE]; // FRLG only
+    /*0x44*/ bool8 shouldDrawStickers; // FRLG only
+    /*0x45*/ bool8 hasAllMons;
+    /*0x46*/ u8 monIconTint; // FRLG only
+    /*0x47*/ u8 unionRoomClass;
+    /*0x48*/ u8 stickers[TRAINER_CARD_STICKER_TYPES]; // FRLG only
+    /*0x4C*/ enum Species monSpecies[PARTY_SIZE]; // FRLG only
              // Note: Link players use linkHasAllFrontierSymbols, not the field below,
              // which they use for a Wonder Card flag id instead (see CreateTrainerCardInBuffer)
-    /*0x60*/ bool16 hasAllFrontierSymbols;
-    /*0x62*/ u16 frontierBP;
+    /*0x58*/ bool16 hasAllFrontierSymbols;
+    /*0x5A*/ u16 frontierBP;
+    /*0x5C*/ u8 secretCondition;
 };
 
 extern struct TrainerCard gTrainerCards[4];

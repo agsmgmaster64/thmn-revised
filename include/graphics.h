@@ -1778,6 +1778,27 @@ extern const u16 gItemIconPalette_SwapSnack[];
 extern const u32 gItemIcon_TwiceSpicedRadish[];
 extern const u16 gItemIconPalette_TwiceSpicedRadish[];
 
+extern const u16 gItemIconPalette_IcyBall[];
+extern const u32 gItemIcon_Parasol[];
+extern const u16 gItemIconPalette_Parasol[];
+extern const u32 gItemIcon_Gohei[];
+extern const u16 gItemIconPalette_Gohei[];
+extern const u32 gItemIcon_CursedTag[];
+extern const u16 gItemIconPalette_CursedTag[];
+extern const u16 gItemIconPalette_LunarVest[];
+extern const u32 gItemIcon_Beer[];
+extern const u16 gItemIconPalette_Beer[];
+extern const u32 gItemIcon_ScarletRock[];
+extern const u16 gItemIconPalette_ScarletRock[];
+extern const u32 gItemIcon_IceburnGem[];
+extern const u16 gItemIconPalette_IceburnGem[];
+extern const u32 gItemIcon_Kusanagi[];
+extern const u16 gItemIconPalette_Kusanagi[];
+extern const u32 gItemIcon_YataMirror[];
+extern const u16 gItemIconPalette_YataMirror[];
+extern const u32 gItemIcon_BentoBox[];
+extern const u16 gItemIconPalette_BentoBox[];
+
 extern const u32 gItemIcon_BigAxe[];
 extern const u16 gItemIconPalette_BigAxe[];
 extern const u32 gItemIcon_Surfboard[];
@@ -1790,6 +1811,19 @@ extern const u32 gItemIcon_Pickaxe[];
 extern const u16 gItemIconPalette_Pickaxe[];
 extern const u32 gItemIcon_ScubaGear[];
 extern const u16 gItemIconPalette_ScubaGear[];
+
+extern const u32 gItemIcon_Tome[];
+extern const u16 gItemIconPalette_ScarletTome[];
+extern const u16 gItemIconPalette_JadeTome[];
+extern const u16 gItemIconPalette_AzureTome[];
+extern const u32 gItemIcon_GoldenTome[];
+extern const u16 gItemIconPalette_GoldenTome[];
+
+extern const u32 gItemIcon_Zircon[];
+extern const u16 gItemIconPalette_MikoZircon[];
+extern const u16 gItemIconPalette_MageZircon[];
+extern const u16 gItemIconPalette_PrismZircon[];
+extern const u16 gItemIconPalette_LeafZircon[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];

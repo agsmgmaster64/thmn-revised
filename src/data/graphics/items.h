@@ -2115,6 +2115,37 @@ const u16 gItemIconPalette_TwiceSpicedRadish[] = INCGFX_U16("graphics/items/icon
 
 // Revised items
 
+const u16 gItemIconPalette_IcyBall[] = INCGFX_U16("graphics/items/icon_palettes/icy_ball.pal", ".gbapal");
+
+const u32 gItemIcon_Parasol[] = INCGFX_U32("graphics/items/icons/parasol.png", ".4bpp.smol");
+const u16 gItemIconPalette_Parasol[] = INCGFX_U16("graphics/items/icon_palettes/parasol.pal", ".gbapal");
+
+const u32 gItemIcon_Gohei[] = INCGFX_U32("graphics/items/icons/gohei.png", ".4bpp.smol");
+const u16 gItemIconPalette_Gohei[] = INCGFX_U16("graphics/items/icon_palettes/gohei.pal", ".gbapal");
+
+const u32 gItemIcon_CursedTag[] = INCGFX_U32("graphics/items/icons/cursed_tag.png", ".4bpp.smol");
+const u16 gItemIconPalette_CursedTag[] = INCGFX_U16("graphics/items/icon_palettes/cursed_tag.pal", ".gbapal");
+
+const u16 gItemIconPalette_LunarVest[] = INCGFX_U16("graphics/items/icon_palettes/lunar_vest.pal", ".gbapal");
+
+const u32 gItemIcon_Beer[] = INCGFX_U32("graphics/items/icons/beer.png", ".4bpp.smol");
+const u16 gItemIconPalette_Beer[] = INCGFX_U16("graphics/items/icon_palettes/beer.pal", ".gbapal");
+
+const u32 gItemIcon_ScarletRock[] = INCGFX_U32("graphics/items/icons/scarlet_rock.png", ".4bpp.smol");
+const u16 gItemIconPalette_ScarletRock[] = INCGFX_U16("graphics/items/icon_palettes/scarlet_rock.pal", ".gbapal");
+
+const u32 gItemIcon_IceburnGem[] = INCGFX_U32("graphics/items/icons/iceburn_gem.png", ".4bpp.smol");
+const u16 gItemIconPalette_IceburnGem[] = INCGFX_U16("graphics/items/icon_palettes/iceburn_gem.pal", ".gbapal");
+
+const u32 gItemIcon_Kusanagi[] = INCGFX_U32("graphics/items/icons/kusanagi.png", ".4bpp.smol");
+const u16 gItemIconPalette_Kusanagi[] = INCGFX_U16("graphics/items/icon_palettes/kusanagi.pal", ".gbapal");
+
+const u32 gItemIcon_YataMirror[] = INCGFX_U32("graphics/items/icons/yata_mirror.png", ".4bpp.smol");
+const u16 gItemIconPalette_YataMirror[] = INCGFX_U16("graphics/items/icon_palettes/yata_mirror.pal", ".gbapal");
+
+const u32 gItemIcon_BentoBox[] = INCGFX_U32("graphics/items/icons/bento_box.png", ".4bpp.smol");
+const u16 gItemIconPalette_BentoBox[] = INCGFX_U16("graphics/items/icon_palettes/bento_box.pal", ".gbapal");
+
 const u32 gItemIcon_BigAxe[] = INCGFX_U32("graphics/items/icons/big_axe.png", ".4bpp.smol");
 const u16 gItemIconPalette_BigAxe[] = INCGFX_U16("graphics/items/icon_palettes/big_axe.pal", ".gbapal");
 
@@ -2138,3 +2169,19 @@ const u16 gItemIconPalette_Topaz[] = INCGFX_U16("graphics/items/icon_palettes/to
 const u16 gItemIconPalette_Diamond[] = INCGFX_U16("graphics/items/icon_palettes/diamond.pal", ".gbapal");
 const u16 gItemIconPalette_PearlStone[] = INCGFX_U16("graphics/items/icon_palettes/pearl_stone.pal", ".gbapal");
 const u16 gItemIconPalette_Amethyst[] = INCGFX_U16("graphics/items/icon_palettes/amethyst.pal", ".gbapal");
+
+const u32 gItemIcon_Tome[] = INCGFX_U32("graphics/items/icons/tome.png", ".4bpp.smol");
+
+const u16 gItemIconPalette_ScarletTome[] = INCGFX_U16("graphics/items/icon_palettes/scarlet_tome.pal", ".gbapal");
+const u16 gItemIconPalette_JadeTome[] = INCGFX_U16("graphics/items/icon_palettes/jade_tome.pal", ".gbapal");
+const u16 gItemIconPalette_AzureTome[] = INCGFX_U16("graphics/items/icon_palettes/azure_tome.pal", ".gbapal");
+
+const u32 gItemIcon_GoldenTome[] = INCGFX_U32("graphics/items/icons/golden_tome.png", ".4bpp.smol");
+const u16 gItemIconPalette_GoldenTome[] = INCGFX_U16("graphics/items/icon_palettes/golden_tome.pal", ".gbapal");
+
+const u32 gItemIcon_Zircon[] = INCGFX_U32("graphics/items/icons/zircon.png", ".4bpp.smol");
+
+const u16 gItemIconPalette_MikoZircon[] = INCGFX_U16("graphics/items/icon_palettes/miko_zircon.pal", ".gbapal");
+const u16 gItemIconPalette_MageZircon[] = INCGFX_U16("graphics/items/icon_palettes/mage_zircon.pal", ".gbapal");
+const u16 gItemIconPalette_PrismZircon[] = INCGFX_U16("graphics/items/icon_palettes/prism_zircon.pal", ".gbapal");
+const u16 gItemIconPalette_LeafZircon[] = INCGFX_U16("graphics/items/icon_palettes/leaf_zircon.pal", ".gbapal");

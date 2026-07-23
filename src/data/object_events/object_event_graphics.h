@@ -466,6 +466,31 @@ const u32 gObjectEventPic_ApricornTree[] = INCGFX_U32("graphics/object_events/pi
 
 const u32 gFieldEffectObjectPic_ShinySparkle[] = INCGFX_U32("graphics/field_effects/pics/shiny_sparkle.png", ".4bpp", "-mwidth 2 -mheight 4");
 
+const u32 gObjectEventPic_RenkoNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/renko/walking.4bpp", "graphics/object_events/pics/people/renko/running.4bpp");
+const u32 gObjectEventPic_RenkoFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/renko/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u16 gObjectEventPic_RenkoVSSeeker[] = INCGFX_U16("graphics/object_events/pics/people/renko/vs_seeker.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u16 gObjectEventPic_RenkoVSSeekerBike[] = INCGFX_U16("graphics/object_events/pics/people/renko/vs_seeker_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RenkoSurfing[] = INCGFX_U32("graphics/object_events/pics/people/renko/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RenkoMachBike[] = INCGFX_U32("graphics/object_events/pics/people/renko/mach_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RenkoAcroBike[] = INCGFX_U32("graphics/object_events/pics/people/renko/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RenkoFishing[] = INCGFX_U32("graphics/object_events/pics/people/renko/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RenkoWatering[] = INCGFX_U32("graphics/object_events/pics/people/renko/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RenkoDecorating[] = INCGFX_U32("graphics/object_events/pics/people/renko/decorating.png", ".4bpp");
+const u32 gObjectEventPic_RenkoUnderwater[] = INCGFX_U32("graphics/object_events/pics/people/renko/underwater.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_MaribelNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/maribel/walking.4bpp", "graphics/object_events/pics/people/maribel/running.4bpp");
+const u32 gObjectEventPic_MaribelFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/maribel/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u16 gObjectEventPic_MaribelVSSeeker[] = INCGFX_U16("graphics/object_events/pics/people/maribel/vs_seeker.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u16 gObjectEventPic_MaribelVSSeekerBike[] = INCGFX_U16("graphics/object_events/pics/people/maribel/vs_seeker_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_MaribelSurfing[] = INCGFX_U32("graphics/object_events/pics/people/maribel/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_MaribelMachBike[] = INCGFX_U32("graphics/object_events/pics/people/maribel/mach_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_MaribelAcroBike[] = INCGFX_U32("graphics/object_events/pics/people/maribel/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_MaribelFishing[] = INCGFX_U32("graphics/object_events/pics/people/maribel/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_MaribelWatering[] = INCGFX_U32("graphics/object_events/pics/people/maribel/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_MaribelDecorating[] = INCGFX_U32("graphics/object_events/pics/people/maribel/decorating.png", ".4bpp");
+const u32 gObjectEventPic_MaribelUnderwater[] = INCGFX_U32("graphics/object_events/pics/people/maribel/underwater.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u16 gObjectEventPal_PlayerThmn[] = INCGFX_U16("graphics/object_events/palettes/player_thmn.pal", ".gbapal");
+
 #if IS_FRLG
 
 const u16 gObjectEventPic_RedNormal[] = INCGFX_U16("graphics/object_events/pics/people/red/red_normal.png", ".4bpp", "-mwidth 2 -mheight 4");

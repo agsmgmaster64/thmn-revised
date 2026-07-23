@@ -5501,9 +5501,9 @@ enum TrainerPicID FacilityClassToPicIndex(u16 facilityClass)
 enum TrainerPicID PlayerGenderToFrontTrainerPicId(enum Gender playerGender)
 {
     if (playerGender != MALE)
-        return FacilityClassToPicIndex(IS_FRLG ? FACILITY_CLASS_LEAF : FACILITY_CLASS_MAY);
+        return FacilityClassToPicIndex(IS_FRLG ? FACILITY_CLASS_MARIBEL : FACILITY_CLASS_MARIBEL);
     else
-        return FacilityClassToPicIndex(IS_FRLG ? FACILITY_CLASS_RED : FACILITY_CLASS_BRENDAN);
+        return FacilityClassToPicIndex(IS_FRLG ? FACILITY_CLASS_RENKO : FACILITY_CLASS_RENKO);
 }
 
 void HandleSetPokedexFlag(enum NationalDexOrder nationalNum, u8 caseId, u32 personality)
@@ -6378,7 +6378,7 @@ void UpdateDaysPassedSinceFormChange(u16 days)
 
 enum Type CheckDynamicMoveType(struct Pokemon *mon, enum Move move, enum BattlerId battler, enum MonState state)
 {
-    enum Type moveType = GetDynamicMoveType(mon, move, battler, state);
+    enum Type moveType = GetDynamicMoveType(mon, move, battler, GetBattlerAbility(battler), GetBattlerHoldEffect(battler), state);
     if (moveType != TYPE_NONE)
         return moveType;
     return GetMoveType(move);
