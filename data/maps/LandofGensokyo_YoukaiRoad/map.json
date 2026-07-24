@@ -21,7 +21,7 @@
     },
     {
       "map": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE",
-      "offset": 0,
+      "offset": -2,
       "direction": "left"
     }
   ],

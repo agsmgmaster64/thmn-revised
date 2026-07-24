@@ -6778,7 +6778,7 @@
       "id": "LAYOUT_LANDOF_GENSOKYO_HUMAN_VILLAGE_LAYOUT",
       "name": "LandofGensokyo_HumanVillage_Layout",
       "width": 50,
-      "height": 45,
+      "height": 48,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_GeneralFrlg",

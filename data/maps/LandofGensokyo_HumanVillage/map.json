@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_LANDOF_GENSOKYO_YOUKAI_ROAD",
-      "offset": 0,
+      "offset": 2,
       "direction": "right"
     }
   ],
@@ -24,21 +24,21 @@
   "warp_events": [
     {
       "x": 32,
-      "y": 16,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE_BONEKA_CENTER",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 34,
+      "x": 15,
+      "y": 37,
       "elevation": 0,
       "dest_map": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE_HIEDA_MANSION",
       "dest_warp_id": "0"
     },
     {
-      "x": 30,
-      "y": 25,
+      "x": 32,
+      "y": 27,
       "elevation": 0,
       "dest_map": "MAP_LANDOF_GENSOKYO_HUMAN_VILLAGE_TRAINER_HOUSE1F",
       "dest_warp_id": "0"
@@ -48,8 +48,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 25,
-      "y": 16,
+      "x": 24,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LandofGensokyoHumanVillage_EventScript_HumanVillageSign"
@@ -57,7 +57,7 @@
     {
       "type": "sign",
       "x": 17,
-      "y": 38,
+      "y": 40,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LandofGensokyoHumanVillage_EventScript_HiedaMansionSign"
@@ -65,15 +65,15 @@
     {
       "type": "sign",
       "x": 30,
-      "y": 17,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 34,
-      "y": 16,
+      "x": 31,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Common_EventScript_ShowPokemonCenterSign"
