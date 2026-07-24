@@ -1803,6 +1803,8 @@ extern const u32 gItemIcon_BigAxe[];
 extern const u16 gItemIconPalette_BigAxe[];
 extern const u32 gItemIcon_Surfboard[];
 extern const u16 gItemIconPalette_Surfboard[];
+extern const u32 gItemIcon_SurfboardPlus[];
+extern const u16 gItemIconPalette_SurfboardPlus[];
 extern const u32 gItemIcon_PowerGlove[];
 extern const u16 gItemIconPalette_PowerGlove[];
 extern const u32 gItemIcon_Lantern[];

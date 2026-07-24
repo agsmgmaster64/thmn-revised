@@ -16329,14 +16329,15 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Surfboard+"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "An upgraded surfboard that can\n"
-            "also scale waterfalls."),
+            "A surfboard upgraded with thrusters\n"
+            "and stabilizers. It produces enough\n"
+            "force to scale waterfalls."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_SurfboardPlus,
-        .iconPic = gItemIcon_QuestionMark,
-        .iconPalette = gItemIconPalette_QuestionMark,
+        .iconPic = gItemIcon_SurfboardPlus,
+        .iconPalette = gItemIconPalette_SurfboardPlus,
     },
 
     [ITEM_POWER_GLOVE] =

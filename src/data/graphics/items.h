@@ -2152,6 +2152,9 @@ const u16 gItemIconPalette_BigAxe[] = INCGFX_U16("graphics/items/icon_palettes/b
 const u32 gItemIcon_Surfboard[] = INCGFX_U32("graphics/items/icons/surfboard.png", ".4bpp.smol");
 const u16 gItemIconPalette_Surfboard[] = INCGFX_U16("graphics/items/icon_palettes/surfboard.pal", ".gbapal");
 
+const u32 gItemIcon_SurfboardPlus[] = INCGFX_U32("graphics/items/icons/surfboard_plus.png", ".4bpp.smol");
+const u16 gItemIconPalette_SurfboardPlus[] = INCGFX_U16("graphics/items/icon_palettes/surfboard_plus.pal", ".gbapal");
+
 const u32 gItemIcon_PowerGlove[] = INCGFX_U32("graphics/items/icons/power_glove.png", ".4bpp.smol");
 const u16 gItemIconPalette_PowerGlove[] = INCGFX_U16("graphics/items/icon_palettes/power_glove.pal", ".gbapal");
 
