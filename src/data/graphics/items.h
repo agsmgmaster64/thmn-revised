@@ -2175,6 +2175,9 @@ const u32 gItemIcon_Tome[] = INCGFX_U32("graphics/items/icons/tome.png", ".4bpp.
 const u16 gItemIconPalette_ScarletTome[] = INCGFX_U16("graphics/items/icon_palettes/scarlet_tome.pal", ".gbapal");
 const u16 gItemIconPalette_JadeTome[] = INCGFX_U16("graphics/items/icon_palettes/jade_tome.pal", ".gbapal");
 const u16 gItemIconPalette_AzureTome[] = INCGFX_U16("graphics/items/icon_palettes/azure_tome.pal", ".gbapal");
+const u16 gItemIconPalette_AquaTome[] = INCGFX_U16("graphics/items/icon_palettes/aqua_tome.pal", ".gbapal");
+const u16 gItemIconPalette_DarkTome[] = INCGFX_U16("graphics/items/icon_palettes/dark_tome.pal", ".gbapal");
+const u16 gItemIconPalette_MagicTome[] = INCGFX_U16("graphics/items/icon_palettes/magic_tome.pal", ".gbapal");
 
 const u32 gItemIcon_GoldenTome[] = INCGFX_U32("graphics/items/icons/golden_tome.png", ".4bpp.smol");
 const u16 gItemIconPalette_GoldenTome[] = INCGFX_U16("graphics/items/icon_palettes/golden_tome.pal", ".gbapal");

@@ -14707,8 +14707,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_MagicTome,
     },
 
     [ITEM_AZURE_TOME] =
@@ -14753,8 +14753,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_AquaTome,
     },
 
     [ITEM_DARK_TOME] =
@@ -14768,8 +14768,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_DarkTome,
     },
 
     [ITEM_REMOTE_CONTROLLER] =

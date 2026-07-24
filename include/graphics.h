@@ -1816,6 +1816,9 @@ extern const u32 gItemIcon_Tome[];
 extern const u16 gItemIconPalette_ScarletTome[];
 extern const u16 gItemIconPalette_JadeTome[];
 extern const u16 gItemIconPalette_AzureTome[];
+extern const u16 gItemIconPalette_AquaTome[];
+extern const u16 gItemIconPalette_DarkTome[];
+extern const u16 gItemIconPalette_MagicTome[];
 extern const u32 gItemIcon_GoldenTome[];
 extern const u16 gItemIconPalette_GoldenTome[];
 
