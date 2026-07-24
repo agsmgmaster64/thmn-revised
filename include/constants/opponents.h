@@ -1240,11 +1240,11 @@
 #define TRAINER_NEW_1233                    1233
 #define TRAINER_NEW_1234                    1234
 #define TRAINER_BLUE_75                     1235
-#define TRAINER_NEW_1236                    1236
-#define TRAINER_NEW_1237                    1237
-#define TRAINER_NEW_1238                    1238
-#define TRAINER_NEW_1239                    1239
-#define TRAINER_NEW_1240                    1240
+#define TRAINER_SIDNEY_2                    1236
+#define TRAINER_PHOEBE_2                    1237
+#define TRAINER_GLACIA_2                    1238
+#define TRAINER_DRAKE_2                     1239
+#define TRAINER_WALLACE_2                   1240
 #define TRAINER_NEW_1241                    1241
 #define TRAINER_NEW_1242                    1242
 #define TRAINER_NEW_1243                    1243

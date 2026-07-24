@@ -45,15 +45,30 @@ EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor::
 EverGrandeCity_SidneysRoom_EventScript_Sidney::
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
+	
+EverGrandeCity_SidneysRoom_EventScript_SidneyRematch::
+	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeechRematch
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeechRematch, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SIDNEY_2, EverGrandeCity_SidneysRoom_Text_DefeatRematch
+	goto EverGrandeCity_SidneysRoom_EventScript_RematchDefeated
+	end
 
 EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech::
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeechRematch
 	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+	
+EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeechRematch::
+	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeechRematch, MSGBOX_DEFAULT
 	release
 	end
 
@@ -63,10 +78,17 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated::
 	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
+	
+EverGrandeCity_SidneysRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeechRematch, MSGBOX_DEFAULT
+	release
+	end
 
 EverGrandeCity_SidneysRoom_Text_IntroSpeech:
 	.string "Welcome, challenger!\n"
-	.string "I'm SIDNEY of the ELITE FOUR.\p"
+	.string "I'm Sidney of the Elite Four.\p"
 	.string "I like that look you're giving me.\n"
 	.string "I guess you'll give me a good match.\l"
 	.string "That's good! Looking real good!\p"
@@ -84,3 +106,22 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "You've got what it takes to go far.\n"
 	.string "Now, go on to the next room and enjoy\l"
 	.string "your next battle!$"
+
+EverGrandeCity_SidneysRoom_Text_IntroSpeechRematch:
+	.string "Yo! I've been waiting for you,\n"
+	.string "Champion!\p"
+	.string "With the strength you've gained, we can\n"
+	.string "battle with no holds barred!\p"
+	.string "No matter who wins, no hard feelings!\n"
+	.string "Let's get our most excellent battle\l"
+	.string "underway!$"
+	
+EverGrandeCity_SidneysRoom_Text_DefeatRematch:
+	.string "Well, well, I lose again!$"
+	
+EverGrandeCity_SidneysRoom_Text_PostBattleSpeechRematch:
+	.string "Heh… I knew you really were the\n"
+	.string "strongest…\p"
+	.string "Well, hurry up and get out of here!\n"
+	.string "Everybody else is still waiting for\l"
+	.string "you!$"

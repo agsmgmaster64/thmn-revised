@@ -39,15 +39,30 @@ EverGrandeCity_PhoebesRoom_EventScript_CloseDoor::
 EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
+	
+EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch::
+	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeechRematch
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeechRematch, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_PHOEBE_2, EverGrandeCity_PhoebesRoom_Text_DefeatRematch
+	goto EverGrandeCity_PhoebesRoom_EventScript_RematchDefeated
+	end
 
 EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech::
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeechRematch
 	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+	
+EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeechRematch::
+	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeechRematch, MSGBOX_DEFAULT
 	release
 	end
 
@@ -57,13 +72,20 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
+	
+EverGrandeCity_PhoebesRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeechRematch, MSGBOX_DEFAULT
+	release
+	end
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
 	.string "Ahahaha!\p"
-	.string "I'm PHOEBE of the ELITE FOUR.\n"
-	.string "I did my training on MT. PYRE.\p"
+	.string "I'm Phoebe of the Elite Four.\n"
+	.string "I did my training on Mt. Pyre.\p"
 	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type Puppets.\p"
+	.string "to commune with Ghost-type Puppets.\p"
 	.string "Yes, the bond I developed with Puppets\n"
 	.string "is extremely tight.\p"
 	.string "So, come on, just try and see if you can\n"
@@ -81,3 +103,20 @@ EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
 	.string "Yup, I'd like to see how far your bond\n"
 	.string "will carry you.\p"
 	.string "Go ahead, move on to the next room.$"
+
+EverGrandeCity_PhoebesRoom_Text_IntroSpeechRematch:
+	.string "Ahaha! I've been waiting for you!\n"
+	.string "We've been working on our bonds since\l"
+	.string "last time!\p"
+	.string "Prepare yourself and bring it on!$"
+	
+EverGrandeCity_PhoebesRoom_Text_DefeatRematch:
+	.string "I expected no less of you!$"
+
+EverGrandeCity_PhoebesRoom_Text_PostBattleSpeechRematch:
+	.string "Hmmp, what a shame. I lost again, huh?\p"
+	.string "But on the bright side… We fought\n"
+	.string "together so the bonds between my\l"
+	.string "puppets and me got even deeper!\p"
+	.string "I look forward to being able to battle\n"
+	.string "you again sometime!$"

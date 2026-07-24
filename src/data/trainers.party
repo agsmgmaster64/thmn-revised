@@ -4626,7 +4626,7 @@ Ball: Premier
 - Extrasensory
 - Ice Beam
 
-Normal Margatroid @ Charcoal
+Extra Margatroid @ Charcoal
 Level: 60
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4637,7 +4637,7 @@ Ball: Premier
 - Dark Pulse
 - Flamethrower
 
-Normal Gengetsu @ White Herb
+Extra Gengetsu @ White Herb
 Level: 61
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4648,7 +4648,7 @@ Ball: Premier
 - Dream Eater
 - Sonic Boom
 
-Normal Flandre @ Metal Coat
+Extra Flandre @ Metal Coat
 Level: 60
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4659,7 +4659,7 @@ Ball: Premier
 - Poison Jab
 - Steel Wing
 
-Normal Seija @ Sitrus Berry
+Extra Seija @ Sitrus Berry
 Level: 63
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -4679,7 +4679,7 @@ Music: Elite Four
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Youmu @ Miracle Seed
+Extra Youmu @ Miracle Seed
 Level: 62
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4690,7 +4690,7 @@ Ball: Premier
 - Leaf Blade
 - Phantom Slash
 
-Normal Yatsuhashi @ BlackGlasses
+Extra Yatsuhashi @ BlackGlasses
 Level: 61
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4701,7 +4701,7 @@ Ball: Premier
 - Drain Punch
 - Knock Off
 
-Normal Raiko @ SilverPowder
+Extra Raiko @ SilverPowder
 Level: 60
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4712,7 +4712,7 @@ Ball: Premier
 - Shock Absorb
 - Signal Beam
 
-Normal Melon @ Black Belt
+Extra Melon @ Black Belt
 Level: 61
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4723,7 +4723,7 @@ Ball: Premier
 - Shadow Punch
 - Drain Punch
 
-Normal Koishi @ Leftovers
+Extra Koishi @ Leftovers
 Level: 60
 Nature: Bold
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4734,7 +4734,7 @@ Ball: Premier
 - Shadow Ball
 - Dream Eater
 
-Normal Yuyuko @ Sitrus Berry
+Extra Yuyuko @ Sitrus Berry
 Level: 63
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -4765,7 +4765,7 @@ Ball: Premier
 - Aura Sphere
 - Surf
 
-Normal Yumemi @ Charcoal
+Extra Yumemi @ Charcoal
 Level: 61
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4776,7 +4776,7 @@ Ball: Premier
 - Flamethrower
 - Mana Burst
 
-Normal Cirno @ Flame Orb
+Extra Cirno @ Flame Orb
 Level: 60
 Nature: Jolly
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4787,7 +4787,7 @@ Ball: Premier
 - Brick Break
 - Ice Shard
 
-Advent Letty @ Mystic Water
+Extra Letty @ Mystic Water
 Level: 61
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4798,7 +4798,7 @@ Ball: Premier
 - Waterfall
 - Blade Flash
 
-Normal Mai @ Sharp Beak
+Extra Mai @ Sharp Beak
 Level: 62
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4809,7 +4809,7 @@ Ball: Premier
 - Dark Pulse
 - Air Slash
 
-Normal Wakasagihime @ Sitrus Berry
+Extra Wakasagihime @ Sitrus Berry
 Level: 63
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -4829,7 +4829,7 @@ Music: Elite Four
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Reimu @ Black Belt
+Extra Reimu @ Black Belt
 Level: 64
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4840,7 +4840,7 @@ Ball: Premier
 - Aura Sphere
 - Holy Needle
 
-Normal Eiki @ Spell Tag
+Extra Eiki @ Spell Tag
 Level: 63
 Nature: Calm
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4851,7 +4851,7 @@ Ball: Premier
 - Sonic Boom
 - Shadow Ball
 
-Normal Seiga @ SilverPowder
+Extra Seiga @ SilverPowder
 Level: 62
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4862,7 +4862,7 @@ Ball: Premier
 - Mana Burst
 - Signal Beam
 
-Normal Keiki @ Poison Barb
+Extra Keiki @ Poison Barb
 Level: 63
 Nature: Modest
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4873,7 +4873,7 @@ Ball: Premier
 - Extrasensory
 - Poison Bomb
 
-Normal Sanae @ King's Rock
+Extra Sanae @ King's Rock
 Level: 62
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -4884,7 +4884,7 @@ Ball: Premier
 - Mana Burst
 - Air Slash
 
-Normal Sendai @ Sitrus Berry
+Extra Sendai @ Sitrus Berry
 Level: 65
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -6419,7 +6419,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Saki @ Yache Berry
+Extra Saki @ Yache Berry
 Level: 67
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -6430,7 +6430,7 @@ Ball: Premier
 - Brave Bird
 - Earthquake
 
-Normal Yuuka @ Tanga Berry
+Extra Yuuka @ Tanga Berry
 Level: 66
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -6441,7 +6441,7 @@ Ball: Premier
 - Poison Bomb
 - Earth Power
 
-Normal Murasa @ Nevermeltice
+Extra Murasa @ Nevermeltice
 Level: 65
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -6463,7 +6463,7 @@ Ball: Premier
 - Poison Bomb
 - Aura Sphere
 
-Normal Okina @ Leftovers
+Extra Okina @ Leftovers
 Level: 66
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26682,7 +26682,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1236 ===
+=== TRAINER_SIDNEY_2 ===
 Name: Sidney
 Class: Elite Four
 Pic: Elite Four Sidney
@@ -26713,7 +26713,7 @@ Ball: Premier
 - Extrasensory
 - Ice Beam
 
-Normal Margatroid @ Salac Berry
+Extra Margatroid @ Salac Berry
 Level: 70
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26724,7 +26724,7 @@ Ball: Premier
 - Dark Pulse
 - Flamethrower
 
-Normal Gengetsu @ Metal Coat
+Extra Gengetsu @ Metal Coat
 Level: 71
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26735,7 +26735,7 @@ Ball: Premier
 - Dream Eater
 - Sonic Boom
 
-Normal Flandre @ Metal Coat
+Extra Flandre @ Metal Coat
 Level: 70
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26746,7 +26746,7 @@ Ball: Premier
 - Gunk Shot
 - Steel Fist
 
-Normal Seija @ Gohei
+Extra Seija @ Gohei
 Level: 73
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26757,7 +26757,7 @@ Ball: Premier
 - Heart Break
 - Mach Punch
 
-=== TRAINER_NEW_1237 ===
+=== TRAINER_PHOEBE_2 ===
 Name: Phoebe
 Class: Elite Four
 Pic: Elite Four Phoebe
@@ -26766,7 +26766,7 @@ Music: Elite Four
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Youmu @ Choice Scarf
+Extra Youmu @ Choice Scarf
 Level: 72
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26777,7 +26777,7 @@ Ball: Premier
 - Leaf Blade
 - Phantom Slash
 
-Normal Yatsuhashi @ Lum Berry
+Extra Yatsuhashi @ Lum Berry
 Level: 71
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26788,7 +26788,7 @@ Ball: Premier
 - Shadow Punch
 - Drain Punch
 
-Normal Raiko @ Salac Berry
+Extra Raiko @ Salac Berry
 Level: 70
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26799,7 +26799,7 @@ Ball: Premier
 - Shock Absorb
 - Signal Beam
 
-Normal Melon @ White Herb
+Extra Melon @ White Herb
 Level: 71
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26810,7 +26810,7 @@ Ball: Premier
 - Shadow Punch
 - Drain Punch
 
-Normal Koishi @ Leftovers
+Extra Koishi @ Leftovers
 Level: 70
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26821,7 +26821,7 @@ Ball: Premier
 - Shadow Ball
 - Dream Eater
 
-Normal Yuyuko @ Leftovers
+Extra Yuyuko @ Leftovers
 Level: 73
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26832,7 +26832,7 @@ Ball: Premier
 - Ice Beam
 - Signal Beam
 
-=== TRAINER_NEW_1238 ===
+=== TRAINER_GLACIA_2 ===
 Name: Glacia
 Class: Elite Four
 Pic: Elite Four Glacia
@@ -26852,7 +26852,7 @@ Ball: Premier
 - Aura Sphere
 - Surf
 
-Normal Yumemi @ Salac Berry
+Extra Yumemi @ Salac Berry
 Level: 71
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26863,7 +26863,7 @@ Ball: Premier
 - Flamethrower
 - Mana Burst
 
-Normal Cirno @ Flame Orb
+Extra Cirno @ Flame Orb
 Level: 70
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26885,7 +26885,7 @@ Ball: Premier
 - Waterfall
 - Blade Flash
 
-Normal Mai @ Chople Berry
+Extra Mai @ Chople Berry
 Level: 72
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26896,7 +26896,7 @@ Ball: Premier
 - Dark Pulse
 - Air Slash
 
-Normal Wakasagihime @ Leftovers
+Extra Wakasagihime @ Leftovers
 Level: 73
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26907,7 +26907,7 @@ Ball: Premier
 - Mermaid Song
 - Sheer Cold
 
-=== TRAINER_NEW_1239 ===
+=== TRAINER_DRAKE_2 ===
 Name: Drake
 Class: Elite Four
 Pic: Elite Four Drake
@@ -26916,7 +26916,7 @@ Music: Elite Four
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Reimu @ Lum Berry
+Extra Reimu @ Lum Berry
 Level: 74
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26927,7 +26927,7 @@ Ball: Premier
 - Aura Sphere
 - Holy Needle
 
-Normal Eiki @ Leftovers
+Extra Eiki @ Leftovers
 Level: 73
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26938,7 +26938,7 @@ Ball: Premier
 - Extrasensory
 - Sonic Boom
 
-Normal Seiga @ Choice Scarf
+Extra Seiga @ Choice Scarf
 Level: 72
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26949,7 +26949,7 @@ Ball: Premier
 - Mana Burst
 - Signal Beam
 
-Normal Keiki @ Leftovers
+Extra Keiki @ Leftovers
 Level: 73
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26960,7 +26960,7 @@ Ball: Premier
 - Extrasensory
 - Poison Bomb
 
-Normal Sanae @ King's Rock
+Extra Sanae @ King's Rock
 Level: 72
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26971,7 +26971,7 @@ Ball: Premier
 - Mana Burst
 - Air Slash
 
-Normal Sendai @ Payapa Berry
+Extra Sendai @ Payapa Berry
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -26982,7 +26982,7 @@ Ball: Premier
 - Drain Punch
 - Shadow Punch
 
-=== TRAINER_NEW_1240 ===
+=== TRAINER_WALLACE_2 ===
 Name: Wallace
 Class: Champion
 Pic: Champion Wallace
@@ -27002,7 +27002,7 @@ Ball: Premier
 - Ice Beam
 - Mana Burst
 
-Normal Yuuka @ Tanga Berry
+Extra Yuuka @ Tanga Berry
 Level: 76
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -27013,7 +27013,7 @@ Ball: Premier
 - Poison Bomb
 - Earth Power
 
-Normal Murasa @ Choice Band
+Extra Murasa @ Choice Band
 Level: 75
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -27035,7 +27035,7 @@ Ball: Premier
 - Poison Bomb
 - Aura Sphere
 
-Normal Okina @ Leftovers
+Extra Okina @ Leftovers
 Level: 76
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -27046,7 +27046,7 @@ Ball: Premier
 - Mana Burst
 - Recover
 
-Normal Saki @ Yache Berry
+Extra Saki @ Yache Berry
 Level: 77
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe

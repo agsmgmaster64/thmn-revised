@@ -39,17 +39,39 @@ EverGrandeCity_GlaciasRoom_EventScript_CloseDoor::
 EverGrandeCity_GlaciasRoom_EventScript_Glacia::
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_GlaciasRoom_EventScript_GlaciaRematch
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
+	
+EverGrandeCity_GlaciasRoom_EventScript_GlaciaRematch::
+	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeechRematch
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeechRematch, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_GLACIA_2, EverGrandeCity_GlaciasRoom_Text_DefeatRematch
+	goto EverGrandeCity_GlaciasRoom_EventScript_DefeatedRematch
+	end
+	
+EverGrandeCity_GlaciasRoom_EventScript_DefeatedRematch::
+	setflag FLAG_DEFEATED_ELITE_4_GLACIA
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeechRematch, MSGBOX_DEFAULT
+	release
+	end
 
 EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech::
 	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
+	
+EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeechRematch::
+	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeechRematch, MSGBOX_DEFAULT
+	release
+	end
+
 
 EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_GLACIA
@@ -59,8 +81,8 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is GLACIA\n"
-	.string "of the ELITE FOUR.\p"
+	.string "Welcome, my name is Glacia\n"
+	.string "of the Elite Four.\p"
 	.string "I've traveled from afar to Hoenn\n"
 	.string "so that I may hone my ice skills.\p"
 	.string "But all I have seen are challenges by\n"
@@ -80,3 +102,19 @@ EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
 	.string "Advance to the next room.\p"
 	.string "And there, confirm the truly fearsome\n"
 	.string "side of the Hoenn League.$"
+
+EverGrandeCity_GlaciasRoom_Text_IntroSpeechRematch:
+	.string "I've been waiting for a Trainer with\n"
+	.string "a burning-hot soul.\p"
+	.string "How can you oppose an endless chill\n"
+	.string "that can freeze everything?$"
+	
+EverGrandeCity_GlaciasRoom_Text_DefeatRematch:
+	.string "It really is hot.$"
+	
+EverGrandeCity_GlaciasRoom_Text_PostBattleSpeechRematch:
+	.string "Hmph… Do you intend to thaw my\n"
+	.string "very heart?\p"
+	.string "That actually wouldn't bother me.\p"
+	.string "Anyway, continue onward!\n"
+	.string "Drake is waiting for you as well.$"
