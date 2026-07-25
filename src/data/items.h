@@ -16275,8 +16275,8 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
-        .iconPic = gItemIcon_HeartScale,
-        .iconPalette = gItemIconPalette_HeartScale,
+        .iconPic = gItemIcon_XCoupon,
+        .iconPalette = gItemIconPalette_XCoupon,
     },
 
     [ITEM_BIG_AXE] =
@@ -16462,7 +16462,7 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_AdamantOrb,
-        .iconPalette = gItemIconPalette_AdamantOrb,
+        .iconPalette = gItemIconPalette_DreamStone,
     },
 
     [ITEM_MIKO_ZIRCON] =

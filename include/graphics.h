@@ -1830,6 +1830,10 @@ extern const u16 gItemIconPalette_MageZircon[];
 extern const u16 gItemIconPalette_PrismZircon[];
 extern const u16 gItemIconPalette_LeafZircon[];
 
+extern const u16 gItemIconPalette_DreamStone[];
+extern const u32 gItemIcon_XCoupon[];
+extern const u16 gItemIconPalette_XCoupon[];
+
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
 
