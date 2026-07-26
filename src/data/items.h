@@ -14783,8 +14783,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_NecrozmaFuser,
+        .iconPalette = gItemIconPalette_NSolarizer,
     },
 
 // Gen 9 Items
@@ -16305,8 +16305,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_FlyTool,
-        .iconPic = gItemIcon_QuestionMark,
-        .iconPalette = gItemIconPalette_QuestionMark,
+        .iconPic = gItemIcon_Pager,
+        .iconPalette = gItemIconPalette_Pager,
     },
 
     [ITEM_SURFBOARD] =
@@ -16386,19 +16386,20 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Pickaxe,
     },
 
-    [ITEM_CLIMBING_GEAR] =
+    [ITEM_CLIMBING_BOOTS] =
     {
-        .name = ITEM_NAME("Climbing Gear"),
+        .name = ITEM_NAME("Climbing Boots"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Equipment that is useful for scaling\n"
-            "rock walls."),
+            "rock walls when paired with a Power\n"
+            "Glove."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_ClimbingGear,
-        .iconPic = gItemIcon_QuestionMark,
-        .iconPalette = gItemIconPalette_QuestionMark,
+        .fieldUseFunc = ItemUseOutOfBattle_ClimbingBoots,
+        .iconPic = gItemIcon_ClimbingBoots,
+        .iconPalette = gItemIconPalette_HeavyDutyBoots,
     },
 
     [ITEM_SCUBA_GEAR] =

@@ -63,7 +63,7 @@ void ItemUseOutOfBattle_Lantern(u8 taskId);
 void ItemUseOutOfBattle_Pickaxe(u8 taskId);
 void ItemUseOutOfBattle_SurfboardPlus(u8 taskId);
 void ItemUseOutOfBattle_ScubaGear(u8 taskId);
-void ItemUseOutOfBattle_ClimbingGear(u8);
+void ItemUseOutOfBattle_ClimbingBoots(u8);
 
 // End qol_field_moves
 enum {

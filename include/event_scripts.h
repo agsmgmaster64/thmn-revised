@@ -437,7 +437,7 @@ extern const u8 EventScript_UsePickaxe[];
 extern const u8 EventScript_UseSurfboardPlus[];
 extern const u8 EventScript_UseSurfboardPlusWaterfall[];
 extern const u8 EventScript_UseScubaGear[];
-extern const u8 EventScript_UseClimbingGear[];
+extern const u8 EventScript_UseClimbingBoots[];
 //End qol_field_moves
 
 //player pc

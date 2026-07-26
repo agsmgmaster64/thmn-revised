@@ -619,7 +619,7 @@ EventScript_EndRockClimb::
 
 EventScript_CanUseRockClimbOtherwise::
 	partycheckfieldmove FIELD_MOVE_ROCK_CLIMB, TRUE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseClimbingGear
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CanUseClimbingBoots
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	msgbox Text_WantToRockClimb, MSGBOX_YESNO
@@ -629,17 +629,17 @@ EventScript_CanUseRockClimbOtherwise::
 	closemessage
 	goto EventScript_RockClimbCommon
 
-EventScript_UseClimbingGear::
+EventScript_UseClimbingBoots::
 	lock
-	goto EventScript_UseClimbingGear_SkipCheck
+	goto EventScript_UseClimbingBoots_SkipCheck
 
-EventScript_CanUseClimbingGear::
-	checkitem ITEM_CLIMBING_GEAR, 1
+EventScript_CanUseClimbingBoots::
+	checkitem ITEM_CLIMBING_BOOTS, 1
 	goto_if_ne VAR_RESULT, TRUE, EventScript_CantRockClimb
 	msgbox Text_WantToRockClimbItem, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndRockClimb
-EventScript_UseClimbingGear_SkipCheck::
-	bufferitemname STR_VAR_2, ITEM_CLIMBING_GEAR
+EventScript_UseClimbingBoots_SkipCheck::
+	bufferitemname STR_VAR_2, ITEM_CLIMBING_BOOTS
 	msgbox Text_PlayerUsedFieldTool, MSGBOX_DEFAULT
 	closemessage
 	setskipshowanim
