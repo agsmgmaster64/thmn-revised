@@ -2152,6 +2152,9 @@ const u16 gItemIconPalette_BigAxe[] = INCGFX_U16("graphics/items/icon_palettes/b
 const u32 gItemIcon_Surfboard[] = INCGFX_U32("graphics/items/icons/surfboard.png", ".4bpp.smol");
 const u16 gItemIconPalette_Surfboard[] = INCGFX_U16("graphics/items/icon_palettes/surfboard.pal", ".gbapal");
 
+const u32 gItemIcon_SurfboardPlus[] = INCGFX_U32("graphics/items/icons/surfboard_plus.png", ".4bpp.smol");
+const u16 gItemIconPalette_SurfboardPlus[] = INCGFX_U16("graphics/items/icon_palettes/surfboard_plus.pal", ".gbapal");
+
 const u32 gItemIcon_PowerGlove[] = INCGFX_U32("graphics/items/icons/power_glove.png", ".4bpp.smol");
 const u16 gItemIconPalette_PowerGlove[] = INCGFX_U16("graphics/items/icon_palettes/power_glove.pal", ".gbapal");
 
@@ -2164,6 +2167,11 @@ const u16 gItemIconPalette_Pickaxe[] = INCGFX_U16("graphics/items/icon_palettes/
 const u32 gItemIcon_ScubaGear[] = INCGFX_U32("graphics/items/icons/scuba_gear.png", ".4bpp.smol");
 const u16 gItemIconPalette_ScubaGear[] = INCGFX_U16("graphics/items/icon_palettes/scuba_gear.pal", ".gbapal");
 
+const u32 gItemIcon_Pager[] = INCGFX_U32("graphics/items/icons/pager.png", ".4bpp.smol");
+const u16 gItemIconPalette_Pager[] = INCGFX_U16("graphics/items/icon_palettes/pager.pal", ".gbapal");
+
+const u32 gItemIcon_ClimbingBoots[] = INCGFX_U32("graphics/items/icons/climbing_boots.png", ".4bpp.smol");
+
 const u16 gItemIconPalette_Emerald[] = INCGFX_U16("graphics/items/icon_palettes/emerald.pal", ".gbapal");
 const u16 gItemIconPalette_Topaz[] = INCGFX_U16("graphics/items/icon_palettes/topaz.pal", ".gbapal");
 const u16 gItemIconPalette_Diamond[] = INCGFX_U16("graphics/items/icon_palettes/diamond.pal", ".gbapal");
@@ -2175,6 +2183,9 @@ const u32 gItemIcon_Tome[] = INCGFX_U32("graphics/items/icons/tome.png", ".4bpp.
 const u16 gItemIconPalette_ScarletTome[] = INCGFX_U16("graphics/items/icon_palettes/scarlet_tome.pal", ".gbapal");
 const u16 gItemIconPalette_JadeTome[] = INCGFX_U16("graphics/items/icon_palettes/jade_tome.pal", ".gbapal");
 const u16 gItemIconPalette_AzureTome[] = INCGFX_U16("graphics/items/icon_palettes/azure_tome.pal", ".gbapal");
+const u16 gItemIconPalette_AquaTome[] = INCGFX_U16("graphics/items/icon_palettes/aqua_tome.pal", ".gbapal");
+const u16 gItemIconPalette_DarkTome[] = INCGFX_U16("graphics/items/icon_palettes/dark_tome.pal", ".gbapal");
+const u16 gItemIconPalette_MagicTome[] = INCGFX_U16("graphics/items/icon_palettes/magic_tome.pal", ".gbapal");
 
 const u32 gItemIcon_GoldenTome[] = INCGFX_U32("graphics/items/icons/golden_tome.png", ".4bpp.smol");
 const u16 gItemIconPalette_GoldenTome[] = INCGFX_U16("graphics/items/icon_palettes/golden_tome.pal", ".gbapal");
@@ -2185,3 +2196,7 @@ const u16 gItemIconPalette_MikoZircon[] = INCGFX_U16("graphics/items/icon_palett
 const u16 gItemIconPalette_MageZircon[] = INCGFX_U16("graphics/items/icon_palettes/mage_zircon.pal", ".gbapal");
 const u16 gItemIconPalette_PrismZircon[] = INCGFX_U16("graphics/items/icon_palettes/prism_zircon.pal", ".gbapal");
 const u16 gItemIconPalette_LeafZircon[] = INCGFX_U16("graphics/items/icon_palettes/leaf_zircon.pal", ".gbapal");
+
+const u16 gItemIconPalette_DreamStone[] = INCGFX_U16("graphics/items/icon_palettes/dream_stone.pal", ".gbapal");
+const u32 gItemIcon_XCoupon[] = INCGFX_U32("graphics/items/icons/x_coupon.png", ".4bpp.smol");
+const u16 gItemIconPalette_XCoupon[] = INCGFX_U16("graphics/items/icon_palettes/x_coupon.pal", ".gbapal");

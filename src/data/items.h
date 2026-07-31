@@ -14707,8 +14707,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_MagicTome,
     },
 
     [ITEM_AZURE_TOME] =
@@ -14753,8 +14753,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_AquaTome,
     },
 
     [ITEM_DARK_TOME] =
@@ -14768,8 +14768,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_Tome,
+        .iconPalette = gItemIconPalette_DarkTome,
     },
 
     [ITEM_REMOTE_CONTROLLER] =
@@ -14783,8 +14783,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Gem,
-        .iconPalette = gItemIconPalette_Sapphire,
+        .iconPic = gItemIcon_NecrozmaFuser,
+        .iconPalette = gItemIconPalette_NSolarizer,
     },
 
 // Gen 9 Items
@@ -16275,8 +16275,8 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
-        .iconPic = gItemIcon_HeartScale,
-        .iconPalette = gItemIconPalette_HeartScale,
+        .iconPic = gItemIcon_XCoupon,
+        .iconPalette = gItemIconPalette_XCoupon,
     },
 
     [ITEM_BIG_AXE] =
@@ -16305,8 +16305,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_FlyTool,
-        .iconPic = gItemIcon_QuestionMark,
-        .iconPalette = gItemIconPalette_QuestionMark,
+        .iconPic = gItemIcon_Pager,
+        .iconPalette = gItemIconPalette_Pager,
     },
 
     [ITEM_SURFBOARD] =
@@ -16329,14 +16329,15 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Surfboard+"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "An upgraded surfboard that can\n"
-            "also scale waterfalls."),
+            "A surfboard upgraded with thrusters\n"
+            "and stabilizers. It produces enough\n"
+            "force to scale waterfalls."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_SurfboardPlus,
-        .iconPic = gItemIcon_QuestionMark,
-        .iconPalette = gItemIconPalette_QuestionMark,
+        .iconPic = gItemIcon_SurfboardPlus,
+        .iconPalette = gItemIconPalette_SurfboardPlus,
     },
 
     [ITEM_POWER_GLOVE] =
@@ -16385,19 +16386,20 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Pickaxe,
     },
 
-    [ITEM_CLIMBING_GEAR] =
+    [ITEM_CLIMBING_BOOTS] =
     {
-        .name = ITEM_NAME("Climbing Gear"),
+        .name = ITEM_NAME("Climbing Boots"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Equipment that is useful for scaling\n"
-            "rock walls."),
+            "rock walls when paired with a Power\n"
+            "Glove."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_ClimbingGear,
-        .iconPic = gItemIcon_QuestionMark,
-        .iconPalette = gItemIconPalette_QuestionMark,
+        .fieldUseFunc = ItemUseOutOfBattle_ClimbingBoots,
+        .iconPic = gItemIcon_ClimbingBoots,
+        .iconPalette = gItemIconPalette_HeavyDutyBoots,
     },
 
     [ITEM_SCUBA_GEAR] =
@@ -16461,7 +16463,7 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_AdamantOrb,
-        .iconPalette = gItemIconPalette_AdamantOrb,
+        .iconPalette = gItemIconPalette_DreamStone,
     },
 
     [ITEM_MIKO_ZIRCON] =
