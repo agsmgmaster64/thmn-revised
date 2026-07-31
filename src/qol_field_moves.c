@@ -200,7 +200,7 @@ u32 CanUseRockClimbFacingTile(void)
     if (!MetatileBehavior_IsRockClimbable(MapGridGetMetatileBehaviorAt(x, y)))
         return FALSE;
 
-    return GetFieldMoveUsage(FIELD_MOVE_ROCK_CLIMB, ITEM_CLIMBING_GEAR);
+    return GetFieldMoveUsage(FIELD_MOVE_ROCK_CLIMB, ITEM_CLIMBING_BOOTS);
 }
 
 static bool32 CanSpeciesLearnMoveLevelUp(enum Species species, enum Move move)

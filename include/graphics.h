@@ -1813,6 +1813,9 @@ extern const u32 gItemIcon_Pickaxe[];
 extern const u16 gItemIconPalette_Pickaxe[];
 extern const u32 gItemIcon_ScubaGear[];
 extern const u16 gItemIconPalette_ScubaGear[];
+extern const u32 gItemIcon_Pager[];
+extern const u16 gItemIconPalette_Pager[];
+extern const u32 gItemIcon_ClimbingBoots[];
 
 extern const u32 gItemIcon_Tome[];
 extern const u16 gItemIconPalette_ScarletTome[];
@@ -1829,6 +1832,10 @@ extern const u16 gItemIconPalette_MikoZircon[];
 extern const u16 gItemIconPalette_MageZircon[];
 extern const u16 gItemIconPalette_PrismZircon[];
 extern const u16 gItemIconPalette_LeafZircon[];
+
+extern const u16 gItemIconPalette_DreamStone[];
+extern const u32 gItemIcon_XCoupon[];
+extern const u16 gItemIconPalette_XCoupon[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];

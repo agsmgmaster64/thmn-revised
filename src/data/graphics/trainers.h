@@ -475,6 +475,12 @@ const u16 gTrainerPalette_Renko[] = INCGFX_U16("graphics/trainers/front_pics/ren
 const u32 gTrainerFrontPic_Maribel[] = INCGFX_U32("graphics/trainers/front_pics/maribel.png", ".4bpp.smol");
 const u16 gTrainerPalette_Maribel[] = INCGFX_U16("graphics/trainers/front_pics/maribel.png", ".gbapal");
 
+const u32 gTrainerCardPic_Renko[] = INCGFX_U32("graphics/trainers/front_pics/renko_card.png", ".4bpp.smol");
+const u16 gTrainerCardPicPalette_Renko[] = INCGFX_U16("graphics/trainers/front_pics/renko_card.png", ".gbapal");
+
+const u32 gTrainerCardPic_Maribel[] = INCGFX_U32("graphics/trainers/front_pics/maribel_card.png", ".4bpp.smol");
+const u16 gTrainerCardPicPalette_Maribel[] = INCGFX_U16("graphics/trainers/front_pics/maribel_card.png", ".gbapal");
+
 static const u8 gTrainerBackPic_None[] = INCGFX_U8("graphics/trainers/back_pics/none.png", ".4bpp");
 const u8 gTrainerBackPic_Brendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan.png", ".4bpp");
 const u8 gTrainerBackPic_May[] = INCGFX_U8("graphics/trainers/back_pics/may.png", ".4bpp");
@@ -1245,5 +1251,13 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Maribel, gTrainerPalette_Maribel),
         .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Maribel, gTrainerBackPicPalette_Maribel, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_RENKO_CARD] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerCardPic_Renko, gTrainerCardPicPalette_Renko),
+    },
+    [TRAINER_PIC_MARIBEL_CARD] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerCardPic_Maribel, gTrainerCardPicPalette_Maribel),
     },
 };

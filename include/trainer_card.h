@@ -38,7 +38,7 @@ struct TrainerCard
     /*0x44*/ bool8 shouldDrawStickers; // FRLG only
     /*0x45*/ bool8 hasAllMons;
     /*0x46*/ u8 monIconTint; // FRLG only
-    /*0x47*/ u8 unionRoomClass;
+    /*0x47*/ u8 trainerPic;
     /*0x48*/ u8 stickers[TRAINER_CARD_STICKER_TYPES]; // FRLG only
     /*0x4C*/ enum Species monSpecies[PARTY_SIZE]; // FRLG only
              // Note: Link players use linkHasAllFrontierSymbols, not the field below,

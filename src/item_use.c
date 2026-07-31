@@ -1650,18 +1650,18 @@ void ItemUseOutOfBattle_SurfboardPlus(u8 taskId)
     }
 }
 
-static void ItemUseOnFieldCB_ClimbingGear(u8 taskId)
+static void ItemUseOnFieldCB_ClimbingBoots(u8 taskId)
 {
     LockPlayerFieldControls();
-    ScriptContext_SetupScript(EventScript_UseClimbingGear);
+    ScriptContext_SetupScript(EventScript_UseClimbingBoots);
     DestroyTask(taskId);
 }
 
-void ItemUseOutOfBattle_ClimbingGear(u8 taskId)
+void ItemUseOutOfBattle_ClimbingBoots(u8 taskId)
 {
     if (CanUseRockClimbFacingTile())
     {
-        sItemUseOnFieldCB = ItemUseOnFieldCB_ClimbingGear;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_ClimbingBoots;
         SetUpItemUseOnFieldCallback(taskId);
     }
     else

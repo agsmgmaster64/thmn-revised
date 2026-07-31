@@ -115,7 +115,6 @@ static bool8 LoadCardGfx(void);
 static void CB2_InitTrainerCard(void);
 static u32 GetCappedGameStat(u8 statId, u32 maxValue);
 static bool8 HasAllFrontierSymbols(void);
-static u8 GetRubyTrainerStars(struct TrainerCard *);
 static u16 GetCaughtMonsCount(void);
 static void SetPlayerCardData(struct TrainerCard *, u8);
 static void TrainerCard_GenerateCardForPlayer(struct TrainerCard *);
@@ -285,18 +284,12 @@ static const u8 sTrainerCardTextColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_D
 static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_RED};
 static const u8 sTimeColonInvisibleTextColors[6] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT};
 
-static const u8 sTrainerPicOffset[2][GENDER_COUNT][2] =
+static const u8 sTrainerPicOffset[2][2] =
 {
     // Kanto
-    {
-        [MALE]   = {13, 4},
-        [FEMALE] = {13, 4}
-    },
+    {13, 4},
     // Hoenn
-    {
-        [MALE]   = {1, 0},
-        [FEMALE] = {1, 0}
-    },
+    {0, 0},
 };
 
 static const u8 sTrainerPicFacilityClass[][GENDER_COUNT] =
@@ -671,57 +664,16 @@ u32 CountPlayerTrainerStars(void)
         stars++;
     if (FlagGet(FLAG_SYS_DEFEAT_AICHI))
         stars++;
-    if (HasAllFrontierSymbols())
-        stars++;
-
-    return stars;
-}
-
-// Ignore this, should never be called under any circumstances
-static u8 GetRubyTrainerStars(struct TrainerCard *trainerCard)
-{
-    u8 stars = 0;
-
-    if (trainerCard->hofDebutHours || trainerCard->hofDebutMinutes || trainerCard->hofDebutSeconds)
-        stars++;
-    if (trainerCard->hasAllMons)
-        stars++;
-    if (trainerCard->battleTowerStraightWins > 49)
-        stars++;
-    if (trainerCard->defeatAichi)
-        stars++;
-
-    return stars;
-}
-
-static u8 GetEmeraldTrainerStars(struct TrainerCard *trainerCard)
-{
-    u8 stars = 0;
-
-    if (trainerCard->hofDebutHours || trainerCard->hofDebutMinutes || trainerCard->hofDebutSeconds)
-        stars++;
-    if (trainerCard->hasAllMons)
-        stars++;
-    if (trainerCard->defeatAichi)
-        stars++;
-    if (HasAllFrontierSymbols())
-        stars++;
-
-    return stars;
-}
-
-static u8 GetKantoTrainerStars(struct TrainerCard *trainerCard)
-{
-    u8 stars = 0;
-
-    if (trainerCard->hofDebutHours || trainerCard->hofDebutMinutes || trainerCard->hofDebutSeconds)
-        stars++;
-    if (trainerCard->hasAllMons)
-        stars++;
-    if (trainerCard->gensokyoClear)
-        stars++;
-    if (trainerCard->defeatAichi)
-        stars++;
+    if (IS_AWR)
+    {
+        if (FlagGet(FLAG_SYS_GENSOKYO_LEAGUE_CLEAR))
+            stars++;
+    }
+    else
+    {
+        if (HasAllFrontierSymbols())
+            stars++;
+    }
 
     return stars;
 }
@@ -762,6 +714,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     trainerCard->pokemonTrades = GetCappedGameStat(GAME_STAT_POKEMON_TRADES, 0xFFFF);
 
     trainerCard->money = GetMoney(&gSaveBlock1Ptr->money);
+    trainerCard->stars = CountPlayerTrainerStars();
 
     for (i = 0; i < TRAINER_CARD_PROFILE_LENGTH; i++)
         trainerCard->easyChatProfile[i] = gSaveBlock1Ptr->easyChatProfile[i];
@@ -773,23 +726,14 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     case CARD_TYPE_EMERALD:
         trainerCard->battleTowerWins = 0;
         trainerCard->battleTowerStraightWins = 0;
-        trainerCard->gensokyoClear = 0;
         trainerCard->contestsWithFriends = GetCappedGameStat(GAME_STAT_WON_LINK_CONTEST, 999);
         trainerCard->pokeblocksWithFriends = GetCappedGameStat(GAME_STAT_POKEBLOCKS_WITH_FRIENDS, 0xFFFF);
-        trainerCard->stars = GetEmeraldTrainerStars(trainerCard);
-        break;
-    case CARD_TYPE_RS:
-        trainerCard->gensokyoClear = 0;
-        trainerCard->contestsWithFriends = GetCappedGameStat(GAME_STAT_WON_LINK_CONTEST, 999);
-        trainerCard->pokeblocksWithFriends = GetCappedGameStat(GAME_STAT_POKEBLOCKS_WITH_FRIENDS, 0xFFFF);
-        trainerCard->stars = GetRubyTrainerStars(trainerCard);
         break;
     case CARD_TYPE_FRLG:
         trainerCard->battleTowerWins = 0;
         trainerCard->battleTowerStraightWins = 0;
         trainerCard->contestsWithFriends = 0;
         trainerCard->pokeblocksWithFriends = 0;
-        trainerCard->gensokyoClear = FlagGet(FLAG_SYS_GENSOKYO_LEAGUE_CLEAR);
         trainerCard->linkPoints.berryCrush = GetCappedGameStat(GAME_STAT_PLAYED_BERRY_CRUSH, 0xFFFF);
         trainerCard->unionRoomNum = GetCappedGameStat(GAME_STAT_NUM_UNION_ROOM_BATTLES, 0xFFFF);
         trainerCard->shouldDrawStickers = TRUE;
@@ -805,9 +749,15 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
         trainerCard->monSpecies[3] = VarGet(VAR_TRAINER_CARD_MON_ICON_4);
         trainerCard->monSpecies[4] = VarGet(VAR_TRAINER_CARD_MON_ICON_5);
         trainerCard->monSpecies[5] = VarGet(VAR_TRAINER_CARD_MON_ICON_6);
-        trainerCard->stars = GetKantoTrainerStars(trainerCard);
         break;
     }
+}
+
+static inline enum TrainerPicID GetCardTrainerPic(enum Gender gender)
+{
+    if (gender == FEMALE)
+        return TRAINER_PIC_MARIBEL_CARD;
+    return TRAINER_PIC_RENKO_CARD;
 }
 
 static void TrainerCard_GenerateCardForPlayer(struct TrainerCard *trainerCard)
@@ -822,10 +772,7 @@ static void TrainerCard_GenerateCardForPlayer(struct TrainerCard *trainerCard)
         trainerCard->frontierBP = gSaveBlock2Ptr->frontier.cardBattlePoints;
     }
 
-    if (trainerCard->gender == FEMALE)
-        trainerCard->unionRoomClass = gUnionRoomFacilityClasses[(trainerCard->trainerId % NUM_UNION_ROOM_CLASSES) + NUM_UNION_ROOM_CLASSES];
-    else
-        trainerCard->unionRoomClass = gUnionRoomFacilityClasses[trainerCard->trainerId % NUM_UNION_ROOM_CLASSES];
+    trainerCard->trainerPic = GetCardTrainerPic(trainerCard->gender);
 }
 
 void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard)
@@ -840,10 +787,7 @@ void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard)
         *((u16 *)&trainerCard->linkPoints.frontier) = gSaveBlock2Ptr->frontier.cardBattlePoints;
     }
 
-    if (trainerCard->gender == FEMALE)
-        trainerCard->unionRoomClass = gUnionRoomFacilityClasses[(trainerCard->trainerId % NUM_UNION_ROOM_CLASSES) + NUM_UNION_ROOM_CLASSES];
-    else
-        trainerCard->unionRoomClass = gUnionRoomFacilityClasses[trainerCard->trainerId % NUM_UNION_ROOM_CLASSES];
+    trainerCard->trainerPic = GetCardTrainerPic(trainerCard->gender);
 }
 
 void CopyTrainerCardData(struct TrainerCard *dst, struct TrainerCard *src, u8 gameVersion)
@@ -1939,22 +1883,10 @@ static u8 VersionToCardType(enum GameVersion version)
 
 static void CreateTrainerCardTrainerPic(void)
 {
-    if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
-    {
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
-                    TRUE,
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
-                    8,
-                    WIN_TRAINER_PIC);
-    }
-    else
-    {
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sTrainerPicFacilityClass[sData->cardType][sData->trainerCard.gender]),
-                    TRUE,
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
-                    8,
-                    WIN_TRAINER_PIC);
-    }
+    CreateTrainerCardTrainerPicSprite(sData->trainerCard.trainerPic,
+                TRUE,
+                sTrainerPicOffset[sData->isHoenn][0],
+                sTrainerPicOffset[sData->isHoenn][1],
+                8,
+                WIN_TRAINER_PIC);
 }
