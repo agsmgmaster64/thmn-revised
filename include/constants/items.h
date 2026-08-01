@@ -1073,7 +1073,7 @@ enum __attribute__((packed)) Item
     ITEM_LANTERN = 889,
     ITEM_PICKAXE = 890,
     ITEM_SCUBA_GEAR = 891,
-    ITEM_CLIMBING_GEAR = 892,
+    ITEM_CLIMBING_BOOTS = 892,
     ITEM_SURFBOARD_PLUS = 893,
 
     ITEM_EMERALD = 894,

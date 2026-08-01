@@ -1803,6 +1803,8 @@ extern const u32 gItemIcon_BigAxe[];
 extern const u16 gItemIconPalette_BigAxe[];
 extern const u32 gItemIcon_Surfboard[];
 extern const u16 gItemIconPalette_Surfboard[];
+extern const u32 gItemIcon_SurfboardPlus[];
+extern const u16 gItemIconPalette_SurfboardPlus[];
 extern const u32 gItemIcon_PowerGlove[];
 extern const u16 gItemIconPalette_PowerGlove[];
 extern const u32 gItemIcon_Lantern[];
@@ -1811,11 +1813,17 @@ extern const u32 gItemIcon_Pickaxe[];
 extern const u16 gItemIconPalette_Pickaxe[];
 extern const u32 gItemIcon_ScubaGear[];
 extern const u16 gItemIconPalette_ScubaGear[];
+extern const u32 gItemIcon_Pager[];
+extern const u16 gItemIconPalette_Pager[];
+extern const u32 gItemIcon_ClimbingBoots[];
 
 extern const u32 gItemIcon_Tome[];
 extern const u16 gItemIconPalette_ScarletTome[];
 extern const u16 gItemIconPalette_JadeTome[];
 extern const u16 gItemIconPalette_AzureTome[];
+extern const u16 gItemIconPalette_AquaTome[];
+extern const u16 gItemIconPalette_DarkTome[];
+extern const u16 gItemIconPalette_MagicTome[];
 extern const u32 gItemIcon_GoldenTome[];
 extern const u16 gItemIconPalette_GoldenTome[];
 
@@ -1824,6 +1832,10 @@ extern const u16 gItemIconPalette_MikoZircon[];
 extern const u16 gItemIconPalette_MageZircon[];
 extern const u16 gItemIconPalette_PrismZircon[];
 extern const u16 gItemIconPalette_LeafZircon[];
+
+extern const u16 gItemIconPalette_DreamStone[];
+extern const u32 gItemIcon_XCoupon[];
+extern const u16 gItemIconPalette_XCoupon[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
