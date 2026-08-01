@@ -876,10 +876,10 @@
 #define TRAINER_WINONA_7                    869
 #define TRAINER_ARCHIE_2                    870
 #define TRAINER_ARCHIE_3                    871
-#define TRAINER_TEST                        872
-#define TRAINER_NEW_873                     873
-#define TRAINER_NEW_874                     874
-#define TRAINER_NEW_875                     875
+#define TRAINER_TWINSY                      872
+#define TRAINER_AQURION                     873
+#define TRAINER_DESTINY                     874
+#define TRAINER_RANGO                       875
 #define TRAINER_NEW_876                     876
 #define TRAINER_NEW_877                     877
 #define TRAINER_NEW_878                     878

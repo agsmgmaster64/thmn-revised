@@ -1086,11 +1086,11 @@ Music: Interviewer
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Aya
+Normal Aya
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hatate
+Normal Hatate
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1103,11 +1103,11 @@ Music: Interviewer
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Aya
+Normal Aya
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hatate
+Normal Hatate
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1154,7 +1154,7 @@ Music: Interviewer
 Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Aya @ Metal Coat
+Extra Aya @ Metal Coat
 Level: 45
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -1165,7 +1165,7 @@ Ball: Ultra
 - Steel Wing
 - Roost
 
-Normal Hatate @ Gohei
+Extra Hatate @ Gohei
 Level: 45
 Nature: Timid
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
@@ -3174,8 +3174,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Nina
-Level: 30
+Normal Mitori
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TONY_3 ===
@@ -3187,7 +3187,7 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Nina
+Normal Mitori
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3200,12 +3200,12 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Tenshi
-Level: 34
+Extra Mitori
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Iku
-Level: 36
+Extra Nina
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TONY_5 ===
@@ -3217,12 +3217,12 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Iku
-Level: 37
+Extra Mitori
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tenshi
-Level: 39
+Extra Nina
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TAKAO ===
@@ -3307,8 +3307,8 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Junko
-Level: 27
+Normal Yuugi
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NOB_3 ===
@@ -3320,12 +3320,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Junko
-Level: 29
+Normal Meiling
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Clownpiece
-Level: 29
+Normal Yuugi
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NOB_4 ===
@@ -3337,16 +3337,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Junko
-Level: 31
+Extra Mayumi
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Clownpiece
-Level: 31
+Extra Meiling
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyari
-Level: 31
+Extra Yuugi
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NOB_5 ===
@@ -3358,20 +3358,20 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yuugi
-Level: 33
+Extra Ichirin
+Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Suika
-Level: 33
+Extra Mayumi
+Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mokou
-Level: 33
+Extra Meiling
+Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 33
+Extra Yuugi
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_YUJI ===
@@ -3524,16 +3524,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Iku
-Level: 25
+Normal Iku
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Kanako
-Level: 25
+Normal Kyouko
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuma
-Level: 25
+Normal Raiko
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DALTON_3 ===
@@ -3545,16 +3545,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yachie
-Level: 28
+Normal Iku
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Chimi
-Level: 28
+Normal Kyouko
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuma
-Level: 28
+Normal Raiko
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DALTON_4 ===
@@ -3566,16 +3566,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yachie
-Level: 31
+Extra Iku
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Chimi
-Level: 31
+Extra Kyouko
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuma
-Level: 31
+Extra Raiko
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DALTON_5 ===
@@ -3587,16 +3587,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Iku
-Level: 34
+Extra Iku
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kanako
-Level: 34
+Extra Kyouko
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shou
-Level: 34
+Extra Raiko
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_COLE ===
@@ -3694,12 +3694,12 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Rin
-Level: 26
+Normal Flandre
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuki
-Level: 26
+Normal Yuki
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BERNIE_3 ===
@@ -3711,12 +3711,12 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Rin
-Level: 29
+Normal Flandre
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuki
-Level: 29
+Normal Yuki
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BERNIE_4 ===
@@ -3728,12 +3728,12 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Urumi
-Level: 32
+Extra Flandre
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuiman
-Level: 32
+Extra Yuki
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BERNIE_5 ===
@@ -3745,12 +3745,12 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Rin
-Level: 35
+Extra Flandre
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuki
-Level: 35
+Extra Yuki
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DREW ===
@@ -3882,12 +3882,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Kogasa
-Level: 26
+Normal Nazrin
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Kogasa
-Level: 26
+Normal Kogasa
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ETHAN_3 ===
@@ -3899,12 +3899,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Joon
-Level: 29
+Normal Nazrin
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Joon
-Level: 29
+Normal Kogasa
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ETHAN_4 ===
@@ -3916,16 +3916,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Joon
-Level: 31
+Extra Nazrin
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Joon
-Level: 31
+Extra Kogasa
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nue
-Level: 31
+Extra Yuki
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ETHAN_5 ===
@@ -3937,16 +3937,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Melon
-Level: 34
+Extra Nazrin
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Joon
-Level: 34
+Extra Kogasa
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuuma
-Level: 34
+Extra Yuki
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENT ===
@@ -4044,98 +4044,98 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JEFFREY_2 ===
 Name: Jeffrey
-Class: Bug Maniac
-Pic: Bug Maniac
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Nemuno
-Level: 31
+Normal Suika
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Keiki
-Level: 31
+Normal Kotohime
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hecatia
-Level: 31
+Normal Yamame
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JEFFREY_3 ===
 Name: Jeffrey
-Class: Bug Maniac
-Pic: Bug Maniac
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Nemuno
-Level: 34
+Normal Suika
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Hecatia
-Level: 34
+Normal Kotohime
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Keiki
-Level: 34
+Normal Yamame
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JEFFREY_4 ===
 Name: Jeffrey
-Class: Bug Maniac
-Pic: Bug Maniac
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yamame
-Level: 36
+Extra Suika
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Wriggle
-Level: 36
+Extra Kotohime
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Daiyousei
-Level: 36
+Extra Yamame
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lily Black
-Level: 36
+Extra Lily Black
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JEFFREY_5 ===
 Name: Jeffrey
-Class: Bug Maniac
-Pic: Bug Maniac
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yamame
-Level: 38
+Extra Suika
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Daiyousei
-Level: 38
+Extra Kotohime
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Wriggle
-Level: 38
+Extra Yamame
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lily White
-Level: 38
+Extra Lily Black
+Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lily Black
-Level: 38
+Extra Lily White
+Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_EDWARD ===
@@ -4250,12 +4250,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Ran
-Level: 33
+Normal Byakuren
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chen
-Level: 33
+Normal Miko
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAMERON_3 ===
@@ -4267,12 +4267,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Reisen
-Level: 38
+Normal Byakuren
+Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Koakuma
-Level: 38
+Normal Miko
+Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAMERON_4 ===
@@ -4284,12 +4284,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Patchouli
-Level: 41
+Extra Byakuren
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Koakuma
-Level: 41
+Extra Miko
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAMERON_5 ===
@@ -4301,12 +4301,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Keine
-Level: 45
+Extra Byakuren
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Patchouli
-Level: 45
+Extra Miko
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACLYN ===
@@ -4409,11 +4409,11 @@ Battle Type: Singles
 AI: Basic Trainer
 
 Normal Byakuren
-Level: 34
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Normal Reisen
-Level: 34
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACKI_2 ===
@@ -4425,11 +4425,11 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Reisen
+Normal Byakuren
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rikako
+Normal Reisen
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4442,12 +4442,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Reisen
-Level: 37
+Normal Byakuren
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lily Black
-Level: 37
+Normal Reisen
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACKI_4 ===
@@ -4459,12 +4459,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Reisen
-Level: 40
+Extra Byakuren
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lily White
-Level: 40
+Extra Reisen
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACKI_5 ===
@@ -4476,12 +4476,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Reisen
-Level: 43
+Extra Byakuren
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Patchouli
-Level: 43
+Extra Reisen
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALTER_1 ===
@@ -4537,7 +4537,7 @@ Battle Type: Singles
 AI: Check Bad Move
 
 Normal Kana
-Level: 34
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALTER_3 ===
@@ -4553,8 +4553,8 @@ Normal Kotohime
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kana
-Level: 36
+Extra Kana
+Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALTER_4 ===
@@ -4566,12 +4566,12 @@ Music: Rich
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Alice
-Level: 39
+Extra Kotohime
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Goliath
-Level: 39
+Extra Kana
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALTER_5 ===
@@ -4583,16 +4583,16 @@ Music: Rich
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Kana
-Level: 41
+Extra Kotohime
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rikako
-Level: 41
+Extra Kana
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuuka
-Level: 41
+Normal Yumemi
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SIDNEY ===
@@ -5452,12 +5452,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Ringo
-Level: 26
+Normal Doremy
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Satono
-Level: 26
+Normal Gengetsu
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JERRY_3 ===
@@ -5469,12 +5469,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Patchouli
-Level: 29
+Normal Doremy
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 29
+Normal Gengetsu
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JERRY_4 ===
@@ -5486,12 +5486,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Patchouli
-Level: 32
+Extra Doremy
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Meiling
-Level: 32
+Extra Gengetsu
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JERRY_5 ===
@@ -5503,16 +5503,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Sakuya
-Level: 34
+Extra Doremy
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Patchouli
-Level: 34
+Extra Gengetsu
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Meiling
-Level: 34
+Extra Mugetsu
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAREN_1 ===
@@ -5554,12 +5554,12 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Patchouli
-Level: 26
+Normal Sumireko
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nue
-Level: 26
+Chibi Yukari
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAREN_3 ===
@@ -5571,12 +5571,12 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Ringo
-Level: 29
+Normal Sumireko
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nue
-Level: 29
+Normal Yukari
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAREN_4 ===
@@ -5588,12 +5588,12 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Ringo
-Level: 32
+Extra Sumireko
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Melon
-Level: 32
+Extra Yukari
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAREN_5 ===
@@ -5605,12 +5605,12 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Patchouli
-Level: 35
+Extra Sumireko
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Melon
-Level: 35
+Extra Yukari
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KATE_AND_JOY ===
@@ -5656,12 +5656,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Narumi
-Level: 28
+Normal Shion
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yachie
-Level: 30
+Normal Joon
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANNA_AND_MEG_3 ===
@@ -5673,11 +5673,11 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Narumi
+Normal Shion
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yachie
+Normal Joon
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -5690,12 +5690,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Tokiko
-Level: 34
+Extra Shion
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chen
-Level: 36
+Extra Joon
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANNA_AND_MEG_5 ===
@@ -5707,12 +5707,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Chen
-Level: 36
+Extra Shion
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tokiko
-Level: 38
+Extra Joon
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VICTOR ===
@@ -5787,8 +5787,8 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Otherworld Hecatia
-Level: 29
+Normal Orange
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIGUEL_3 ===
@@ -5800,8 +5800,8 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Otherworld Hecatia
-Level: 32
+Normal Orange
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIGUEL_4 ===
@@ -5813,8 +5813,8 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Otherworld Hecatia
-Level: 35
+Extra Orange
+Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIGUEL_5 ===
@@ -5826,8 +5826,8 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Lily White
-Level: 38
+Extra Orange
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VICTORIA ===
@@ -5903,12 +5903,12 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Futo
-Level: 26
+Normal Tewi
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Keiki
-Level: 26
+Normal Yatsuhashi
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISABEL_3 ===
@@ -5920,12 +5920,12 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Futo
-Level: 29
+Normal Tewi
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Keiki
-Level: 29
+Normal Yatsuhashi
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISABEL_4 ===
@@ -5937,12 +5937,12 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Tewi
-Level: 32
+Extra Tewi
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tewi
-Level: 32
+Extra Yatsuhashi
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISABEL_5 ===
@@ -5954,12 +5954,12 @@ Music: Twins
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Tewi
-Level: 35
+Extra Tewi
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tewi
-Level: 35
+Extra Yatsuhashi
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMOTHY_1 ===
@@ -5984,8 +5984,8 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Yuugi
-Level: 33
+Normal Sendai
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMOTHY_3 ===
@@ -5997,8 +5997,8 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Shion
-Level: 36
+Normal Sendai
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMOTHY_4 ===
@@ -6010,8 +6010,8 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Sara
-Level: 39
+Extra Sendai
+Level: 57
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMOTHY_5 ===
@@ -6023,8 +6023,8 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Yuuto
-Level: 42
+Extra Sendai
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VICKY ===
@@ -6073,12 +6073,12 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Satono
-Level: 30
+Chibi Miko
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyari
-Level: 30
+Normal Hakurei
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHELBY_3 ===
@@ -6090,12 +6090,12 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Advent Letty
-Level: 33
+Normal Miko
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Meiling
-Level: 33
+Normal Hakurei
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHELBY_4 ===
@@ -6107,12 +6107,12 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Advent Mokou
-Level: 36
+Extra Miko
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Meiling
-Level: 36
+Extra Hakurei
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHELBY_5 ===
@@ -6124,12 +6124,12 @@ Music: Intense
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Karen
-Level: 39
+Extra Miko
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Meiling
-Level: 39
+Extra Hakurei
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CALVIN_1 ===
@@ -6296,8 +6296,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Nazrin
-Level: 27
+Normal Nazrin
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CALVIN_3 ===
@@ -6309,12 +6309,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Nazrin
-Level: 28
+Normal Nazrin
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Shou
-Level: 30
+Normal Tokiko
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CALVIN_4 ===
@@ -6326,16 +6326,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Kogasa
-Level: 31
+Extra Kogasa
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nazrin
-Level: 29
+Extra Nazrin
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Shou
-Level: 33
+Extra Tokiko
+Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CALVIN_5 ===
@@ -6347,16 +6347,20 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Joon
-Level: 34
+Extra Joon
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Joon
-Level: 32
+Extra Kogasa
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuma
-Level: 36
+Extra Nazrin
+Level: 66
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Tokiko
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_EDDIE ===
@@ -6677,15 +6681,15 @@ Battle Type: Singles
 AI: Check Bad Move
 
 Chibi Hina
-Level: 24
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Cirno
-Level: 27
+Chibi Hina
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Suwako
-Level: 27
+Normal Hina
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ELLIOT_3 ===
@@ -6697,20 +6701,20 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Sannyo
-Level: 29
+Normal Narumi
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Suwako
-Level: 26
+Normal Hina
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Komachi
-Level: 26
+Normal Hina
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Murasa
-Level: 29
+Normal Hina
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ELLIOT_4 ===
@@ -6722,20 +6726,20 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Sannyo
-Level: 31
+Extra Narumi
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shion
-Level: 30
+Extra Hina
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Teireida
-Level: 30
+Extra Hina
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Biten
-Level: 31
+Extra Hina
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ELLIOT_5 ===
@@ -6747,20 +6751,20 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 33
+Extra Narumi
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Murasa
-Level: 33
+Extra Hina
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyuri
-Level: 33
+Extra Hina
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Hina
-Level: 35
+Extra Hina
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RONALD ===
@@ -6856,8 +6860,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yachie
-Level: 30
+Normal Tokiko
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BENJAMIN_3 ===
@@ -6869,7 +6873,7 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yachie
+Extra Tokiko
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6882,8 +6886,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yachie
-Level: 36
+Extra Tokiko
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BENJAMIN_5 ===
@@ -6895,8 +6899,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Tokiko
-Level: 39
+Extra Tokiko
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ABIGAIL_1 ===
@@ -6942,8 +6946,8 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Hatate
-Level: 28
+Normal Hatate
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ABIGAIL_3 ===
@@ -6955,7 +6959,7 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Hatate
+Normal Hatate
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6968,8 +6972,8 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Hatate
-Level: 34
+Extra Hatate
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ABIGAIL_5 ===
@@ -6981,8 +6985,8 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Sugar
-Level: 37
+Extra Hatate
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DYLAN_1 ===
@@ -7007,8 +7011,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Aya
-Level: 28
+Normal Aya
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DYLAN_3 ===
@@ -7020,8 +7024,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Doremy
-Level: 31
+Normal Aya
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DYLAN_4 ===
@@ -7033,8 +7037,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Aya
-Level: 34
+Extra Aya
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DYLAN_5 ===
@@ -7046,8 +7050,8 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Aya
-Level: 37
+Extra Aya
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARIA_1 ===
@@ -7072,8 +7076,8 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Aya
-Level: 28
+Normal Saki
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARIA_3 ===
@@ -7085,8 +7089,8 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Doremy
-Level: 31
+Normal Saki
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARIA_4 ===
@@ -7098,8 +7102,8 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Aya
-Level: 34
+Extra Saki
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARIA_5 ===
@@ -7111,8 +7115,8 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Aya
-Level: 37
+Extra Saki
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAMDEN ===
@@ -7205,8 +7209,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 39
+Namazu
+Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISAIAH_3 ===
@@ -7218,8 +7222,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 42
+Namazu
+Level: 46
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISAIAH_4 ===
@@ -7231,8 +7235,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 45
+Namazu
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISAIAH_5 ===
@@ -7244,8 +7248,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 48
+Namazu
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISOBEL ===
@@ -7330,8 +7334,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 39
+Extra Murasa
+Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KATELYN_3 ===
@@ -7343,8 +7347,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 42
+Extra Murasa
+Level: 46
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KATELYN_4 ===
@@ -7356,8 +7360,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 45
+Extra Murasa
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KATELYN_5 ===
@@ -7369,8 +7373,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 48
+Extra Murasa
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NICOLAS_1 ===
@@ -7399,12 +7403,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Byakuren
-Level: 41
+Extra Byakuren
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Biten
-Level: 41
+Extra Shinki
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NICOLAS_3 ===
@@ -7416,12 +7420,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Byakuren
-Level: 44
+Extra Byakuren
+Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Biten
-Level: 44
+Extra Shinki
+Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NICOLAS_4 ===
@@ -7433,16 +7437,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Byakuren
-Level: 46
+Extra Byakuren
+Level: 57
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Biten
-Level: 46
+Extra Shinki
+Level: 57
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Hakurei
-Level: 46
+Extra Yumeko
+Level: 57
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NICOLAS_5 ===
@@ -7454,16 +7458,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Byakuren
-Level: 49
+Extra Byakuren
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Biten
-Level: 49
+Extra Shinki
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Hakurei
-Level: 49
+Extra Yumeko
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AARON ===
@@ -7667,12 +7671,12 @@ Music: Cool
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yachie
-Level: 32
+Normal Kutaka
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Normal Aya
-Level: 32
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROBERT_3 ===
@@ -7684,12 +7688,12 @@ Music: Cool
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Aya
-Level: 35
+Normal Kutaka
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tokiko
-Level: 35
+Normal Aya
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROBERT_4 ===
@@ -7701,12 +7705,12 @@ Music: Cool
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Aya
-Level: 38
+Extra Kutaka
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tokiko
-Level: 38
+Extra Aya
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROBERT_5 ===
@@ -7718,12 +7722,12 @@ Music: Cool
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Aya
-Level: 41
+Extra Kutaka
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tokiko
-Level: 41
+Extra Aya
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALEX ===
@@ -7863,20 +7867,20 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Nina
-Level: 24
+Normal Lunasa
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Chiyari
-Level: 24
+Normal Lyrica
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Misumaru
-Level: 24
+Normal Merlin
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Sannyo
-Level: 26
+Normal Sannyo
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAO_3 ===
@@ -7888,20 +7892,20 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Medicine
-Level: 27
+Normal Lunasa
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kanako
-Level: 27
+Normal Lyrica
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Rinnosuke
-Level: 27
+Normal Merlin
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kana
-Level: 29
+Normal Sannyo
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAO_4 ===
@@ -7913,20 +7917,20 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Hina
-Level: 30
+Extra Lunasa
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Medicine
-Level: 30
+Extra Lyrica
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Wriggle
-Level: 30
+Extra Merlin
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meira
-Level: 32
+Extra Sannyo
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAO_5 ===
@@ -7938,20 +7942,20 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Medicine
-Level: 33
+Extra Lunasa
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Reisen
-Level: 33
+Extra Lyrica
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Hakutaku Keine
-Level: 33
+Extra Merlin
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kisume
-Level: 35
+Extra Sannyo
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOCELYN ===
@@ -8032,12 +8036,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Satono
-Level: 26
+Normal Meiling
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Satono
-Level: 26
+Normal Elly
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CYNDY_3 ===
@@ -8049,12 +8053,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Satono
-Level: 29
+Normal Meiling
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Satono
-Level: 29
+Normal Elly
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CYNDY_4 ===
@@ -8066,12 +8070,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Meiling
-Level: 32
+Extra Meiling
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 32
+Extra Elly
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CYNDY_5 ===
@@ -8083,12 +8087,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Meiling
-Level: 35
+Extra Meiling
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Meiling
-Level: 35
+Extra Elly
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MADELINE_1 ===
@@ -8135,7 +8139,7 @@ Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MADELINE_2 ===
-Name: New???
+Name: Madeline
 Class: Parasol Lady
 Pic: Parasol Lady
 Gender: Female
@@ -8143,12 +8147,12 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Okina
-Level: 29
+Normal Yuuka
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MADELINE_3 ===
-Name: New???
+Name: Madeline
 Class: Parasol Lady
 Pic: Parasol Lady
 Gender: Female
@@ -8161,7 +8165,7 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MADELINE_4 ===
-Name: New???
+Name: Madeline
 Class: Parasol Lady
 Pic: Parasol Lady
 Gender: Female
@@ -8169,16 +8173,16 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yuuka
-Level: 34
+Extra Yuuka
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Elly
-Level: 34
+Extra Elly
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MADELINE_5 ===
-Name: New???
+Name: Madeline
 Class: Parasol Lady
 Pic: Parasol Lady
 Gender: Female
@@ -8186,12 +8190,12 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yuuka
-Level: 37
+Extra Yuuka
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Elly
-Level: 37
+Extra Elly
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEVERLY ===
@@ -8559,8 +8563,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 38
+Extra Futo
+Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JENNY_3 ===
@@ -8572,8 +8576,8 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 41
+Extra Futo
+Level: 46
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JENNY_4 ===
@@ -8585,12 +8589,12 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 43
+Extra Futo
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 43
+Extra Shou
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JENNY_5 ===
@@ -8602,16 +8606,16 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 45
+Extra Futo
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chiyuri
-Level: 45
+Extra Shou
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Iku
-Level: 45
+Extra Tojiko
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HEIDI ===
@@ -8760,15 +8764,15 @@ Battle Type: Singles
 AI: Check Bad Move
 
 Chibi Mokou
-Level: 25
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Otherworld Hecatia
-Level: 25
+Normal Lily White
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Flandre
-Level: 25
+Normal Lily Black
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DIANA_3 ===
@@ -8780,16 +8784,16 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Chiyari
-Level: 28
+Normal Mokou
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Satono
-Level: 28
+Normal Lily White
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Misumaru
-Level: 28
+Normal Lily Black
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DIANA_4 ===
@@ -8801,16 +8805,16 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Mokou
-Level: 31
+Extra Mokou
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 31
+Extra Lily White
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Utsuho
-Level: 31
+Extra Lily Black
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DIANA_5 ===
@@ -8822,16 +8826,16 @@ Music: Girl
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Yuyuko
-Level: 40
+Extra Mokou
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mokou
-Level: 40
+Extra Lily White
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Utsuho
-Level: 40
+Extra Lily Black
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AMY_AND_LIV_1 ===
@@ -8860,12 +8864,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Okina
-Level: 27
+Normal Youmu
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nareko
-Level: 27
+Chibi Yuyuko
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GINA_AND_MIA_1 ===
@@ -8911,12 +8915,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Youmu
-Level: 9
+Normal Youmu
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuyuko
-Level: 9
+Normal Yuyuko
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GINA_AND_MIA_2 ===
@@ -8945,12 +8949,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Okina
-Level: 30
+Normal Youmu
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nareko
-Level: 30
+Normal Yuyuko
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AMY_AND_LIV_5 ===
@@ -8962,12 +8966,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Okina
-Level: 33
+Extra Youmu
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nareko
-Level: 33
+Extra Yuyuko
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AMY_AND_LIV_6 ===
@@ -8979,12 +8983,12 @@ Music: Twins
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Youmu
-Level: 36
+Extra Youmu
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuyuko
-Level: 36
+Extra Yuyuko
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HUEY ===
@@ -9119,16 +9123,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 36
+Extra Meiling
+Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 36
+Extra Murasa
+Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Momiji
-Level: 36
+Extra Elly
+Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ERNEST_3 ===
@@ -9140,16 +9144,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Meiling
-Level: 39
+Extra Meiling
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 39
+Extra Murasa
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Momiji
-Level: 39
+Extra Elly
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ERNEST_4 ===
@@ -9161,16 +9165,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 42
+Extra Meiling
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 42
+Extra Murasa
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Momiji
-Level: 42
+Extra Elly
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ERNEST_5 ===
@@ -9182,16 +9186,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Meiling
-Level: 45
+Extra Meiling
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 45
+Extra Murasa
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Momiji
-Level: 45
+Extra Elly
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ELI ===
@@ -9440,12 +9444,12 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Mokou
-Level: 26
+Normal Rikako
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Junko
-Level: 26
+Normal Mokou
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_EDWIN_3 ===
@@ -9457,12 +9461,12 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Chiyari
-Level: 29
+Normal Rikako
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Junko
-Level: 29
+Normal Mokou
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_EDWIN_4 ===
@@ -9474,12 +9478,12 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Mokou
-Level: 32
+Extra Rikako
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Reisen
-Level: 32
+Extra Mokou
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_EDWIN_5 ===
@@ -9491,12 +9495,12 @@ Music: Suspicious
 Battle Type: Singles
 AI: Check Bad Move
 
-Advent Mokou
-Level: 35
+Extra Rikako
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Reisen
-Level: 35
+Extra Mokou
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLY_VR_1 ===
@@ -10294,28 +10298,28 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Ariya
-Level: 22
+Normal Urumi
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Futo
-Level: 22
+Normal Yuiman
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Murasa
-Level: 22
+Normal Cirno
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Zanmu
-Level: 22
+Chibi Yuuma
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Ubame
-Level: 22
+Normal Satori
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lotus Flower
-Level: 22
+Chibi Koishi
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISAAC_3 ===
@@ -10327,28 +10331,28 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Ariya
-Level: 25
+Normal Urumi
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Zanmu
-Level: 25
+Normal Yuiman
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Ubame
-Level: 25
+Normal Cirno
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Ubame
-Level: 25
+Normal Yuuma
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Futo
-Level: 25
+Normal Satori
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shion
-Level: 25
+Normal Koishi
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISAAC_4 ===
@@ -10360,28 +10364,28 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Kaguya
-Level: 28
+Extra Urumi
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kotohime
-Level: 28
+Extra Yuiman
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eirin
-Level: 28
+Extra Cirno
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eirin
-Level: 28
+Extra Yuuma
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tewi
-Level: 28
+Extra Satori
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shion
-Level: 28
+Extra Koishi
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISAAC_5 ===
@@ -10393,28 +10397,28 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Eirin
-Level: 31
+Extra Urumi
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kaguya
-Level: 31
+Extra Yuiman
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Orange
-Level: 31
+Extra Cirno
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kotohime
-Level: 31
+Extra Yuuma
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shion
-Level: 31
+Extra Satori
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mugetsu
-Level: 31
+Extra Koishi
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LYDIA_1 ===
@@ -10489,28 +10493,28 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Shou
-Level: 22
+Normal Yoshika
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Kogasa
-Level: 22
+Normal Seiga
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nue
-Level: 22
+Chibi Futo
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nazrin
-Level: 22
+Chibi Miko
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Ichirin
-Level: 22
+Normal Sugar
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Murasa
-Level: 22
+Normal Sekibanki
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LYDIA_3 ===
@@ -10522,29 +10526,30 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Urumi
-Level: 25
+Normal Yoshika
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Misumaru
-Level: 25
+Normal Seiga
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nemuno
-Level: 25
+Normal Futo
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eternity
-Level: 25
+Normal Miko
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Enoko
-Level: 25
+Normal Sugar
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Junko
-Level: 25
+Normal Sekibanki
+Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 
 === TRAINER_LYDIA_4 ===
 Name: Lydia
@@ -10555,28 +10560,28 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Kaguya
-Level: 28
+Extra Yoshika
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eirin
-Level: 28
+Extra Seiga
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mokou
-Level: 28
+Extra Futo
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tewi
-Level: 28
+Extra Miko
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Marisa
-Level: 28
+Extra Sugar
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Reimu
-Level: 28
+Extra Sekibanki
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LYDIA_5 ===
@@ -10588,28 +10593,28 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Chiyuri
-Level: 31
+Extra Yoshika
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Hakurei
-Level: 31
+Extra Seiga
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rikako
-Level: 31
+Extra Futo
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meira
-Level: 31
+Extra Miko
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yumemi
-Level: 31
+Extra Sugar
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Louise
-Level: 31
+Extra Sekibanki
+Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACKSON_1 ===
@@ -10682,7 +10687,11 @@ Battle Type: Singles
 AI: Basic Trainer
 
 Normal Nitori
-Level: 34
+Level: 33
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Mitori
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACKSON_4 ===
@@ -10694,8 +10703,12 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Nitori
-Level: 37
+Extra Nitori
+Level: 57
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Mitori
+Level: 57
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACKSON_5 ===
@@ -10707,12 +10720,16 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Nitori
-Level: 39
+Extra Takane
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mike
-Level: 39
+Extra Mitori
+Level: 66
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Nitori
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CATHERINE_1 ===
@@ -10779,11 +10796,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Keine
+Normal Momiji
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Hakutaku Keine
+Normal Chen
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10796,11 +10813,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Koakuma
+Normal Momiji
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Patchouli
+Extra Chen
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10813,12 +10830,12 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Reisen
-Level: 36
+Extra Momiji
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eirin
-Level: 36
+Extra Chen
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CATHERINE_5 ===
@@ -10830,12 +10847,12 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Mike
-Level: 39
+Extra Momiji
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Takane
-Level: 39
+Extra Chen
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JULIO ===
@@ -11689,12 +11706,12 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Kaguya
-Level: 26
+Normal Alice
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Eirin
-Level: 26
+Normal Yuuka
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_3 ===
@@ -11706,12 +11723,12 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Kaguya
-Level: 29
+Normal Alice
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Eirin
-Level: 29
+Normal Yuuka
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_4 ===
@@ -11723,12 +11740,12 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Zanmu
-Level: 32
+Extra Alice
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Ubame
-Level: 32
+Extra Yuuka
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_5 ===
@@ -11740,16 +11757,16 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Kaguya
-Level: 34
+Extra Kirisame
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eirin
-Level: 34
+Extra Alice
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Reisen
-Level: 34
+Extra Yuuka
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SALLY ===
@@ -11948,8 +11965,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Keiki
-Level: 27
+Normal Daiyousei
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Wriggle
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAMES_3 ===
@@ -11961,12 +11982,12 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Hecatia
-Level: 29
+Extra Daiyousei
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Keiki
-Level: 29
+Extra Wriggle
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAMES_4 ===
@@ -11978,16 +11999,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Hecatia
-Level: 31
+Extra Daiyousei
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Keiki
-Level: 31
+Extra Wriggle
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Nemuno
-Level: 31
+Extra Eternity
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAMES_5 ===
@@ -11999,20 +12020,20 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Lily White
-Level: 33
+Extra Daiyousei
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lily Black
-Level: 33
+Extra Wriggle
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Daiyousei
-Level: 33
+Extra Eternity
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Wriggle
-Level: 33
+Extra Lily White
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRICE ===
@@ -12178,15 +12199,15 @@ Battle Type: Singles
 AI: Check Bad Move
 
 Chibi Suika
-Level: 16
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuugi
-Level: 16
+Normal Yuugi
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Keine
-Level: 16
+Normal Keine
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRENT_2 ===
@@ -12198,19 +12219,19 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Shou
-Level: 24
+Normal Aunn
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Sumireko
-Level: 24
+Normal Shou
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nina
-Level: 24
+Normal Shou
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Enoko
+Normal Tenshi
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12223,20 +12244,20 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yuuma
-Level: 27
+Normal Aunn
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nina
-Level: 27
+Normal Shou
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lotus Flower
-Level: 27
+Normal Shou
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Chimi
-Level: 27
+Normal Tenshi
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRENT_4 ===
@@ -12248,20 +12269,20 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Letty
-Level: 30
+Extra Aunn
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuma
-Level: 30
+Extra Shou
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Suika
-Level: 30
+Extra Shou
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Chen
-Level: 30
+Extra Tenshi
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRENT_5 ===
@@ -12273,20 +12294,20 @@ Music: Hiker
 Battle Type: Singles
 AI: Check Bad Move
 
-Chibi Yuuma
-Level: 33
+Extra Aunn
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Letty
-Level: 33
+Extra Shou
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tenshi
-Level: 33
+Extra Shou
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Suika
-Level: 33
+Extra Tenshi
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DEZ_AND_LUKE ===
@@ -12349,12 +12370,12 @@ Music: Girl
 Battle Type: Doubles
 AI: Check Bad Move
 
-Chibi Nareko
-Level: 30
+Normal Yumeko
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Biten
-Level: 30
+Normal Shinki
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KIRA_AND_DAN_3 ===
@@ -12366,12 +12387,12 @@ Music: Girl
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Biten
-Level: 33
+Normal Yumeko
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuuma
-Level: 33
+Normal Shinki
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KIRA_AND_DAN_4 ===
@@ -12383,12 +12404,12 @@ Music: Girl
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Biten
-Level: 36
+Extra Yumeko
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Sara
-Level: 36
+Extra Shinki
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KIRA_AND_DAN_5 ===
@@ -12400,12 +12421,12 @@ Music: Girl
 Battle Type: Doubles
 AI: Check Bad Move
 
-Normal Biten
-Level: 39
+Extra Yumeko
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Louise
-Level: 39
+Extra Shinki
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHANNA ===
@@ -13531,11 +13552,11 @@ Battle Type: Doubles
 AI: Basic Trainer
 
 Extra Utsuho
-Level: 54
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Extra Suwako
-Level: 54
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHN_AND_JAY_2 ===
@@ -13547,12 +13568,12 @@ Music: Intense
 Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Eirin
-Level: 43
+Extra Utsuho
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kaguya
-Level: 43
+Extra Suwako
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHN_AND_JAY_3 ===
@@ -13564,12 +13585,12 @@ Music: Intense
 Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Yuugi
-Level: 46
+Extra Utsuho
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yamame
-Level: 46
+Extra Suwako
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHN_AND_JAY_4 ===
@@ -13581,12 +13602,12 @@ Music: Intense
 Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Hakurei
-Level: 49
+Extra Utsuho
+Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kirisame
-Level: 49
+Extra Suwako
+Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHN_AND_JAY_5 ===
@@ -13598,12 +13619,12 @@ Music: Intense
 Battle Type: Doubles
 AI: Basic Trainer
 
-Advent Ran
-Level: 52
+Extra Utsuho
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Chen
-Level: 52
+Extra Suwako
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RELI_AND_IAN ===
@@ -13641,71 +13662,71 @@ Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LILA_AND_ROY_2 ===
-Name: Twinsy
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: Lila & Ria
+Class: Sr And Jr
+Pic: Sr And Jr
 Gender: Female
-Music: Cool
-Battle Type: Singles
+Music: Twins
+Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Orange
-Level: 64
+Extra Sekibanki
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 64
+Extra Louise
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LILA_AND_ROY_3 ===
-Name: Aqurion
-Class: Expert
-Pic: Expert M
-Gender: Male
-Music: Intense
-Battle Type: Singles
+Name: Lila & Ria
+Class: Sr And Jr
+Pic: Sr And Jr
+Gender: Female
+Music: Twins
+Battle Type: Doubles
 AI: Basic Trainer
 
-School Girl Sanae
-Level: 64
+Extra Sekibanki
+Level: 48
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Murasa
-Level: 64
+Extra Louise
+Level: 48
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LILA_AND_ROY_4 ===
-Name: Destiny
-Class: Lass
-Pic: Lass
+Name: Lila & Ria
+Class: Sr And Jr
+Pic: Sr And Jr
 Gender: Female
-Music: Female
-Battle Type: Singles
+Music: Twins
+Battle Type: Doubles
 AI: Basic Trainer
 
-Normal Iku
-Level: 64
+Extra Sekibanki
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Koakuma
-Level: 64
+Extra Louise
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LILA_AND_ROY_5 ===
-Name: Rango
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
-Gender: Male
-Music: Cool
-Battle Type: Singles
+Name: Lila & Ria
+Class: Sr And Jr
+Pic: Sr And Jr
+Gender: Female
+Music: Twins
+Battle Type: Doubles
 AI: Basic Trainer
 
-Isami
-Level: 64
+Extra Sekibanki
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shou
-Level: 64
+Extra Louise
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LISA_AND_RAY ===
@@ -17723,16 +17744,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Teireida
-Level: 30
+Normal Komachi
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Teireida
-Level: 30
+Normal Chiyuri
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Teireida
-Level: 30
+Normal Murasa
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CORY_3 ===
@@ -17744,15 +17765,15 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Sagume
+Normal Komachi
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Teireida
+Normal Chiyuri
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Mike
+Normal Murasa
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -17765,16 +17786,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Chiyuri
-Level: 34
+Extra Komachi
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 34
+Extra Chiyuri
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Iku
-Level: 34
+Extra Murasa
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CORY_5 ===
@@ -17786,16 +17807,16 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 36
+Extra Komachi
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Cirno
-Level: 36
+Extra Chiyuri
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nitori
-Level: 36
+Extra Murasa
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PABLO_2 ===
@@ -17807,12 +17828,12 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 37
+Extra Komachi
+Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 37
+Extra Chiyuri
+Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PABLO_3 ===
@@ -17824,16 +17845,16 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Komachi
-Level: 39
+Earth Hecatia
+Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 39
+Extra Komachi
+Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 39
+Extra Chiyuri
+Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PABLO_4 ===
@@ -17845,16 +17866,16 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Meiling
-Level: 41
+Earth Hecatia
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Wriggle
-Level: 41
+Extra Komachi
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Komachi
-Level: 41
+Extra Chiyuri
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PABLO_5 ===
@@ -17866,16 +17887,16 @@ Music: Swimmer
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Reimu
-Level: 43
+Earth Hecatia
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kana
-Level: 43
+Extra Komachi
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Marisa
-Level: 43
+Extra Chiyuri
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KOJI_2 ===
@@ -17887,12 +17908,12 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Meiling
-Level: 37
+Extra Mayumi
+Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Remilia
-Level: 37
+Extra Mokou
+Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KOJI_3 ===
@@ -17904,16 +17925,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Remilia
-Level: 39
+Extra Sara
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 39
+Extra Mayumi
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Patchouli
-Level: 39
+Extra Mokou
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KOJI_4 ===
@@ -17925,16 +17946,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Remilia
-Level: 41
+Extra Sara
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mokou
-Level: 41
+Extra Mayumi
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Koakuma
-Level: 41
+Extra Mokou
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KOJI_5 ===
@@ -17946,16 +17967,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Remilia
-Level: 43
+Extra Sara
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rumia
-Level: 43
+Extra Mayumi
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 43
+Extra Mokou
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CRISTIN_2 ===
@@ -18047,7 +18068,7 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Chiyuri
+Normal Raiko
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -18055,7 +18076,7 @@ Normal Shou
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mitori
+Normal Kyouko
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -18068,16 +18089,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Chiyuri
-Level: 37
+Normal Raiko
+Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Iku
-Level: 37
+Normal Shou
+Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mitori
-Level: 37
+Normal Kyouko
+Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FERNANDO_4 ===
@@ -18089,16 +18110,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Iku
-Level: 39
+Extra Raiko
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mitori
-Level: 39
+Extra Shou
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kanako
-Level: 39
+Punk Kyouko
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FERNANDO_5 ===
@@ -18110,16 +18131,16 @@ Music: Intense
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Marisa
-Level: 41
+Extra Raiko
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Iku
-Level: 41
+Extra Shou
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mitori
-Level: 41
+Punk Kyouko
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SAWYER_2 ===
@@ -18131,12 +18152,12 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Chibi Suika
-Level: 26
+Normal Suika
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuugi
-Level: 26
+Normal Yuugi
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SAWYER_3 ===
@@ -18148,16 +18169,16 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Clownpiece
-Level: 28
+Normal Suika
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuma
-Level: 28
+Normal Yuugi
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Okina
-Level: 28
+Normal Kasen
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SAWYER_4 ===
@@ -18169,16 +18190,16 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Suika
-Level: 30
+Extra Suika
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Yuuma
-Level: 30
+Extra Yuugi
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Letty
-Level: 30
+Extra Kasen
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SAWYER_5 ===
@@ -18190,16 +18211,16 @@ Music: Hiker
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Tenshi
-Level: 33
+Extra Suika
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Suika
-Level: 33
+Extra Yuugi
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Hakutaku Keine
-Level: 33
+Extra Kasen
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GABRIELLE_2 ===
@@ -18211,27 +18232,27 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Satono
+Normal Benben
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Eika
+Normal Yatsuhashi
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Urumi
+Normal Raiko
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Eika
+Normal Kokoro
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kutaka
+Normal Seiga
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Byakuren
+Normal Yoshika
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -18244,27 +18265,27 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Satono
+Normal Benben
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Okina
+Normal Yatsuhashi
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Urumi
+Normal Raiko
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kutaka
+Normal Kokoro
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Chibi Satono
+Normal Seiga
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nareko
+Normal Yoshika
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -18277,28 +18298,28 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Normal Meiling
-Level: 35
+Extra Benben
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Youmu
-Level: 35
+Extra Yatsuhashi
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lunasa
-Level: 35
+Extra Raiko
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Lyrica
-Level: 35
+Extra Kokoro
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Merlin
-Level: 35
+Extra Seiga
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuyuko
-Level: 35
+Extra Yoshika
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GABRIELLE_5 ===
@@ -18310,28 +18331,28 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move
 
-Akyuu
-Level: 37
+Extra Benben
+Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
-Level: 37
+Extra Yatsuhashi
+Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Joon
-Level: 37
+Extra Raiko
+Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Merlin
-Level: 37
+Extra Kokoro
+Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuuma
-Level: 37
+Extra Seiga
+Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shion
-Level: 37
+Extra Yoshika
+Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_THALIA_2 ===
@@ -19212,54 +19233,73 @@ Ball: Ultra
 - Ice Beam
 - Energy Light
 
-=== TRAINER_TEST ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_873 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_874 ===
-Name: DUMMY
-Class: RS Protag
-Pic: Collector
-Gender: Male
-Music: Aqua
+=== TRAINER_TWINSY ===
+Name: Twinsy
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Normal Orange
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_875 ===
-Name: DUMMY
-Class: Pkmn Trainer 2
-Pic: Cooltrainer F
-Gender: Female
-Music: Male
+Normal Meiling
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_AQURION ===
+Name: Aqurion
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+School Girl Sanae
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Murasa
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DESTINY ===
+Name: Destiny
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Basic Trainer
+
+Normal Iku
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Koakuma
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RANGO ===
+Name: Rango
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Isami
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Shou
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NEW_876 ===
 Name: DUMMY

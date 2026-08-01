@@ -20,6 +20,26 @@ FallarborTown_EventScript_ExpertMNormal::
 	msgbox FallarborTown_Text_RegionKnownForMeteors, MSGBOX_DEFAULT
 	release
 	end
+	
+FallarborTown_EventScript_TreasureHunter::
+	goto_if_set FLAG_POWER_GLOVE_GET, FallarborTown_EventScript_TreasureHunterDisappointed
+	lock
+	faceplayer
+	msgbox FallarborTown_Text_HeardThereWasTreasure, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, FallarborTown_EventScript_ExplainTreasure
+	msgbox FallarborTown_Text_ItWillBeMine, MSGBOX_NPC
+	release
+	end
+	
+FallarborTown_EventScript_ExplainTreasure::
+	msgbox FallarborTown_Text_ExplainTreasure, MSGBOX_DEFAULT
+	release
+	end
+	
+FallarborTown_EventScript_TreasureHunterDisappointed::
+	msgbox FallarborTown_Text_Disappointed, MSGBOX_NPC
+	end
 
 FallarborTown_EventScript_Girl::
 	msgbox FallarborTown_Text_MyPreciousAzurill, MSGBOX_NPC
@@ -92,3 +112,31 @@ FallarborTown_Text_TownSign:
 FallarborTown_Text_MoveTutorSign:
 	.string "Move Tutor's House\n"
 	.string "“New moves taught to Puppets.”$"
+
+FallarborTown_Text_HeardThereWasTreasure:
+	.string "Hmph. Did you hear about the\n"
+	.string "treasure too?$"
+	
+FallarborTown_Text_ItWillBeMine:
+	.string "Don't think you'll get your hands\n"
+	.string "on it. I'll be walking away with\l"
+	.string "that prize.$"
+	
+FallarborTown_Text_ExplainTreasure:
+	.string "Long ago, there was a bandit king\n"
+	.string "that lived in these parts.\p"
+	.string "His prized possession was an item\n"
+	.string "called the Power Glove.\p"
+	.string "With the Power Glove, he could move\n"
+	.string "boulders to throw off pursuers.\p"
+	.string "Legend has it that those gloves are\n"
+	.string "still here, beneath this very town.\p"
+	.string "Don't think you'll get your hands\n"
+	.string "on it. I'll be walking away with\l"
+	.string "that prize.$"
+	
+FallarborTown_Text_Disappointed:
+	.string "So, you got the Power Gloves,\n"
+	.string "eh?\p"
+	.string "Hmph. Disappointing, but I'm sure\n"
+	.string "there's more out there to grab.$"
