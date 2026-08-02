@@ -1050,6 +1050,7 @@ extern const u8 gBattleAnimMove_Lunatic[];
 extern const u8 gBattleAnimMove_DamBreach[];
 extern const u8 gBattleAnimMove_RapidFire[];
 extern const u8 gBattleAnimMove_FallKick[];
+extern const u8 gBattleAnimMove_HeartBreak[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

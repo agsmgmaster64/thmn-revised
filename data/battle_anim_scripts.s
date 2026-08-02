@@ -36131,3 +36131,32 @@ gBattleAnimMove_FallKick::
 	blendoff
 	end
 
+gBattleAnimMove_HeartBreak::
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	playsewithpan SE_M_DRAGON_RAGE, 192
+	createvisualtask AnimTask_ShakeMon2, 5, 0, 1, 0, 15, 1
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 3, 0, 9, RGB(31, 0, 0)
+	waitforvisualfinish
+	delay 20
+	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0
+	playsewithpan SE_M_HEADBUTT, 192
+	waitforvisualfinish
+	delay 2
+	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 1
+	delay 2
+	loopsewithpan SE_M_VITAL_THROW2, 63, 4, 8
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	createvisualtask AnimTask_DrillPeckHitSplats, 5
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 18, 1
+	waitforvisualfinish
+	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 2
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 1, 9, 0, RGB(31, 0, 0)
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 6
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+    waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
