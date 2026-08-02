@@ -27889,9 +27889,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Pound,
     },
 
-    [MOVE_LAEVATAIN] =
+    [MOVE_LAEVATEIN] =
     {
-        .name = COMPOUND_STRING("Laevatain"),
+        .name = COMPOUND_STRING("Laevatein"),
         .description = COMPOUND_STRING(
             "A wicked blade that will\n"
             "defeat a target in one hit."),
