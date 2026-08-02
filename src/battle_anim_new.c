@@ -9033,3 +9033,14 @@ const struct SpriteTemplate gPassionDance3SpriteTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimDizzyPunchDuck,
 };
+
+const struct SpriteTemplate gFallKickLeafSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_LEAF,
+    .paletteTag = ANIM_TAG_BURN_POWDER,
+    .oam = &gOamData_AffineDouble_ObjNormal_16x16,
+    .anims = gRazorLeafParticleAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimNeedleArmSpike,
+};

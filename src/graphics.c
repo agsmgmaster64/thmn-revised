@@ -1398,6 +1398,7 @@ const u16 gBattleAnimSpritePal_GlowyRedOrb[] = INCGFX_U16("graphics/battle_anims
 const u16 gBattleAnimSpritePal_GlowyGreenOrb[] = INCGFX_U16("graphics/battle_anims/sprites/glowy_green_orb.pal", ".gbapal");
 const u16 gBattleAnimSpritePal_SleepPowder[] = INCGFX_U16("graphics/battle_anims/sprites/sleep_powder.pal", ".gbapal");
 const u16 gBattleAnimSpritePal_StunSpore[] = INCGFX_U16("graphics/battle_anims/sprites/stun_spore.pal", ".gbapal");
+const u16 gBattleAnimSpritePal_BurnPowder[] = INCGFX_U16("graphics/battle_anims/sprites/burn_powder.pal", ".gbapal");
 
 const u32 gContestApplauseGfx[] = INCGFX_U32("graphics/contest/applause.png", ".4bpp.smol");
 const u8 gContestApplauseMeterGfx[] = INCGFX_U8("graphics/contest/applause_meter.png", ".4bpp");
