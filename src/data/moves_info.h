@@ -28962,7 +28962,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .moveEffect = STAT_CHANGE_EFFECT_PLUS,
             .spAtk = 2,
         }),
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_TailGlow,
     },
 
     [MOVE_CORPSE_RUSH] =
