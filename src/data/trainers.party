@@ -878,83 +878,87 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROSE_2 ===
-Name: Kyosuke
-Class: Expert
-Pic: Expert M
-Gender: Male
-Music: Intense
-Battle Type: Singles
-AI: Basic Trainer
-
-Normal Meiling
-Level: 59
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Ichirin
-Level: 59
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ROSE_3 ===
-Name: Elgard
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
-Battle Type: Singles
-AI: Basic Trainer
-
-Advent Mystia
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Yamame
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Mokou
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ROSE_4 ===
-Name: Nickelson
-Class: Rich Boy
-Pic: Rich Boy
-Gender: Male
-Music: Rich
-Battle Type: Singles
-AI: Basic Trainer
-
-Normal Louise
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Patchouli
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Advent Alice
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ROSE_5 ===
-Name: Katiy
-Class: Lady
-Pic: Lady
+Name: Rose
+Class: Aroma Lady
+Pic: Aroma Lady
 Gender: Female
 Music: Female
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Daiyousei
-Level: 58
+Normal Medicine
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tenshi
-Level: 58
+Chibi Yuuka
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Minoriko
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ROSE_3 ===
+Name: Rose
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Check Bad Move
+
+Normal Medicine
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Normal Yuuka
-Level: 58
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Minoriko
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ROSE_4 ===
+Name: Rose
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Check Bad Move
+
+Extra Medicine
+Level: 53
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Yuuka
+Level: 53
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Minoriko
+Level: 53
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ROSE_5 ===
+Name: Rose
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Check Bad Move
+
+Extra Medicine
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Yuuka
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Minoriko
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DUSTY_1 ===
@@ -1009,55 +1013,55 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DUSTY_2 ===
-Name: Aris
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
+Name: Dusty
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Medicine
-Level: 60
+Normal Suwako
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DUSTY_3 ===
-Name: Siouke
-Class: Pokefan
-Pic: Pokefan M
+Name: Dusty
+Class: Ruin Maniac
+Pic: Ruin Maniac
 Gender: Male
-Music: Twins
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Cirno
-Level: 60
+Normal Suwako
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DUSTY_4 ===
-Name: Eliza
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
+Name: Dusty
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Ellen
-Level: 60
+Extra Suwako
+Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DUSTY_5 ===
-Name: Maike
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Dusty
+Class: Ruin Maniac
+Pic: Ruin Maniac
 Gender: Male
-Music: Cool
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Hakurei
-Level: 60
+Extra Suwako
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GABBY_AND_TY_1 ===
@@ -1220,71 +1224,71 @@ Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LOLA_2 ===
-Name: Jeffery
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
+Name: Lola
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Satori
-Level: 59
+Normal Louise
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Yukari
-Level: 59
+Chibi Suwako
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LOLA_3 ===
-Name: Janna
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: Lola
+Class: Tuber F
+Pic: Tuber F
 Gender: Female
-Music: Cool
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Koishi
-Level: 59
+Normal Louise
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Advent Ran
-Level: 59
+Normal Suwako
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LOLA_4 ===
-Name: Nigel
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
+Name: Lola
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Rikako
-Level: 59
+Extra Louise
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Nitori
-Level: 59
+Extra Suwako
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LOLA_5 ===
-Name: Waldo
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
+Name: Lola
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Byakuren
-Level: 59
+Extra Louise
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kirisame
-Level: 59
+Extra Suwako
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICKY_1 ===
@@ -1335,55 +1339,55 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICKY_2 ===
-Name: Patrick
-Class: Sailor
-Pic: Sailor
+Name: Ricky
+Class: Tuber F
+Pic: Tuber M
 Gender: Male
-Music: Male
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Advent Remilia
-Level: 60
+Normal Nitori
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICKY_3 ===
-Name: Stanley
-Class: Hiker
-Pic: Hiker
+Name: Ricky
+Class: Tuber F
+Pic: Tuber M
 Gender: Male
-Music: Hiker
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Genji
-Level: 65
+Normal Nitori
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICKY_4 ===
-Name: Farndi
-Class: Bird Keeper
-Pic: Bird Keeper
+Name: Ricky
+Class: Tuber F
+Pic: Tuber M
 Gender: Male
-Music: Cool
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Tokiko
-Level: 65
+Extra Nitori
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICKY_5 ===
-Name: Peaurt
-Class: Collector
-Pic: Collector
+Name: Ricky
+Class: Tuber F
+Pic: Tuber M
 Gender: Male
-Music: Suspicious
+Music: Girl
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Yumemi
-Level: 65
+Extra Nitori
+Level: 68
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RANDALL ===
@@ -2024,87 +2028,87 @@ Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BROOKE_2 ===
-Name: Esthea
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
+Name: Brooke
+Class: Cooltrainer
+Pic: Cooltrainer F
 Gender: Female
-Music: Female
+Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Satsuki
-Level: 63
+Normal Parsee
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tiny Ghost
-Level: 63
+Normal Kana
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Marisa
-Level: 63
+Chibi Hecatia
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BROOKE_3 ===
-Name: Pummel
-Class: Black Belt
-Pic: Black Belt
-Gender: Male
-Music: Intense
+Name: Brooke
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Mokou
-Level: 63
+Normal Parsee
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Sara
-Level: 63
+Normal Kana
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Ichirin
-Level: 63
+Normal Hecatia
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BROOKE_4 ===
-Name: Valori
-Class: Expert
-Pic: Expert F
+Name: Brooke
+Class: Cooltrainer
+Pic: Cooltrainer F
 Gender: Female
-Music: Intense
+Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Meira
-Level: 63
+Extra Parsee
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Seija
-Level: 63
+Extra Kana
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Momiji
-Level: 63
+Extra Hecatia
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BROOKE_5 ===
-Name: Loberson
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
+Name: Brooke
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Reimu
-Level: 63
+Extra Parsee
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Marisa
-Level: 63
+Extra Kana
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Sakuya
-Level: 63
+Extra Hecatia
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PATRICIA ===
@@ -18360,83 +18364,83 @@ Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_THALIA_2 ===
-Name: Yllven
-Class: Guitarist
-Pic: Guitarist
-Gender: Male
-Music: Intense
+Name: Thalia
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Kyouko
-Level: 64
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Raiko
-Level: 64
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_THALIA_3 ===
-Name: Alphonso
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Battle Type: Singles
-AI: Basic Trainer
-
-Normal Ellen
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Sara
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Kurumi
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_THALIA_4 ===
-Name: Espoke
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Battle Type: Singles
-AI: Basic Trainer
-
-Normal Patchouli
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Byakuren
-Level: 58
+Normal Louise
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Normal Reisen
-Level: 58
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_THALIA_3 ===
+Name: Thalia
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Check Bad Move
+
+Normal Louise
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Reisen
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Normal Takane
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_THALIA_4 ===
+Name: Thalia
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Check Bad Move
+
+Extra Louise
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Reisen
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Takane
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_THALIA_5 ===
-Name: Ibakoke
-Class: Pokemaniac
-Pic: Pokemaniac
-Gender: Male
-Music: Suspicious
+Name: Thalia
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Suika
-Level: 58
+Extra Louise
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kogasa
-Level: 58
+Extra Reisen
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Noroiko
-Level: 58
+Extra Takane
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARIELA ===
@@ -19465,293 +19469,422 @@ Extra Utsuho
 Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_884 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+=== TRAINER_YLLVEN ===
+Name: Yllven
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Intense
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Kyouko
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Raiko
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ALPHONSO ===
+Name: Alphonso
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Ellen
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Sara
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Kurumi
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ESPOKE ===
+Name: Espoke
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Patchouli
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Byakuren
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Reisen
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+
+=== TRAINER_IBAKOKE ===
+Name: Ibakoke
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Suika
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Kogasa
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Noroiko
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_KYOSUKE ===
+Name: Kyosuke
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Meiling
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Ichirin
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ELGARD ===
+Name: Elgard
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Rich
+Battle Type: Singles
+AI: Basic Trainer
+
+Advent Mystia
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Yamame
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Mokou
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_NICKELSON ===
+Name: Nickelson
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Louise
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Patchouli
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Advent Alice
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_KATIY ===
+Name: Katiy
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Daiyousei
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Tenshi
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Yuuka
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ARIS ===
+Name: Aris
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Medicine
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_SIOUKE ===
+Name: Siouke
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Twins
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Cirno
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ELIZA ===
+Name: Eliza
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Ellen
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MAIKE ===
+Name: Maike
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Hakurei
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_JEFFERY ===
+Name: Jeffery
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Satori
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Advent Yukari
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_JANNA ===
+Name: Janna
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Koishi
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Advent Ran
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_NIGEL ===
+Name: Nigel
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Rikako
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Nitori
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_WALDO ===
+Name: Waldo
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Byakuren
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Kirisame
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PATRICK ===
+Name: Patrick
+Class: Sailor
+Pic: Sailor
 Gender: Male
 Music: Male
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Advent Remilia
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_885 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
+=== TRAINER_STANLEY ===
+Name: Stanley
+Class: Hiker
 Pic: Hiker
 Gender: Male
-Music: Male
+Music: Hiker
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Genji
+Level: 65
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_886 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+=== TRAINER_VALORI ===
+Name: Valori
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Intense
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Meira
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Seija
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Momiji
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_FARNDI ===
+Name: Farndi
+Class: Bird Keeper
+Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Cool
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Tokiko
+Level: 65
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_887 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+=== TRAINER_PEAURT ===
+Name: Peaurt
+Class: Collector
+Pic: Collector
 Gender: Male
-Music: Male
+Music: Suspicious
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Yumemi
+Level: 65
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_888 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+=== TRAINER_ESTHEA ===
+Name: Esthea
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Satsuki
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tiny Ghost
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Marisa
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PUMMEL ===
+Name: Pummel
+Class: Black Belt
+Pic: Black Belt
 Gender: Male
-Music: Male
+Music: Intense
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Mokou
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_889 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+Extra Sara
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Ichirin
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_LOBERSON ===
+Name: Loberson
+Class: Collector
+Pic: Collector
 Gender: Male
-Music: Male
+Music: Suspicious
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Reimu
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_890 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
+Extra Marisa
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_891 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_892 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_893 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_894 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_895 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_896 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_897 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_898 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_899 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_900 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_901 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_902 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_903 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_904 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_905 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_906 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_907 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Sakuya
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NEW_908 ===
 Name: DUMMY
@@ -24932,7 +25065,7 @@ Ball: Master
 - Artificial Sun
 - Night Daze
 - Frenzy Plant
-- Laevatain
+- Laevatein
 
 Last Word Yukari @ BrightPowder
 Level: 100
@@ -25710,7 +25843,7 @@ EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
 Ball: Master
 - Cheer
 - Sheer Cold
-- Laevatain
+- Laevatein
 - Judgement
 
 Normal Momiji @ Flame Orb
