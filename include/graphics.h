@@ -3509,5 +3509,9 @@ extern const u16 gBattleAnimSpritePal_Apollon[];
 extern const u32 gBattleAnimSpriteGfx_DestitutionOrb[];
 extern const u16 gBattleAnimSpritePal_DestitutionOrb[];
 extern const u16 gBattleAnimSpritePal_BurnPowder[]; //used for fall kick only
+extern const u32 gBattleAnimSpriteGfx_Coins[];
+extern const u16 gBattleAnimSpritePal_Coins[];
+extern const u32 gBattleAnimSpriteGfx_Chain[];
+extern const u16 gBattleAnimSpritePal_Chain[];
 
 #endif //GUARD_GRAPHICS_H

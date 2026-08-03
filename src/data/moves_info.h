@@ -28070,13 +28070,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_WRAP,
-            .argument.wrapped = B_MSG_WRAPPED_WRAP,
+            .argument.wrapped = B_MSG_WRAPPED_ONIBINDING,
         }),
         .contestEffect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_OniBinding,
     },
 
     [MOVE_MERMAID_SONG] =
@@ -29395,7 +29395,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_GoldRush,
     },
 
     [MOVE_MIND_BOMB] =

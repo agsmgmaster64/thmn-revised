@@ -2890,6 +2890,16 @@ const struct SpriteTemplate gChainBindingSpriteTemplate =
     .callback = AnimConstrictBinding,
 };
 
+const struct SpriteTemplate gOniBindingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_CHAIN,
+    .paletteTag = ANIM_TAG_CHAIN,
+    .oam = &gOamData_AffineNormal_ObjNormal_64x32,
+    .anims = sAnims_ConstrictBinding,
+    .affineAnims = sAffineAnims_ConstrictBinding,
+    .callback = AnimConstrictBinding,
+};
+
 // functions
 // args[0] - initial x offset
 // args[1] - initial y offset

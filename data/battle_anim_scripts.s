@@ -28509,6 +28509,7 @@ gBattleAnimGeneral_TurnTrap::
 	jumpargeq 0, TRAP_ANIM_SNAP_TRAP, Status_Snap_Trap
 	jumpargeq 0, TRAP_ANIM_THUNDER_CAGE, Status_Thunder_Cage
 	jumpargeq 0, TRAP_ANIM_DESTITUTION, Status_Destitution
+	jumpargeq 0, TRAP_ANIM_ONI_BINDING, Status_Oni_Binding
 	goto Status_BindWrap
 Status_BindWrap:
 	loopsewithpan SE_M_SCRATCH, SOUND_PAN_TARGET, 6, 2
@@ -36158,5 +36159,71 @@ gBattleAnimMove_HeartBreak::
     waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
+	end
+
+gBattleAnimMove_GoldRush::
+	monbg ANIM_DEF_PARTNER
+	shake_mon_or_platform velocity=7, shake_timer=1, shake_duration=11, type=SHAKE_BG_Y
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, -5, 1, -5, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, 5, 0, 6, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, 19, 1, 10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, -23, 2, -10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 5, 50, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_DEF_PARTNER, 0, 5, 50, 1
+	delay 2
+	call GoldRushCoins
+	call GoldRushCoins
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
+GoldRushCoins:
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, -20, 0, -10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, 28, 1, 10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, -10, 1, -5, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, 10, 0, 6, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, 24, 1, 10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, -32, 2, -10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, -20, 0, -10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	createsprite gFallingCoinsSpriteTemplate, ANIM_TARGET, 2, 30, 2, 10, 1
+	playsewithpan SE_M_PAY_DAY, SOUND_PAN_TARGET
+	delay 2
+	return
+
+Status_Oni_Binding:
+	goto gBattleAnimMove_OniBinding
+
+gBattleAnimMove_OniBinding::
+	loopsewithpan SE_M_HARDEN, SOUND_PAN_TARGET, 16, 2
+	createsprite gOniBindingSpriteTemplate, ANIM_TARGET, 4, 0, 16, 0, 1
+	delay 7
+	createsprite gOniBindingSpriteTemplate, ANIM_TARGET, 2, 0, 8, 1, 1
+	delay 3
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 8, 1
+	delay 20
+	setarg 7, -1
+	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	waitforvisualfinish
 	end
 
