@@ -17656,83 +17656,87 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDRES_2 ===
-Name: Ryan
-Class: Swimmer M
-Pic: Swimmer M
+Name: Andres
+Class: Ruin Maniac
+Pic: Ruin Maniac
 Gender: Male
-Music: Swimmer
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Namazu
-Level: 59
+Normal Tenshi
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Murasa
-Level: 59
+Normal Ran
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDRES_3 ===
-Name: Rena
-Class: Swimmer M
-Pic: Swimmer F
-Gender: Female
-Music: Swimmer
+Name: Andres
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Mitori
-Level: 58
+Normal Chen
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Suwako
-Level: 58
+Normal Tenshi
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Wakasagihime
-Level: 58
+Normal Ran
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDRES_4 ===
-Name: Danuel
-Class: Youngster
-Pic: Youngster
+Name: Andres
+Class: Ruin Maniac
+Pic: Ruin Maniac
 Gender: Male
-Music: Male
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Mitori
-Level: 58
+Extra Chen
+Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Kana
-Level: 58
+Extra Tenshi
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Satori
-Level: 58
+Extra Ran
+Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDRES_5 ===
-Name: Toyosatomi
-Class: Expert
-Pic: Expert M
+Name: Andres
+Class: Ruin Maniac
+Pic: Ruin Maniac
 Gender: Male
-Music: Intense
+Music: Hiker
 Battle Type: Singles
-AI: Basic Trainer
+AI: Check Bad Move
 
-Normal Miko
-Level: 58
+Extra Nareko
+Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Rinnosuke
-Level: 58
+Extra Chen
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Sendai
-Level: 58
+Extra Tenshi
+Level: 66
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Ran
+Level: 66
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CORY_2 ===
@@ -17980,83 +17984,83 @@ Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CRISTIN_2 ===
-Name: Consyoli
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Battle Type: Singles
-AI: Basic Trainer
-
-Normal Margatroid
-Level: 64
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Magic Stones
-Level: 64
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CRISTIN_3 ===
-Name: Candall
-Class: Bug Catcher
-Pic: Bug Catcher
-Gender: Male
-Music: Male
-Battle Type: Singles
-AI: Basic Trainer
-
-Normal Daiyousei
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Himawari
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Lily Black
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CRISTIN_4 ===
-Name: Ryanna
-Class: Battle Girl
-Pic: Battle Girl
+Name: Cristin
+Class: Cooltrainer
+Pic: Cooltrainer F
 Gender: Female
-Music: Intense
-Battle Type: Singles
-AI: Basic Trainer
-
-Normal Sara
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Normal Mokou
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Advent Meiling
-Level: 63
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CRISTIN_5 ===
-Name: Clipp
-Class: Bird Keeper
-Pic: Bird Keeper
-Gender: Male
 Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Aya
-Level: 63
+Extra Rumia
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Remilia
-Level: 63
+Extra Kyouko
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Utsuho
-Level: 63
+=== TRAINER_CRISTIN_3 ===
+Name: Cristin
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Mystia
+Level: 37
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Rumia
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Kyouko
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CRISTIN_4 ===
+Name: Cristin
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Mystia
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Rumia
+Level: 55
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Kyouko
+Level: 55
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CRISTIN_5 ===
+Name: Cristin
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Mystia
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Rumia
+Level: 65
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Kyouko
+Level: 65
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FERNANDO_2 ===
@@ -19242,11 +19246,11 @@ Music: Cool
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Orange
+Extra Orange
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
+Extra Meiling
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -19263,7 +19267,7 @@ School Girl Sanae
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Murasa
+Extra Murasa
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -19276,11 +19280,11 @@ Music: Female
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Iku
+Extra Iku
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Koakuma
+Extra Koakuma
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -19297,105 +19301,169 @@ Isami
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Shou
+Extra Shou
 Level: 64
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_876 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+=== TRAINER_RYAN ===
+Name: Ryan
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Swimmer
+Battle Type: Singles
+AI: Basic Trainer
+
+Namazu
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Murasa
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RENA ===
+Name: Rena
+Class: Swimmer M
+Pic: Swimmer F
+Gender: Female
+Music: Swimmer
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Mitori
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Suwako
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Wakasagihime
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DANUEL ===
+Name: Danuel
+Class: Youngster
+Pic: Youngster
 Gender: Male
 Music: Male
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Mitori
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_877 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+Extra Kana
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Satori
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_TOYOSATOMI ===
+Name: Toyosatomi
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+Battle Type: Singles
+AI: Basic Trainer
+
+Normal Miko
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rinnosuke
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Sendai
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CONSYOLI ===
+Name: Consyoli
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+Battle Type: Singles
+AI: Basic Trainer
+
+Extra Margatroid
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magic Stones
+Level: 64
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CANDALL ===
+Name: Candall
+Class: Bug Catcher
+Pic: Bug Catcher
 Gender: Male
 Music: Male
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Daiyousei
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_878 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
+Extra Himawari
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Extra Lily Black
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RYANNA ===
+Name: Ryanna
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Sara
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_879 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
+Extra Mokou
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Advent Meiling
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CLIPP ===
+Name: Clipp
+Class: Bird Keeper
+Pic: Bird Keeper
 Gender: Male
-Music: Male
+Music: Cool
 Battle Type: Singles
+AI: Basic Trainer
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Aya
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NEW_880 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
+Extra Remilia
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_881 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_882 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
-
-=== TRAINER_NEW_883 ===
-Name: DUMMY
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Battle Type: Singles
-
-DUMMY (Chibi Kogasa)
-Level: 1
-- Splash
+Extra Utsuho
+Level: 63
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NEW_884 ===
 Name: DUMMY
