@@ -427,7 +427,10 @@
 #define ANIM_TAG_SAFARI_BAIT                (ANIM_SPRITES_START + 412)
 #define ANIM_TAG_APOLLON                    (ANIM_SPRITES_START + 413)
 #define ANIM_TAG_DESTITUTION_ORB            (ANIM_SPRITES_START + 414)
-#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_DESTITUTION_ORB + 1)
+#define ANIM_TAG_BURN_POWDER                (ANIM_SPRITES_START + 415)
+#define ANIM_TAG_COINS                      (ANIM_SPRITES_START + 416)
+#define ANIM_TAG_CHAIN                      (ANIM_SPRITES_START + 417)
+#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_CHAIN + 1)
 
 // battlers
 enum AnimBattler
@@ -659,6 +662,7 @@ enum AnimBattler
 #define TRAP_ANIM_SNAP_TRAP 7
 #define TRAP_ANIM_THUNDER_CAGE 8
 #define TRAP_ANIM_DESTITUTION 9
+#define TRAP_ANIM_ONI_BINDING 10
 
 // Weather defines for battle animation scripts.
 #define ANIM_WEATHER_NONE 0

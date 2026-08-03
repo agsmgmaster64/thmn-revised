@@ -2432,6 +2432,9 @@ void AnimTask_GetTrappedMoveAnimId(u8 taskId)
     case MOVE_DESTITUTION:
         gBattleAnimArgs[0] = TRAP_ANIM_DESTITUTION;
         break;
+    case MOVE_ONI_BINDING:
+        gBattleAnimArgs[0] = TRAP_ANIM_ONI_BINDING;
+        break;
     default:
         gBattleAnimArgs[0] = TRAP_ANIM_BIND;
         break;

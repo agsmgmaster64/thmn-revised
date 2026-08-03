@@ -1067,3 +1067,37 @@ const struct SpriteTemplate gFlightSpriteTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimRockFragment,
 };
+
+static const union AnimCmd sAnim_FlyingCoin_0[] =
+{
+    ANIMCMD_FRAME(32, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_FlyingCoin_1[] =
+{
+    ANIMCMD_FRAME(48, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_FlyingCoin_2[] =
+{
+    ANIMCMD_FRAME(64, 1),
+    ANIMCMD_END,
+};
+
+const union AnimCmd *const gAnims_FlyingCoin[] =
+{
+    sAnim_FlyingCoin_0,
+    sAnim_FlyingCoin_1,
+    sAnim_FlyingCoin_2,
+};
+
+const struct SpriteTemplate gFallingCoinsSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_COINS,
+    .paletteTag = ANIM_TAG_COINS,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gAnims_FlyingCoin,
+    .callback = AnimFallingRock,
+};

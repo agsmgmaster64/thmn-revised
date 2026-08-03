@@ -29084,17 +29084,17 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_EKasen[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/extra/shiny.pal", ".gbapal");
     const u8 gMonIcon_EKasen[] = INCGFX_U8("graphics/pokemon/_add/th/kasen/extra/icon.png", ".4bpp");
 
-    const u32 gMonFrontPic_OriginalKasen[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/extra/front.png", ".4bpp.smol");
-    const u16 gMonPalette_OriginalKasen[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/extra/normal.pal", ".gbapal");
-    const u32 gMonBackPic_OriginalKasen[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/extra/back.png", ".4bpp.smol");
-    const u16 gMonShinyPalette_OriginalKasen[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/extra/shiny.pal", ".gbapal");
-    const u8 gMonIcon_OriginalKasen[] = INCGFX_U8("graphics/pokemon/_add/th/kasen/extra/icon.png", ".4bpp");
+    const u32 gMonFrontPic_OriginalKasen[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/original/front.png", ".4bpp.smol");
+    const u16 gMonPalette_OriginalKasen[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/original/normal.pal", ".gbapal");
+    const u32 gMonBackPic_OriginalKasen[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/original/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_OriginalKasen[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/original/shiny.pal", ".gbapal");
+    const u8 gMonIcon_OriginalKasen[] = INCGFX_U8("graphics/pokemon/_add/th/kasen/original/icon.png", ".4bpp");
 
-    const u32 gMonFrontPic_IbarakiArm[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/extra/front.png", ".4bpp.smol");
-    const u16 gMonPalette_IbarakiArm[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/extra/normal.pal", ".gbapal");
-    const u32 gMonBackPic_IbarakiArm[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/extra/back.png", ".4bpp.smol");
-    const u16 gMonShinyPalette_IbarakiArm[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/extra/shiny.pal", ".gbapal");
-    const u8 gMonIcon_IbarakiArm[] = INCGFX_U8("graphics/pokemon/_add/th/kasen/extra/icon.png", ".4bpp");
+    const u32 gMonFrontPic_IbarakiArm[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/ibaraki_arm/front.png", ".4bpp.smol");
+    const u16 gMonPalette_IbarakiArm[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/ibaraki_arm/normal.pal", ".gbapal");
+    const u32 gMonBackPic_IbarakiArm[] = INCGFX_U32("graphics/pokemon/_add/th/kasen/ibaraki_arm/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_IbarakiArm[] = INCGFX_U16("graphics/pokemon/_add/th/kasen/ibaraki_arm/shiny.pal", ".gbapal");
+    const u8 gMonIcon_IbarakiArm[] = INCGFX_U8("graphics/pokemon/_add/th/kasen/ibaraki_arm/icon.png", ".4bpp");
 
     const u32 gMonFrontPic_CKyouko[] = INCGFX_U32("graphics/pokemon/_add/th/kyouko/chibi/front.png", ".4bpp.smol");
     const u16 gMonPalette_CKyouko[] = INCGFX_U16("graphics/pokemon/_add/th/kyouko/chibi/normal.pal", ".gbapal");
