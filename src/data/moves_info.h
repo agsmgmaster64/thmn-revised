@@ -29548,7 +29548,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .moveEffect = MOVE_EFFECT_GLAIVE_RUSH,
             .self = TRUE,
         }),
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_ArmorCannon,
     },
 
     [MOVE_MANASHOCK] =
