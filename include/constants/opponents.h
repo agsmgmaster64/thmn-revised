@@ -895,7 +895,7 @@
 #define TRAINER_KYOSUKE                     888
 #define TRAINER_ELGARD                      889
 #define TRAINER_NICKELSON                   890
-#define TRAINER_KAITY                       891
+#define TRAINER_KATIY                       891
 #define TRAINER_ARIS                        892
 #define TRAINER_SIOUKE                      893
 #define TRAINER_ELIZA                       894
