@@ -17089,11 +17089,35 @@ gBattleAnimMove_ArmorCannon::
 	delay 6
 	loopsewithpan SE_M_FLAME_WHEEL, SOUND_PAN_ATTACKER, 6, 5
 	waitforvisualfinish
+	create_overheat_flames anim_battler=ANIM_ATTACKER, y=10
 	playsewithpan SE_M_FLAMETHROWER, SOUND_PAN_ATTACKER
 	createsprite gFlashCannonBallMovementTemplate, ANIM_TARGET, 2, 0, 0, 21
+	create_overheat_flames anim_battler=ANIM_ATTACKER, y=-20
 	clearmonbg ANIM_ATTACKER
 	waitforvisualfinish
-	call FireSpreadEffect
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 6, 5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, -16, -15, 1, 0
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 16, -5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, -12, 18, 1, 0
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 0, 5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	simple_palette_blend selector=F_PAL_BG, delay=0, initial_blend_y=0, target_blend_y=16, color=RGB_BLACK
+	createsprite gFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 192, 176, 40
+	createsprite gFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -192, 240, 40
+	createsprite gFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 192, -160, 40
+	createsprite gFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -192, -112, 40
+	createsprite gFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 160, 48, 40
+	createsprite gFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -224, -32, 40
+	createsprite gFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 112, -128, 40
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 15, 1
 	delay 4
 	playsewithpan SE_M_FIRE_PUNCH, SOUND_PAN_TARGET
