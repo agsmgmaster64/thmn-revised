@@ -614,7 +614,7 @@ enum AnimBattler
 #define B_ANIM_FORM_CHANGE_DISGUISE     62
 #define B_ANIM_BUZZER                   63
 #define B_ANIM_HELD_ITEM_BERRY          64
-#define B_ANIM_UNUSED_65                65
+#define B_ANIM_PROTECTED_ITSELF         65
 #define B_ANIM_DESTITUTION_ORB          66
 #define NUM_B_ANIMS_GENERAL             67
 

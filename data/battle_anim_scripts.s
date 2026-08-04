@@ -36227,3 +36227,12 @@ gBattleAnimMove_OniBinding::
 	waitforvisualfinish
 	end
 
+gBattleAnimGeneral_ProtectedItself::
+	monbg ANIM_ATTACKER
+	splitbgprio ANIM_TARGET
+	playsewithpan SE_ICE_STAIRS, SOUND_PAN_ATTACKER
+	createsprite gProtectTemplate, ANIM_TARGET, 2, 0x0, 0x0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	end

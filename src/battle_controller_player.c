@@ -369,7 +369,7 @@ static void HandleInputChooseAction(enum BattlerId battler)
     {
         if (IsDoubleBattle()
          && GetBattlerPosition(battler) == B_POSITION_PLAYER_RIGHT
-         && !(gAbsentBattlerFlags & (1u << GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)))
+         && IsBattlerAlive(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT))
          && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
         {
             // Return item to bag if partner had selected one (if consumable).
@@ -510,7 +510,7 @@ void HandleInputChooseTarget(enum BattlerId battler)
                     break;
                 }
 
-                if (gAbsentBattlerFlags & (1u << gMultiUsePlayerCursor)
+                if (!IsBattlerAlive(gMultiUsePlayerCursor)
                  || !CanTargetBattler(battler, gMultiUsePlayerCursor, move)
                  || (moveTarget == TARGET_OPPONENT && IsOnPlayerSide(gMultiUsePlayerCursor)))
                     validTarget = FALSE;
@@ -567,7 +567,7 @@ void HandleInputChooseTarget(enum BattlerId battler)
                 if (B_SHOW_EFFECTIVENESS)
                     MoveSelectionDisplayMoveEffectiveness(CheckTypeEffectiveness(battler, gMultiUsePlayerCursor), battler);
 
-                if (gAbsentBattlerFlags & (1u << gMultiUsePlayerCursor)
+                if (!IsBattlerAlive(gMultiUsePlayerCursor)
                  || !CanTargetBattler(battler, gMultiUsePlayerCursor, move)
                  || (moveTarget == TARGET_OPPONENT && IsOnPlayerSide(gMultiUsePlayerCursor)))
                     i = 0;
@@ -781,7 +781,7 @@ void HandleInputChooseMove(enum BattlerId battler)
 
             if (moveTarget == TARGET_USER || moveTarget == TARGET_USER_OR_ALLY)
                 gMultiUsePlayerCursor = battler;
-            else if (gAbsentBattlerFlags & (1u << GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)))
+            else if (!IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)))
                 gMultiUsePlayerCursor = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
             else
                 gMultiUsePlayerCursor = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
@@ -1807,8 +1807,9 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
     StringAppend(gDisplayedStringBattle, acc_start);
     StringAppend(gDisplayedStringBattle, acc_desc);
     StringAppend(gDisplayedStringBattle, acc_num);
-    StringAppend(gDisplayedStringBattle, gText_NewLine);
-    StringAppend(gDisplayedStringBattle, GetMoveDescription(move));
+    u8 *descStart = StringAppend(gDisplayedStringBattle, gText_NewLine);
+    u8 *descEnd = StringAppend(gDisplayedStringBattle, GetMoveDescription(move));
+    WrapFontIdToFit(descStart, descEnd, FONT_NORMAL, WindowWidthPx(B_WIN_MOVE_DESCRIPTION));
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_DESCRIPTION);
 
     if (gCategoryIconSpriteId == 0xFF)
