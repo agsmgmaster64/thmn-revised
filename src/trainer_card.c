@@ -766,7 +766,7 @@ static void TrainerCard_GenerateCardForPlayer(struct TrainerCard *trainerCard)
     trainerCard->version = GAME_VERSION;
     SetPlayerCardData(trainerCard, VersionToCardType(GAME_VERSION));
 
-    if (GAME_VERSION == VERSION_EMERALD)
+    if (!IS_FRLG)
     {
         trainerCard->hasAllFrontierSymbols = HasAllFrontierSymbols();
         trainerCard->frontierBP = gSaveBlock2Ptr->frontier.cardBattlePoints;
@@ -781,7 +781,7 @@ void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard)
     trainerCard->version = GAME_VERSION;
     SetPlayerCardData(trainerCard, VersionToCardType(GAME_VERSION));
 
-    if (GAME_VERSION == VERSION_EMERALD)
+    if (!IS_FRLG)
     {
         trainerCard->linkHasAllFrontierSymbols = HasAllFrontierSymbols();
         *((u16 *)&trainerCard->linkPoints.frontier) = gSaveBlock2Ptr->frontier.cardBattlePoints;
