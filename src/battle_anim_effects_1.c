@@ -2890,6 +2890,16 @@ const struct SpriteTemplate gChainBindingSpriteTemplate =
     .callback = AnimConstrictBinding,
 };
 
+const struct SpriteTemplate gOniBindingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_CHAIN,
+    .paletteTag = ANIM_TAG_CHAIN,
+    .oam = &gOamData_AffineNormal_ObjNormal_64x32,
+    .anims = sAnims_ConstrictBinding,
+    .affineAnims = sAffineAnims_ConstrictBinding,
+    .callback = AnimConstrictBinding,
+};
+
 // functions
 // args[0] - initial x offset
 // args[1] - initial y offset
@@ -7429,4 +7439,35 @@ static void AnimAcrobaticsSlashes(struct Sprite *sprite)
     StartSpriteAffineAnim(sprite, affineAnimNum);
     StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
     sprite->callback = RunStoredCallbackWhenAnimEnds;
+}
+
+void AnimTask_CycleWaterGunPal(u8 taskId)
+{
+    struct Task* task = &gTasks[taskId];
+    
+    switch (task->data[0])
+    {
+    case 0:
+        task->data[8] = IndexOfSpritePaletteTag(ANIM_TAG_SMALL_BUBBLES) * 16 + 256;
+        task->data[12] = IndexOfSpritePaletteTag(ANIM_TAG_WATER_IMPACT) * 16 + 256;
+        task->data[0]++;
+        break;
+    case 1:
+        if (++task->data[9] >= 0)
+        {
+            task->data[9] = 0;
+            BlendPalette(task->data[8], 16, task->data[10], gMagicalLeafBlendColors[task->data[11]]);
+            BlendPalette(task->data[12], 16, task->data[10], gMagicalLeafBlendColors[task->data[11]]);
+            if (++task->data[10] == 17)
+            {
+                task->data[10] = 0;
+                if (++task->data[11] == 7)
+                    task->data[11] = 0;
+            }
+        }
+        break;
+    }
+
+    if (gBattleAnimArgs[7] == -1)
+        DestroyAnimVisualTask(taskId);
 }

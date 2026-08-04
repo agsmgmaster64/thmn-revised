@@ -921,7 +921,7 @@ enum __attribute__((packed)) Move
     MOVE_SOAR = 861,
 
     MOVE_MINERAL_PELT = 862,
-    MOVE_LAEVATAIN =  863,
+    MOVE_LAEVATEIN =  863,
     MOVE_SANDY_MASH = 864,
     MOVE_BOLT_KICK = 865,
     MOVE_PRISTINE_LUNACY = 866,
