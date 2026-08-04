@@ -6527,7 +6527,7 @@ BattleScript_DevourHeal::
 	playmoveanimation MOVE_STRENGTH_SAP
 	waitanimation
 	healthbarupdate BS_ATTACKER
-	datahpupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
 	printstring STRINGID_DEVOURHEAL
 	waitmessage B_WAIT_TIME_LONG
 	return
@@ -6540,7 +6540,7 @@ BattleScript_DevourHealBlock::
 	playmoveanimation MOVE_STRENGTH_SAP
 	waitanimation
 	healthbarupdate BS_ATTACKER
-	datahpupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
 	return
 
 BattleScript_DevourLiquidOoze::
@@ -6552,7 +6552,7 @@ BattleScript_DevourLiquidOoze::
 	waitanimation
 	call BattleScript_AbilityPopUpTarget
 	healthbarupdate BS_ATTACKER
-	datahpupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
 	printstring STRINGID_ITSUCKEDLIQUIDOOZE
 	tryfaintmon BS_ATTACKER
 	waitmessage B_WAIT_TIME_LONG
@@ -6579,7 +6579,7 @@ BattleScript_DevourHealMultiTarget_EffectHeal:
 	playmoveanimation MOVE_STRENGTH_SAP
 	waitanimation
 	healthbarupdate BS_ATTACKER
-	datahpupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
 	printstring STRINGID_DEVOURHEAL
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_DevourHealMultiTarget_LoopIncrement
@@ -6590,7 +6590,7 @@ BattleScript_DevourHealMultiTarget_EffectLiquidOoze:
 	waitanimation
 	call BattleScript_AbilityPopUpTarget
 	healthbarupdate BS_ATTACKER
-	datahpupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
 	printstring STRINGID_ITSUCKEDLIQUIDOOZE
 	tryfaintmon BS_ATTACKER
 	waitmessage B_WAIT_TIME_LONG
@@ -6618,7 +6618,7 @@ BattleScript_LastWishActivates::
 	playanimation BS_SCRIPTING, B_ANIM_WISH_HEAL
 	waitanimation
 	healthbarupdate BS_SCRIPTING
-	datahpupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING, ASSURANCE_DOUBLE
 	clearstatus BS_SCRIPTING
 	waitstate
 	updatestatusicon BS_SCRIPTING
@@ -6737,7 +6737,7 @@ BattleScript_EffectBeddyBye::
 	attackanimation
 	waitanimation
 	healthbarupdate BS_TARGET
-	datahpupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_DOUBLE
 	printstring STRINGID_PKMNREGAINEDHEALTH
 	waitmessage 0x40
     

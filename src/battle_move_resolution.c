@@ -3760,7 +3760,7 @@ static enum MoveEndResult MoveEndUpdateLastMoves(struct BattleCalcValues *cv)
         }
         else
         {
-            gLastHitByType[cv->battlerDef] = TYPE_MYSTERY;
+            gLastHitByType[cv->battlerDef] = TYPE_NONE;
             gLastLandedMoves[cv->battlerDef] = MOVE_UNAVAILABLE;
         }
     }
