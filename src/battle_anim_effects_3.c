@@ -5676,3 +5676,53 @@ const struct SpriteTemplate gIdentifySpriteTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimAssistPawprint,
 };
+
+const struct SpriteTemplate gMysticOrbSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_MYSTIC_ORB,
+    .paletteTag = ANIM_TAG_MYSTIC_ORB,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .affineAnims = gBarrageBallAffineAnimTable,
+};
+
+void AnimTask_MysticOrb(u8 taskId)
+{
+    if (!TryLoadSpriteAssets(&gMysticOrbSpriteTemplate))
+    {
+        DestroyAnimVisualTask(taskId);
+        return;
+    }
+
+    struct Task *task = &gTasks[taskId];
+
+    task->data[11] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+    task->data[12] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
+    task->data[13] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+    task->data[14] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET) + GetBattlerSpriteCoordAttr(gBattleAnimTarget, BATTLER_COORD_ATTR_HEIGHT) / 4;
+    task->data[15] = CreateSprite(&gMysticOrbSpriteTemplate, task->data[11], task->data[12], GetBattlerSpriteSubpriority(gBattleAnimTarget) - 5);
+    if (task->data[15] != MAX_SPRITES)
+    {
+        gSprites[task->data[15]].data[0] = 16;
+        gSprites[task->data[15]].data[2] = task->data[13];
+        gSprites[task->data[15]].data[4] = task->data[14];
+        gSprites[task->data[15]].data[5] = -32;
+        InitAnimArcTranslation(&gSprites[task->data[15]]);
+        if (!IsOnPlayerSide(gBattleAnimAttacker))
+            StartSpriteAffineAnim(&gSprites[task->data[15]], 1);
+
+        task->func = AnimTask_BarrageBall_Step;
+    }
+    else
+    {
+        DestroyAnimVisualTask(taskId);
+    }
+}
+
+const struct SpriteTemplate gButterflySpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BUTTERFLY,
+    .paletteTag = ANIM_TAG_BUTTERFLY,
+    .oam = &gOamData_AffineDouble_ObjBlend_64x64,
+    .affineAnims = gMeanLookEyeAffineAnimTable,
+    .callback = AnimMeanLookEye,
+};

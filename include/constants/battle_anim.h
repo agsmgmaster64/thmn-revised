@@ -430,7 +430,9 @@
 #define ANIM_TAG_BURN_POWDER                (ANIM_SPRITES_START + 415)
 #define ANIM_TAG_COINS                      (ANIM_SPRITES_START + 416)
 #define ANIM_TAG_CHAIN                      (ANIM_SPRITES_START + 417)
-#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_CHAIN + 1)
+#define ANIM_TAG_MYSTIC_ORB                 (ANIM_SPRITES_START + 418)
+#define ANIM_TAG_BUTTERFLY                  (ANIM_SPRITES_START + 419)
+#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_BUTTERFLY + 1)
 
 // battlers
 enum AnimBattler

@@ -501,6 +501,12 @@ const u16 gBattleAnimSpritePal_Coins[] = INCGFX_U16("graphics/battle_anims/sprit
 const u32 gBattleAnimSpriteGfx_Chain[] = INCGFX_U32("graphics/battle_anims/sprites/chain.png", ".4bpp.smol");
 const u16 gBattleAnimSpritePal_Chain[] = INCGFX_U16("graphics/battle_anims/sprites/chain.png", ".gbapal");
 
+const u32 gBattleAnimSpriteGfx_MysticOrb[] = INCGFX_U32("graphics/battle_anims/sprites/mystic_orb.png", ".4bpp.smol");
+const u16 gBattleAnimSpritePal_MysticOrb[] = INCGFX_U16("graphics/battle_anims/sprites/mystic_orb.png", ".gbapal");
+
+const u32 gBattleAnimSpriteGfx_Butterfly[] = INCGFX_U32("graphics/battle_anims/sprites/butterfly.png", ".4bpp.smol");
+const u16 gBattleAnimSpritePal_Butterfly[] = INCGFX_U16("graphics/battle_anims/sprites/butterfly.png", ".gbapal");
+
 // old battle interface data, unused
 
 const u32 gOldBattleInterfaceGfx[] = INCGFX_U32("graphics/unused/obi1.4bpp", ".smol");

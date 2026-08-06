@@ -3513,5 +3513,9 @@ extern const u32 gBattleAnimSpriteGfx_Coins[];
 extern const u16 gBattleAnimSpritePal_Coins[];
 extern const u32 gBattleAnimSpriteGfx_Chain[];
 extern const u16 gBattleAnimSpritePal_Chain[];
+extern const u32 gBattleAnimSpriteGfx_MysticOrb[];
+extern const u16 gBattleAnimSpritePal_MysticOrb[];
+extern const u32 gBattleAnimSpriteGfx_Butterfly[];
+extern const u16 gBattleAnimSpritePal_Butterfly[];
 
 #endif //GUARD_GRAPHICS_H
