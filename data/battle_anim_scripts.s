@@ -36286,15 +36286,13 @@ gBattleAnimMove_Butterfly::
 	end
 
 gBattleAnimMove_MineralPelt::
-	splitbgprio_all
-	delay 0
-	createvisualtask AnimTask_BlendBattleAnimPalExclude, 10, ANIM_TARGET, 0, 0, 4, RGB_BLACK
-
-	jumprettrue SetBugBgLightPlayer
 	fadetobg BG_BUG_OPPONENT
 	waitbgfadeout
-	createvisualtask AnimTask_StartSlidingBg, 5, 1536, 0, 0, -1
-	delay 10
+	createvisualtask AnimTask_StartSlidingBg, 5, 0x0700, 0, 0, -1
+	waitbgfadein
+	monbg ANIM_ATK_PARTNER
+	splitbgprio ANIM_ATTACKER
+	setalpha 12, 8
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, ANIM_ATTACKER, -10, 0, 0, 3
 	waitforvisualfinish
@@ -36315,12 +36313,9 @@ gBattleAnimMove_MineralPelt::
 	delay 2
 	createsprite gOctazookaSmokeSpriteTemplate, ANIM_TARGET, 2, -8, 8, 1, 0
 	waitforvisualfinish
-	delay 0
-	restorebg
-	waitbgfadeout
-	createvisualtask AnimTask_BlendBattleAnimPalExclude, 10, ANIM_TARGET, 0, 4, 0, RGB_BLACK
-	setarg 7, -1
-	waitbgfadein
+	call UnsetBackground
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
 	end
 
 SetBugBgLightPlayer:
