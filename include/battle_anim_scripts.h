@@ -1056,6 +1056,8 @@ extern const u8 gBattleAnimMove_OniBinding[];
 extern const u8 gBattleAnimMove_MysticBomb[];
 extern const u8 gBattleAnimMove_Butterfly[];
 extern const u8 gBattleAnimMove_MineralPelt[];
+extern const u8 gBattleAnimMove_SandyMash[];
+extern const u8 gBattleAnimMove_PristineLunacy[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];
