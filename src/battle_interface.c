@@ -1072,9 +1072,16 @@ void UpdateHpTextInHealthbox(u32 healthboxSpriteId, u32 maxOrCurrent, s16 currHp
         else // Opponent
         {
             if (B_HP_PERCENTAGE_DISPLAY)
-                PrintHPPercentageOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 16);
+            {
+                if (GetBattlerPartyState(battler)->identified)
+                    PrintHpOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 16);
+                else
+                    PrintHPPercentageOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 16);
+            }
             else if (gBattleSpritesDataPtr->battlerData[battler].hpNumbersNoBars)
+            {
                 PrintHpOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 8);  // debug only
+            }
         }
         break;
     }
@@ -1104,9 +1111,16 @@ static void UpdateHpTextInHealthboxInDoubles(u32 healthboxSpriteId, u32 maxOrCur
         if (gBattleSpritesDataPtr->battlerData[battler].hpNumbersNoBars) // don't print text if only bars are visible
         {
             if (B_HP_PERCENTAGE_DISPLAY)
-                PrintHPPercentageOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 8);
+            {
+                if (GetBattlerPartyState(battler)->identified)
+                    PrintHpOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 8);
+                else
+                    PrintHPPercentageOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 8);
+            }
             else 
+            {
                 PrintHpOnHealthbox(healthboxSpriteId, currHp, maxHp, HEALTHBOX_BG_INDEX, -8, 8); // debug only
+            }
 
             // Clears the end of the healthbar gfx.
             CpuCopy32(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_OPPONENT_FRAME_END),

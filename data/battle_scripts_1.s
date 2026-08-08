@@ -6662,6 +6662,8 @@ BattleScript_EffectIdentify::
 	waitanimation
     identify1
 	printstring STRINGID_IDENTIFY
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_IGNORE
 	waitmessage B_WAIT_TIME_LONG
     identify2
 	printstring STRINGID_IDENTIFYITEMABILITY

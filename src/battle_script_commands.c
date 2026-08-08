@@ -12958,9 +12958,7 @@ void BS_Identify1(void)
 {
     NATIVE_ARGS();
 
-    u32 side = GetBattlerSide(gBattlerTarget);
-
-    //gBattleStruct->identified[side][gBattlerPartyIndexes[gBattlerTarget]].identifyState = TRUE;
+    GetBattlerPartyState(gBattlerTarget)->identified = TRUE;
     PREPARE_HWORD_NUMBER_BUFFER(gBattleTextBuff1, 4, gBattleMons[gBattlerTarget].hp);
     PREPARE_HWORD_NUMBER_BUFFER(gBattleTextBuff2, 4, gBattleMons[gBattlerTarget].maxHP);
 
