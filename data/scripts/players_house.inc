@@ -475,6 +475,7 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	closemessage
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 4
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4
+	setflag FLAG_HEX_MANIAC_CAVE
 	releaseall
 	end
 
