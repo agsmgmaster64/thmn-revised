@@ -118,7 +118,7 @@ static void HandleSetEffectAbsorb(struct BattleCalcValues *cv, struct SetEffect 
         gEffectBattler = cv->battlerAtk;
         gBattlerAbility = gBattleScripting.battler = cv->battlerDef;
 
-        if (cv->abilities[cv->battlerDef] == ABILITY_LIQUID_OOZE
+        if ((cv->abilities[cv->battlerDef] == ABILITY_LIQUID_OOZE || cv->abilities[cv->battlerDef] == ABILITY_STRANGE_MIST)
          && (GetMoveEffect(cv->move)!= EFFECT_DREAM_EATER || GetConfig(B_DREAM_EATER_LIQUID_OOZE) >= GEN_5))
         {
             SetPassiveDamageAmount(cv->battlerAtk, healAmount);
@@ -194,6 +194,34 @@ static void HandleSetEffectPayday(struct BattleCalcValues *cv, struct SetEffect 
         {
             BattleScriptPush(se->script);
             gBattlescriptCurrInstr = BattleScript_MoveEffectPayDay;
+        }
+        else
+        {
+            gBattlescriptCurrInstr = se->script;
+        }
+    }
+    else
+    {
+        gBattlescriptCurrInstr = se->script;
+    }
+}
+
+static void HandleSetEffectDebtSpiral(struct BattleCalcValues *cv, struct SetEffect *se)
+{
+    if (IsOnPlayerSide(cv->battlerAtk))
+    {
+        u16 debtSpiral = gDebtSpiralMoney;
+        enum MoveTarget moveTarget = GetBattlerMoveTargetType(cv->battlerAtk, cv->move);
+        gDebtSpiralMoney += (gBattleMons[cv->battlerAtk].level * 20);
+        if (debtSpiral > gDebtSpiralMoney)
+            gDebtSpiralMoney = 0xFFFF;
+
+        // For a move that hits multiple targets (i.e. Make it Rain)
+        // we only want to print the message on the final hit
+        if (!(NumAffectedSpreadMoveTargets() > 1 && GetNextTarget(moveTarget, TRUE) != MAX_BATTLERS_COUNT))
+        {
+            BattleScriptPush(se->script);
+            gBattlescriptCurrInstr = BattleScript_MoveEffectDebtSpiral;
         }
         else
         {
@@ -359,6 +387,20 @@ static void HandleSetEffectThrash(struct BattleCalcValues *cv, struct SetEffect 
     }
 }
 
+static void HandleSetEffectCurse(struct BattleCalcValues *cv, struct SetEffect *se)
+{
+    if (gBattleMons[se->effectBattler].volatiles.cursed)
+    {
+        gBattlescriptCurrInstr = se->script;
+    }
+    else
+    {
+        gBattleMons[se->effectBattler].volatiles.cursed = TRUE;
+        BattleScriptPush(se->script);
+        gBattlescriptCurrInstr = BattleScript_Cursed;
+    }
+}
+
 static void HandleSetEffectClearSmog(struct BattleCalcValues *cv, struct SetEffect *se)
 {
     enum Stat stat;
@@ -449,7 +491,8 @@ static void HandleSetEffectThroatChop(struct BattleCalcValues *cv, struct SetEff
 
 static void HandleSetEffectIncinerate(struct BattleCalcValues *cv, struct SetEffect *se)
 {
-    if (cv->abilities[se->effectBattler] == ABILITY_STICKY_HOLD)
+    if (cv->abilities[se->effectBattler] == ABILITY_STICKY_HOLD
+     || cv->abilities[se->effectBattler] == ABILITY_STRONG_GRIP)
         return;
 
     if (gItemsInfo[gBattleMons[se->effectBattler].item].pocket == POCKET_BERRIES
@@ -1407,6 +1450,8 @@ static void (*const sSetEffectHandlers[])(struct BattleCalcValues *cv, struct Se
     [SECRET_POWER_SPD_MINUS_1] = HandleSetEffectNone,
     [SECRET_POWER_SP_ATK_MINUS_1] = HandleSetEffectNone,
     [SECRET_POWER_ACC_MINUS_1] = HandleSetEffectNone,
+    [MOVE_EFFECT_DEBT_SPIRAL] = HandleSetEffectDebtSpiral,
+    [MOVE_EFFECT_CURSE] = HandleSetEffectCurse,
 };
 
 void SetMoveEffect(struct BattleCalcValues *cv, struct SetEffect *se)
@@ -1503,6 +1548,7 @@ static inline bool32 IgnoreTargetingForMoveEffect(enum MoveEffect moveEffect) //
     case MOVE_EFFECT_SEA_OF_FIRE:
     case MOVE_EFFECT_SWAMP:
     case MOVE_EFFECT_ABSORB:
+    case MOVE_EFFECT_DEBT_SPIRAL:
         return TRUE;
     default:
         return FALSE;

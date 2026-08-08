@@ -6647,7 +6647,7 @@ BattleScript_PrintDebtSpiralMoneyString::
 BattleScript_Cursed::
 	pause B_WAIT_TIME_SHORTEST
 	printstring STRINGID_TARGETCURSED
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_AegisMergeMessage::
@@ -6658,21 +6658,20 @@ BattleScript_AegisMergeMessage::
 
 BattleScript_EffectIdentify::
 	attackcanceler
-	accuracycheck
 	attackanimation
 	waitanimation
     identify1
 	printstring STRINGID_IDENTIFY
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
     identify2
 	printstring STRINGID_IDENTIFYITEMABILITY
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
     identify3
 	printstring STRINGID_IDENTIFYMOVESET1
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
     identify4
 	printstring STRINGID_IDENTIFYMOVESET2
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
     end
 
 BattleScript_EffectBeddyBye::
@@ -6680,9 +6679,9 @@ BattleScript_EffectBeddyBye::
 	jumpifstatus BS_ATTACKER, STATUS1_SLEEP, BattleScript_RestIsAlreadyAsleep
 	jumpifuproarwakes BattleScript_RestCantSleep
 	trysetrest
-	pause 0x20
+	pause B_WAIT_TIME_SHORT
 	printfromtable gRestUsedStringIds
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
 	waitstate
     
@@ -6691,11 +6690,11 @@ BattleScript_EffectBeddyBye::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET, ASSURANCE_DOUBLE
 	printstring STRINGID_PKMNREGAINEDHEALTH
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
     
 	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_MoveSwitchEnd
 	printstring STRINGID_PKMNWENTBACK
-	waitmessage 64
+	waitmessage B_WAIT_TIME_LONG
     playmoveanimation MOVE_BATON_PASS
 	
 	openpartyscreen BS_ATTACKER, BattleScript_MoveSwitchEnd
@@ -6706,7 +6705,7 @@ BattleScript_EffectBeddyBye::
 	getswitchedmondata BS_ATTACKER
 	switchindataupdate BS_ATTACKER
 	hpthresholds BS_ATTACKER
-	printstring 3
+	printstring STRINGID_SWITCHINMON
 	switchinanim BS_ATTACKER, FALSE, FALSE
 	waitstate
 	switchineffects BS_ATTACKER
@@ -6720,7 +6719,7 @@ BattleScript_EffectFlight::
 	attackanimation
 	waitanimation
 	printstring STRINGID_ABILITYBECAMELEVITATE
-	waitmessage 0x40
+	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_InvocationMessage::
