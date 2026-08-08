@@ -28106,7 +28106,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_MermaidSong,
     },
 
     [MOVE_TENKO_LASER] =
@@ -28139,7 +28139,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_TenkoLaser,
     },
 
     [MOVE_COLD_INFERNO] =
@@ -28319,8 +28319,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Glacial Bash"),
         .description = COMPOUND_STRING(
             "May inflict frostbite on\n"
-            "foe. (10%) Also hurts the\n"
-            "user by 1/3 of the damage."),
+            "foe. (10%) The user also\n"
+            "suffers 1/3 of the damage."),
         .effect = EFFECT_RECOIL,
         .power = 120,
         .type = TYPE_ICE,
@@ -28339,7 +28339,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_GlacialBash,
     },
 
     [MOVE_EERIE_WAVE] =
