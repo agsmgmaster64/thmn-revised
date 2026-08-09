@@ -29,6 +29,7 @@ Route121_EventScript_AquaGruntsMoveOut::
 	removeobject LOCALID_ROUTE121_GRUNT_2
 	removeobject LOCALID_ROUTE121_GRUNT_3
 	setvar VAR_ROUTE121_STATE, 1
+	setflag FLAG_HIDE_EVER_GRANDE_RIVAL
 	releaseall
 	end
 

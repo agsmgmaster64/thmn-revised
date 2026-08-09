@@ -120,16 +120,13 @@ BorderCave_Text_YouLookFamiliar:
 	.string "at you, you look familiar…$"
 
 BorderCave_Text_AhAChampion:
-	.string "Ah! You must be the new Hoenn\n"
-	.string "Champion!\p"
-	.string "Well, isn't it a small world\n"
-	.string "out there!\p"
-	.string "Here, I have a small gift for\n"
-	.string "you. Take it, please.$"
+	.string "Ah! You must be the new Hoenn Champion!\n"
+	.string "Well, isn't it a small world out there!\p"
+	.string "Here, I have a small gift for you.\n"
+	.string "Take it, please.$"
 	
 BorderCave_Text_ExplainRuby:
-	.string "This is a very special Ruby, you\n"
-	.string "see.\p"
+	.string "This is a very special Ruby, you see.\p"
 	.string "Near Dewford Town, there is a sailor\n"
 	.string "who awaits a trainer with this Ruby.\p"
 	.string "If you show it to him, he will take\n"
@@ -151,8 +148,8 @@ BorderCave_Text_ExplainJava:
 	.string "puppets.$"
 	
 BorderCave_Text_ReturningHome:
-	.string "As for me, it is time for to\n"
-	.string "return home.\p"
+	.string "As for me, it is time for to return\n"
+	.string "home.\p"
 	.string "A life of adventure is hard, especially\n"
 	.string "as age begins to catch up to you.\p"
 	.string "I wish you luck, Champion.$"
@@ -179,6 +176,8 @@ BorderCave_Movement_SuzakurenzanApproachHexManiac:
 	
 BorderCave_Movement_PushPlayerOutOfWay:
 	delay_8
+	delay_4
+	delay_2
 	walk_in_place_faster_right
 	lock_facing_direction
 	walk_left
