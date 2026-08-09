@@ -7471,3 +7471,12 @@ void AnimTask_CycleWaterGunPal(u8 taskId)
     if (gBattleAnimArgs[7] == -1)
         DestroyAnimVisualTask(taskId);
 }
+
+const struct SpriteTemplate gSpectralOrbSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ORBS,
+    .paletteTag = ANIM_TAG_SPECTRAL_ORBS,
+    .oam = &gOamData_AffineOff_ObjNormal_8x8,
+    .anims = gSolarBeamBigOrbAnimTable,
+    .callback = AnimHyperBeamOrb,
+};

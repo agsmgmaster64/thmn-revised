@@ -36564,3 +36564,111 @@ gBattleAnimMove_GlacialBash::
 	restorebg
 	waitbgfadein
 	end
+
+gBattleAnimMove_EerieWave::
+	fadetobg BG_GHOST
+	waitbgfadein
+	setalpha 8 8
+	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER
+	blend_color_cycle selector=F_PAL_ATTACKER, delay=0, num_blends=2, initial_blend_y=0, target_blend_y=8, color=RGB_WHITE
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -4, -4, 15, ANIM_ATTACKER, 1
+	waitforvisualfinish
+	call HypnosisRings
+	call HypnosisRings
+	call HypnosisRings
+	blend_color_cycle selector=F_PAL_TARGET, delay=2, num_blends=2, initial_blend_y=0, target_blend_y=12, color=RGB(31, 18, 31)
+	waitforvisualfinish
+	delay 1
+	playsewithpan SE_M_NIGHTMARE, SOUND_PAN_TARGET
+	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
+	waitforvisualfinish
+	call UnsetBackground
+	end
+
+gBattleAnimMove_ShockAbsorb::
+	monbg ANIM_ATTACKER
+	setalpha 12, 8
+	simple_palette_blend selector=F_PAL_BG, delay=2, initial_blend_y=0, target_blend_y=4, color=RGB_BLACK
+	waitforvisualfinish
+	createvisualtask AnimTask_ElectricChargingParticles, 2, ANIM_ATTACKER, 20, 0, 2
+	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER
+	delay 12
+	createsprite gGrowingShockWaveOrbSpriteTemplate, ANIM_ATTACKER, 2
+	delay 30
+	createvisualtask AnimTask_ElectricBolt, 5, 0, -48, 0
+	playsewithpan SE_M_THUNDER_WAVE, SOUND_PAN_TARGET
+	delay 12
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_TARGET, 0, 16, 16, RGB_BLACK
+	delay 4
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_TARGET, 0, 0, 0, RGB_BLACK
+	waitforvisualfinish
+	call GigaDrainAbsorbEffect
+	delay 15
+	call HealingEffect
+	waitforvisualfinish
+	delay 4
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 0, 6, 0, RGB_BLACK
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
+gBattleAnimMove_SpectralRay::
+	fadetobg BG_GHOST
+	waitbgfadein
+	monbg ANIM_ATK_PARTNER
+	setalpha 12, 8
+	blend_color_cycle selector=F_PAL_ATTACKER, delay=1, num_blends=4, initial_blend_y=0, target_blend_y=11, color=RGB(15, 0, 15)
+	loopsewithpan SE_M_CONFUSE_RAY, +63, 16, 3
+	call StockpileAbsorb
+	call StockpileAbsorb
+	waitforvisualfinish
+	playsewithpan SE_M_HYPER_BEAM, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 4, 1
+	waitforvisualfinish
+	delay 30
+	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_SCREECH, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 1, 15, 0, 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_ATTACKER, 0, 4, 50, 1
+	flash_anim_tag_with_color tag=ANIM_TAG_ORBS, delay=1, num_blends=12, color1=RGB_RED, blend_y1=16, color2=0, blend_y2=0
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 50, 1
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 0, 11, RGB(25, 25, 25)
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	call SpectralRayOrbs
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 11, 0, RGB(25, 25, 25)
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	call UnsetBackground
+	end
+
+SpectralRayOrbs:
+	create_spectral_orb_sprite ANIM_TARGET, 2
+	create_spectral_orb_sprite ANIM_TARGET, 2
+	delay 1
+	return

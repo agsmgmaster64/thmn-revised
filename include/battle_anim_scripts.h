@@ -1061,6 +1061,9 @@ extern const u8 gBattleAnimMove_PristineLunacy[];
 extern const u8 gBattleAnimMove_MermaidSong[];
 extern const u8 gBattleAnimMove_TenkoLaser[];
 extern const u8 gBattleAnimMove_GlacialBash[];
+extern const u8 gBattleAnimMove_EerieWave[];
+extern const u8 gBattleAnimMove_ShockAbsorb[];
+extern const u8 gBattleAnimMove_SpectralRay[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];
