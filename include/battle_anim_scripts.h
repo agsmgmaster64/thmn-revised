@@ -1064,6 +1064,9 @@ extern const u8 gBattleAnimMove_GlacialBash[];
 extern const u8 gBattleAnimMove_EerieWave[];
 extern const u8 gBattleAnimMove_ShockAbsorb[];
 extern const u8 gBattleAnimMove_SpectralRay[];
+extern const u8 gBattleAnimMove_Judgement[];
+extern const u8 gBattleAnimMove_ZapFlare[];
+extern const u8 gBattleAnimMove_DivinePulse[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];

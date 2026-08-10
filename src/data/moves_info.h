@@ -4171,7 +4171,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
     #if B_UPDATED_MOVE_DATA >= GEN_3
             "2-turn attack. High critical\n"
-            "hit ratio, and grants +1 to\n."
+            "hit ratio, and grants +1 to\n"
             "user's Speed."),
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_STAT_PLUS,
@@ -28706,7 +28706,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_Judgement,
     },
 
     [MOVE_ZAP_FLARE] =
@@ -28736,7 +28736,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_ZapFlare,
         .validApprenticeMove = TRUE,
     },
 
@@ -28770,8 +28770,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Divine Pulse"),
         .description = COMPOUND_STRING(
-            "Focused divine energy.\n"
-            "May lower Sp. Defense.\n"
+            "Blasts the target with waves\n"
+            "of light. May lower Sp. Def.\n"
             "(30%/-1)"),
         .effect = EFFECT_HIT,
         .power = 120,
@@ -28791,7 +28791,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_FOCUS_ENERGY},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_DivinePulse,
     },
 
     [MOVE_MULTI_PULSE] =

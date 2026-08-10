@@ -7480,3 +7480,11 @@ const struct SpriteTemplate gSpectralOrbSpriteTemplate =
     .anims = gSolarBeamBigOrbAnimTable,
     .callback = AnimHyperBeamOrb,
 };
+
+const struct SpriteTemplate gJudgementOrbsSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ORBS,
+    .paletteTag = ANIM_TAG_ORBS,
+    .oam = &gOamData_AffineNormal_ObjNormal_8x8,
+    .callback = AnimNeedleArmSpike,
+};
