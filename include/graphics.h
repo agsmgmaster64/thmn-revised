@@ -3518,5 +3518,6 @@ extern const u32 gBattleAnimSpriteGfx_MysticOrb[];
 extern const u16 gBattleAnimSpritePal_MysticOrb[];
 extern const u32 gBattleAnimSpriteGfx_Butterfly[];
 extern const u16 gBattleAnimSpritePal_Butterfly[];
+extern const u16 gBattleAnimSpritePal_SpectralOrbs[];
 
 #endif //GUARD_GRAPHICS_H

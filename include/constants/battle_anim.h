@@ -432,7 +432,8 @@
 #define ANIM_TAG_CHAIN                      (ANIM_SPRITES_START + 417)
 #define ANIM_TAG_MYSTIC_ORB                 (ANIM_SPRITES_START + 418)
 #define ANIM_TAG_BUTTERFLY                  (ANIM_SPRITES_START + 419)
-#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_BUTTERFLY + 1)
+#define ANIM_TAG_SPECTRAL_ORBS              (ANIM_SPRITES_START + 420)
+#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_SPECTRAL_ORBS + 1)
 
 // battlers
 enum AnimBattler

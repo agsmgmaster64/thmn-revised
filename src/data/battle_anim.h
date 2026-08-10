@@ -1439,6 +1439,7 @@ const struct BattleAnimation gBattleAnimTable[ANIM_TAG_COUNT] =
     BATTLE_ANIMATION(ANIM_TAG_CHAIN, gBattleAnimSpriteGfx_Chain, 0x1000, gBattleAnimSpritePal_Chain),
     BATTLE_ANIMATION(ANIM_TAG_MYSTIC_ORB, gBattleAnimSpriteGfx_MysticOrb, 0x0200, gBattleAnimSpritePal_MysticOrb),
     BATTLE_ANIMATION(ANIM_TAG_BUTTERFLY, gBattleAnimSpriteGfx_Butterfly, 0x0800, gBattleAnimSpritePal_Butterfly),
+    BATTLE_ANIMATION(ANIM_TAG_SPECTRAL_ORBS, gBattleAnimSpriteGfx_Orbs, 0x0180, gBattleAnimSpritePal_SpectralOrbs),
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
