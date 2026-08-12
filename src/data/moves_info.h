@@ -28986,7 +28986,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_CorpseRush,
     },
 
     [MOVE_TOXIC_CLAW] =
@@ -29297,7 +29297,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_TriRhapsody,
         .validApprenticeMove = TRUE,
     },
 
@@ -29325,7 +29325,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_AquaTrip,
     },
 
     [MOVE_ZAP_CHOP] =
@@ -29350,7 +29350,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_CHARGE},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_ZapChop,
     },
 
     [MOVE_PSYSLAP] =
@@ -29372,7 +29372,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_SMART : CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_Psyslap,
     },
 
     [MOVE_GOLD_RUSH] =
@@ -29451,7 +29451,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_OminousHit,
         .validApprenticeMove = TRUE,
     },
 
@@ -29476,7 +29476,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_PhantomSlash,
     },
 
     [MOVE_ALLOY_SHOT] =
@@ -29503,7 +29503,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Pound,
+        .battleAnimScript = gBattleAnimMove_AlloyShot,
         .validApprenticeMove = TRUE,
     },
 

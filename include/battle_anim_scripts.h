@@ -1067,6 +1067,14 @@ extern const u8 gBattleAnimMove_SpectralRay[];
 extern const u8 gBattleAnimMove_Judgement[];
 extern const u8 gBattleAnimMove_ZapFlare[];
 extern const u8 gBattleAnimMove_DivinePulse[];
+extern const u8 gBattleAnimMove_CorpseRush[];
+extern const u8 gBattleAnimMove_TriRhapsody[];
+extern const u8 gBattleAnimMove_AquaTrip[];
+extern const u8 gBattleAnimMove_ZapChop[];
+extern const u8 gBattleAnimMove_Psyslap[];
+extern const u8 gBattleAnimMove_OminousHit[];
+extern const u8 gBattleAnimMove_PhantomSlash[];
+extern const u8 gBattleAnimMove_AlloyShot[];
 
 // special animations
 extern const u8 gBattleAnimSpecial_LevelUp[];
