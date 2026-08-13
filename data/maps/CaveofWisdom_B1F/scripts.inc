@@ -36,7 +36,7 @@ CaveofWisdomB1F_EventScript_Mima::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, CaveofWisdomB1F_EventScript_DefeatedMima
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CaveofWisdomB1F_EventScript_RanFromMima
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CaveofWisdomB1F_EventScript_RanFromMima
-	setflag FLAG_DEFEATED_VIVIT
+	setflag FLAG_DEFEATED_MIMA
 	release
 	end
 	

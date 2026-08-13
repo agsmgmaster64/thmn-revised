@@ -1,8 +1,52 @@
 ArtisanCave_B1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ArtisanCave_B1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, ArtisanCave_B1F_OnResume
 	.byte 0
 
 ArtisanCave_B1F_OnTransition:
 	setflag FLAG_LANDMARK_ARTISAN_CAVE
+	call_if_unset FLAG_DEFEATED_LAST_WORD_RAN, ArtisanCave_B1F_EventScript_ShowLastWordRan
 	end
+	
+ArtisanCave_B1F_EventScript_ShowLastWordRan::
+	clearflag FLAG_HIDE_LAST_WORD_RAN
+	return
 
+ArtisanCave_B1F_OnResume::
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, CaveofWisdom_B1F_EventScript_TryRemoveLastWordRan
+	end
+	
+CaveofWisdom_B1F_EventScript_TryRemoveLastWordRan::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+ArtisanCave_B1F_EventScript_LastWordRan::	
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_LAST_WORD_RAN, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_LAST_WORD_RAN, 70
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, ArtisanCave_B1F_EventScript_DefeatedLastWordRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, ArtisanCave_B1F_EventScript_RanFromLastWordRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, ArtisanCave_B1F_EventScript_RanFromLastWordRan
+	setflag FLAG_DEFEATED_LAST_WORD_RAN
+	release
+	end
+	
+ArtisanCave_B1F_EventScript_DefeatedLastWordRan::
+	setflag FLAG_DEFEATED_LAST_WORD_RAN
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+	
+ArtisanCave_B1F_EventScript_RanFromLastWordRan::
+	setvar VAR_0x8004, SPECIES_LAST_WORD_RAN
+	goto Common_EventScript_LegendaryFlewAway
+	end
