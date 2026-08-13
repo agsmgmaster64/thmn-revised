@@ -1511,8 +1511,8 @@
 #define FLAG_EON_TICKET                             (SYSTEM_FLAGS + 0x86) // Unused Flag
 #define FLAG_OBTAINED_RUBY                          (SYSTEM_FLAGS + 0x87) // Unused Flag
 #define FLAG_MONCOZ_KNOWS_YOU                       (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
+#define FLAG_DEFEATED_MIMA                          (SYSTEM_FLAGS + 0x89) // Unused Flag
+#define FLAG_HIDE_MIMA                              (SYSTEM_FLAGS + 0x8A) // Unused Flag
 #define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
 #define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
 #define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag

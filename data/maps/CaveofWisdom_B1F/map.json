@@ -2,7 +2,7 @@
   "id": "MAP_CAVEOF_WISDOM_B1F",
   "name": "CaveofWisdom_B1F",
   "layout": "LAYOUT_CAVEOF_WISDOM_B1F_LAYOUT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_ARTISAN_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "CaveofWisdomB1F_EventScript_Mima",
+      "flag": "FLAG_HIDE_MIMA"
     }
   ],
   "warp_events": [
