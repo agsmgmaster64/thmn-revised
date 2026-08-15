@@ -356,8 +356,8 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageType = BUILDING_CAMOUFLAGE_TYPE,
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
-        .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumWallace,
+        .background = ENVIRONMENT_BACKGROUND(Wallace),
+        .palette = gBattleEnvironmentPalette_Wallace,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 

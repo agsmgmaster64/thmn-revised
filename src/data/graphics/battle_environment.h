@@ -51,7 +51,10 @@ const u16 gBattleEnvironmentPalette_StadiumSidney[] = INCGFX_U16("graphics/battl
 const u16 gBattleEnvironmentPalette_StadiumPhoebe[] = INCGFX_U16("graphics/battle_environment/stadium/phoebe.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumGlacia[] = INCGFX_U16("graphics/battle_environment/stadium/glacia.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumDrake[] = INCGFX_U16("graphics/battle_environment/stadium/drake.pal", ".gbapal");
-const u16 gBattleEnvironmentPalette_StadiumWallace[] = INCGFX_U16("graphics/battle_environment/stadium/wallace.pal", ".gbapal");
+
+const u32 gBattleEnvironmentTiles_Wallace[] = INCGFX_U32("graphics/battle_environment/champion/tiles.png", ".4bpp.smol");
+const u16 gBattleEnvironmentPalette_Wallace[] = INCGFX_U16("graphics/battle_environment/champion/palette.pal", ".gbapal");
+const u32 gBattleEnvironmentTilemap_Wallace[] = INCGFX_U32("graphics/battle_environment/champion/map.bin", ".smolTM");
 
 const u32 gBattleEnvironmentTiles_LSuwako[] = INCGFX_U32("graphics/battle_environment/lsuwako/tiles.png", ".4bpp.smol");
 const u16 gBattleEnvironmentPalette_LSuwako[] = INCGFX_U16("graphics/battle_environment/lsuwako/palette.pal", ".gbapal");
