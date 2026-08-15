@@ -1,5 +1,10 @@
 Surakarta_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Surakarta_OnTransition
 	.byte 0
+	
+Surakarta_OnTransition:
+	setflag FLAG_VISITED_SURAKARTA
+	end
 
 Surakarta_EventScript_ExhaustedJogger::
 	msgbox Surakarta_Text_ExhaustedJogger, MSGBOX_NPC

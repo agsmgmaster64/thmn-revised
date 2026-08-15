@@ -1,5 +1,10 @@
 Semarang_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Semarang_OnTransition
 	.byte 0
+	
+Semarang_OnTransition:
+	setflag FLAG_VISITED_SEMARANG
+	end
 
 Semarang_EventScript_CitySign::
 	msgbox Semarang_Text_CitySign, MSGBOX_SIGN

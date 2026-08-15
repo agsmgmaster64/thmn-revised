@@ -1508,21 +1508,21 @@
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
 #define FLAG_GRAND_LEAGUE_DEFEATED                  (SYSTEM_FLAGS + 0x85) // Formerly Unused Flag
-#define FLAG_EON_TICKET                             (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_OBTAINED_RUBY                          (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_MONCOZ_KNOWS_YOU                       (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_DEFEATED_MIMA                          (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_HIDE_MIMA                              (SYSTEM_FLAGS + 0x8A) // Unused Flag
-#define FLAG_HIDE_LAST_WORD_RAN                     (SYSTEM_FLAGS + 0x8B) // Unused Flag
-#define FLAG_DEFEATED_LAST_WORD_RAN                 (SYSTEM_FLAGS + 0x8C) // Unused Flag
-#define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
-#define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
-#define FLAG_UNUSED_0x8EF                           (SYSTEM_FLAGS + 0x8F) // Unused Flag
-#define FLAG_UNUSED_0x8F0                           (SYSTEM_FLAGS + 0x90) // Unused Flag
-#define FLAG_UNUSED_0x8F1                           (SYSTEM_FLAGS + 0x91) // Unused Flag
-#define FLAG_UNUSED_0x8F2                           (SYSTEM_FLAGS + 0x92) // Unused Flag
-#define FLAG_UNUSED_0x8F3                           (SYSTEM_FLAGS + 0x93) // Unused Flag
-#define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
+#define FLAG_EON_TICKET                             (SYSTEM_FLAGS + 0x86) // Formerly Unused Flag
+#define FLAG_OBTAINED_RUBY                          (SYSTEM_FLAGS + 0x87) // Formerly Unused Flag
+#define FLAG_MONCOZ_KNOWS_YOU                       (SYSTEM_FLAGS + 0x88) // Formerly Unused Flag
+#define FLAG_DEFEATED_MIMA                          (SYSTEM_FLAGS + 0x89) // Formerly Unused Flag
+#define FLAG_HIDE_MIMA                              (SYSTEM_FLAGS + 0x8A) // Formerly Unused Flag
+#define FLAG_HIDE_LAST_WORD_RAN                     (SYSTEM_FLAGS + 0x8B) // Formerly Unused Flag
+#define FLAG_DEFEATED_LAST_WORD_RAN                 (SYSTEM_FLAGS + 0x8C) // Formerly Unused Flag
+#define FLAG_MT_MERAPI_SAVED                        (SYSTEM_FLAGS + 0x8D) // Formerly Unused Flag
+#define FLAG_VISITED_YOGYAKARTA                     (SYSTEM_FLAGS + 0x8E) // Formerly Unused Flag
+#define FLAG_VISITED_SURAKARTA                      (SYSTEM_FLAGS + 0x8F) // Formerly Unused Flag
+#define FLAG_VISITED_SEMARANG                       (SYSTEM_FLAGS + 0x90) // Formerly Unused Flag
+#define FLAG_VISITED_SURABAYA                       (SYSTEM_FLAGS + 0x91) // Formerly Unused Flag
+#define FLAG_VISITED_MALANG                         (SYSTEM_FLAGS + 0x92) // Unused Flag (May use later, may not)
+#define FLAG_VISITED_LESSUN_ISLETS                  (SYSTEM_FLAGS + 0x93) // Unused Flag (May use later, may not)
+#define FLAG_HIDE_YOGYAKARTA_NPCS                   (SYSTEM_FLAGS + 0x94) // Unused Flag
 #define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
 #define FLAG_UNUSED_0x8F6                           (SYSTEM_FLAGS + 0x96) // Unused Flag
 #define FLAG_UNUSED_0x8F7                           (SYSTEM_FLAGS + 0x97) // Unused Flag

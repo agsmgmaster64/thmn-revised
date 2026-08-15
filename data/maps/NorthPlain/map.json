@@ -5,7 +5,7 @@
   "music": "MUS_THPPZGSK_378A_PRIMAL_SCENE",
   "region_map_section": "MAPSEC_SEVII_ISLE_24",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_VOLCANIC_ASH",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,

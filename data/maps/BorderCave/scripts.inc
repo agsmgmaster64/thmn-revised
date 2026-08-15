@@ -45,7 +45,9 @@ BorderCave_EventScript_ObtainRuby::
 	closemessage
 	giveitem ITEM_RUBY
 	setvar VAR_OBTAIN_RUBY, 1
+	addvar VAR_JAVA_GEMS_OBTAINED, 1
 	setflag FLAG_OBTAINED_RUBY
+	setflag FLAG_HIDE_YOGYAKARTA_NPCS
 	msgbox BorderCave_Text_ExplainRuby, MSGBOX_DEFAULT
 	closemessage
 	delay 30

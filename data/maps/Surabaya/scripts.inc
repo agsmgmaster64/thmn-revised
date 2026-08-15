@@ -1,5 +1,10 @@
 Surabaya_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Surabaya_OnTransition
 	.byte 0
+	
+Surabaya_OnTransition:
+	setflag FLAG_VISITED_SURABAYA
+	end
 
 Surabaya_EventScript_CitySign::
 	msgbox Surabaya_Text_CitySign, MSGBOX_SIGN
