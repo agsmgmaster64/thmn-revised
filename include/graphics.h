@@ -275,7 +275,9 @@ extern const u16 gBattleEnvironmentPalette_Rayquaza[];
 extern const u32 gBattleEnvironmentTiles_LSuwako[];
 extern const u32 gBattleEnvironmentTilemap_LSuwako[];
 extern const u16 gBattleEnvironmentPalette_LSuwako[];
-extern const u16 gBattleEnvironmentPalette_Groudon[];
+extern const u32 gBattleEnvironmentTiles_LUtsuho[];
+extern const u32 gBattleEnvironmentTilemap_LUtsuho[];
+extern const u16 gBattleEnvironmentPalette_LUtsuho[];
 extern const u16 gBattleEnvironmentPalette_BuildingGym[];
 extern const u16 gBattleEnvironmentPalette_BuildingLeader[];
 extern const u16 gBattleEnvironmentPalette_StadiumAqua[];
@@ -284,7 +286,9 @@ extern const u16 gBattleEnvironmentPalette_StadiumSidney[];
 extern const u16 gBattleEnvironmentPalette_StadiumPhoebe[];
 extern const u16 gBattleEnvironmentPalette_StadiumGlacia[];
 extern const u16 gBattleEnvironmentPalette_StadiumDrake[];
-extern const u16 gBattleEnvironmentPalette_StadiumWallace[];
+extern const u32 gBattleEnvironmentTiles_Wallace[];
+extern const u32 gBattleEnvironmentTilemap_Wallace[];
+extern const u16 gBattleEnvironmentPalette_Wallace[];
 
 // Pokédex
 extern const u32 gPokedexInterface_Gfx[];

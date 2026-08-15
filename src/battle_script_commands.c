@@ -6593,23 +6593,23 @@ static void Cmd_healpartystatus(void)
 
 static void Cmd_cursetarget(void)
 {
-    CMD_ARGS(const u8 *failInstr);
+    CMD_ARGS();
 
-    if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
-    {
-        gBattleScripting.animTurn = 1; // for move anim
-        gBattlescriptCurrInstr = cmd->failInstr;
-    }
-    else if (gBattleMons[gBattlerTarget].volatiles.cursed)
+    // if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
+    // {
+    //     gBattleScripting.animTurn = 1; // for move anim
+    //     gBattlescriptCurrInstr = cmd->failInstr;
+    // }
+    if (gBattleMons[gBattlerTarget].volatiles.cursed)
     {
         gBattlescriptCurrInstr = BattleScript_ButItFailed;
     }
     else
     {
-        gBattleScripting.animTurn = 0; // for move anim
+        // gBattleScripting.animTurn = 0; // for move anim
         gBattleMons[gBattlerTarget].volatiles.cursed = TRUE;
         SetPassiveDamageAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker) / 2);
-        gBattlescriptCurrInstr = cmd->nextInstr;
+        gBattlescriptCurrInstr = BattleScript_CurseAfterEffect;
     }
 }
 

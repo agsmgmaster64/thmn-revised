@@ -828,9 +828,8 @@
 	.byte B_SCR_OP_HEALPARTYSTATUS
 	.endm
 
-	.macro cursetarget failInstr:req
+	.macro cursetarget
 	.byte B_SCR_OP_CURSETARGET
-	.4byte \failInstr
 	.endm
 
 	.macro trysetspikes failInstr:req
