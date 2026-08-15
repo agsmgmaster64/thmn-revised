@@ -25914,8 +25914,6 @@ CreateConstrictBinding:
 	return
 
 gBattleAnimMove_Curse::
-	choosetwoturnanim CurseGhost, CurseStats
-CurseGhost:
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_CurseStretchingBlackBg, 5
 	waitforvisualfinish
@@ -25942,18 +25940,6 @@ CurseGhost:
 CurseGhostShakeFromNail:
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 4, 0, 10, 0
 	playsewithpan SE_M_BIND, SOUND_PAN_ATTACKER
-	return
-CurseStats:
-	createvisualtask AnimTask_SwayMon, 5, 0, 10, 1536, 3, ANIM_ATTACKER
-	waitforvisualfinish
-	delay 10
-	call CurseStats1
-	waitforvisualfinish
-	end
-CurseStats1:
-	playsewithpan SE_M_DRAGON_RAGE, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_DrawFallingWhiteLinesOnAttacker, 5
-	createvisualtask AnimTask_BlendColorCycle, 5, F_PAL_ATTACKER, 4, 2, 0, 10, RGB_RED
 	return
 	
 gBattleAnimMove_FocusStance::

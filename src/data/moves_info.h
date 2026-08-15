@@ -5174,15 +5174,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = COMBO_STARTER_CURSE,
         .contestComboMoves = {0},
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = STAT_CHANGE_EFFECT_MINUS,
-            .speed = 1,
-        },
-        {
-            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
-            .attack = 1,
-            .defense = 1,
-        }),
         .battleAnimScript = gBattleAnimMove_Curse,
         .validApprenticeMove = TRUE,
     },

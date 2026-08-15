@@ -2091,7 +2091,8 @@ BattleScript_NightmareWorked::
 
 BattleScript_EffectCurse::
 	attackcanceler
-	cursetarget BattleScript_CurseStatChange
+	cursetarget
+BattleScript_CurseAfterEffect::
 	attackanimation
 	waitanimation
 	healthbarupdate BS_ATTACKER
@@ -2099,10 +2100,6 @@ BattleScript_EffectCurse::
 	printstring STRINGID_PKMNLAIDCURSE
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_ATTACKER
-	goto BattleScript_MoveEnd
-
-BattleScript_CurseStatChange:
-	trymovestatchanges
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectProtect::

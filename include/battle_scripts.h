@@ -772,5 +772,6 @@ extern const u8 BattleScript_EffectGroupPrank[];
 extern const u8 BattleScript_EffectBeddyBye[];
 extern const u8 BattleScript_EffectFlight[];
 extern const u8 BattleScript_InvocationMessage[];
+extern const u8 BattleScript_CurseAfterEffect[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
