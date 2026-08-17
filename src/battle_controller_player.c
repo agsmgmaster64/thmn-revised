@@ -1809,7 +1809,7 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
     StringAppend(gDisplayedStringBattle, acc_num);
     u8 *descStart = StringAppend(gDisplayedStringBattle, gText_NewLine);
     u8 *descEnd = StringAppend(gDisplayedStringBattle, GetMoveDescription(move));
-    WrapFontIdToFit(descStart, descEnd, FONT_NORMAL, WindowWidthPx(B_WIN_MOVE_DESCRIPTION));
+    WrapFontIdToFit(descStart, descEnd, FONT_SMALL_NARROW, WindowWidthPx(B_WIN_MOVE_DESCRIPTION));
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_DESCRIPTION);
 
     if (gCategoryIconSpriteId == 0xFF)
