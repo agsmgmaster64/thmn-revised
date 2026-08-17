@@ -20,8 +20,13 @@
     },
     {
       "map": "MAP_SOUTHERN_PASS",
-      "offset": 32,
-      "direction": "down"
+      "offset": 36,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_MT_MERAPI_EXTERIOR",
+      "offset": 44,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -29,7 +34,7 @@
       "local_id": "LOCALID_YOGYAKARTA_MONCOZ",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 17,
-      "y": 34,
+      "y": 39,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -43,7 +48,7 @@
       "local_id": "LOCALID_YOGYAKARTA_MONCOZBOAT",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
       "x": 17,
-      "y": 35,
+      "y": 41,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,

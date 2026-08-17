@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_SOUTHERN_PASS",
-      "offset": -94,
+      "offset": -82,
       "direction": "down"
     },
     {

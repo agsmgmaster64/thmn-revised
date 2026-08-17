@@ -58,7 +58,7 @@ Route106_EventScript_JavaSailor::
 	delay 30
 	applymovement LOCALID_ROUTE106_MONCOZBOAT, Route106_Movement_MoncozBoatToJava
 	waitmovement
-	warp MAP_YOGYAKARTA, 17, 33
+	warp MAP_YOGYAKARTA, 17, 38
 	waitstate
 	release
 	end
@@ -75,7 +75,7 @@ Route106_EventScript_MoncozKnowsYou::
 	delay 30
 	applymovement LOCALID_ROUTE106_MONCOZBOAT, Route106_Movement_MoncozBoatToJava
 	waitmovement
-	warp MAP_YOGYAKARTA, 17, 33
+	warp MAP_YOGYAKARTA, 17, 38
 	waitstate
 	release
 	end

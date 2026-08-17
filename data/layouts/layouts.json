@@ -5750,8 +5750,8 @@
     {
       "id": "LAYOUT_YOGYAKARTA",
       "name": "Yogyakarta_Layout",
-      "width": 50,
-      "height": 50,
+      "width": 52,
+      "height": 54,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Yogyakarta/border.bin",
@@ -5828,7 +5828,7 @@
     {
       "id": "LAYOUT_NORTH_PLAIN",
       "name": "NorthPlain_Layout",
-      "width": 24,
+      "width": 26,
       "height": 100,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
@@ -5854,8 +5854,8 @@
     {
       "id": "LAYOUT_SOUTHERN_PASS",
       "name": "SouthernPass_Layout",
-      "width": 100,
-      "height": 20,
+      "width": 90,
+      "height": 35,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/SouthernPass/border.bin",
@@ -6231,8 +6231,8 @@
     {
       "id": "LAYOUT_MOUNT_MERAPI",
       "name": "MountMerapi_Layout",
-      "width": 50,
-      "height": 60,
+      "width": 52,
+      "height": 62,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/MtMerapi_Exterior/border.bin",

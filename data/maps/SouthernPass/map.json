@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_YOGYAKARTA",
-      "offset": -32,
-      "direction": "up"
+      "offset": -36,
+      "direction": "left"
     },
     {
       "map": "MAP_TRAPPY_PASS",
-      "offset": 94,
+      "offset": 82,
       "direction": "up"
     },
     {

@@ -17,41 +17,46 @@
       "map": "MAP_NORTH_PLAIN",
       "offset": -38,
       "direction": "left"
+    },
+    {
+      "map": "MAP_YOGYAKARTA",
+      "offset": -44,
+      "direction": "down"
     }
   ],
   "object_events": [],
   "warp_events": [
     {
       "x": 31,
-      "y": 41,
+      "y": 43,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LEIRIN",
       "dest_warp_id": "0"
     },
     {
       "x": 42,
-      "y": 14,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LKOISHI",
       "dest_warp_id": "0"
     },
     {
       "x": 17,
-      "y": 21,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LSUIKA",
       "dest_warp_id": "0"
     },
     {
       "x": 34,
-      "y": 5,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LREMILIA",
       "dest_warp_id": "0"
     },
     {
       "x": 24,
-      "y": 9,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LTENSHI",
       "dest_warp_id": "0"
