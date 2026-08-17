@@ -2092,7 +2092,6 @@ BattleScript_NightmareWorked::
 BattleScript_EffectCurse::
 	attackcanceler
 	cursetarget
-BattleScript_CurseAfterEffect::
 	attackanimation
 	waitanimation
 	healthbarupdate BS_ATTACKER

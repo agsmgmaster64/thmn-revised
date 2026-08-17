@@ -6609,7 +6609,7 @@ static void Cmd_cursetarget(void)
         // gBattleScripting.animTurn = 0; // for move anim
         gBattleMons[gBattlerTarget].volatiles.cursed = TRUE;
         SetPassiveDamageAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker) / 2);
-        gBattlescriptCurrInstr = BattleScript_CurseAfterEffect;
+        gBattlescriptCurrInstr = cmd->nextInstr;
     }
 }
 
