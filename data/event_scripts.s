@@ -1187,11 +1187,21 @@ EventScript_SetBrineyLocation_Route109::
 
 @ scripts/notices.inc? signs.inc? See comment about text/notices.inc
 Common_EventScript_ShowPokemartSign::
+	goto_if_set FLAG_PLAYER_IN_JAVA, Common_EventScript_ShowBnkaMartSign
 	msgbox gText_PokemartSign, MSGBOX_SIGN
+	end
+	
+Common_EventScript_ShowBnkaMartSign::
+	msgbox gText_BnkamartSign, MSGBOX_SIGN
 	end
 
 Common_EventScript_ShowPokemonCenterSign::
+	goto_if_set FLAG_PLAYER_IN_JAVA, Common_EventScript_ShowBnkaCenterSign
 	msgbox gText_PokemonCenterSign, MSGBOX_SIGN
+	end
+	
+Common_EventScript_ShowBnkaCenterSign::
+	msgbox gText_BonekaCenterSign, MSGBOX_SIGN
 	end
 
 Common_ShowEasyChatScreen::
