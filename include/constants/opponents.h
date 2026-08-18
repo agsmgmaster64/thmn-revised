@@ -1219,8 +1219,8 @@
 #define TRAINER_SIN                         1212
 #define TRAINER_RUBY                        1213
 #define TRAINER_KAREL                       1214
-#define TRAINER_NEW_1215                    1215
-#define TRAINER_NEW_1216                    1216
+#define TRAINER_ZEI_CHAN_2                  1215
+#define TRAINER_ZEI_CHAN_1                  1216
 #define TRAINER_NEW_1217                    1217
 #define TRAINER_NEW_1218                    1218
 #define TRAINER_NEW_1219                    1219
@@ -1267,7 +1267,7 @@
 #define TRAINER_NEW_1260                    1260
 #define TRAINER_ICHII_2                     1261
 #define TRAINER_NEW_1262                    1262
-#define TRAINER_NEW_1263                    1263
+#define TRAINER_EATHERNA_AND_YUKA_2         1263
 #define TRAINER_DARK_SABER_2                1264
 #define TRAINER_KENSHIRO_2                  1265
 #define TRAINER_KAZUKI_2                    1266
@@ -1292,7 +1292,7 @@
 #define TRAINER_NEW_1285                    1285
 #define TRAINER_BLUE_50                     1286
 #define TRAINER_NEW_1287                    1287
-#define TRAINER_NEW_1288                    1288
+#define TRAINER_EATHERNA_AND_YUKA_1         1288
 #define TRAINER_NEW_1289                    1289
 #define TRAINER_NEW_1290                    1290
 #define TRAINER_NEW_1291                    1291

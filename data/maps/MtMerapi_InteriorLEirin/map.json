@@ -2,7 +2,7 @@
   "id": "MAP_MT_MERAPI_INTERIOR_LEIRIN",
   "name": "MtMerapi_InteriorLEirin",
   "layout": "LAYOUT_MT_MERAPI_INTERIOR_LEIRIN_LAYOUT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_THPPME_411_LAST_REMOTE",
   "region_map_section": "MAPSEC_TANOBY_KEY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

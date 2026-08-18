@@ -37157,6 +37157,813 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_NORTH_PLAIN",
+          "base_label": "gNorthPlain",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_YUUKA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_TOKIKO"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_AYA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_LILY_WHITE"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_LILY_BLACK"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_KEINE"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_YUKARI"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_PATCHOULI"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_ORANGE"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_GOLIATH"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_ORANGE"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_GOLIATH"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_KOMACHI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_CHIYURI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_MURASA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_NITORI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NAMAZU"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_HINA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MT_MERAPI_EXTERIOR",
+          "base_label": "gMtMerapi_Exterior",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 53,
+                "max_level": 53,
+                "species": "SPECIES_EXTRA_MOKOU"
+              },
+              {
+                "min_level": 53,
+                "max_level": 53,
+                "species": "SPECIES_EXTRA_YUKI"
+              },
+              {
+                "min_level": 53,
+                "max_level": 53,
+                "species": "SPECIES_EXTRA_UTSUHO"
+              },
+              {
+                "min_level": 54,
+                "max_level": 54,
+                "species": "SPECIES_EXTRA_MOKOU"
+              },
+              {
+                "min_level": 54,
+                "max_level": 54,
+                "species": "SPECIES_EXTRA_YUKI"
+              },
+              {
+                "min_level": 54,
+                "max_level": 54,
+                "species": "SPECIES_EXTRA_YUUGI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_RIN"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_YUUGI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_UTSUHO"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_RIN"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_UTSUHO"
+              },
+              {
+                "min_level": 60,
+                "max_level": 60,
+                "species": "SPECIES_EXTRA_KASEN"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_SUWAKO"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_KOMACHI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_CHIYURI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_MURASA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_NITORI"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_SANNYO"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_SANNYO"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_SANNYO"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_SANNYO"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_SANNYO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_YOGYAKARTA",
+          "base_label": "gYogyakarta",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_TEWI"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_REISEN"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_LOUISE"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_ARIYA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_MAI"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_MOMIJI"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_MYSTIA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_DAIYOUSEI"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_RIKAKO"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_KAGUYA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_RIKAKO"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_KAGUYA"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_KOMACHI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_CHIYURI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_MURASA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_NITORI"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_WAKASAGIHIME"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_CHIBI_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_NORMAL_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_HINA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_EXTRA_HINA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MT_MERAPI_INTERIOR_LEIRIN",
+          "base_label": "gMtMerapi_InteriorLEirin",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_EIRIN"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_EIRIN"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_EIRIN"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_EIRIN"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_EIRIN"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_EIRIN"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_EIRIN"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_EIRIN"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_EIRIN"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_ADVENT_EIRIN"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_EXTRA_EIRIN"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_ADVENT_EIRIN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MT_MERAPI_INTERIOR_LSUIKA",
+          "base_label": "gMtMerapi_Interior_LSuika",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_SUIKA"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_SUIKA"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_SUIKA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_SUIKA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_SUIKA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_SUIKA"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_SUIKA"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_SUIKA"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_SUIKA"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_CHIBI_MELON"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_EXTRA_SUIKA"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_CHIBI_MELON"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MT_MERAPI_INTERIOR_LKOISHI",
+          "base_label": "gMtMerapi_Interior_LKoishi",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_KOISHI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_KOISHI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_KOISHI"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_KOISHI"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_KOISHI"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_KOISHI"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_KOISHI"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_KOISHI"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_KOISHI"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_ZOMBIE_FAIRY"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_EXTRA_KOISHI"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_ZOMBIE_FAIRY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MT_MERAPI_INTERIOR_LREMILIA",
+          "base_label": "gMtMerapi_Interior_LRemilia",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_REMILIA"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_REMILIA"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_REMILIA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_REMILIA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_REMILIA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_REMILIA"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_REMILIA"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_REMILIA"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_REMILIA"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_ADVENT_REMILIA"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_EXTRA_REMILIA"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_ADVENT_REMILIA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MT_MERAPI_INTERIOR_LTENSHI",
+          "base_label": "gMtMerapi_Interior_LTenshi",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_TENSHI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_TENSHI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_CHIBI_TENSHI"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_TENSHI"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_TENSHI"
+              },
+              {
+                "min_level": 57,
+                "max_level": 59,
+                "species": "SPECIES_NORMAL_TENSHI"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_TENSHI"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_TENSHI"
+              },
+              {
+                "min_level": 59,
+                "max_level": 62,
+                "species": "SPECIES_EXTRA_TENSHI"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_EXTRA_SHION"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_EXTRA_TENSHI"
+              },
+              {
+                "min_level": 62,
+                "max_level": 64,
+                "species": "SPECIES_EXTRA_SHION"
+              }
+            ]
+          }
         }
       ]
     },

@@ -1527,8 +1527,8 @@
 #define FLAG_HIDE_AICHI_PRESENCE                    (SYSTEM_FLAGS + 0x96) // Unused Flag
 #define FLAG_UNLOCK_SUGIHO_OMNISHOP                 (SYSTEM_FLAGS + 0x97) // Unused Flag
 #define FLAG_PLAYER_IN_JAVA                         (SYSTEM_FLAGS + 0x98) // Unused Flag
-#define FLAG_DEFEATED_HARIS                         (SYSTEM_FLAGS + 0x99) // Unused Flag
-#define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A) // Unused Flag
+#define FLAG_HIDE_MT_MERAPI_NPCS                    (SYSTEM_FLAGS + 0x99) // Unused Flag
+#define FLAG_HIDE_ZEI_CHAN                          (SYSTEM_FLAGS + 0x9A) // Unused Flag
 #define FLAG_UNUSED_0x8FB                           (SYSTEM_FLAGS + 0x9B) // Unused Flag
 #define FLAG_UNUSED_0x8FC                           (SYSTEM_FLAGS + 0x9C) // Unused Flag
 #define FLAG_UNUSED_0x8FD                           (SYSTEM_FLAGS + 0x9D) // Unused Flag

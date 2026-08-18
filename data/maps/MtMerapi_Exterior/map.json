@@ -2,7 +2,7 @@
   "id": "MAP_MT_MERAPI_EXTERIOR",
   "name": "MtMerapi_Exterior",
   "layout": "LAYOUT_MOUNT_MERAPI",
-  "music": "MUS_DUMMY",
+  "music": "MUS_THPPME_411_LAST_REMOTE",
   "region_map_section": "MAPSEC_TANOBY_KEY",
   "requires_flash": false,
   "weather": "WEATHER_VOLCANIC_ASH",
@@ -24,7 +24,179 @@
       "direction": "down"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 30,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_OldmanSugiho",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 35,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_MrMNPCFourCaves",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 39,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "FLAG_HIDE_MT_MERAPI_NPCS",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Iridiana",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 41,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "FLAG_HIDE_MT_MERAPI_NPCS",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Eatherna",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "x": 42,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Yuka",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 37,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_HealingWoman",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 23,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Brahm",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 41,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Kazuki",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Kenshiro",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "local_id": "LOCALID_AICHI",
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 19,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Aichi",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 33,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_DarkSaber",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "x": 15,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_Kazumi",
+      "flag": "FLAG_HIDE_MT_MERAPI_NPCS"
+    },
+    {
+      "local_id": "LOCALID_ZEI_CHAN",
+      "graphics_id": "OBJ_EVENT_GFX_MARIBEL_NORMAL",
+      "x": 24,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMerapi_Exterior_EventScript_ZeiChan",
+      "flag": "FLAG_HIDE_ZEI_CHAN"
+    }
+  ],
   "warp_events": [
     {
       "x": 31,
@@ -35,34 +207,62 @@
     },
     {
       "x": 42,
-      "y": 16,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LKOISHI",
       "dest_warp_id": "0"
     },
     {
       "x": 17,
-      "y": 23,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LSUIKA",
       "dest_warp_id": "0"
     },
     {
       "x": 34,
-      "y": 7,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LREMILIA",
       "dest_warp_id": "0"
     },
     {
       "x": 24,
-      "y": 11,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_MT_MERAPI_INTERIOR_LTENSHI",
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_MR_M_ASKS_FOR_HELP",
+      "var_value": "0",
+      "script": "MtMerapi_Exterior_EventScript_MrMTileAsksForHelp"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_AICHI_MT_MERAPI",
+      "var_value": "0",
+      "script": "MtMerapi_Exterior_EventScript_MeetingAichi1"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_AICHI_MT_MERAPI",
+      "var_value": "0",
+      "script": "MtMerapi_Exterior_EventScript_MeetingAichi2"
+    }
+  ],
   "bg_events": [],
   "region": "REGION_HOENN"
 }

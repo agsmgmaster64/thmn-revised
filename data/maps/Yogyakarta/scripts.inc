@@ -140,14 +140,17 @@ Yogyakarta_EventScript_KazumiFairEnough::
 	end
 	
 Yogyakarta_EventScript_Moncoz::
+	lock
+	faceplayer
 	msgbox Yogyakarta_Text_DoYouWantToGo, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, NO, Yogyakarta_Event_ComeBackLater
 	msgbox Yogyakarta_Text_LetsGo, MSGBOX_NPC
 	applymovement LOCALID_YOGYAKARTA_MONCOZ, Yogyakarta_Movement_MoncozToBoat
 	waitmovement
 	delay 21
-	applymovement LOCALID_PLAYER, Yogyakarta_Movement_PlayerToBoat
-	waitmovement
+	call_if_eq VAR_FACING, DIR_WEST, Yogyakarta_EventScript_PlayerToBoatWest
+	call_if_eq VAR_FACING, DIR_EAST, Yogyakarta_EventScript_PlayerToBoatEast
+	call_if_eq VAR_FACING, DIR_SOUTH, Yogyakarta_EventScript_PlayerToBoatSouth
 	delay 30
 	applymovement LOCALID_YOGYAKARTA_MONCOZBOAT, Yogyakarta_Movement_MoncozBoatToHoenn
 	waitmovement
@@ -158,8 +161,25 @@ Yogyakarta_EventScript_Moncoz::
 	
 Yogyakarta_Event_ComeBackLater::
 	msgbox Yogyakarta_Text_ComeBackLater, MSGBOX_NPC
+	applymovement LOCALID_YOGYAKARTA_MONCOZ, Common_Movement_FaceUp
+	waitmovement
 	release
 	end
+	
+Yogyakarta_EventScript_PlayerToBoatSouth::
+	applymovement LOCALID_PLAYER, Yogyakarta_Movement_PlayerToBoatSouth
+	waitmovement
+	return
+	
+Yogyakarta_EventScript_PlayerToBoatWest::
+	applymovement LOCALID_PLAYER, Yogyakarta_Movement_PlayerToBoatWest
+	waitmovement
+	return
+	
+Yogyakarta_EventScript_PlayerToBoatEast::
+	applymovement LOCALID_PLAYER, Yogyakarta_Movement_PlayerToBoatEast
+	waitmovement
+	return
 	
 Yogyakarta_EventScript_ShowPrismCave::
 	setmetatile 7, 6, METATILE_General_RockWall_GrassBase_LeftCornerUp, TRUE
@@ -524,7 +544,8 @@ Yogyakarta_Text_SugihoPreOmnishop2:
 	.string "How may I serve you?$"
 	
 Yogyakarta_Text_KazumiNewFace:
-	.string "???: Hi there! You're a new face.$"
+	.string "???: Hi there! I saw you on the\n"
+	.string "mountain earlier.$"
 	
 Yogyakarta_Text_KazumiIntroduction:
 	.string "Kazumi: I'm Kazumi, a member of\n"
@@ -606,8 +627,22 @@ Yogyakarta_Movement_MoncozToBoat:
 	set_invisible
 	step_end
 
-Yogyakarta_Movement_PlayerToBoat:
+Yogyakarta_Movement_PlayerToBoatSouth:
 	walk_down
+	walk_down
+	delay_8
+	set_invisible
+	step_end
+	
+Yogyakarta_Movement_PlayerToBoatWest:
+	walk_left
+	walk_down
+	delay_8
+	set_invisible
+	step_end
+	
+Yogyakarta_Movement_PlayerToBoatEast:
+	walk_right
 	walk_down
 	delay_8
 	set_invisible

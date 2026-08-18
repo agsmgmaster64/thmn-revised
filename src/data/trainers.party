@@ -25522,7 +25522,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Great
 - Memento
 
-=== TRAINER_NEW_1215 ===
+=== TRAINER_ZEI_CHAN_2 ===
 Name: Zei-chan
 Class: Arena Tycoon
 Pic: May
@@ -25531,7 +25531,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Biten @ King's Rock
+Extra Biten @ King's Rock
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25542,7 +25542,7 @@ Ball: Ultra
 - Bullet Seed
 - Triple Axel
 
-Normal Eiki @ Lum Berry
+Extra Eiki @ Lum Berry
 Level: 76
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25553,7 +25553,7 @@ Ball: Ultra
 - Doom Desire
 - Wish
 
-Normal Nina @ TwistedSpoon
+Extra Nina @ TwistedSpoon
 Level: 76
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25564,7 +25564,7 @@ Ball: Ultra
 - Ice Beam
 - Mermaid Song
 
-Normal Koishi @ Leftovers
+Extra Koishi @ Leftovers
 Level: 77
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25575,7 +25575,7 @@ Ball: Ultra
 - Dream Eater
 - Eerie Wave
 
-Normal Yamame @ Hard Stone
+Extra Yamame @ Hard Stone
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25586,7 +25586,7 @@ Ball: Ultra
 - Leech Life
 - Accelerock
 
-Normal Flandre @ Sitrus Berry
+Extra Flandre @ Sitrus Berry
 Level: 78
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25597,7 +25597,7 @@ Ball: Premier
 - Gunk Shot
 - Steel Fist
 
-=== TRAINER_NEW_1216 ===
+=== TRAINER_ZEI_CHAN_1 ===
 Name: Zei-chan
 Class: Arena Tycoon
 Pic: May
@@ -25606,7 +25606,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Biten @ King's Rock
+Extra Biten @ King's Rock
 Level: 62
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25617,7 +25617,7 @@ Ball: Ultra
 - Bullet Seed
 - Triple Axel
 
-Normal Eiki @ Lum Berry
+Extra Eiki @ Lum Berry
 Level: 63
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25628,7 +25628,7 @@ Ball: Ultra
 - Doom Desire
 - Wish
 
-Normal Nina @ TwistedSpoon
+Extra Nina @ TwistedSpoon
 Level: 63
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25639,7 +25639,7 @@ Ball: Ultra
 - Ice Beam
 - Mermaid Song
 
-Normal Koishi @ Leftovers
+Extra Koishi @ Leftovers
 Level: 64
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25650,7 +25650,7 @@ Ball: Ultra
 - Dream Eater
 - Eerie Wave
 
-Normal Yamame @ Hard Stone
+Extra Yamame @ Hard Stone
 Level: 62
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25661,7 +25661,7 @@ Ball: Ultra
 - Leech Life
 - Accelerock
 
-Normal Flandre @ Sitrus Berry
+Extra Flandre @ Sitrus Berry
 Level: 65
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -28962,8 +28962,8 @@ Ball: Premier
 - Blizzard
 - Mermaid Song
 
-=== TRAINER_NEW_1263 ===
-Name: Eath ? Yuka
+=== TRAINER_EATHERNA_AND_YUKA_2 ===
+Name: Eath & Yuka
 Class: Dome Ace
 Pic: Young Couple
 Gender: Male
@@ -30681,8 +30681,8 @@ Ball: Ultra
 - Dark Pulse
 - Air Slash
 
-=== TRAINER_NEW_1288 ===
-Name: Eath ? Yuka
+=== TRAINER_EATHERNA_AND_YUKA_1 ===
+Name: Eath & Yuka
 Class: Pkmn Trainer 2
 Pic: Young Couple
 Gender: Male

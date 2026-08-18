@@ -4,7 +4,7 @@ YogyakartaBaseCamp_MapScripts::
 YogyakartaBaseCamp_EventScript_DarkSaberFight::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_HARIS, YogyakartaBaseCamp_EventScript_DarkSaberRematch
+	goto_if_set FLAG_GRAND_LEAGUE_DEFEATED, YogyakartaBaseCamp_EventScript_DarkSaberRematch
 	msgbox YogyakartaBaseCamp_Text_WantToTestOurPower, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, NO, YogyakartaBaseCamp_EventScript_RejectedDarkSaberFight
 	msgbox YogyakartaBaseCamp_Text_TrueDarkPower, MSGBOX_DEFAULT
@@ -34,7 +34,7 @@ YogyakartaBaseCamp_EventScript_DarkSaberRematch::
 YogyakartaBaseCamp_EventScript_KenshiroFight::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_HARIS, YogyakartaBaseCamp_EventScript_KenshiroRematch
+	goto_if_set FLAG_GRAND_LEAGUE_DEFEATED, YogyakartaBaseCamp_EventScript_KenshiroRematch
 	msgbox YogyakartaBaseCamp_Text_InterestingBattle, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, NO, YogyakartaBaseCamp_EventScript_RejectedKenshiroFight
 	msgbox YogyakartaBaseCamp_Text_LetsGo, MSGBOX_DEFAULT
@@ -63,7 +63,7 @@ YogyakartaBaseCamp_EventScript_KenshiroRematch::
 YogyakartaBaseCamp_EventScript_KazukiFight::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_HARIS, YogyakartaBaseCamp_EventScript_KazukiRematch
+	goto_if_set FLAG_GRAND_LEAGUE_DEFEATED, YogyakartaBaseCamp_EventScript_KazukiRematch
 	msgbox YogyakartaBaseCamap_Text_NotHandsomeButGoodAtBattles, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, NO, YogyakartaBaseCamp_EventScript_RejectedKazukiFight
 	closemessage
