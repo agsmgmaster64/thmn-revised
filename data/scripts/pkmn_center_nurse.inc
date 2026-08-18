@@ -10,6 +10,19 @@ Common_EventScript_PkmnCenterNurse::
 	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
 	goto_if_eq VAR_RESULT, NO, EventScript_PkmnCenterNurse_Goodbye
 	end
+	
+Common_EventScript_JavaBnkaCenterNurse::
+	lock
+	faceplayer
+	setvar VAR_0x8004, 0
+.if !IS_FRLG
+	specialvar VAR_RESULT, CountPlayerTrainerStars
+	goto_if_eq VAR_RESULT, 4, EventScript_PkmnCenterNurse_GoldCard
+.endif
+	msgbox gText_WouldYouLikeToRestYourBnka, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_JavaPkmnCenterNurse_HealBnka
+	goto_if_eq VAR_RESULT, NO, EventScript_PkmnCenterNurse_Goodbye
+	end
 
 EventScript_PkmnCenterNurse_Goodbye::
 	message gText_WeHopeToSeeYouAgain
@@ -25,6 +38,16 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	goto_if_unset FLAG_POKERUS_EXPLAINED, EventScript_PkmnCenterNurse_CheckPokerus
 	goto EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
 	end
+	
+EventScript_JavaPkmnCenterNurse_HealBnka::
+	incrementgamestat GAME_STAT_USED_POKECENTER
+	call_if_eq VAR_0x8004, 0, EventScript_PkmnCenterNurse_IllTakeYourBnka
+	call_if_eq VAR_0x8004, 1, EventScript_PkmnCenterNurse_IllTakeYourBnka2
+	waitmessage
+	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
+	goto_if_unset FLAG_POKERUS_EXPLAINED, EventScript_PkmnCenterNurse_CheckPokerus
+	goto EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
+	end
 
 EventScript_PkmnCenterNurse_IllTakeYourPkmn::
 	message gText_IllTakeYourPkmn
@@ -33,6 +56,15 @@ EventScript_PkmnCenterNurse_IllTakeYourPkmn::
 EventScript_PkmnCenterNurse_IllTakeYourPkmn2::
 	message gText_IllTakeYourPkmn2
 	return
+	
+EventScript_PkmnCenterNurse_IllTakeYourBnka::
+	message gText_IllTakeYourBnka
+	return
+	
+EventScript_PkmnCenterNurse_IllTakeYourBnka2::
+	message gText_IllTakeYourBnka2
+	return
+
 
 EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	hidefollower 0
@@ -64,6 +96,15 @@ EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::
 EventScript_PkmnCenterNurse_ReturnPkmn::
 	goto_if_eq VAR_0x8004, 1, EventScript_PkmnCenterNurse_ReturnPkmn2
 	message gText_RestoredPkmnToFullHealth
+	waitmessage
+	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
+	waitmovement 0
+	message gText_WeHopeToSeeYouAgain
+	return
+	
+EventScript_PkmnCenterNurse_ReturnBnka::
+	goto_if_eq VAR_0x8004, 1, EventScript_PkmnCenterNurse_ReturnPkmn2
+	message gText_RestoredBnkaToFullHealth
 	waitmessage
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
@@ -101,6 +142,7 @@ EventScript_PkmnCenterNurse_ExplainPokerus::
 	return
 
 EventScript_PkmnCenterNurse_GoldCard::
+	goto_if_set FLAG_PLAYER_IN_JAVA, EventScript_JavaPkmnCenterNurse_GoldCardJava
 	goto_if_set FLAG_NURSE_MENTIONS_GOLD_CARD, EventScript_PkmnCenterNurse_AskForUsual
 	setflag FLAG_NURSE_MENTIONS_GOLD_CARD
 	msgbox gText_WelcomeCutShort, MSGBOX_DEFAULT
@@ -110,6 +152,20 @@ EventScript_PkmnCenterNurse_GoldCard::
 	applymovement VAR_0x800B, Common_Movement_Delay48
 	waitmovement 0
 	msgbox gText_NoticesGoldCard, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_GoldCardHealPkmn
+	message gText_WeHopeToSeeYouAgain2
+	return
+	
+EventScript_JavaPkmnCenterNurse_GoldCardJava::
+	goto_if_set FLAG_NURSE_MENTIONS_GOLD_CARD, EventScript_PkmnCenterNurse_AskForUsual
+	setflag FLAG_NURSE_MENTIONS_GOLD_CARD
+	msgbox gText_WelcomeCutShortJava, MSGBOX_DEFAULT
+	playse SE_PIN
+	applymovement VAR_0x800B, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement VAR_0x800B, Common_Movement_Delay48
+	waitmovement 0
+	msgbox gText_NoticesGoldCardJava, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_GoldCardHealPkmn
 	message gText_WeHopeToSeeYouAgain2
 	return

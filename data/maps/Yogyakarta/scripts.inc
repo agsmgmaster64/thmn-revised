@@ -5,6 +5,7 @@ Yogyakarta_MapScripts::
 	
 Yogyakarta_OnLoad:
 	call_if_eq VAR_JAVA_GEMS_OBTAINED, 7, Yogyakarta_EventScript_ShowPrismCave
+	setflag FLAG_PLAYER_IN_JAVA
 	end
 	
 Yogyakarta_OnTransition:

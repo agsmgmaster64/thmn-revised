@@ -1067,10 +1067,22 @@ EventScript_WhiteOut::
 
 EventScript_AfterWhiteOutHeal::
 	lockall
+	goto_if_set FLAG_PLAYER_IN_JAVA, EventScript_AfterWhiteOutJavaHeal
 	msgbox gText_FirstShouldRestoreMonsHealth
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
 	call_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsgPreFirstBoss
 	call_if_set FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsg
+	applymovement VAR_LAST_TALKED, Movement_PkmnCenterNurse_Bow
+	waitmovement 0
+	fadedefaultbgm
+	releaseall
+	end
+	
+EventScript_AfterWhiteOutJavaHeal::
+	msgbox gText_FirstShouldRestoreBnkaHealth
+	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
+	call_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsgPreFirstBoss
+	call_if_set FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsgJava
 	applymovement VAR_LAST_TALKED, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	fadedefaultbgm
@@ -1083,6 +1095,10 @@ EventScript_AfterWhiteOutHealMsgPreFirstBoss::
 
 EventScript_AfterWhiteOutHealMsg::
 	msgbox gText_MonsHealed
+	return
+	
+EventScript_AfterWhiteOutHealMsgJava::
+	msgbox gText_BnkaHealed
 	return
 
 EventScript_AfterWhiteOutMomHeal::
@@ -1362,9 +1378,17 @@ Common_EventScript_PlayerHandedOverTheItem::
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "“Selected items for your convenience!”\n"
+	.string "Puppet Mart$"
+
+gText_BnkamartSign::
+	.string "“Selected items for your convenience!”\n"
 	.string "Bonéka Mart$"
 
 gText_PokemonCenterSign::
+	.string "“Rejuvenate your tired partners!”\n"
+	.string "Puppet Center$"
+	
+gText_BonekaCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
 	.string "Bonéka Center$"
 
@@ -1386,12 +1410,12 @@ gText_SelectWithoutRegisteredItem::
 	.string "registered for easy use.$"
 
 gText_PokemonTrainerSchoolEmail::
-	.string "There's an e-mail from Bonéka Trainer\n"
+	.string "There's an e-mail from Puppet Trainer\n"
 	.string "School.\p"
 	.string "… … … … … …\p"
-	.string "A Bonéka may learn up to four moves.\p"
+	.string "A Puppet may learn up to four moves.\p"
 	.string "A Trainer's expertise is tested on the\n"
-	.string "move sets chosen for Bonéka.\p"
+	.string "move sets chosen for Puppet.\p"
 	.string "… … … … … …$"
 
 gText_PlayerHouseBootPC::
@@ -1406,13 +1430,27 @@ gText_UnusedNicknameReceivedPokemon::
 
 gText_PlayerWhitedOut::
 	.string "{PLAYER} is out of usable\n"
-	.string "Bonéka!\p{PLAYER} whited out!$"
-
+	.string "Puppets!\p{PLAYER} whited out!$"
+	
 gText_FirstShouldRestoreMonsHealth::
 	.string "First, you should restore your\n"
-	.string "Bonéka to full health.$"
+	.string "Puppets to full health.$"
 
+gText_FirstShouldRestoreBnkaHealth::
+	.string "First, you should restore your\n"
+	.string "Bonéka to full health.$"
+	
 gText_MonsHealedShouldBuyPotions::
+	.string "Your Puppets have been healed\n"
+	.string "to perfect health.\p"
+	.string "If your Puppet's energy, HP,\n"
+	.string "is down, please come see us.\p"
+	.string "If you're planning to go far in the\n"
+	.string "field, you should buy some Potions\l"
+	.string "at the Puppet Mart.\p"
+	.string "We hope you excel!$"
+
+gText_BnkaHealedShouldBuyPotions::
 	.string "Your Bonéka have been healed\n"
 	.string "to perfect health.\p"
 	.string "If your Bonéka's energy, HP,\n"
@@ -1421,8 +1459,13 @@ gText_MonsHealedShouldBuyPotions::
 	.string "field, you should buy some Potions\l"
 	.string "at the Bonéka Mart.\p"
 	.string "We hope you excel!$"
-
+	
 gText_MonsHealed::
+	.string "Your Puppets have been healed\n"
+	.string "to perfect health.\p"
+	.string "We hope you excel!$"
+
+gText_BnkaHealed::
 	.string "Your Bonéka have been healed\n"
 	.string "to perfect health.\p"
 	.string "We hope you excel!$"
@@ -1437,22 +1480,22 @@ gText_HadQuiteAnExperienceTakeRest::
 
 gText_MomExplainHPGetPotions::
 	.string "Mom: Oh, good! You and your\n"
-	.string "Bonéka are looking great.\p"
+	.string "Puppets are looking great.\p"
 	.string "I just heard from {STR_VAR_1}.\p"
-	.string "He said that Bonéka's energy is\n"
+	.string "He said that Puppet's energy is\n"
 	.string "measured in HP.\p"
 	.string "If your Bonéka lose their HP,\n"
 	.string "you can restore them at any\l"
-	.string "Bonéka Center.\p"
+	.string "Puppet Center.\p"
 	.string "If you're going to travel far away,\n"
 	.string "the smart Trainer stocks up on\l"
-	.string "Potions at the Bonéka Mart.\p"
+	.string "Potions at the Puppet Mart.\p"
 	.string "Make me proud, honey!\p"
 	.string "Take care!$"
 
 gText_RegisteredTrainerinPokeNav::
 	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
-	.string "in the iDollNav.$"
+	.string "in the TohoNav.$"
 
 gText_ComeBackWithSecretPower::
 	.string "Do you know the TM Secret Power?\p"

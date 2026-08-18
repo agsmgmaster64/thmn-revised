@@ -1,5 +1,10 @@
 Route106_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Route106_OnLoad
 	.byte 0
+	
+Route106_OnLoad:
+	clearflag FLAG_PLAYER_IN_JAVA
+	end
 
 Route106_EventScript_TrainerTipsSign::
 	msgbox Route106_Text_TrainerTips, MSGBOX_SIGN
