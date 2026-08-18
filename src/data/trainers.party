@@ -29037,7 +29037,7 @@ Ball: Ultra
 - Energy Light
 - Razor Wind
 
-=== TRAINER_NEW_1264 ===
+=== TRAINER_DARK_SABER_2 ===
 Name: Dark-Saber
 Class: Dome Ace
 Pic: Cooltrainer M
@@ -29057,7 +29057,7 @@ Ball: Ultra
 - Poison Bomb
 - Dark Pulse
 
-Normal Mai @ Salac Berry
+Extra Mai @ Salac Berry
 Level: 75
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29068,7 +29068,7 @@ Ball: Ultra
 - Dark Pulse
 - Air Slash
 
-Normal Gengetsu @ Metal Coat
+Extra Gengetsu @ Metal Coat
 Level: 75
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29079,7 +29079,7 @@ Ball: Ultra
 - Dream Eater
 - Sonic Boom
 
-Normal Tsukasa @ BlackGlasses
+Extra Tsukasa @ BlackGlasses
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29090,7 +29090,7 @@ Ball: Ultra
 - Knock Off
 - U-Turn
 
-Normal Mizuchi @ Spell Tag
+Extra Mizuchi @ Spell Tag
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29101,7 +29101,7 @@ Ball: Ultra
 - Shadow Sneak
 - U-Turn
 
-Normal Yuuka @ White Herb
+Extra Yuuka @ White Herb
 Level: 75
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29112,7 +29112,7 @@ Ball: Ultra
 - Giga Drain
 - Earth Power
 
-=== TRAINER_NEW_1265 ===
+=== TRAINER_KENSHIRO_2 ===
 Name: Kenshiro
 Class: Dome Ace
 Pic: Collector
@@ -29121,7 +29121,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Cirno @ Flame Orb
+Extra Cirno @ Flame Orb
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29132,7 +29132,7 @@ Ball: Ultra
 - Ice Punch
 - Brick Break
 
-Normal Meiling @ Salac Berry
+Extra Meiling @ Salac Berry
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29143,7 +29143,7 @@ Ball: Ultra
 - Shadow Punch
 - Drain Punch
 
-Normal Sakuya @ Salac Berry
+Extra Sakuya @ Salac Berry
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29154,7 +29154,7 @@ Ball: Ultra
 - Icicle Spear
 - Mana Punch
 
-Normal Patchouli @ Choice Scarf
+Extra Patchouli @ Choice Scarf
 Level: 75
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29165,7 +29165,7 @@ Ball: Ultra
 - Energy Light
 - Shadow Ball
 
-Normal Remilia @ Lum Berry
+Extra Remilia @ Lum Berry
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29176,7 +29176,7 @@ Ball: Ultra
 - Soar
 - Steel Wing
 
-Normal Flandre @ Lum Berry
+Extra Flandre @ Lum Berry
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29187,7 +29187,7 @@ Ball: Ultra
 - Gunk Shot
 - Steel Fist
 
-=== TRAINER_NEW_1266 ===
+=== TRAINER_KAZUKI_2 ===
 Name: Kazuki
 Class: Dome Ace
 Pic: Pokemaniac
@@ -29196,7 +29196,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Shinmyoumaru @ Salac Berry
+Extra Shinmyoumaru @ Salac Berry
 Level: 75
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29207,7 +29207,7 @@ Ball: Ultra
 - Dark Pulse
 - Sonic Boom
 
-Normal Tojiko @ Charcoal
+Extra Tojiko @ Charcoal
 Level: 75
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29218,7 +29218,7 @@ Ball: Ultra
 - Shadow Ball
 - Mystical Fire
 
-Normal Keine @ Choice Scarf
+Extra Keine @ Choice Scarf
 Level: 75
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29229,7 +29229,7 @@ Ball: Ultra
 - Mana Burst
 - Shadow Ball
 
-Normal Tokiko @ Metal Coat
+Extra Tokiko @ Metal Coat
 Level: 75
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29240,7 +29240,7 @@ Ball: Ultra
 - Close Combat
 - Steel Wing
 
-Normal Byakuren @ White Herb
+Extra Byakuren @ White Herb
 Level: 75
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29251,7 +29251,7 @@ Ball: Ultra
 - Extrasensory
 - Shadow Ball
 
-Normal Reisen @ Salac Berry
+Extra Reisen @ Salac Berry
 Level: 75
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29637,7 +29637,7 @@ Ball: Premier
 - Night Shade
 - Recover
 
-=== TRAINER_NEW_1272 ===
+=== TRAINER_DARK_SABER_1 ===
 Name: Dark-Saber
 Class: Pkmn Trainer 2
 Pic: Cooltrainer M
@@ -29650,23 +29650,23 @@ Dark Mirror
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mai
+Extra Mai
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Gengetsu
+Extra Gengetsu
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tsukasa
+Extra Tsukasa
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Mizuchi
+Extra Mizuchi
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Yuuka
+Extra Yuuka
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -29745,7 +29745,7 @@ Ball: Premier
 - Earthquake
 - Drain Punch
 
-=== TRAINER_NEW_1274 ===
+=== TRAINER_KAZUKI_1 ===
 Name: Kazuki
 Class: Pkmn Trainer 2
 Pic: Pokemaniac
@@ -29754,27 +29754,27 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Shinmyoumaru
+Extra Shinmyoumaru
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tojiko
+Extra Tojiko
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Keine
+Extra Keine
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Tokiko
+Extra Tokiko
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Byakuren
+Extra Byakuren
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Reisen
+Extra Reisen
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -30226,7 +30226,7 @@ Ball: Ultra
 - Mana Burst
 - Energy Light
 
-=== TRAINER_NEW_1281 ===
+=== TRAINER_KENSHIRO_1 ===
 Name: Kenshiro
 Class: Pkmn Trainer 2
 Pic: Collector
@@ -30235,27 +30235,27 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Cirno
+Extra Cirno
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Meiling
+Extra Meiling
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Sakuya
+Extra Sakuya
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Patchouli
+Extra Patchouli
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Rumia
+Extra Rumia
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Normal Daiyousei
+Extra Daiyousei
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

@@ -1515,8 +1515,17 @@ gText_ComeBackWithSecretPower::
 	.string "Come back and show me if you get it.\p"
 	.string "We'll accept you as a member and sell\n"
 	.string "you good stuff in secrecy.$"
-
+	
 gText_PokerusExplanation::
+	.string "Your Puppets may be infected with\n"
+	.string "Dollrus.\p"
+	.string "Little is known about the Dollrus\n"
+	.string "except that they are microscopic life-\l"
+	.string "forms that attach to Puppets.\p"
+	.string "While infected, Puppets are said to\n"
+	.string "grow exceptionally well.$"
+
+gText_PokerusExplanationJava::
 	.string "Your Bonéka may be infected with\n"
 	.string "Dollrus.\p"
 	.string "Little is known about the Dollrus\n"

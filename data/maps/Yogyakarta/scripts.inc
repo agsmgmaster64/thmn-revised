@@ -139,6 +139,28 @@ Yogyakarta_EventScript_KazumiFairEnough::
 	release
 	end
 	
+Yogyakarta_EventScript_Moncoz::
+	msgbox Yogyakarta_Text_DoYouWantToGo, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, NO, Yogyakarta_Event_ComeBackLater
+	msgbox Yogyakarta_Text_LetsGo, MSGBOX_NPC
+	applymovement LOCALID_YOGYAKARTA_MONCOZ, Yogyakarta_Movement_MoncozToBoat
+	waitmovement
+	delay 21
+	applymovement LOCALID_PLAYER, Yogyakarta_Movement_PlayerToBoat
+	waitmovement
+	delay 30
+	applymovement LOCALID_YOGYAKARTA_MONCOZBOAT, Yogyakarta_Movement_MoncozBoatToHoenn
+	waitmovement
+	warp MAP_ROUTE106, 66, 14
+	waitstate
+	release
+	end
+	
+Yogyakarta_Event_ComeBackLater::
+	msgbox Yogyakarta_Text_ComeBackLater, MSGBOX_NPC
+	release
+	end
+	
 Yogyakarta_EventScript_ShowPrismCave::
 	setmetatile 7, 6, METATILE_General_RockWall_GrassBase_LeftCornerUp, TRUE
 	setmetatile 7, 7, METATILE_General_RockWall_GrassBase_LeftWall, TRUE
@@ -564,3 +586,43 @@ Yogyakarta_Text_KazumiRematchEnd:
 	
 Yogyakarta_Text_KazumiDefeatedRematch:
 	.string "You're just as good as I remembered!$"
+	
+Yogyakarta_Text_ComeBackLater:
+	.string "Moncoz: I'll be here waiting.$"
+	
+Yogyakarta_Text_DoYouWantToGo:
+	.string "Moncoz: Welcome back! It's nice to\n"
+	.string "see you again!\p"
+	.string "Do you want to come with me back to\n"
+	.string "the Hoenn region?$"
+	
+Yogyakarta_Text_LetsGo:
+	.string "Moncoz: Alright then!\p"
+	.string "We'll set course for Dewford!$"
+	
+Yogyakarta_Movement_MoncozToBoat:
+	walk_down
+	delay_8
+	set_invisible
+	step_end
+
+Yogyakarta_Movement_PlayerToBoat:
+	walk_down
+	walk_down
+	delay_8
+	set_invisible
+	step_end
+	
+Yogyakarta_Movement_MoncozBoatToHoenn:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
