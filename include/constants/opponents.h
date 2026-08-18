@@ -1272,7 +1272,7 @@
 #define TRAINER_NEW_1265                    1265
 #define TRAINER_NEW_1266                    1266
 #define TRAINER_NEW_1267                    1267
-#define TRAINER_NEW_1268                    1268
+#define TRAINER_AILE_L_FEU                  1268
 #define TRAINER_NEW_1269                    1269
 #define TRAINER_NEW_1270                    1270
 #define TRAINER_NEW_1271                    1271
@@ -1298,7 +1298,7 @@
 #define TRAINER_NEW_1291                    1291
 #define TRAINER_NEW_1292                    1292
 #define TRAINER_NEW_1293                    1293
-#define TRAINER_NEW_1294                    1294
+#define TRAINER_KAZUMI                      1294
 #define TRAINER_NEW_1295                    1295
 #define TRAINER_NEW_1296                    1296
 

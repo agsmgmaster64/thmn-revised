@@ -1523,9 +1523,9 @@
 #define FLAG_VISITED_MALANG                         (SYSTEM_FLAGS + 0x92) // Unused Flag (May use later, may not)
 #define FLAG_VISITED_LESSUN_ISLETS                  (SYSTEM_FLAGS + 0x93) // Unused Flag (May use later, may not)
 #define FLAG_HIDE_YOGYAKARTA_NPCS                   (SYSTEM_FLAGS + 0x94) // Unused Flag
-#define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
-#define FLAG_UNUSED_0x8F6                           (SYSTEM_FLAGS + 0x96) // Unused Flag
-#define FLAG_UNUSED_0x8F7                           (SYSTEM_FLAGS + 0x97) // Unused Flag
+#define FLAG_SOUTHERN_PASS_BLOCKED                  (SYSTEM_FLAGS + 0x95) // Unused Flag
+#define FLAG_HIDE_AICHI_PRESENCE                    (SYSTEM_FLAGS + 0x96) // Unused Flag
+#define FLAG_UNLOCK_SUGIHO_OMNISHOP                 (SYSTEM_FLAGS + 0x97) // Unused Flag
 #define FLAG_UNUSED_0x8F8                           (SYSTEM_FLAGS + 0x98) // Unused Flag
 #define FLAG_UNUSED_0x8F9                           (SYSTEM_FLAGS + 0x99) // Unused Flag
 #define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A) // Unused Flag

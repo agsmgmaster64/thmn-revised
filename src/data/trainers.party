@@ -29337,8 +29337,8 @@ Ball: Ultra
 - Ice Beam
 - Recover
 
-=== TRAINER_NEW_1268 ===
-Name: Aile L?Feu
+=== TRAINER_AILE_L_FEU ===
+Name: Aile L'Feu
 Class: Pkmn Trainer 2
 Pic: Gentleman
 Gender: Male
@@ -31129,7 +31129,7 @@ Ball: Premier
 - Night Daze
 - Divine Pulse
 
-=== TRAINER_NEW_1294 ===
+=== TRAINER_KAZUMI ===
 Name: Kazumi
 Class: Dome Ace
 Pic: Aroma Lady
@@ -31138,7 +31138,7 @@ Music: Male
 Battle Type: Singles
 AI: Basic Trainer
 
-Normal Ringo @ Sitrus Berry
+Extra Ringo @ Sitrus Berry
 Level: 65
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -31149,7 +31149,7 @@ Ball: Ultra
 - Drain Punch
 - ExtremeSpeed
 
-Normal Yuiman @ Cursed Tag
+Extra Yuiman @ Cursed Tag
 Level: 66
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -31160,7 +31160,7 @@ Ball: Ultra
 - Future Sight
 - Ice Beam
 
-Normal Mike @ Scope Lens
+Extra Mike @ Scope Lens
 Level: 66
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -31171,7 +31171,7 @@ Ball: Ultra
 - Slash
 - Soar
 
-Normal Mizuchi @ Lum Berry
+Extra Mizuchi @ Lum Berry
 Level: 67
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -31182,7 +31182,7 @@ Ball: Ultra
 - Shadow Sneak
 - U-Turn
 
-Normal Doremy @ Leftovers
+Extra Doremy @ Leftovers
 Level: 65
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
