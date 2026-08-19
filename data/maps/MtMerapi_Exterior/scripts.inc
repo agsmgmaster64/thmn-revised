@@ -9,7 +9,7 @@ MtMerapi_Exterior_OnResume:
 	end
 	
 MtMerapi_Exterior_OnLoad:
-	call_if_eq VAR_DEFEAT_MT_MERAPI_STATUES, 4, MtMerapi_Exterior_EventScript_ShowCaveEntrance
+	call_if_ge VAR_DEFEAT_MT_MERAPI_STATUES, 4, MtMerapi_Exterior_EventScript_ShowCaveEntrance
 	end
 
 MtMerapi_Exterior_OnTransition:
@@ -35,8 +35,8 @@ MtMerapi_Exterior_EventScript_MrMNPCThankYou::
 	end
 	
 MtMerapi_Exterior_EventScript_ShowCaveEntrance::
-	setmetatile 24, 8, METATILE_General_CaveEntrance_Top, TRUE
-	setmetatile 24, 9, METATILE_General_CaveEntrance_Bottom, FALSE
+	setmetatile 24, 8, METATILE_Lavaridge_CaveEntrance_Top, TRUE
+	setmetatile 24, 9, METATILE_Lavaridge_CaveEntrance_Bottom, FALSE
 	return
 	
 MtMerapi_Exterior_EventScript_MrMTileAsksForHelp::
@@ -115,8 +115,9 @@ MtMerapi_Exterior_EventScript_MeetingAichiProper::
 	msgbox MtMerapi_Exterior_Text_AichiIntroduction, MSGBOX_DEFAULT
 	closemessage
 	delay 10
-	msgbox MtMerapi_Exterior_Text_AichiTryingToFigureOut, MSGBOX_DEFAULT
-	closemessage
+	compare VAR_DEFEAT_MT_MERAPI_STATUES, 4
+	call_if_ge MtMerapi_Exterior_EventScript_YouBeatTheFourStatues
+	call_if_lt MtMerapi_Exterior_EventScript_WereTryingToFigureOut
 	delay 10
 	msgbox MtMerapi_Exterior_Text_AichiLookingConfident, MSGBOX_DEFAULT
 	closemessage
@@ -125,6 +126,16 @@ MtMerapi_Exterior_EventScript_MeetingAichiProper::
 	addvar VAR_AICHI_MT_MERAPI, 1
 	release
 	end
+	
+MtMerapi_Exterior_EventScript_YouBeatTheFourStatues::
+	msgbox MtMerapi_Exterior_Text_AichiFiguredItOut, MSGBOX_DEFAULT
+	closemessage
+	return
+	
+MtMerapi_Exterior_EventScript_WereTryingToFigureOut::
+	msgbox MtMerapi_Exterior_Text_AichiTryingToFigureOut, MSGBOX_DEFAULT
+	closemessage
+	return
 	
 MtMerapi_Exterior_EventScript_AichiWalks1::
 	applymovement LOCALID_AICHI, MtMerapi_Exterior_Movement_AichiWalks1
@@ -270,6 +281,8 @@ MtMerapi_Exterior_Text_AichiLookingConfident:
 	.string "Aichi: You seem to know what\n"
 	.string "to do from here. I won't hold\l"
 	.string "you up farther.\p"
+	.string "I'll be trying to do emergency\n"
+	.string "rescues for now.\p"
 	.string "Good luck, Ruby holder.$"
 	
 MtMerapi_Exterior_Text_AichiTryingToFigureOut:
@@ -277,6 +290,11 @@ MtMerapi_Exterior_Text_AichiTryingToFigureOut:
 	.string "how to get to the main cavern, but\l"
 	.string "the Emerald won't work with the\l"
 	.string "statues.$"
+	
+MtMerapi_Exterior_Text_AichiFiguredItOut:
+	.string "Aichi: We were trying to figure out\n"
+	.string "how to get to the main cavern, but\l"
+	.string "it somehow opened itself instead.$"
 	
 MtMerapi_Exterior_Text_AichiShouldntBe:
 	.string "???: Oh, you shouldn't be-$"
