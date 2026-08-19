@@ -808,8 +808,9 @@ static void MoveRelearnerLoadBattleMoveDescription(u32 chosenMove)
     AddTextPrinterParameterized(RELEARNERWIN_DESC_BATTLE, FONT_NORMAL, str, 106, 41, TEXT_SKIP_DRAW, NULL);
 
     const u8 *moveDescription = GetMoveDescription(chosenMove);
-    u32 fontId = GetFontIdToFit(moveDescription, FONT_SMALL, 0, WindowWidthPx(RELEARNERWIN_DESC_BATTLE));
-    AddTextPrinterParameterized(RELEARNERWIN_DESC_BATTLE, fontId, moveDescription, 0, 65, 0, NULL);
+    u32 fontId = GetFontIdToFit(moveDescription, FONT_SMALL_NARROW, 0, WindowWidthPx(RELEARNERWIN_DESC_BATTLE));
+    //AddTextPrinterParameterized(RELEARNERWIN_DESC_BATTLE, fontId, moveDescription, 0, 55, 0, NULL);
+    AddTextPrinterParameterized4(RELEARNERWIN_DESC_BATTLE, FONT_SMALL_NARROW, 0, 55, 0, 6, sPlayerNameTextColors, 0, moveDescription);
 }
 
 static void MoveRelearnerMenuLoadContestMoveDescription(u32 chosenMove)
@@ -841,7 +842,8 @@ static void MoveRelearnerMenuLoadContestMoveDescription(u32 chosenMove)
     AddTextPrinterParameterized(RELEARNERWIN_DESC_CONTEST, FONT_NORMAL, str, 4, 25, TEXT_SKIP_DRAW, NULL);
 
     str = gContestEffects[GetMoveContestEffect(chosenMove)].description;
-    AddTextPrinterParameterized(RELEARNERWIN_DESC_CONTEST, FONT_SMALL_NARROW, str, 0, 57, TEXT_SKIP_DRAW, NULL);
+    // AddTextPrinterParameterized(RELEARNERWIN_DESC_CONTEST, FONT_SMALL_NARROW, str, 0, 57, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized4(RELEARNERWIN_DESC_CONTEST, FONT_SMALL_NARROW, 0, 55, 0, 6, sPlayerNameTextColors, 0, str);
 
     CopyWindowToVram(RELEARNERWIN_DESC_CONTEST, COPYWIN_GFX);
 }

@@ -21,6 +21,9 @@ static void AnimStealthRockStep2(struct Sprite *sprite);
 static void AnimStealthRockStep(struct Sprite *sprite);
 static void AnimStealthRock(struct Sprite *sprite);
 static u8 GetRolloutCounter(void);
+static void AnimTask_CorpseRush_Step(u8 taskId);
+static void CreateCorpseRushGhostSprite(struct Task *task);
+static void AnimCorpseRushParticle(struct Sprite *);
 
 static const union AnimCmd sAnim_FlyingRock_0[] =
 {
@@ -1101,3 +1104,198 @@ const struct SpriteTemplate gFallingCoinsSpriteTemplate =
     .anims = gAnims_FlyingCoin,
     .callback = AnimFallingRock,
 };
+
+const struct SpriteTemplate gCorpseRushSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_WISP_FIRE,
+    .paletteTag = ANIM_TAG_WISP_FIRE,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .callback = AnimCorpseRushParticle,
+};
+
+const struct SpriteTemplate gCorpseRushSpiralTemplate =
+{
+    .tileTag = ANIM_TAG_WISP_FIRE,
+    .paletteTag = ANIM_TAG_WISP_FIRE,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .callback = AnimParticleInVortex,
+};
+
+void AnimTask_CorpseRush(u8 taskId)
+{
+    u16 var0, var1, var2, var3;
+    u8 rolloutCounter;
+    s16 pan1, pan2;
+    struct Task *task;
+
+    task = &gTasks[taskId];
+
+    var0 = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+    var1 = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y) + 24;
+    var2 = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+    var3 = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y) + 24;
+
+    if (BATTLE_PARTNER(gBattleAnimAttacker) == gBattleAnimTarget)
+        var3 = var1;
+
+    rolloutCounter = GetRolloutCounter();
+    if (rolloutCounter == 1)
+        task->data[8] = 32;
+    else
+        task->data[8] = 48 - (rolloutCounter * 8);
+
+    task->data[0] = 0;
+    task->data[11] = 0;
+    task->data[9] = 0;
+    task->data[12] = 1;
+    task->data[10] = (task->data[8] / 8) - 1;
+    task->data[2] = var0 * 8;
+    task->data[3] = var1 * 8;
+    task->data[4] = ((var2 - var0) * 8) / task->data[8];
+    task->data[5] = ((var3 - var1) * 8) / task->data[8];
+    task->data[6] = 0;
+    task->data[7] = 0;
+
+    pan1 = BattleAnimAdjustPanning(SOUND_PAN_ATTACKER);
+    pan2 = BattleAnimAdjustPanning(SOUND_PAN_TARGET);
+
+    task->data[13] = pan1;
+    task->data[14] = (pan2 - pan1) / task->data[8];
+    task->data[1] = rolloutCounter;
+    task->data[15] = GetAnimBattlerSpriteId(ANIM_ATTACKER);
+
+    task->func = AnimTask_CorpseRush_Step;
+}
+
+static void AnimTask_CorpseRush_Step(u8 taskId)
+{
+    struct Task *task;
+
+    task = &gTasks[taskId];
+
+    switch (task->data[0])
+    {
+    case 0:
+        task->data[6] -= task->data[4];
+        task->data[7] -= task->data[5];
+        gSprites[task->data[15]].x2 = task->data[6] >> 3;
+        gSprites[task->data[15]].y2 = task->data[7] >> 3;
+
+        if (++task->data[9] == 10)
+        {
+            task->data[11] = 20;
+            task->data[0]++;
+        }
+
+        PlaySE12WithPanning(SE_M_HEADBUTT, task->data[13]);
+        break;
+    case 1:
+        if (--task->data[11] == 0)
+            task->data[0]++;
+        break;
+    case 2:
+        if (--task->data[9] != 0)
+        {
+            task->data[6] += task->data[4];
+            task->data[7] += task->data[5];
+        }
+        else
+        {
+            task->data[6] = 0;
+            task->data[7] = 0;
+            task->data[0]++;
+        }
+
+        gSprites[task->data[15]].x2 = task->data[6] >> 3;
+        gSprites[task->data[15]].y2 = task->data[7] >> 3;
+        break;
+    case 3:
+        task->data[2] += task->data[4];
+        task->data[3] += task->data[5];
+        if (++task->data[9] >= task->data[10])
+        {
+            task->data[9] = 0;
+            CreateCorpseRushGhostSprite(task);
+            task->data[13] += task->data[14];
+            PlaySE12WithPanning(SE_M_CONFUSE_RAY, task->data[13]);
+        }
+
+        if (--task->data[8] == 0)
+        {
+            task->data[0]++;
+        }
+        break;
+    case 4:
+        if (task->data[11] == 0)
+            DestroyAnimVisualTask(taskId);
+        break;
+    }
+}
+
+static void CreateCorpseRushGhostSprite(struct Task *task)
+{
+    const struct SpriteTemplate *spriteTemplate;
+    int tileOffset;
+    u16 x, y;
+    u8 spriteId;
+
+    switch (task->data[1])
+    {
+    case 1:
+        spriteTemplate = &gCorpseRushSpriteTemplate;
+        tileOffset = 0;
+        break;
+    case 2:
+    case 3:
+        spriteTemplate = &gCorpseRushSpriteTemplate;
+        tileOffset = 80;
+        break;
+    case 4:
+        spriteTemplate = &gCorpseRushSpriteTemplate;
+        tileOffset = 64;
+        break;
+    case 5:
+        spriteTemplate = &gCorpseRushSpriteTemplate;
+        tileOffset = 48;
+        break;
+    default:
+        return;
+    }
+
+    if (!TryLoadSpriteAssets(spriteTemplate))
+    {
+        //  Unsure how to exit this task
+        return;
+    }
+
+    x = task->data[2] >> 3;
+    y = task->data[3] >> 3;
+    x += (task->data[12] * 4);
+
+    spriteId = CreateSprite(spriteTemplate, x, y, 35);
+    if (spriteId != MAX_SPRITES)
+    {
+        gSprites[spriteId].data[0] = 18;
+        gSprites[spriteId].data[2] = ((task->data[12] * 20) + x) + (task->data[1] * 3);
+        gSprites[spriteId].data[4] = y;
+        gSprites[spriteId].data[5] = -16 - (task->data[1] * 2);
+        gSprites[spriteId].oam.tileNum += tileOffset;
+
+        InitAnimArcTranslation(&gSprites[spriteId]);
+        task->data[11]++;
+    }
+
+    task->data[12] *= -1;
+}
+
+static void AnimCorpseRushParticle(struct Sprite *sprite)
+{
+    if (TranslateAnimHorizontalArc(sprite))
+    {
+        u8 taskId = FindTaskIdByFunc(AnimTask_CorpseRush_Step);
+        if (taskId != TASK_NONE)
+            gTasks[taskId].data[11]--;
+
+        DestroySprite(sprite);
+    }
+}

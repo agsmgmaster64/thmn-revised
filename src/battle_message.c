@@ -920,7 +920,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_DEBTSPIRALDEPLETION]                  = COMPOUND_STRING("You used up ¥{B_BUFF1} for premium attack costs…\p"),
     [STRINGID_POVERTYSCATTERED]                     = COMPOUND_STRING("Financial assets were consumed!"),
     [STRINGID_APOLLON_START]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} fired a volley of arrows upward!"),
-    [STRINGID_TARGETCURSED]                         = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was cursed!"),
+    [STRINGID_TARGETCURSED]                         = COMPOUND_STRING("{B_EFF_NAME_WITH_PREFIX} was cursed!"),
     [STRINGID_BEGINSREGENERATING]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} anchors itself and starts regenerating!"),
     [STRINGID_PKMNTRAPPEDINDESTITUTION]             = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was engulfed in misfortune!"),
     [STRINGID_IDENTIFY]                             = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} was identified! Current HP: {B_BUFF1}/{B_BUFF2}."),
@@ -1333,6 +1333,7 @@ const u16 gWeatherStartsStringIds[] =
     [WEATHER_DROUGHT]            = STRINGID_SUNLIGHTISHARSH,
     [WEATHER_DOWNPOUR]           = STRINGID_ITISRAINING,
     [WEATHER_UNDERWATER_BUBBLES] = STRINGID_ITISRAINING,
+    [WEATHER_PINK_LEAVES]        = STRINGID_ITISRAINING,
     [WEATHER_ABNORMAL]           = STRINGID_ITISRAINING
 };
 
