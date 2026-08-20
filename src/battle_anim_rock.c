@@ -1135,7 +1135,7 @@ void AnimTask_CorpseRush(u8 taskId)
     var2 = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     var3 = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y) + 24;
 
-    if (BATTLE_PARTNER(gBattleAnimAttacker) == gBattleAnimTarget)
+    if (GetPartnerBattler(gBattleAnimAttacker) == gBattleAnimTarget)
         var3 = var1;
 
     rolloutCounter = GetRolloutCounter();

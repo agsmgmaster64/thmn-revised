@@ -547,7 +547,7 @@ static bool32 HandleEndTurnHibernation(enum BattlerId battler)
     if (gBattleMons[battler].status1 & STATUS1_SLEEP
          && IsBattlerAlive(battler)
          && !IsBattlerAtMaxHp(battler)
-         && !gBattleMons[battler].volatiles.healBlock
+         && !gBattleMons[battler].volatiles.healBlockTimer
          && ability == ABILITY_HIBERNATION)
     {
         SetHealAmount(battler, GetNonDynamaxMaxHP(battler) / 8);
@@ -595,7 +595,7 @@ static bool32 HandleEndTurnPoison(enum BattlerId battler)
 
             poisonMultiplier = (gBattleMons[battler].status1 & STATUS1_TOXIC_COUNTER) >> 8;
 
-            if (IsAbilityOnSide(BATTLE_OPPOSITE(battler), ABILITY_CATALYST))
+            if (IsAbilityOnSide(GetOppositeBattler(battler), ABILITY_CATALYST))
                 poisonMultiplier += 2;
 
             gBattleStruct->passiveHpUpdate[battler] *= poisonMultiplier;
@@ -606,7 +606,7 @@ static bool32 HandleEndTurnPoison(enum BattlerId battler)
         else
         {
             poisonMultiplier = 1;
-            if (IsAbilityOnSide(BATTLE_OPPOSITE(battler), ABILITY_CATALYST))
+            if (IsAbilityOnSide(GetOppositeBattler(battler), ABILITY_CATALYST))
                 poisonMultiplier++;
 
             SetPassiveDamageAmount(battler, (GetNonDynamaxMaxHP(battler) * poisonMultiplier) / 8);

@@ -7614,7 +7614,7 @@ static void Cmd_pickup(void)
                 if ((lvlDivBy10 + 1 ) * 5 > Random() % 100)
                 {
                     heldItem = ITEM_BEER;
-                    SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                    SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &heldItem);
                 }
             }
             else if (P_SHUCKLE_BERRY_JUICE == GEN_2
@@ -12236,7 +12236,7 @@ void BS_CopyMovePermanentlyDeleteOthers(void)
         && !IsMoveSketchBanned(gLastPrintedMoves[gBattlerTarget]))
     {
         s32 i;
-        struct MovePpInfo movePpData;
+        struct MovePPInfo movePpData;
 
         gBattleMons[gBattlerAttacker].moves[0] = gLastPrintedMoves[gBattlerTarget];
         gBattleMons[gBattlerAttacker].pp[0] = GetMovePP(gLastPrintedMoves[gBattlerTarget]);

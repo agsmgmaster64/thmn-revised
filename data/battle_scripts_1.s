@@ -6507,7 +6507,7 @@ BattleScript_DevourLiquidOoze::
 BattleScript_DevourHealMultiTarget::
 	saveattacker
 	savetarget
-	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK, BattleScript_DevourHealMultiTarget_Return
+	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK_TIMER, BattleScript_DevourHealMultiTarget_Return
 	waitstate
 	call BattleScript_AbilityPopUp
 	waitanimation
