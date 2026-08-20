@@ -84,18 +84,6 @@ enum __attribute__((packed)) BattleTrainer
     MAX_BATTLE_TRAINERS,
 };
 
-// These macros can be used with either battler ID or positions to get the partner or the opposite mon
-#define BATTLE_OPPOSITE(id) ((id) ^ BIT_SIDE)
-#define BATTLE_PARTNER(id) ((id) ^ BIT_FLANK)
-
-// Left and right are determined by how they're referred to in tests and everywhere else.
-// Left is battlers 0 and 1, right 2 and 3; if you assume the battler referencing them is south, left is to the northeast and right to the northwest.
-#define LEFT_FOE(battler) ((BATTLE_OPPOSITE(battler)) & BIT_SIDE)
-#define RIGHT_FOE(battler) (((BATTLE_OPPOSITE(battler)) & BIT_SIDE) | BIT_FLANK)
-
-#define LEFT_ALLY(battler) (battler & BIT_SIDE)
-#define RIGHT_ALLY(battler) ((battler & BIT_SIDE) | BIT_FLANK)
-
 enum BattleSide
 {
     B_SIDE_PLAYER = 0,
@@ -182,6 +170,7 @@ enum BattleSide
 // If a new STATUS1 is added here, it should also be added to
 // sCompressedStatuses in src/pokemon.c or else it will be lost outside
 // of battle.
+// Stored in gBattleMons[n].status1, which is u32
 #define STATUS1_NONE             0
 #define STATUS1_SLEEP            (1 << 0 | 1 << 1 | 1 << 2) // First 3 bits (Number of turns to sleep)
 #define STATUS1_SLEEP_TURN(num)  ((num) << 0) // Just for readability (or if rearranging statuses)
@@ -258,11 +247,9 @@ enum VolatileFlags
     F(VOLATILE_IMPRISON,                    imprison,                      (u32, 1)) \
     F(VOLATILE_GRUDGE,                      grudge,                        (u32, 1)) \
     F(VOLATILE_GASTRO_ACID,                 gastroAcid,                    (u32, 1), V_BATON_PASSABLE) \
-    F(VOLATILE_EMBARGO,                     embargo,                       (u32, 1), V_BATON_PASSABLE) \
     F(VOLATILE_SMACK_DOWN,                  smackDown,                     (u32, 1)) \
     F(VOLATILE_TELEKINESIS,                 telekinesis,                   (u32, 1), V_BATON_PASSABLE) \
     F(VOLATILE_MIRACLE_EYE,                 miracleEye,                    (u32, 1)) \
-    F(VOLATILE_HEAL_BLOCK,                  healBlock,                     (u32, 1), V_BATON_PASSABLE) \
     F(VOLATILE_AQUA_RING,                   aquaRing,                      (u32, 1), V_BATON_PASSABLE) \
     F(VOLATILE_POWER_TRICK,                 powerTrick,                    (u32, 1), V_BATON_PASSABLE) \
     F(VOLATILE_NO_RETREAT,                  noRetreat,                     (u32, 1), V_BATON_PASSABLE) \
@@ -295,10 +282,10 @@ enum VolatileFlags
     F(VOLATILE_RECHARGE_TIMER,              rechargeTimer,                 (u32, 2)) \
     F(VOLATILE_AUTOTOMIZE_COUNT,            autotomizeCount,               (u32, UINT8_MAX)) \
     F(VOLATILE_SLOW_START_TIMER,            slowStartTimer,                (u32, B_SLOW_START_TIMER)) \
-    F(VOLATILE_EMBARGO_TIMER,               embargoTimer,                  (u32, B_EMBARGO_TIMER)) \
+    F(VOLATILE_EMBARGO_TIMER,               embargoTimer,                  (u32, B_EMBARGO_TIMER), V_BATON_PASSABLE) \
     F(VOLATILE_MAGNET_RISE_TIMER,           magnetRiseTimer,               (u32, B_MAGNET_RISE_TIMER), V_BATON_PASSABLE) \
     F(VOLATILE_TELEKINESIS_TIMER,           telekinesisTimer,              (u32, B_TELEKINESIS_TIMER)) \
-    F(VOLATILE_HEAL_BLOCK_TIMER,            healBlockTimer,                (u32, B_HEAL_BLOCK_TIMER)) \
+    F(VOLATILE_HEAL_BLOCK_TIMER,            healBlockTimer,                (u32, B_HEAL_BLOCK_TIMER), V_BATON_PASSABLE) \
     F(VOLATILE_TAUNT_TIMER,                 tauntTimer,                    (u32, B_TAUNT_TIMER)) \
     F(VOLATILE_TORMENT_TIMER,               tormentTimer,                  (u32, B_TORMENT_TIMER)) \
     F(VOLATILE_LASER_FOCUS_TIMER,           laserFocusTimer,               (u32, B_LASER_FOCUS_TIMER)) \
@@ -400,7 +387,8 @@ enum QueuedSwitch
 #define HITMARKER_UNUSED_27             (1 << 27)
 #define HITMARKER_FAINTED(battler)      (1u << (battler + 28)) // Also uses bits 29, 30 and 31
 
-// Per-side statuses that affect an entire party
+// Per-side statuses that affect an entire party.
+// These select from gSideStatuses[n], which is a u32.
 #define SIDE_STATUS_REFLECT                 (1 << 0)
 #define SIDE_STATUS_LIGHTSCREEN             (1 << 1)
 #define SIDE_STATUS_SAFEGUARD               (1 << 2)
@@ -484,6 +472,7 @@ enum BattleTerrain
 #define MOVE_RESULT_LOW_EFFECTIVENESS      (MOVE_RESULT_NOT_VERY_EFFECTIVE | MOVE_RESULT_MOSTLY_INEFFECTIVE)
 #define MOVE_RESULT_INVALID_TARGET         (MOVE_RESULT_NO_EFFECT | MOVE_RESULT_NOT_PRESENT)
 
+// These select from gBattleWeather, which is a u16.
 enum BattleWeather
 {
     BATTLE_WEATHER_NONE,
