@@ -5286,6 +5286,7 @@ static enum MoveEndResult MoveEndTwinSpark(struct BattleCalcValues *cv)
         GetMoveBattleScript(cv->move);
         BattleScriptPush(GetMoveBattleScript(cv->move));
         gCalledMove = cv->move;
+        gBattlerAbility = cv->battlerAtk;
         gBattlescriptCurrInstr = BattleScript_TwinSparkActivates;
         gSpecialStatuses[cv->battlerAtk].twinSparkMoveUsed = TRUE;
         return MOVEEND_RESULT_RUN_SCRIPT;
