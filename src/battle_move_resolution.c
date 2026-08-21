@@ -253,6 +253,7 @@ static enum CancelerResult CancelerPowerPoints(struct BattleCalcValues *cv)
     if (gBattleMons[cv->battlerAtk].pp[gCurrMovePos] == 0
      && cv->move != MOVE_STRUGGLE
      && !gSpecialStatuses[cv->battlerAtk].dancerUsedMove
+     && !gSpecialStatuses[cv->battlerAtk].wallMasterUsedMove
      && !gBattleMons[cv->battlerAtk].volatiles.multipleTurns)
     {
         gBattlescriptCurrInstr = BattleScript_NoPPForMove;
@@ -645,7 +646,9 @@ static enum CancelerResult CancelerAttackstring(struct BattleCalcValues *cv)
         return CANCELER_RESULT_SUCCESS;
 
     BattleScriptCall(BattleScript_Attackstring);
-    if (!gSpecialStatuses[gBattlerAttacker].dancerUsedMove)
+    if (!gSpecialStatuses[gBattlerAttacker].dancerUsedMove
+     && !gSpecialStatuses[gBattlerAttacker].wallMasterUsedMove
+     && !gSpecialStatuses[gBattlerAttacker].twinSparkUsedMove)
     {
         gBattleMons[gBattlerAttacker].volatiles.usedMoves |= 1u << gCurrMovePos;
         gBattleStruct->battlerState[gBattlerAttacker].lastMoveTarget = gBattlerTarget;
@@ -987,7 +990,7 @@ static enum CancelerResult CancelerPPDeduction(struct BattleCalcValues *cv)
 {
     if (gBattleMons[cv->battlerAtk].volatiles.multipleTurns
      || gSpecialStatuses[cv->battlerAtk].dancerUsedMove
-     || gSpecialStatuses[cv->battlerAtk].wallMasterTracker
+     || gSpecialStatuses[cv->battlerAtk].wallMasterUsedMove
      || gBattleStruct->bouncedMoveIsUsed
      || gBattleStruct->snatchedMoveIsUsed
      || gBattleMons[cv->battlerAtk].volatiles.bideTurns
@@ -3482,6 +3485,56 @@ static enum MoveEndResult MoveEndQueueDancer(struct BattleCalcValues *cv)
     return MOVEEND_RESULT_CONTINUE;
 }
 
+static enum MoveEndResult MoveEndQueueWallMaster(struct BattleCalcValues *cv)
+{
+    if (!IsWallMove(cv->move)
+     || gBattleStruct->unableToUseMove
+     || gBattleStruct->snatchedMoveIsUsed
+     || gBattleStruct->bouncedMoveIsUsed)
+    {
+        gBattleScripting.moveendState++;
+        return MOVEEND_RESULT_CONTINUE;
+    }
+
+    if (cv->abilities[cv->battlerAtk] == ABILITY_WALL_MASTER)
+    {
+        u8 i;
+        // flag the current move
+        for (i = 0; i < 4; i++)
+        {
+            if (cv->move == gBattleMons[cv->battlerAtk].moves[i])
+            {
+                gSpecialStatuses[cv->battlerAtk].wallMasterTracker |= (1 << i);
+            }
+        }
+        gBattleMons[cv->battlerAtk].volatiles.activateWallMaster = TRUE;
+    }
+
+    gBattleScripting.moveendState++;
+    return MOVEEND_RESULT_CONTINUE;
+}
+
+static enum MoveEndResult MoveEndQueueTwinSpark(struct BattleCalcValues *cv)
+{
+    if (IsMoveTwinSparkBanned(cv->move)
+     || IsBattleMoveStatus(cv->move)
+     || cv->move == MOVE_STRUGGLE
+     || gBattleStruct->unableToUseMove
+     || gSpecialStatuses[cv->battlerAtk].twinSparkUsedMove)
+    {
+        gBattleScripting.moveendState++;
+        return MOVEEND_RESULT_CONTINUE;
+    }
+
+    if (cv->abilities[cv->battlerAtk] == ABILITY_TWIN_SPARK)
+    {
+        gBattleMons[cv->battlerAtk].volatiles.activateTwinSpark = TRUE;
+    }
+
+    gBattleScripting.moveendState++;
+    return MOVEEND_RESULT_CONTINUE;
+}
+
 static enum MoveEndResult MoveEndStatusImmunityAbilities(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
@@ -3749,7 +3802,9 @@ static enum MoveEndResult MoveEndUpdateLastMoves(struct BattleCalcValues *cv)
     {
         if (!gBattleStruct->unableToUseMove)
         {
-            if (!gSpecialStatuses[cv->battlerAtk].dancerUsedMove)
+            if (!gSpecialStatuses[cv->battlerAtk].dancerUsedMove
+             && !gSpecialStatuses[cv->battlerAtk].wallMasterUsedMove
+             && !gSpecialStatuses[cv->battlerAtk].twinSparkUsedMove)
             {
                 gLastMoves[cv->battlerAtk] = gChosenMove;
                 gLastResultingMoves[cv->battlerAtk] = cv->move;
@@ -3777,7 +3832,9 @@ static enum MoveEndResult MoveEndUpdateLastMoves(struct BattleCalcValues *cv)
             {
                 gLastLandedMoves[cv->battlerDef] = cv->move;
                 gLastHitByType[cv->battlerDef] = GetBattleMoveType(cv->move);
-                if (!gSpecialStatuses[cv->battlerAtk].dancerUsedMove)
+                if (!gSpecialStatuses[cv->battlerAtk].dancerUsedMove
+                 && !gSpecialStatuses[cv->battlerAtk].wallMasterUsedMove
+                 && !gSpecialStatuses[cv->battlerAtk].twinSparkUsedMove)
                 {
                     gLastUsedMove = cv->move;
                     if (IsMaxMove(cv->move))
@@ -5230,39 +5287,8 @@ static enum MoveEndResult MoveEndWallMaster(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
 
-    if (GetBattlerAbility(cv->battlerAtk) == ABILITY_WALL_MASTER
-        && (!gBattleStruct->unableToUseMove) &&
-        (cv->move == MOVE_REFLECT
-        || cv->move == MOVE_LIGHT_SCREEN
-        || cv->move == MOVE_MIST
-        || cv->move == MOVE_SAFEGUARD))
-    {
-        u8 i;
-        // first flag the current move
-        for (i = 0; i < 4; i++)
-        {
-            if (cv->move == gBattleMons[cv->battlerAtk].moves[i])
-                gSpecialStatuses[cv->battlerAtk].wallMasterTracker |= (1 << i);
-        }
-        // now look for an unflagged wall move to call
-        for (i = 0; i < 4; i++)
-        {
-            if (!(gSpecialStatuses[cv->battlerAtk].wallMasterTracker & (1 << i)) && 
-                    (gBattleMons[cv->battlerAtk].moves[i] == MOVE_REFLECT
-                || gBattleMons[cv->battlerAtk].moves[i] == MOVE_LIGHT_SCREEN
-                || gBattleMons[cv->battlerAtk].moves[i] == MOVE_SAFEGUARD
-                || gBattleMons[cv->battlerAtk].moves[i] == MOVE_MIST))
-            {
-                cv->move = gBattleMons[cv->battlerAtk].moves[i];
-                gBattleScripting.moveendState = 0; // it will get incremented to 0 afterwards
-                BattleScriptPush(GetMoveBattleScript(cv->move));
-                gCalledMove = cv->move;
-                gBattlescriptCurrInstr = BattleScript_WallMasterActivates;
-                i = 4;
-                return MOVEEND_RESULT_RUN_SCRIPT;
-            }
-        }
-    }
+    if (AbilityBattleEffects(ABILITYEFFECT_WALL_MASTER, cv->battlerAtk, ABILITY_WALL_MASTER, cv->move, TRUE))
+        result = MOVEEND_RESULT_RUN_SCRIPT;
 
     gBattleScripting.moveendState++;
     return result;
@@ -5272,25 +5298,8 @@ static enum MoveEndResult MoveEndTwinSpark(struct BattleCalcValues *cv)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
 
-    if (cv->abilities[cv->battlerAtk] == ABILITY_TWIN_SPARK &&
-        (!gBattleStruct->unableToUseMove) &&
-        (GetMoveCategory(cv->move) != DAMAGE_CATEGORY_STATUS) &&
-        !(gBattleMons[cv->battlerAtk].status1 & STATUS1_INCAPACITATED) &&
-        (IsBattlerAlive(cv->battlerAtk)) && 
-        (GetMoveEffect(cv->move) != EFFECT_HIT_ESCAPE) &&
-        (cv->move != MOVE_STRUGGLE) &&
-        !(gSpecialStatuses[cv->battlerAtk].twinSparkMoveUsed))
-    {
-        // do it again!
-        gBattleScripting.moveendState = 0;
-        GetMoveBattleScript(cv->move);
-        BattleScriptPush(GetMoveBattleScript(cv->move));
-        gCalledMove = cv->move;
-        gBattlerAbility = cv->battlerAtk;
-        gBattlescriptCurrInstr = BattleScript_TwinSparkActivates;
-        gSpecialStatuses[cv->battlerAtk].twinSparkMoveUsed = TRUE;
-        return MOVEEND_RESULT_RUN_SCRIPT;
-    }
+    if (AbilityBattleEffects(ABILITYEFFECT_TWIN_SPARK, cv->battlerAtk, ABILITY_TWIN_SPARK, cv->move, TRUE))
+        result = MOVEEND_RESULT_RUN_SCRIPT;
 
     gBattleScripting.moveendState++;
     return result;
@@ -5309,6 +5318,8 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_FORM_CHANGE_ON_HIT] = MoveEndFormChangeOnHit,
     [MOVEEND_ABILITIES_ATTACKER] = MoveEndAbilitiesAttacker,
     [MOVEEND_QUEUE_DANCER] = MoveEndQueueDancer,
+    [MOVEEND_QUEUE_WALL_MASTER] = MoveEndQueueWallMaster,
+    [MOVEEND_QUEUE_TWIN_SPARK] = MoveEndQueueTwinSpark,
     [MOVEEND_STATUS_IMMUNITY_ABILITIES] = MoveEndStatusImmunityAbilities,
     [MOVEEND_ATTACKER_INVISIBLE] = MoveEndAttackerInvisible,
     [MOVEEND_ATTACKER_VISIBLE] = MoveEndAttackerVisible,
@@ -5332,6 +5343,7 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_ABILITY_EFFECT_FOES_FAINTED] = MoveEndAbilityEffectFoesFainted,
     [MOVEEND_SHELL_TRAP] = MoveEndShellTrap,
     [MOVEEND_COLOR_CHANGE] = MoveEndColorChange,
+    [MOVEEND_ECHO_ABILITIES] = MoveEndEchoAbilities,
     [MOVEEND_KEE_MARANGA_HP_THRESHOLD_ITEM_TARGET] = MoveEndKeeMarangaHpThresholdItemTarget,
     [MOVEEND_CARD_BUTTON] = MoveEndCardButton,
     [MOVEEND_FORM_CHANGE] = MoveEndFormChange,
@@ -5349,10 +5361,9 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(struct BattleCalcValues *c
     [MOVEEND_SEND_OUT_REPLACEMENTS] = MoveEndSendOutReplacements,
     [MOVEEND_CLEAR_BITS] = MoveEndClearBits,
     [MOVEEND_DANCER] = MoveEndDancer,
-    [MOVEEND_PURSUIT_NEXT_ACTION] = MoveEndPursuitNextAction,
-    [MOVEEND_ECHO_ABILITIES] = MoveEndEchoAbilities,
     [MOVEEND_WALL_MASTER] = MoveEndWallMaster,
     [MOVEEND_TWIN_SPARK] = MoveEndTwinSpark,
+    [MOVEEND_PURSUIT_NEXT_ACTION] = MoveEndPursuitNextAction,
 };
 
 enum MoveEndResult DoMoveEnd(enum MoveEndState endMode, enum MoveEndState endState)

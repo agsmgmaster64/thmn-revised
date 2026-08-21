@@ -574,6 +574,8 @@ void HandleAction_UseMove(void)
     {
         gBattleStruct->battlerState[battler].wasAboveHalfHp = gBattleMons[battler].hp > gBattleMons[battler].maxHP / 2;
         gBattleMons[battler].volatiles.activateDancer = FALSE;
+        gBattleMons[battler].volatiles.activateWallMaster = FALSE;
+        gBattleMons[battler].volatiles.activateTwinSpark = FALSE;
     }
 
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
@@ -3027,6 +3029,62 @@ static bool32 TryDancer(void)
     return FALSE;
 }
 
+static bool32 TryWallMaster(void)
+{
+    enum Move wallMasterMove = MOVE_NONE;
+
+    if (!gBattleMons[gBattlerAttacker].volatiles.activateWallMaster)
+        return FALSE;
+
+    for (u8 i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (!(gSpecialStatuses[gBattlerAttacker].wallMasterTracker & (1 << i))
+            && IsWallMove(gBattleMons[gBattlerAttacker].moves[i]))
+        {
+            wallMasterMove = gBattleMons[gBattlerAttacker].moves[i];
+            break;
+        }
+    }
+
+    if (!wallMasterMove)
+        return FALSE;
+
+    if (!IsWallMove(wallMasterMove))
+        return FALSE;
+
+    if (IsBattlerAlive(gBattlerAttacker))
+    {
+        gSpecialStatuses[gBattlerAttacker].wallMasterUsedMove = TRUE;
+        gBattleMons[gBattlerAttacker].volatiles.activateWallMaster = FALSE;
+        gBattlerAbility = gBattlerAttacker;
+        gCalledMove = wallMasterMove;
+
+        BattleScriptExecute(BattleScript_WallMasterActivates);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static bool32 TryTwinSpark(void)
+{
+    if (!gBattleMons[gBattlerAttacker].volatiles.activateTwinSpark)
+        return FALSE;
+
+    if (IsBattlerAlive(gBattlerAttacker))
+    {
+        gSpecialStatuses[gBattlerAttacker].twinSparkUsedMove = TRUE;
+        gBattleMons[gBattlerAttacker].volatiles.activateTwinSpark = FALSE;
+        gBattlerAbility = gBattlerAttacker;
+        gCalledMove = gCurrentMove;
+
+        BattleScriptExecute(BattleScript_TwinSparkActivates);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum Ability ability, enum Move move, bool32 shouldAbilityTrigger)
 {
     u32 effect = 0;
@@ -4831,6 +4889,10 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         break;
     case ABILITYEFFECT_DANCER:
         return TryDancer();
+    case ABILITYEFFECT_WALL_MASTER:
+        return TryWallMaster();
+    case ABILITYEFFECT_TWIN_SPARK:
+        return TryTwinSpark();
     case ABILITYEFFECT_MOVE_END_FOES_FAINTED:
         switch (ability)
         {

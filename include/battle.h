@@ -145,7 +145,9 @@ struct SpecialStatus
     u8 statStageAmount:4;
     u8 statStageAmount2:4;
     // End of byte
-    u8 twinSparkMoveUsed;
+    u8 twinSparkUsedMove:1;
+    u8 wallMasterUsedMove:1;
+    u8 paddingCust:6;
     u8 wallMasterTracker;
     uq4_12_t storedTypeEffectiveness;
 };

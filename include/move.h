@@ -175,7 +175,9 @@ struct MoveInfo
     bool32 dampBanned:1;
     //Other
     bool32 validApprenticeMove:1;
-    u32 padding2:17;
+    bool32 wallMove:1;
+    bool32 twinSparkBanned:1;
+    u32 padding2:15;
     // end of word
 
     union {
@@ -602,6 +604,16 @@ static inline bool32 IsMoveDampBanned(enum Move moveId)
 static inline bool32 IsValidApprenticeMove(enum Move moveId)
 {
     return gMovesInfo[SanitizeMoveId(moveId)].validApprenticeMove;
+}
+
+static inline bool32 IsWallMove(enum Move moveId)
+{
+    return gMovesInfo[SanitizeMoveId(moveId)].wallMove;
+}
+
+static inline bool32 IsMoveTwinSparkBanned(enum Move moveId)
+{
+    return gMovesInfo[SanitizeMoveId(moveId)].twinSparkBanned;
 }
 
 static inline u32 GetMoveTwoTurnAttackStringId(enum Move moveId)
