@@ -198,6 +198,7 @@ enum {
     LINK_STANDBY_MSG_ONLY,
 };
 
+#define HP_BAR_REFRESH          0x7FFE
 #define INSTANT_HP_BAR_DROP     0x7FFF
 
 #define PARTY_SUMM_SKIP_DRAW_DELAY (1 << 7)
