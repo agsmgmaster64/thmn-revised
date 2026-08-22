@@ -2140,20 +2140,24 @@
 	callnative BS_MultiHitPlurality
 	.endm
 
-	.macro identify1
-	callnative BS_Identify1
+	.macro identifyhpbuffer
+	callnative BS_IdentifyHPBuffer
 	.endm
 
-	.macro identify2
-	callnative BS_Identify2
+	.macro identifyhpupdate
+	callnative BS_IdentifyHPUpdate
 	.endm
 
-	.macro identify3
-	callnative BS_Identify3
+	.macro identifyitembuffer
+	callnative BS_IdentifyItemBuffer
 	.endm
 
-	.macro identify4
-	callnative BS_Identify4
+	.macro identifymovesbuffer1
+	callnative BS_IdentifyMovesBuffer1
+	.endm
+
+	.macro identifymovesbuffer2
+	callnative BS_IdentifyMovesBuffer2
 	.endm
 
 	.macro groupprankanimsetup

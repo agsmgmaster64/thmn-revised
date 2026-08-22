@@ -2700,7 +2700,13 @@ void BtlController_HandleHealthBarUpdate(enum BattlerId battler)
     maxHP = GetMonData(mon, MON_DATA_MAX_HP);
     curHP = GetMonData(mon, MON_DATA_HP);
 
-    if (hpVal != INSTANT_HP_BAR_DROP)
+    if (hpVal == HP_BAR_REFRESH)
+    {
+        SetBattleBarStruct(battler, gHealthboxSpriteIds[battler], maxHP, curHP, 0);
+        UpdateHpTextInHealthbox(gHealthboxSpriteIds[battler], HP_CURRENT, curHP, maxHP);
+        TestRunner_Battle_RecordHP(battler, curHP, curHP);
+    }
+    else if (hpVal != INSTANT_HP_BAR_DROP)
     {
         SetBattleBarStruct(battler, gHealthboxSpriteIds[battler], maxHP, curHP, hpVal);
         TestRunner_Battle_RecordHP(battler, curHP, min(maxHP, max(0, curHP - hpVal)));

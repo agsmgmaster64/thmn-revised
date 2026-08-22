@@ -12483,7 +12483,7 @@ void BS_MultiHitPlurality(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-void BS_Identify1(void)
+void BS_IdentifyHPBuffer(void)
 {
     NATIVE_ARGS();
 
@@ -12494,7 +12494,19 @@ void BS_Identify1(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-void BS_Identify2(void)
+void BS_IdentifyHPUpdate(void)
+{
+    NATIVE_ARGS();
+
+    if (gBattleControllerExecFlags)
+        return;
+
+    BtlController_EmitHealthBarUpdate(gBattlerTarget, B_COMM_TO_CONTROLLER, HP_BAR_REFRESH);
+    MarkBattlerForControllerExec(gBattlerTarget);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_IdentifyItemBuffer(void)
 {
     NATIVE_ARGS();
 
@@ -12516,7 +12528,7 @@ void BS_Identify2(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-void BS_Identify3(void)
+void BS_IdentifyMovesBuffer1(void)
 {
     NATIVE_ARGS();
 
@@ -12526,7 +12538,7 @@ void BS_Identify3(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-void BS_Identify4(void)
+void BS_IdentifyMovesBuffer2(void)
 {
     NATIVE_ARGS();
 

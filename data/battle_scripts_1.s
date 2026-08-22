@@ -6654,18 +6654,17 @@ BattleScript_EffectIdentify::
 	attackcanceler
 	attackanimation
 	waitanimation
-    identify1
+	identifyhpbuffer
 	printstring STRINGID_IDENTIFY
-	healthbarupdate BS_TARGET
-	datahpupdate BS_TARGET, ASSURANCE_IGNORE
 	waitmessage B_WAIT_TIME_LONG
-    identify2
+	identifyhpupdate
+	identifyitembuffer
 	printstring STRINGID_IDENTIFYITEMABILITY
 	waitmessage B_WAIT_TIME_LONG
-    identify3
+	identifymovesbuffer1
 	printstring STRINGID_IDENTIFYMOVESET1
 	waitmessage B_WAIT_TIME_LONG
-    identify4
+	identifymovesbuffer2
 	printstring STRINGID_IDENTIFYMOVESET2
 	waitmessage B_WAIT_TIME_LONG
     end
